@@ -1,0 +1,44 @@
+{
+  "author": "Anton Trofimenko",
+  "dependencies": {
+    "@grafite/helpers": "1.0.0",
+    "compare-versions": "3.5.1",
+    "is-js": "0.1.1",
+    "is_js": "0.9.0",
+    "lodash-es": "4.17.15",
+    "string-similarity": "4.0.1"
+  },
+  "description": "Collection of utilities",
+  "devDependencies": {
+    "@types/lodash-es": "4.17.3",
+    "@typescript-eslint/eslint-plugin": "2.19.0",
+    "@typescript-eslint/parser": "2.19.0",
+    "eslint": "6.8.0",
+    "eslint-config-standard": "14.1.0",
+    "eslint-plugin-import": "2.20.1",
+    "eslint-plugin-node": "11.0.0",
+    "eslint-plugin-promise": "4.2.1",
+    "eslint-plugin-standard": "4.0.1",
+    "jest": "25.1.0",
+    "prettier": "1.19.1",
+    "tslint-config-standard": "9.0.0",
+    "typescript": "3.7"
+  },
+  "directories": {
+    "test": "test"
+  },
+  "jest": {
+    "verbose": true
+  },
+  "keywords": [
+    "utilities"
+  ],
+  "license": "MIT",
+  "name": "corefunc",
+  "scripts": {
+    "test": "jest --passWithNoTests",
+    "test:cjs": "node ./tests/index.cjs",
+    "test:mjs": "node --experimental-modules ./tests/index.mjs"
+  },
+  "version": "0.0.1"
+}
