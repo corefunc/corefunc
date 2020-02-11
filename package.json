@@ -31,6 +31,7 @@
   ],
   "license": "MIT",
   "name": "@corefunc/corefunc",
+  "private": false,
   "scripts": {
     "test": "jest --passWithNoTests",
     "test:cjs": "node ./tests/index.cjs",
