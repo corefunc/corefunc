@@ -1,4 +1,4 @@
-module.exports = function sortSelection(array) {
+module.exports = function arraySortSelection(array) {
   const swap = (list, a, b) => ([list[a], list[b]] = [list[b], list[a]]);
   array.forEach((item, index) => {
     let min = index;

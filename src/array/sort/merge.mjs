@@ -10,12 +10,12 @@ function merge(array1, array2) {
   return sorted.concat(array1.slice().concat(array2.slice()));
 }
 
-export default function sortMerge(array) {
+export default function arraySortMerge(array) {
   if (array.length <= 1) {
     return array;
   }
   const mid = Math.floor(array.length / 2);
-  const left = sortMerge(array.slice(0, mid));
-  const right = sortMerge(array.slice(mid));
+  const left = arraySortMerge(array.slice(0, mid));
+  const right = arraySortMerge(array.slice(mid));
   return merge(left, right);
 }

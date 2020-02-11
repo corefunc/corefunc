@@ -1,4 +1,4 @@
-module.exports = function sortInsertion(array) {
+export default function arraySortInsertion(array: number[]): number[] {
   array.forEach((item, index) => {
     const num = array[index];
     let j;
@@ -8,4 +8,4 @@ module.exports = function sortInsertion(array) {
     array[j + 1] = num;
   });
   return array;
-};
+}

@@ -10,7 +10,7 @@ function merge(array1, array2) {
   return sorted.concat(array1.slice().concat(array2.slice()));
 }
 
-module.exports = function sortMerge(array) {
+module.exports = function arraySortMerge(array) {
   if (array.length <= 1) {
     return array;
   }
