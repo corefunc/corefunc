@@ -23,7 +23,7 @@ export default function arrayUnique(array: any[]): any[] {
         delete unique[unique.indexOf(value)];
       });
       const compacted = [];
-      for (let index = 0; index < unique.length; index += 1) {
+      for (let index = 0; index < unique.length; index++) {
         if (index in unique) {
           compacted.push(unique[index]);
         }

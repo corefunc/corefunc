@@ -20,7 +20,7 @@ export default function propertyGet(object, path, onFail?) {
   }
   const parts = fnIsArray(path) ? path : `${path}`.split(".");
   let haystack = fnCloneDeep(object);
-  for (let index = 0, length = parts.length; index < length; index += 1) {
+  for (let index = 0, length = parts.length; index < length; index++) {
     const part = parts[index];
     if (!fnHasIn(haystack, part)) {
       return onFail;

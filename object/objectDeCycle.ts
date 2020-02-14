@@ -14,7 +14,7 @@ export default function objectDeCycle(object: object, _path: string): object {
       !(value instanceof RegExp) &&
       !(value instanceof String)
     ) {
-      for (index = 0; index < objects.length; index += 1) {
+      for (index = 0; index < objects.length; index++) {
         if (objects[index] === value) {
           return { "&circularReference": paths[index] };
         }
@@ -23,7 +23,7 @@ export default function objectDeCycle(object: object, _path: string): object {
       paths.push(path);
       if (Object.prototype.toString.call(value) === "[object Array]") {
         newIterable = [];
-        for (index = 0; index < (value as any[]).length; index += 1) {
+        for (index = 0; index < (value as any[]).length; index++) {
           newIterable[index] = objectDeCycle(value[index], `${path}[" + index + "]`);
         }
       } else {

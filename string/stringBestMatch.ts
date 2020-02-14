@@ -6,7 +6,7 @@ export default function stringBestMatch(
 ): { ratings: { target: string; rating: number }[]; bestMatch: string; bestMatchIndex: number } {
   const ratings = [];
   let bestMatchIndex = 0;
-  for (let i = 0; i < haystack.length; i += 1) {
+  for (let i = 0; i < haystack.length; i++) {
     const currentTargetString = haystack[i];
     const currentRating = stringSimilarity(needle, currentTargetString);
     ratings.push({ target: currentTargetString, rating: currentRating });

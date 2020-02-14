@@ -2,7 +2,7 @@ export default function arraySortSelection(array: number[]): number[] {
   const swap = (list, a, b) => ([list[a], list[b]] = [list[b], list[a]]);
   array.forEach((item, index) => {
     let min = index;
-    for (let j = index + 1; j < array.length; j += 1) {
+    for (let j = index + 1; j < array.length; j++) {
       if (array[j] < array[min]) {
         min = j;
       }

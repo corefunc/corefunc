@@ -17,18 +17,18 @@ export default function stringSimilarity(stringFirst: string, stringSecond: stri
     return 0;
   }
   const firstBigRams = new Map();
-  for (let i = 0; i < stringFirst.length - 1; i += 1) {
+  for (let i = 0; i < stringFirst.length - 1; i++) {
     const bigRam = stringFirst.substring(i, i + 2);
     const count = firstBigRams.has(bigRam) ? firstBigRams.get(bigRam) + 1 : 1;
     firstBigRams.set(bigRam, count);
   }
   let intersectionSize = 0;
-  for (let i = 0; i < stringSecond.length - 1; i += 1) {
+  for (let i = 0; i < stringSecond.length - 1; i++) {
     const bigRam = stringSecond.substring(i, i + 2);
     const count = firstBigRams.has(bigRam) ? firstBigRams.get(bigRam) : 0;
     if (count > 0) {
       firstBigRams.set(bigRam, count - 1);
-      intersectionSize += 1;
+      intersectionSize++;
     }
   }
   return (2.0 * intersectionSize) / (stringFirst.length + stringSecond.length - 2);

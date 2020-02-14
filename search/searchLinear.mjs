@@ -1,5 +1,5 @@
 export default function searchLinear(array, target) {
-  for (let index = 0; index < array.length; index += 1) {
+  for (let index = 0; index < array.length; index++) {
     if (array[index] === target) {
       return index;
     }
