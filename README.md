@@ -7,7 +7,8 @@
 ```javascript
 // CommonJS
 
-const arraySortStrings = require("@corefunc/corefunc/array/sort/strings.cjs");
+const arraySortStrings =
+  require("@corefunc/corefunc/array/sort/strings.cjs");
 
 arraySortStrings(["c", "a", "b"]);
 ```
