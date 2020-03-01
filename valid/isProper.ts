@@ -12,7 +12,7 @@ function isProper(value) {
   if (fnIsString(value)) {
     return fnTrim(value).length > 0;
   }
-  return !!value;
+  return Boolean(value);
 }
 
 export default isProper;

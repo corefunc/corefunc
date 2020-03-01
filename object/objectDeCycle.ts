@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-unused-vars
 export default function objectDeCycle(object: object, _path: string): object {
   const objects = [];
   const paths = [];

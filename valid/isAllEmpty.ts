@@ -5,7 +5,7 @@ import fnIsEmpty from "lodash-es/isEmpty";
  * @returns {boolean}
  */
 function isAllEmpty(...variables) {
-  return variables.every(variable => fnIsEmpty(variable));
+  return variables.every((variable) => fnIsEmpty(variable));
 }
 
 export default isAllEmpty;

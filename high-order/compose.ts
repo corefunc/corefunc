@@ -1,3 +1,3 @@
-export default function highOrderCompose(...fns: Function[]): any {
-  return fns.reduce((f, g) => (...args) => f(g(...args)));
+export default function highOrderCompose(...functions: Function[]): any {
+  return functions.reduce((func, apply) => (...args) => func(apply(...args)));
 }

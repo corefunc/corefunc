@@ -8,5 +8,5 @@ export default function arrayHasSame(alpha: any[], beta: any[]): boolean {
     return false;
   }
   const setB = new Set(beta);
-  return !![...new Set(alpha)].filter((x) => setB.has(x)).length;
+  return Boolean([...new Set(alpha)].filter((x) => setB.has(x)).length);
 }

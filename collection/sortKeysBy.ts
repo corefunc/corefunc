@@ -14,7 +14,10 @@ function sortKeysBy(iterable, comparator, isDeep = true) {
     }
     return key;
   });
-  return fnZipObject(objectKeys, fnMap(objectKeys, key => iterable[key]));
+  return fnZipObject(
+    objectKeys,
+    fnMap(objectKeys, (key) => iterable[key]),
+  );
 }
 
 export default sortKeysBy;

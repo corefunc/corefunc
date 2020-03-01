@@ -6,7 +6,7 @@
 export default function objectKeysOrder(
   object: Object,
   keys: string[] = [],
-  sortAlphabetically: boolean = false
+  sortAlphabetically: boolean = false,
 ): Object {
   if (!Array.isArray(keys) || keys.length === 0) {
     return object;

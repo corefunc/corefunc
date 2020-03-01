@@ -3,7 +3,7 @@
  * @returns {boolean}
  */
 function isAllTrue(...conditions) {
-  return !conditions.map((condition) => !!condition).includes(false);
+  return !conditions.map((condition) => Boolean(condition)).includes(false);
 }
 
 export default isAllTrue;

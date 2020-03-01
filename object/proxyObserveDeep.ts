@@ -27,7 +27,7 @@ if ("Proxy" in global) {
         // console.log({ operation: 'delete', target, key, });
         delete deleteTarget[key];
         return true;
-      }
+      },
     };
     return new Proxy(target, handler);
   };

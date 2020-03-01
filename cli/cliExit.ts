@@ -2,10 +2,10 @@ export default function cliExit(code: boolean | number = 0) {
   if (code === false) {
     return;
   }
-  if (code === true) {
-    code = 0;
+  let exitCode = 0;
+  if (code !== true) {
+    exitCode = Number.parseInt(code.toString());
   }
-  const exitCode = Number.parseInt(code.toString());
   if (!Number.isInteger(exitCode)) {
     return;
   }

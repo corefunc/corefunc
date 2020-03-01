@@ -13,7 +13,7 @@ export default {
   TAG_NUMBER,
   TAG_OBJECT,
   TAG_STRING,
-  TAG_WINDOW
+  TAG_WINDOW,
 };
 
 /*

@@ -1,5 +1,6 @@
 export default function objectType(value) {
-  const type = Object.prototype.toString.call(value)
+  const type = Object.prototype.toString
+    .call(value)
     .toLowerCase()
     .split("[object ")
     .pop()

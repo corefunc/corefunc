@@ -6,6 +6,6 @@
 export default function convertArrayToObject(array: any[]): object {
   return array.reduce((accumulator, currentValue, currentIndex) => ({
     ...accumulator,
-    ...{ [currentIndex]: currentValue }
+    ...{ [currentIndex]: currentValue },
   }));
 }

@@ -10,11 +10,11 @@
 function toInt(variable, onFail = 0, radix = 10) {
   const type = typeof variable;
   if (type === "boolean") {
-    return +variable;
+    return Number(variable);
   }
   if (type === "string") {
     const temporary = Number.parseInt(variable, radix);
-    return (Number.isNaN(temporary) || !Number.isFinite(temporary)) ? onFail : temporary;
+    return Number.isNaN(temporary) || !Number.isFinite(temporary) ? onFail : temporary;
   }
   if (type === "number" && Number.isFinite(variable)) {
     return variable | 0;

@@ -1,5 +1,5 @@
 export default function waitForever() {
-  return new Promise((resolve, reject) => {});
+  return new Promise(() => {});
 }
 
 // Usage:

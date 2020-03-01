@@ -2,7 +2,7 @@ function serializer(replacer, cycleReplacerArg) {
   const keys = [];
   const stack = [];
   let cycleReplacer = cycleReplacerArg;
-  if (cycleReplacer == null) {
+  if (cycleReplacer === null) {
     cycleReplacer = function cr(key, value) {
       if (stack[0] === value) {
         return "[Circular ~]";
@@ -11,17 +11,18 @@ function serializer(replacer, cycleReplacerArg) {
     };
   }
   return function(key, value) {
+    let result = value;
     if (stack.length > 0) {
       const thisPos = stack.indexOf(this);
       ~thisPos ? stack.splice(thisPos + 1) : stack.push(this);
       ~thisPos ? keys.splice(thisPos, Infinity, key) : keys.push(key);
-      if (~stack.indexOf(value)) {
-        value = cycleReplacer.call(this, key, value);
+      if (stack.indexOf(result) !== -1) {
+        result = cycleReplacer.call(this, key, result);
       }
     } else {
-      stack.push(value);
+      stack.push(result);
     }
-    return replacer == null ? value : replacer.call(this, key, value);
+    return replacer === null ? result : replacer.call(this, key, result);
   };
 }
 

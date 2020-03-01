@@ -35,29 +35,19 @@ function replace(strTarget, anySearch, anyReplace) {
     sReplace = fnToString(anyReplace);
   }
   if (fnIsString(sSearch) && fnIsString(sReplace)) {
-    return sTarget
-      .split(sSearch)
-      .join(sReplace);
+    return sTarget.split(sSearch).join(sReplace);
   }
   if (fnIsString(sSearch)) {
-    return sTarget
-      .split(sSearch)
-      .join(fnToString(fnHead(sReplace)));
+    return sTarget.split(sSearch).join(fnToString(fnHead(sReplace)));
   }
   if (fnIsString(sReplace)) {
-    sSearch
-      .forEach((srch) => {
-        sTarget = sTarget
-          .split(fnToString(srch))
-          .join(sReplace);
-      });
-  }
-  sSearch
-    .forEach((srch, index) => {
-      sTarget = sTarget
-        .split(fnToString(srch))
-        .join(fnToString(fnGet(sReplace, index)));
+    sSearch.forEach((srch) => {
+      sTarget = sTarget.split(fnToString(srch)).join(sReplace);
     });
+  }
+  sSearch.forEach((srch, index) => {
+    sTarget = sTarget.split(fnToString(srch)).join(fnToString(fnGet(sReplace, index)));
+  });
   return sTarget;
 }
 

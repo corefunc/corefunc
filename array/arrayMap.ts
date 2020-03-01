@@ -5,7 +5,8 @@
  * @returns {Array} Returns the new mapped array.
  */
 export default function arrayMap(array: any[], iteratee: (value?: any, index?: number, original?: any[]) => {}): any[] {
-  const length = array === null ? 0 : array.length;
+  let { length } = array;
+  length = length || 0;
   let index = -1;
   const result = Array(length);
   while (++index < length) {

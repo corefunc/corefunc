@@ -10,7 +10,7 @@ import fnRegexMatch from "../regex/regexMatch";
 function isValidPassword(
   password,
   pattern = /^(?=.*\d)(?=.*[a-zA-Z])(?=.*[$@$!%*?&_-])[A-Za-z\d$@$!%*?&_-]{8,}/,
-  onFail = false
+  onFail = false,
 ) {
   return fnRegexMatch(password, pattern, onFail);
 }

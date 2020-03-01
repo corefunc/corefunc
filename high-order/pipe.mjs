@@ -3,4 +3,4 @@ export default function highOrderPipe(fn, ...restFns) {
     return fn;
   }
   return (...args) => restFns.reduce((result, nextFn) => nextFn(result), fn(...args));
-};
+}

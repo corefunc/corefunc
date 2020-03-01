@@ -3,5 +3,5 @@
  * @returns {boolean}
  */
 export default function isObjectLike(value): boolean {
-  return value != null && typeof value === "object";
+  return value && typeof value === "object";
 }

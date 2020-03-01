@@ -1,6 +1,6 @@
-export default function stringSimilarity(stringFirst: string, stringSecond: string): number {
-  stringFirst = stringFirst.replace(/\s+/g, "");
-  stringSecond = stringSecond.replace(/\s+/g, "");
+export default function stringSimilarity(first: string, second: string): number {
+  const stringFirst = first.replace(/\s+/g, "");
+  const stringSecond = second.replace(/\s+/g, "");
   if (!stringFirst.length && !stringSecond.length) {
     return 1;
   }
@@ -17,14 +17,14 @@ export default function stringSimilarity(stringFirst: string, stringSecond: stri
     return 0;
   }
   const firstBigRams = new Map();
-  for (let i = 0; i < stringFirst.length - 1; i++) {
-    const bigRam = stringFirst.substring(i, i + 2);
+  for (let index = 0; index < stringFirst.length - 1; index++) {
+    const bigRam = stringFirst.substring(index, index + 2);
     const count = firstBigRams.has(bigRam) ? firstBigRams.get(bigRam) + 1 : 1;
     firstBigRams.set(bigRam, count);
   }
   let intersectionSize = 0;
-  for (let i = 0; i < stringSecond.length - 1; i++) {
-    const bigRam = stringSecond.substring(i, i + 2);
+  for (let index = 0; index < stringSecond.length - 1; index++) {
+    const bigRam = stringSecond.substring(index, index + 2);
     const count = firstBigRams.has(bigRam) ? firstBigRams.get(bigRam) : 0;
     if (count > 0) {
       firstBigRams.set(bigRam, count - 1);
