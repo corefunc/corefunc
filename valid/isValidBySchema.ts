@@ -10,7 +10,7 @@ const RESULT = {
   keyword: "",
   message: "",
   params: {},
-  schemaPath: ""
+  schemaPath: "",
 };
 
 /**
@@ -20,7 +20,6 @@ const RESULT = {
  * @param {Boolean=false} asText
  * @return {Boolean|Object|String}
  * @link http://epoberezkin.github.io/ajv/
- * @example import fnIsValidBySchema from '@selfserve/utility/valid/isValidBySchema';
  * @example fnIsValidBySchema(isNaN, { type: 'number', }, true) ➜ 'data should be number'
  * @example fnIsValidBySchema(255, { type: 'number', }, true) ➜ ''
  */

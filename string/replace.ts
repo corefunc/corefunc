@@ -12,7 +12,6 @@ import fnValues from "../collection/values";
  * @param {Array|String} anySearch
  * @param {Array|String} anyReplace
  * @return {String}
- * @example import fnReplace from '@selfserve/utility/string/replace';
  * @example fnReplace('target', 'search', 'replace');
  * @example fnReplace('target', ['search 1', 'searach 2'], 'replace');
  * @example fnReplace('target', ['search 1', 'searach 2'], ['replace 1', 'replace 2']);

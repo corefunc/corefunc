@@ -2,7 +2,6 @@ import fnIsObjectLike from "lodash-es/isObjectLike";
 
 /**
  * Whether the object has the specified property
- * @example import fnPropertyHasOwn from '@selfserve/utility/object/propertyHasOwn';
  * @param object
  * @param propertyName
  * @return {Boolean}

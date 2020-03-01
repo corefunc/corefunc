@@ -14,7 +14,6 @@ import fnIsTraversable from "../is/isTraversable";
  * @param {Boolean=true} clone
  * @param {*=} defaultValue
  * @return {*}
- * @example import fnHead from "@selfserve/utility/collection/head";
  * @example head(null) ➜ undefined
  * @example head(null, 0) ➜ 0
  * @example head([], 0) ➜ 0

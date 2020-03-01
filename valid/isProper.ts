@@ -10,7 +10,7 @@ function isProper(value) {
     return false;
   }
   if (fnIsString(value)) {
-    return (fnTrim(value).length > 0);
+    return fnTrim(value).length > 0;
   }
   return !!value;
 }

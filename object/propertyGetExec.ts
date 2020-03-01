@@ -10,7 +10,6 @@ import fnIsObject from "lodash-es/isObject";
  * @param {Array|String} path
  * @param {*} [onFail=undefined]
  * @returns {*}
- * @example import fnPropertyGetExec from '@selfserve/utility/object/propertyGetExec';
  */
 function propertyGet(object, path, onFail) {
   if (!object) {

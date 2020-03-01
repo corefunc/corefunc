@@ -2,9 +2,6 @@ import getGlobal from "system.global";
 
 const global = getGlobal();
 
-/**
- * @example import fnProxyObserveDeep from '@selfserve/utility/object/proxyObserveDeep';
- */
 let proxyObserveDeep = () => {};
 
 if ("Proxy" in global) {

@@ -11,7 +11,11 @@
   ],
   "dependencies": {
     "@grafite/helpers": "latest",
-    "lodash-es": "latest"
+    "ajv": "latest",
+    "lodash-es": "latest",
+    "lz-string": "latest",
+    "moment": "latest",
+    "system.global": "latest"
   },
   "description": "Collection of utilities",
   "devDependencies": {
@@ -54,11 +58,11 @@
   },
   "scripts": {
     "lint": "eslint ./**/*.{cj,mj,t}s",
-    "lint-dir": "eslint ./array/**/*.{cj,mj,t}s",
+    "lint-dir": "eslint ./**/*.{cj,mj,t}s",
     "test": "jest --passWithNoTests",
     "test:cjs": "node ./tests/index.cjs",
     "test:mjs": "node --experimental-modules ./tests/index.mjs",
     "upgrade": "yarn upgrade-interactive --latest"
   },
-  "version": "0.0.5"
+  "version": "0.0.6"
 }

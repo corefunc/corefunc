@@ -7,7 +7,6 @@ import fnIsObjectLike from "lodash-es/isObjectLike";
  * @param {Array} propertyNames
  * @param {*=} onFail
  * @returns {*}
- * @example import fnAtAny from '@selfserve/utility/collection/atAny';
  */
 function atAny(object, propertyNames, onFail) {
   if (fnIsObjectLike(object) === false) {
