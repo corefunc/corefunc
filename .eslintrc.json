@@ -1,29 +1,33 @@
 {
   "env": {
+    "commonjs": true,
     "es6": true,
     "node": true
   },
-  "extends": ["standard"],
+  "extends": ["plugin:prettier/recommended", "eslint:recommended"],
   "globals": {
     "Atomics": "readonly",
     "SharedArrayBuffer": "readonly"
   },
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
+    "allowImportExportEverywhere": true,
     "ecmaVersion": 2018,
     "sourceType": "module"
   },
   "plugins": ["@typescript-eslint"],
   "rules": {
-    "quotes": [
-      "error",
-      "double",
-      {
-        "allowTemplateLiterals": true,
-        "avoidEscape": true
-      }
-    ],
+    "eqeqeq": ["error", "always"],
+    "id-length": ["error", { "exceptions": ["x", "y", "z"], "min": 2, "properties": "never" }],
+    "linebreak-style": ["error", "unix"],
+    "no-console": "warn",
+    "no-implicit-coercion": "error",
+    "no-multi-assign": "error",
+    "no-param-reassign": "error",
+    "no-ternary": "error",
+    "prettier/prettier": "error",
+    "quotes": ["error", "double", { "allowTemplateLiterals": true, "avoidEscape": true }],
     "semi": ["error", "always"],
-    "space-before-function-paren": ["error", "never"]
+    "yoda": "error"
   }
 }
