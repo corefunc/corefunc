@@ -6,35 +6,37 @@ function swap(items, firstIndex, secondIndex) {
 
 function partition(items, left, right) {
   const pivot = items[Math.floor((right + left) / 2)];
-  let i = left;
-  let j = right;
-  while (i <= j) {
-    while (items[i] < pivot) {
-      i++;
+  let indexLeft = left;
+  let indexRight = right;
+  while (indexLeft <= indexRight) {
+    while (items[indexLeft] < pivot) {
+      indexLeft++;
     }
-    while (items[j] > pivot) {
-      j--;
+    while (items[indexRight] > pivot) {
+      indexRight--;
     }
-    if (i <= j) {
-      swap(items, i, j);
-      i++;
-      j--;
+    if (indexLeft <= indexRight) {
+      swap(items, indexLeft, indexRight);
+      indexLeft++;
+      indexRight--;
     }
   }
-  return i;
+  return indexLeft;
 }
 
 module.exports = function arraySortQuick(items, left, right) {
   let index;
   if (items.length > 1) {
-    left = typeof left !== "number" ? 0 : left;
-    right = typeof right !== "number" ? items.length - 1 : right;
-    index = partition(items, left, right);
-    if (left < index - 1) {
-      arraySortQuick(items, left, index - 1);
+    // eslint-disable-next-line no-ternary
+    const lefty = typeof left !== "number" ? 0 : left;
+    // eslint-disable-next-line no-ternary
+    const rightly = typeof right !== "number" ? items.length - 1 : right;
+    index = partition(items, lefty, rightly);
+    if (lefty < index - 1) {
+      arraySortQuick(items, lefty, index - 1);
     }
-    if (index < right) {
-      arraySortQuick(items, index, right);
+    if (index < rightly) {
+      arraySortQuick(items, index, rightly);
     }
   }
   return items;

@@ -1,9 +1,9 @@
 export default function arraySortBubble(array: number[]): number[] {
-  const swap = (list, a, b) => ([list[a], list[b]] = [list[b], list[a]]);
-  for (let i = array.length; i > 0; i -= 1) {
-    for (let j = 0; j < i - 1; j++) {
-      if (array[j] > array[j + 1]) {
-        swap(array, j, j + 1);
+  const swap = (list, alpha, beta) => ([list[alpha], list[beta]] = [list[beta], list[alpha]]);
+  for (let index = array.length; index > 0; index -= 1) {
+    for (let subIndex = 0; subIndex < index - 1; subIndex++) {
+      if (array[subIndex] > array[subIndex + 1]) {
+        swap(array, subIndex, subIndex + 1);
       }
     }
   }
