@@ -1,10 +1,13 @@
 /**
  * Generate random string from latin characters and numbers
  * @param {Number} size
+ * @param {String} possible
  * @return {String}
  */
-function random(size) {
-  const possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+export default function generateString(
+  size: number,
+  possible: string = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789",
+) {
   let index = 0;
   let text = "";
   for (index; index < size; index++) {
@@ -12,5 +15,3 @@ function random(size) {
   }
   return text;
 }
-
-export default random;
