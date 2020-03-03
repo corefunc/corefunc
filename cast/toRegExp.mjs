@@ -1,12 +1,12 @@
-import isArray from "../is/isArray";
-import isRegExp from "../is/isRegExp";
-import isString from "../is/isString";
+import isArray from "../is/isArray.mjs";
+import isRegExp from "../is/isRegExp.mjs";
+import isString from "../is/isString.mjs";
 
 /**
  * @param pattern {Array|RegExp|String}
  * @return {Boolean|RegExp}
  */
-export default function toRegExp(pattern): boolean | RegExp {
+export default function toRegExp(pattern) {
   if (isRegExp(pattern)) {
     return pattern;
   }

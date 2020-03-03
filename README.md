@@ -2,7 +2,7 @@
 
 > **Please Note:** This is not a production-ready package. Expect long stretches of zero updates—that does not mean that the module is outdated. This is "Don’t repeat yourself" collection. Yes, it's working fine, but it is not complete neither consistent. Everything is a "Work in Progress".
 
-## Recommended usage for Three Shaking
+## Recommended usage for Tree Shaking
 
 ```javascript
 // CommonJS
