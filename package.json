@@ -13,9 +13,7 @@
     "@grafite/helpers": "latest",
     "ajv": "latest",
     "lodash-es": "latest",
-    "lz-string": "latest",
-    "moment": "latest",
-    "system.global": "latest"
+    "lz-string": "latest"
   },
   "description": "Collection of utilities",
   "devDependencies": {
@@ -64,5 +62,5 @@
     "test:mjs": "node --experimental-modules ./tests/index.mjs",
     "upgrade": "yarn upgrade-interactive --latest"
   },
-  "version": "0.0.9"
+  "version": "0.0.10"
 }
