@@ -1,4 +1,3 @@
-import fnIsArray from "lodash-es/isArray";
 import fnIsObjectLike from "lodash-es/isObjectLike";
 import fnKeys from "lodash-es/keys";
 
@@ -16,7 +15,7 @@ function keys(iterable) {
   if (fnIsObjectLike(iterable) === false) {
     return [];
   }
-  if (fnIsArray(iterable) || fnIsKeyed(iterable)) {
+  if (Array.isArray(iterable) || fnIsKeyed(iterable)) {
     return Array.from(iterable.keys());
   }
   return fnKeys(iterable);

@@ -1,6 +1,5 @@
 import fnCloneDeep from "lodash-es/cloneDeep";
 import fnHead from "lodash-es/head";
-import fnIsArray from "lodash-es/isArray";
 import fnKeys from "lodash-es/keys";
 import fnSortBy from "lodash-es/sortBy";
 
@@ -30,7 +29,7 @@ function head(iterable, clone = true, defaultValue = undefined) {
   if (!fnIsTraversable(iterable)) {
     return fnCloneDeep(defaultValue);
   }
-  if (fnIsArray(iterable)) {
+  if (Array.isArray(iterable)) {
     if (iterable.length === 0) {
       return defaultValue;
     }

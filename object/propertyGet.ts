@@ -1,6 +1,5 @@
 import fnCloneDeep from "lodash-es/cloneDeep";
 import fnHasIn from "lodash-es/hasIn";
-import fnIsArray from "lodash-es/isArray";
 import fnIsObject from "lodash-es/isObject";
 
 /**
@@ -17,7 +16,7 @@ export default function propertyGet(object, path, onFail?) {
   if (fnIsObject(object) === false) {
     return onFail;
   }
-  const parts = fnIsArray(path) ? path : `${path}`.split(".");
+  const parts = Array.isArray(path) ? path : `${path}`.split(".");
   let haystack = fnCloneDeep(object);
   for (let index = 0, length = parts.length; index < length; index++) {
     const part = parts[index];

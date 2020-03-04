@@ -1,4 +1,3 @@
-import fnIsArray from "lodash-es/isArray";
 import fnValues from "lodash-es/values";
 
 import fnIsMapType from "../is/isMapType";
@@ -9,7 +8,7 @@ import fnIsSetType from "../is/isSetType";
  * @return {Array}
  */
 function values(iterable) {
-  if (fnIsArray(iterable)) {
+  if (Array.isArray(iterable)) {
     return iterable;
   }
   if (fnIsMapType(iterable)) {

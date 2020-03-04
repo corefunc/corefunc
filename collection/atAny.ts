@@ -1,4 +1,3 @@
-import fnIsArray from "lodash-es/isArray";
 import fnIsObjectLike from "lodash-es/isObjectLike";
 
 /**
@@ -12,7 +11,7 @@ function atAny(object, propertyNames, onFail) {
   if (fnIsObjectLike(object) === false) {
     return onFail;
   }
-  if (fnIsArray(propertyNames) === false) {
+  if (Array.isArray(propertyNames) === false) {
     return onFail;
   }
   for (let name of propertyNames) {
