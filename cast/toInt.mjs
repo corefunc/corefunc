@@ -6,7 +6,7 @@
  * @returns {Number}
  * @example castToInt("F", 0, 16); // => 15
  */
-export default function castToInt<D>(variable, onFail: D | number = 0, radix: number = 10): D | number {
+export default function castToInt(variable, onFail = 0, radix = 10) {
   const type = typeof variable;
   if (type === "boolean") {
     return Number(variable);

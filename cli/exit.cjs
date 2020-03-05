@@ -1,4 +1,7 @@
-export default function cliExit(code: boolean | number = 0) {
+/**
+ * @param {boolean|number} code
+ */
+module.exports = function cliExit(code = 0) {
   if (code === false) {
     return;
   }
@@ -17,4 +20,4 @@ export default function cliExit(code: boolean | number = 0) {
   } catch (error) {
     //
   }
-}
+};

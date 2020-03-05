@@ -1,12 +1,16 @@
 /**
- * Extract function name
+ * @name funcName
+ * @description Extract function name
  * @param {Function} func
  * @return {string}
  */
-export default function funcNameExtract(func: Function): string {
+module.exports = function funcName(func) {
   if (func.name) {
     return func.name;
   }
   const result = /^function\s+([\w]+)\s*\(/.exec(func.toString());
-  return result ? result[1] : "";
-}
+  if (result) {
+    return result.shift();
+  }
+  return "";
+};

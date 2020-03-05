@@ -1,4 +1,4 @@
-export default function checkIsTrueish(value: any): boolean {
+export default function checkIsTrueish(value) {
   if (value === true || value === 1) {
     return true;
   }

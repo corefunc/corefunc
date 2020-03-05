@@ -6,7 +6,7 @@
  * @returns {Number}
  * @example castToFloat("16.5"); // => 16.5
  */
-export default function castToFloat<D>(variable: any, onFail: D | number = 0): D | number {
+module.exports = function castToFloat(variable, onFail = 0) {
   const type = typeof variable;
   if (type === "boolean") {
     return Number(variable);
@@ -22,4 +22,4 @@ export default function castToFloat<D>(variable: any, onFail: D | number = 0): D
     return Number.parseFloat(variable);
   }
   return onFail;
-}
+};

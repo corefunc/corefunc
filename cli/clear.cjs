@@ -1,4 +1,4 @@
-export default function cliClear() {
+module.exports = function cliClear() {
   if ("clear" in console) {
     try {
       // eslint-disable-next-line no-console
@@ -8,10 +8,9 @@ export default function cliClear() {
     }
   } else {
     try {
-      // @ts-ignore
       process.stdout.write("\u001b[2J\u001b[0;0H");
     } catch (err) {
       //
     }
   }
-}
+};
