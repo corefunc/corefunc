@@ -3,11 +3,11 @@
  * @param keys
  * @param sortAlphabetically
  */
-export default function objectKeysOrder(
-  object: Object,
+export default function objectKeysOrder<T extends Object>(
+  object: T,
   keys: string[] = [],
   sortAlphabetically: boolean = false,
-): Object {
+): T {
   if (!Array.isArray(keys) || keys.length === 0) {
     return object;
   }
@@ -25,5 +25,5 @@ export default function objectKeysOrder(
     objectKeys = objectKeys.sort((alpha, beta) => alpha.localeCompare(beta));
   }
   objectKeys.forEach((key) => (newObject[key] = object[key]));
-  return newObject;
+  return newObject as T;
 }

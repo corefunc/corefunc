@@ -1,5 +1,5 @@
 /**
- * @name toFlag
+ * @name convertToFlag
  * @description
  * Turns: undefined, null, 0, 0n, "", "false", "FALSE" to boolean false.
  * Turns: 1, 1n, "1", "true", "TRUE" to boolean true.
@@ -8,7 +8,7 @@
  * @param {*=false} onUnParsable
  * @returns {boolean}
  */
-function toFlag(value, onEmpty = false, onUnParsable = false) {
+module.exports = function convertToFlag(value, onEmpty = false, onUnParsable = false) {
   if (value === undefined || value === null) {
     return onEmpty;
   }
@@ -29,6 +29,4 @@ function toFlag(value, onEmpty = false, onUnParsable = false) {
     return false;
   }
   return onUnParsable;
-}
-
-export default toFlag;
+};

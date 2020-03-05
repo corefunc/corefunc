@@ -2,7 +2,7 @@
  * @param {*} value
  * @returns string
  */
-module.exports = function toString(value) {
+export default function castToString(value) {
   if (value === null || value === undefined) {
     return "";
   }
@@ -14,4 +14,4 @@ module.exports = function toString(value) {
     return "-0";
   }
   return result;
-};
+}

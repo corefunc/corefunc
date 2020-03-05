@@ -9,6 +9,6 @@
  * @example isObjectLike(() => {}); ➜ false
  * @example isObjectLike(null); ➜ false
  */
-export default function checkIsObjectLike(value: any): boolean {
+module.exports = function checkIsObjectLike(value) {
   return value && typeof value === "object" && !Array.isArray(value);
-}
+};

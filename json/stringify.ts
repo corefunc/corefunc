@@ -33,7 +33,7 @@ function serializer(replacer, cycleReplacerArg) {
  * @param {Function=} cycleReplacer
  * @return {String}
  */
-function stringify(object, replacer, spaces, cycleReplacer) {
+function stringify(object, replacer?, spaces?, cycleReplacer?) {
   return JSON.stringify(object, serializer(replacer, cycleReplacer), spaces);
 }
 

@@ -1,19 +1,18 @@
-import isArray from "../is/isArray";
-import isRegExp from "../is/isRegExp";
-import isString from "../is/isString";
+const isRegExp = require("../../is/regexp.cjs");
+const isString = require("../../is/string.cjs");
 
 /**
  * @param pattern {Array|RegExp|String}
  * @return {Boolean|RegExp}
  */
-export default function toRegExp(pattern): boolean | RegExp {
+module.exports = function castToRegExp(pattern) {
   if (isRegExp(pattern)) {
     return pattern;
   }
   if (isString(pattern)) {
     return new RegExp(pattern);
   }
-  if (isArray(pattern)) {
+  if (Array.isArray(pattern)) {
     if (isString(pattern[0]) === false) {
       return false;
     }
@@ -23,4 +22,4 @@ export default function toRegExp(pattern): boolean | RegExp {
     return new RegExp(pattern[0]);
   }
   return false;
-}
+};

@@ -1,19 +1,18 @@
-import isArray from "../is/isArray.mjs";
-import isRegExp from "../is/isRegExp.mjs";
-import isString from "../is/isString.mjs";
+import isRegExp from "../../is/regexp.mjs";
+import isString from "../../is/string.mjs";
 
 /**
  * @param pattern {Array|RegExp|String}
  * @return {Boolean|RegExp}
  */
-export default function toRegExp(pattern) {
+export default function castToRegExp(pattern) {
   if (isRegExp(pattern)) {
     return pattern;
   }
   if (isString(pattern)) {
     return new RegExp(pattern);
   }
-  if (isArray(pattern)) {
+  if (Array.isArray(pattern)) {
     if (isString(pattern[0]) === false) {
       return false;
     }

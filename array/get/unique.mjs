@@ -1,10 +1,12 @@
 /**
- * @param {*[]} array
- * @returns {*[]}
+ * @name arrayGetUnique
+ * @param {Array} array
+ * @param {boolean=} sort
+ * @returns {Array}
  * @example
- * arrayUnique([NaN, NaN, 0, -0, +0, "\u0065\u0301", "\u00e9"]) -> [ NaN, 0, 'é', -0 ]
+ * arrayGetUnique([NaN, NaN, 0, -0, +0, "\u0065\u0301", "\u00e9"]) -> [ NaN, 0, 'é', -0 ]
  */
-export default function arrayUnique(array: any[]): any[] {
+export default function arrayGetUnique(array, sort = true) {
   if (array.length < 2) {
     return array;
   }
@@ -31,5 +33,8 @@ export default function arrayUnique(array: any[]): any[] {
       unique = compacted.concat(normalized);
     }
   }
-  return unique.sort();
+  if (sort) {
+    return unique.sort();
+  }
+  return unique;
 }
