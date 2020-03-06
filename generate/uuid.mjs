@@ -4,7 +4,7 @@ for (let index = 0; index < 256; index += 1) {
   lut[index] = (index < 16 ? "0" : "") + index.toString(16);
 }
 
-export default function generateUuid(): string {
+export default function generateUuid() {
   const d0 = (Math.random() * 0xffffffff) | 0;
   const d1 = (Math.random() * 0xffffffff) | 0;
   const d2 = (Math.random() * 0xffffffff) | 0;

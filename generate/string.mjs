@@ -5,9 +5,9 @@
  * @return {String}
  */
 export default function generateString(
-  size: number,
-  possible: string = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789",
-): string {
+  size,
+  possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789",
+) {
   let index = 0;
   let text = "";
   for (index; index < size; index++) {

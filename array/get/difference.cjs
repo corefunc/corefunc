@@ -1,4 +1,4 @@
-export default function arrayGetDiff(alpha: any[], beta: any[]): any[] {
+module.exports = function arrayGetDifference(alpha, beta) {
   const set = new Set(beta);
   return alpha.filter((value) => !set.has(value));
-}
+};
