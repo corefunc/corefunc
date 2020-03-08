@@ -2,7 +2,7 @@
  * @param {Arguments|Array|Map|Object|Set|WeakMap|WeakSet} iterable
  * @return {Array}
  */
-export default function collectionValues(iterable: any): any[] {
+module.exports = function collectionValues(iterable) {
   if (!iterable || Object(iterable) !== iterable) {
     return [];
   }
@@ -16,4 +16,4 @@ export default function collectionValues(iterable: any): any[] {
     return Array.from(iterable.values());
   }
   return Object.values(iterable);
-}
+};

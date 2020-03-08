@@ -1,4 +1,4 @@
-import fnValues from "../collection/values";
+import collectionValues from "../../collection/values";
 
 /**
  * Creates a new Array instance from an array-like or iterable object
@@ -6,8 +6,6 @@ import fnValues from "../collection/values";
  * @param {*} value
  * @return {Array}
  */
-function toArray(value) {
-  return fnValues(value);
+export default function castToArray(value: any): any[] {
+  return collectionValues(value);
 }
-
-export default toArray;

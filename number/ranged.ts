@@ -1,5 +1,5 @@
-import fnToFloat from "./toFloat";
-import fnToInt from "./toInt";
+import castToInt from "../cast/to/int";
+import castToFloat from "../cast/to/float";
 
 /**
  * Typecast variable to number wih minimum and maximum value
@@ -9,14 +9,20 @@ import fnToInt from "./toInt";
  * @param {Number} numMax [Number.MAX_VALUE]
  * @param {Boolean=false} isInteger
  * @returns {Number}
- * @example toRange("99.5", 0, 1, 100); // => 99.5
+ * @example numberRanged("99.5", 0, 1, 100); // => 99.5
  */
-function toRange(variable, onFail = 0, numMin = Number.MIN_VALUE, numMax = Number.MAX_VALUE, isInteger = false) {
+export default function numberRanged<T>(
+  variable: any,
+  onFail: T,
+  numMin: number = Number.MIN_VALUE,
+  numMax: number = Number.MAX_VALUE,
+  isInteger: boolean = false,
+): T | number {
   let range;
   if (isInteger) {
-    range = fnToInt(variable, onFail);
+    range = castToInt(variable, onFail);
   } else {
-    range = fnToFloat(variable, onFail);
+    range = castToFloat(variable, onFail);
   }
   if (range < numMin) {
     return numMin;
@@ -26,5 +32,3 @@ function toRange(variable, onFail = 0, numMin = Number.MIN_VALUE, numMax = Numbe
   }
   return range;
 }
-
-export default toRange;
