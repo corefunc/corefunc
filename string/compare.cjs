@@ -1,5 +1,5 @@
-import castToString from "../cast/to/string";
-import stringClearReferences from "./clearReferences";
+const castToString = require("../cast/to/string.cjs");
+const stringClearReferences = require("./clearReferences.cjs");
 
 /**
  * Compare two strings
@@ -8,7 +8,7 @@ import stringClearReferences from "./clearReferences";
  * @param {boolean} isStrict
  * @returns {boolean}
  */
-export default function stringCompare(first: string, second: string, isStrict: boolean = false): boolean {
+module.exports = function stringCompare(first, second, isStrict = false) {
   let stringOne = castToString(first).normalize();
   let stringTwo = castToString(second).normalize();
   if (stringOne.length !== stringTwo.length) {
@@ -26,4 +26,4 @@ export default function stringCompare(first: string, second: string, isStrict: b
   stringClearReferences(stringOne);
   stringClearReferences(stringTwo);
   return isSame;
-}
+};

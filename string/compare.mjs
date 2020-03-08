@@ -1,5 +1,5 @@
-import castToString from "../cast/to/string";
-import stringClearReferences from "./clearReferences";
+import castToString from "../cast/to/string.mjs";
+import stringClearReferences from "./clearReferences.mjs";
 
 /**
  * Compare two strings
@@ -8,7 +8,7 @@ import stringClearReferences from "./clearReferences";
  * @param {boolean} isStrict
  * @returns {boolean}
  */
-export default function stringCompare(first: string, second: string, isStrict: boolean = false): boolean {
+export default function stringCompare(first, second, isStrict = false) {
   let stringOne = castToString(first).normalize();
   let stringTwo = castToString(second).normalize();
   if (stringOne.length !== stringTwo.length) {
