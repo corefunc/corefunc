@@ -1,5 +1,5 @@
-import castToString from "../cast/to/string";
-import stringClearReferences from "./clearReferences";
+import castToString from "../cast/to/string.cjs";
+import stringClearReferences from "./clearReferences.cjs";
 
 /**
  * Perform search in string
@@ -8,7 +8,7 @@ import stringClearReferences from "./clearReferences";
  * @param {boolean=} isStrict
  * @returns {boolean}
  */
-export default function stringContains(haystack: string, needle: string, isStrict: boolean = false): boolean {
+module.exports = function stringContains(haystack, needle, isStrict = false) {
   const strHaystack = castToString(haystack).normalize();
   const strNeedle = castToString(needle).normalize();
   if (isStrict) {
@@ -20,4 +20,4 @@ export default function stringContains(haystack: string, needle: string, isStric
   stringClearReferences(strHaystack);
   stringClearReferences(strNeedle);
   return contains;
-}
+};
