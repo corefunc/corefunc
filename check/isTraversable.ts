@@ -1,6 +1,6 @@
-import isObject from "lodash-es/isObject";
-import fnIsIterable from "./isIterable";
+import checkIsIterable from "./isIterable";
+import checkIsObjectLike from "./isObjectLike";
 
-export default function checkIsTraversable(value): boolean {
-  return Boolean(Array.isArray(value) || isObject(value) || fnIsIterable(value));
+export default function checkIsTraversable(value: any): boolean {
+  return Boolean(Array.isArray(value) || checkIsObjectLike(value) || checkIsIterable(value));
 }

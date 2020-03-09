@@ -1,6 +1,6 @@
-import castToString from "../cast/to/string";
+import castToString from "../cast/to/string.cjs";
 
-export default function stringEscapeEscaped(text: string): string {
+module.exports = function stringEscapeEscaped(text) {
   return castToString(text)
     .replace(/\\{3}/g, "")
     .replace(/\\{2}r/g, "")
@@ -17,4 +17,4 @@ export default function stringEscapeEscaped(text: string): string {
     .replace(/\\t/g, "\\t")
     .replace(/\\b/g, "\\b")
     .replace(/\\f/g, "\\f");
-}
+};
