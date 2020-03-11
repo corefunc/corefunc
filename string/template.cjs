@@ -1,17 +1,12 @@
-import castToString from "../cast/to/string";
-import collectionForEach from "../collection/forEach";
-import regexReplace from "../regex/replace";
+const castToString = require("../cast/to/string.cjs");
+const collectionForEach = require("../collection/forEach.cjs");
+const regexReplace = require("../regex/replace.cjs");
 
 /**
  * Generate template with variables
  * @return {String}
  */
-export default function stringTemplate(
-  string: string = "",
-  variables: object = {},
-  start: string = "{",
-  end: string = "}",
-): string {
+module.exports = function stringTemplate(string = "", variables = {}, start = "{", end = "}") {
   let strTemplate = castToString(string);
   const strStart = castToString(start);
   const strEnd = castToString(end);
@@ -19,4 +14,4 @@ export default function stringTemplate(
     strTemplate = regexReplace(strTemplate, strStart + variableName + strEnd, textToReplace);
   });
   return strTemplate;
-}
+};

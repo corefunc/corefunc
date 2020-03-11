@@ -1,17 +1,12 @@
-import castToString from "../cast/to/string";
-import collectionForEach from "../collection/forEach";
-import regexReplace from "../regex/replace";
+import castToString from "../cast/to/string.mjs";
+import collectionForEach from "../collection/forEach.mjs";
+import regexReplace from "../regex/replace.mjs";
 
 /**
  * Generate template with variables
  * @return {String}
  */
-export default function stringTemplate(
-  string: string = "",
-  variables: object = {},
-  start: string = "{",
-  end: string = "}",
-): string {
+export default function stringTemplate(string = "", variables = {}, start = "{", end = "}") {
   let strTemplate = castToString(string);
   const strStart = castToString(start);
   const strEnd = castToString(end);
