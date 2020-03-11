@@ -2,8 +2,6 @@
  * @param {*} value
  * @return {boolean}
  */
-function isWeakSet(value) {
+export default function isWeakSet(value) {
   return value instanceof WeakSet;
 }
-
-export default isWeakSet;
