@@ -48,3 +48,11 @@ Or find useful these tools:
 -   🧾[JSON Sorter](https://r37r0m0d3l.github.io/json_sort)🧾 - Neat online JSON sorter.
 
 ---
+
+Also there is more useful links:
+
+-   https://github.com/you-dont-need/You-Dont-Need-Lodash-Underscore
+
+-   https://www.30secondsofcode.org/js/p/1
+
+---
