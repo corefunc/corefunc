@@ -53,6 +53,14 @@ Also there is more useful links:
 
 -   https://github.com/you-dont-need/You-Dont-Need-Lodash-Underscore
 
+-   https://github.com/lodash/lodash
+
 -   https://www.30secondsofcode.org/js/p/1
+
+-   https://github.com/liriliri/licia
+
+-   https://github.com/panzerdp/voca
+
+-   https://github.com/mout/mout
 
 ---
