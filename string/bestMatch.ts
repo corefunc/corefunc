@@ -1,4 +1,4 @@
-import stringSimilarity from "./stringSimilarity";
+import stringSimilarity from "./similarity";
 
 export default function stringBestMatch(
   needle: string,
