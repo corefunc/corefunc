@@ -1,3 +1,9 @@
+/**
+ * @name arrayHasSame
+ * @param {Array} alpha
+ * @param {Array} beta
+ * @returns {boolean}
+ */
 module.exports = function arrayHasSame(alpha, beta) {
   if (!alpha.length || !beta.length) {
     return false;

@@ -1,8 +1,6 @@
-import fnToString from "lodash-es/toString";
-import fnEscapeEscaped from "../string/escapeEscaped";
+import castToString from "../cast/to/string";
+import stringEscapeEscaped from "../string/escapeEscaped";
 
-function cleanup(string) {
-  return fnEscapeEscaped(fnToString(string));
+export default function jsonCleanup(text: string): string {
+  return stringEscapeEscaped(castToString(text));
 }
-
-export default cleanup;

@@ -1,3 +1,9 @@
+/**
+ * @name arrayBasicIntersect
+ * @param {Array} alpha
+ * @param {Array} beta
+ * @returns {Array}
+ */
 export default function arrayBasicIntersect(alpha, beta) {
   if (!alpha.length || !beta.length) {
     return [];

@@ -1,3 +1,9 @@
+/**
+ * @name arrayHasSame
+ * @param {Array} alpha
+ * @param {Array} beta
+ * @returns {boolean}
+ */
 export default function arrayHasSame(alpha: any[], beta: any[]): boolean {
   if (!alpha.length || !beta.length) {
     return false;
