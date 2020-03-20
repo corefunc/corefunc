@@ -1,12 +1,12 @@
-import checkIsKeyed from "../check/isKeyed";
-import checkIsObjectLike from "../check/isObjectLike";
+const checkIsKeyed = require("../check/isKeyed.cjs");
+const checkIsObjectLike = require("../check/isObjectLike.cjs");
 
 /**
  * Pick object property from list of names
  * @param {*} iterable
  * @returns {Array}
  */
-export default function collectionKeys(iterable: any): any[] {
+module.exports = function collectionKeys(iterable) {
   if (!iterable) {
     return [];
   }
@@ -17,4 +17,4 @@ export default function collectionKeys(iterable: any): any[] {
     return [];
   }
   return Object.keys(iterable);
-}
+};

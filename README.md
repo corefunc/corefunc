@@ -1,3 +1,5 @@
+![CoreFunc](docs/img/logo_200.png?raw=true "CoreFunc")
+
 # CoreFunc
 
 [![NPM Version](https://img.shields.io/npm/v/@corefunc/corefunc.svg?style=flat)]()
