@@ -1,6 +1,6 @@
-const isString = require("../is/isString.cjs");
-const toRegExp = require("../cast/toRegExp.cjs");
-const toString = require("../cast/toString.cjs");
+const isString = require("../is/string.cjs");
+const toRegExp = require("../cast/to/regexp.cjs");
+const toString = require("../cast/to/string.cjs");
 
 /**
  * Executes a search for a match between a regular expression and a specified string.

@@ -11,18 +11,19 @@
 
 ## Recommended usage for Tree Shaking
 
-```javascript
-// CommonJS
 
+### CommonJS
+
+```javascript
 const arraySortStrings =
   require("@corefunc/corefunc/array/sort/strings.cjs");
 
 arraySortStrings(["c", "a", "b"]);
 ```
 
-```javascript
-// ECMAScript module
+### ECMAScript module
 
+```javascript
 import arraySortStrings from "@corefunc/corefunc/array/sort/strings.mjs";
 
 arraySortStrings(["c", "a", "b"]);

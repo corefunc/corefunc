@@ -1,6 +1,6 @@
-import isString from "../is/isString.mjs";
-import toRegExp from "../cast/toRegExp.mjs";
-import toString from "../cast/toString.mjs";
+import isString from "../is/string.mjs";
+import toRegExp from "../cast/to/regexp.mjs";
+import toString from "../cast/to/string.mjs";
 
 /**
  * Executes a search for a match between a regular expression and a specified string.

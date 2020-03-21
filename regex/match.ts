@@ -1,6 +1,6 @@
-import isString from "../is/isString";
-import toRegExp from "../cast/toRegExp";
-import toString from "../cast/toString";
+import isString from "../is/string";
+import toRegExp from "../cast/to/regexp";
+import toString from "../cast/to/string";
 
 /**
  * Executes a search for a match between a regular expression and a specified string.
@@ -21,5 +21,5 @@ export default function regexMatch(
   if (regexp === false) {
     return onFail;
   }
-  return regexp.test(toString(string));
+  return (regexp as RegExp).test(toString(string));
 }
