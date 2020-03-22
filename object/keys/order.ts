@@ -1,7 +1,9 @@
 /**
- * @param object
- * @param keys
- * @param sortAlphabetically
+ * @name objectKeysOrder
+ * @param {Object} object
+ * @param {Array.<string>} keys
+ * @param {boolean=} sortAlphabetically
+ * @returns {{}|*}
  */
 export default function objectKeysOrder<T extends Object>(
   object: T,

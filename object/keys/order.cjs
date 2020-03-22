@@ -1,7 +1,9 @@
 /**
- * @param object
- * @param keys
- * @param sortAlphabetically
+ * @name objectKeysOrder
+ * @param {Object} object
+ * @param {Array.<string>} keys
+ * @param {boolean=} sortAlphabetically
+ * @returns {{}|*}
  */
 module.exports = function objectKeysOrder(object, keys = [], sortAlphabetically = false) {
   if (!Array.isArray(keys) || keys.length === 0) {
