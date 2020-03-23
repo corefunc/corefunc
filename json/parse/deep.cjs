@@ -1,6 +1,6 @@
-import checkIsTraversable from "../../check/isTraversable";
-import collectionForEach from "../../collection/forEach";
-import jsonParseSafe from "./safe";
+const checkIsTraversable = require("../../check/isTraversable.cjs");
+const collectionForEach = require("../../collection/forEach.cjs");
+const jsonParseSafe = require("./safe.cjs");
 
 /**
  * @param {String} text
@@ -8,11 +8,7 @@ import jsonParseSafe from "./safe";
  * @param {Function=} reviver
  * @return {*}
  */
-export default function jsonParseDeep(
-  text: string,
-  defaultResult?: any,
-  reviver?: (this: any, key: string, value: any) => any,
-): any {
+module.exports = function jsonParseDeep(text, defaultResult = undefined, reviver = null) {
   const parsed = jsonParseSafe(text, defaultResult, true, true, reviver);
   if (checkIsTraversable(parsed)) {
     collectionForEach(parsed, (value, key) => {
@@ -20,4 +16,4 @@ export default function jsonParseDeep(
     });
   }
   return { ...parsed };
-}
+};

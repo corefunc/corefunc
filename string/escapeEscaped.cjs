@@ -1,4 +1,4 @@
-import castToString from "../cast/to/string.cjs";
+const castToString = require("../cast/to/string.cjs");
 
 module.exports = function stringEscapeEscaped(text) {
   return castToString(text)

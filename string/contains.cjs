@@ -1,5 +1,5 @@
-import castToString from "../cast/to/string.cjs";
-import stringClearReferences from "./clearReferences.cjs";
+const castToString = require("../cast/to/string.cjs");
+const stringClearReferences = require("./clearReferences.cjs");
 
 /**
  * Perform search in string

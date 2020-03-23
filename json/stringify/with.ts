@@ -11,7 +11,7 @@ export default function jsonStringifyWith(
   object: any,
   replacer?: (this: any, key: string, value: any) => any,
   spaces?: string | number,
-  cycleReplacer?: Function,
+  cycleReplacer?: (key: string, value: any) => any,
 ): string {
   return jsonStringifySafe(object, replacer, spaces, cycleReplacer);
 }

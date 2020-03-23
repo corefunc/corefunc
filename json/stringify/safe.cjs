@@ -1,4 +1,4 @@
-function serializer(replacer?: (this: any, key: string, value: any) => any, cycleReplacerArg?) {
+function serializer(replacer, cycleReplacerArg) {
   const keys = [];
   const stack = [];
   let cycleReplacer = cycleReplacerArg;
@@ -10,7 +10,7 @@ function serializer(replacer?: (this: any, key: string, value: any) => any, cycl
       return `[Circular ~.${keys.slice(0, stack.indexOf(value)).join(".")}]`;
     };
   }
-  return function (key: string, value: any) {
+  return function (key, value) {
     let result = value;
     if (stack.length > 0) {
       const thisPos = stack.indexOf(this);
@@ -33,11 +33,6 @@ function serializer(replacer?: (this: any, key: string, value: any) => any, cycl
  * @param {Function=} cycleReplacer
  * @return {String}
  */
-export default function jsonStringifySafe(
-  object: any,
-  replacer?: (this: any, key: string, value: any) => any,
-  spaces?: string | number,
-  cycleReplacer?: (key: string, value: any) => any,
-): string {
+module.exports = function jsonStringifySafe(object, replacer, spaces, cycleReplacer) {
   return JSON.stringify(object, serializer(replacer, cycleReplacer), spaces);
-}
+};
