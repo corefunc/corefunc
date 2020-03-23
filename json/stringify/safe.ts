@@ -1,4 +1,4 @@
-function serializer(replacer, cycleReplacerArg) {
+function serializer(replacer?: (this: any, key: string, value: any) => any, cycleReplacerArg?) {
   const keys = [];
   const stack = [];
   let cycleReplacer = cycleReplacerArg;
@@ -27,14 +27,17 @@ function serializer(replacer, cycleReplacerArg) {
 }
 
 /**
- * @param {Object} object
+ * @param {*} object
  * @param {Function=} replacer
  * @param {String=} spaces
  * @param {Function=} cycleReplacer
  * @return {String}
  */
-function stringify(object, replacer?, spaces?, cycleReplacer?) {
+export default function jsonStringifySafe(
+  object: any,
+  replacer?: (this: any, key: string, value: any) => any,
+  spaces?: string | number,
+  cycleReplacer?: Function,
+): string {
   return JSON.stringify(object, serializer(replacer, cycleReplacer), spaces);
 }
-
-export default stringify;
