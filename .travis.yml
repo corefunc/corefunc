@@ -25,4 +25,4 @@ script:
   - if [ "${NODE_ENV}" = "development" ]; then yarn codecov; fi
 branches:
   only:
-  - master
+    - master

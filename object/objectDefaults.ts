@@ -10,7 +10,7 @@ export function objectDefaults(destinationObject, sourceObject) {
     return objectDefaults(destinationObject, {});
   }
   const obj = Object.assign({}, sourceObject);
-  Object.keys(destinationObject).forEach(function(key) {
+  Object.keys(destinationObject).forEach(function (key) {
     if (key === "__proto__" || key === "constructor") {
       return;
     }

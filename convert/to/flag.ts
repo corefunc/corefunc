@@ -15,10 +15,7 @@ export default function convertToFlag(value: any, onEmpty: boolean = false, onUn
   if (typeof value === "boolean") {
     return value;
   }
-  const affirmative = value
-    .toString()
-    .toLocaleLowerCase()
-    .trim();
+  const affirmative = value.toString().toLocaleLowerCase().trim();
   if (affirmative.length === 0) {
     return onEmpty;
   }

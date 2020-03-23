@@ -11,12 +11,10 @@
 
 ## Recommended usage for Tree Shaking
 
-
 ### CommonJS
 
 ```javascript
-const arraySortStrings =
-  require("@corefunc/corefunc/array/sort/strings.cjs");
+const arraySortStrings = require("@corefunc/corefunc/array/sort/strings.cjs");
 
 arraySortStrings(["c", "a", "b"]);
 ```
@@ -33,37 +31,37 @@ arraySortStrings(["c", "a", "b"]);
 
 Discover more:
 
--   🔎[Consono](https://consono.js.org)🔎 -
-The most informative and correct variable inspector for JavaScript on the web.
+- 🔎[Consono](https://consono.js.org)🔎 -
+  The most informative and correct variable inspector for JavaScript on the web.
 
--   🌠[OF](https://of.js.org)🌠 - Promise wrapper with some sugar.
+- 🌠[OF](https://of.js.org)🌠 - Promise wrapper with some sugar.
 
--   🔩[Local Storage Fallback](https://github.com/r37r0m0d3l/fallback-local-storage)🔩 -
-Universal localStorage fallback.
+- 🔩[Local Storage Fallback](https://github.com/r37r0m0d3l/fallback-local-storage)🔩 -
+  Universal localStorage fallback.
 
--   🔄[Publish Subscribe](https://publish-subscribe.js.org)🔄 -
-JavaScript implementation of the Publish-Subscribe pattern.
+- 🔄[Publish Subscribe](https://publish-subscribe.js.org)🔄 -
+  JavaScript implementation of the Publish-Subscribe pattern.
 
--   🧰[Vicis](https://vicis.js.org)🧰 - Presentation and transformation layer for data output in RESTful APIs.
+- 🧰[Vicis](https://vicis.js.org)🧰 - Presentation and transformation layer for data output in RESTful APIs.
 
 Or find useful these tools:
 
--   🧾[JSON Sorter](https://r37r0m0d3l.github.io/json_sort)🧾 - Neat online JSON sorter.
+- 🧾[JSON Sorter](https://r37r0m0d3l.github.io/json_sort)🧾 - Neat online JSON sorter.
 
 ---
 
 Also there is more useful links:
 
--   https://github.com/you-dont-need/You-Dont-Need-Lodash-Underscore
+- https://github.com/you-dont-need/You-Dont-Need-Lodash-Underscore
 
--   https://github.com/lodash/lodash
+- https://github.com/lodash/lodash
 
--   https://www.30secondsofcode.org/js/p/1
+- https://www.30secondsofcode.org/js/p/1
 
--   https://github.com/liriliri/licia
+- https://github.com/liriliri/licia
 
--   https://github.com/panzerdp/voca
+- https://github.com/panzerdp/voca
 
--   https://github.com/mout/mout
+- https://github.com/mout/mout
 
 ---
