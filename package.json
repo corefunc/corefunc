@@ -30,7 +30,7 @@
     "eslint-plugin-promise": "4.2.1",
     "eslint-plugin-standard": "4.0.1",
     "jest": "25.1.0",
-    "prettier": "2.0.1",
+    "prettier": "2.0.2",
     "tslint-config-standard": "9.0.0",
     "typescript": "3.8.3"
   },
@@ -58,5 +58,5 @@
     "test:mjs": "node --experimental-modules ./tests/index.mjs",
     "upgrade": "yarn upgrade-interactive --latest"
   },
-  "version": "0.0.40"
+  "version": "0.0.41"
 }
