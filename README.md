@@ -4,6 +4,8 @@
 
 [![NPM Version](https://img.shields.io/npm/v/@corefunc/corefunc.svg?style=flat)]()
 [![NPM Downloads](https://img.shields.io/npm/dt/@corefunc/corefunc.svg?style=flat)]()
+[![GitHub stars](https://img.shields.io/github/stars/corefunc/corefunc.svg?style=social&label=Star)](https://github.com/corefunc/corefunc)
+[![GitHub followers](https://img.shields.io/github/followers/r37r0m0d3l.svg?style=social&label=Follow)](https://github.com/r37r0m0d3l)
 
 > **Please Note:** This is not a production-ready package. Expect long stretches of zero updates—that does not mean that the module is outdated. This is "Don’t repeat yourself" collection. Yes, it's working fine, but it is not complete neither consistent. Everything is a "Work in Progress".
 
