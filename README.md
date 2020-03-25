@@ -1,4 +1,4 @@
-![CoreFunc](docs/img/logo_200.png?raw=true "CoreFunc")
+![CoreFunc](docs/img/logo_128.png?raw=true "CoreFunc")
 
 # CoreFunc
 
@@ -14,17 +14,17 @@
 ### CommonJS
 
 ```javascript
-const arraySortStrings = require("@corefunc/corefunc/array/sort/strings.cjs");
+const bubbleSort = require("@corefunc/corefunc/array/sort/bubble.cjs");
 
-arraySortStrings(["c", "a", "b"]);
+bubbleSort([3, 1, 2]);
 ```
 
 ### ECMAScript module
 
 ```javascript
-import arraySortStrings from "@corefunc/corefunc/array/sort/strings.mjs";
+import bubbleSort from "@corefunc/corefunc/array/sort/bubble.mjs";
 
-arraySortStrings(["c", "a", "b"]);
+bubbleSort([3, 1, 2]);
 ```
 
 ---
