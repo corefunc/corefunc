@@ -1,4 +1,4 @@
-export default function objectType(value) {
+export default function objectGetType(value) {
   const type = Object.prototype.toString.call(value).toLowerCase().split("[object ").pop().split("]").shift();
   if (["global", "window"].includes(type)) {
     return "object";
