@@ -1,23 +1,26 @@
 /**
  * @name objectKeysSort
- * @param {*} value
+ * @param {Object} instance
  * @param {boolean=true} isDeep
  * @returns {*}
  */
-export default function objectKeysSort<T extends Object>(value: T, isDeep: boolean = true): T {
-  if (!value || typeof value !== "object" || Array.isArray(value)) {
-    return value;
+export default function objectKeysSort<ObjectType extends object>(
+  instance: ObjectType,
+  isDeep: boolean = true,
+): ObjectType {
+  if (!instance || typeof instance !== "object" || Array.isArray(instance)) {
+    return instance;
   }
-  const keys = Object.keys(value);
+  const keys = Object.keys(instance);
   if (!keys.length) {
-    return value;
+    return instance;
   }
   return keys.reduce((sorted, key) => {
-    if (isDeep && value[key] && typeof value[key] === "object" && !Array.isArray(value[key])) {
-      sorted[key] = objectKeysSort(value[key], isDeep);
+    if (isDeep && instance[key] && typeof instance[key] === "object" && !Array.isArray(instance[key])) {
+      sorted[key] = objectKeysSort(instance[key], isDeep);
     } else {
-      sorted[key] = value[key];
+      sorted[key] = instance[key];
     }
     return sorted;
-  }, {}) as T;
+  }, Object.create(Object.getPrototypeOf(instance))) as ObjectType;
 }

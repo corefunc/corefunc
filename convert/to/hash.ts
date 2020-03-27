@@ -6,7 +6,7 @@ function convertToHash(value: any, asString: TAsString, seed: number = 0x811c9dc
   const length = text.length;
   let index = 0;
   let hashVal = seed;
-  for (index; index < length; index += 1) {
+  for (index; index < length; index++) {
     hashVal ^= text.charCodeAt(index);
     hashVal += (hashVal << 1) + (hashVal << 4) + (hashVal << 7) + (hashVal << 8) + (hashVal << 24);
   }

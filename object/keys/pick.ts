@@ -1,9 +1,18 @@
-export default function objectKeysPick<T extends Object>(object: T, keys: string[]): Partial<T> {
-  if (!keys.length || !Object.keys(object).length) {
+/**
+ * @name objectKeysPick
+ * @param {Object} instance
+ * @param {Array.<string>} keys
+ * @returns {Object}
+ */
+export default function objectKeysPick<ObjectType extends object, KeyType extends keyof ObjectType>(
+  instance: ObjectType,
+  keys: KeyType[],
+): Partial<ObjectType> {
+  if (!keys.length || !Object.keys(instance).length) {
     return {};
   }
-  return keys.reduce((accumulator: Object, key: string) => {
-    accumulator[key] = object[key];
+  return keys.reduce((accumulator: ObjectType, key: KeyType) => {
+    accumulator[key] = instance[key];
     return accumulator;
-  }, {}) as Partial<T>;
+  }, {}) as Partial<ObjectType>;
 }

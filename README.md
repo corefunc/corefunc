@@ -7,7 +7,7 @@
 [![GitHub stars](https://img.shields.io/github/stars/corefunc/corefunc.svg?style=social&label=Star)](https://github.com/corefunc/corefunc)
 [![GitHub followers](https://img.shields.io/github/followers/r37r0m0d3l.svg?style=social&label=Follow)](https://github.com/r37r0m0d3l)
 
-> **Please Note:** This is not a production-ready package. Expect long stretches of zero updates—that does not mean that the module is outdated. This is "Don’t repeat yourself" collection. Yes, it's working fine, but it is not complete neither consistent. Everything is a "Work in Progress".
+> **Please Note:** This is not a production-ready package! Expect long stretches of zero updates—that does not mean that the module is outdated. This is "Don’t repeat yourself" collection. Yes, it's working fine, but it is not complete neither consistent. The files can move from folder to folder without warning. Everything is a "Work in Progress"!!!
 
 ## Recommended usage for Tree Shaking
 
@@ -23,6 +23,14 @@ bubbleSort([3, 1, 2]);
 
 ```javascript
 import bubbleSort from "@corefunc/corefunc/array/sort/bubble.mjs";
+
+bubbleSort([3, 1, 2]);
+```
+
+### TypeScript
+
+```javascript
+import bubbleSort from "@corefunc/corefunc/array/sort/bubble";
 
 bubbleSort([3, 1, 2]);
 ```
@@ -57,5 +65,9 @@ Also there is more useful links:
 - https://github.com/panzerdp/voca
 
 - https://github.com/mout/mout
+
+- https://github.com/fabioars/underwater
+
+- https://www.npmjs.com/package/collect.js
 
 ---

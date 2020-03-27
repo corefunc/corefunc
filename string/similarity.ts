@@ -17,13 +17,13 @@ export default function stringSimilarity(alpha: string, beta: string): number {
     return 0;
   }
   const firstBigRams = new Map();
-  for (let index = 0; index < strFirst.length - 1; index += 1) {
+  for (let index = 0; index < strFirst.length - 1; index++) {
     const bigRam = strFirst.substring(index, index + 2);
     const count = firstBigRams.has(bigRam) ? firstBigRams.get(bigRam) + 1 : 1;
     firstBigRams.set(bigRam, count);
   }
   let intersectionSize = 0;
-  for (let index = 0; index < strSecond.length - 1; index += 1) {
+  for (let index = 0; index < strSecond.length - 1; index++) {
     const bigRam = strSecond.substring(index, index + 2);
     const count = firstBigRams.has(bigRam) ? firstBigRams.get(bigRam) : 0;
     if (count > 0) {

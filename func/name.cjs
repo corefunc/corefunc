@@ -1,10 +1,10 @@
 /**
- * @name funcName
+ * @name functionName
  * @description Extract function name
  * @param {Function} func
  * @return {string}
  */
-module.exports = function funcName(func) {
+module.exports = function functionName(func) {
   if (func.name) {
     return func.name;
   }

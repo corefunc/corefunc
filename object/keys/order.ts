@@ -1,31 +1,31 @@
 /**
  * @name objectKeysOrder
- * @param {Object} object
+ * @param {Object} instance
  * @param {Array.<string>} keys
- * @param {boolean=} sortAlphabetically
- * @returns {{}|*}
+ * @param {boolean=} alphabetize
+ * @returns {Object}
  */
-export default function objectKeysOrder<T extends Object>(
-  object: T,
+export default function objectKeysOrder<ObjectType extends object>(
+  instance: ObjectType,
   keys: string[] = [],
-  sortAlphabetically: boolean = false,
-): T {
+  alphabetize: boolean = false,
+): ObjectType {
   if (!Array.isArray(keys) || keys.length === 0) {
-    return object;
+    return instance;
   }
   const orderKeys = keys.filter((key) => typeof key === "string");
-  let objectKeys: string[] | Set<string> = new Set(Object.keys(object));
+  let objectKeys: string[] | Set<string> = new Set(Object.keys(instance));
   const newObject = {};
   orderKeys.forEach((key) => {
     (objectKeys as Set<string>).delete(key);
-    if (key in object) {
-      newObject[key] = object[key];
+    if (key in instance) {
+      newObject[key] = instance[key];
     }
   });
   objectKeys = [...objectKeys];
-  if (sortAlphabetically) {
+  if (alphabetize) {
     objectKeys = objectKeys.sort((alpha, beta) => alpha.localeCompare(beta));
   }
-  objectKeys.forEach((key) => (newObject[key] = object[key]));
-  return newObject as T;
+  objectKeys.forEach((key) => (newObject[key] = instance[key]));
+  return newObject as ObjectType;
 }

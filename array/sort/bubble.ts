@@ -1,3 +1,8 @@
+/**
+ * @name arraySortBubble
+ * @param {Array.<number>} array
+ * @returns {Array.<number>}
+ */
 export default function arraySortBubble(array: number[]): number[] {
   const swap = (list, alpha, beta) => ([list[alpha], list[beta]] = [list[beta], list[alpha]]);
   for (let index = array.length; index > 0; index -= 1) {

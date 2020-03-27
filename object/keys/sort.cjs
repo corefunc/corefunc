@@ -1,23 +1,23 @@
 /**
  * @name objectKeysSort
- * @param {*} value
+ * @param {*} instance
  * @param {boolean=true} isDeep
  * @returns {*}
  */
-module.exports = function objectKeysSort(value, isDeep = true) {
-  if (!value || typeof value !== "object" || Array.isArray(value)) {
-    return value;
+module.exports = function objectKeysSort(instance, isDeep = true) {
+  if (!instance || typeof instance !== "object" || Array.isArray(instance)) {
+    return instance;
   }
-  const keys = Object.keys(value);
+  const keys = Object.keys(instance);
   if (!keys.length) {
-    return value;
+    return instance;
   }
   return keys.reduce((sorted, key) => {
-    if (isDeep && value[key] && typeof value[key] === "object" && !Array.isArray(value[key])) {
-      sorted[key] = objectKeysSort(value[key], isDeep);
+    if (isDeep && instance[key] && typeof instance[key] === "object" && !Array.isArray(instance[key])) {
+      sorted[key] = objectKeysSort(instance[key], isDeep);
     } else {
-      sorted[key] = value[key];
+      sorted[key] = instance[key];
     }
     return sorted;
-  }, {});
+  }, Object.create(Object.getPrototypeOf(instance)));
 };
