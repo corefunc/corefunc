@@ -54,20 +54,22 @@ Discover more:
 
 Also there is more useful links:
 
-- https://github.com/you-dont-need/You-Dont-Need-Lodash-Underscore
+-   https://github.com/you-dont-need/You-Dont-Need-Lodash-Underscore
 
-- https://github.com/lodash/lodash
+-   https://github.com/lodash/lodash
 
-- https://www.30secondsofcode.org/js/p/1
+-   https://www.30secondsofcode.org/js/p/1
 
-- https://github.com/liriliri/licia
+-   https://github.com/liriliri/licia
 
-- https://github.com/panzerdp/voca
+-   https://github.com/panzerdp/voca
 
-- https://github.com/mout/mout
+-   https://github.com/mout/mout
 
-- https://github.com/fabioars/underwater
+-   https://github.com/fabioars/underwater
 
-- https://www.npmjs.com/package/collect.js
+-   https://www.npmjs.com/package/collect.js
+
+-   https://github.com/kentcdodds/match-sorter
 
 ---
