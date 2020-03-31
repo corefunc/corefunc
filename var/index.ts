@@ -4,10 +4,8 @@ import TAG_NUMBER from "./tagNumber";
 import TAG_OBJECT from "./tagObject";
 import TAG_STRING from "./tagString";
 import TAG_WINDOW from "./tagWindow";
-import prototypeName from "./prototypeName";
 
 export default {
-  prototypeName,
   TAG_ARRAY,
   TAG_GLOBAL,
   TAG_NUMBER,
