@@ -1,19 +1,3 @@
-import TAG_ARRAY from "./tagArray";
-import TAG_GLOBAL from "./tagGlobal";
-import TAG_NUMBER from "./tagNumber";
-import TAG_OBJECT from "./tagObject";
-import TAG_STRING from "./tagString";
-import TAG_WINDOW from "./tagWindow";
-
-export default {
-  TAG_ARRAY,
-  TAG_GLOBAL,
-  TAG_NUMBER,
-  TAG_OBJECT,
-  TAG_STRING,
-  TAG_WINDOW,
-};
-
 /*
 var argsTag = '[object Arguments]',
   arrayTag = '[object Array]',
