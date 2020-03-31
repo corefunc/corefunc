@@ -10,7 +10,10 @@ import checkIsObjectLike from "../../check/isObjectLike";
  * @example objectSetDefaults({ val: null }, { val: true }) // { val: null }
  * @example objectSetDefaults({ val: "text" }, { val: true }) // { val: "text" }
  */
-export default function objectSetDefaults<Dest extends object, Src extends object>(destination: Dest, source: Src): Dest & Src {
+export default function objectSetDefaults<Dest extends object, Src extends object>(
+  destination: Dest,
+  source: Src,
+): Dest & Src {
   if (!checkIsObjectLike(destination)) {
     return objectSetDefaults({} as Dest, source);
   }

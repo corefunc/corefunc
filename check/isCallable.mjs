@@ -10,5 +10,6 @@ export default function checkIsCallable(value) {
   if ("toFunction" in value && isFunction(value.toFunction) && isFunction(value.toFunction())) {
     return true;
   }
+  //
   return false;
 }
