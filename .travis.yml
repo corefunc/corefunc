@@ -1,28 +1,11 @@
----
 language: node_js
+before_install:
+  - "npm install npm -g"
 node_js:
-  - 13
-  - stable
-cache:
-  yarn: true
-  directories:
-    - node_modules
+  - "12.16.1"
+npm:
+  - "6.13.4"
 env:
-  - NODE_ENV=development
-  - NODE_ENV=production
-matrix:
-  fast_finish: true
-install:
-  - NODE_ENV=development yarn install
-before_script:
-  - yarn check-deps
-  - if [ "${NODE_ENV}" = "production" ]; then yarn build; fi
+  - TEST_SUITE=test
 script:
-  - yarn lint
-  - yarn lint-docs
-  - if [ "${NODE_ENV}" = "production" ]; then yarn test:dist; fi
-  - if [ "${NODE_ENV}" = "development" ]; then AST_COMPARE=1 yarn test -- --runInBand; fi
-  - if [ "${NODE_ENV}" = "development" ]; then yarn codecov; fi
-branches:
-  only:
-    - master
+  - npm run $TEST_SUITE
