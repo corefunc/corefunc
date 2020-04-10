@@ -60,5 +60,5 @@
     "test:mjs": "node --experimental-modules ./tests/index.mjs",
     "upgrade": "yarn upgrade-interactive --latest"
   },
-  "version": "0.0.54"
+  "version": "0.0.55"
 }
