@@ -2,8 +2,8 @@
  * Typecast variable to integer
  * @param {*}      variable
  * @param {*}      [onFail=0] The return value in case of failure
- * @param {Number} [radix=10] An integer that represents the radix of the above mentioned string
- * @returns {Number}
+ * @param {number} [radix=10] An integer that represents the radix of the above mentioned string
+ * @returns {number}
  * @example castToInt("F", 0, 16); // => 15
  */
 export default function castToInt(variable, onFail = 0, radix = 10) {

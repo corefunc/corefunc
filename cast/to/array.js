@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const collectionValues = require("../../collection/values.cjs");
+const collectionValues = require("../../collection/values.js");
 /**
  * Creates a new Array instance from an array-like or iterable object
  * This has different behaviour from `Array.from`.

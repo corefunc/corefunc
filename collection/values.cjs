@@ -1,8 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 /**
- * @param {Arguments|Array|Map|Object|Set|WeakMap|WeakSet} iterable
- * @return {Array}
+ * @param {Array|Map|object|Set|WeakMap|WeakSet} iterable
+ * @returns {Array}
  */
-module.exports = function collectionValues(iterable) {
+function collectionValues(iterable) {
   if (!iterable || Object(iterable) !== iterable) {
     return [];
   }
@@ -16,4 +18,5 @@ module.exports = function collectionValues(iterable) {
     return Array.from(iterable.values());
   }
   return Object.values(iterable);
-};
+}
+exports.default = collectionValues;

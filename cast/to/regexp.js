@@ -1,11 +1,12 @@
-import isRegExp from "../../is/regexp.mjs";
-import isString from "../../is/string.mjs";
-
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const isRegExp = require("../../is/regexp.js");
+const isString = require("../../is/string.js");
 /**
  * @param {Array|RegExp|string} pattern
  * @returns {boolean|RegExp}
  */
-export default function castToRegExp(pattern) {
+function castToRegExp(pattern) {
   if (isRegExp(pattern)) {
     return pattern;
   }
@@ -23,3 +24,4 @@ export default function castToRegExp(pattern) {
   }
   return false;
 }
+exports.default = castToRegExp;

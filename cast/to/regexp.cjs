@@ -1,11 +1,12 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 const isRegExp = require("../../is/regexp.cjs");
 const isString = require("../../is/string.cjs");
-
 /**
- * @param pattern {Array|RegExp|String}
- * @return {Boolean|RegExp}
+ * @param {Array|RegExp|string} pattern
+ * @returns {boolean|RegExp}
  */
-module.exports = function castToRegExp(pattern) {
+function castToRegExp(pattern) {
   if (isRegExp(pattern)) {
     return pattern;
   }
@@ -22,4 +23,5 @@ module.exports = function castToRegExp(pattern) {
     return new RegExp(pattern[0]);
   }
   return false;
-};
+}
+exports.default = castToRegExp;

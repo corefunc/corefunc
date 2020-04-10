@@ -1,6 +1,6 @@
 /**
- * @param {Arguments|Array|Map|Object|Set|WeakMap|WeakSet} iterable
- * @return {Array}
+ * @param {Array|Map|object|Set|WeakMap|WeakSet} iterable
+ * @returns {Array}
  */
 export default function collectionValues(iterable) {
   if (!iterable || Object(iterable) !== iterable) {

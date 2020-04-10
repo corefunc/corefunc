@@ -2,8 +2,8 @@ import isRegExp from "../../is/regexp";
 import isString from "../../is/string";
 
 /**
- * @param pattern {Array|RegExp|String}
- * @return {Boolean|RegExp}
+ * @param {Array|RegExp|string} pattern
+ * @returns {boolean|RegExp}
  */
 export default function castToRegExp(pattern): boolean | RegExp {
   if (isRegExp(pattern)) {
