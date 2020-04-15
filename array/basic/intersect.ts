@@ -9,5 +9,6 @@ export default function arrayBasicIntersect(alpha: any[], beta: any[]): any[] {
     return [];
   }
   const setB = new Set(beta);
+  // @ts-ignore
   return [...new Set(alpha)].filter((value) => setB.has(value));
 }
