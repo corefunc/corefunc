@@ -10,29 +10,30 @@
     }
   ],
   "dependencies": {
-    "lodash-es": "latest"
+    "lodash-es": "4.17.15"
   },
   "description": "Collection of utilities",
   "devDependencies": {
     "@babel/core": "7.9.0",
     "@babel/plugin-proposal-class-properties": "7.8.3",
     "@babel/preset-env": "7.9.5",
-    "@types/node": "13.11.1",
-    "@typescript-eslint/eslint-plugin": "2.27.0",
-    "@typescript-eslint/parser": "2.27.0",
+    "@types/node": "13.13.2",
+    "@typescript-eslint/eslint-plugin": "2.29.0",
+    "@typescript-eslint/parser": "2.29.0",
     "babel-core": "7.0.0-bridge.0",
     "babel-eslint": "10.1.0",
     "eslint": "6.8.0",
-    "eslint-config-prettier": "6.10.1",
+    "eslint-config-prettier": "6.11.0",
     "eslint-config-standard": "14.1.1",
     "eslint-plugin-import": "2.20.2",
-    "eslint-plugin-jsdoc": "22.1.0",
+    "eslint-plugin-jsdoc": "24.0.0",
     "eslint-plugin-node": "11.1.0",
-    "eslint-plugin-prettier": "3.1.2",
+    "eslint-plugin-prettier": "3.1.3",
     "eslint-plugin-promise": "4.2.1",
     "eslint-plugin-standard": "4.0.1",
-    "jest": "25.3.0",
-    "prettier": "2.0.4",
+    "jest": "25.4.0",
+    "npm-check": "5.9.2",
+    "prettier": "2.0.5",
     "tslint-config-standard": "9.0.0",
     "typescript": "3.8.3"
   },
@@ -54,11 +55,13 @@
   },
   "scripts": {
     "lint": "eslint ./**/*.{cj,mj,t}s",
-    "lint-dir": "eslint ./**/*.{cj,mj,t}s",
+    "lint:dir": "eslint ./**/*.{cj,mj,t}s",
+    "lint:md": "remark .",
+    "package:upgrade": "npm-check --update",
     "test": "jest --passWithNoTests",
     "test:cjs": "node ./tests/index.cjs",
-    "test:mjs": "node --experimental-modules ./tests/index.mjs",
-    "upgrade": "yarn upgrade-interactive --latest"
+    "test:coverage": "jest --collect-coverage",
+    "test:mjs": "node --experimental-modules ./tests/index.mjs"
   },
-  "version": "0.0.59"
+  "version": "0.0.61"
 }
