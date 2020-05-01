@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const arrayKeyFirst = require("../key/first.cjs");
+const arrayKeyFirst = require("../key/first.js");
 /**
  * @name arrayGetHead
  * @param {Array} array

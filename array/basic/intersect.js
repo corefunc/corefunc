@@ -7,10 +7,11 @@ Object.defineProperty(exports, "__esModule", { value: true });
  * @returns {Array}
  */
 function arrayBasicIntersect(alpha, beta) {
-  if (!alpha.length || !beta.length) {
-    return [];
-  }
-  const setB = new Set(beta);
-  return [...new Set(alpha)].filter((value) => setB.has(value));
+    if (!alpha.length || !beta.length) {
+        return [];
+    }
+    const setB = new Set(beta);
+    // @ts-ignore
+    return [...new Set(alpha)].filter((value) => setB.has(value));
 }
 exports.default = arrayBasicIntersect;

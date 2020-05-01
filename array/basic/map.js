@@ -7,10 +7,10 @@ Object.defineProperty(exports, "__esModule", { value: true });
  * @returns {Array} Returns the new mapped array.
  */
 function arrayBasicMap(array, iteratee) {
-    var length = array.length;
+    let { length } = array;
     length = length || 0;
-    var index = -1;
-    var result = Array(length);
+    let index = -1;
+    const result = Array(length);
     while (++index < length) {
         result[index] = iteratee(array[index], index, array);
     }

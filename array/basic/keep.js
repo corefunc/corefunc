@@ -9,6 +9,6 @@ Object.defineProperty(exports, "__esModule", { value: true });
  * @see https://twitter.com/rauschma/status/1253457185092308993
  */
 function arrayBasicKeep(array, iteratee) {
-  return array.filter(iteratee);
+    return array.filter(iteratee);
 }
 exports.default = arrayBasicKeep;

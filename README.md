@@ -64,4 +64,6 @@ Also there is more useful links:
 
 -   https://github.com/kentcdodds/match-sorter
 
+-   https://1loc.dev/
+
 ---
