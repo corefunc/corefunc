@@ -5,6 +5,7 @@
 // @ts-ignore
 export default function varGetGlobal(): NodeJS.Global | Window {
   if (typeof globalThis !== "undefined") {
+    // @ts-ignore
     // eslint-disable-next-line no-undef
     return globalThis;
   }
