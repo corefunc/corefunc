@@ -1,10 +1,17 @@
-export default function objectGetProperty<
-  ObjectType extends object,
-  KeyType extends keyof ObjectType,
-  DefaultType extends any
->(object: ObjectType, key: KeyType, defaultvalue?: DefaultType): ObjectType[KeyType] | DefaultType {
+export default function objectGetProperty(object: object, key: string, defaultvalue?: any): any {
   if (key in object) {
     return object[key];
   }
   return defaultvalue;
 }
+
+// export default function objectGetExistingProperty<
+//   ObjectType extends object,
+//   KeyType extends keyof ObjectType | string,
+//   DefaultType extends any
+//   >(object: ObjectType, key: KeyType, defaultValue?: DefaultType): ObjectType<KeyType> | DefaultType {
+//   if (key in object) {
+//     return object[key];
+//   }
+//   return defaultvalue;
+// }
