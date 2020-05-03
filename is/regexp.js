@@ -5,6 +5,6 @@ Object.defineProperty(exports, "__esModule", { value: true });
  * @returns {boolean}
  */
 function isRegExp(value) {
-  return value instanceof RegExp;
+    return value instanceof RegExp;
 }
 exports.default = isRegExp;
