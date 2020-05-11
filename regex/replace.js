@@ -1,11 +1,10 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const arrayGetHead = require("../array/get/head.cjs");
-const castToString = require("../cast/to/string.cjs");
-const checkIsTraversable = require("../check/isTraversable.cjs");
-const collectionValues = require("../collection/values.cjs");
-const isString = require("../is/string.cjs");
-
+const arrayGetHead = require("../array/get/head.js").default;
+const castToString = require("../cast/to/string.js").default;
+const checkIsTraversable = require("../check/isTraversable.js").default;
+const collectionValues = require("../collection/values.js").default;
+const isString = require("../is/string.js").default;
 /**
  * Replace all occurrences of the search string with the replacement string
  * @param {String} haystack
@@ -16,7 +15,7 @@ const isString = require("../is/string.cjs");
  * @example regexReplace('target', ['search 1', 'searach 2'], 'replace');
  * @example regexReplace('target', ['search 1', 'searach 2'], ['replace 1', 'replace 2']);
  */
-module.exports = function regexReplace(haystack, needle, replaceWith) {
+function regexReplace(haystack, needle, replaceWith) {
   let sTarget = castToString(haystack);
   let sSearch;
   let sReplace;
@@ -49,4 +48,5 @@ module.exports = function regexReplace(haystack, needle, replaceWith) {
     sTarget = sTarget.split(castToString(srch)).join(castToString(sReplace[index]));
   });
   return sTarget;
-};
+}
+exports.default = regexReplace;
