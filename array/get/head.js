@@ -11,7 +11,7 @@ function arrayGetHead(array, onFail) {
   if (!Array.isArray(array)) {
     return onFail;
   }
-  const first = arrayKeyFirst.default(array);
+  const first = arrayKeyFirst(array);
   if (first === null) {
     return onFail;
   }

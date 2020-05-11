@@ -12,6 +12,6 @@ Object.defineProperty(exports, "__esModule", { value: true });
  * @example isObjectLike(null); ➜ false
  */
 function checkIsObjectLike(value) {
-  return value && typeof value === "object" && !Array.isArray(value);
+    return value && typeof value === "object" && !Array.isArray(value);
 }
 exports.default = checkIsObjectLike;

@@ -1,13 +1,13 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const checkIsKeyed = require("../check/isKeyed.cjs");
-const checkIsObjectLike = require("../check/isObjectLike.cjs");
+const checkIsKeyed = require("../check/isKeyed.js").default;
+const checkIsObjectLike = require("../check/isObjectLike.js").default;
 /**
  * Pick object property from list of names
  * @param {*} iterable
  * @returns {Array}
  */
-module.exports = function collectionKeys(iterable) {
+function collectionKeys(iterable) {
   if (!iterable) {
     return [];
   }
@@ -18,4 +18,5 @@ module.exports = function collectionKeys(iterable) {
     return [];
   }
   return Object.keys(iterable);
-};
+}
+exports.default = collectionKeys;
