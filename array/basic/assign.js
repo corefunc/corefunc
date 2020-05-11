@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const clone_1 = require("../make/clone.js");
+const clone_1 = require("../make/clone.js").default;
 function arrayBasicAssign(assignTo, assignFrom) {
   const assignedArray = clone_1.default(assignTo);
   const from = clone_1.default(assignFrom);

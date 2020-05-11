@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const isRegExp = require("../../is/regexp.js");
-const isString = require("../../is/string.js");
+const isRegExp = require("../../is/regexp.js").default;
+const isString = require("../../is/string.js").default;
 /**
  * @param {Array|RegExp|string} pattern
  * @returns {boolean|RegExp}
