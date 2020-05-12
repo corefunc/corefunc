@@ -1,5 +1,6 @@
-import checkIsObjectLike from "../check/isObjectLike";
-
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const checkIsObjectLike = require("../check/isObjectLike.js").default;
 /**
  * Whether the object has the specified property
  * @param object
@@ -15,5 +16,4 @@ function propertyHasOwn(object, propertyName) {
   }
   return Object.prototype.hasOwnProperty.call(object, `${propertyName}`);
 }
-
-export default propertyHasOwn;
+exports.default = propertyHasOwn;

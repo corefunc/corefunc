@@ -1,4 +1,4 @@
-import checkIsObjectLike from "../check/isObjectLike";
+import checkIsObjectLike from "../check/isObjectLike.mjs";
 
 /**
  * Whether the object has the specified property
