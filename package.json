@@ -35,7 +35,6 @@
     "npm-check": "5.9.2",
     "prettier": "2.0.5",
     "tslint-config-standard": "9.0.0",
-    "typedoc": "0.17.6",
     "typescript": "3.8.3"
   },
   "directories": {
@@ -55,7 +54,7 @@
     "url": "git+https://github.com/corefunc/corefunc.git"
   },
   "scripts": {
-    "docs:build": "typedoc --out /docs/ .",
+    "docs:build": "typedoc --mode modules --out ./docs/ ./",
     "lint": "eslint ./**/*.{cj,mj,t}s",
     "lint:dir": "eslint ./**/*.{cj,mj,t}s",
     "lint:md": "remark .",
