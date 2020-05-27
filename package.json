@@ -14,19 +14,19 @@
   },
   "description": "Collection of utilities",
   "devDependencies": {
-    "@babel/core": "7.9.6",
+    "@babel/core": "7.10.0",
     "@babel/plugin-proposal-class-properties": "7.8.3",
-    "@babel/preset-env": "7.9.6",
-    "@types/node": "13.13.5",
-    "@typescript-eslint/eslint-plugin": "2.32.0",
-    "@typescript-eslint/parser": "2.32.0",
+    "@babel/preset-env": "7.10.0",
+    "@types/node": "14.0.5",
+    "@typescript-eslint/eslint-plugin": "3.0.2",
+    "@typescript-eslint/parser": "3.0.2",
     "babel-core": "7.0.0-bridge.0",
     "babel-eslint": "10.1.0",
-    "eslint": "7.0.0",
+    "eslint": "7.1.0",
     "eslint-config-prettier": "6.11.0",
     "eslint-config-standard": "14.1.1",
     "eslint-plugin-import": "2.20.2",
-    "eslint-plugin-jsdoc": "25.2.0",
+    "eslint-plugin-jsdoc": "25.4.3",
     "eslint-plugin-node": "11.1.0",
     "eslint-plugin-prettier": "3.1.3",
     "eslint-plugin-promise": "4.2.1",
@@ -35,7 +35,7 @@
     "npm-check": "5.9.2",
     "prettier": "2.0.5",
     "tslint-config-standard": "9.0.0",
-    "typescript": "3.8.3"
+    "typescript": "3.9.3"
   },
   "directories": {
     "test": "test"
@@ -64,5 +64,5 @@
     "test:coverage": "jest --collect-coverage",
     "test:mjs": "node --experimental-modules ./tests/index.mjs"
   },
-  "version": "0.0.71"
+  "version": "0.0.72"
 }
