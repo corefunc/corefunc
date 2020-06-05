@@ -35,7 +35,7 @@
     "npm-check": "5.9.2",
     "prettier": "2.0.5",
     "tslint-config-standard": "9.0.0",
-    "typescript": "3.9.3"
+    "typescript": "3.9.5"
   },
   "directories": {
     "test": "test"
