@@ -6,6 +6,6 @@ Object.defineProperty(exports, "__esModule", { value: true });
  * @returns {Array.<string>}
  */
 function objectGetKeys(object) {
-  return Object.keys(object).sort((alpha, beta) => alpha.localeCompare(beta));
+    return Object.keys(object).sort((alpha, beta) => alpha.localeCompare(beta));
 }
 exports.default = objectGetKeys;

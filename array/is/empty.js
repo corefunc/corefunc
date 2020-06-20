@@ -6,6 +6,6 @@ Object.defineProperty(exports, "__esModule", { value: true });
  * @returns {boolean}
  */
 function arrayIsEmpty(array) {
-  return array.length === 0;
+    return array.length === 0;
 }
 exports.default = arrayIsEmpty;
