@@ -6,7 +6,10 @@ function isEmpty(value) {
     return true;
   }
   if (checkIsPrimitive(value)) {
-    return true;
+    if (typeof value === "string") {
+      return !value.length;
+    }
+    return Boolean(value);
   }
   if (Array.isArray(value)) {
     return Boolean(value.length);

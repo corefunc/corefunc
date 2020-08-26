@@ -8,16 +8,13 @@ Object.defineProperty(exports, "__esModule", { value: true });
  * @returns {Number}
  * @example castToFloat("16.5"); // => 16.5
  */
-function castToFloat(variable, onFail) {
-  if (onFail === void 0) {
-    onFail = 0;
-  }
-  var type = typeof variable;
+function castToFloat(variable, onFail = 0) {
+  const type = typeof variable;
   if (type === "boolean") {
     return Number(variable);
   }
   if (type === "string") {
-    var temporary = Number.parseFloat(variable);
+    const temporary = Number.parseFloat(variable);
     if (Number.isNaN(temporary) || !Number.isFinite(temporary)) {
       return onFail;
     }
