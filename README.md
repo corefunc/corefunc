@@ -45,27 +45,27 @@ bubbleSort([3, 1, 2]);
 
 Also there is more useful links:
 
--   https://github.com/you-dont-need/You-Dont-Need-Lodash-Underscore
+-   [You-Dont-Need-Lodash-Underscore](https://github.com/you-dont-need/You-Dont-Need-Lodash-Underscore)
 
--   https://github.com/lodash/lodash
+-   [lodash](https://github.com/lodash/lodash)
 
--   https://www.30secondsofcode.org/js/p/1
+-   [30secondsofcode](https://www.30secondsofcode.org/js/p/1)
 
--   https://github.com/liriliri/licia
+-   [licia](https://github.com/liriliri/licia)
 
--   https://github.com/panzerdp/voca
+-   [voca](https://github.com/panzerdp/voca)
 
--   https://github.com/mout/mout
+-   [mout](https://github.com/mout/mout)
 
--   https://github.com/fabioars/underwater
+-   [underwater](https://github.com/fabioars/underwater)
 
--   https://www.npmjs.com/package/collect.js
+-   [collect.js](https://www.npmjs.com/package/collect.js)
 
--   https://github.com/kentcdodds/match-sorter
+-   [match-sorter](https://github.com/kentcdodds/match-sorter)
 
--   https://1loc.dev/
+-   [1loc.dev](https://1loc.dev/)
 
--   https://flaviocopes.com/how-to-list-object-methods-javascript/
+-   [how-to-list-object-methods-javascript](https://flaviocopes.com/how-to-list-object-methods-javascript/)
 
 ---
 
