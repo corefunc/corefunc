@@ -65,6 +65,8 @@ Also there is more useful links:
 
 -   https://1loc.dev/
 
+-   https://flaviocopes.com/how-to-list-object-methods-javascript/
+
 ---
 
 <!-- Badges -->
