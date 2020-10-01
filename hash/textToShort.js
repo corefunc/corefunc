@@ -1,3 +1,6 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.hashTextToShort = void 0;
 function hashTextToShort(text) {
     let hash = 5381;
     let index = text.length;
