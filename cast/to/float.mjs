@@ -3,10 +3,11 @@
  * @name castToFloat
  * @param {*} variable
  * @param {*} [onFail=0] The return value in case of failure
+ * @param {number} [toFixed=]
  * @returns {Number}
  * @example castToFloat("16.5"); // => 16.5
  */
-export default function castToFloat(variable, onFail = 0) {
+export function castToFloat(variable, onFail = 0, toFixed) {
   const type = typeof variable;
   if (type === "boolean") {
     return Number(variable);
@@ -16,9 +17,15 @@ export default function castToFloat(variable, onFail = 0) {
     if (Number.isNaN(temporary) || !Number.isFinite(temporary)) {
       return onFail;
     }
+    if (typeof toFixed === "number") {
+      return Number.parseFloat(temporary.toFixed(toFixed));
+    }
     return temporary;
   }
   if (type === "number" && Number.isFinite(variable)) {
+    if (typeof toFixed === "number") {
+      return Number.parseFloat(Number.parseFloat(variable).toFixed(toFixed));
+    }
     return Number.parseFloat(variable);
   }
   return onFail;
