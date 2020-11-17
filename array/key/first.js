@@ -6,9 +6,9 @@ Object.defineProperty(exports, "__esModule", { value: true });
  * @returns {null|*}
  */
 function arrayKeyFirst(array) {
-  if (array.length) {
-    return array.keys()[0];
-  }
-  return null;
+    if (array.length) {
+        return array.keys()[0];
+    }
+    return null;
 }
 exports.default = arrayKeyFirst;

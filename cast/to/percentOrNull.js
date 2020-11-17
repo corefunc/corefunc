@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.castToPercentOrNull = void 0;
-const float = require("./float");
+const float_1 = require("./float");
 /**
  * Typecast variable to float or null if failed
  * @name castToPercentOrNull
@@ -10,9 +10,9 @@ const float = require("./float");
  * @example castToPercentOrNull("16.501"); // => 16.50
  */
 function castToPercentOrNull(variable) {
-  if (variable === null || variable === undefined) {
-    return null;
-  }
-  return float.castToFloat(variable, null, 2);
+    if (variable === null || variable === undefined) {
+        return null;
+    }
+    return float_1.castToFloat(variable, null, 2);
 }
 exports.castToPercentOrNull = castToPercentOrNull;
