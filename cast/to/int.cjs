@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.castToInt = void 0;
 /**
  * Typecast variable to integer
  * @param {*}      variable
@@ -8,19 +9,13 @@ Object.defineProperty(exports, "__esModule", { value: true });
  * @returns {number}
  * @example castToInt("F", 0, 16); // => 15
  */
-function castToInt(variable, onFail, radix) {
-  if (onFail === void 0) {
-    onFail = 0;
-  }
-  if (radix === void 0) {
-    radix = 10;
-  }
-  var type = typeof variable;
+function castToInt(variable, onFail = 0, radix = 10) {
+  const type = typeof variable;
   if (type === "boolean") {
     return Number(variable);
   }
   if (type === "string") {
-    var temporary = Number.parseInt(variable, radix);
+    const temporary = Number.parseInt(variable, radix);
     if (Number.isNaN(temporary) || !Number.isFinite(temporary)) {
       return onFail;
     }
@@ -31,4 +26,4 @@ function castToInt(variable, onFail, radix) {
   }
   return onFail;
 }
-exports.default = castToInt;
+exports.castToInt = castToInt;
