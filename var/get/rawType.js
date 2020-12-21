@@ -8,6 +8,6 @@ const _toString = Object.prototype.toString;
  * @returns {string}
  */
 function varGetRawType(value) {
-  return _toString.call(value).slice(8, -1);
+    return _toString.call(value).slice(8, -1);
 }
 exports.default = varGetRawType;
