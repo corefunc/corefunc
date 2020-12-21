@@ -8,7 +8,7 @@
  * @param {*=false} onUnParsable
  * @returns {boolean}
  */
-export default function convertToFlag(value, onEmpty = false, onUnParsable = false) {
+export function convertToFlag(value, onEmpty = false, onUnParsable = false) {
   if (value === undefined || value === null) {
     return onEmpty;
   }
@@ -19,11 +19,20 @@ export default function convertToFlag(value, onEmpty = false, onUnParsable = fal
   if (affirmative.length === 0) {
     return onEmpty;
   }
-  if (affirmative === "true" || affirmative === "1") {
-    return true;
+  switch (affirmative) {
+    case "1":
+    case "on":
+    case "true":
+    case "y":
+    case "yes":
+      return true;
+    case "0":
+    case "false":
+    case "n":
+    case "no":
+    case "off":
+      return false;
+    default:
+      return onUnParsable;
   }
-  if (affirmative === "false" || affirmative === "0") {
-    return false;
-  }
-  return onUnParsable;
 }

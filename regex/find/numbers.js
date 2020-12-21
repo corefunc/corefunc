@@ -6,6 +6,6 @@ Object.defineProperty(exports, "__esModule", { value: true });
  * @return {Array}
  */
 function regexFindNumbers(text) {
-  return (text.match(/[+-]?\d+(\.\d+)?/g) || []).map(Number);
+    return (text.match(/[+-]?\d+(\.\d+)?/g) || []).map(Number);
 }
 exports.default = regexFindNumbers;
