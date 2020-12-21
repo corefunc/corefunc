@@ -1,5 +1,5 @@
-const jsonParseSafe = require("./parse/safe.cjs");
-const jsonStringifySafe = require("./stringify/safe.cjs");
+const jsonParseSafe = require("../parse/safe.cjs");
+const jsonStringifySafe = require("../stringify/safe.cjs");
 
 /**
  * @param {*} value
