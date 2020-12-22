@@ -10,6 +10,6 @@ exports.oneOfOrElse = void 0;
  * @since 0.0.86
  */
 function oneOfOrElse(list, value, defaultValue = undefined) {
-  return new Set(list).has(value) ? value : defaultValue;
+    return new Set(list).has(value) ? value : defaultValue;
 }
 exports.oneOfOrElse = oneOfOrElse;
