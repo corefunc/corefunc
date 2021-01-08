@@ -25,7 +25,10 @@ function serializer(replacer, cycleReplacerArg) {
     } else {
       stack.push(result);
     }
-    return replacer === null ? result : replacer.call(this, key, result);
+    if (replacer && Object.prototype.toString.call(replacer) === "[object Function]") {
+      return replacer.call(this, key, result);
+    }
+    return result;
   };
 }
 /**
