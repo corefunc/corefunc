@@ -37,7 +37,9 @@ export function convertToJsonData(
     if ((value.match(/[+-]?\d+(\.\d+)?/g) || []).map(Number).length) {
       const asNumber = Number.parseFloat(value);
       if (!Number.isNaN(asNumber) || Number.isFinite(asNumber)) {
-        return asNumber;
+        if (`${asNumber}`.length === value.length) {
+          return asNumber;
+        }
       }
     }
     if (value.includes("{") || value.includes("[")) {
