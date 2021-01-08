@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.jsonParseWith = void 0;
-const safe_1 = require("./safe.js");
+const safe_1 = require("./safe.cjs");
 /**
  * @param {String} text
  * @param {*=} defaultResult

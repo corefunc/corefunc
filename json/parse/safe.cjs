@@ -1,6 +1,8 @@
-const jsonCleanup = require("../cleanup.cjs");
-const jsonParseUnsafe = require("./unsafe.cjs");
-
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.jsonParseSafe = void 0;
+const cleanup_1 = require("../basic/cleanup.cjs");
+const unsafe_1 = require("./unsafe.cjs");
 /**
  * @param {String} text
  * @param {*=} defaultResult
@@ -9,7 +11,7 @@ const jsonParseUnsafe = require("./unsafe.cjs");
  * @param {Function=} reviver
  * @return {*}
  */
-module.exports = function jsonParseSafe(text, defaultResult = undefined, unsafe = true, fix = true, reviver = null) {
+function jsonParseSafe(text, defaultResult, unsafe = true, fix = true, reviver) {
   if (!text) {
     return defaultResult;
   }
@@ -22,13 +24,14 @@ module.exports = function jsonParseSafe(text, defaultResult = undefined, unsafe 
   } catch (exceptionOnParse) {
     if (unsafe) {
       try {
-        result = jsonParseUnsafe(text, new Error("JSON unsafe parse failed"));
+        result = unsafe_1.jsonParseUnsafe(text, new Error("JSON unsafe parse failed"));
       } catch (exceptionOnEval) {
         if (fix) {
-          result = jsonParseSafe(jsonCleanup(text), defaultResult, true, false, reviver);
+          result = jsonParseSafe(cleanup_1.jsonCleanup(text), defaultResult, true, false, reviver);
         }
       }
     }
   }
   return result;
-};
+}
+exports.jsonParseSafe = jsonParseSafe;

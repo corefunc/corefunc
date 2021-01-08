@@ -1,4 +1,4 @@
-import { jsonCleanup } from "../cleanup.mjs";
+import { jsonCleanup } from "../basic/cleanup.mjs";
 import { jsonParseUnsafe } from "./unsafe.mjs";
 
 /**

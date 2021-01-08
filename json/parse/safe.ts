@@ -1,5 +1,5 @@
-import { jsonCleanup } from "../cleanup";
-import jsonParseUnsafe from "./unsafe";
+import { jsonCleanup } from "../basic/cleanup";
+import { jsonParseUnsafe } from "./unsafe";
 
 /**
  * @param {String} text
