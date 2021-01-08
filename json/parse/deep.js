@@ -1,9 +1,9 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.jsonParseDeep = void 0;
-const isTraversable_1 = require("../../check/isTraversable.cjs");
-const forEach_1 = require("../../collection/forEach.cjs");
-const safe_1 = require("./safe.cjs");
+const isTraversable_1 = require("../../check/isTraversable.js");
+const forEach_1 = require("../../collection/forEach.js");
+const safe_1 = require("./safe.js");
 /**
  * @param {String} text
  * @param {*=} defaultResult

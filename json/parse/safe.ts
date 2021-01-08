@@ -1,4 +1,4 @@
-import jsonCleanup from "../cleanup";
+import { jsonCleanup } from "../cleanup";
 import jsonParseUnsafe from "./unsafe";
 
 /**
@@ -9,7 +9,7 @@ import jsonParseUnsafe from "./unsafe";
  * @param {Function=} reviver
  * @return {*}
  */
-export default function jsonParseSafe(
+export function jsonParseSafe(
   text: string,
   defaultResult?: any,
   unsafe: boolean = true,

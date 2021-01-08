@@ -1,5 +1,5 @@
-import jsonCleanup from "../cleanup.mjs";
-import jsonParseUnsafe from "./unsafe.mjs";
+import { jsonCleanup } from "../cleanup.mjs";
+import { jsonParseUnsafe } from "./unsafe.mjs";
 
 /**
  * @param {String} text
@@ -9,7 +9,7 @@ import jsonParseUnsafe from "./unsafe.mjs";
  * @param {Function=} reviver
  * @return {*}
  */
-export default function jsonParseSafe(text, defaultResult = undefined, unsafe = true, fix = true, reviver = null) {
+export function jsonParseSafe(text, defaultResult = undefined, unsafe = true, fix = true, reviver = null) {
   if (!text) {
     return defaultResult;
   }

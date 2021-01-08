@@ -1,6 +1,6 @@
 import checkIsTraversable from "../../check/isTraversable";
 import collectionForEach from "../../collection/forEach";
-import jsonParseSafe from "./safe";
+import { jsonParseSafe } from "./safe";
 
 /**
  * @param {String} text
@@ -8,7 +8,7 @@ import jsonParseSafe from "./safe";
  * @param {Function=} reviver
  * @return {*}
  */
-export default function jsonParseDeep(
+export function jsonParseDeep(
   text: string,
   defaultResult?: any,
   reviver?: (this: any, key: string, value: any) => any,

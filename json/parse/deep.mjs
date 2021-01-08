@@ -1,6 +1,6 @@
 import checkIsTraversable from "../../check/isTraversable.mjs";
 import collectionForEach from "../../collection/forEach.mjs";
-import jsonParseSafe from "./safe.mjs";
+import { jsonParseSafe } from "./safe.mjs";
 
 /**
  * @param {String} text
@@ -8,7 +8,7 @@ import jsonParseSafe from "./safe.mjs";
  * @param {Function=} reviver
  * @return {*}
  */
-export default function jsonParseDeep(text, defaultResult = undefined, reviver = null) {
+export function jsonParseDeep(text, defaultResult = undefined, reviver = null) {
   const parsed = jsonParseSafe(text, defaultResult, true, true, reviver);
   if (checkIsTraversable(parsed)) {
     collectionForEach(parsed, (value, key) => {

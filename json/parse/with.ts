@@ -1,4 +1,4 @@
-import jsonParseSafe from "./safe";
+import { jsonParseSafe } from "./safe";
 
 /**
  * @param {String} text
@@ -7,7 +7,7 @@ import jsonParseSafe from "./safe";
  * @param {Function=} reviver
  * @return {*}
  */
-export default function jsonParseWith(
+export function jsonParseWith(
   text: string,
   defaultResult?: any,
   unsafe: boolean = true,

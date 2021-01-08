@@ -1,4 +1,4 @@
-import jsonParseSafe from "./safe.mjs";
+import { jsonParseSafe } from "./safe.mjs";
 
 /**
  * @param {String} text
@@ -7,6 +7,6 @@ import jsonParseSafe from "./safe.mjs";
  * @param {Function=} reviver
  * @return {*}
  */
-export default function jsonParseWith(text, defaultResult = undefined, unsafe = true, reviver = null) {
+export function jsonParseWith(text, defaultResult = undefined, unsafe = true, reviver = null) {
   return jsonParseSafe(text, defaultResult, unsafe, false, reviver);
 }

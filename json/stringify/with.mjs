@@ -1,4 +1,4 @@
-import jsonStringifySafe from "./safe.mjs";
+import { jsonStringifySafe } from "./safe.mjs";
 
 /**
  * @param {*} object
@@ -7,6 +7,6 @@ import jsonStringifySafe from "./safe.mjs";
  * @param {Function=} cycleReplacer
  * @return {String}
  */
-export default function jsonStringifyWith(object, replacer, spaces, cycleReplacer) {
+export function jsonStringifyWith(object, replacer, spaces, cycleReplacer) {
   return jsonStringifySafe(object, replacer, spaces, cycleReplacer);
 }

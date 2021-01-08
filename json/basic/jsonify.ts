@@ -1,5 +1,5 @@
-import jsonParseSafe from "../parse/safe";
-import jsonStringifySafe from "../stringify/safe";
+import { jsonParseSafe } from "../parse/safe";
+import { jsonStringifySafe } from "../stringify/safe";
 
 /**
  * @param {*} value

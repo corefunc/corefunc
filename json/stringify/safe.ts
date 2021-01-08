@@ -33,7 +33,7 @@ function serializer(replacer?: (this: any, key: string, value: any) => any, cycl
  * @param {Function=} cycleReplacer
  * @return {String}
  */
-export default function jsonStringifySafe(
+export function jsonStringifySafe(
   object: any,
   replacer?: (this: any, key: string, value: any) => any,
   spaces?: string | number,

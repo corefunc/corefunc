@@ -1,10 +1,13 @@
-const jsonParseSafe = require("../parse/safe.cjs");
-const jsonStringifySafe = require("../stringify/safe.cjs");
-
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.jsonJsonify = void 0;
+const safe_1 = require("../parse/safe.cjs");
+const safe_2 = require("../stringify/safe.cjs");
 /**
  * @param {*} value
  * @return {*}
  */
-module.exports = function jsonJsonify(value) {
-  return jsonParseSafe(jsonStringifySafe(value));
-};
+function jsonJsonify(value) {
+  return safe_1.jsonParseSafe(safe_2.jsonStringifySafe(value));
+}
+exports.jsonJsonify = jsonJsonify;

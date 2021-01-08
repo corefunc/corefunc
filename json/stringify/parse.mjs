@@ -2,6 +2,6 @@
  * @param {*} value
  * @return {*}
  */
-export default function jsonStringifyParse(value) {
+export function jsonStringifyParse(value) {
   return JSON.parse(JSON.stringify(value));
 }

@@ -5,7 +5,7 @@ import castToString from "../../cast/to/string.mjs";
  * @param {*=} defaultResult
  * @return {*}
  */
-export default function jsonParseUnsafe(text, defaultResult = undefined) {
+export function jsonParseUnsafe(text, defaultResult = undefined) {
   let result = defaultResult;
   try {
     result = eval(`(${castToString(text)}`);

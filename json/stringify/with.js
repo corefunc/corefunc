@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.jsonStringifyWith = void 0;
-const safe_1 = require("./safe.cjs");
+const safe_1 = require("./safe.js");
 /**
  * @param {*} object
  * @param {Function=} replacer

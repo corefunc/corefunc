@@ -33,6 +33,6 @@ function serializer(replacer, cycleReplacerArg) {
  * @param {Function=} cycleReplacer
  * @return {String}
  */
-export default function jsonStringifySafe(object, replacer, spaces, cycleReplacer) {
+export function jsonStringifySafe(object, replacer, spaces, cycleReplacer) {
   return JSON.stringify(object, serializer(replacer, cycleReplacer), spaces);
 }

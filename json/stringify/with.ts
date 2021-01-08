@@ -1,4 +1,4 @@
-import jsonStringifySafe from "./safe";
+import { jsonStringifySafe } from "./safe";
 
 /**
  * @param {*} object
@@ -7,7 +7,7 @@ import jsonStringifySafe from "./safe";
  * @param {Function=} cycleReplacer
  * @return {String}
  */
-export default function jsonStringifyWith(
+export function jsonStringifyWith(
   object: any,
   replacer?: (this: any, key: string, value: any) => any,
   spaces?: string | number,
