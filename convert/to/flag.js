@@ -4,8 +4,8 @@ exports.convertToFlag = void 0;
 /**
  * @name convertToFlag
  * @description
- * Turns: undefined, null, 0, 0n, "", "false", "FALSE" to boolean false.
- * Turns: 1, 1n, "1", "true", "TRUE" to boolean true.
+ * Turns: undefined, null, 0, "0", "", "false", "FALSE", "n", "no", "of" to boolean false.
+ * Turns: 1, 1n, "1", "true", "TRUE", "on", "y", "yes" to boolean true.
  * @param {*} value
  * @param {*=false} onEmpty
  * @param {*=false} onUnParsable
