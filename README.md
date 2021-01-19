@@ -1,4 +1,4 @@
-![CoreFunc](./github/assets/logo_128.png?raw=true "CoreFunc")
+![CoreFunc](https://raw.githubusercontent.com/corefunc/corefunc/master/.github/assets/logo_128.png?raw=true "CoreFunc")
 
 # CoreFunc
 
@@ -8,6 +8,8 @@
 
 [![NPM Version][npm-version-img]][npm-version-url]
 [![NPM Downloads][npm-downloads-img]][npm-downloads-url]
+
+[Documentation at https://corefunc.github.io/corefunc/](https://corefunc.github.io/corefunc/)
 
 > **Please Note:** This is not a production-ready package! Expect long stretches of zero updates—that does not mean that the module is outdated. This is "Don’t repeat yourself" collection. Yes, it's working fine, but it is not complete neither consistent. The files can move from folder to folder without warning. Everything is a "Work in Progress"!!!
 
