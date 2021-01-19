@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.arrayMakeFrom = void 0;
 /**
  * @description Typecast variable to array
  * @param {*} iterable
@@ -26,4 +27,4 @@ function arrayMakeFrom(iterable) {
   }
   return Object.values(iterable);
 }
-exports.default = arrayMakeFrom;
+exports.arrayMakeFrom = arrayMakeFrom;

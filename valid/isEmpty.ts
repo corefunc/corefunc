@@ -1,6 +1,6 @@
-import checkIsPrimitive from "../check/isPrimitive";
+import { checkIsPrimitive } from "../check/isPrimitive";
 
-export default function isEmpty(value: any): boolean {
+export function isEmpty(value: any): boolean {
   if (value === null || value === undefined) {
     return true;
   }

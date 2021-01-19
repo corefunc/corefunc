@@ -1,5 +1,12 @@
 {
-  "entryPoints": ["./array/index.ts"],
+  "entryPoints": [
+    "./array/index.ts",
+    "./hash/index.ts",
+    "./prototype/index.ts",
+    "./text/index.ts",
+    "./v8/index.ts",
+    "./valid/index.ts"
+  ],
   "exclude": ["**/*+(index|.spec|.e2e).ts"],
   "externalPattern": ["./**/*.ts"],
   "media": "./.github/assets",

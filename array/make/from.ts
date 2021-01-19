@@ -3,7 +3,7 @@
  * @param {*} iterable
  * @returns {Array}
  */
-export default function arrayMakeFrom(iterable: any): any[] {
+export function arrayMakeFrom(iterable: any): any[] {
   if (!iterable) {
     return [];
   }

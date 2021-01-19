@@ -1,6 +1,6 @@
-import checkIsPrimitive from "../check/isPrimitive.mjs";
+import { checkIsPrimitive } from "../check/isPrimitive.mjs";
 
-export default function isEmpty(value) {
+export function isEmpty(value) {
   if (value === null || value === undefined) {
     return true;
   }

@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.checkIsPrimitive = void 0;
 /**
  * @name checkIsPrimitive
  * @description Return true on boolean, string, number, BigInt, null, Symbol and undefined
@@ -9,4 +10,4 @@ Object.defineProperty(exports, "__esModule", { value: true });
 function checkIsPrimitive(value) {
     return Object(value) !== value;
 }
-exports.default = checkIsPrimitive;
+exports.checkIsPrimitive = checkIsPrimitive;

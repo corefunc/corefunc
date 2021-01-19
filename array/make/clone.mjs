@@ -1,3 +1,3 @@
-export default function arrayMakeClone(array) {
+export function arrayMakeClone(array) {
   return array.slice(0);
 }

@@ -1,11 +1,12 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const checkIsPrimitive = require("../check/isPrimitive.cjs");
+exports.isEmpty = void 0;
+const isPrimitive_1 = require("../check/isPrimitive.cjs");
 function isEmpty(value) {
   if (value === null || value === undefined) {
     return true;
   }
-  if (checkIsPrimitive(value)) {
+  if (isPrimitive_1.checkIsPrimitive(value)) {
     if (typeof value === "string") {
       return !value.length;
     }
@@ -22,4 +23,4 @@ function isEmpty(value) {
   }
   return Boolean(Object.keys(value).length);
 }
-exports.default = isEmpty;
+exports.isEmpty = isEmpty;
