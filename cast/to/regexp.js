@@ -1,27 +1,27 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const isRegExp = require("../../is/regexp.js").default;
-const isString = require("../../is/string.js").default;
+const regexp_1 = require("../../is/regexp");
+const string_1 = require("../../is/string");
 /**
  * @param {Array|RegExp|string} pattern
  * @returns {boolean|RegExp}
  */
 function castToRegExp(pattern) {
-  if (isRegExp(pattern)) {
-    return pattern;
-  }
-  if (isString(pattern)) {
-    return new RegExp(pattern);
-  }
-  if (Array.isArray(pattern)) {
-    if (isString(pattern[0]) === false) {
-      return false;
+    if (regexp_1.default(pattern)) {
+        return pattern;
     }
-    if (isString(pattern[1]) === true) {
-      return new RegExp(pattern[0], pattern[1]);
+    if (string_1.default(pattern)) {
+        return new RegExp(pattern);
     }
-    return new RegExp(pattern[0]);
-  }
-  return false;
+    if (Array.isArray(pattern)) {
+        if (string_1.default(pattern[0]) === false) {
+            return false;
+        }
+        if (string_1.default(pattern[1]) === true) {
+            return new RegExp(pattern[0], pattern[1]);
+        }
+        return new RegExp(pattern[0]);
+    }
+    return false;
 }
 exports.default = castToRegExp;

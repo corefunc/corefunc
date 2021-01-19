@@ -4,10 +4,12 @@ exports.arrayGetAt = void 0;
 const isArrayLike = require("../../check/isArrayLike.cjs");
 /**
  * @name arrayGetAt
+ * @description Get the value at the index of an array. Supports negative index.
  * @param {Array} array
  * @param {Number} index
  * @param {*=} onFail
  * @returns {*}
+ * @example arrayGetAt(["🍌", "🍏", "🍇", "🍊"], -2) ⇨ "🍇"
  * @since 0.0.96
  */
 function arrayGetAt(array, index, onFail) {

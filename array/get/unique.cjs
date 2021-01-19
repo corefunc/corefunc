@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.arrayGetUnique = void 0;
 /**
  * @name arrayGetUnique
  * @param {Array} array
@@ -40,4 +41,4 @@ function arrayGetUnique(array, sort = true) {
   }
   return unique;
 }
-exports.default = arrayGetUnique;
+exports.arrayGetUnique = arrayGetUnique;

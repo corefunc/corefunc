@@ -8,6 +8,6 @@ const v8 = require("v8");
  * @returns {*}
  */
 function v8Clone(obj) {
-  return v8.deserialize(v8.serialize(obj));
+    return v8.deserialize(v8.serialize(obj));
 }
 exports.v8Clone = v8Clone;

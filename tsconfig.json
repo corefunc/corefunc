@@ -5,32 +5,41 @@
     "alwaysStrict": true,
     "esModuleInterop": false,
     "forceConsistentCasingInFileNames": true,
-    "lib": [
-      "dom",
-      "es2015",
-      "es2016",
-      "es2017",
-      "es2018",
-      "esnext"
-    ],
+    "lib": ["dom", "es2015", "es2016", "es2017", "es2018", "esnext"],
     "module": "commonjs",
     "moduleResolution": "node",
     "sourceMap": false,
     "target": "es6",
-    "typeRoots": [
-      "node_modules/@types"
-    ],
-    "types": [
-      "node"
-    ]
+    "typeRoots": ["node_modules/@types"],
+    "types": ["node"]
   },
-  "exclude": [
-    "js",
-    "mjs",
-    "node_modules",
-    "test"
-  ],
+  "exclude": ["node_modules", "tests"],
   "include": [
-    "ts"
+    "array",
+    "cast",
+    "check",
+    "cli",
+    "collection",
+    "convert",
+    "crypt",
+    "dom",
+    "fp",
+    "func",
+    "generate",
+    "hash",
+    "high-order",
+    "is",
+    "json",
+    "lang",
+    "number",
+    "object",
+    "promise",
+    "prototype",
+    "regex",
+    "string",
+    "text",
+    "v8",
+    "valid",
+    "var"
   ]
 }

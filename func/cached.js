@@ -7,14 +7,14 @@ Object.defineProperty(exports, "__esModule", { value: true });
  * @returns {Function}
  */
 function functionCached(func) {
-  const cache = Object.create(null);
-  return function cachedFunction(...keys) {
-    const key = JSON.stringify(keys);
-    if (key in cache) {
-      return cache[key];
-    }
-    cache[key] = func(...keys);
-    return cache[key];
-  };
+    const cache = Object.create(null);
+    return function cachedFunction(...keys) {
+        const key = JSON.stringify(keys);
+        if (key in cache) {
+            return cache[key];
+        }
+        cache[key] = func(...keys);
+        return cache[key];
+    };
 }
 exports.default = functionCached;

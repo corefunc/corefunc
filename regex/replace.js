@@ -41,7 +41,7 @@ function regexReplace(haystack, needle, replaceWith) {
         return sTarget.split(sSearch).join(sReplace);
     }
     if (string_2.default(sSearch)) {
-        return sTarget.split(sSearch).join(string_1.default(head_1.default(sReplace)));
+        return sTarget.split(sSearch).join(string_1.default(head_1.arrayGetHead(sReplace)));
     }
     if (string_2.default(sReplace)) {
         sSearch.forEach((srch) => {

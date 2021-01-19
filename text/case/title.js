@@ -9,6 +9,6 @@ exports.textCaseTitle = void 0;
  * @see http://stackoverflow.com/questions/196972/convert-string-to-title-case-with-javascript
  */
 function textCaseTitle(text) {
-  return text.replace(/\w\S*/g, (txt) => txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase());
+    return text.replace(/\w\S*/g, (txt) => txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase());
 }
 exports.textCaseTitle = textCaseTitle;

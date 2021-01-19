@@ -5,6 +5,6 @@ Object.defineProperty(exports, "__esModule", { value: true });
  * @return {boolean}
  */
 function isMap(value) {
-  return value instanceof Map;
+    return value instanceof Map;
 }
 exports.default = isMap;

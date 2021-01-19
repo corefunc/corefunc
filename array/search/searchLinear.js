@@ -1,11 +1,11 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 function arraySearchLinear(array, target) {
-  for (let index = 0; index < array.length; index++) {
-    if (array[index] === target) {
-      return index;
+    for (let index = 0; index < array.length; index++) {
+        if (array[index] === target) {
+            return index;
+        }
     }
-  }
-  return -1;
+    return -1;
 }
 exports.default = arraySearchLinear;

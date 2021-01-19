@@ -1,17 +1,17 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const isFunction = require("../is/function.js").default;
+const function_1 = require("../is/function");
 function checkIsCallable(value) {
-  if (!value) {
+    if (!value) {
+        return false;
+    }
+    if (function_1.default(value)) {
+        return true;
+    }
+    if ("toFunction" in value && function_1.default(value.toFunction) && function_1.default(value.toFunction())) {
+        return true;
+    }
+    //
     return false;
-  }
-  if (isFunction(value)) {
-    return true;
-  }
-  if ("toFunction" in value && isFunction(value.toFunction) && isFunction(value.toFunction())) {
-    return true;
-  }
-  //
-  return false;
 }
 exports.default = checkIsCallable;

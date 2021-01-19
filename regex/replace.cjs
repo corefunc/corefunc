@@ -1,11 +1,10 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const arrayGetHead = require("../array/get/head.cjs");
-const castToString = require("../cast/to/string.cjs");
-const checkIsTraversable = require("../check/isTraversable.cjs");
-const collectionValues = require("../collection/values.cjs");
-const isString = require("../is/string.cjs");
-
+const head_1 = require("../array/get/head.cjs");
+const string_1 = require("../cast/to/string.cjs");
+const isTraversable_1 = require("../check/isTraversable.cjs");
+const values_1 = require("../collection/values.cjs");
+const string_2 = require("../is/string.cjs");
 /**
  * Replace all occurrences of the search string with the replacement string
  * @param {String} haystack
@@ -16,37 +15,38 @@ const isString = require("../is/string.cjs");
  * @example regexReplace('target', ['search 1', 'searach 2'], 'replace');
  * @example regexReplace('target', ['search 1', 'searach 2'], ['replace 1', 'replace 2']);
  */
-module.exports = function regexReplace(haystack, needle, replaceWith) {
-  let sTarget = castToString(haystack);
+function regexReplace(haystack, needle, replaceWith) {
+  let sTarget = string_1.default(haystack);
   let sSearch;
   let sReplace;
-  if (isString(needle)) {
+  if (string_2.default(needle)) {
     sSearch = needle;
-  } else if (checkIsTraversable(needle)) {
-    sSearch = collectionValues(needle);
+  } else if (isTraversable_1.default(needle)) {
+    sSearch = values_1.default(needle);
   } else {
-    sSearch = castToString(needle);
+    sSearch = string_1.default(needle);
   }
-  if (isString(replaceWith)) {
+  if (string_2.default(replaceWith)) {
     sReplace = replaceWith;
-  } else if (checkIsTraversable(replaceWith)) {
-    sReplace = collectionValues(replaceWith);
+  } else if (isTraversable_1.default(replaceWith)) {
+    sReplace = values_1.default(replaceWith);
   } else {
-    sReplace = castToString(replaceWith);
+    sReplace = string_1.default(replaceWith);
   }
-  if (isString(sSearch) && isString(sReplace)) {
+  if (string_2.default(sSearch) && string_2.default(sReplace)) {
     return sTarget.split(sSearch).join(sReplace);
   }
-  if (isString(sSearch)) {
-    return sTarget.split(sSearch).join(castToString(arrayGetHead(sReplace)));
+  if (string_2.default(sSearch)) {
+    return sTarget.split(sSearch).join(string_1.default(head_1.arrayGetHead(sReplace)));
   }
-  if (isString(sReplace)) {
+  if (string_2.default(sReplace)) {
     sSearch.forEach((srch) => {
-      sTarget = sTarget.split(castToString(srch)).join(sReplace);
+      sTarget = sTarget.split(string_1.default(srch)).join(sReplace);
     });
   }
   sSearch.forEach((srch, index) => {
-    sTarget = sTarget.split(castToString(srch)).join(castToString(sReplace[index]));
+    sTarget = sTarget.split(string_1.default(srch)).join(string_1.default(sReplace[index]));
   });
   return sTarget;
-};
+}
+exports.default = regexReplace;

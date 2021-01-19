@@ -7,6 +7,6 @@ exports.arrayGetAverage = void 0;
  * @returns  {Number}
  */
 function arrayGetAverage(array) {
-  return array.reduce((alpha, beta) => alpha + beta) / array.length;
+    return array.reduce((alpha, beta) => alpha + beta) / array.length;
 }
 exports.arrayGetAverage = arrayGetAverage;

@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.regexFromVerbose = void 0;
 /**
  * @name regexFromVerbose
  * @param {TemplateStringsArray} input
@@ -24,9 +25,9 @@ Object.defineProperty(exports, "__esModule", { value: true });
  * `;
  */
 function regexFromVerbose(input) {
-  if (input.raw.length !== 1) {
-    throw Error("regexFromVerbose: interpolation is not supported");
-  }
-  return new RegExp(input.raw[0].replace(/(?<!\\)\s|[/][/].*|[/][*][\s\S]*[*][/]/g, ""));
+    if (input.raw.length !== 1) {
+        throw Error("regexFromVerbose: interpolation is not supported");
+    }
+    return new RegExp(input.raw[0].replace(/(?<!\\)\s|[/][/].*|[/][*][\s\S]*[*][/]/g, ""));
 }
 exports.regexFromVerbose = regexFromVerbose;

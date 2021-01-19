@@ -3,9 +3,9 @@ import fnHead from "lodash-es/head";
 import fnKeys from "lodash-es/keys";
 import fnSortBy from "lodash-es/sortBy";
 
-import fnIsMapType from "../is/isMapType";
-import fnIsSetType from "../is/isSetType";
-import fnIsTraversable from "../is/isTraversable";
+import isMap from "../is/map";
+import isSet from "../is/set";
+import checkIsTraversable from "../check/isTraversable";
 
 /**
  * Gets the first element of traversable variable
@@ -26,7 +26,7 @@ function head(iterable, clone = true, defaultValue = undefined) {
   if (!iterable) {
     return defaultValue;
   }
-  if (!fnIsTraversable(iterable)) {
+  if (!checkIsTraversable(iterable)) {
     return fnCloneDeep(defaultValue);
   }
   if (Array.isArray(iterable)) {
@@ -39,7 +39,7 @@ function head(iterable, clone = true, defaultValue = undefined) {
       return fnHead(iterable);
     }
   }
-  if (fnIsSetType(iterable)) {
+  if (isSet(iterable)) {
     const values = Array.from(iterable.values());
     if (values.length === 0) {
       return defaultValue;
@@ -50,7 +50,7 @@ function head(iterable, clone = true, defaultValue = undefined) {
       return fnHead(values);
     }
   }
-  if (fnIsMapType(iterable)) {
+  if (isMap(iterable)) {
     const keys = fnSortBy(Array.from(iterable.keys()));
     if (keys.length === 0) {
       return defaultValue;

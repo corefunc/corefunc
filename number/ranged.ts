@@ -1,5 +1,5 @@
-import castToInt from "../cast/to/int";
-import castToFloat from "../cast/to/float";
+import { castToInt } from "../cast/to/int";
+import { castToFloat } from "../cast/to/float";
 
 /**
  * Typecast variable to number wih minimum and maximum value

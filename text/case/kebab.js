@@ -9,9 +9,9 @@ exports.textCaseKebab = void 0;
  * @see https://stackoverflow.com/questions/196972/convert-string-to-title-case-with-javascript
  */
 function textCaseKebab(text) {
-  return text
-    .split("")
-    .map((letter, idx) => (letter.toUpperCase() === letter ? `${idx !== 0 ? "-" : ""}${letter.toLowerCase()}` : letter))
-    .join("");
+    return text
+        .split("")
+        .map((letter, idx) => (letter.toUpperCase() === letter ? `${idx !== 0 ? "-" : ""}${letter.toLowerCase()}` : letter))
+        .join("");
 }
 exports.textCaseKebab = textCaseKebab;

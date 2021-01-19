@@ -1,4 +1,4 @@
-import arrayGetHead from "../array/get/head.mjs";
+import { arrayGetHead } from "../array/get/head.mjs";
 import castToString from "../cast/to/string.mjs";
 import checkIsTraversable from "../check/isTraversable.mjs";
 import collectionValues from "../collection/values.mjs";

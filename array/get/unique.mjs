@@ -6,7 +6,7 @@
  * @example
  * arrayGetUnique([NaN, NaN, 0, -0, +0, "\u0065\u0301", "\u00e9"]) -> [ NaN, 0, 'é', -0 ]
  */
-export default function arrayGetUnique(array, sort = true) {
+export function arrayGetUnique(array, sort = true) {
   if (array.length < 2) {
     return array;
   }

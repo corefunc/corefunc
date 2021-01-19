@@ -5,6 +5,6 @@ Object.defineProperty(exports, "__esModule", { value: true });
  * @return {boolean}
  */
 function isSet(value) {
-  return value instanceof Set;
+    return value instanceof Set;
 }
 exports.default = isSet;

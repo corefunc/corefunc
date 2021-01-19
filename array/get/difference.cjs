@@ -1,9 +1,8 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.arrayGetDifference = void 0;
 function arrayGetDifference(alpha, beta) {
-  var set = new Set(beta);
-  return alpha.filter(function (value) {
-    return !set.has(value);
-  });
+  const set = new Set(beta);
+  return alpha.filter((value) => !set.has(value));
 }
-exports.default = arrayGetDifference;
+exports.arrayGetDifference = arrayGetDifference;

@@ -5,6 +5,6 @@ Object.defineProperty(exports, "__esModule", { value: true });
  * @return {boolean}
  */
 function isWeakSet(value) {
-  return value instanceof WeakSet;
+    return value instanceof WeakSet;
 }
 exports.default = isWeakSet;

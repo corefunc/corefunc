@@ -1,0 +1,7 @@
+{
+  "entryPoints": ["./array/index.ts"],
+  "exclude": ["**/*+(index|.spec|.e2e).ts"],
+  "externalPattern": ["./**/*.ts"],
+  "media": "./.github/assets",
+  "out": "docs"
+}

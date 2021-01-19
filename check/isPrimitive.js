@@ -7,6 +7,6 @@ Object.defineProperty(exports, "__esModule", { value: true });
  * @return {boolean}
  */
 function checkIsPrimitive(value) {
-  return Object(value) !== value;
+    return Object(value) !== value;
 }
 exports.default = checkIsPrimitive;

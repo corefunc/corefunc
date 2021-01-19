@@ -1,9 +1,10 @@
-![CoreFunc](docs/img/logo_128.png?raw=true "CoreFunc")
+![CoreFunc](./github/assets/logo_128.png?raw=true "CoreFunc")
 
 # CoreFunc
 
-[![Buy Me A Coffee][buymeacoffee-img]][buymeacoffee-url]
-[![Follow New Releases][releasly-img]][releasly-url]
+[comment]: <> ([![Buy Me A Coffee][buymeacoffee-img]][buymeacoffee-url])
+
+[comment]: <> ([![Follow New Releases][releasly-img]][releasly-url])
 
 [![NPM Version][npm-version-img]][npm-version-url]
 [![NPM Downloads][npm-downloads-img]][npm-downloads-url]

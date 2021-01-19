@@ -5,8 +5,9 @@ import arrayKeyFirst from "../key/first.mjs";
  * @param {Array} array
  * @param {*} onFail
  * @returns {null|*}
+ * @example arrayGetHead([,,"🍌","🍏","🍊"]) ⇨ "🍌"
  */
-export default function arrayGetHead(array, onFail) {
+export function arrayGetHead(array, onFail) {
   if (!Array.isArray(array)) {
     return onFail;
   }

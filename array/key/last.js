@@ -6,9 +6,9 @@ Object.defineProperty(exports, "__esModule", { value: true });
  * @returns {null|*}
  */
 function arrayKeyLast(array) {
-  if (array.length) {
-    return array.keys()[array.length - 1];
-  }
-  return null;
+    if (array.length) {
+        return array.keys()[array.length - 1];
+    }
+    return null;
 }
 exports.default = arrayKeyLast;

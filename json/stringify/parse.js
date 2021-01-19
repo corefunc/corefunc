@@ -6,6 +6,6 @@ exports.jsonStringifyParse = void 0;
  * @return {*}
  */
 function jsonStringifyParse(value) {
-  return JSON.parse(JSON.stringify(value));
+    return JSON.parse(JSON.stringify(value));
 }
 exports.jsonStringifyParse = jsonStringifyParse;

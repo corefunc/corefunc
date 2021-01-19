@@ -1,11 +1,13 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.arrayGetHead = void 0;
 const first_1 = require("../key/first");
 /**
  * @name arrayGetHead
  * @param {Array} array
  * @param {*} onFail
  * @returns {null|*}
+ * @example arrayGetHead([,,"🍌","🍏","🍊"]) ⇨ "🍌"
  */
 function arrayGetHead(array, onFail) {
     if (!Array.isArray(array)) {
@@ -17,4 +19,4 @@ function arrayGetHead(array, onFail) {
     }
     return array[first];
 }
-exports.default = arrayGetHead;
+exports.arrayGetHead = arrayGetHead;

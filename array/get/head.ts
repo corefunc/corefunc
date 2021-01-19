@@ -5,8 +5,9 @@ import arrayKeyFirst from "../key/first";
  * @param {Array} array
  * @param {*} onFail
  * @returns {null|*}
+ * @example arrayGetHead([,,"🍌","🍏","🍊"]) ⇨ "🍌"
  */
-export default function arrayGetHead<T, E>(array: T[], onFail?: E): T | E {
+export function arrayGetHead<T, E>(array: T[], onFail?: E): T | E {
   if (!Array.isArray(array)) {
     return onFail;
   }

@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.queueMicrotask = void 0;
 /**
  * @name queueMicrotask
  * @description Queues a microtask to be executed at a safe time prior to control returning to the event
@@ -15,20 +16,20 @@ Object.defineProperty(exports, "__esModule", { value: true });
  * })();
  */
 let queueMicrotask;
+exports.queueMicrotask = queueMicrotask;
 /*global globalThis*/
 if (typeof globalThis["queueMicrotask"] === "function") {
-  queueMicrotask = globalThis["queueMicrotask"];
-} else if ("process" in globalThis && globalThis["process"]["versions"] && globalThis["process"]["versions"]["node"]) {
-  queueMicrotask = globalThis["process"]["nextTick"];
-} else {
-  queueMicrotask = function (callback) {
-    Promise.resolve()
-      .then(callback)
-      .catch((error) =>
-        setTimeout(() => {
-          throw error;
-        }),
-      );
-  };
+    exports.queueMicrotask = queueMicrotask = globalThis["queueMicrotask"];
 }
-exports.queueMicrotask = queueMicrotask;
+else if ("process" in globalThis && globalThis["process"]["versions"] && globalThis["process"]["versions"]["node"]) {
+    exports.queueMicrotask = queueMicrotask = globalThis["process"]["nextTick"];
+}
+else {
+    exports.queueMicrotask = queueMicrotask = function (callback) {
+        Promise.resolve()
+            .then(callback)
+            .catch((error) => setTimeout(() => {
+            throw error;
+        }));
+    };
+}
