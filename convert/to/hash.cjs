@@ -1,4 +1,7 @@
-module.exports = function convertToHash(value, asString = true, seed = 0x811c9dc5) {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.convertToHash = void 0;
+function convertToHash(value, asString, seed = 0x811c9dc5) {
   const text = typeof value === "string" ? value : JSON.stringify(value);
   const length = text.length;
   let index = 0;
@@ -11,4 +14,5 @@ module.exports = function convertToHash(value, asString = true, seed = 0x811c9dc
     return ("0000000" + (hashVal >>> 0).toString(16)).substr(-8);
   }
   return hashVal >>> 0;
-};
+}
+exports.convertToHash = convertToHash;

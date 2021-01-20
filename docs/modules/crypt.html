@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>check | @corefunc/corefunc</title>
+	<title>crypt | @corefunc/corefunc</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -55,7 +55,7 @@
 		<div class="container">
 			<ul class="tsd-breadcrumb">
 				<li>
-					<a href="check.html">check</a>
+					<a href="crypt.html">crypt</a>
 				</li>
 			</ul>
 		</div>
@@ -75,13 +75,13 @@
 					<li class=" tsd-kind-module tsd-is-external">
 						<a href="array.html">array</a>
 					</li>
-					<li class="current tsd-kind-module tsd-is-external">
+					<li class=" tsd-kind-module tsd-is-external">
 						<a href="check.html">check</a>
 					</li>
 					<li class=" tsd-kind-module tsd-is-external">
 						<a href="convert.html">convert</a>
 					</li>
-					<li class=" tsd-kind-module tsd-is-external">
+					<li class="current tsd-kind-module tsd-is-external">
 						<a href="crypt.html">crypt</a>
 					</li>
 					<li class=" tsd-kind-module tsd-is-external">
@@ -103,15 +103,14 @@
 			</nav>
 		</div>
 		<div class="col-7 offset-3 col-content">
-			<h1>Module check</h1>
+			<h1>Module crypt</h1>
 			<section class="tsd-panel-group tsd-index-group">
 				<section class="tsd-panel tsd-index-panel">
 					<div class="tsd-index-content">
 						<section class="tsd-index-section tsd-is-external">
 							<h3>Functions</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-function tsd-parent-kind-module tsd-is-external"><a href="check.html#checkisobjectlike" class="tsd-kind-icon">check<wbr>IsObject<wbr>Like</a></li>
-								<li class="tsd-kind-function tsd-parent-kind-module tsd-is-external"><a href="check.html#checkistraversable" class="tsd-kind-icon">check<wbr>IsTraversable</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module tsd-is-external"><a href="crypt.html#cryptsha1" class="tsd-kind-icon">crypt<wbr>Sha1</a></li>
 							</ul>
 						</section>
 					</div>
@@ -120,82 +119,25 @@
 			<section class="tsd-panel-group tsd-member-group tsd-is-external">
 				<h2>Functions</h2>
 				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module tsd-is-external">
-					<a name="checkisobjectlike" class="tsd-anchor"></a>
-					<h3>check<wbr>IsObject<wbr>Like</h3>
+					<a name="cryptsha1" class="tsd-anchor"></a>
+					<h3>crypt<wbr>Sha1</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">check<wbr>IsObject<wbr>Like<span class="tsd-signature-symbol">(</span>value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+						<li class="tsd-signature tsd-kind-icon">crypt<wbr>Sha1<span class="tsd-signature-symbol">(</span>text<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in check/isObjectLike.ts:13</li>
+									<li>Defined in crypt/sha1.ts:134</li>
 								</ul>
 							</aside>
-							<div class="tsd-comment tsd-typography tsd-comment-tags">
-								<dl class="tsd-comment-tags"><dt>name</dt>
-									<dd><p>checkIsObjectLike</p>
-									</dd><dt>description</dt>
-									<dd><p>Checks if <code>value</code> is object-like. A value is object-like if it&#39;s not <code>null</code>
-										and has a <code>typeof</code> result of &quot;object&quot;.</p>
-									</dd><dt>example</dt>
-									<dd><p>isObjectLike({}); ➜ true</p>
-									</dd><dt>example</dt>
-									<dd><p>isObjectLike([1, 2, 3]); ➜ true</p>
-									</dd><dt>example</dt>
-									<dd><p>isObjectLike(() =&gt; {}); ➜ false</p>
-									</dd><dt>example</dt>
-									<dd><p>isObjectLike(null); ➜ false</p>
-									</dd><dt>since</dt>
-									<dd><p>0.0.1</p>
-								</dd></dl>
-							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>value: <span class="tsd-signature-type">any</span></h5>
-									<div class="tsd-comment tsd-typography tsd-comment-text">
-										<p>The value to check</p>
-									</div>
+									<h5>text: <span class="tsd-signature-type">string</span></h5>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
-							<p>Returns <code>true</code> if <code>value</code> is object-like, else <code>false</code></p>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module tsd-is-external">
-					<a name="checkistraversable" class="tsd-anchor"></a>
-					<h3>check<wbr>IsTraversable</h3>
-					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">check<wbr>IsTraversable<span class="tsd-signature-symbol">(</span>value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in check/isTraversable.ts:11</li>
-								</ul>
-							</aside>
-							<div class="tsd-comment tsd-typography tsd-comment-tags">
-								<dl class="tsd-comment-tags"><dt>name</dt>
-									<dd><p>checkIsTraversable</p>
-									</dd><dt>description</dt>
-									<dd><p>Checks if <code>value</code> is traversable</p>
-									</dd><dt>since</dt>
-									<dd><p>0.0.1</p>
-								</dd></dl>
-							</div>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>value: <span class="tsd-signature-type">any</span></h5>
-									<div class="tsd-comment tsd-typography tsd-comment-text">
-										<p>The value to check</p>
-									</div>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -206,10 +148,7 @@
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
 					<li class=" tsd-kind-function tsd-parent-kind-module tsd-is-external root">
-						<a href="check.html#checkisobjectlike" class="tsd-kind-icon">check<wbr>IsObject<wbr>Like</a>
-					</li>
-					<li class=" tsd-kind-function tsd-parent-kind-module tsd-is-external root">
-						<a href="check.html#checkistraversable" class="tsd-kind-icon">check<wbr>IsTraversable</a>
+						<a href="crypt.html#cryptsha1" class="tsd-kind-icon">crypt<wbr>Sha1</a>
 					</li>
 				</ul>
 			</nav>

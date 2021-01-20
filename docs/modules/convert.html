@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>valid | @corefunc/corefunc</title>
+	<title>convert | @corefunc/corefunc</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -55,7 +55,7 @@
 		<div class="container">
 			<ul class="tsd-breadcrumb">
 				<li>
-					<a href="valid.html">valid</a>
+					<a href="convert.html">convert</a>
 				</li>
 			</ul>
 		</div>
@@ -78,7 +78,7 @@
 					<li class=" tsd-kind-module tsd-is-external">
 						<a href="check.html">check</a>
 					</li>
-					<li class=" tsd-kind-module tsd-is-external">
+					<li class="current tsd-kind-module tsd-is-external">
 						<a href="convert.html">convert</a>
 					</li>
 					<li class=" tsd-kind-module tsd-is-external">
@@ -96,23 +96,23 @@
 					<li class=" tsd-kind-module tsd-is-external">
 						<a href="v8.html">v8</a>
 					</li>
-					<li class="current tsd-kind-module tsd-is-external">
+					<li class=" tsd-kind-module tsd-is-external">
 						<a href="valid.html">valid</a>
 					</li>
 				</ul>
 			</nav>
 		</div>
 		<div class="col-7 offset-3 col-content">
-			<h1>Module valid</h1>
+			<h1>Module convert</h1>
 			<section class="tsd-panel-group tsd-index-group">
 				<section class="tsd-panel tsd-index-panel">
 					<div class="tsd-index-content">
 						<section class="tsd-index-section tsd-is-external">
 							<h3>Functions</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-function tsd-parent-kind-module tsd-is-external"><a href="valid.html#isempty" class="tsd-kind-icon">is<wbr>Empty</a></li>
-								<li class="tsd-kind-function tsd-parent-kind-module tsd-is-external"><a href="valid.html#isobjectid" class="tsd-kind-icon">is<wbr>Object<wbr>Id</a></li>
-								<li class="tsd-kind-function tsd-parent-kind-module tsd-is-external"><a href="valid.html#isuuid" class="tsd-kind-icon">isUUID</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module tsd-is-external"><a href="convert.html#converttoflag" class="tsd-kind-icon">convert<wbr>ToFlag</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module tsd-is-external"><a href="convert.html#converttohash" class="tsd-kind-icon">convert<wbr>ToHash</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module tsd-is-external"><a href="convert.html#converttojsondata" class="tsd-kind-icon">convert<wbr>ToJson<wbr>Data</a></li>
 							</ul>
 						</section>
 					</div>
@@ -121,48 +121,24 @@
 			<section class="tsd-panel-group tsd-member-group tsd-is-external">
 				<h2>Functions</h2>
 				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module tsd-is-external">
-					<a name="isempty" class="tsd-anchor"></a>
-					<h3>is<wbr>Empty</h3>
+					<a name="converttoflag" class="tsd-anchor"></a>
+					<h3>convert<wbr>ToFlag</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">is<wbr>Empty<span class="tsd-signature-symbol">(</span>value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+						<li class="tsd-signature tsd-kind-icon">convert<wbr>ToFlag<span class="tsd-signature-symbol">(</span>value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, onEmpty<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span>, onUnParsable<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in valid/isEmpty.ts:3</li>
-								</ul>
-							</aside>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>value: <span class="tsd-signature-type">any</span></h5>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module tsd-is-external">
-					<a name="isobjectid" class="tsd-anchor"></a>
-					<h3>is<wbr>Object<wbr>Id</h3>
-					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">is<wbr>Object<wbr>Id<span class="tsd-signature-symbol">(</span>value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in valid/isObjectId.ts:8</li>
+									<li>Defined in convert/to/flag.ts:11</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography tsd-comment-tags">
 								<dl class="tsd-comment-tags"><dt>name</dt>
-									<dd><p>isObjectId</p>
+									<dd><p>convertToFlag</p>
 									</dd><dt>description</dt>
-									<dd><p>Check is value ObjectId</p>
-									</dd><dt>since</dt>
-									<dd><p>0.0.94</p>
+									<dd><p>Turns: undefined, null, 0, &quot;0&quot;, &quot;&quot;, &quot;false&quot;, &quot;FALSE&quot;, &quot;n&quot;, &quot;no&quot;, &quot;of&quot; to boolean false.
+										Turns: 1, 1n, &quot;1&quot;, &quot;true&quot;, &quot;TRUE&quot;, &quot;on&quot;, &quot;y&quot;, &quot;yes&quot; to boolean true.</p>
 								</dd></dl>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -170,33 +146,87 @@
 								<li>
 									<h5>value: <span class="tsd-signature-type">any</span></h5>
 								</li>
+								<li>
+									<h5>onEmpty: <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> = false</span></h5>
+								</li>
+								<li>
+									<h5>onUnParsable: <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> = false</span></h5>
+								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
 						</li>
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module tsd-is-external">
-					<a name="isuuid" class="tsd-anchor"></a>
-					<h3>isUUID</h3>
+					<a name="converttohash" class="tsd-anchor"></a>
+					<h3>convert<wbr>ToHash</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">isUUID<span class="tsd-signature-symbol">(</span>value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+						<li class="tsd-signature tsd-kind-icon">convert<wbr>ToHash<span class="tsd-signature-symbol">(</span>value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, asString<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">false</span>, seed<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+						<li class="tsd-signature tsd-kind-icon">convert<wbr>ToHash<span class="tsd-signature-symbol">(</span>value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, asString<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">"true"</span>, seed<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in valid/isUUID.ts:9</li>
+									<li>Defined in convert/to/hash.ts:2</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>value: <span class="tsd-signature-type">any</span></h5>
+								</li>
+								<li>
+									<h5>asString: <span class="tsd-signature-type">false</span></h5>
+								</li>
+								<li>
+									<h5>seed: <span class="tsd-signature-type">number</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+						</li>
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in convert/to/hash.ts:3</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>value: <span class="tsd-signature-type">any</span></h5>
+								</li>
+								<li>
+									<h5>asString: <span class="tsd-signature-type">"true"</span></h5>
+								</li>
+								<li>
+									<h5>seed: <span class="tsd-signature-type">number</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module tsd-is-external">
+					<a name="converttojsondata" class="tsd-anchor"></a>
+					<h3>convert<wbr>ToJson<wbr>Data</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module tsd-is-external">
+						<li class="tsd-signature tsd-kind-icon">convert<wbr>ToJson<wbr>Data<span class="tsd-signature-symbol">(</span>value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, returnsUndefined<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">unknown</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Record</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">unknown</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in convert/to/jsonData.ts:8</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography tsd-comment-tags">
 								<dl class="tsd-comment-tags"><dt>name</dt>
-									<dd><p>isUUID</p>
+									<dd><p>convertToJsonData</p>
 									</dd><dt>description</dt>
-									<dd><p>Check is value UUID</p>
+									<dd><p>Convert to JSON-only valid data type: boolean, null, number, string, array, plain object</p>
 									</dd><dt>since</dt>
-									<dd><p>0.0.94</p>
-									</dd><dt>see</dt>
-									<dd><p><a href="https://stackoverflow.com/questions/7905929/how-to-test-valid-uuid-guid">https://stackoverflow.com/questions/7905929/how-to-test-valid-uuid-guid</a></p>
+									<dd><p>0.0.88</p>
 								</dd></dl>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -204,8 +234,24 @@
 								<li>
 									<h5>value: <span class="tsd-signature-type">any</span></h5>
 								</li>
+								<li>
+									<h5>returnsUndefined: <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> = true</span></h5>
+								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span>
+								<span class="tsd-signature-symbol"> | </span>
+								<span class="tsd-signature-type">null</span>
+								<span class="tsd-signature-symbol"> | </span>
+								<span class="tsd-signature-type">number</span>
+								<span class="tsd-signature-symbol"> | </span>
+								<span class="tsd-signature-type">string</span>
+								<span class="tsd-signature-symbol"> | </span>
+								<span class="tsd-signature-type">undefined</span>
+								<span class="tsd-signature-symbol"> | </span>
+								<span class="tsd-signature-type">unknown</span><span class="tsd-signature-symbol">[]</span>
+								<span class="tsd-signature-symbol"> | </span>
+								<span class="tsd-signature-type">Record</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">unknown</span><span class="tsd-signature-symbol">&gt;</span>
+							</h4>
 						</li>
 					</ul>
 				</section>
@@ -216,13 +262,13 @@
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
 					<li class=" tsd-kind-function tsd-parent-kind-module tsd-is-external root">
-						<a href="valid.html#isempty" class="tsd-kind-icon">is<wbr>Empty</a>
+						<a href="convert.html#converttoflag" class="tsd-kind-icon">convert<wbr>ToFlag</a>
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-module tsd-is-external root">
-						<a href="valid.html#isobjectid" class="tsd-kind-icon">is<wbr>Object<wbr>Id</a>
+						<a href="convert.html#converttohash" class="tsd-kind-icon">convert<wbr>ToHash</a>
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-module tsd-is-external root">
-						<a href="valid.html#isuuid" class="tsd-kind-icon">isUUID</a>
+						<a href="convert.html#converttojsondata" class="tsd-kind-icon">convert<wbr>ToJson<wbr>Data</a>
 					</li>
 				</ul>
 			</nav>

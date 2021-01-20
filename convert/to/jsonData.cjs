@@ -3,7 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.convertToJsonData = void 0;
 /**
  * @name convertToJsonData
- * @description Convert to JSON-only valida data type: boolean, null, number, string, array, plain object
+ * @description Convert to JSON-only valid data type: boolean, null, number, string, array, plain object
  * @param {*} value
  * @param {Boolean=} returnsUndefined
  * @since 0.0.88

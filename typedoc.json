@@ -2,6 +2,8 @@
   "entryPoints": [
     "./array/index.ts",
     "./check/index.ts",
+    "./convert/index.ts",
+    "./crypt/index.ts",
     "./hash/index.ts",
     "./prototype/index.ts",
     "./text/index.ts",

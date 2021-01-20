@@ -1,4 +1,4 @@
-export default function convertToHash(value, asString = true, seed = 0x811c9dc5) {
+export function convertToHash(value, asString = true, seed = 0x811c9dc5) {
   const text = typeof value === "string" ? value : JSON.stringify(value);
   const length = text.length;
   let index = 0;
