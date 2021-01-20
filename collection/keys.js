@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.collectionKeys = void 0;
 const isKeyed_1 = require("../check/isKeyed");
 const isObjectLike_1 = require("../check/isObjectLike");
 /**
@@ -14,9 +15,9 @@ function collectionKeys(iterable) {
     if (Array.isArray(iterable) || isKeyed_1.default(iterable)) {
         return Array.from(iterable.keys());
     }
-    if (isObjectLike_1.default(iterable) === false) {
+    if (isObjectLike_1.checkIsObjectLike(iterable) === false) {
         return [];
     }
     return Object.keys(iterable);
 }
-exports.default = collectionKeys;
+exports.collectionKeys = collectionKeys;

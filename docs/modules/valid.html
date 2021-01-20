@@ -4,10 +4,9 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>valid | @corefunc/corefunc</title>
-	<meta name="description" content="Documentation for @corefunc/corefunc">
+	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
-	<script async src="../assets/js/search.js" id="search-script"></script>
 </head>
 <body>
 <header>
@@ -22,6 +21,8 @@
 					<ul class="results">
 						<li class="state loading">Preparing search index...</li>
 						<li class="state failure">The search index is not available</li>
+					</ul>
+					<ul class="results-priority" style="display:none">
 					</ul>
 					<a href="../index.html" class="title">@corefunc/corefunc</a>
 				</div>
@@ -41,6 +42,8 @@
 							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
 							<input type="checkbox" id="tsd-filter-externals" checked />
 							<label class="tsd-widget" for="tsd-filter-externals">Externals</label>
+							<input type="checkbox" id="tsd-filter-only-exported" />
+							<label class="tsd-widget" for="tsd-filter-only-exported">Only exported</label>
 						</div>
 					</div>
 					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
@@ -52,21 +55,50 @@
 		<div class="container">
 			<ul class="tsd-breadcrumb">
 				<li>
-					<a href="../modules.html">@corefunc/corefunc</a>
-				</li>
-				<li>
 					<a href="valid.html">valid</a>
 				</li>
 			</ul>
-			<h1>Module valid</h1>
 		</div>
 	</div>
 </header>
 <div class="container container-main">
 	<div class="row">
-		<div class="col-8 col-content">
+		<div class="col-3 col-menu menu-sticky-wrap menu-highlight">
+			<nav class="tsd-navigation primary">
+				<ul>
+					<li class=" ">
+						<a href="../modules.html">Modules</a>
+					</li>
+					<li class="label tsd-is-external">
+						<span>Externals</span>
+					</li>
+					<li class=" tsd-kind-module tsd-is-external">
+						<a href="array.html">array</a>
+					</li>
+					<li class=" tsd-kind-module tsd-is-external">
+						<a href="check.html">check</a>
+					</li>
+					<li class=" tsd-kind-module tsd-is-external">
+						<a href="hash.html">hash</a>
+					</li>
+					<li class=" tsd-kind-module tsd-is-external">
+						<a href="prototype.html">prototype</a>
+					</li>
+					<li class=" tsd-kind-module tsd-is-external">
+						<a href="text.html">text</a>
+					</li>
+					<li class=" tsd-kind-module tsd-is-external">
+						<a href="v8.html">v8</a>
+					</li>
+					<li class="current tsd-kind-module tsd-is-external">
+						<a href="valid.html">valid</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+		<div class="col-7 offset-3 col-content">
+			<h1>Module valid</h1>
 			<section class="tsd-panel-group tsd-index-group">
-				<h2>Index</h2>
 				<section class="tsd-panel tsd-index-panel">
 					<div class="tsd-index-content">
 						<section class="tsd-index-section tsd-is-external">
@@ -92,7 +124,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/corefunc/corefunc/blob/91ebdc4/valid/isEmpty.ts#L3">valid/isEmpty.ts:3</a></li>
+									<li>Defined in valid/isEmpty.ts:3</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -115,21 +147,17 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/corefunc/corefunc/blob/91ebdc4/valid/isObjectId.ts#L8">valid/isObjectId.ts:8</a></li>
+									<li>Defined in valid/isObjectId.ts:8</li>
 								</ul>
 							</aside>
-							<div class="tsd-comment tsd-typography">
-								<dl class="tsd-comment-tags">
-									<dt>name</dt>
+							<div class="tsd-comment tsd-typography tsd-comment-tags">
+								<dl class="tsd-comment-tags"><dt>name</dt>
 									<dd><p>isObjectId</p>
-									</dd>
-									<dt>description</dt>
+									</dd><dt>description</dt>
 									<dd><p>Check is value ObjectId</p>
-									</dd>
-									<dt>since</dt>
+									</dd><dt>since</dt>
 									<dd><p>0.0.94</p>
-									</dd>
-								</dl>
+								</dd></dl>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
@@ -151,24 +179,19 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/corefunc/corefunc/blob/91ebdc4/valid/isUUID.ts#L9">valid/isUUID.ts:9</a></li>
+									<li>Defined in valid/isUUID.ts:9</li>
 								</ul>
 							</aside>
-							<div class="tsd-comment tsd-typography">
-								<dl class="tsd-comment-tags">
-									<dt>name</dt>
+							<div class="tsd-comment tsd-typography tsd-comment-tags">
+								<dl class="tsd-comment-tags"><dt>name</dt>
 									<dd><p>isUUID</p>
-									</dd>
-									<dt>description</dt>
+									</dd><dt>description</dt>
 									<dd><p>Check is value UUID</p>
-									</dd>
-									<dt>since</dt>
+									</dd><dt>since</dt>
 									<dd><p>0.0.94</p>
-									</dd>
-									<dt>see</dt>
+									</dd><dt>see</dt>
 									<dd><p><a href="https://stackoverflow.com/questions/7905929/how-to-test-valid-uuid-guid">https://stackoverflow.com/questions/7905929/how-to-test-valid-uuid-guid</a></p>
-									</dd>
-								</dl>
+								</dd></dl>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
@@ -181,45 +204,18 @@
 					</ul>
 				</section>
 			</section>
+			<!--{&quot;options&quot;:&quot;typedoc.json&quot;,&quot;tsconfig&quot;:&quot;D:\\git\\corefunc\\corefunc&quot;,&quot;entryPoints&quot;:[&quot;./array/index.ts&quot;,&quot;./check/index.ts&quot;,&quot;./hash/index.ts&quot;,&quot;./prototype/index.ts&quot;,&quot;./text/index.ts&quot;,&quot;./v8/index.ts&quot;,&quot;./valid/index.ts&quot;],&quot;exclude&quot;:[&quot;**/*+(index|.spec|.e2e).ts&quot;],&quot;externalPattern&quot;:[&quot;./**/*.ts&quot;],&quot;excludeExternals&quot;:false,&quot;excludeNotDocumented&quot;:false,&quot;excludeInternal&quot;:false,&quot;excludePrivate&quot;:false,&quot;excludeProtected&quot;:false,&quot;disableSources&quot;:false,&quot;includes&quot;:&quot;&quot;,&quot;media&quot;:&quot;./.github/assets&quot;,&quot;out&quot;:&quot;docs&quot;,&quot;json&quot;:&quot;&quot;,&quot;theme&quot;:&quot;./node_modules/typedoc-neo-theme/bin/default&quot;,&quot;name&quot;:&quot;&quot;,&quot;includeVersion&quot;:false,&quot;excludeTags&quot;:[],&quot;readme&quot;:&quot;&quot;,&quot;defaultCategory&quot;:&quot;Other&quot;,&quot;categoryOrder&quot;:[],&quot;categorizeByGroup&quot;:true,&quot;gitRevision&quot;:&quot;&quot;,&quot;gitRemote&quot;:&quot;origin&quot;,&quot;gaID&quot;:&quot;&quot;,&quot;gaSite&quot;:&quot;auto&quot;,&quot;hideGenerator&quot;:false,&quot;toc&quot;:[],&quot;disableOutputCheck&quot;:false,&quot;help&quot;:false,&quot;version&quot;:false,&quot;showConfig&quot;:false,&quot;plugin&quot;:[],&quot;logger&quot;:&quot;console&quot;,&quot;logLevel&quot;:1,&quot;listInvalidSymbolLinks&quot;:false}-->
 		</div>
-		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
-			<nav class="tsd-navigation primary">
-				<ul>
-					<li class=" ">
-						<a href="../modules.html">Modules</a>
-					</li>
-					<li class="label tsd-is-external">
-						<span>Externals</span>
-					</li>
-					<li class=" tsd-kind-module tsd-is-external">
-						<a href="array.html">array</a>
-					</li>
-					<li class=" tsd-kind-module tsd-is-external">
-						<a href="hash.html">hash</a>
-					</li>
-					<li class=" tsd-kind-module tsd-is-external">
-						<a href="prototype.html">prototype</a>
-					</li>
-					<li class=" tsd-kind-module tsd-is-external">
-						<a href="text.html">text</a>
-					</li>
-					<li class=" tsd-kind-module tsd-is-external">
-						<a href="v8.html">v8</a>
-					</li>
-					<li class="current tsd-kind-module tsd-is-external">
-						<a href="valid.html">valid</a>
-					</li>
-				</ul>
-			</nav>
+		<div class="col-2 col-menu secondary-menu">
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
-					<li class=" tsd-kind-function tsd-parent-kind-module tsd-is-external">
+					<li class=" tsd-kind-function tsd-parent-kind-module tsd-is-external root">
 						<a href="valid.html#isempty" class="tsd-kind-icon">is<wbr>Empty</a>
 					</li>
-					<li class=" tsd-kind-function tsd-parent-kind-module tsd-is-external">
+					<li class=" tsd-kind-function tsd-parent-kind-module tsd-is-external root">
 						<a href="valid.html#isobjectid" class="tsd-kind-icon">is<wbr>Object<wbr>Id</a>
 					</li>
-					<li class=" tsd-kind-function tsd-parent-kind-module tsd-is-external">
+					<li class=" tsd-kind-function tsd-parent-kind-module tsd-is-external root">
 						<a href="valid.html#isuuid" class="tsd-kind-icon">isUUID</a>
 					</li>
 				</ul>
@@ -228,14 +224,9 @@
 	</div>
 </div>
 <footer class="with-border-bottom">
-	<div class="container">
-		<h2>Legend</h2>
-		<div class="tsd-legend-group">
-		</div>
-	</div>
 </footer>
 <div class="container tsd-generator">
-	<p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p>
+	<p>Generated using <a href="http://typedoc.org/" target="_blank">TypeDoc</a></p>
 </div>
 <div class="overlay"></div>
 <script src="../assets/js/main.js"></script>

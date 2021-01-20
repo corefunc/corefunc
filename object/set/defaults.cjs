@@ -1,5 +1,7 @@
-import checkIsObjectLike from "../../check/isObjectLike.mjs";
-
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.objectSetDefaults = void 0;
+const isObjectLike_1 = require("../../check/isObjectLike.cjs");
 /**
  * @name objectSetDefaults
  * @param {Object} destination
@@ -10,11 +12,11 @@ import checkIsObjectLike from "../../check/isObjectLike.mjs";
  * @example objectSetDefaults({ val: null }, { val: true }) // { val: null }
  * @example objectSetDefaults({ val: "text" }, { val: true }) // { val: "text" }
  */
-module.exports = function objectSetDefaults(destination, source) {
-  if (!checkIsObjectLike(destination)) {
+function objectSetDefaults(destination, source) {
+  if (!isObjectLike_1.checkIsObjectLike(destination)) {
     return objectSetDefaults({}, source);
   }
-  if (!checkIsObjectLike(source)) {
+  if (!isObjectLike_1.checkIsObjectLike(source)) {
     return objectSetDefaults(destination, {});
   }
   const obj = Object.assign(Object.create(Object.getPrototypeOf(destination)), source);
@@ -26,11 +28,12 @@ module.exports = function objectSetDefaults(destination, source) {
     if (val === undefined) {
       return;
     }
-    if (checkIsObjectLike(val) && checkIsObjectLike(obj[key])) {
+    if (isObjectLike_1.checkIsObjectLike(val) && isObjectLike_1.checkIsObjectLike(obj[key])) {
       obj[key] = objectSetDefaults(val, obj[key]);
     } else {
       obj[key] = val;
     }
   });
   return obj;
-};
+}
+exports.objectSetDefaults = objectSetDefaults;

@@ -1,4 +1,4 @@
-import checkIsTraversable from "../../check/isTraversable";
+import { checkIsTraversable } from "../../check/isTraversable";
 import collectionForEach from "../../collection/forEach";
 import { jsonParseSafe } from "./safe";
 

@@ -6,8 +6,10 @@ const first_1 = require("../key/first");
  * @name arrayGetHead
  * @param {Array} array
  * @param {*} onFail
- * @returns {null|*}
- * @example arrayGetHead([,,"🍌","🍏","🍊"]) ⇨ "🍌"
+ * @returns {*}
+ * @example ```arrayGetHead([,,"🍌","🍏","🍊"]) ➜ "🍌"```
+ * @template T Type of array
+ * @template E Type of default value
  */
 function arrayGetHead(array, onFail) {
     if (!Array.isArray(array)) {

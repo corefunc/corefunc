@@ -1,12 +1,12 @@
 import checkIsKeyed from "../check/isKeyed.mjs";
-import checkIsObjectLike from "../check/isObjectLike.mjs";
+import { checkIsObjectLike } from "../check/isObjectLike.mjs";
 
 /**
  * Pick object property from list of names
  * @param {*} iterable
  * @returns {Array}
  */
-export default function collectionKeys(iterable) {
+export function collectionKeys(iterable) {
   if (!iterable) {
     return [];
   }

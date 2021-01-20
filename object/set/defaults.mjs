@@ -1,4 +1,4 @@
-import checkIsObjectLike from "../../check/isObjectLike.mjs";
+import { checkIsObjectLike } from "../../check/isObjectLike.mjs";
 
 /**
  * @name objectSetDefaults
@@ -10,7 +10,7 @@ import checkIsObjectLike from "../../check/isObjectLike.mjs";
  * @example objectSetDefaults({ val: null }, { val: true }) // { val: null }
  * @example objectSetDefaults({ val: "text" }, { val: true }) // { val: "text" }
  */
-export default function objectSetDefaults(destination, source) {
+export function objectSetDefaults(destination, source) {
   if (!checkIsObjectLike(destination)) {
     return objectSetDefaults({}, source);
   }

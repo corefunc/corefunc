@@ -1,6 +1,7 @@
 {
   "entryPoints": [
     "./array/index.ts",
+    "./check/index.ts",
     "./hash/index.ts",
     "./prototype/index.ts",
     "./text/index.ts",
@@ -10,5 +11,6 @@
   "exclude": ["**/*+(index|.spec|.e2e).ts"],
   "externalPattern": ["./**/*.ts"],
   "media": "./.github/assets",
-  "out": "docs"
+  "out": "docs",
+  "theme": "./node_modules/typedoc-neo-theme/bin/default"
 }

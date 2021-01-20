@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>v8 | @corefunc/corefunc</title>
+	<title>check | @corefunc/corefunc</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -55,7 +55,7 @@
 		<div class="container">
 			<ul class="tsd-breadcrumb">
 				<li>
-					<a href="v8.html">v8</a>
+					<a href="check.html">check</a>
 				</li>
 			</ul>
 		</div>
@@ -75,7 +75,7 @@
 					<li class=" tsd-kind-module tsd-is-external">
 						<a href="array.html">array</a>
 					</li>
-					<li class=" tsd-kind-module tsd-is-external">
+					<li class="current tsd-kind-module tsd-is-external">
 						<a href="check.html">check</a>
 					</li>
 					<li class=" tsd-kind-module tsd-is-external">
@@ -87,7 +87,7 @@
 					<li class=" tsd-kind-module tsd-is-external">
 						<a href="text.html">text</a>
 					</li>
-					<li class="current tsd-kind-module tsd-is-external">
+					<li class=" tsd-kind-module tsd-is-external">
 						<a href="v8.html">v8</a>
 					</li>
 					<li class=" tsd-kind-module tsd-is-external">
@@ -97,14 +97,15 @@
 			</nav>
 		</div>
 		<div class="col-7 offset-3 col-content">
-			<h1>Module v8</h1>
+			<h1>Module check</h1>
 			<section class="tsd-panel-group tsd-index-group">
 				<section class="tsd-panel tsd-index-panel">
 					<div class="tsd-index-content">
 						<section class="tsd-index-section tsd-is-external">
 							<h3>Functions</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter tsd-is-external"><a href="v8.html#v8clone" class="tsd-kind-icon">v8<wbr>Clone</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module tsd-is-external"><a href="check.html#checkisobjectlike" class="tsd-kind-icon">check<wbr>IsObject<wbr>Like</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module tsd-is-external"><a href="check.html#checkistraversable" class="tsd-kind-icon">check<wbr>IsTraversable</a></li>
 							</ul>
 						</section>
 					</div>
@@ -112,37 +113,83 @@
 			</section>
 			<section class="tsd-panel-group tsd-member-group tsd-is-external">
 				<h2>Functions</h2>
-				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter tsd-is-external">
-					<a name="v8clone" class="tsd-anchor"></a>
-					<h3>v8<wbr>Clone</h3>
-					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">v8<wbr>Clone&lt;T&gt;<span class="tsd-signature-symbol">(</span>obj<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span></li>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module tsd-is-external">
+					<a name="checkisobjectlike" class="tsd-anchor"></a>
+					<h3>check<wbr>IsObject<wbr>Like</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module tsd-is-external">
+						<li class="tsd-signature tsd-kind-icon">check<wbr>IsObject<wbr>Like<span class="tsd-signature-symbol">(</span>value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in v8/clone.ts:8</li>
+									<li>Defined in check/isObjectLike.ts:13</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography tsd-comment-tags">
 								<dl class="tsd-comment-tags"><dt>name</dt>
-									<dd><p>v8Clone</p>
+									<dd><p>checkIsObjectLike</p>
+									</dd><dt>description</dt>
+									<dd><p>Checks if <code>value</code> is object-like. A value is object-like if it&#39;s not <code>null</code>
+										and has a <code>typeof</code> result of &quot;object&quot;.</p>
+									</dd><dt>example</dt>
+									<dd><p>isObjectLike({}); ➜ true</p>
+									</dd><dt>example</dt>
+									<dd><p>isObjectLike([1, 2, 3]); ➜ true</p>
+									</dd><dt>example</dt>
+									<dd><p>isObjectLike(() =&gt; {}); ➜ false</p>
+									</dd><dt>example</dt>
+									<dd><p>isObjectLike(null); ➜ false</p>
+									</dd><dt>since</dt>
+									<dd><p>0.0.1</p>
 								</dd></dl>
 							</div>
-							<h4 class="tsd-type-parameters-title">Type parameters</h4>
-							<ul class="tsd-type-parameters">
-								<li>
-									<h4>T</h4>
-								</li>
-							</ul>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>obj: <span class="tsd-signature-type">any</span></h5>
+									<h5>value: <span class="tsd-signature-type">any</span></h5>
+									<div class="tsd-comment tsd-typography tsd-comment-text">
+										<p>The value to check</p>
+									</div>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">T</span></h4>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+							<p>Returns <code>true</code> if <code>value</code> is object-like, else <code>false</code></p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module tsd-is-external">
+					<a name="checkistraversable" class="tsd-anchor"></a>
+					<h3>check<wbr>IsTraversable</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module tsd-is-external">
+						<li class="tsd-signature tsd-kind-icon">check<wbr>IsTraversable<span class="tsd-signature-symbol">(</span>value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in check/isTraversable.ts:11</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography tsd-comment-tags">
+								<dl class="tsd-comment-tags"><dt>name</dt>
+									<dd><p>checkIsTraversable</p>
+									</dd><dt>description</dt>
+									<dd><p>Checks if <code>value</code> is traversable</p>
+									</dd><dt>since</dt>
+									<dd><p>0.0.1</p>
+								</dd></dl>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>value: <span class="tsd-signature-type">any</span></h5>
+									<div class="tsd-comment tsd-typography tsd-comment-text">
+										<p>The value to check</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -152,8 +199,11 @@
 		<div class="col-2 col-menu secondary-menu">
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
-					<li class=" tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter tsd-is-external root">
-						<a href="v8.html#v8clone" class="tsd-kind-icon">v8<wbr>Clone</a>
+					<li class=" tsd-kind-function tsd-parent-kind-module tsd-is-external root">
+						<a href="check.html#checkisobjectlike" class="tsd-kind-icon">check<wbr>IsObject<wbr>Like</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module tsd-is-external root">
+						<a href="check.html#checkistraversable" class="tsd-kind-icon">check<wbr>IsTraversable</a>
 					</li>
 				</ul>
 			</nav>

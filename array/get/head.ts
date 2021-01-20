@@ -4,8 +4,10 @@ import arrayKeyFirst from "../key/first";
  * @name arrayGetHead
  * @param {Array} array
  * @param {*} onFail
- * @returns {null|*}
- * @example arrayGetHead([,,"🍌","🍏","🍊"]) ⇨ "🍌"
+ * @returns {*}
+ * @example ```arrayGetHead([,,"🍌","🍏","🍊"]) ➜ "🍌"```
+ * @template T Type of array
+ * @template E Type of default value
  */
 export function arrayGetHead<T, E>(array: T[], onFail?: E): T | E {
   if (!Array.isArray(array)) {

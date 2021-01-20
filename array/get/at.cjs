@@ -9,7 +9,7 @@ const isArrayLike = require("../../check/isArrayLike.cjs");
  * @param {Number} index
  * @param {*=} onFail
  * @returns {*}
- * @example arrayGetAt(["🍌", "🍏", "🍇", "🍊"], -2) ⇨ "🍇"
+ * @example arrayGetAt(["🍌", "🍏", "🍇", "🍊"], -2) ➜ "🍇"
  * @since 0.0.96
  */
 function arrayGetAt(array, index, onFail) {

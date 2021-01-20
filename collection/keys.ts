@@ -1,12 +1,12 @@
 import checkIsKeyed from "../check/isKeyed";
-import checkIsObjectLike from "../check/isObjectLike";
+import { checkIsObjectLike } from "../check/isObjectLike";
 
 /**
  * Pick object property from list of names
  * @param {*} iterable
  * @returns {Array}
  */
-export default function collectionKeys(iterable: any): any[] {
+export function collectionKeys(iterable: any): any[] {
   if (!iterable) {
     return [];
   }

@@ -5,7 +5,7 @@ import fnSortBy from "lodash-es/sortBy";
 
 import isMap from "../is/map";
 import isSet from "../is/set";
-import checkIsTraversable from "../check/isTraversable";
+import { checkIsTraversable } from "../check/isTraversable";
 
 /**
  * Gets the first element of traversable variable
@@ -22,7 +22,7 @@ import checkIsTraversable from "../check/isTraversable";
  * @example head(new Set([1, 2, 3])) ➜ 1
  * @example head(new Map([["b", 1], ["a", 2]]))  ➜ 2
  */
-function head(iterable, clone = true, defaultValue = undefined) {
+export function head(iterable, clone = true, defaultValue = undefined) {
   if (!iterable) {
     return defaultValue;
   }
@@ -71,5 +71,3 @@ function head(iterable, clone = true, defaultValue = undefined) {
     return iterable[keys[0]];
   }
 }
-
-export default head;

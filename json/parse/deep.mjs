@@ -1,4 +1,4 @@
-import checkIsTraversable from "../../check/isTraversable.mjs";
+import { checkIsTraversable } from "../../check/isTraversable.mjs";
 import collectionForEach from "../../collection/forEach.mjs";
 import { jsonParseSafe } from "./safe.mjs";
 

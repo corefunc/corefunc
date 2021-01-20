@@ -1,18 +1,19 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const checkIsObjectLike = require("../check/isObjectLike.cjs");
-const isMap = require("../is/map.cjs");
-const isSet = require("../is/set.cjs");
-const isWeakMap = require("../is/weakMap.cjs");
-const isWeakSet = require("../is/weakSet.cjs");
+exports.objectSetValue = void 0;
+const isObjectLike_1 = require("../check/isObjectLike.cjs");
+const map_1 = require("../is/map.cjs");
+const set_1 = require("../is/set.cjs");
+const weakMap_1 = require("../is/weakMap.cjs");
+const weakSet_1 = require("../is/weakSet.cjs");
 function objectSetValue(object, key, value) {
-  if (checkIsObjectLike(object) === false) {
+  if (isObjectLike_1.checkIsObjectLike(object) === false) {
     return object;
   }
-  if (isMap(object) || isWeakMap(object)) {
+  if (map_1.default(object) || weakMap_1.default(object)) {
     object.set(key, value);
   }
-  if (isSet(object) || isWeakSet(object)) {
+  if (set_1.default(object) || weakSet_1.default(object)) {
     if (arguments.length > 2) {
       object.add(value);
     } else {
@@ -23,4 +24,4 @@ function objectSetValue(object, key, value) {
   }
   return object;
 }
-exports.default = objectSetValue;
+exports.objectSetValue = objectSetValue;

@@ -1,4 +1,4 @@
-import checkIsObjectLike from "../check/isObjectLike.mjs";
+import { checkIsObjectLike } from "../check/isObjectLike.mjs";
 
 /**
  * Whether the object has the specified property
@@ -6,7 +6,7 @@ import checkIsObjectLike from "../check/isObjectLike.mjs";
  * @param propertyName
  * @return {Boolean}
  */
-function propertyHasOwn(object, propertyName) {
+export function propertyHasOwn(object, propertyName) {
   if (!object) {
     return false;
   }
@@ -15,5 +15,3 @@ function propertyHasOwn(object, propertyName) {
   }
   return Object.prototype.hasOwnProperty.call(object, `${propertyName}`);
 }
-
-export default propertyHasOwn;

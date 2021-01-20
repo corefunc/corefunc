@@ -6,7 +6,7 @@ exports.hashTextToNumber = void 0;
  * @description Hash text to number
  * @param {String} text Text to be hashed
  * @returns {Number}
- * @example hashTextToNumber("This is for you senpai 🍱") ⇨ 854818604
+ * @example hashTextToNumber("This is for you senpai 🍱") ➜ 854818604
  * @since 0.0.78
  */
 function hashTextToNumber(text) {

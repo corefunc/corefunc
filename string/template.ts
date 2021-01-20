@@ -1,12 +1,12 @@
 import castToString from "../cast/to/string";
 import collectionForEach from "../collection/forEach";
-import regexReplace from "../regex/replace";
+import { regexReplace } from "../regex/basic/replace";
 
 /**
  * Generate template with variables
  * @return {String}
  */
-export default function stringTemplate(
+export function stringTemplate(
   string: string = "",
   variables: object = {},
   start: string = "{",

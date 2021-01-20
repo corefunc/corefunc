@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.head = void 0;
 const cloneDeep_1 = require("lodash-es/cloneDeep");
 const head_1 = require("lodash-es/head");
 const keys_1 = require("lodash-es/keys");
@@ -26,7 +27,7 @@ function head(iterable, clone = true, defaultValue = undefined) {
     if (!iterable) {
         return defaultValue;
     }
-    if (!isTraversable_1.default(iterable)) {
+    if (!isTraversable_1.checkIsTraversable(iterable)) {
         return cloneDeep_1.default(defaultValue);
     }
     if (Array.isArray(iterable)) {
@@ -75,4 +76,4 @@ function head(iterable, clone = true, defaultValue = undefined) {
         return iterable[keys[0]];
     }
 }
-exports.default = head;
+exports.head = head;

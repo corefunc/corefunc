@@ -1,8 +1,8 @@
-import { arrayGetHead } from "../array/get/head.mjs";
-import castToString from "../cast/to/string.mjs";
-import checkIsTraversable from "../check/isTraversable.mjs";
-import collectionValues from "../collection/values.mjs";
-import isString from "../is/string.mjs";
+import { arrayGetHead } from "../../array/get/head";
+import castToString from "../../cast/to/string";
+import { checkIsTraversable } from "../../check/isTraversable";
+import collectionValues from "../../collection/values";
+import isString from "../../is/string";
 
 /**
  * Replace all occurrences of the search string with the replacement string
@@ -11,10 +11,14 @@ import isString from "../is/string.mjs";
  * @param {Array|String} replaceWith
  * @return {String}
  * @example regexReplace('target', 'search', 'replace');
- * @example regexReplace('target', ['search 1', 'searach 2'], 'replace');
- * @example regexReplace('target', ['search 1', 'searach 2'], ['replace 1', 'replace 2']);
+ * @example regexReplace('target', ['search 1', 'search 2'], 'replace');
+ * @example regexReplace('target', ['search 1', 'search 2'], ['replace 1', 'replace 2']);
  */
-export default function regexReplace(haystack, needle, replaceWith) {
+export function regexReplace(
+  haystack: string,
+  needle: string,
+  replaceWith: RegExp | RegExp[] | string | string[],
+): string {
   let sTarget = castToString(haystack);
   let sSearch;
   let sReplace;

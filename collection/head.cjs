@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.head = void 0;
 const cloneDeep_1 = require("lodash-es/cloneDeep");
 const head_1 = require("lodash-es/head");
 const keys_1 = require("lodash-es/keys");
@@ -26,7 +27,7 @@ function head(iterable, clone = true, defaultValue = undefined) {
   if (!iterable) {
     return defaultValue;
   }
-  if (!isTraversable_1.default(iterable)) {
+  if (!isTraversable_1.checkIsTraversable(iterable)) {
     return cloneDeep_1.default(defaultValue);
   }
   if (Array.isArray(iterable)) {
@@ -35,7 +36,8 @@ function head(iterable, clone = true, defaultValue = undefined) {
     }
     if (clone) {
       return cloneDeep_1.default(head_1.default(iterable));
-    } else {
+    }
+    else {
       return head_1.default(iterable);
     }
   }
@@ -46,7 +48,8 @@ function head(iterable, clone = true, defaultValue = undefined) {
     }
     if (clone) {
       return cloneDeep_1.default(head_1.default(values));
-    } else {
+    }
+    else {
       return head_1.default(values);
     }
   }
@@ -57,7 +60,8 @@ function head(iterable, clone = true, defaultValue = undefined) {
     }
     if (clone) {
       return cloneDeep_1.default(iterable.get(head_1.default(keys)));
-    } else {
+    }
+    else {
       return iterable.get(head_1.default(keys));
     }
   }
@@ -67,8 +71,9 @@ function head(iterable, clone = true, defaultValue = undefined) {
   }
   if (clone) {
     return cloneDeep_1.default(iterable[keys[0]]);
-  } else {
+  }
+  else {
     return iterable[keys[0]];
   }
 }
-exports.default = head;
+exports.head = head;

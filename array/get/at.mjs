@@ -7,7 +7,7 @@ import { isArrayLike } from "../../check/isArrayLike.mjs";
  * @param {Number} index
  * @param {*=} onFail
  * @returns {*}
- * @example arrayGetAt(["🍌", "🍏", "🍇", "🍊"], -2) ⇨ "🍇"
+ * @example arrayGetAt(["🍌", "🍏", "🍇", "🍊"], -2) ➜ "🍇"
  * @since 0.0.96
  */
 export function arrayGetAt(array, index, onFail) {

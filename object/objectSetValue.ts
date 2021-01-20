@@ -1,11 +1,11 @@
-import checkIsObjectLike from "../check/isObjectLike";
+import { checkIsObjectLike } from "../check/isObjectLike";
 
 import isMap from "../is/map";
 import isSet from "../is/set";
 import isWeakMap from "../is/weakMap";
 import isWeakSet from "../is/weakSet";
 
-export default function objectSetValue<O extends object | Map<any, any> | Set<any> | WeakSet<any> | WeakMap<any, any>>(
+export function objectSetValue<O extends object | Map<any, any> | Set<any> | WeakSet<any> | WeakMap<any, any>>(
   object: O,
   key: string,
   value: any,
