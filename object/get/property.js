@@ -1,12 +1,13 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.objectGetProperty = void 0;
 function objectGetProperty(object, key, defaultvalue) {
     if (key in object) {
         return object[key];
     }
     return defaultvalue;
 }
-exports.default = objectGetProperty;
+exports.objectGetProperty = objectGetProperty;
 // export default function objectGetExistingProperty<
 //   ObjectType extends object,
 //   KeyType extends keyof ObjectType | string,

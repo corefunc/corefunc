@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.objectGetKeys = void 0;
 /**
  * @name objectGetKeys
  * @param {Object} object
@@ -8,4 +9,4 @@ Object.defineProperty(exports, "__esModule", { value: true });
 function objectGetKeys(object) {
   return Object.keys(object).sort((alpha, beta) => alpha.localeCompare(beta));
 }
-exports.default = objectGetKeys;
+exports.objectGetKeys = objectGetKeys;

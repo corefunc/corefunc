@@ -9,6 +9,7 @@
     "./crypt/index.ts",
     "./fp/index.ts",
     "./hash/index.ts",
+    "./object/index.ts",
     "./prototype/index.ts",
     "./text/index.ts",
     "./v8/index.ts",

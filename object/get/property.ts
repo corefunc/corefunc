@@ -1,4 +1,4 @@
-export default function objectGetProperty(object: object, key: string, defaultvalue?: any): any {
+export function objectGetProperty(object: object, key: string, defaultvalue?: any): any {
   if (key in object) {
     return object[key];
   }
