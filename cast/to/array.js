@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const values_1 = require("../../collection/values");
+exports.castToArray = void 0;
+const values_1 = require("../../collection/values.js");
 /**
  * Creates a new Array instance from an array-like or iterable object
  * This has different behaviour from `Array.from`.
@@ -8,6 +9,6 @@ const values_1 = require("../../collection/values");
  * @returns {Array}
  */
 function castToArray(value) {
-    return values_1.default(value);
+  return values_1.collectionValues(value);
 }
-exports.default = castToArray;
+exports.castToArray = castToArray;

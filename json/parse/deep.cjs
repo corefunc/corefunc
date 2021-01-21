@@ -13,7 +13,7 @@ const safe_1 = require("./safe.cjs");
 function jsonParseDeep(text, defaultResult, reviver) {
   const parsed = safe_1.jsonParseSafe(text, defaultResult, true, true, reviver);
   if (isTraversable_1.checkIsTraversable(parsed)) {
-    forEach_1.default(parsed, (value, key) => {
+    forEach_1.collectionForEach(parsed, (value, key) => {
       parsed[key] = jsonParseDeep(value, value);
     });
   }

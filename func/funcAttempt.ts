@@ -1,4 +1,4 @@
-import collectionValues from "../collection/values";
+import { collectionValues } from "../collection/values";
 import isFunction from "../is/function";
 
 /**
@@ -8,7 +8,7 @@ import isFunction from "../is/function";
  * @param {Boolean=false} catchExceptions
  * @return {*}
  */
-export default function funcAttempt(callable, args = [], context = null, catchExceptions = false) {
+export function funcAttempt(callable, args = [], context = null, catchExceptions = false) {
   if (isFunction(callable) === false) {
     return undefined;
   }

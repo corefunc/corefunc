@@ -23,14 +23,14 @@ function regexReplace(haystack, needle, replaceWith) {
   if (string_2.default(needle)) {
     sSearch = needle;
   } else if (isTraversable_1.checkIsTraversable(needle)) {
-    sSearch = values_1.default(needle);
+    sSearch = values_1.collectionValues(needle);
   } else {
     sSearch = string_1.default(needle);
   }
   if (string_2.default(replaceWith)) {
     sReplace = replaceWith;
   } else if (isTraversable_1.checkIsTraversable(replaceWith)) {
-    sReplace = values_1.default(replaceWith);
+    sReplace = values_1.collectionValues(replaceWith);
   } else {
     sReplace = string_1.default(replaceWith);
   }

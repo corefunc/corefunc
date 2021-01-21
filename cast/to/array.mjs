@@ -6,6 +6,6 @@ import collectionValues from "../../collection/values.mjs";
  * @param {*} value
  * @return {Array}
  */
-export default function castToArray(value) {
+export function castToArray(value) {
   return collectionValues(value);
 }

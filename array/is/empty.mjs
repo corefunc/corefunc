@@ -3,6 +3,6 @@
  * @param {Array} array
  * @returns {boolean}
  */
-export default function arrayIsEmpty(array) {
+export function arrayIsEmpty(array) {
   return array.length === 0;
 }

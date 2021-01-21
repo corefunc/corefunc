@@ -12,7 +12,7 @@ function stringTemplate(string = "", variables = {}, start = "{", end = "}") {
   let strTemplate = string_1.default(string);
   const strStart = string_1.default(start);
   const strEnd = string_1.default(end);
-  forEach_1.default(variables, (textToReplace, variableName) => {
+  forEach_1.collectionForEach(variables, (textToReplace, variableName) => {
     strTemplate = replace_1.regexReplace(strTemplate, strStart + variableName + strEnd, textToReplace);
   });
   return strTemplate;

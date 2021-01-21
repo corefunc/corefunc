@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.head = void 0;
+exports.collectionHead = void 0;
 const cloneDeep_1 = require("lodash-es/cloneDeep");
 const head_1 = require("lodash-es/head");
 const keys_1 = require("lodash-es/keys");
@@ -23,7 +23,7 @@ const isTraversable_1 = require("../check/isTraversable");
  * @example head(new Set([1, 2, 3])) ➜ 1
  * @example head(new Map([["b", 1], ["a", 2]]))  ➜ 2
  */
-function head(iterable, clone = true, defaultValue = undefined) {
+function collectionHead(iterable, clone = true, defaultValue = undefined) {
     if (!iterable) {
         return defaultValue;
     }
@@ -76,4 +76,4 @@ function head(iterable, clone = true, defaultValue = undefined) {
         return iterable[keys[0]];
     }
 }
-exports.head = head;
+exports.collectionHead = collectionHead;

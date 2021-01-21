@@ -22,7 +22,7 @@ import { checkIsTraversable } from "../check/isTraversable.mjs";
  * @example head(new Set([1, 2, 3])) ➜ 1
  * @example head(new Map([["b", 1], ["a", 2]]))  ➜ 2
  */
-export function head(iterable, clone = true, defaultValue = undefined) {
+export function collectionHead(iterable, clone = true, defaultValue = undefined) {
   if (!iterable) {
     return defaultValue;
   }

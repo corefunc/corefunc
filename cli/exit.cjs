@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.cliExit = void 0;
 /**
  * @param {boolean|number} code
  */
-module.exports = function cliExit(code = 0) {
+function cliExit(code = 0) {
   if (code === false) {
     return;
   }
@@ -16,8 +19,10 @@ module.exports = function cliExit(code = 0) {
     return;
   }
   try {
+    // @ts-ignore
     process.exit(exitCode);
   } catch (error) {
     //
   }
-};
+}
+exports.cliExit = cliExit;

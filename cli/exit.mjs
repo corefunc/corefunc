@@ -1,7 +1,7 @@
 /**
  * @param {boolean|number} code
  */
-export default function cliExit(code = 0) {
+export function cliExit(code = 0) {
   if (code === false) {
     return;
   }

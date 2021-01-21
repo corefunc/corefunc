@@ -19,7 +19,7 @@
  *   console.groupEnd();
  * });
  */
-export default function collectionForEach(iterable: any, iteratee: (value: any, index: any, collection: any) => any) {
+export function collectionForEach(iterable: any, iteratee: (value: any, index: any, collection: any) => any) {
   if (!iterable) {
     return iterable;
   }

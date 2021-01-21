@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.collectionValues = void 0;
 /**
  * @param {Array|Map|object|Set|WeakMap|WeakSet} iterable
  * @returns {Array}
@@ -19,4 +20,4 @@ function collectionValues(iterable) {
     }
     return Object.values(iterable);
 }
-exports.default = collectionValues;
+exports.collectionValues = collectionValues;

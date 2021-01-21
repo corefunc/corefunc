@@ -1,3 +1,6 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.collectionForEach = void 0;
 /**
  * @param {Arguments|Array|Map|Object|Set} iterable
  * @param {Function} iteratee
@@ -19,7 +22,7 @@
  *   console.groupEnd();
  * });
  */
-module.exports = function collectionForEach(iterable, iteratee) {
+function collectionForEach(iterable, iteratee) {
   if (!iterable) {
     return iterable;
   }
@@ -35,4 +38,5 @@ module.exports = function collectionForEach(iterable, iteratee) {
     Array.from(iterable).forEach(iteratee);
   }
   return iterable;
-};
+}
+exports.collectionForEach = collectionForEach;

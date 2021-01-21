@@ -1,4 +1,4 @@
-export default function cliClear(): void {
+export function cliClear(): void {
   if ("clear" in console) {
     try {
       // eslint-disable-next-line no-console

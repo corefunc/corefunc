@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.head = void 0;
+exports.collectionHead = void 0;
 const cloneDeep_1 = require("lodash-es/cloneDeep");
 const head_1 = require("lodash-es/head");
 const keys_1 = require("lodash-es/keys");
@@ -23,7 +23,7 @@ const isTraversable_1 = require("../check/isTraversable.cjs");
  * @example head(new Set([1, 2, 3])) ➜ 1
  * @example head(new Map([["b", 1], ["a", 2]]))  ➜ 2
  */
-function head(iterable, clone = true, defaultValue = undefined) {
+function collectionHead(iterable, clone = true, defaultValue = undefined) {
   if (!iterable) {
     return defaultValue;
   }
@@ -36,8 +36,7 @@ function head(iterable, clone = true, defaultValue = undefined) {
     }
     if (clone) {
       return cloneDeep_1.default(head_1.default(iterable));
-    }
-    else {
+    } else {
       return head_1.default(iterable);
     }
   }
@@ -48,8 +47,7 @@ function head(iterable, clone = true, defaultValue = undefined) {
     }
     if (clone) {
       return cloneDeep_1.default(head_1.default(values));
-    }
-    else {
+    } else {
       return head_1.default(values);
     }
   }
@@ -60,8 +58,7 @@ function head(iterable, clone = true, defaultValue = undefined) {
     }
     if (clone) {
       return cloneDeep_1.default(iterable.get(head_1.default(keys)));
-    }
-    else {
+    } else {
       return iterable.get(head_1.default(keys));
     }
   }
@@ -71,9 +68,8 @@ function head(iterable, clone = true, defaultValue = undefined) {
   }
   if (clone) {
     return cloneDeep_1.default(iterable[keys[0]]);
-  }
-  else {
+  } else {
     return iterable[keys[0]];
   }
 }
-exports.head = head;
+exports.collectionHead = collectionHead;

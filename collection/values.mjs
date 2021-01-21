@@ -2,7 +2,7 @@
  * @param {Array|Map|object|Set|WeakMap|WeakSet} iterable
  * @returns {Array}
  */
-export default function collectionValues(iterable) {
+export function collectionValues(iterable) {
   if (!iterable || Object(iterable) !== iterable) {
     return [];
   }

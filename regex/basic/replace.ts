@@ -1,7 +1,7 @@
 import { arrayGetHead } from "../../array/get/head";
 import castToString from "../../cast/to/string";
 import { checkIsTraversable } from "../../check/isTraversable";
-import collectionValues from "../../collection/values";
+import { collectionValues } from "../../collection/values";
 import isString from "../../is/string";
 
 /**
