@@ -6,6 +6,6 @@ exports.isMap = void 0;
  * @return {boolean}
  */
 function isMap(value) {
-  return value instanceof Map;
+    return value instanceof Map;
 }
 exports.isMap = isMap;

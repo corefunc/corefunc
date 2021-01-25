@@ -8,13 +8,13 @@ exports.functionName = void 0;
  * @return {string}
  */
 function functionName(func) {
-  if (func.name) {
-    return func.name;
-  }
-  const result = /^function\s+([\w]+)\s*\(/.exec(func.toString());
-  if (result) {
-    return result.shift();
-  }
-  return "";
+    if (func.name) {
+        return func.name;
+    }
+    const result = /^function\s+([\w]+)\s*\(/.exec(func.toString());
+    if (result) {
+        return result.shift();
+    }
+    return "";
 }
 exports.functionName = functionName;

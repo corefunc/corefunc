@@ -6,6 +6,6 @@ exports.isWeakSet = void 0;
  * @return {boolean}
  */
 function isWeakSet(value) {
-  return value instanceof WeakSet;
+    return value instanceof WeakSet;
 }
 exports.isWeakSet = isWeakSet;

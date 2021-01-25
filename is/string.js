@@ -6,6 +6,6 @@ exports.isString = void 0;
  * @returns {boolean}
  */
 function isString(value) {
-  return typeof value === "string";
+    return typeof value === "string";
 }
 exports.isString = isString;

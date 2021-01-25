@@ -9,6 +9,7 @@
     "./convert/index.ts",
     "./crypt/index.ts",
     "./fp/index.ts",
+    "./func/index.ts",
     "./hash/index.ts",
     "./is/index.ts",
     "./object/index.ts",

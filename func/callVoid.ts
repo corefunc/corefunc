@@ -1,4 +1,4 @@
-export default function funcCallVoid(callback: Function, args?: any[]) {
+export function funcCallVoid(callback: Function, args?: any[]) {
   if (!callback) {
     return;
   }

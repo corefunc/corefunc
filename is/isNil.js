@@ -8,6 +8,6 @@ exports.isNil = void 0;
  * @returns {Boolean}
  */
 function isNil(value) {
-  return value === null || value === undefined;
+    return value === null || value === undefined;
 }
 exports.isNil = isNil;

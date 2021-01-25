@@ -4,7 +4,7 @@
  * @param {Function} func
  * @returns {Function}
  */
-export default function functionCached<F extends (...args: Array<boolean | null | number | string>) => unknown>(
+export function functionCached<F extends (...args: Array<boolean | null | number | string>) => unknown>(
   func: F,
 ): F {
   const cache = Object.create(null);

@@ -1,3 +1,3 @@
-export default function functionCall(functionToCall, ...args) {
+export function functionCall(functionToCall, ...args) {
   return functionToCall(...args);
 }

@@ -6,6 +6,6 @@ exports.isWeakMap = void 0;
  * @return {boolean}
  */
 function isWeakMap(value) {
-  return value instanceof WeakMap;
+    return value instanceof WeakMap;
 }
 exports.isWeakMap = isWeakMap;

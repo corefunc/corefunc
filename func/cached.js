@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.functionCached = void 0;
 /**
  * @name functionCached
  * @description Create a cached version of a pure function. Function arguments must be primitives.
@@ -17,4 +18,4 @@ function functionCached(func) {
         return cache[key];
     };
 }
-exports.default = functionCached;
+exports.functionCached = functionCached;

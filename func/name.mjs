@@ -4,7 +4,7 @@
  * @param {Function} func
  * @return {string}
  */
-export default function functionName(func) {
+export function functionName(func) {
   if (func.name) {
     return func.name;
   }

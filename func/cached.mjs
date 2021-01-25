@@ -4,7 +4,7 @@
  * @param {Function} func
  * @returns {Function}
  */
-export default function functionCached(func) {
+export function functionCached(func) {
   const cache = Object.create(null);
   return function cachedFunction(...keys) {
     const key = JSON.stringify(keys);

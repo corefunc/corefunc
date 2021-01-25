@@ -6,6 +6,6 @@ exports.isSet = void 0;
  * @return {boolean}
  */
 function isSet(value) {
-  return value instanceof Set;
+    return value instanceof Set;
 }
 exports.isSet = isSet;
