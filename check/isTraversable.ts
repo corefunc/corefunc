@@ -1,4 +1,4 @@
-import checkIsIterable from "./isIterable";
+import { checkIsIterable } from "./isIterable";
 import { checkIsObjectLike } from "./isObjectLike";
 
 /**

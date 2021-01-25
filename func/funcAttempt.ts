@@ -1,5 +1,5 @@
 import { collectionValues } from "../collection/values";
-import isFunction from "../is/function";
+import { isFunction } from "../is/function";
 
 /**
  * @param {Function} callable

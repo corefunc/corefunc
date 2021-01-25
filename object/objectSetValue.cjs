@@ -10,10 +10,10 @@ function objectSetValue(object, key, value) {
   if (isObjectLike_1.checkIsObjectLike(object) === false) {
     return object;
   }
-  if (map_1.default(object) || weakMap_1.default(object)) {
+  if (map_1.isMap(object) || weakMap_1.isWeakMap(object)) {
     object.set(key, value);
   }
-  if (set_1.default(object) || weakSet_1.default(object)) {
+  if (set_1.isSet(object) || weakSet_1.isWeakSet(object)) {
     if (arguments.length > 2) {
       object.add(value);
     } else {

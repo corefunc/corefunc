@@ -2,7 +2,7 @@ import { arrayGetHead } from "../../array/get/head";
 import { castToString } from "../../cast/to/string";
 import { checkIsTraversable } from "../../check/isTraversable";
 import { collectionValues } from "../../collection/values";
-import isString from "../../is/string";
+import { isString } from "../../is/string";
 
 /**
  * Replace all occurrences of the search string with the replacement string

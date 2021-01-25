@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.isRegExp = void 0;
 /**
  * @param {*} value
  * @returns {boolean}
@@ -7,4 +8,4 @@ Object.defineProperty(exports, "__esModule", { value: true });
 function isRegExp(value) {
   return value instanceof RegExp;
 }
-exports.default = isRegExp;
+exports.isRegExp = isRegExp;

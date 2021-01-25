@@ -2,6 +2,6 @@
  * @param {*} value
  * @return {boolean}
  */
-export default function isWeakMap(value) {
+export function isWeakMap(value) {
   return value instanceof WeakMap;
 }

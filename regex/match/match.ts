@@ -1,4 +1,4 @@
-import isString from "../../is/string";
+import { isString } from "../../is/string";
 import { castToRegExp } from "../../cast/to/regexp";
 import { castToString } from "../../cast/to/string";
 

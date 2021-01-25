@@ -2,6 +2,6 @@
  * @param {*} value
  * @return {boolean}
  */
-export default function isMap(value: any): boolean {
+export function isMap(value: any): boolean {
   return value instanceof Map;
 }

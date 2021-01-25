@@ -2,7 +2,7 @@
  * @param {*} value
  * @returns {boolean}
  */
-export default function isFunction(value: any): boolean {
+export function isFunction(value: any): boolean {
   if (Object.prototype.toString.call(value) !== "[object Function]") {
     return false;
   }

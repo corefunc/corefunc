@@ -1,6 +1,6 @@
-import isFunction from "../is/function";
+import { isFunction } from "../is/function";
 
-export default function checkIsCallable(value: any): boolean {
+export function checkIsCallable(value: any): boolean {
   if (!value) {
     return false;
   }

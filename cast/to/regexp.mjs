@@ -1,5 +1,5 @@
-import isRegExp from "../../is/regexp.mjs";
-import isString from "../../is/string.mjs";
+import { isRegExp } from "../../is/regexp.mjs";
+import { isString } from "../../is/string.mjs";
 
 /**
  * @param {Array|RegExp|string} pattern

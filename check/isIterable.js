@@ -1,8 +1,9 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const function_1 = require("../is/function");
+exports.checkIsIterable = void 0;
+const function_1 = require("../is/function.js");
 const iteratorSymbol_1 = require("../lang/iteratorSymbol");
 function checkIsIterable(object) {
-    return Boolean(object) && function_1.default(object[iteratorSymbol_1.default]);
+  return Boolean(object) && function_1.isFunction(object[iteratorSymbol_1.default]);
 }
-exports.default = checkIsIterable;
+exports.checkIsIterable = checkIsIterable;

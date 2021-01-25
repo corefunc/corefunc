@@ -12,7 +12,7 @@ const string_2 = require("../../cast/to/string.cjs");
  * @return {Boolean}
  */
 function regexMatch(string, pattern, onFail = false) {
-  if (string_1.default(string) === false) {
+  if (string_1.isString(string) === false) {
     return onFail;
   }
   const regexp = regexp_1.castToRegExp(pattern);

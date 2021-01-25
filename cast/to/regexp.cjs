@@ -8,17 +8,17 @@ const string_1 = require("../../is/string.cjs");
  * @returns {boolean|RegExp}
  */
 function castToRegExp(pattern) {
-  if (regexp_1.default(pattern)) {
+  if (regexp_1.isRegExp(pattern)) {
     return pattern;
   }
-  if (string_1.default(pattern)) {
+  if (string_1.isString(pattern)) {
     return new RegExp(pattern);
   }
   if (Array.isArray(pattern)) {
-    if (string_1.default(pattern[0]) === false) {
+    if (string_1.isString(pattern[0]) === false) {
       return false;
     }
-    if (string_1.default(pattern[1]) === true) {
+    if (string_1.isString(pattern[1]) === true) {
       return new RegExp(pattern[0], pattern[1]);
     }
     return new RegExp(pattern[0]);

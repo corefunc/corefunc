@@ -8,6 +8,6 @@ exports.isPromise = void 0;
  * @returns {boolean}
  */
 function isPromise(value) {
-    return value instanceof Promise;
+  return value instanceof Promise;
 }
 exports.isPromise = isPromise;

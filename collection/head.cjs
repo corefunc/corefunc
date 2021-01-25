@@ -40,7 +40,7 @@ function collectionHead(iterable, clone = true, defaultValue = undefined) {
       return head_1.default(iterable);
     }
   }
-  if (set_1.default(iterable)) {
+  if (set_1.isSet(iterable)) {
     const values = Array.from(iterable.values());
     if (values.length === 0) {
       return defaultValue;
@@ -51,7 +51,7 @@ function collectionHead(iterable, clone = true, defaultValue = undefined) {
       return head_1.default(values);
     }
   }
-  if (map_1.default(iterable)) {
+  if (map_1.isMap(iterable)) {
     const keys = sortBy_1.default(Array.from(iterable.keys()));
     if (keys.length === 0) {
       return defaultValue;

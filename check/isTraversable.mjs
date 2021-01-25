@@ -1,4 +1,4 @@
-import checkIsIterable from "./isIterable.mjs";
+import { checkIsIterable } from "./isIterable.mjs";
 import { checkIsObjectLike } from "./isObjectLike.mjs";
 
 /**

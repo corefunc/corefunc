@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.isWeakMap = void 0;
 /**
  * @param {*} value
  * @return {boolean}
@@ -7,4 +8,4 @@ Object.defineProperty(exports, "__esModule", { value: true });
 function isWeakMap(value) {
   return value instanceof WeakMap;
 }
-exports.default = isWeakMap;
+exports.isWeakMap = isWeakMap;

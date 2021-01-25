@@ -1,6 +1,6 @@
-import isFunction from "../is/function.mjs";
+import { isFunction } from "../is/function.mjs";
 import iteratorSymbol from "../lang/iteratorSymbol.mjs";
 
-export default function checkIsIterable(object) {
+export function checkIsIterable(object) {
   return Boolean(object) && isFunction(object[iteratorSymbol]);
 }

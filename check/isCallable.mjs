@@ -1,6 +1,6 @@
-import isFunction from "../is/function.mjs";
+import { isFunction } from "../is/function.mjs";
 
-export default function checkIsCallable(value) {
+export function checkIsCallable(value) {
   if (!value) {
     return false;
   }

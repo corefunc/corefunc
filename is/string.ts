@@ -2,6 +2,6 @@
  * @param {*} value
  * @returns {boolean}
  */
-export default function isString(value: any): boolean {
+export function isString(value: any): boolean {
   return typeof value === "string";
 }

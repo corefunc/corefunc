@@ -11,7 +11,7 @@ const function_1 = require("../is/function.cjs");
  * @return {*}
  */
 function funcAttempt(callable, args = [], context = null, catchExceptions = false) {
-  if (function_1.default(callable) === false) {
+  if (function_1.isFunction(callable) === false) {
     return undefined;
   }
   if (catchExceptions) {

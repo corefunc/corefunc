@@ -1,6 +1,9 @@
-const isFunction = require("../is/function.cjs");
-const iteratorSymbol = require("../lang/iteratorSymbol.cjs");
-
-module.exports = function checkIsIterable(object) {
-  return Boolean(object) && isFunction(object[iteratorSymbol]);
-};
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.checkIsIterable = void 0;
+const function_1 = require("../is/function.cjs");
+const iteratorSymbol_1 = require("../lang/iteratorSymbol");
+function checkIsIterable(object) {
+  return Boolean(object) && function_1.isFunction(object[iteratorSymbol_1.default]);
+}
+exports.checkIsIterable = checkIsIterable;

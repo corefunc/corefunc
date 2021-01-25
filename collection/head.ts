@@ -3,8 +3,8 @@ import fnHead from "lodash-es/head";
 import fnKeys from "lodash-es/keys";
 import fnSortBy from "lodash-es/sortBy";
 
-import isMap from "../is/map";
-import isSet from "../is/set";
+import { isMap } from "../is/map";
+import { isSet } from "../is/set";
 import { checkIsTraversable } from "../check/isTraversable";
 
 /**

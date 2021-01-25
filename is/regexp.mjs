@@ -2,6 +2,6 @@
  * @param {*} value
  * @returns {boolean}
  */
-export default function isRegExp(value) {
+export function isRegExp(value) {
   return value instanceof RegExp;
 }

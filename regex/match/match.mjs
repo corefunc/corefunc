@@ -1,4 +1,4 @@
-import isString from "../../is/string.mjs";
+import { isString } from "../../is/string.mjs";
 import { castToRegExp } from "../../cast/to/regexp.mjs";
 import { castToString } from "../../cast/to/string.mjs";
 

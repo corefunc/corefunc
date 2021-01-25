@@ -1,17 +1,18 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const isFunction = require("../is/function.cjs");
+exports.checkIsCallable = void 0;
+const function_1 = require("../is/function.cjs");
 function checkIsCallable(value) {
   if (!value) {
     return false;
   }
-  if (isFunction(value)) {
+  if (function_1.isFunction(value)) {
     return true;
   }
-  if ("toFunction" in value && isFunction(value.toFunction) && isFunction(value.toFunction())) {
+  if ("toFunction" in value && function_1.isFunction(value.toFunction) && function_1.isFunction(value.toFunction())) {
     return true;
   }
   //
   return false;
 }
-exports.default = checkIsCallable;
+exports.checkIsCallable = checkIsCallable;

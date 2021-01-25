@@ -5,9 +5,9 @@ const cloneDeep_1 = require("lodash-es/cloneDeep");
 const head_1 = require("lodash-es/head");
 const keys_1 = require("lodash-es/keys");
 const sortBy_1 = require("lodash-es/sortBy");
-const map_1 = require("../is/map");
-const set_1 = require("../is/set");
-const isTraversable_1 = require("../check/isTraversable");
+const map_1 = require("../is/map.js");
+const set_1 = require("../is/set.js");
+const isTraversable_1 = require("../check/isTraversable.js");
 /**
  * Gets the first element of traversable variable
  * @param {Arguments|Array|Map|Object|Set|WeakMap|WeakSet} iterable
@@ -24,56 +24,52 @@ const isTraversable_1 = require("../check/isTraversable");
  * @example head(new Map([["b", 1], ["a", 2]]))  ➜ 2
  */
 function collectionHead(iterable, clone = true, defaultValue = undefined) {
-    if (!iterable) {
-        return defaultValue;
-    }
-    if (!isTraversable_1.checkIsTraversable(iterable)) {
-        return cloneDeep_1.default(defaultValue);
-    }
-    if (Array.isArray(iterable)) {
-        if (iterable.length === 0) {
-            return defaultValue;
-        }
-        if (clone) {
-            return cloneDeep_1.default(head_1.default(iterable));
-        }
-        else {
-            return head_1.default(iterable);
-        }
-    }
-    if (set_1.default(iterable)) {
-        const values = Array.from(iterable.values());
-        if (values.length === 0) {
-            return defaultValue;
-        }
-        if (clone) {
-            return cloneDeep_1.default(head_1.default(values));
-        }
-        else {
-            return head_1.default(values);
-        }
-    }
-    if (map_1.default(iterable)) {
-        const keys = sortBy_1.default(Array.from(iterable.keys()));
-        if (keys.length === 0) {
-            return defaultValue;
-        }
-        if (clone) {
-            return cloneDeep_1.default(iterable.get(head_1.default(keys)));
-        }
-        else {
-            return iterable.get(head_1.default(keys));
-        }
-    }
-    const keys = sortBy_1.default(keys_1.default(iterable));
-    if (keys.length === 0) {
-        return defaultValue;
+  if (!iterable) {
+    return defaultValue;
+  }
+  if (!isTraversable_1.checkIsTraversable(iterable)) {
+    return cloneDeep_1.default(defaultValue);
+  }
+  if (Array.isArray(iterable)) {
+    if (iterable.length === 0) {
+      return defaultValue;
     }
     if (clone) {
-        return cloneDeep_1.default(iterable[keys[0]]);
+      return cloneDeep_1.default(head_1.default(iterable));
+    } else {
+      return head_1.default(iterable);
     }
-    else {
-        return iterable[keys[0]];
+  }
+  if (set_1.isSet(iterable)) {
+    const values = Array.from(iterable.values());
+    if (values.length === 0) {
+      return defaultValue;
     }
+    if (clone) {
+      return cloneDeep_1.default(head_1.default(values));
+    } else {
+      return head_1.default(values);
+    }
+  }
+  if (map_1.isMap(iterable)) {
+    const keys = sortBy_1.default(Array.from(iterable.keys()));
+    if (keys.length === 0) {
+      return defaultValue;
+    }
+    if (clone) {
+      return cloneDeep_1.default(iterable.get(head_1.default(keys)));
+    } else {
+      return iterable.get(head_1.default(keys));
+    }
+  }
+  const keys = sortBy_1.default(keys_1.default(iterable));
+  if (keys.length === 0) {
+    return defaultValue;
+  }
+  if (clone) {
+    return cloneDeep_1.default(iterable[keys[0]]);
+  } else {
+    return iterable[keys[0]];
+  }
 }
 exports.collectionHead = collectionHead;

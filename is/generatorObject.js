@@ -6,6 +6,6 @@ exports.isGeneratorObject = void 0;
  * @returns {boolean}
  */
 function isGeneratorObject(value) {
-  return Object.prototype.toString.call(value) === "[object Generator]";
+    return Object.prototype.toString.call(value) === "[object Generator]";
 }
 exports.isGeneratorObject = isGeneratorObject;

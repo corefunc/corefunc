@@ -1,5 +1,5 @@
 import { collectionValues } from "../collection/values.mjs";
-import isFunction from "../is/function.mjs";
+import { isFunction } from "../is/function.mjs";
 
 /**
  * @param {Function} callable

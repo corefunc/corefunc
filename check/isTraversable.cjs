@@ -11,6 +11,8 @@ const isObjectLike_1 = require("./isObjectLike.cjs");
  * @since 0.0.1
  */
 function checkIsTraversable(value) {
-  return Boolean(Array.isArray(value) || isObjectLike_1.checkIsObjectLike(value) || isIterable_1.default(value));
+  return Boolean(
+    Array.isArray(value) || isObjectLike_1.checkIsObjectLike(value) || isIterable_1.checkIsIterable(value),
+  );
 }
 exports.checkIsTraversable = checkIsTraversable;

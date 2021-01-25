@@ -10,6 +10,7 @@
     "./crypt/index.ts",
     "./fp/index.ts",
     "./hash/index.ts",
+    "./is/index.ts",
     "./object/index.ts",
     "./prototype/index.ts",
     "./regex/index.ts",
