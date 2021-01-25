@@ -1,6 +1,6 @@
-import castToString from "../cast/to/string";
+import { castToString } from "../cast/to/string";
 
-export default function stringEscapeEscaped(text: string): string {
+export function stringEscapeEscaped(text: string): string {
   return castToString(text)
     .replace(/\\{3}/g, "")
     .replace(/\\{2}r/g, "")

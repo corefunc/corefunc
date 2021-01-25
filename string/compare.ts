@@ -1,4 +1,4 @@
-import castToString from "../cast/to/string";
+import { castToString } from "../cast/to/string";
 import stringClearReferences from "./clearReferences";
 
 /**
@@ -8,7 +8,7 @@ import stringClearReferences from "./clearReferences";
  * @param {boolean} isStrict
  * @returns {boolean}
  */
-export default function stringCompare(first: string, second: string, isStrict: boolean = false): boolean {
+export function stringCompare(first: string, second: string, isStrict: boolean = false): boolean {
   let stringOne = castToString(first).normalize();
   let stringTwo = castToString(second).normalize();
   if (stringOne.length !== stringTwo.length) {

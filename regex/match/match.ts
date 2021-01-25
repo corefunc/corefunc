@@ -1,6 +1,6 @@
-import isString from "../is/string";
-import toRegExp from "../cast/to/regexp";
-import toString from "../cast/to/string";
+import isString from "../../is/string";
+import { castToRegExp } from "../../cast/to/regexp";
+import { castToString } from "../../cast/to/string";
 
 /**
  * Executes a search for a match between a regular expression and a specified string.
@@ -9,7 +9,7 @@ import toString from "../cast/to/string";
  * @param {*=false} onFail
  * @return {Boolean}
  */
-export default function regexMatch(
+export function regexMatch(
   string: string,
   pattern: string | string[] | RegExp | RegExp[],
   onFail: boolean = false,
@@ -17,9 +17,9 @@ export default function regexMatch(
   if (isString(string) === false) {
     return onFail;
   }
-  const regexp = toRegExp(pattern);
+  const regexp = castToRegExp(pattern);
   if (regexp === false) {
     return onFail;
   }
-  return (regexp as RegExp).test(toString(string));
+  return (regexp as RegExp).test(castToString(string));
 }

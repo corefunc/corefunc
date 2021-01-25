@@ -5,7 +5,7 @@ import isString from "../../is/string";
  * @param {Array|RegExp|string} pattern
  * @returns {boolean|RegExp}
  */
-export default function castToRegExp(pattern): boolean | RegExp {
+export function castToRegExp(pattern): boolean | RegExp {
   if (isRegExp(pattern)) {
     return pattern;
   }

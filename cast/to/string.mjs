@@ -2,7 +2,7 @@
  * @param {*} value
  * @returns string
  */
-export default function castToString(value) {
+export function castToString(value) {
   if (value === null || value === undefined) {
     return "";
   }

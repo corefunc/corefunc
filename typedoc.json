@@ -2,6 +2,7 @@
   "categorizeByGroup": true,
   "entryPoints": [
     "./array/index.ts",
+    "./cast/index.ts",
     "./check/index.ts",
     "./cli/index.ts",
     "./collection/index.ts",
@@ -11,6 +12,8 @@
     "./hash/index.ts",
     "./object/index.ts",
     "./prototype/index.ts",
+    "./regex/index.ts",
+    "./string/index.ts",
     "./text/index.ts",
     "./v8/index.ts",
     "./valid/index.ts"

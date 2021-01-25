@@ -9,9 +9,9 @@ const replace_1 = require("../regex/basic/replace.cjs");
  * @return {String}
  */
 function stringTemplate(string = "", variables = {}, start = "{", end = "}") {
-  let strTemplate = string_1.default(string);
-  const strStart = string_1.default(start);
-  const strEnd = string_1.default(end);
+  let strTemplate = string_1.castToString(string);
+  const strStart = string_1.castToString(start);
+  const strEnd = string_1.castToString(end);
   forEach_1.collectionForEach(variables, (textToReplace, variableName) => {
     strTemplate = replace_1.regexReplace(strTemplate, strStart + variableName + strEnd, textToReplace);
   });

@@ -1,4 +1,4 @@
-import castToString from "../cast/to/string";
+import { castToString } from "../cast/to/string";
 import stringClearReferences from "./clearReferences";
 
 /**
@@ -8,7 +8,7 @@ import stringClearReferences from "./clearReferences";
  * @param {boolean=} isStrict
  * @returns {boolean}
  */
-export default function stringContains(haystack: string, needle: string, isStrict: boolean = false): boolean {
+export function stringContains(haystack: string, needle: string, isStrict: boolean = false): boolean {
   const strHaystack = castToString(haystack).normalize();
   const strNeedle = castToString(needle).normalize();
   if (isStrict) {

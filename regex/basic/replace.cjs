@@ -17,7 +17,7 @@ const string_2 = require("../../is/string.cjs");
  * @example regexReplace('target', ['search 1', 'search 2'], ['replace 1', 'replace 2']);
  */
 function regexReplace(haystack, needle, replaceWith) {
-  let sTarget = string_1.default(haystack);
+  let sTarget = string_1.castToString(haystack);
   let sSearch;
   let sReplace;
   if (string_2.default(needle)) {
@@ -25,28 +25,28 @@ function regexReplace(haystack, needle, replaceWith) {
   } else if (isTraversable_1.checkIsTraversable(needle)) {
     sSearch = values_1.collectionValues(needle);
   } else {
-    sSearch = string_1.default(needle);
+    sSearch = string_1.castToString(needle);
   }
   if (string_2.default(replaceWith)) {
     sReplace = replaceWith;
   } else if (isTraversable_1.checkIsTraversable(replaceWith)) {
     sReplace = values_1.collectionValues(replaceWith);
   } else {
-    sReplace = string_1.default(replaceWith);
+    sReplace = string_1.castToString(replaceWith);
   }
   if (string_2.default(sSearch) && string_2.default(sReplace)) {
     return sTarget.split(sSearch).join(sReplace);
   }
   if (string_2.default(sSearch)) {
-    return sTarget.split(sSearch).join(string_1.default(head_1.arrayGetHead(sReplace)));
+    return sTarget.split(sSearch).join(string_1.castToString(head_1.arrayGetHead(sReplace)));
   }
   if (string_2.default(sReplace)) {
     sSearch.forEach((srch) => {
-      sTarget = sTarget.split(string_1.default(srch)).join(sReplace);
+      sTarget = sTarget.split(string_1.castToString(srch)).join(sReplace);
     });
   }
   sSearch.forEach((srch, index) => {
-    sTarget = sTarget.split(string_1.default(srch)).join(string_1.default(sReplace[index]));
+    sTarget = sTarget.split(string_1.castToString(srch)).join(string_1.castToString(sReplace[index]));
   });
   return sTarget;
 }

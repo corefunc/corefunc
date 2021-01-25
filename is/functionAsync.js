@@ -8,6 +8,6 @@ exports.isFunctionAsync = void 0;
  * @returns {boolean}
  */
 function isFunctionAsync(value) {
-  return Object.prototype.toString.call(value) === "[object AsyncFunction]";
+    return Object.prototype.toString.call(value) === "[object AsyncFunction]";
 }
 exports.isFunctionAsync = isFunctionAsync;

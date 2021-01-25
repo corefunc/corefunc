@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.castToString = void 0;
 /**
  * @param {*} value
  * @returns string
@@ -17,4 +18,4 @@ function castToString(value) {
     }
     return result;
 }
-exports.default = castToString;
+exports.castToString = castToString;

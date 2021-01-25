@@ -1,8 +1,8 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.funcAttempt = void 0;
-const values_1 = require("../collection/values.js");
-const function_1 = require("../is/function.js");
+const values_1 = require("../collection/values");
+const function_1 = require("../is/function");
 /**
  * @param {Function} callable
  * @param {Array} args
@@ -11,18 +11,19 @@ const function_1 = require("../is/function.js");
  * @return {*}
  */
 function funcAttempt(callable, args = [], context = null, catchExceptions = false) {
-  if (function_1.default(callable) === false) {
-    return undefined;
-  }
-  if (catchExceptions) {
-    let returnValue;
-    try {
-      returnValue = callable.apply(context, values_1.collectionValues(args));
-    } catch (error) {
-      //
+    if (function_1.default(callable) === false) {
+        return undefined;
     }
-    return returnValue;
-  }
-  return callable.apply(context, values_1.collectionValues(args));
+    if (catchExceptions) {
+        let returnValue;
+        try {
+            returnValue = callable.apply(context, values_1.collectionValues(args));
+        }
+        catch (error) {
+            //
+        }
+        return returnValue;
+    }
+    return callable.apply(context, values_1.collectionValues(args));
 }
 exports.funcAttempt = funcAttempt;

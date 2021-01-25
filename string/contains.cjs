@@ -1,6 +1,8 @@
-const castToString = require("../cast/to/string.cjs");
-const stringClearReferences = require("./clearReferences.cjs");
-
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.stringContains = void 0;
+const string_1 = require("../cast/to/string.cjs");
+const clearReferences_1 = require("./clearReferences.cjs");
 /**
  * Perform search in string
  * @param {string} haystack
@@ -8,16 +10,17 @@ const stringClearReferences = require("./clearReferences.cjs");
  * @param {boolean=} isStrict
  * @returns {boolean}
  */
-module.exports = function stringContains(haystack, needle, isStrict = false) {
-  const strHaystack = castToString(haystack).normalize();
-  const strNeedle = castToString(needle).normalize();
+function stringContains(haystack, needle, isStrict = false) {
+  const strHaystack = string_1.castToString(haystack).normalize();
+  const strNeedle = string_1.castToString(needle).normalize();
   if (isStrict) {
-    stringClearReferences(strHaystack);
-    stringClearReferences(strNeedle);
+    clearReferences_1.default(strHaystack);
+    clearReferences_1.default(strNeedle);
     return haystack.includes(needle);
   }
   const contains = strHaystack.toLowerCase().includes(strNeedle.toLowerCase());
-  stringClearReferences(strHaystack);
-  stringClearReferences(strNeedle);
+  clearReferences_1.default(strHaystack);
+  clearReferences_1.default(strNeedle);
   return contains;
-};
+}
+exports.stringContains = stringContains;

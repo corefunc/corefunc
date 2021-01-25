@@ -1,6 +1,6 @@
-const isString = require("../is/string.cjs");
-const toRegExp = require("../cast/to/regexp.cjs");
-const toString = require("../cast/to/string.cjs");
+import isString from "../../is/string.mjs";
+import { castToRegExp } from "../../cast/to/regexp.mjs";
+import { castToString } from "../../cast/to/string.mjs";
 
 /**
  * Executes a search for a match between a regular expression and a specified string.
@@ -9,13 +9,13 @@ const toString = require("../cast/to/string.cjs");
  * @param {*=false} onFail
  * @return {Boolean}
  */
-module.exports = function regexMatch(string, pattern, onFail = false) {
+export function regexMatch(string, pattern, onFail) {
   if (isString(string) === false) {
     return onFail;
   }
-  const regexp = toRegExp(pattern);
+  const regexp = castToRegExp(pattern);
   if (regexp === false) {
     return onFail;
   }
-  return regexp.test(toString(string));
-};
+  return regexp.test(castToString(string));
+}

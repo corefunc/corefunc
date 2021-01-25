@@ -8,7 +8,7 @@ import stringClearReferences from "./clearReferences.mjs";
  * @param {boolean=} isStrict
  * @returns {boolean}
  */
-export default function stringContains(haystack, needle, isStrict = false) {
+export function stringContains(haystack, needle, isStrict = false) {
   const strHaystack = castToString(haystack).normalize();
   const strNeedle = castToString(needle).normalize();
   if (isStrict) {

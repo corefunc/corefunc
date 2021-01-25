@@ -1,7 +1,7 @@
-import castToString from "../cast/to/string";
+import { castToString } from "../cast/to/string";
 import numberRanged from "../number/ranged";
 import stringClearReferences from "./clearReferences";
-import stringCompare from "./compare";
+import { stringCompare } from "./compare";
 import stringSimilarity from "./similarity";
 
 /**
@@ -11,7 +11,7 @@ import stringSimilarity from "./similarity";
  * @param {Number} [minRating=0.85]
  * @returns {boolean}
  */
-export default function stringIsSimilar(alpha: string, beta: string, minRating = 0.85): boolean {
+export function stringIsSimilar(alpha: string, beta: string, minRating = 0.85): boolean {
   const strFirst = castToString(alpha).normalize();
   const strSecond = castToString(beta).normalize();
   if (stringCompare(strFirst, strSecond, false) === true) {

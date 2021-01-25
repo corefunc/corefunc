@@ -1,4 +1,4 @@
-import castToString from "../../cast/to/string.mjs";
+import { castToString } from "../../cast/to/string.mjs";
 
 /**
  * @param {String} text

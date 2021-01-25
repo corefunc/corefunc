@@ -5,7 +5,7 @@ import isString from "../../is/string.mjs";
  * @param {Array|RegExp|string} pattern
  * @returns {boolean|RegExp}
  */
-export default function castToRegExp(pattern) {
+export function castToRegExp(pattern) {
   if (isRegExp(pattern)) {
     return pattern;
   }

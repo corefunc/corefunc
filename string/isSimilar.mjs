@@ -1,7 +1,7 @@
-import castToString from "../cast/to/string.mjs";
+import { castToString } from "../cast/to/string.mjs";
 import numberRanged from "../number/ranged.mjs";
 import stringClearReferences from "./clearReferences.mjs";
-import stringCompare from "./compare.mjs";
+import { stringCompare } from "./compare.mjs";
 import stringSimilarity from "./similarity.mjs";
 
 /**
@@ -11,7 +11,7 @@ import stringSimilarity from "./similarity.mjs";
  * @param {Number} [minRating=0.85]
  * @returns {boolean}
  */
-export default function stringIsSimilar(alpha, beta, minRating = 0.85) {
+export function stringIsSimilar(alpha, beta, minRating = 0.85) {
   const strFirst = castToString(alpha).normalize();
   const strSecond = castToString(beta).normalize();
   if (stringCompare(strFirst, strSecond, false) === true) {

@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.castToRegExp = void 0;
 const regexp_1 = require("../../is/regexp");
 const string_1 = require("../../is/string");
 /**
@@ -24,4 +25,4 @@ function castToRegExp(pattern) {
     }
     return false;
 }
-exports.default = castToRegExp;
+exports.castToRegExp = castToRegExp;

@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>text | @corefunc/corefunc</title>
+	<title>string | @corefunc/corefunc</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -55,7 +55,7 @@
 		<div class="container">
 			<ul class="tsd-breadcrumb">
 				<li>
-					<a href="text.html">text</a>
+					<a href="string.html">string</a>
 				</li>
 			</ul>
 		</div>
@@ -108,10 +108,10 @@
 					<li class=" tsd-kind-module tsd-is-external">
 						<a href="regex.html">regex</a>
 					</li>
-					<li class=" tsd-kind-module tsd-is-external">
+					<li class="current tsd-kind-module tsd-is-external">
 						<a href="string.html">string</a>
 					</li>
-					<li class="current tsd-kind-module tsd-is-external">
+					<li class=" tsd-kind-module tsd-is-external">
 						<a href="text.html">text</a>
 					</li>
 					<li class=" tsd-kind-module tsd-is-external">
@@ -124,18 +124,18 @@
 			</nav>
 		</div>
 		<div class="col-7 offset-3 col-content">
-			<h1>Module text</h1>
+			<h1>Module string</h1>
 			<section class="tsd-panel-group tsd-index-group">
 				<section class="tsd-panel tsd-index-panel">
 					<div class="tsd-index-content">
 						<section class="tsd-index-section tsd-is-external">
 							<h3>Functions</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-function tsd-parent-kind-module tsd-is-external"><a href="text.html#textcaseabbreviate" class="tsd-kind-icon">text<wbr>Case<wbr>Abbreviate</a></li>
-								<li class="tsd-kind-function tsd-parent-kind-module tsd-is-external"><a href="text.html#textcasecamel" class="tsd-kind-icon">text<wbr>Case<wbr>Camel</a></li>
-								<li class="tsd-kind-function tsd-parent-kind-module tsd-is-external"><a href="text.html#textcasekebab" class="tsd-kind-icon">text<wbr>Case<wbr>Kebab</a></li>
-								<li class="tsd-kind-function tsd-parent-kind-module tsd-is-external"><a href="text.html#textcasesnake" class="tsd-kind-icon">text<wbr>Case<wbr>Snake</a></li>
-								<li class="tsd-kind-function tsd-parent-kind-module tsd-is-external"><a href="text.html#textcasetitle" class="tsd-kind-icon">text<wbr>Case<wbr>Title</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module tsd-is-external"><a href="string.html#stringcompare" class="tsd-kind-icon">string<wbr>Compare</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module tsd-is-external"><a href="string.html#stringcontains" class="tsd-kind-icon">string<wbr>Contains</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module tsd-is-external"><a href="string.html#stringescapeescaped" class="tsd-kind-icon">string<wbr>Escape<wbr>Escaped</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module tsd-is-external"><a href="string.html#stringissimilar" class="tsd-kind-icon">string<wbr>IsSimilar</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module tsd-is-external"><a href="string.html#stringtemplate" class="tsd-kind-icon">string<wbr>Template</a></li>
 							</ul>
 						</section>
 					</div>
@@ -144,95 +144,86 @@
 			<section class="tsd-panel-group tsd-member-group tsd-is-external">
 				<h2>Functions</h2>
 				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module tsd-is-external">
-					<a name="textcaseabbreviate" class="tsd-anchor"></a>
-					<h3>text<wbr>Case<wbr>Abbreviate</h3>
+					<a name="stringcompare" class="tsd-anchor"></a>
+					<h3>string<wbr>Compare</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">text<wbr>Case<wbr>Abbreviate<span class="tsd-signature-symbol">(</span>text<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, abbrLettersCount<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
+						<li class="tsd-signature tsd-kind-icon">string<wbr>Compare<span class="tsd-signature-symbol">(</span>first<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, second<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, isStrict<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in text/case/abbreviate.ts:8</li>
+									<li>Defined in string/compare.ts:11</li>
 								</ul>
 							</aside>
-							<div class="tsd-comment tsd-typography tsd-comment-tags">
-								<dl class="tsd-comment-tags"><dt>name</dt>
-									<dd><p>textCaseAbbreviate</p>
-									</dd><dt>description</dt>
-									<dd><p>Builds abbreviated string from given string.</p>
-								</dd></dl>
+							<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+								<div class="lead">
+									<p>Compare two strings</p>
+								</div>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>text: <span class="tsd-signature-type">string</span></h5>
+									<h5>first: <span class="tsd-signature-type">string</span></h5>
 								</li>
 								<li>
-									<h5>abbrLettersCount: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = 1</span></h5>
+									<h5>second: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5>isStrict: <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> = false</span></h5>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
 						</li>
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module tsd-is-external">
-					<a name="textcasecamel" class="tsd-anchor"></a>
-					<h3>text<wbr>Case<wbr>Camel</h3>
+					<a name="stringcontains" class="tsd-anchor"></a>
+					<h3>string<wbr>Contains</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">text<wbr>Case<wbr>Camel<span class="tsd-signature-symbol">(</span>text<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, firstCapital<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
+						<li class="tsd-signature tsd-kind-icon">string<wbr>Contains<span class="tsd-signature-symbol">(</span>haystack<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, needle<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, isStrict<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in text/case/camel.ts:9</li>
+									<li>Defined in string/contains.ts:11</li>
 								</ul>
 							</aside>
-							<div class="tsd-comment tsd-typography tsd-comment-tags">
-								<dl class="tsd-comment-tags"><dt>name</dt>
-									<dd><p>textCaseCamel</p>
-									</dd><dt>description</dt>
-									<dd><p>Converts string into camelCase.</p>
-									</dd><dt>see</dt>
-									<dd><p><a href="http://stackoverflow.com/questions/2970525/converting-any-string-into-camel-case">http://stackoverflow.com/questions/2970525/converting-any-string-into-camel-case</a></p>
-								</dd></dl>
+							<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+								<div class="lead">
+									<p>Perform search in string</p>
+								</div>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>text: <span class="tsd-signature-type">string</span></h5>
+									<h5>haystack: <span class="tsd-signature-type">string</span></h5>
 								</li>
 								<li>
-									<h5>firstCapital: <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> = false</span></h5>
+									<h5>needle: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5>isStrict: <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> = false</span></h5>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
 						</li>
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module tsd-is-external">
-					<a name="textcasekebab" class="tsd-anchor"></a>
-					<h3>text<wbr>Case<wbr>Kebab</h3>
+					<a name="stringescapeescaped" class="tsd-anchor"></a>
+					<h3>string<wbr>Escape<wbr>Escaped</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">text<wbr>Case<wbr>Kebab<span class="tsd-signature-symbol">(</span>text<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
+						<li class="tsd-signature tsd-kind-icon">string<wbr>Escape<wbr>Escaped<span class="tsd-signature-symbol">(</span>text<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in text/case/kebab.ts:8</li>
+									<li>Defined in string/escapeEscaped.ts:3</li>
 								</ul>
 							</aside>
-							<div class="tsd-comment tsd-typography tsd-comment-tags">
-								<dl class="tsd-comment-tags"><dt>name</dt>
-									<dd><p>textCaseKebab</p>
-									</dd><dt>description</dt>
-									<dd><p>Converts string into kebab-case.</p>
-									</dd><dt>see</dt>
-									<dd><p><a href="https://stackoverflow.com/questions/196972/convert-string-to-title-case-with-javascript">https://stackoverflow.com/questions/196972/convert-string-to-title-case-with-javascript</a></p>
-								</dd></dl>
-							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
@@ -244,63 +235,70 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module tsd-is-external">
-					<a name="textcasesnake" class="tsd-anchor"></a>
-					<h3>text<wbr>Case<wbr>Snake</h3>
+					<a name="stringissimilar" class="tsd-anchor"></a>
+					<h3>string<wbr>IsSimilar</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">text<wbr>Case<wbr>Snake<span class="tsd-signature-symbol">(</span>text<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
+						<li class="tsd-signature tsd-kind-icon">string<wbr>IsSimilar<span class="tsd-signature-symbol">(</span>alpha<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, beta<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, minRating<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in text/case/snake.ts:8</li>
+									<li>Defined in string/isSimilar.ts:14</li>
 								</ul>
 							</aside>
-							<div class="tsd-comment tsd-typography tsd-comment-tags">
-								<dl class="tsd-comment-tags"><dt>name</dt>
-									<dd><p>textCaseSnake</p>
-									</dd><dt>description</dt>
-									<dd><p>Converts string into snake-case.</p>
-									</dd><dt>see</dt>
-									<dd><p><a href="https://regex101.com/r/QeSm2I/1">https://regex101.com/r/QeSm2I/1</a></p>
-								</dd></dl>
+							<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+								<div class="lead">
+									<p>Finds degree of similarity between two strings using Sørensen–Dice coefficient</p>
+								</div>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>text: <span class="tsd-signature-type">string</span></h5>
+									<h5>alpha: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5>beta: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5>minRating: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = 0.85</span></h5>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
 						</li>
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module tsd-is-external">
-					<a name="textcasetitle" class="tsd-anchor"></a>
-					<h3>text<wbr>Case<wbr>Title</h3>
+					<a name="stringtemplate" class="tsd-anchor"></a>
+					<h3>string<wbr>Template</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">text<wbr>Case<wbr>Title<span class="tsd-signature-symbol">(</span>text<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
+						<li class="tsd-signature tsd-kind-icon">string<wbr>Template<span class="tsd-signature-symbol">(</span>string<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span>, variables<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">object</span>, start<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span>, end<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in text/case/title.ts:8</li>
+									<li>Defined in string/template.ts:9</li>
 								</ul>
 							</aside>
-							<div class="tsd-comment tsd-typography tsd-comment-tags">
-								<dl class="tsd-comment-tags"><dt>name</dt>
-									<dd><p>textCaseTitle</p>
-									</dd><dt>description</dt>
-									<dd><p>Converts string into title-case.</p>
-									</dd><dt>see</dt>
-									<dd><p><a href="http://stackoverflow.com/questions/196972/convert-string-to-title-case-with-javascript">http://stackoverflow.com/questions/196972/convert-string-to-title-case-with-javascript</a></p>
-								</dd></dl>
+							<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+								<div class="lead">
+									<p>Generate template with variables</p>
+								</div>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>text: <span class="tsd-signature-type">string</span></h5>
+									<h5>string: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;&quot;</span></h5>
+								</li>
+								<li>
+									<h5>variables: <span class="tsd-signature-type">object</span><span class="tsd-signature-symbol"> = ...</span></h5>
+								</li>
+								<li>
+									<h5>start: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;{&quot;</span></h5>
+								</li>
+								<li>
+									<h5>end: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;}&quot;</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
@@ -314,19 +312,19 @@
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
 					<li class=" tsd-kind-function tsd-parent-kind-module tsd-is-external root">
-						<a href="text.html#textcaseabbreviate" class="tsd-kind-icon">text<wbr>Case<wbr>Abbreviate</a>
+						<a href="string.html#stringcompare" class="tsd-kind-icon">string<wbr>Compare</a>
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-module tsd-is-external root">
-						<a href="text.html#textcasecamel" class="tsd-kind-icon">text<wbr>Case<wbr>Camel</a>
+						<a href="string.html#stringcontains" class="tsd-kind-icon">string<wbr>Contains</a>
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-module tsd-is-external root">
-						<a href="text.html#textcasekebab" class="tsd-kind-icon">text<wbr>Case<wbr>Kebab</a>
+						<a href="string.html#stringescapeescaped" class="tsd-kind-icon">string<wbr>Escape<wbr>Escaped</a>
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-module tsd-is-external root">
-						<a href="text.html#textcasesnake" class="tsd-kind-icon">text<wbr>Case<wbr>Snake</a>
+						<a href="string.html#stringissimilar" class="tsd-kind-icon">string<wbr>IsSimilar</a>
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-module tsd-is-external root">
-						<a href="text.html#textcasetitle" class="tsd-kind-icon">text<wbr>Case<wbr>Title</a>
+						<a href="string.html#stringtemplate" class="tsd-kind-icon">string<wbr>Template</a>
 					</li>
 				</ul>
 			</nav>

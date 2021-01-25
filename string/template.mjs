@@ -1,4 +1,4 @@
-import castToString from "../cast/to/string.mjs";
+import { castToString } from "../cast/to/string.mjs";
 import { collectionForEach } from "../collection/forEach.mjs";
 import { regexReplace } from "../regex/basic/replace.mjs";
 

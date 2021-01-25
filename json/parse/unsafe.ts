@@ -1,4 +1,4 @@
-import castToString from "../../cast/to/string";
+import { castToString } from "../../cast/to/string";
 
 /**
  * @param {String} text

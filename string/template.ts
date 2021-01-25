@@ -1,4 +1,4 @@
-import castToString from "../cast/to/string";
+import { castToString } from "../cast/to/string";
 import { collectionForEach } from "../collection/forEach";
 import { regexReplace } from "../regex/basic/replace";
 

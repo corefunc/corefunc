@@ -10,7 +10,7 @@ const string_1 = require("../../cast/to/string");
 function jsonParseUnsafe(text, defaultResult) {
     let result = defaultResult;
     try {
-        result = eval(`(${string_1.default(text)}`);
+        result = eval(`(${string_1.castToString(text)}`);
     }
     catch (exceptionOnEval) {
         //
