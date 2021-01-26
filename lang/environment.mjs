@@ -1,4 +1,4 @@
-export default function langEnvironment() {
+export function langEnvironment() {
   const inBrowser = typeof window !== "undefined";
   // @ts-ignore
   // eslint-disable-next-line no-undef

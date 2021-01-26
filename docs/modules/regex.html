@@ -106,6 +106,9 @@
 						<a href="is.html">is</a>
 					</li>
 					<li class=" tsd-kind-module tsd-is-external">
+						<a href="lang.html">lang</a>
+					</li>
+					<li class=" tsd-kind-module tsd-is-external">
 						<a href="object.html">object</a>
 					</li>
 					<li class=" tsd-kind-module tsd-is-external">
@@ -137,6 +140,8 @@
 						<section class="tsd-index-section tsd-is-external">
 							<h3>Functions</h3>
 							<ul class="tsd-index-list">
+								<li class="tsd-kind-function tsd-parent-kind-module tsd-is-external"><a href="regex.html#regexfindnumbers" class="tsd-kind-icon">regex<wbr>Find<wbr>Numbers</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module tsd-is-external"><a href="regex.html#regexfromverbose" class="tsd-kind-icon">regex<wbr>From<wbr>Verbose</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-module tsd-is-external"><a href="regex.html#regexismultiline" class="tsd-kind-icon">regex<wbr>IsMultiline</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-module tsd-is-external"><a href="regex.html#regexmatch" class="tsd-kind-icon">regex<wbr>Match</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-module tsd-is-external"><a href="regex.html#regexreplace" class="tsd-kind-icon">regex<wbr>Replace</a></li>
@@ -147,6 +152,68 @@
 			</section>
 			<section class="tsd-panel-group tsd-member-group tsd-is-external">
 				<h2>Functions</h2>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module tsd-is-external">
+					<a name="regexfindnumbers" class="tsd-anchor"></a>
+					<h3>regex<wbr>Find<wbr>Numbers</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module tsd-is-external">
+						<li class="tsd-signature tsd-kind-icon">regex<wbr>Find<wbr>Numbers<span class="tsd-signature-symbol">(</span>text<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">[]</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in regex/find/numbers.ts:6</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+								<div class="lead">
+									<p>Executes a search for a match between a regular expression and a specified string.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>text: <span class="tsd-signature-type">string</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">[]</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module tsd-is-external">
+					<a name="regexfromverbose" class="tsd-anchor"></a>
+					<h3>regex<wbr>From<wbr>Verbose</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module tsd-is-external">
+						<li class="tsd-signature tsd-kind-icon">regex<wbr>From<wbr>Verbose<span class="tsd-signature-symbol">(</span>input<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">TemplateStringsArray</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">RegExp</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in regex/from/verbose.ts:24</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography tsd-comment-tags">
+								<dl class="tsd-comment-tags"><dt>name</dt>
+									<dd><p>regexFromVerbose</p>
+									</dd><dt>example</dt>
+									<dd><p>new RegExp(
+											regexFromVerbose<code>    (?&lt;!\\) \s             // Ignore whitespace, but not                            // when escaped with backslash.   | [/][/] .*              // Single-line comment.   | [/][*] [\s\S]* [*][/]  // Multi-line comment.                            // Note: /[\s\S]/ is same as /./s                            // with dot-all flag (s).</code>,
+											&quot;g&quot;,
+											);
+										const regExp = regexFromVerbose<code>  (0 | [1-9] [0-9]*)   // Integer part with no leading zeroes   \.                   // Dot   [0-9]*               // Fractional part (optional)   ([eE] [+-]? [0-9]+)? // Exponent part (optional)</code>;</p>
+								</dd></dl>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>input: <span class="tsd-signature-type">TemplateStringsArray</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">RegExp</span></h4>
+						</li>
+					</ul>
+				</section>
 				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module tsd-is-external">
 					<a name="regexismultiline" class="tsd-anchor"></a>
 					<h3>regex<wbr>IsMultiline</h3>
@@ -261,11 +328,17 @@
 					</ul>
 				</section>
 			</section>
-			<!--{&quot;options&quot;:&quot;typedoc.json&quot;,&quot;tsconfig&quot;:&quot;D:\\git\\corefunc\\corefunc&quot;,&quot;entryPoints&quot;:[&quot;./array/index.ts&quot;,&quot;./cast/index.ts&quot;,&quot;./check/index.ts&quot;,&quot;./cli/index.ts&quot;,&quot;./collection/index.ts&quot;,&quot;./convert/index.ts&quot;,&quot;./crypt/index.ts&quot;,&quot;./fp/index.ts&quot;,&quot;./func/index.ts&quot;,&quot;./hash/index.ts&quot;,&quot;./is/index.ts&quot;,&quot;./object/index.ts&quot;,&quot;./prototype/index.ts&quot;,&quot;./regex/index.ts&quot;,&quot;./string/index.ts&quot;,&quot;./text/index.ts&quot;,&quot;./v8/index.ts&quot;,&quot;./valid/index.ts&quot;],&quot;exclude&quot;:[&quot;**/*+(index|.spec|.e2e).ts&quot;],&quot;externalPattern&quot;:[&quot;./**/*.ts&quot;],&quot;excludeExternals&quot;:false,&quot;excludeNotDocumented&quot;:false,&quot;excludeInternal&quot;:false,&quot;excludePrivate&quot;:false,&quot;excludeProtected&quot;:false,&quot;disableSources&quot;:false,&quot;includes&quot;:&quot;&quot;,&quot;media&quot;:&quot;&quot;,&quot;out&quot;:&quot;docs&quot;,&quot;json&quot;:&quot;&quot;,&quot;theme&quot;:&quot;./node_modules/typedoc-neo-theme/bin/default&quot;,&quot;name&quot;:&quot;&quot;,&quot;includeVersion&quot;:false,&quot;excludeTags&quot;:[],&quot;readme&quot;:&quot;&quot;,&quot;defaultCategory&quot;:&quot;Other&quot;,&quot;categoryOrder&quot;:[],&quot;categorizeByGroup&quot;:true,&quot;gitRevision&quot;:&quot;&quot;,&quot;gitRemote&quot;:&quot;origin&quot;,&quot;gaID&quot;:&quot;&quot;,&quot;gaSite&quot;:&quot;auto&quot;,&quot;hideGenerator&quot;:false,&quot;toc&quot;:[],&quot;disableOutputCheck&quot;:false,&quot;help&quot;:false,&quot;version&quot;:false,&quot;showConfig&quot;:false,&quot;plugin&quot;:[],&quot;logger&quot;:&quot;console&quot;,&quot;logLevel&quot;:1,&quot;listInvalidSymbolLinks&quot;:false}-->
+			<!--{&quot;options&quot;:&quot;typedoc.json&quot;,&quot;tsconfig&quot;:&quot;D:\\git\\corefunc\\corefunc&quot;,&quot;entryPoints&quot;:[&quot;./array/index.ts&quot;,&quot;./cast/index.ts&quot;,&quot;./check/index.ts&quot;,&quot;./cli/index.ts&quot;,&quot;./collection/index.ts&quot;,&quot;./convert/index.ts&quot;,&quot;./crypt/index.ts&quot;,&quot;./fp/index.ts&quot;,&quot;./func/index.ts&quot;,&quot;./hash/index.ts&quot;,&quot;./lang/index.ts&quot;,&quot;./is/index.ts&quot;,&quot;./object/index.ts&quot;,&quot;./prototype/index.ts&quot;,&quot;./regex/index.ts&quot;,&quot;./string/index.ts&quot;,&quot;./text/index.ts&quot;,&quot;./v8/index.ts&quot;,&quot;./valid/index.ts&quot;],&quot;exclude&quot;:[&quot;**/*+(index|.spec|.e2e).ts&quot;],&quot;externalPattern&quot;:[&quot;./**/*.ts&quot;],&quot;excludeExternals&quot;:false,&quot;excludeNotDocumented&quot;:false,&quot;excludeInternal&quot;:false,&quot;excludePrivate&quot;:false,&quot;excludeProtected&quot;:false,&quot;disableSources&quot;:false,&quot;includes&quot;:&quot;&quot;,&quot;media&quot;:&quot;&quot;,&quot;out&quot;:&quot;docs&quot;,&quot;json&quot;:&quot;&quot;,&quot;theme&quot;:&quot;./node_modules/typedoc-neo-theme/bin/default&quot;,&quot;name&quot;:&quot;&quot;,&quot;includeVersion&quot;:false,&quot;excludeTags&quot;:[],&quot;readme&quot;:&quot;&quot;,&quot;defaultCategory&quot;:&quot;Other&quot;,&quot;categoryOrder&quot;:[],&quot;categorizeByGroup&quot;:true,&quot;gitRevision&quot;:&quot;&quot;,&quot;gitRemote&quot;:&quot;origin&quot;,&quot;gaID&quot;:&quot;&quot;,&quot;gaSite&quot;:&quot;auto&quot;,&quot;hideGenerator&quot;:false,&quot;toc&quot;:[],&quot;disableOutputCheck&quot;:false,&quot;help&quot;:false,&quot;version&quot;:false,&quot;showConfig&quot;:false,&quot;plugin&quot;:[],&quot;logger&quot;:&quot;console&quot;,&quot;logLevel&quot;:1,&quot;listInvalidSymbolLinks&quot;:false}-->
 		</div>
 		<div class="col-2 col-menu secondary-menu">
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
+					<li class=" tsd-kind-function tsd-parent-kind-module tsd-is-external root">
+						<a href="regex.html#regexfindnumbers" class="tsd-kind-icon">regex<wbr>Find<wbr>Numbers</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module tsd-is-external root">
+						<a href="regex.html#regexfromverbose" class="tsd-kind-icon">regex<wbr>From<wbr>Verbose</a>
+					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-module tsd-is-external root">
 						<a href="regex.html#regexismultiline" class="tsd-kind-icon">regex<wbr>IsMultiline</a>
 					</li>

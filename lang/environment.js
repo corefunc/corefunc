@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.langEnvironment = void 0;
 function langEnvironment() {
     const inBrowser = typeof window !== "undefined";
     // @ts-ignore
@@ -32,4 +33,4 @@ function langEnvironment() {
         weexPlatform,
     };
 }
-exports.default = langEnvironment;
+exports.langEnvironment = langEnvironment;

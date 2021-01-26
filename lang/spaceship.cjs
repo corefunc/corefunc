@@ -1,3 +1,6 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.langSpaceship = void 0;
 // a <=> b :=
 //     if a < b then return -1
 //     if a = b then return  0
@@ -8,7 +11,7 @@
  * @param {*} valueTwo
  * @return {Number}
  */
-export function langSpaceship(valueOne, valueTwo) {
+function langSpaceship(valueOne, valueTwo) {
   if (isNaN(valueOne) && isNaN(valueTwo)) {
     return 0;
   } else if (valueOne === null || valueTwo === null || typeof valueOne !== typeof valueTwo) {
@@ -28,3 +31,4 @@ export function langSpaceship(valueOne, valueTwo) {
   }
   return 0;
 }
+exports.langSpaceship = langSpaceship;

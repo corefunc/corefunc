@@ -3,6 +3,6 @@
  * @param {String} text
  * @return {Array}
  */
-export default function regexFindNumbers(text) {
+export function regexFindNumbers(text) {
   return (text.match(/[+-]?\d+(\.\d+)?/g) || []).map(Number);
 }

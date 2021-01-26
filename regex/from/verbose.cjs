@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.regexFromVerbose = void 0;
 /**
  * @name regexFromVerbose
  * @param {TemplateStringsArray} input

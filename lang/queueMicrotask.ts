@@ -31,4 +31,4 @@ if (typeof globalThis["queueMicrotask"] === "function") {
   };
 }
 
-export { queueMicrotask };
+export const langQueueMicrotask = queueMicrotask;

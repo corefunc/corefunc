@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.langQueueMicrotask = void 0;
 /**
  * @name queueMicrotask
  * @description Queues a microtask to be executed at a safe time prior to control returning to the event
@@ -31,4 +32,4 @@ if (typeof globalThis["queueMicrotask"] === "function") {
       );
   };
 }
-exports.queueMicrotask = queueMicrotask;
+exports.langQueueMicrotask = queueMicrotask;

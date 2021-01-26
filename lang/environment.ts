@@ -1,4 +1,4 @@
-export default function langEnvironment(): {
+export function langEnvironment(): {
   UA: string;
   inBrowser: boolean;
   inWeex: boolean;

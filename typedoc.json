@@ -11,6 +11,7 @@
     "./fp/index.ts",
     "./func/index.ts",
     "./hash/index.ts",
+    "./lang/index.ts",
     "./is/index.ts",
     "./object/index.ts",
     "./prototype/index.ts",

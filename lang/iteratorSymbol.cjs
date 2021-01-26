@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.langIteratorSymbol = void 0;
 /**
  * Expose iteratorSymbol
  */
-exports.default = (typeof Symbol === "function" && Symbol.iterator) || "@@iterator";
+exports.langIteratorSymbol = (typeof Symbol === "function" && Symbol.iterator) || "@@iterator";
