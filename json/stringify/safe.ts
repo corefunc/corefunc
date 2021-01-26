@@ -1,4 +1,4 @@
-function serializer(replacer?: (this: any, key: string, value: any) => any, cycleReplacerArg?) {
+function serializer(replacer?: (this: any, key: string, value: any) => any, cycleReplacerArg = null) {
   const keys = [];
   const stack = [];
   let cycleReplacer = cycleReplacerArg;

@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.jsonStringifySafe = void 0;
-function serializer(replacer, cycleReplacerArg) {
+function serializer(replacer, cycleReplacerArg = null) {
   const keys = [];
   const stack = [];
   let cycleReplacer = cycleReplacerArg;

@@ -18,18 +18,18 @@ exports.langQueueMicrotask = void 0;
 let queueMicrotask;
 /*global globalThis*/
 if (typeof globalThis["queueMicrotask"] === "function") {
-  queueMicrotask = globalThis["queueMicrotask"];
-} else if ("process" in globalThis && globalThis["process"]["versions"] && globalThis["process"]["versions"]["node"]) {
-  queueMicrotask = globalThis["process"]["nextTick"];
-} else {
-  queueMicrotask = function (callback) {
-    Promise.resolve()
-      .then(callback)
-      .catch((error) =>
-        setTimeout(() => {
-          throw error;
-        }),
-      );
-  };
+    queueMicrotask = globalThis["queueMicrotask"];
+}
+else if ("process" in globalThis && globalThis["process"]["versions"] && globalThis["process"]["versions"]["node"]) {
+    queueMicrotask = globalThis["process"]["nextTick"];
+}
+else {
+    queueMicrotask = function (callback) {
+        Promise.resolve()
+            .then(callback)
+            .catch((error) => setTimeout(() => {
+            throw error;
+        }));
+    };
 }
 exports.langQueueMicrotask = queueMicrotask;

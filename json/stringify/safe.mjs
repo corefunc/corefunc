@@ -1,4 +1,4 @@
-function serializer(replacer, cycleReplacerArg) {
+function serializer(replacer, cycleReplacerArg = null) {
   const keys = [];
   const stack = [];
   let cycleReplacer = cycleReplacerArg;
