@@ -11,7 +11,7 @@ import { castToFloat } from "../cast/to/float";
  * @returns {Number}
  * @example numberRanged("99.5", 0, 1, 100); // => 99.5
  */
-export default function numberRanged<T>(
+export function numberRanged<T>(
   variable: any,
   onFail: T,
   numMin: number = Number.MIN_VALUE,

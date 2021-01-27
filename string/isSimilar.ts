@@ -1,5 +1,5 @@
 import { castToString } from "../cast/to/string";
-import numberRanged from "../number/ranged";
+import { numberRanged } from "../number/ranged";
 import stringClearReferences from "./clearReferences";
 import { stringCompare } from "./compare";
 import stringSimilarity from "./similarity";

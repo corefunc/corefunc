@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.numberRanged = void 0;
 const int_1 = require("../cast/to/int");
 const float_1 = require("../cast/to/float");
 /**
@@ -28,4 +29,4 @@ function numberRanged(variable, onFail, numMin = Number.MIN_VALUE, numMax = Numb
     }
     return range;
 }
-exports.default = numberRanged;
+exports.numberRanged = numberRanged;

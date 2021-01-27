@@ -19,7 +19,7 @@ function stringIsSimilar(alpha, beta, minRating = 0.85) {
   if (compare_1.stringCompare(strFirst, strSecond, false) === true) {
     return true;
   }
-  const numInputRating = ranged_1.default(minRating, 1, 0, 1, false);
+  const numInputRating = ranged_1.numberRanged(minRating, 1, 0, 1, false);
   const numSimilarity = similarity_1.default(strFirst, strSecond);
   clearReferences_1.default(strFirst);
   clearReferences_1.default(strFirst);

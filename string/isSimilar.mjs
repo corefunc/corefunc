@@ -1,5 +1,5 @@
 import { castToString } from "../cast/to/string.mjs";
-import numberRanged from "../number/ranged.mjs";
+import { numberRanged } from "../number/ranged.mjs";
 import stringClearReferences from "./clearReferences.mjs";
 import { stringCompare } from "./compare.mjs";
 import stringSimilarity from "./similarity.mjs";

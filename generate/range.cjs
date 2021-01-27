@@ -1,3 +1,6 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.generateRange = void 0;
 /**
  * @description Number.range & BigInt.range
  * @param {number | bigint} from - Number to generate from
@@ -58,7 +61,8 @@ function* CreateRangeIterator(from, to, step, type) {
   }
   return undefined;
 }
-
+// export function generateRange(from: number, to?: number, step?: number, type?: "number"): number[];
+// export function generateRange(from: BigInt, to?: BigInt, step?: BigInt, type?: "bigint"): BigInt[];
 /**
  * @name generateRange
  * @description Number.range & BigInt.range
@@ -68,10 +72,11 @@ function* CreateRangeIterator(from, to, step, type) {
  * @param {"number"|"bigint"|="number"} type - Number type
  * @returns {Array.<bigint|number>}
  */
-module.exports = function generateRange(from = 0, to = undefined, step = 1, type = "number") {
+function generateRange(from = 0, to = undefined, step = 1, type = "number") {
   const array = [];
   for (const num of CreateRangeIterator(from, to, step, type)) {
     array.push(num);
   }
   return array;
-};
+}
+exports.generateRange = generateRange;

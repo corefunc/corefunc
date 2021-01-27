@@ -4,7 +4,7 @@
  * @param {String} possible
  * @return {String}
  */
-export default function generateString(
+export function generateString(
   size: number,
   possible: string = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789",
 ): string {

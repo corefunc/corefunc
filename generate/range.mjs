@@ -68,7 +68,7 @@ function* CreateRangeIterator(from, to, step, type) {
  * @param {"number"|"bigint"|="number"} type - Number type
  * @returns {Array.<bigint|number>}
  */
-export default function generateRange(from = 0, to = undefined, step = 1, type = "number") {
+export function generateRange(from = 0, to = undefined, step = 1, type = "number") {
   const array = [];
   for (const num of CreateRangeIterator(from, to, step, type)) {
     array.push(num);

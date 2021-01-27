@@ -1,5 +1,5 @@
-import castToInt from "../cast/to/int.mjs";
-import castToFloat from "../cast/to/float.mjs";
+import { castToInt } from "../cast/to/int.mjs";
+import { castToFloat } from "../cast/to/float.mjs";
 
 /**
  * Typecast variable to number wih minimum and maximum value
@@ -11,7 +11,7 @@ import castToFloat from "../cast/to/float.mjs";
  * @returns {Number}
  * @example numberRange("99.5", 0, 1, 100); // => 99.5
  */
-export default function numberRanged(
+export function numberRanged(
   variable,
   onFail = 0,
   numMin = Number.MIN_VALUE,

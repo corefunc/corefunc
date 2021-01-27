@@ -59,8 +59,8 @@ function* CreateRangeIterator(from, to, step, type) {
   return undefined;
 }
 
-function generateRange(from: number, to?: number, step?: number, type?: "number"): number[];
-function generateRange(from: BigInt, to?: BigInt, step?: BigInt, type?: "bigint"): BigInt[];
+// export function generateRange(from: number, to?: number, step?: number, type?: "number"): number[];
+// export function generateRange(from: BigInt, to?: BigInt, step?: BigInt, type?: "bigint"): BigInt[];
 /**
  * @name generateRange
  * @description Number.range & BigInt.range
@@ -70,7 +70,7 @@ function generateRange(from: BigInt, to?: BigInt, step?: BigInt, type?: "bigint"
  * @param {"number"|"bigint"|="number"} type - Number type
  * @returns {Array.<bigint|number>}
  */
-function generateRange(
+export function generateRange(
   from: number | BigInt = 0,
   to: number | BigInt = undefined,
   step: number | BigInt = 1,
@@ -82,5 +82,3 @@ function generateRange(
   }
   return array;
 }
-
-export default generateRange;
