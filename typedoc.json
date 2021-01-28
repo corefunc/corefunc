@@ -12,6 +12,7 @@
     "./func/index.ts",
     "./generate/index.ts",
     "./hash/index.ts",
+    "./high-order/index.ts",
     "./is/index.ts",
     "./lang/index.ts",
     "./number/index.ts",

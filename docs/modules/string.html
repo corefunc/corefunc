@@ -106,6 +106,9 @@
 						<a href="hash.html">hash</a>
 					</li>
 					<li class=" tsd-kind-module tsd-is-external">
+						<a href="high_order.html">high-order</a>
+					</li>
+					<li class=" tsd-kind-module tsd-is-external">
 						<a href="is.html">is</a>
 					</li>
 					<li class=" tsd-kind-module tsd-is-external">
@@ -146,11 +149,15 @@
 						<section class="tsd-index-section tsd-is-external">
 							<h3>Functions</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-function tsd-parent-kind-module tsd-is-external"><a href="string.html#stringcompare" class="tsd-kind-icon">string<wbr>Compare</a></li>
-								<li class="tsd-kind-function tsd-parent-kind-module tsd-is-external"><a href="string.html#stringcontains" class="tsd-kind-icon">string<wbr>Contains</a></li>
-								<li class="tsd-kind-function tsd-parent-kind-module tsd-is-external"><a href="string.html#stringescapeescaped" class="tsd-kind-icon">string<wbr>Escape<wbr>Escaped</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module tsd-is-external"><a href="string.html#stringclearreferences" class="tsd-kind-icon">string<wbr>Clear<wbr>References</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module tsd-is-external"><a href="string.html#stringfindmatch" class="tsd-kind-icon">string<wbr>Find<wbr>Match</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module tsd-is-external"><a href="string.html#stringfindsimilarity" class="tsd-kind-icon">string<wbr>Find<wbr>Similarity</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module tsd-is-external"><a href="string.html#stringfindsub" class="tsd-kind-icon">string<wbr>Find<wbr>Sub</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module tsd-is-external"><a href="string.html#stringgetcount" class="tsd-kind-icon">string<wbr>Get<wbr>Count</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module tsd-is-external"><a href="string.html#stringiscomparable" class="tsd-kind-icon">string<wbr>IsComparable</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module tsd-is-external"><a href="string.html#stringiscontain" class="tsd-kind-icon">string<wbr>IsContain</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-module tsd-is-external"><a href="string.html#stringissimilar" class="tsd-kind-icon">string<wbr>IsSimilar</a></li>
-								<li class="tsd-kind-function tsd-parent-kind-module tsd-is-external"><a href="string.html#stringtemplate" class="tsd-kind-icon">string<wbr>Template</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module tsd-is-external"><a href="string.html#stringmakeescaped" class="tsd-kind-icon">string<wbr>Make<wbr>Escaped</a></li>
 							</ul>
 						</section>
 					</div>
@@ -159,16 +166,159 @@
 			<section class="tsd-panel-group tsd-member-group tsd-is-external">
 				<h2>Functions</h2>
 				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module tsd-is-external">
-					<a name="stringcompare" class="tsd-anchor"></a>
-					<h3>string<wbr>Compare</h3>
+					<a name="stringclearreferences" class="tsd-anchor"></a>
+					<h3>string<wbr>Clear<wbr>References</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">string<wbr>Compare<span class="tsd-signature-symbol">(</span>first<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, second<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, isStrict<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+						<li class="tsd-signature tsd-kind-icon">string<wbr>Clear<wbr>References<span class="tsd-signature-symbol">(</span>text<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in string/compare.ts:11</li>
+									<li>Defined in string/clear/references.ts:1</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>text: <span class="tsd-signature-type">string</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module tsd-is-external">
+					<a name="stringfindmatch" class="tsd-anchor"></a>
+					<h3>string<wbr>Find<wbr>Match</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module tsd-is-external">
+						<li class="tsd-signature tsd-kind-icon">string<wbr>Find<wbr>Match<span class="tsd-signature-symbol">(</span>needle<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, haystack<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">object</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in string/find/match.ts:3</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>needle: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5>haystack: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">object</span></h4>
+							<ul class="tsd-parameters">
+								<li class="tsd-parameter">
+									<h5>best<wbr>Match<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li class="tsd-parameter">
+									<h5>best<wbr>Match<wbr>Index<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></h5>
+								</li>
+								<li class="tsd-parameter">
+									<h5>ratings<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">[]</span></h5>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module tsd-is-external">
+					<a name="stringfindsimilarity" class="tsd-anchor"></a>
+					<h3>string<wbr>Find<wbr>Similarity</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module tsd-is-external">
+						<li class="tsd-signature tsd-kind-icon">string<wbr>Find<wbr>Similarity<span class="tsd-signature-symbol">(</span>alpha<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, beta<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in string/find/similarity.ts:1</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>alpha: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5>beta: <span class="tsd-signature-type">string</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module tsd-is-external">
+					<a name="stringfindsub" class="tsd-anchor"></a>
+					<h3>string<wbr>Find<wbr>Sub</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module tsd-is-external">
+						<li class="tsd-signature tsd-kind-icon">string<wbr>Find<wbr>Sub<span class="tsd-signature-symbol">(</span>text<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span>, begin<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span>, end<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in string/find/sub.ts:8</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+								<div class="lead">
+									<p>Returns a section of a string.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>text: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;&quot;</span></h5>
+								</li>
+								<li>
+									<h5>begin: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = 0</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> end: <span class="tsd-signature-type">number</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module tsd-is-external">
+					<a name="stringgetcount" class="tsd-anchor"></a>
+					<h3>string<wbr>Get<wbr>Count</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module tsd-is-external">
+						<li class="tsd-signature tsd-kind-icon">string<wbr>Get<wbr>Count<span class="tsd-signature-symbol">(</span>text<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in string/get/count.ts:1</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>text: <span class="tsd-signature-type">string</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module tsd-is-external">
+					<a name="stringiscomparable" class="tsd-anchor"></a>
+					<h3>string<wbr>IsComparable</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module tsd-is-external">
+						<li class="tsd-signature tsd-kind-icon">string<wbr>IsComparable<span class="tsd-signature-symbol">(</span>first<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, second<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, isStrict<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in string/is/comparable.ts:11</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography tsd-comment-shorttext">
@@ -193,16 +343,16 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module tsd-is-external">
-					<a name="stringcontains" class="tsd-anchor"></a>
-					<h3>string<wbr>Contains</h3>
+					<a name="stringiscontain" class="tsd-anchor"></a>
+					<h3>string<wbr>IsContain</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">string<wbr>Contains<span class="tsd-signature-symbol">(</span>haystack<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, needle<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, isStrict<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+						<li class="tsd-signature tsd-kind-icon">string<wbr>IsContain<span class="tsd-signature-symbol">(</span>haystack<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, needle<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, isStrict<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in string/contains.ts:11</li>
+									<li>Defined in string/is/contain.ts:11</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography tsd-comment-shorttext">
@@ -227,29 +377,6 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module tsd-is-external">
-					<a name="stringescapeescaped" class="tsd-anchor"></a>
-					<h3>string<wbr>Escape<wbr>Escaped</h3>
-					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">string<wbr>Escape<wbr>Escaped<span class="tsd-signature-symbol">(</span>text<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in string/escapeEscaped.ts:3</li>
-								</ul>
-							</aside>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>text: <span class="tsd-signature-type">string</span></h5>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module tsd-is-external">
 					<a name="stringissimilar" class="tsd-anchor"></a>
 					<h3>string<wbr>IsSimilar</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module tsd-is-external">
@@ -259,7 +386,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in string/isSimilar.ts:14</li>
+									<li>Defined in string/is/similar.ts:14</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography tsd-comment-shorttext">
@@ -284,36 +411,22 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module tsd-is-external">
-					<a name="stringtemplate" class="tsd-anchor"></a>
-					<h3>string<wbr>Template</h3>
+					<a name="stringmakeescaped" class="tsd-anchor"></a>
+					<h3>string<wbr>Make<wbr>Escaped</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">string<wbr>Template<span class="tsd-signature-symbol">(</span>string<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span>, variables<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">object</span>, start<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span>, end<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
+						<li class="tsd-signature tsd-kind-icon">string<wbr>Make<wbr>Escaped<span class="tsd-signature-symbol">(</span>text<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in string/template.ts:9</li>
+									<li>Defined in string/make/escaped.ts:3</li>
 								</ul>
 							</aside>
-							<div class="tsd-comment tsd-typography tsd-comment-shorttext">
-								<div class="lead">
-									<p>Generate template with variables</p>
-								</div>
-							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>string: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;&quot;</span></h5>
-								</li>
-								<li>
-									<h5>variables: <span class="tsd-signature-type">object</span><span class="tsd-signature-symbol"> = ...</span></h5>
-								</li>
-								<li>
-									<h5>start: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;{&quot;</span></h5>
-								</li>
-								<li>
-									<h5>end: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;}&quot;</span></h5>
+									<h5>text: <span class="tsd-signature-type">string</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
@@ -321,25 +434,37 @@
 					</ul>
 				</section>
 			</section>
-			<!--{&quot;options&quot;:&quot;typedoc.json&quot;,&quot;tsconfig&quot;:&quot;D:\\git\\corefunc\\corefunc&quot;,&quot;entryPoints&quot;:[&quot;./array/index.ts&quot;,&quot;./cast/index.ts&quot;,&quot;./check/index.ts&quot;,&quot;./cli/index.ts&quot;,&quot;./collection/index.ts&quot;,&quot;./convert/index.ts&quot;,&quot;./crypt/index.ts&quot;,&quot;./fp/index.ts&quot;,&quot;./func/index.ts&quot;,&quot;./generate/index.ts&quot;,&quot;./hash/index.ts&quot;,&quot;./is/index.ts&quot;,&quot;./lang/index.ts&quot;,&quot;./number/index.ts&quot;,&quot;./object/index.ts&quot;,&quot;./prototype/index.ts&quot;,&quot;./regex/index.ts&quot;,&quot;./string/index.ts&quot;,&quot;./text/index.ts&quot;,&quot;./v8/index.ts&quot;,&quot;./valid/index.ts&quot;],&quot;exclude&quot;:[&quot;**/*+(index|.spec|.e2e).ts&quot;],&quot;externalPattern&quot;:[&quot;./**/*.ts&quot;],&quot;excludeExternals&quot;:false,&quot;excludeNotDocumented&quot;:false,&quot;excludeInternal&quot;:false,&quot;excludePrivate&quot;:false,&quot;excludeProtected&quot;:false,&quot;disableSources&quot;:false,&quot;includes&quot;:&quot;&quot;,&quot;media&quot;:&quot;&quot;,&quot;out&quot;:&quot;docs&quot;,&quot;json&quot;:&quot;&quot;,&quot;theme&quot;:&quot;./node_modules/typedoc-neo-theme/bin/default&quot;,&quot;name&quot;:&quot;&quot;,&quot;includeVersion&quot;:false,&quot;excludeTags&quot;:[],&quot;readme&quot;:&quot;&quot;,&quot;defaultCategory&quot;:&quot;Other&quot;,&quot;categoryOrder&quot;:[],&quot;categorizeByGroup&quot;:true,&quot;gitRevision&quot;:&quot;&quot;,&quot;gitRemote&quot;:&quot;origin&quot;,&quot;gaID&quot;:&quot;&quot;,&quot;gaSite&quot;:&quot;auto&quot;,&quot;hideGenerator&quot;:false,&quot;toc&quot;:[],&quot;disableOutputCheck&quot;:false,&quot;help&quot;:false,&quot;version&quot;:false,&quot;showConfig&quot;:false,&quot;plugin&quot;:[],&quot;logger&quot;:&quot;console&quot;,&quot;logLevel&quot;:1,&quot;listInvalidSymbolLinks&quot;:false}-->
+			<!--{&quot;options&quot;:&quot;typedoc.json&quot;,&quot;tsconfig&quot;:&quot;D:\\git\\corefunc\\corefunc&quot;,&quot;entryPoints&quot;:[&quot;./array/index.ts&quot;,&quot;./cast/index.ts&quot;,&quot;./check/index.ts&quot;,&quot;./cli/index.ts&quot;,&quot;./collection/index.ts&quot;,&quot;./convert/index.ts&quot;,&quot;./crypt/index.ts&quot;,&quot;./fp/index.ts&quot;,&quot;./func/index.ts&quot;,&quot;./generate/index.ts&quot;,&quot;./hash/index.ts&quot;,&quot;./high-order/index.ts&quot;,&quot;./is/index.ts&quot;,&quot;./lang/index.ts&quot;,&quot;./number/index.ts&quot;,&quot;./object/index.ts&quot;,&quot;./prototype/index.ts&quot;,&quot;./regex/index.ts&quot;,&quot;./string/index.ts&quot;,&quot;./text/index.ts&quot;,&quot;./v8/index.ts&quot;,&quot;./valid/index.ts&quot;],&quot;exclude&quot;:[&quot;**/*+(index|.spec|.e2e).ts&quot;],&quot;externalPattern&quot;:[&quot;./**/*.ts&quot;],&quot;excludeExternals&quot;:false,&quot;excludeNotDocumented&quot;:false,&quot;excludeInternal&quot;:false,&quot;excludePrivate&quot;:false,&quot;excludeProtected&quot;:false,&quot;disableSources&quot;:false,&quot;includes&quot;:&quot;&quot;,&quot;media&quot;:&quot;&quot;,&quot;out&quot;:&quot;docs&quot;,&quot;json&quot;:&quot;&quot;,&quot;theme&quot;:&quot;./node_modules/typedoc-neo-theme/bin/default&quot;,&quot;name&quot;:&quot;&quot;,&quot;includeVersion&quot;:false,&quot;excludeTags&quot;:[],&quot;readme&quot;:&quot;&quot;,&quot;defaultCategory&quot;:&quot;Other&quot;,&quot;categoryOrder&quot;:[],&quot;categorizeByGroup&quot;:true,&quot;gitRevision&quot;:&quot;&quot;,&quot;gitRemote&quot;:&quot;origin&quot;,&quot;gaID&quot;:&quot;&quot;,&quot;gaSite&quot;:&quot;auto&quot;,&quot;hideGenerator&quot;:false,&quot;toc&quot;:[],&quot;disableOutputCheck&quot;:false,&quot;help&quot;:false,&quot;version&quot;:false,&quot;showConfig&quot;:false,&quot;plugin&quot;:[],&quot;logger&quot;:&quot;console&quot;,&quot;logLevel&quot;:1,&quot;listInvalidSymbolLinks&quot;:false}-->
 		</div>
 		<div class="col-2 col-menu secondary-menu">
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
 					<li class=" tsd-kind-function tsd-parent-kind-module tsd-is-external root">
-						<a href="string.html#stringcompare" class="tsd-kind-icon">string<wbr>Compare</a>
+						<a href="string.html#stringclearreferences" class="tsd-kind-icon">string<wbr>Clear<wbr>References</a>
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-module tsd-is-external root">
-						<a href="string.html#stringcontains" class="tsd-kind-icon">string<wbr>Contains</a>
+						<a href="string.html#stringfindmatch" class="tsd-kind-icon">string<wbr>Find<wbr>Match</a>
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-module tsd-is-external root">
-						<a href="string.html#stringescapeescaped" class="tsd-kind-icon">string<wbr>Escape<wbr>Escaped</a>
+						<a href="string.html#stringfindsimilarity" class="tsd-kind-icon">string<wbr>Find<wbr>Similarity</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module tsd-is-external root">
+						<a href="string.html#stringfindsub" class="tsd-kind-icon">string<wbr>Find<wbr>Sub</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module tsd-is-external root">
+						<a href="string.html#stringgetcount" class="tsd-kind-icon">string<wbr>Get<wbr>Count</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module tsd-is-external root">
+						<a href="string.html#stringiscomparable" class="tsd-kind-icon">string<wbr>IsComparable</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module tsd-is-external root">
+						<a href="string.html#stringiscontain" class="tsd-kind-icon">string<wbr>IsContain</a>
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-module tsd-is-external root">
 						<a href="string.html#stringissimilar" class="tsd-kind-icon">string<wbr>IsSimilar</a>
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-module tsd-is-external root">
-						<a href="string.html#stringtemplate" class="tsd-kind-icon">string<wbr>Template</a>
+						<a href="string.html#stringmakeescaped" class="tsd-kind-icon">string<wbr>Make<wbr>Escaped</a>
 					</li>
 				</ul>
 			</nav>

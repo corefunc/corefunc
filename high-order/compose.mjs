@@ -1,3 +1,9 @@
-export default function highOrderCompose(...functions) {
+/**
+ * @description f . g = f(g(x))
+ * @param {...function} functions
+ * @returns {*|(function(...[*]): *)}
+ * @example compose((y) => y + 5, (x) => x * 2) // 2 * 2 + 5 => 9
+ */
+export function highOrderCompose(...functions) {
   return functions.reduce((func, apply) => (...args) => func(apply(...args)));
 }

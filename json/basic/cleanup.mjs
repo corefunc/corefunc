@@ -1,6 +1,6 @@
 import { castToString } from "../../cast/to/string.mjs";
-import { stringEscapeEscaped } from "../../string/escapeEscaped.mjs";
+import { stringMakeEscaped } from "../../string/make/escaped.mjs";
 
 export function jsonCleanup(text) {
-  return stringEscapeEscaped(castToString(text));
+  return stringMakeEscaped(castToString(text));
 }
