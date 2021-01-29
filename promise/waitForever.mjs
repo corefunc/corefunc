@@ -1,3 +1,3 @@
-export default function promiseWaitForever() {
+export function promiseWaitForever() {
   return new Promise(() => {});
 }

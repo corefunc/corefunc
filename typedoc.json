@@ -17,6 +17,7 @@
     "./lang/index.ts",
     "./number/index.ts",
     "./object/index.ts",
+    "./promise/index.ts",
     "./prototype/index.ts",
     "./regex/index.ts",
     "./string/index.ts",

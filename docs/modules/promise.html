@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>valid | @corefunc/corefunc</title>
+	<title>promise | @corefunc/corefunc</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -55,7 +55,7 @@
 		<div class="container">
 			<ul class="tsd-breadcrumb">
 				<li>
-					<a href="valid.html">valid</a>
+					<a href="promise.html">promise</a>
 				</li>
 			</ul>
 		</div>
@@ -120,7 +120,7 @@
 					<li class=" tsd-kind-module tsd-is-external">
 						<a href="object.html">object</a>
 					</li>
-					<li class=" tsd-kind-module tsd-is-external">
+					<li class="current tsd-kind-module tsd-is-external">
 						<a href="promise.html">promise</a>
 					</li>
 					<li class=" tsd-kind-module tsd-is-external">
@@ -138,23 +138,21 @@
 					<li class=" tsd-kind-module tsd-is-external">
 						<a href="v8.html">v8</a>
 					</li>
-					<li class="current tsd-kind-module tsd-is-external">
+					<li class=" tsd-kind-module tsd-is-external">
 						<a href="valid.html">valid</a>
 					</li>
 				</ul>
 			</nav>
 		</div>
 		<div class="col-7 offset-3 col-content">
-			<h1>Module valid</h1>
+			<h1>Module promise</h1>
 			<section class="tsd-panel-group tsd-index-group">
 				<section class="tsd-panel tsd-index-panel">
 					<div class="tsd-index-content">
 						<section class="tsd-index-section tsd-is-external">
 							<h3>Functions</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-function tsd-parent-kind-module tsd-is-external"><a href="valid.html#isempty" class="tsd-kind-icon">is<wbr>Empty</a></li>
-								<li class="tsd-kind-function tsd-parent-kind-module tsd-is-external"><a href="valid.html#isobjectid" class="tsd-kind-icon">is<wbr>Object<wbr>Id</a></li>
-								<li class="tsd-kind-function tsd-parent-kind-module tsd-is-external"><a href="valid.html#isuuid" class="tsd-kind-icon">isUUID</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module tsd-is-external"><a href="promise.html#promisewaitforever" class="tsd-kind-icon">promise<wbr>Wait<wbr>Forever</a></li>
 							</ul>
 						</section>
 					</div>
@@ -163,91 +161,19 @@
 			<section class="tsd-panel-group tsd-member-group tsd-is-external">
 				<h2>Functions</h2>
 				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module tsd-is-external">
-					<a name="isempty" class="tsd-anchor"></a>
-					<h3>is<wbr>Empty</h3>
+					<a name="promisewaitforever" class="tsd-anchor"></a>
+					<h3>promise<wbr>Wait<wbr>Forever</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">is<wbr>Empty<span class="tsd-signature-symbol">(</span>value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+						<li class="tsd-signature tsd-kind-icon">promise<wbr>Wait<wbr>Forever<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in valid/isEmpty.ts:3</li>
+									<li>Defined in promise/waitForever.ts:1</li>
 								</ul>
 							</aside>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>value: <span class="tsd-signature-type">any</span></h5>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module tsd-is-external">
-					<a name="isobjectid" class="tsd-anchor"></a>
-					<h3>is<wbr>Object<wbr>Id</h3>
-					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">is<wbr>Object<wbr>Id<span class="tsd-signature-symbol">(</span>value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in valid/isObjectId.ts:8</li>
-								</ul>
-							</aside>
-							<div class="tsd-comment tsd-typography tsd-comment-tags">
-								<dl class="tsd-comment-tags"><dt>name</dt>
-									<dd><p>isObjectId</p>
-									</dd><dt>description</dt>
-									<dd><p>Check is value ObjectId</p>
-									</dd><dt>since</dt>
-									<dd><p>0.0.94</p>
-								</dd></dl>
-							</div>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>value: <span class="tsd-signature-type">any</span></h5>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module tsd-is-external">
-					<a name="isuuid" class="tsd-anchor"></a>
-					<h3>isUUID</h3>
-					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">isUUID<span class="tsd-signature-symbol">(</span>value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in valid/isUUID.ts:9</li>
-								</ul>
-							</aside>
-							<div class="tsd-comment tsd-typography tsd-comment-tags">
-								<dl class="tsd-comment-tags"><dt>name</dt>
-									<dd><p>isUUID</p>
-									</dd><dt>description</dt>
-									<dd><p>Check is value UUID</p>
-									</dd><dt>since</dt>
-									<dd><p>0.0.94</p>
-									</dd><dt>see</dt>
-									<dd><p><a href="https://stackoverflow.com/questions/7905929/how-to-test-valid-uuid-guid">https://stackoverflow.com/questions/7905929/how-to-test-valid-uuid-guid</a></p>
-								</dd></dl>
-							</div>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>value: <span class="tsd-signature-type">any</span></h5>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -258,13 +184,7 @@
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
 					<li class=" tsd-kind-function tsd-parent-kind-module tsd-is-external root">
-						<a href="valid.html#isempty" class="tsd-kind-icon">is<wbr>Empty</a>
-					</li>
-					<li class=" tsd-kind-function tsd-parent-kind-module tsd-is-external root">
-						<a href="valid.html#isobjectid" class="tsd-kind-icon">is<wbr>Object<wbr>Id</a>
-					</li>
-					<li class=" tsd-kind-function tsd-parent-kind-module tsd-is-external root">
-						<a href="valid.html#isuuid" class="tsd-kind-icon">isUUID</a>
+						<a href="promise.html#promisewaitforever" class="tsd-kind-icon">promise<wbr>Wait<wbr>Forever</a>
 					</li>
 				</ul>
 			</nav>
