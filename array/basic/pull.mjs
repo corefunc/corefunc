@@ -1,4 +1,4 @@
-export default function arrayBasicPull(array, value) {
+export function arrayBasicPull(array, value) {
   const indexOf = array.indexOf(value);
   if (indexOf === -1) {
     return;

@@ -6,7 +6,7 @@
  * @returns {Array} Returns the new filtered array.
  * @see https://twitter.com/rauschma/status/1253457185092308993
  */
-export default function arrayBasicKeep<T extends any>(
+export function arrayBasicKeep<T extends any>(
   array: T[],
   iteratee: (value: T, index: number, array: T[]) => boolean,
 ): T[] {

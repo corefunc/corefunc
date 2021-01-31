@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-function arrayBasicHas(array, value, fromIndex) {
+exports.arrayBasicHas = void 0;
+function arrayBasicHas(array, value, fromIndex = 0) {
   return array.includes(value, fromIndex);
 }
-exports.default = arrayBasicHas;
+exports.arrayBasicHas = arrayBasicHas;

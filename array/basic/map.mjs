@@ -4,7 +4,7 @@
  * @param {Function} iteratee The function invoked per iteration.
  * @returns {Array} Returns the new mapped array.
  */
-export default function arrayBasicMap(array, iteratee) {
+export function arrayBasicMap(array, iteratee) {
   let { length } = array;
   length = length || 0;
   let index = -1;

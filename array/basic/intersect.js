@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.arrayBasicIntersect = void 0;
 /**
  * @name arrayBasicIntersect
  * @param {Array} alpha
@@ -14,4 +15,4 @@ function arrayBasicIntersect(alpha, beta) {
     // @ts-ignore
     return [...new Set(alpha)].filter((value) => setB.has(value));
 }
-exports.default = arrayBasicIntersect;
+exports.arrayBasicIntersect = arrayBasicIntersect;

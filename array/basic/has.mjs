@@ -1,3 +1,3 @@
-export default function arrayBasicHas(array, value, fromIndex) {
+export function arrayBasicHas(array, value, fromIndex) {
   return array.includes(value, fromIndex);
 }

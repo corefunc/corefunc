@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.arrayBasicMap = void 0;
 /**
  * @description A specialized version of `map` for arrays without support for iteratee shorthands.
  * @param {Array} [array] The array to iterate over.
@@ -16,4 +17,4 @@ function arrayBasicMap(array, iteratee) {
   }
   return result;
 }
-exports.default = arrayBasicMap;
+exports.arrayBasicMap = arrayBasicMap;

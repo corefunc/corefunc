@@ -1,12 +1,14 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.arrayBasicHasSame = void 0;
 /**
- * @name arrayHasSame
+ * @name arrayBasicHasSame
  * @param {Array} alpha
  * @param {Array} beta
  * @returns {boolean}
+ * @since 0.1.13
  */
-function arrayHasSame(alpha, beta) {
+function arrayBasicHasSame(alpha, beta) {
     if (!alpha.length || !beta.length) {
         return false;
     }
@@ -14,4 +16,4 @@ function arrayHasSame(alpha, beta) {
     // @ts-ignore
     return Boolean([...new Set(alpha)].filter((x) => setB.has(x)).length);
 }
-exports.default = arrayHasSame;
+exports.arrayBasicHasSame = arrayBasicHasSame;

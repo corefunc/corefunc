@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.arrayBasicKeep = void 0;
 /**
  * @name arrayBasicKeep
  * @description Returns the elements of an array that meet the condition specified in a callback function.
@@ -11,4 +12,4 @@ Object.defineProperty(exports, "__esModule", { value: true });
 function arrayBasicKeep(array, iteratee) {
   return array.filter(iteratee);
 }
-exports.default = arrayBasicKeep;
+exports.arrayBasicKeep = arrayBasicKeep;

@@ -4,7 +4,7 @@
  * @param {Array} beta
  * @returns {Array}
  */
-export default function arrayBasicIntersect(alpha, beta) {
+export function arrayBasicIntersect(alpha, beta) {
   if (!alpha.length || !beta.length) {
     return [];
   }

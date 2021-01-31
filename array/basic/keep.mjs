@@ -6,6 +6,6 @@
  * @returns {Array} Returns the new filtered array.
  * @see https://twitter.com/rauschma/status/1253457185092308993
  */
-export default function arrayBasicKeep(array, iteratee) {
+export function arrayBasicKeep(array, iteratee) {
   return array.filter(iteratee);
 }

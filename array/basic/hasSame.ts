@@ -1,10 +1,11 @@
 /**
- * @name arrayHasSame
+ * @name arrayBasicHasSame
  * @param {Array} alpha
  * @param {Array} beta
  * @returns {boolean}
+ * @since 0.1.13
  */
-export default function arrayHasSame(alpha: any[], beta: any[]): boolean {
+export function arrayBasicHasSame(alpha: any[], beta: any[]): boolean {
   if (!alpha.length || !beta.length) {
     return false;
   }
