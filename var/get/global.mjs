@@ -1,4 +1,5 @@
 /**
+ * @deprecated
  * @name varGetGlobal
  * @returns {NodeJS.Global|(WorkerGlobalScope & Window)|Window}
  */

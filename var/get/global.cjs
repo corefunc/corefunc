@@ -2,6 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.varGetGlobal = void 0;
 /**
+ * @deprecated
  * @name varGetGlobal
  * @returns {NodeJS.Global|(WorkerGlobalScope & Window)|Window}
  */
