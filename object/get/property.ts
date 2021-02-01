@@ -1,4 +1,4 @@
-import { v8Clone } from "../../v8";
+import { v8Clone } from "../../v8/clone";
 
 /**
  * @name objectGetProperty

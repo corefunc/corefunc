@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.objectGetProperty = void 0;
-const v8_1 = require("../../v8.js");
+const clone_1 = require("../../v8/clone");
 /**
  * @name objectGetProperty
  * @description Gets the value at path of object.
@@ -27,7 +27,7 @@ function objectGetProperty(object, key, defaultValue) {
     }
     const length = keySet.length;
     let index = 0;
-    let newObject = v8_1.v8Clone(object);
+    let newObject = clone_1.v8Clone(object);
     let isSet = false;
     while (newObject !== null && index < length) {
         // @ts-ignore
@@ -51,3 +51,13 @@ function objectGetProperty(object, key, defaultValue) {
     }
 }
 exports.objectGetProperty = objectGetProperty;
+// export function objectGetExistingProperty<
+//   ObjectType extends object,
+//   KeyType extends keyof ObjectType | string,
+//   DefaultType extends any
+//   >(object: ObjectType, key: KeyType, defaultValue?: DefaultType): ObjectType<KeyType> | DefaultType {
+//   if (key in object) {
+//     return object[key];
+//   }
+//   return defaultvalue;
+// }

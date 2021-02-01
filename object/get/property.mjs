@@ -1,4 +1,4 @@
-import { v8Clone } from "../../v8.mjs";
+import { v8Clone } from "../../v8/clone.mjs";
 
 /**
  * @name objectGetProperty
