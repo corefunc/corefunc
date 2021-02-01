@@ -1,11 +1,14 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.varGetGlobal = void 0;
 /**
  * @name varGetGlobal
  * @returns {NodeJS.Global|(WorkerGlobalScope & Window)|Window}
  */
+// @ts-ignore
 function varGetGlobal() {
   if (typeof globalThis !== "undefined") {
+    // @ts-ignore
     // eslint-disable-next-line no-undef
     return globalThis;
   }
@@ -17,8 +20,10 @@ function varGetGlobal() {
     // eslint-disable-next-line no-undef
     return window;
   }
+  // @ts-ignore
   if (typeof global !== "undefined") {
     // eslint-disable-next-line no-undef
+    // @ts-ignore
     return global;
   }
   try {
@@ -28,4 +33,4 @@ function varGetGlobal() {
   }
   return undefined;
 }
-exports.default = varGetGlobal;
+exports.varGetGlobal = varGetGlobal;

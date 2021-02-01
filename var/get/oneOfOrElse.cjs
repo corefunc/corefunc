@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.oneOfOrElse = void 0;
+exports.varGetOneOfOrElse = void 0;
 /**
  * @name oneOfOrElse
  * @description Get on from list or other value
@@ -9,7 +9,7 @@ exports.oneOfOrElse = void 0;
  * @param {*=} defaultValue
  * @since 0.0.86
  */
-function oneOfOrElse(list, value, defaultValue = undefined) {
+function varGetOneOfOrElse(list, value, defaultValue = undefined) {
   return new Set(list).has(value) ? value : defaultValue;
 }
-exports.oneOfOrElse = oneOfOrElse;
+exports.varGetOneOfOrElse = varGetOneOfOrElse;

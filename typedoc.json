@@ -23,7 +23,8 @@
     "./string/index.ts",
     "./text/index.ts",
     "./v8/index.ts",
-    "./valid/index.ts"
+    "./valid/index.ts",
+    "./var/index.ts"
   ],
   "exclude": ["**/*+(index|.spec|.e2e).ts"],
   "externalPattern": ["./**/*.ts"],

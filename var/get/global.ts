@@ -3,7 +3,7 @@
  * @returns {NodeJS.Global|(WorkerGlobalScope & Window)|Window}
  */
 // @ts-ignore
-export default function varGetGlobal(): NodeJS.Global | Window {
+export function varGetGlobal(): NodeJS.Global | Window {
   if (typeof globalThis !== "undefined") {
     // @ts-ignore
     // eslint-disable-next-line no-undef

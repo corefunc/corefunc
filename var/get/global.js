@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.varGetGlobal = void 0;
 /**
  * @name varGetGlobal
  * @returns {NodeJS.Global|(WorkerGlobalScope & Window)|Window}
@@ -33,4 +34,4 @@ function varGetGlobal() {
     }
     return undefined;
 }
-exports.default = varGetGlobal;
+exports.varGetGlobal = varGetGlobal;
