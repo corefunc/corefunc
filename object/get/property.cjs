@@ -12,20 +12,49 @@ const clone_1 = require("../../v8/clone.cjs");
  * @since 0.0.47
  */
 function objectGetProperty(object, key, defaultValue) {
+  if (!object || typeof object !== "object") {
+    return defaultValue;
+  }
   if (typeof key === "string" && key in object) {
     return object[key];
   }
   let keySet;
   if (typeof key === "string") {
     keySet = key.split(".");
-  } else if (Array.isArray(key)) {
+  }
+  else if (Array.isArray(key)) {
     keySet = key;
-  } else {
+  }
+  else {
     return defaultValue;
   }
   const length = keySet.length;
+  if (length === 1) {
+    if (keySet[0] in object) {
+      return object[keySet[0]];
+    }
+    else {
+      return defaultValue;
+    }
+  }
   let index = 0;
-  let newObject = clone_1.v8Clone(object);
+  let newObject;
+  try {
+    newObject = clone_1.v8Clone(object);
+  }
+  catch (_a) {
+    try {
+      newObject = Object.assign({}, object);
+    }
+    catch (_b) {
+      try {
+        newObject = JSON.parse(JSON.stringify(object));
+      }
+      catch (_c) {
+        return defaultValue;
+      }
+    }
+  }
   let isSet = false;
   while (newObject !== null && index < length) {
     // @ts-ignore
@@ -39,21 +68,13 @@ function objectGetProperty(object, key, defaultValue) {
         return newObject;
       }
       return defaultValue;
-    } else {
+    }
+    else {
       return newObject;
     }
-  } else {
+  }
+  else {
     return defaultValue;
   }
 }
 exports.objectGetProperty = objectGetProperty;
-// export function objectGetExistingProperty<
-//   ObjectType extends object,
-//   KeyType extends keyof ObjectType | string,
-//   DefaultType extends any
-//   >(object: ObjectType, key: KeyType, defaultValue?: DefaultType): ObjectType<KeyType> | DefaultType {
-//   if (key in object) {
-//     return object[key];
-//   }
-//   return defaultvalue;
-// }

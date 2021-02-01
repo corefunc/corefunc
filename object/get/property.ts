@@ -10,8 +10,11 @@ import { v8Clone } from "../../v8/clone";
  * @since 0.0.47
  */
 export function objectGetProperty(object: Record<string, any>, key: string | string[], defaultValue?: any): any {
+  if (!object || typeof object !== "object") {
+    return defaultValue;
+  }
   if (typeof key === "string" && key in object) {
-    return object[key as string];
+    return object[key];
   }
   let keySet;
   if (typeof key === "string") {
@@ -22,8 +25,28 @@ export function objectGetProperty(object: Record<string, any>, key: string | str
     return defaultValue;
   }
   const length = keySet.length;
+  if (length === 1) {
+    if (keySet[0] in object) {
+      return object[keySet[0]];
+    } else {
+      return defaultValue;
+    }
+  }
   let index = 0;
-  let newObject = v8Clone(object);
+  let newObject;
+  try {
+    newObject = v8Clone(object);
+  } catch {
+    try {
+      newObject = { ...object };
+    } catch {
+      try {
+        newObject = JSON.parse(JSON.stringify(object));
+      } catch {
+        return defaultValue;
+      }
+    }
+  }
   let isSet = false;
   while (newObject !== null && index < length) {
     // @ts-ignore
@@ -44,14 +67,3 @@ export function objectGetProperty(object: Record<string, any>, key: string | str
     return defaultValue;
   }
 }
-
-// export function objectGetExistingProperty<
-//   ObjectType extends object,
-//   KeyType extends keyof ObjectType | string,
-//   DefaultType extends any
-//   >(object: ObjectType, key: KeyType, defaultValue?: DefaultType): ObjectType<KeyType> | DefaultType {
-//   if (key in object) {
-//     return object[key];
-//   }
-//   return defaultvalue;
-// }

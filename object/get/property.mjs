@@ -1,4 +1,4 @@
-import { v8Clone } from "../../v8/clone.mjs";
+import { v8Clone } from "../../v8/clone";
 
 /**
  * @name objectGetProperty
@@ -9,7 +9,10 @@ import { v8Clone } from "../../v8/clone.mjs";
  * @returns {*} Value in path or default value
  * @since 0.0.47
  */
-export function objectGetProperty(object, key, defaultValue) {
+export function objectGetProperty(object, key, defaultValue)  {
+  if (!object || typeof object !== "object") {
+    return defaultValue;
+  }
   if (typeof key === "string" && key in object) {
     return object[key];
   }
@@ -22,8 +25,28 @@ export function objectGetProperty(object, key, defaultValue) {
     return defaultValue;
   }
   const length = keySet.length;
+  if (length === 1) {
+    if (keySet[0] in object) {
+      return object[keySet[0]];
+    } else {
+      return defaultValue;
+    }
+  }
   let index = 0;
-  let newObject = v8Clone(object);
+  let newObject;
+  try {
+    newObject = v8Clone(object);
+  } catch {
+    try {
+      newObject = { ...object };
+    } catch {
+      try {
+        newObject = JSON.parse(JSON.stringify(object));
+      } catch {
+        return defaultValue;
+      }
+    }
+  }
   let isSet = false;
   while (newObject !== null && index < length) {
     // @ts-ignore
