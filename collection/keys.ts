@@ -1,4 +1,4 @@
-import checkIsKeyed from "../check/isKeyed";
+import { checkIsKeyed } from "../check/isKeyed";
 import { checkIsObjectLike } from "../check/isObjectLike";
 
 /**

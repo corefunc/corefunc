@@ -16,6 +16,6 @@
  * // TS2345: Argument of type 'number[]' is not assignable to parameter of type 'string[]'.
  * //   Type 'number' is not assignable to type 'string'.
  */
-export default function isArrayKnown<A extends Array<unknown>>(array: A): array is A {
+export function isArrayKnown<A extends Array<unknown>>(array: A): array is A {
   return Array.isArray(array);
 }

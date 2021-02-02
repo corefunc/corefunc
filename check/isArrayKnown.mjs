@@ -16,6 +16,6 @@
  * // TS2345: Argument of type 'number[]' is not assignable to parameter of type 'string[]'.
  * //   Type 'number' is not assignable to type 'string'.
  */
-export default function isArrayKnown(array) {
+export function isArrayKnown(array) {
   return Array.isArray(array);
 }

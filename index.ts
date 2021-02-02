@@ -1,4 +1,5 @@
 export * from "./cast";
+export * from "./check";
 export * from "./convert";
 export * from "./json";
 export * from "./object";

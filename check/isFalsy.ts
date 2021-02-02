@@ -1,4 +1,4 @@
-export default function checkIsFalsy(value: any): boolean {
+export function checkIsFalsy(value: any): boolean {
   if (value === false || value === 0) {
     return true;
   }

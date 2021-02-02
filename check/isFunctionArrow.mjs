@@ -1,4 +1,4 @@
-export default function checkIsFunctionArrow(callable) {
+export function checkIsFunctionArrow(callable) {
   if (!callable || typeof callable !== "function") {
     return false;
   }

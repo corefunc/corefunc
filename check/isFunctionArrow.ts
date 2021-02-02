@@ -1,4 +1,4 @@
-export default function checkIsFunctionArrow<F extends Function>(callable: F): boolean {
+export function checkIsFunctionArrow<F extends Function>(callable: F): boolean {
   if (!callable || typeof callable !== "function") {
     return false;
   }

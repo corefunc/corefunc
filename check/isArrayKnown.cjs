@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.isArrayKnown = void 0;
 /**
  * @name isArrayKnown
  * @param {Array} array
@@ -21,4 +22,4 @@ Object.defineProperty(exports, "__esModule", { value: true });
 function isArrayKnown(array) {
   return Array.isArray(array);
 }
-exports.default = isArrayKnown;
+exports.isArrayKnown = isArrayKnown;

@@ -9,15 +9,15 @@ const isObjectLike_1 = require("../check/isObjectLike");
  * @returns {Array}
  */
 function collectionKeys(iterable) {
-    if (!iterable) {
-        return [];
-    }
-    if (Array.isArray(iterable) || isKeyed_1.default(iterable)) {
-        return Array.from(iterable.keys());
-    }
-    if (isObjectLike_1.checkIsObjectLike(iterable) === false) {
-        return [];
-    }
-    return Object.keys(iterable);
+  if (!iterable) {
+    return [];
+  }
+  if (Array.isArray(iterable) || isKeyed_1.checkIsKeyed(iterable)) {
+    return Array.from(iterable.keys());
+  }
+  if (isObjectLike_1.checkIsObjectLike(iterable) === false) {
+    return [];
+  }
+  return Object.keys(iterable);
 }
 exports.collectionKeys = collectionKeys;

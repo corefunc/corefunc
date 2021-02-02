@@ -8,6 +8,6 @@ exports.checkIsSame = void 0;
  * @returns {boolean}
  */
 function checkIsSame(value1, value2) {
-  return Object.is(value1, value2);
+    return Object.is(value1, value2);
 }
 exports.checkIsSame = checkIsSame;

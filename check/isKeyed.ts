@@ -2,6 +2,6 @@
  * @param {*} value
  * @return {boolean}
  */
-export default function checkIsKeyed(value: any): boolean {
+export function checkIsKeyed(value: any): boolean {
   return value instanceof Set || value instanceof Map;
 }

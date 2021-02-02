@@ -4,6 +4,6 @@
  * @param {*} value2
  * @returns {boolean}
  */
-export default function checkIsSame(value1: any, value2: any): boolean {
+export function checkIsSame(value1: any, value2: any): boolean {
   return Object.is(value1, value2);
 }

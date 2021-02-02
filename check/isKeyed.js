@@ -6,6 +6,6 @@ exports.checkIsKeyed = void 0;
  * @return {boolean}
  */
 function checkIsKeyed(value) {
-  return value instanceof Set || value instanceof Map;
+    return value instanceof Set || value instanceof Map;
 }
 exports.checkIsKeyed = checkIsKeyed;

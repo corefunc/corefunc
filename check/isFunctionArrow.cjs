@@ -1,4 +1,7 @@
-module.exports = function checkIsFunctionArrow(callable) {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.checkIsFunctionArrow = void 0;
+function checkIsFunctionArrow(callable) {
   if (!callable || typeof callable !== "function") {
     return false;
   }
@@ -38,4 +41,5 @@ module.exports = function checkIsFunctionArrow(callable) {
     index++;
   }
   return false;
-};
+}
+exports.checkIsFunctionArrow = checkIsFunctionArrow;

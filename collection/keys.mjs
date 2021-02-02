@@ -1,4 +1,4 @@
-import checkIsKeyed from "../check/isKeyed.mjs";
+import { checkIsKeyed } from "../check/isKeyed.mjs";
 import { checkIsObjectLike } from "../check/isObjectLike.mjs";
 
 /**
