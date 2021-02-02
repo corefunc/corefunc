@@ -85,9 +85,7 @@
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-function tsd-parent-kind-module tsd-is-external"><a href="collection.html#collectionatany" class="tsd-kind-icon">collection<wbr>AtAny</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-module tsd-is-external"><a href="collection.html#collectionforeach" class="tsd-kind-icon">collection<wbr>For<wbr>Each</a></li>
-								<li class="tsd-kind-function tsd-parent-kind-module tsd-is-external"><a href="collection.html#collectionhead" class="tsd-kind-icon">collection<wbr>Head</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-module tsd-is-external"><a href="collection.html#collectionkeys" class="tsd-kind-icon">collection<wbr>Keys</a></li>
-								<li class="tsd-kind-function tsd-parent-kind-module tsd-is-external"><a href="collection.html#collectionsortkeys" class="tsd-kind-icon">collection<wbr>Sort<wbr>Keys</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-module tsd-is-external"><a href="collection.html#collectionvalues" class="tsd-kind-icon">collection<wbr>Values</a></li>
 							</ul>
 						</section>
@@ -106,13 +104,15 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in collection/atAny.ts:10</li>
+									<li>Defined in collection/atAny.ts:11</li>
 								</ul>
 							</aside>
-							<div class="tsd-comment tsd-typography tsd-comment-shorttext">
-								<div class="lead">
-									<p>Pick object property from list of names</p>
-								</div>
+							<div class="tsd-comment tsd-typography tsd-comment-tags">
+								<dl class="tsd-comment-tags"><dt>name</dt>
+									<dd><p>collectionAtAny</p>
+									</dd><dt>description</dt>
+									<dd><p>Pick object property from list of names</p>
+								</dd></dl>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
@@ -201,58 +201,6 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module tsd-is-external">
-					<a name="collectionhead" class="tsd-anchor"></a>
-					<h3>collection<wbr>Head</h3>
-					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">collection<wbr>Head<span class="tsd-signature-symbol">(</span>iterable<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, clone<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span>, defaultValue<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in collection/head.ts:25</li>
-								</ul>
-							</aside>
-							<div class="tsd-comment tsd-typography tsd-comment-shorttext">
-								<div class="lead">
-									<p>Gets the first element of traversable variable</p>
-								</div>
-								</div><div class="tsd-comment tsd-typography tsd-comment-tags">
-								<dl class="tsd-comment-tags"><dt>example</dt>
-									<dd><p>head(null) ➜ undefined</p>
-									</dd><dt>example</dt>
-									<dd><p>head(null, 0) ➜ 0</p>
-									</dd><dt>example</dt>
-									<dd><p>head([], 0) ➜ 0</p>
-									</dd><dt>example</dt>
-									<dd><p>head([], new Error(&quot;Array should not be empty!&quot;))</p>
-									</dd><dt>example</dt>
-									<dd><p>head([0, 1, 2]) ➜ 0</p>
-									</dd><dt>example</dt>
-									<dd><p>head({b: 1, a: 2,}) ➜ 2</p>
-									</dd><dt>example</dt>
-									<dd><p>head(new Set([1, 2, 3])) ➜ 1</p>
-									</dd><dt>example</dt>
-									<dd><p>head(new Map([[&quot;b&quot;, 1], [&quot;a&quot;, 2]]))  ➜ 2</p>
-								</dd></dl>
-							</div>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>iterable: <span class="tsd-signature-type">any</span></h5>
-								</li>
-								<li>
-									<h5>clone: <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> = true</span></h5>
-								</li>
-								<li>
-									<h5>defaultValue: <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol"> = ...</span></h5>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module tsd-is-external">
 					<a name="collectionkeys" class="tsd-anchor"></a>
 					<h3>collection<wbr>Keys</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module tsd-is-external">
@@ -277,35 +225,6 @@
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module tsd-is-external">
-					<a name="collectionsortkeys" class="tsd-anchor"></a>
-					<h3>collection<wbr>Sort<wbr>Keys</h3>
-					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">collection<wbr>Sort<wbr>Keys<span class="tsd-signature-symbol">(</span>iterable<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, comparator<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, isDeep<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in collection/sortKeysBy.ts:7</li>
-								</ul>
-							</aside>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>iterable: <span class="tsd-signature-type">any</span></h5>
-								</li>
-								<li>
-									<h5>comparator: <span class="tsd-signature-type">any</span></h5>
-								</li>
-								<li>
-									<h5>isDeep: <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> = true</span></h5>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -345,13 +264,7 @@
 						<a href="collection.html#collectionforeach" class="tsd-kind-icon">collection<wbr>For<wbr>Each</a>
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-module tsd-is-external root">
-						<a href="collection.html#collectionhead" class="tsd-kind-icon">collection<wbr>Head</a>
-					</li>
-					<li class=" tsd-kind-function tsd-parent-kind-module tsd-is-external root">
 						<a href="collection.html#collectionkeys" class="tsd-kind-icon">collection<wbr>Keys</a>
-					</li>
-					<li class=" tsd-kind-function tsd-parent-kind-module tsd-is-external root">
-						<a href="collection.html#collectionsortkeys" class="tsd-kind-icon">collection<wbr>Sort<wbr>Keys</a>
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-module tsd-is-external root">
 						<a href="collection.html#collectionvalues" class="tsd-kind-icon">collection<wbr>Values</a>

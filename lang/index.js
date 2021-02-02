@@ -12,6 +12,6 @@ var __exportStar = (this && this.__exportStar) || function(m, exports) {
 Object.defineProperty(exports, "__esModule", { value: true });
 // export * from "./environment";
 __exportStar(require("./iteratorSymbol"), exports);
-__exportStar(require("./queueMicrotask"), exports);
+// export * from "./queueMicrotask";
 __exportStar(require("./sleep"), exports);
 __exportStar(require("./spaceship"), exports);
