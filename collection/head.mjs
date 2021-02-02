@@ -1,7 +1,7 @@
-import fnCloneDeep from "lodash-es/cloneDeep";
-import fnHead from "lodash-es/head";
-import fnKeys from "lodash-es/keys";
-import fnSortBy from "lodash-es/sortBy";
+import * as fnCloneDeep from "lodash-es/cloneDeep";
+import * as fnHead from "lodash-es/head";
+import * as fnKeys from "lodash-es/keys";
+import * as fnSortBy from "lodash-es/sortBy";
 
 import { isMap } from "../is/map.mjs";
 import { isSet } from "../is/set.mjs";

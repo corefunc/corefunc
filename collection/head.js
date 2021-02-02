@@ -1,10 +1,10 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.collectionHead = void 0;
-const cloneDeep_1 = require("lodash-es/cloneDeep");
-const head_1 = require("lodash-es/head");
-const keys_1 = require("lodash-es/keys");
-const sortBy_1 = require("lodash-es/sortBy");
+const fnCloneDeep = require("lodash-es/cloneDeep");
+const fnHead = require("lodash-es/head");
+const fnKeys = require("lodash-es/keys");
+const fnSortBy = require("lodash-es/sortBy");
 const map_1 = require("../is/map");
 const set_1 = require("../is/set");
 const isTraversable_1 = require("../check/isTraversable");
@@ -28,17 +28,17 @@ function collectionHead(iterable, clone = true, defaultValue = undefined) {
         return defaultValue;
     }
     if (!isTraversable_1.checkIsTraversable(iterable)) {
-        return cloneDeep_1.default(defaultValue);
+        return fnCloneDeep(defaultValue);
     }
     if (Array.isArray(iterable)) {
         if (iterable.length === 0) {
             return defaultValue;
         }
         if (clone) {
-            return cloneDeep_1.default(head_1.default(iterable));
+            return fnCloneDeep(fnHead(iterable));
         }
         else {
-            return head_1.default(iterable);
+            return fnHead(iterable);
         }
     }
     if (set_1.isSet(iterable)) {
@@ -47,30 +47,30 @@ function collectionHead(iterable, clone = true, defaultValue = undefined) {
             return defaultValue;
         }
         if (clone) {
-            return cloneDeep_1.default(head_1.default(values));
+            return fnCloneDeep(fnHead(values));
         }
         else {
-            return head_1.default(values);
+            return fnHead(values);
         }
     }
     if (map_1.isMap(iterable)) {
-        const keys = sortBy_1.default(Array.from(iterable.keys()));
+        const keys = fnSortBy(Array.from(iterable.keys()));
         if (keys.length === 0) {
             return defaultValue;
         }
         if (clone) {
-            return cloneDeep_1.default(iterable.get(head_1.default(keys)));
+            return fnCloneDeep(iterable.get(fnHead(keys)));
         }
         else {
-            return iterable.get(head_1.default(keys));
+            return iterable.get(fnHead(keys));
         }
     }
-    const keys = sortBy_1.default(keys_1.default(iterable));
+    const keys = fnSortBy(fnKeys(iterable));
     if (keys.length === 0) {
         return defaultValue;
     }
     if (clone) {
-        return cloneDeep_1.default(iterable[keys[0]]);
+        return fnCloneDeep(iterable[keys[0]]);
     }
     else {
         return iterable[keys[0]];

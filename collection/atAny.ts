@@ -1,14 +1,15 @@
-import fnIsObjectLike from "lodash-es/isObjectLike";
+import { checkIsObjectLike } from "../check/isObjectLike";
 
 /**
- * Pick object property from list of names
+ * @name collectionAtAny
+ * @description Pick object property from list of names
  * @param {*} object
  * @param {Array} propertyNames
  * @param {*=} onFail
  * @returns {*}
  */
 export function collectionAtAny(object, propertyNames, onFail) {
-  if (fnIsObjectLike(object) === false) {
+  if (checkIsObjectLike(object) === false) {
     return onFail;
   }
   if (Array.isArray(propertyNames) === false) {
