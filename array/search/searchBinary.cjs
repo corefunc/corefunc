@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.arraySearchBinary = void 0;
 function arraySearchBinary(array, target) {
   let start = 0;
   let end = array.length;
@@ -8,7 +9,8 @@ function arraySearchBinary(array, target) {
     if (array[pivot] !== target) {
       if (target < array[pivot]) {
         end = pivot;
-      } else {
+      }
+      else {
         start = pivot;
       }
       pivot = Math.floor((start + end) / 2);
@@ -19,4 +21,4 @@ function arraySearchBinary(array, target) {
   }
   return -1;
 }
-exports.default = arraySearchBinary;
+exports.arraySearchBinary = arraySearchBinary;

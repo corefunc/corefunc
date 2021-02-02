@@ -10,7 +10,7 @@ function merge(array1, array2) {
   return sorted.concat(array1.slice().concat(array2.slice()));
 }
 
-function arraySortMerge(array: number[]): number[] {
+export function arraySortMerge(array: number[]): number[] {
   if (array.length <= 1) {
     return array;
   }
@@ -19,5 +19,3 @@ function arraySortMerge(array: number[]): number[] {
   const right = arraySortMerge(array.slice(mid));
   return merge(left, right);
 }
-
-export default arraySortMerge;

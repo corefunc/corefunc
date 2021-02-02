@@ -1,4 +1,4 @@
-export default function arraySearchBinary(array: number[], target: number): number {
+export function arraySearchBinary(array: number[], target: number): number {
   let start = 0;
   let end = array.length;
   let pivot = Math.floor((start + end) / 2);

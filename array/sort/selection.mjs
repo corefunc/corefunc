@@ -1,4 +1,4 @@
-export default function arraySortSelection(array) {
+export function arraySortSelection(array) {
   const swap = (list, alpha, beta) => ([list[alpha], list[beta]] = [list[beta], list[alpha]]);
   array.forEach((item, index) => {
     let min = index;

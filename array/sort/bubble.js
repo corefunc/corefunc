@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.arraySortBubble = void 0;
 /**
  * @name arraySortBubble
  * @param {Array.<number>} array
@@ -16,4 +17,4 @@ function arraySortBubble(array) {
     }
     return array;
 }
-exports.default = arraySortBubble;
+exports.arraySortBubble = arraySortBubble;

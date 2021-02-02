@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.arraySortQuick = void 0;
 function swap(items, firstIndex, secondIndex) {
   const temp = items[firstIndex];
   items[firstIndex] = items[secondIndex];
@@ -41,4 +42,4 @@ function arraySortQuick(items, left, right) {
   }
   return items;
 }
-exports.default = arraySortQuick;
+exports.arraySortQuick = arraySortQuick;

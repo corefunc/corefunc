@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.arrayGetHead = void 0;
-const first_1 = require("../key/first.cjs");
+const first_1 = require("../key/first");
 /**
  * @name arrayGetHead
  * @param {Array} array
@@ -15,7 +15,7 @@ function arrayGetHead(array, onFail) {
   if (!Array.isArray(array)) {
     return onFail;
   }
-  const first = first_1.default(array);
+  const first = first_1.arrayKeyFirst(array);
   if (first === null) {
     return onFail;
   }

@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.arraySortInsertion = void 0;
 function arraySortInsertion(array) {
     array.forEach((item, index) => {
         const num = array[index];
@@ -11,4 +12,4 @@ function arraySortInsertion(array) {
     });
     return array;
 }
-exports.default = arraySortInsertion;
+exports.arraySortInsertion = arraySortInsertion;

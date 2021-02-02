@@ -1,4 +1,4 @@
-import arrayKeyFirst from "../key/first.mjs";
+import { arrayKeyFirst } from "../key/first.mjs";
 
 /**
  * @name arrayGetHead

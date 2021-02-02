@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.arraySortMerge = void 0;
 function merge(array1, array2) {
     const sorted = [];
     while (array1.length && array2.length) {
@@ -21,4 +22,4 @@ function arraySortMerge(array) {
     const right = arraySortMerge(array.slice(mid));
     return merge(left, right);
 }
-exports.default = arraySortMerge;
+exports.arraySortMerge = arraySortMerge;

@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.arraySortSelection = void 0;
 function arraySortSelection(array) {
   const swap = (list, alpha, beta) => ([list[alpha], list[beta]] = [list[beta], list[alpha]]);
   array.forEach((item, index) => {
@@ -13,4 +14,4 @@ function arraySortSelection(array) {
   });
   return array;
 }
-exports.default = arraySortSelection;
+exports.arraySortSelection = arraySortSelection;

@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.arrayKeyFirst = void 0;
 /**
  * @name arrayKeyFirst
  * @param {Array} array
@@ -11,4 +12,4 @@ function arrayKeyFirst(array) {
     }
     return null;
 }
-exports.default = arrayKeyFirst;
+exports.arrayKeyFirst = arrayKeyFirst;

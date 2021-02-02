@@ -1,4 +1,4 @@
-export default function arraySortInsertion(array) {
+export function arraySortInsertion(array) {
   array.forEach((item, index) => {
     const num = array[index];
     let subIndex;

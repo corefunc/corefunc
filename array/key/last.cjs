@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.arrayKeyLast = void 0;
 /**
  * @name arrayKeyLast
  * @param {Array} array
@@ -11,4 +12,4 @@ function arrayKeyLast(array) {
   }
   return null;
 }
-exports.default = arrayKeyLast;
+exports.arrayKeyLast = arrayKeyLast;

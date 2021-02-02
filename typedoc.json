@@ -14,6 +14,7 @@
     "./hash/index.ts",
     "./high-order/index.ts",
     "./is/index.ts",
+    "./json/index.ts",
     "./lang/index.ts",
     "./number/index.ts",
     "./object/index.ts",

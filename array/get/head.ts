@@ -1,4 +1,4 @@
-import arrayKeyFirst from "../key/first";
+import { arrayKeyFirst } from "../key/first";
 
 /**
  * @name arrayGetHead

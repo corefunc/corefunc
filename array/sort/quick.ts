@@ -24,7 +24,7 @@ function partition(items, left, right) {
   return indexLeft;
 }
 
-export default function arraySortQuick(items: number[], left: number, right: number): number[] {
+export function arraySortQuick(items: number[], left: number, right: number): number[] {
   let index;
   if (items.length > 1) {
     // eslint-disable-next-line no-ternary

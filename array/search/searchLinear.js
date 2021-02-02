@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.arraySearchLinear = void 0;
 function arraySearchLinear(array, target) {
     for (let index = 0; index < array.length; index++) {
         if (array[index] === target) {
@@ -8,4 +9,4 @@ function arraySearchLinear(array, target) {
     }
     return -1;
 }
-exports.default = arraySearchLinear;
+exports.arraySearchLinear = arraySearchLinear;
