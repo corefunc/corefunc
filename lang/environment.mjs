@@ -1,3 +1,6 @@
+/**
+ * @deprecated
+ */
 export function langEnvironment() {
   const inBrowser = typeof window !== "undefined";
   // @ts-ignore

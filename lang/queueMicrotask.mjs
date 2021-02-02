@@ -26,7 +26,7 @@ if (typeof globalThis["queueMicrotask"] === "function") {
       .catch((error) =>
         setTimeout(() => {
           throw error;
-        }),
+        }, 1),
       );
   };
 }

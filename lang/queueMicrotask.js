@@ -29,7 +29,7 @@ else {
             .then(callback)
             .catch((error) => setTimeout(() => {
             throw error;
-        }));
+        }, 1));
     };
 }
 exports.langQueueMicrotask = queueMicrotask;

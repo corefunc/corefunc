@@ -19,17 +19,17 @@ let queueMicrotask;
 /*global globalThis*/
 if (typeof globalThis["queueMicrotask"] === "function") {
   queueMicrotask = globalThis["queueMicrotask"];
-} else if ("process" in globalThis && globalThis["process"]["versions"] && globalThis["process"]["versions"]["node"]) {
+}
+else if ("process" in globalThis && globalThis["process"]["versions"] && globalThis["process"]["versions"]["node"]) {
   queueMicrotask = globalThis["process"]["nextTick"];
-} else {
+}
+else {
   queueMicrotask = function (callback) {
     Promise.resolve()
       .then(callback)
-      .catch((error) =>
-        setTimeout(() => {
-          throw error;
-        }),
-      );
+      .catch((error) => setTimeout(() => {
+        throw error;
+      }, 1));
   };
 }
 exports.langQueueMicrotask = queueMicrotask;

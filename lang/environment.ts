@@ -1,3 +1,6 @@
+/**
+ * @deprecated
+ */
 export function langEnvironment(): {
   UA: string;
   inBrowser: boolean;

@@ -1,6 +1,9 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.langEnvironment = void 0;
+/**
+ * @deprecated
+ */
 function langEnvironment() {
   const inBrowser = typeof window !== "undefined";
   // @ts-ignore
