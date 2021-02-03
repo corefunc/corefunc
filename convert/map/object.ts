@@ -1,4 +1,4 @@
-export default function convertMapToObject(map: Map<any, any>): object {
+export function convertMapToObject(map: Map<any, any>): object {
   const object = {};
   map.forEach((value, key) => {
     switch (typeof value) {

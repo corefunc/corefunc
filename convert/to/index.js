@@ -12,4 +12,5 @@ var __exportStar = (this && this.__exportStar) || function(m, exports) {
 Object.defineProperty(exports, "__esModule", { value: true });
 __exportStar(require("./flag"), exports);
 __exportStar(require("./hash"), exports);
-__exportStar(require("./jsonData"), exports);
+__exportStar(require("./json-data"), exports);
+__exportStar(require("./plain-object"), exports);

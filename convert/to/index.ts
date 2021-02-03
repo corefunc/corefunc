@@ -1,3 +1,4 @@
 export * from "./flag";
 export * from "./hash";
-export * from "./jsonData";
+export * from "./json-data";
+export * from "./plain-object";

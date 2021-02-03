@@ -1,4 +1,7 @@
-module.exports = function convertMapToObject(map) {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.convertMapToObject = void 0;
+function convertMapToObject(map) {
   const object = {};
   map.forEach((value, key) => {
     switch (typeof value) {
@@ -24,4 +27,5 @@ module.exports = function convertMapToObject(map) {
     }
   });
   return object;
-};
+}
+exports.convertMapToObject = convertMapToObject;
