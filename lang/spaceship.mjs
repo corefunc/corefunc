@@ -1,15 +1,16 @@
-// a <=> b :=
-//     if a < b then return -1
-//     if a = b then return  0
-//     if a > b then return  1
 /**
- * Combined comparison for JavaScript <=>
+ * @name langSpaceship
+ * @description Combined comparison for JavaScript <=>
+ * A <=> B :=
+ * if A < B then return -1
+ * if A = B then return  0
+ * if A > B then return  1
  * @param {*} valueOne
  * @param {*} valueTwo
- * @return {Number}
+ * @returns {Number}
  */
 export function langSpaceship(valueOne, valueTwo) {
-  if (isNaN(valueOne) && isNaN(valueTwo)) {
+  if (Number.isNaN(valueOne) && Number.isNaN(valueTwo)) {
     return 0;
   } else if (valueOne === null || valueTwo === null || typeof valueOne !== typeof valueTwo) {
     if (valueOne > valueTwo) {

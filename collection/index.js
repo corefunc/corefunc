@@ -12,7 +12,5 @@ var __exportStar = (this && this.__exportStar) || function(m, exports) {
 Object.defineProperty(exports, "__esModule", { value: true });
 __exportStar(require("./atAny"), exports);
 __exportStar(require("./forEach"), exports);
-// export * from "./head";
 __exportStar(require("./keys"), exports);
-// export * from "./sortKeysBy";
 __exportStar(require("./values"), exports);

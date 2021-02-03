@@ -17,7 +17,7 @@ exports.isArrayKnown = void 0;
  * // OK
  * isArrayKnown<string[]>(arrayOfNumbers);
  * // TS2345: Argument of type 'number[]' is not assignable to parameter of type 'string[]'.
- * //   Type 'number' is not assignable to type 'string'.
+ * // Type 'number' is not assignable to type 'string'.
  */
 function isArrayKnown(array) {
   return Array.isArray(array);
