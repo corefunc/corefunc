@@ -12,6 +12,12 @@ var __exportStar = (this && this.__exportStar) || function(m, exports) {
 Object.defineProperty(exports, "__esModule", { value: true });
 __exportStar(require("./abbreviate"), exports);
 __exportStar(require("./camel"), exports);
+__exportStar(require("./capitalize"), exports);
 __exportStar(require("./kebab"), exports);
+__exportStar(require("./kebab"), exports);
+__exportStar(require("./lower"), exports);
+__exportStar(require("./screaming-snake"), exports);
 __exportStar(require("./snake"), exports);
 __exportStar(require("./title"), exports);
+__exportStar(require("./train"), exports);
+__exportStar(require("./upper"), exports);

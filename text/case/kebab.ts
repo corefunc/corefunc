@@ -1,3 +1,5 @@
+import { castToString } from "../../cast/to/string";
+
 /**
  * @name textCaseKebab
  * @description Converts string into kebab-case.
@@ -6,8 +8,14 @@
  * @see https://stackoverflow.com/questions/196972/convert-string-to-title-case-with-javascript
  */
 export function textCaseKebab(text: string): string {
-  return text
+  return castToString(text)
     .split("")
-    .map((letter, idx) => (letter.toUpperCase() === letter ? `${idx !== 0 ? "-" : ""}${letter.toLowerCase()}` : letter))
+    .map((letter, index) => {
+      if (letter.toUpperCase() === letter) {
+        return `${index !== 0 ? "-" : ""}${letter.toLowerCase()}`;
+      } else {
+        return letter;
+      }
+    })
     .join("");
 }
