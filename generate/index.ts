@@ -1,3 +1,4 @@
+export * from "./boolean";
 export * from "./range";
 export * from "./string";
 export * from "./token";
