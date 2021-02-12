@@ -10,7 +10,7 @@ const string_1 = require("../../cast/to/string");
  * @since 0.1.31
  */
 function textCaseCapitalize(text) {
-  const string = string_1.castToString(text).normalize();
-  return string.charAt(0).toUpperCase() + string.slice(1);
+    const string = string_1.castToString(text).normalize();
+    return string.charAt(0).toUpperCase() + string.slice(1);
 }
 exports.textCaseCapitalize = textCaseCapitalize;

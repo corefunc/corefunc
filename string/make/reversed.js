@@ -8,6 +8,6 @@ exports.stringMakeReversed = void 0;
  * @since 0.1.32
  */
 function stringMakeReversed(text) {
-  return Array.from(text).reverse().join("");
+    return Array.from(text).reverse().join("");
 }
 exports.stringMakeReversed = stringMakeReversed;
