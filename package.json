@@ -32,7 +32,7 @@
     "jest": "26.6.3",
     "prettier": "2.2.1",
     "tslint-config-standard": "9.0.0",
-    "typedoc": "0.20.28",
+    "typedoc": "0.20.29",
     "typedoc-neo-theme": "1.1.0",
     "typescript": "4.1.5"
   },
