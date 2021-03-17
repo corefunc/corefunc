@@ -54,7 +54,7 @@
   },
   "scripts": {
     "doc": "typedoc --options typedoc.json",
-    "lint": "eslint ./**/*.{cj,mj,t}s",
+    "lint": "eslint ./**/*.{mj,t}s",
     "lint:dir": "eslint ./**/*.{cj,mj,t}s",
     "lint:md": "remark .",
     "package:upgrade": "npx npm-check --update",
@@ -63,5 +63,5 @@
     "test:coverage": "jest --collect-coverage",
     "test:mjs": "node --experimental-modules ./tests/index.mjs"
   },
-  "version": "0.1.36"
+  "version": "0.1.37"
 }

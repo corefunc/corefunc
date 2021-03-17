@@ -8,6 +8,7 @@
     "./collection/index.ts",
     "./convert/index.ts",
     "./crypt/index.ts",
+    "./date/index.ts",
     "./fp/index.ts",
     "./func/index.ts",
     "./generate/index.ts",

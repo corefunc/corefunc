@@ -15,12 +15,8 @@ const safe_2 = require("../stringify/safe");
  * @example ```jsonJsonify({ 1: "one" }) ➜ {"1":"one"}```
  */
 function jsonJsonify(
-  //
-  value,
-  defaultResult,
-  unsafe = true,
-  fix = true,
-) {
-  return safe_1.jsonParseSafe(safe_2.jsonStringifySafe(value), defaultResult, unsafe, fix);
+//
+value, defaultResult, unsafe = true, fix = true) {
+    return safe_1.jsonParseSafe(safe_2.jsonStringifySafe(value), defaultResult, unsafe, fix);
 }
 exports.jsonJsonify = jsonJsonify;

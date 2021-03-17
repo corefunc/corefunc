@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>fp | @corefunc/corefunc</title>
+	<title>date | @corefunc/corefunc</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -55,7 +55,7 @@
 		<div class="container">
 			<ul class="tsd-breadcrumb">
 				<li>
-					<a href="fp.html">fp</a>
+					<a href="date.html">date</a>
 				</li>
 			</ul>
 		</div>
@@ -70,20 +70,20 @@
 						<a href="../modules.html">Modules</a>
 					</li>
 					<li class="current tsd-kind-module tsd-is-external">
-						<a href="fp.html">fp</a>
+						<a href="date.html">date</a>
 					</li>
 				</ul>
 			</nav>
 		</div>
 		<div class="col-7 offset-3 col-content">
-			<h1>Module fp</h1>
+			<h1>Module date</h1>
 			<section class="tsd-panel-group tsd-index-group">
 				<section class="tsd-panel tsd-index-panel">
 					<div class="tsd-index-content">
 						<section class="tsd-index-section tsd-is-external">
 							<h3>Functions</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-function tsd-parent-kind-module tsd-is-external"><a href="fp.html#compose" class="tsd-kind-icon">compose</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module tsd-is-external"><a href="date.html#dateisleapyear" class="tsd-kind-icon">date<wbr>IsLeap<wbr>Year</a></li>
 							</ul>
 						</section>
 					</div>
@@ -92,27 +92,44 @@
 			<section class="tsd-panel-group tsd-member-group tsd-is-external">
 				<h2>Functions</h2>
 				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module tsd-is-external">
-					<a name="compose" class="tsd-anchor"></a>
-					<h3>compose</h3>
+					<a name="dateisleapyear" class="tsd-anchor"></a>
+					<h3>date<wbr>IsLeap<wbr>Year</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">compose<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">...</span>fns<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">function</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">unknown</span></li>
+						<li class="tsd-signature tsd-kind-icon">date<wbr>IsLeap<wbr>Year<span class="tsd-signature-symbol">(</span>year<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in fp/compose.ts:4</li>
+									<li>Defined in date/isLeapYear.ts:16</li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography tsd-comment-tags">
+								<dl class="tsd-comment-tags"><dt>name</dt>
+									<dd><p>dateIsLeapYear</p>
+									</dd><dt>description</dt>
+									<dd><p>Find whether a year is a leap year</p>
+									</dd><dt>since</dt>
+									<dd><p>0.1.37</p>
+									</dd><dt>example</dt>
+									<dd><pre><code class="language-javascript"><span style="color: #795E26">dateIsLeapYear</span><span style="color: #000000">(</span><span style="color: #098658">2000</span><span style="color: #000000">); </span><span style="color: #008000">// ➜ true</span>
+</code></pre>
+									</dd><dt>example</dt>
+									<dd><pre><code class="language-javascript"><span style="color: #795E26">dateIsLeapYear</span><span style="color: #000000">(</span><span style="color: #098658">2001</span><span style="color: #000000">); </span><span style="color: #008000">// ➜ false</span>
+</code></pre>
+								</dd></dl>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5><span class="tsd-flag ts-flagRest">Rest</span> <span class="tsd-signature-symbol">...</span>fns: <span class="tsd-signature-type">function</span><span class="tsd-signature-symbol">[]</span></h5>
+									<h5>year: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = ...</span></h5>
 									<div class="tsd-comment tsd-typography tsd-comment-text">
+										<p>Year to check</p>
 									</div>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">unknown</span></h4>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+							<p>Is leap year</p>
 						</li>
 					</ul>
 				</section>
@@ -123,7 +140,7 @@
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
 					<li class=" tsd-kind-function tsd-parent-kind-module tsd-is-external root">
-						<a href="fp.html#compose" class="tsd-kind-icon">compose</a>
+						<a href="date.html#dateisleapyear" class="tsd-kind-icon">date<wbr>IsLeap<wbr>Year</a>
 					</li>
 				</ul>
 			</nav>
