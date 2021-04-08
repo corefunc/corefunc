@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.jsonStringifySafe = void 0;
+const json_1 = require("../../convert/error/json.js");
 function serializer(replacer, cycleReplacerArg = null) {
   const keys = [];
   const stack = [];
@@ -15,6 +16,9 @@ function serializer(replacer, cycleReplacerArg = null) {
   }
   return function (key, value) {
     let result = value;
+    if (result instanceof Error) {
+      result = json_1.convertErrorToJson(result);
+    }
     if (stack.length > 0) {
       const thisPos = stack.indexOf(this);
       ~thisPos ? stack.splice(thisPos + 1) : stack.push(this);
@@ -22,7 +26,8 @@ function serializer(replacer, cycleReplacerArg = null) {
       if (stack.indexOf(result) !== -1) {
         result = cycleReplacer.call(this, key, result);
       }
-    } else {
+    }
+    else {
       stack.push(result);
     }
     if (replacer && Object.prototype.toString.call(replacer) === "[object Function]") {

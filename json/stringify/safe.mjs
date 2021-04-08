@@ -1,3 +1,5 @@
+import { convertErrorToJson } from "../../convert/error/json.mjs";
+
 function serializer(replacer, cycleReplacerArg = null) {
   const keys = [];
   const stack = [];
@@ -12,6 +14,9 @@ function serializer(replacer, cycleReplacerArg = null) {
   }
   return function (key, value) {
     let result = value;
+    if (result instanceof Error) {
+      result = convertErrorToJson(result);
+    }
     if (stack.length > 0) {
       const thisPos = stack.indexOf(this);
       ~thisPos ? stack.splice(thisPos + 1) : stack.push(this);

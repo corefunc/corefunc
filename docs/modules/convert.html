@@ -85,6 +85,8 @@
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-function tsd-parent-kind-module tsd-is-external"><a href="convert.html#convertarraybuffertostring" class="tsd-kind-icon">convert<wbr>Array<wbr>Buffer<wbr>ToString</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-module tsd-is-external"><a href="convert.html#convertarraytoobject" class="tsd-kind-icon">convert<wbr>Array<wbr>ToObject</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module tsd-is-external"><a href="convert.html#converterrortojson" class="tsd-kind-icon">convert<wbr>Error<wbr>ToJson</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module tsd-is-external"><a href="convert.html#converterrortoobject" class="tsd-kind-icon">convert<wbr>Error<wbr>ToObject</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-module tsd-is-external"><a href="convert.html#convertmaptoobject" class="tsd-kind-icon">convert<wbr>Map<wbr>ToObject</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-module tsd-is-external"><a href="convert.html#convertstringtoarraybuffer" class="tsd-kind-icon">convert<wbr>String<wbr>ToArray<wbr>Buffer</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-module tsd-is-external"><a href="convert.html#converttoflag" class="tsd-kind-icon">convert<wbr>ToFlag</a></li>
@@ -146,6 +148,70 @@
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">object</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module tsd-is-external">
+					<a name="converterrortojson" class="tsd-anchor"></a>
+					<h3>convert<wbr>Error<wbr>ToJson</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module tsd-is-external">
+						<li class="tsd-signature tsd-kind-icon">convert<wbr>Error<wbr>ToJson<span class="tsd-signature-symbol">(</span>error<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Error</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">EvalError</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">RangeError</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">ReferenceError</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">SyntaxError</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">TypeError</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">URIError</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Record</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">unknown</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Record</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in convert/error/json.ts:10</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography tsd-comment-tags">
+								<dl class="tsd-comment-tags"><dt>name</dt>
+									<dd><p>convertErrorToJson</p>
+									</dd><dt>description</dt>
+									<dd><p>Converts Error type to plain JSON object.</p>
+									</dd><dt>since</dt>
+									<dd><p>0.1.40</p>
+								</dd></dl>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>error: <span class="tsd-signature-type">Error</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">EvalError</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">RangeError</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">ReferenceError</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">SyntaxError</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">TypeError</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">URIError</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Record</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">unknown</span><span class="tsd-signature-symbol">&gt;</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Record</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module tsd-is-external">
+					<a name="converterrortoobject" class="tsd-anchor"></a>
+					<h3>convert<wbr>Error<wbr>ToObject</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module tsd-is-external">
+						<li class="tsd-signature tsd-kind-icon">convert<wbr>Error<wbr>ToObject<span class="tsd-signature-symbol">(</span>error<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Error</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">EvalError</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">RangeError</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">ReferenceError</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">SyntaxError</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">TypeError</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">URIError</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Record</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">unknown</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Record</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">unknown</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in convert/error/object.ts:8</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography tsd-comment-tags">
+								<dl class="tsd-comment-tags"><dt>name</dt>
+									<dd><p>convertErrorToObject</p>
+									</dd><dt>description</dt>
+									<dd><p>Converts Error type to plain object.</p>
+									</dd><dt>since</dt>
+									<dd><p>0.1.40</p>
+								</dd></dl>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>error: <span class="tsd-signature-type">Error</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">EvalError</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">RangeError</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">ReferenceError</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">SyntaxError</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">TypeError</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">URIError</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Record</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">unknown</span><span class="tsd-signature-symbol">&gt;</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Record</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">unknown</span><span class="tsd-signature-symbol">&gt;</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -364,6 +430,12 @@
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-module tsd-is-external root">
 						<a href="convert.html#convertarraytoobject" class="tsd-kind-icon">convert<wbr>Array<wbr>ToObject</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module tsd-is-external root">
+						<a href="convert.html#converterrortojson" class="tsd-kind-icon">convert<wbr>Error<wbr>ToJson</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module tsd-is-external root">
+						<a href="convert.html#converterrortoobject" class="tsd-kind-icon">convert<wbr>Error<wbr>ToObject</a>
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-module tsd-is-external root">
 						<a href="convert.html#convertmaptoobject" class="tsd-kind-icon">convert<wbr>Map<wbr>ToObject</a>
