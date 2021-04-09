@@ -3,10 +3,11 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.numberZeroPad = void 0;
 /**
  * @name numberZeroPad
- * @description Pad a number with leading zeros.
+ * @description Pad a number with leading zeros and zeroes after the decimal point.
  * @throws {RangeError|TypeError}
  * @param {Number|String} numberToPad
- * @param {Number} targetLength
+ * @param {Number} [leadingLength=0]
+ * @param {Number=} decimalLength
  * @returns {String}
  * @since 0.1.39
  * @example
@@ -15,7 +16,7 @@ exports.numberZeroPad = void 0;
  * ```
  * @example
  * ```javascript
- * numberZeroPad("1", 2); // ➜ '01'
+ * numberZeroPad("1", 3, 2); // ➜ '001.00'
  * ```
  * @example
  * ```javascript
@@ -23,15 +24,29 @@ exports.numberZeroPad = void 0;
  * ```
  * @example
  * ```javascript
- * numberZeroPad(12345678.99, 4); // ➜ '12345678.99'
+ * numberZeroPad(1234567.89, 4, 3); // ➜ '1234567.890'
  * ```
  */
-function numberZeroPad(numberToPad, targetLength) {
-    if (!Number.isInteger(targetLength)) {
-        throw new TypeError(`The target length should be an integer. [${targetLength}] given.`);
+function numberZeroPad(numberToPad, leadingLength = 0, decimalLength) {
+    if (!Number.isInteger(leadingLength)) {
+        throw new TypeError(`The leading length should be an integer. [${leadingLength}] given.`);
     }
-    if (targetLength < 0) {
-        throw new RangeError(`Target length should not be a negative value. [${targetLength}] given.`);
+    if (leadingLength < 0) {
+        throw new RangeError(`The leading length should not be a negative value. [${leadingLength}] given.`);
+    }
+    if (!Number.isSafeInteger(leadingLength)) {
+        throw new RangeError(`The leading length should not be a safe integer. [${leadingLength}] given.`);
+    }
+    if (decimalLength !== undefined) {
+        if (!Number.isInteger(decimalLength)) {
+            throw new TypeError(`The decimal length should be an integer. [${decimalLength}] given.`);
+        }
+        if (decimalLength < 0) {
+            throw new RangeError(`The decimal length should not be a negative value. [${decimalLength}] given.`);
+        }
+        if (!Number.isSafeInteger(decimalLength)) {
+            throw new RangeError(`The decimal length should not be a safe integer. [${decimalLength}] given.`);
+        }
     }
     const asString = String(numberToPad);
     const asInteger = Number.parseInt(asString, 10);
@@ -45,7 +60,15 @@ function numberZeroPad(numberToPad, targetLength) {
     else {
         decimalPortion = "";
     }
-    let padded = String(asInteger).padStart(targetLength, "0");
+    if (decimalLength !== undefined && decimalPortion.length !== decimalLength) {
+        if (decimalPortion.length > decimalLength) {
+            decimalPortion = decimalPortion.substring(0, decimalLength);
+        }
+        else {
+            decimalPortion = decimalPortion.padEnd(decimalLength, "0");
+        }
+    }
+    let padded = String(asInteger).padStart(leadingLength, "0");
     if (decimalPortion.length) {
         padded = `${padded}.${decimalPortion}`;
     }
