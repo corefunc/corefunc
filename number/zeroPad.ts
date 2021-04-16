@@ -52,7 +52,7 @@ export function numberZeroPad(numberToPad: number | string, leadingLength: numbe
   }
   let decimalPortion = String(Number.parseFloat(asString));
   if (decimalPortion.includes(".")) {
-    decimalPortion = decimalPortion.split(".").pop();
+    decimalPortion = decimalPortion.split(".").pop() || "";
   } else {
     decimalPortion = "";
   }

@@ -20,10 +20,13 @@ function serializer(replacer, cycleReplacerArg = null) {
             result = json_1.convertErrorToJson(result);
         }
         if (stack.length > 0) {
+            // @ts-ignore
             const thisPos = stack.indexOf(this);
+            // @ts-ignore
             ~thisPos ? stack.splice(thisPos + 1) : stack.push(this);
             ~thisPos ? keys.splice(thisPos, Infinity, key) : keys.push(key);
             if (stack.indexOf(result) !== -1) {
+                // @ts-ignore
                 result = cycleReplacer.call(this, key, result);
             }
         }
@@ -31,6 +34,7 @@ function serializer(replacer, cycleReplacerArg = null) {
             stack.push(result);
         }
         if (replacer && Object.prototype.toString.call(replacer) === "[object Function]") {
+            // @ts-ignore
             return replacer.call(this, key, result);
         }
         return result;
