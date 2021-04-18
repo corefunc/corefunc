@@ -1,26 +1,29 @@
-import { v8Clone } from "../../v8/clone";
-
 /**
+ * @category Object Get
  * @name objectGetProperty
  * @description Gets the value at path of object.
  * @param {Object} object Object to search in
- * @param {String|Array.<String>>} key String key or array of string to form path
- * @param {*=} defaultValue Default value if path is not exists. Does not replace undefined values
+ * @param {String|Array.<String>} keyOrPath String key or array of string to form path
+ * @param {*=} [defaultValue] Default value if path is not exists. Does not replace undefined values
  * @returns {*} Value in path or default value
  * @since 0.0.47
  */
-export function objectGetProperty(object: Record<string, any>, key: string | string[], defaultValue?: any): any {
+export function objectGetProperty<D>(
+  object: Record<string, unknown>,
+  keyOrPath: string | string[],
+  defaultValue?: D,
+): unknown {
   if (!object || typeof object !== "object") {
     return defaultValue;
   }
-  if (typeof key === "string" && key in object) {
-    return object[key];
+  if (typeof keyOrPath === "string" && keyOrPath in object) {
+    return object[keyOrPath];
   }
   let keySet;
-  if (typeof key === "string") {
-    keySet = key.split(".");
-  } else if (Array.isArray(key)) {
-    keySet = key;
+  if (typeof keyOrPath === "string") {
+    keySet = keyOrPath.split(".");
+  } else if (Array.isArray(keyOrPath)) {
+    keySet = keyOrPath;
   } else {
     return defaultValue;
   }
@@ -35,16 +38,12 @@ export function objectGetProperty(object: Record<string, any>, key: string | str
   let index = 0;
   let newObject;
   try {
-    newObject = v8Clone(object);
+    newObject = { ...object };
   } catch {
     try {
-      newObject = { ...object };
+      newObject = JSON.parse(JSON.stringify(object));
     } catch {
-      try {
-        newObject = JSON.parse(JSON.stringify(object));
-      } catch {
-        return defaultValue;
-      }
+      return defaultValue;
     }
   }
   let isSet = false;

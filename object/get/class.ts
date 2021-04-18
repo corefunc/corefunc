@@ -1,11 +1,12 @@
 /**
+ * @category Object Get
  * @name objectGetClass
  * @description Retrieve instance class name
  * @param {*} value
- * @returns {string}
+ * @returns {String}
  * @since 1.0.2
  */
-export function objectGetClass(value: object): string {
+export function objectGetClass(value: Record<string, unknown>): string {
   if (value && typeof value === "object" && "constructor" in value && "name" in value.constructor) {
     return value.constructor.name;
   }

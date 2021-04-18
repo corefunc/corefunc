@@ -1,29 +1,29 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.objectGetProperty = void 0;
-const clone_1 = require("../../v8/clone");
 /**
+ * @category Object Get
  * @name objectGetProperty
  * @description Gets the value at path of object.
  * @param {Object} object Object to search in
- * @param {String|Array.<String>>} key String key or array of string to form path
- * @param {*=} defaultValue Default value if path is not exists. Does not replace undefined values
+ * @param {String|Array.<String>} keyOrPath String key or array of string to form path
+ * @param {*=} [defaultValue] Default value if path is not exists. Does not replace undefined values
  * @returns {*} Value in path or default value
  * @since 0.0.47
  */
-function objectGetProperty(object, key, defaultValue) {
+function objectGetProperty(object, keyOrPath, defaultValue) {
     if (!object || typeof object !== "object") {
         return defaultValue;
     }
-    if (typeof key === "string" && key in object) {
-        return object[key];
+    if (typeof keyOrPath === "string" && keyOrPath in object) {
+        return object[keyOrPath];
     }
     let keySet;
-    if (typeof key === "string") {
-        keySet = key.split(".");
+    if (typeof keyOrPath === "string") {
+        keySet = keyOrPath.split(".");
     }
-    else if (Array.isArray(key)) {
-        keySet = key;
+    else if (Array.isArray(keyOrPath)) {
+        keySet = keyOrPath;
     }
     else {
         return defaultValue;
@@ -40,19 +40,14 @@ function objectGetProperty(object, key, defaultValue) {
     let index = 0;
     let newObject;
     try {
-        newObject = clone_1.v8Clone(object);
+        newObject = Object.assign({}, object);
     }
     catch (_a) {
         try {
-            newObject = Object.assign({}, object);
+            newObject = JSON.parse(JSON.stringify(object));
         }
         catch (_b) {
-            try {
-                newObject = JSON.parse(JSON.stringify(object));
-            }
-            catch (_c) {
-                return defaultValue;
-            }
+            return defaultValue;
         }
     }
     let isSet = false;

@@ -159,13 +159,32 @@
 				</a>
 				<p><a href="https://npmjs.com/package/@corefunc/corefunc"><img src="https://badgen.net/npm/v/@corefunc/corefunc?&icon=npm&label=npm&color=DD3636" alt="NPM Version"></a>
 				<a href="https://npmjs.com/package/@corefunc/corefunc"><img src="https://badgen.net/npm/dt/@corefunc/corefunc?&icon=terminal&label=downloads&color=009688" alt="NPM Downloads"></a></p>
-				<p><a href="https://corefunc.github.io/corefunc/">Documentation at https://corefunc.github.io/corefunc/</a></p>
-				<blockquote>
-					<p><strong>Please Note:</strong> This is not a production-ready package! Expect long stretches of zero updates—that does not mean that the module is outdated. This is &quot;Don’t repeat yourself&quot; collection. Yes, it&#39;s working fine, but it is not complete neither consistent. The files can move from folder to folder without warning. Everything is a &quot;Work in Progress&quot;!!!</p>
-				</blockquote>
-				<a href="#recommended-usage-for-tree-shaking" id="recommended-usage-for-tree-shaking" style="color: inherit; text-decoration: none;">
-					<h2>Recommended usage for Tree Shaking</h2>
-				</a>
+				<hr>
+				<p>CoreFunc - is a collection of core functions for various tasks. It consists of useful one-liner helpers and more complicated functions.</p>
+				<p>Why.</p>
+				<ul>
+					<li><p>All functions are written to work with CommonJS and ECMAScript modules.</p>
+					</li>
+					<li><p>.JS, .CJS, .MJS, .TS files are in package. Wherever you prefer.</p>
+					</li>
+					<li><p>Don&#39;t extend any built-in objects. No prototype pollution at all.</p>
+					</li>
+					<li><p>You can steal the code if you don&#39;t want to use the whole package.
+						Most functions are not bound to other functions in the library.</p>
+					</li>
+					<li><p>It&#39;s super easy for Tree Shaking, no need for Dead Code Hunting.</p>
+					</li>
+				</ul>
+				<p>What is the purpose?</p>
+				<ul>
+					<li><p>Iterate, check, sort, find on primitives, arrays, objects.</p>
+					</li>
+					<li><p>Manipulate, convert, generate values.</p>
+					</li>
+				</ul>
+				<p><a href="https://corefunc.github.io/corefunc/">📚 Documentation ➜ <strong>corefunc.github.io</strong></a></p>
+				<hr>
+				<p><strong>Recommended usage for Tree Shaking:</strong></p>
 				<p><strong>CommonJS import</strong></p>
 				<pre><code class="language-javascript"><span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">bubbleSort</span><span style="color: #000000"> = </span><span style="color: #795E26">require</span><span style="color: #000000">(</span><span style="color: #A31515">&quot;@corefunc/corefunc/array/sort/bubble.cjs&quot;</span><span style="color: #000000">);</span>
 <span style="color: #795E26">bubbleSort</span><span style="color: #000000">([</span><span style="color: #098658">3</span><span style="color: #000000">, </span><span style="color: #098658">1</span><span style="color: #000000">, </span><span style="color: #098658">2</span><span style="color: #000000">]);</span>
@@ -183,7 +202,7 @@
 					<h2>See also</h2>
 				</a>
 				<p><a href="https://r37r0m0d3l.icu/open_source_map">My other projects</a></p>
-				<img src="https://raw.githubusercontent.com/r37r0m0d3l/r37r0m0d3l/master/osmap.svg?sanitize=true" width="960" height="520" style="display:block;height:auto;margin-left:auto;margin-right:auto;min-height:520px;min-width:960px;width:100%;">
+				<img alt="Open Source Map" src="https://raw.githubusercontent.com/r37r0m0d3l/r37r0m0d3l/master/osmap.svg?sanitize=true" width="960" height="520" style="display:block;height:auto;margin-left:auto;margin-right:auto;min-height:520px;min-width:960px;width:100%;">
 				<hr>
 				<p>Also there is more useful links:</p>
 				<ul>

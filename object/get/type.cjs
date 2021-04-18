@@ -1,6 +1,13 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.objectGetType = void 0;
+/**
+ * @category Object Get
+ * @name objectGetType
+ * @description Get type of object
+ * @param {*=} value
+ * @returns {String}
+ */
 function objectGetType(value) {
   const type = Object.prototype.toString.call(value).toLowerCase().split("[object ").pop().split("]").shift();
   if (["global", "window"].includes(type)) {

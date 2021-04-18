@@ -17,12 +17,12 @@ Why.
 
 - Don't extend any built-in objects. No prototype pollution at all.
 
-- You can steal the code if you don't want to use whole package.
-  Most functions are not bind to other functions in the library.
+- You can steal the code if you don't want to use the whole package.
+  Most functions are not bound to other functions in the library.
 
-- Super easy for Tree Shaking, no need for Dead Code Hunting.
+- It's super easy for Tree Shaking, no need for Dead Code Hunting.
 
-What is the purpose.
+What is the purpose?
 
 - Iterate, check, sort, find on primitives, arrays, objects.
 
