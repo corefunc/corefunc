@@ -1,7 +1,7 @@
 /**
  * @category Object Is
  * @name objectIsEmpty
- * @description Get type of object
+ * @description Checks wherever object is empty
  * @param {Object} object
  * @param {Boolean} [withNotEnumerable=false]
  * @returns {Boolean}
@@ -14,5 +14,8 @@
  * @since 0.1.45
  */
 export function objectIsEmpty(object: Record<string, unknown>, withNotEnumerable = false): boolean {
+  if (!object || object.constructor !== Object) {
+    return true;
+  }
   return !(withNotEnumerable ? Object.getOwnPropertyNames(object) : Object.keys(object)).length;
 }

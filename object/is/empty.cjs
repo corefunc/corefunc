@@ -4,7 +4,7 @@ exports.objectIsEmpty = void 0;
 /**
  * @category Object Is
  * @name objectIsEmpty
- * @description Get type of object
+ * @description Checks wherever object is empty
  * @param {Object} object
  * @param {Boolean} [withNotEnumerable=false]
  * @returns {Boolean}
@@ -17,6 +17,9 @@ exports.objectIsEmpty = void 0;
  * @since 0.1.45
  */
 function objectIsEmpty(object, withNotEnumerable = false) {
+  if (!object || object.constructor !== Object) {
+    return true;
+  }
   return !(withNotEnumerable ? Object.getOwnPropertyNames(object) : Object.keys(object)).length;
 }
 exports.objectIsEmpty = objectIsEmpty;
