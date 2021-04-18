@@ -42,6 +42,11 @@
     "verbose": true
   },
   "keywords": [
+    "ECMAScript",
+    "es6,",
+    "modules",
+    "stdlib,",
+    "util,",
     "utilities"
   ],
   "license": "MIT",
@@ -62,5 +67,5 @@
     "test:coverage": "jest --collect-coverage",
     "test:mjs": "node --experimental-modules ./tests/index.mjs"
   },
-  "version": "0.1.43"
+  "version": "0.1.44"
 }

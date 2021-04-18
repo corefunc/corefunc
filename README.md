@@ -2,18 +2,37 @@
 
 # CoreFunc
 
-[comment]: <> ([![Buy Me A Coffee][buymeacoffee-img]][buymeacoffee-url])
-
-[comment]: <> ([![Follow New Releases][releasly-img]][releasly-url])
-
 [![NPM Version][npm-version-img]][npm-version-url]
 [![NPM Downloads][npm-downloads-img]][npm-downloads-url]
 
-[Documentation at https://corefunc.github.io/corefunc/](https://corefunc.github.io/corefunc/)
+---
 
-> **Please Note:** This is not a production-ready package! Expect long stretches of zero updates—that does not mean that the module is outdated. This is "Don’t repeat yourself" collection. Yes, it's working fine, but it is not complete neither consistent. The files can move from folder to folder without warning. Everything is a "Work in Progress"!!!
+CoreFunc - is a collection of core functions for various tasks. It consists of useful one-liner helpers and more complicated functions.
 
-## Recommended usage for Tree Shaking
+Why.
+
+- All functions are written to work with CommonJS and ECMAScript modules.
+
+- .JS, .CJS, .MJS, .TS files are in package. Wherever you prefer.
+
+- Don't extend any built-in objects. No prototype pollution at all.
+
+- You can steal the code if you don't want to use whole package.
+  Most functions are not bind to other functions in the library.
+
+- Super easy for Tree Shaking, no need for Dead Code Hunting.
+
+What is the purpose.
+
+- Iterate, check, sort, find on primitives, arrays, objects.
+
+- Manipulate, convert, generate values.
+
+[📚 Documentation ➜ **corefunc.github.io**](https://corefunc.github.io/corefunc/)
+
+---
+
+**Recommended usage for Tree Shaking:**
 
 **CommonJS import**
 
@@ -42,7 +61,7 @@ bubbleSort([3, 1, 2]);
 
 [My other projects](https://r37r0m0d3l.icu/open_source_map)
 
-<img src="https://raw.githubusercontent.com/r37r0m0d3l/r37r0m0d3l/master/osmap.svg?sanitize=true" width="960" height="520" style="display:block;height:auto;margin-left:auto;margin-right:auto;min-height:520px;min-width:960px;width:100%;">
+<img alt="Open Source Map" src="https://raw.githubusercontent.com/r37r0m0d3l/r37r0m0d3l/master/osmap.svg?sanitize=true" width="960" height="520" style="display:block;height:auto;margin-left:auto;margin-right:auto;min-height:520px;min-width:960px;width:100%;">
 
 ---
 
