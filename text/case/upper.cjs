@@ -3,6 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.textCaseUpper = void 0;
 const string_1 = require("../../cast/to/string.cjs");
 /**
+ * @category Text Case
  * @name textCaseUpper
  * @description Converts string into upper-case. Converts and normalizes the string before conversion.
  * @param {String} text Text to transform

@@ -2,6 +2,7 @@ import { textCaseCapitalize } from "./capitalize.mjs";
 import { textCaseKebab } from "./kebab.mjs";
 
 /**
+ * @category Text Case
  * @name textCaseTrain
  * @description Converts string into train-case.
  * @param {String} text Text to transform

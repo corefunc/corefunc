@@ -2,7 +2,9 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.numberRound = void 0;
 /**
- * Returns the value of a number rounded to the nearest integer using precision parameter.
+ * @category Number
+ * @name numberRound
+ * @description Returns the value of a number rounded to the nearest integer using precision parameter.
  * @param {Number} value
  * @param {Number} precision
  * @return {number}

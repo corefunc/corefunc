@@ -2,6 +2,13 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.isEmpty = void 0;
 const isPrimitive_1 = require("../check/isPrimitive");
+/**
+ * @category Is Valid
+ * @name isEmpty
+ * @description Checks wherever object is empty
+ * @param {*} value
+ * @returns {Boolean}
+ */
 function isEmpty(value) {
     if (value === null || value === undefined) {
         return true;

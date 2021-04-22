@@ -1,4 +1,5 @@
 /**
+ * @category Text Case
  * @name textCaseTitle
  * @description Converts string into title-case.
  * @param {string} text

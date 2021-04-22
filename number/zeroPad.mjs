@@ -1,4 +1,5 @@
 /**
+ * @category Number
  * @name numberZeroPad
  * @description Pad a number with leading zeros and zeroes after the decimal point.
  * @throws {RangeError|TypeError}

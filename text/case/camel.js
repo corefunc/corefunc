@@ -2,6 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.textCaseCamel = void 0;
 /**
+ * @category Text Case
  * @name textCaseCamel
  * @description Converts string into camelCase.
  * @param {string} text

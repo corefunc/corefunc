@@ -3,6 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.textCaseCapitalize = void 0;
 const string_1 = require("../../cast/to/string.cjs");
 /**
+ * @category Text Case
  * @name textCaseCapitalize
  * @description Capitalize first letter
  * @param {String} text Text to transform

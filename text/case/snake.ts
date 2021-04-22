@@ -1,4 +1,5 @@
 /**
+ * @category Text Case
  * @name textCaseSnake
  * @description Converts string into snake-case.
  * @param {string} text

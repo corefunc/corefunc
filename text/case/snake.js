@@ -2,6 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.textCaseSnake = void 0;
 /**
+ * @category Text Case
  * @name textCaseSnake
  * @description Converts string into snake-case.
  * @param {string} text

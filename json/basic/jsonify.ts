@@ -2,6 +2,7 @@ import { jsonParseSafe } from "../parse/safe";
 import { jsonStringifySafe } from "../stringify/safe";
 
 /**
+ * @category JSON Basic
  * @name jsonJsonify
  * @description Attempts to convert any value to JSON allowed value
  * @param {*} value Any value

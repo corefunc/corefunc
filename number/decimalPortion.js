@@ -2,6 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.numberDecimalPortion = void 0;
 /**
+ * @category Number
  * @name numberDecimalPortion
  * @description Get number decimal portion.
  * @throws {TypeError}

@@ -1,4 +1,5 @@
 /**
+ * @category Text Case
  * @name textCaseCamel
  * @description Converts string into camelCase.
  * @param {string} text

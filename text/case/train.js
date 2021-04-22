@@ -4,6 +4,7 @@ exports.textCaseTrain = void 0;
 const capitalize_1 = require("./capitalize");
 const kebab_1 = require("./kebab");
 /**
+ * @category Text Case
  * @name textCaseTrain
  * @description Converts string into train-case.
  * @param {String} text Text to transform

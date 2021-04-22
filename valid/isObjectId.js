@@ -2,10 +2,11 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.isObjectId = void 0;
 /**
+ * @category Is Valid
  * @name isObjectId
  * @description Check is value ObjectId
  * @param {*} value
- * @returns {boolean}
+ * @returns {Boolean}
  * @since 0.0.94
  */
 function isObjectId(value) {

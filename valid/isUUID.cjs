@@ -2,6 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.isUUID = void 0;
 /**
+ * @category Is Valid
  * @name isUUID
  * @description Check is value UUID
  * @param {*} value

@@ -1,6 +1,7 @@
 import { textCaseSnake } from "./snake";
 
 /**
+ * @category Text Case
  * @name textCaseScreamingSnake
  * @description Converts string into screaming snake-case.
  * @param {String} text Text to transform

@@ -1,8 +1,9 @@
 /**
+ * @category Is Valid
  * @name isObjectId
  * @description Check is value ObjectId
  * @param {*} value
- * @returns {boolean}
+ * @returns {Boolean}
  * @since 0.0.94
  */
 export function isObjectId(value) {

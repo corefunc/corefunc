@@ -1,4 +1,5 @@
 /**
+ * @category Number
  * @name numberDecimalPortion
  * @description Get number decimal portion.
  * @throws {TypeError}

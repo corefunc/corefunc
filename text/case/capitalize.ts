@@ -1,6 +1,7 @@
 import { castToString } from "../../cast/to/string";
 
 /**
+ * @category Text Case
  * @name textCaseCapitalize
  * @description Capitalize first letter
  * @param {String} text Text to transform

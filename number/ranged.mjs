@@ -2,14 +2,16 @@ import { castToInt } from "../cast/to/int.mjs";
 import { castToFloat } from "../cast/to/float.mjs";
 
 /**
- * Typecast variable to number wih minimum and maximum value
+ * @category Number
+ * @name numberRanged
+ * @description Typecast variable to number wih minimum and maximum value
  * @param {*} variable
  * @param {Number} [onFail=0] The return value in case of failure
  * @param {Number} numMin [Number.MIN_VALUE]
  * @param {Number} numMax [Number.MAX_VALUE]
  * @param {Boolean=false} isInteger
  * @returns {Number}
- * @example numberRange("99.5", 0, 1, 100); // => 99.5
+ * @example numberRanged("99.5", 0, 1, 100); // => 99.5
  */
 export function numberRanged(
   variable,

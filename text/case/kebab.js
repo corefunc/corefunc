@@ -3,6 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.textCaseKebab = void 0;
 const string_1 = require("../../cast/to/string");
 /**
+ * @category Text Case
  * @name textCaseKebab
  * @description Converts string into kebab-case.
  * @param {String} text

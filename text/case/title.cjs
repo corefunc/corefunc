@@ -2,6 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.textCaseTitle = void 0;
 /**
+ * @category Text Case
  * @name textCaseTitle
  * @description Converts string into title-case.
  * @param {string} text

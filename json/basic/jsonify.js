@@ -4,6 +4,7 @@ exports.jsonJsonify = void 0;
 const safe_1 = require("../parse/safe");
 const safe_2 = require("../stringify/safe");
 /**
+ * @category JSON Basic
  * @name jsonJsonify
  * @description Attempts to convert any value to JSON allowed value
  * @param {*} value Any value

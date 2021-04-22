@@ -1,6 +1,7 @@
 import { arrayGetUnique } from "../get/unique.mjs";
 
 /**
+ * @category Array Basic
  * @name arrayBasicExtend
  * @description Extend one array with another.
  * @param {Array=} alpha

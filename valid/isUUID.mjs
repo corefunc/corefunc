@@ -1,4 +1,5 @@
 /**
+ * @category Is Valid
  * @name isUUID
  * @description Check is value UUID
  * @param {*} value

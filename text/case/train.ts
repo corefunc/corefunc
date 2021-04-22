@@ -2,6 +2,7 @@ import { textCaseCapitalize } from "./capitalize";
 import { textCaseKebab } from "./kebab";
 
 /**
+ * @category Text Case
  * @name textCaseTrain
  * @description Converts string into train-case.
  * @param {String} text Text to transform

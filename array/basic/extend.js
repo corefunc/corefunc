@@ -3,6 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.arrayBasicExtend = void 0;
 const unique_1 = require("../get/unique");
 /**
+ * @category Array Basic
  * @name arrayBasicExtend
  * @description Extend one array with another.
  * @param {Array=} alpha

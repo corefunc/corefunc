@@ -1,4 +1,5 @@
 /**
+ * @category Text Case
  * @name textCaseAbbreviate
  * @description Builds abbreviated string from given string.
  * @param {string} text

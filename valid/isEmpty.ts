@@ -1,5 +1,12 @@
 import { checkIsPrimitive } from "../check/isPrimitive";
 
+/**
+ * @category Is Valid
+ * @name isEmpty
+ * @description Checks wherever object is empty
+ * @param {*} value
+ * @returns {Boolean}
+ */
 export function isEmpty(value: any): boolean {
   if (value === null || value === undefined) {
     return true;

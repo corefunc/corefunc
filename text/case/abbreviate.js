@@ -2,6 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.textCaseAbbreviate = void 0;
 /**
+ * @category Text Case
  * @name textCaseAbbreviate
  * @description Builds abbreviated string from given string.
  * @param {string} text

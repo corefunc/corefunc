@@ -2,7 +2,9 @@ import { castToInt } from "../cast/to/int";
 import { castToFloat } from "../cast/to/float";
 
 /**
- * Typecast variable to number wih minimum and maximum value
+ * @category Number
+ * @name numberRanged
+ * @description Typecast variable to number wih minimum and maximum value
  * @param {*} variable
  * @param {Number} [onFail=0] The return value in case of failure
  * @param {Number} numMin [Number.MIN_VALUE]

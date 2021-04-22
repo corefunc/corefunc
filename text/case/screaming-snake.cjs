@@ -3,6 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.textCaseScreamingSnake = void 0;
 const snake_1 = require("./snake.cjs");
 /**
+ * @category Text Case
  * @name textCaseScreamingSnake
  * @description Converts string into screaming snake-case.
  * @param {String} text Text to transform

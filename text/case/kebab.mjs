@@ -1,6 +1,7 @@
 import { castToString } from "../../cast/to/string.mjs";
 
 /**
+ * @category Text Case
  * @name textCaseKebab
  * @description Converts string into kebab-case.
  * @param {String} text

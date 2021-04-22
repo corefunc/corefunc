@@ -1,6 +1,7 @@
 import { castToString } from "../../cast/to/string.mjs";
 
 /**
+ * @category Text Case
  * @name textCaseUpper
  * @description Converts string into upper-case. Converts and normalizes the string before conversion.
  * @param {String} text Text to transform

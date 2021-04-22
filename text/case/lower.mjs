@@ -1,6 +1,7 @@
 import { castToString } from "../../cast/to/string.mjs";
 
 /**
+ * @category Text Case
  * @name textCaseLower
  * @description Converts string into lower-case. Converts and normalizes the string before conversion.
  * @param {String} text Text to transform
