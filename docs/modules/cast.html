@@ -81,24 +81,118 @@
 				<section class="tsd-panel tsd-index-panel">
 					<div class="tsd-index-content">
 						<section class="tsd-index-section tsd-is-external">
-							<h3>Functions</h3>
+							<h3>Cast To Functions</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter tsd-is-external"><a href="cast.html#casttoint" class="tsd-kind-icon">cast<wbr>ToInt</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module tsd-is-external"><a href="cast.html#casttostring" class="tsd-kind-icon">cast<wbr>ToString</a></li>
+							</ul>
+							<h3>Other Functions</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-function tsd-parent-kind-module tsd-is-external"><a href="cast.html#castmaptoarray" class="tsd-kind-icon">cast<wbr>Map<wbr>ToArray</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-module tsd-is-external"><a href="cast.html#castsettoarray" class="tsd-kind-icon">cast<wbr>Set<wbr>ToArray</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-module tsd-is-external"><a href="cast.html#casttoarray" class="tsd-kind-icon">cast<wbr>ToArray</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter tsd-is-external"><a href="cast.html#casttofloat" class="tsd-kind-icon">cast<wbr>ToFloat</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-module tsd-is-external"><a href="cast.html#casttofloatornull" class="tsd-kind-icon">cast<wbr>ToFloat<wbr>OrNull</a></li>
-								<li class="tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter tsd-is-external"><a href="cast.html#casttoint" class="tsd-kind-icon">cast<wbr>ToInt</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-module tsd-is-external"><a href="cast.html#casttopercentornull" class="tsd-kind-icon">cast<wbr>ToPercent<wbr>OrNull</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-module tsd-is-external"><a href="cast.html#casttoregexp" class="tsd-kind-icon">cast<wbr>ToReg<wbr>Exp</a></li>
-								<li class="tsd-kind-function tsd-parent-kind-module tsd-is-external"><a href="cast.html#casttostring" class="tsd-kind-icon">cast<wbr>ToString</a></li>
 							</ul>
 						</section>
 					</div>
 				</section>
 			</section>
-			<section class="tsd-panel-group tsd-member-group tsd-is-external">
-				<h2>Functions</h2>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Cast To Functions</h2>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter tsd-is-external">
+					<a name="casttoint" class="tsd-anchor"></a>
+					<h3>cast<wbr>ToInt</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter tsd-is-external">
+						<li class="tsd-signature tsd-kind-icon">cast<wbr>ToInt&lt;D&gt;<span class="tsd-signature-symbol">(</span>value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, onFail<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">D</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span>, radix<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">D</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in cast/to/int.ts:14</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography tsd-comment-tags">
+								<dl class="tsd-comment-tags"><dt>name</dt>
+									<dd><p>castToInt</p>
+									</dd><dt>description</dt>
+									<dd><p>Typecast variable to integer</p>
+									</dd><dt>example</dt>
+									<dd><pre><code class="language-javascript"><span style="color: #795E26">castToInt</span><span style="color: #000000">(</span><span style="color: #A31515">&quot;F&quot;</span><span style="color: #000000">, </span><span style="color: #098658">0</span><span style="color: #000000">, </span><span style="color: #098658">16</span><span style="color: #000000">); </span><span style="color: #008000">// =&gt; 15</span>
+</code></pre>
+								</dd></dl>
+							</div>
+							<h4 class="tsd-type-parameters-title">Type parameters</h4>
+							<ul class="tsd-type-parameters">
+								<li>
+									<h4>D</h4>
+								</li>
+							</ul>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>value: <span class="tsd-signature-type">any</span></h5>
+								</li>
+								<li>
+									<h5>onFail: <span class="tsd-signature-type">D</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = 0</span></h5>
+								</li>
+								<li>
+									<h5>radix: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = 10</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">D</span>
+								<span class="tsd-signature-symbol"> | </span>
+								<span class="tsd-signature-type">number</span>
+							</h4>
+							<p>Any number excluding NaN and Infinity</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module tsd-is-external">
+					<a name="casttostring" class="tsd-anchor"></a>
+					<h3>cast<wbr>ToString</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module tsd-is-external">
+						<li class="tsd-signature tsd-kind-icon">cast<wbr>ToString<span class="tsd-signature-symbol">(</span>value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in cast/to/string.ts:15</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography tsd-comment-tags">
+								<dl class="tsd-comment-tags"><dt>name</dt>
+									<dd><p>castToString</p>
+									</dd><dt>description</dt>
+									<dd><p>Cast any value to string.</p>
+									</dd><dt>example</dt>
+									<dd><pre><code class="language-javascript"><span style="color: #795E26">castToString</span><span style="color: #000000">(</span><span style="color: #0000FF">undefined</span><span style="color: #000000">) ➜ </span><span style="color: #A31515">&quot;&quot;</span>
+</code></pre>
+										<pre><code class="language-javascript"><span style="color: #795E26">castToString</span><span style="color: #000000">(-</span><span style="color: #098658">0</span><span style="color: #000000">) ➜ </span><span style="color: #A31515">&quot;-0&quot;</span>
+</code></pre>
+								</dd></dl>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>value: <span class="tsd-signature-type">any</span></h5>
+									<div class="tsd-comment tsd-typography tsd-comment-text">
+										<p>Value to transform</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
+							<p>Value transformed into string</p>
+						</li>
+					</ul>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Other Functions</h2>
 				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module tsd-is-external">
 					<a name="castmaptoarray" class="tsd-anchor"></a>
 					<h3>cast<wbr>Map<wbr>ToArray</h3>
@@ -263,53 +357,6 @@
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter tsd-is-external">
-					<a name="casttoint" class="tsd-anchor"></a>
-					<h3>cast<wbr>ToInt</h3>
-					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">cast<wbr>ToInt&lt;D&gt;<span class="tsd-signature-symbol">(</span>variable<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, onFail<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">D</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span>, radix<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">D</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in cast/to/int.ts:9</li>
-								</ul>
-							</aside>
-							<div class="tsd-comment tsd-typography tsd-comment-shorttext">
-								<div class="lead">
-									<p>Typecast variable to integer</p>
-								</div>
-								</div><div class="tsd-comment tsd-typography tsd-comment-tags">
-								<dl class="tsd-comment-tags"><dt>example</dt>
-									<dd><p>castToInt(&quot;F&quot;, 0, 16); // =&gt; 15</p>
-								</dd></dl>
-							</div>
-							<h4 class="tsd-type-parameters-title">Type parameters</h4>
-							<ul class="tsd-type-parameters">
-								<li>
-									<h4>D</h4>
-								</li>
-							</ul>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>variable: <span class="tsd-signature-type">any</span></h5>
-								</li>
-								<li>
-									<h5>onFail: <span class="tsd-signature-type">D</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = 0</span></h5>
-								</li>
-								<li>
-									<h5>radix: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = 10</span></h5>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">D</span>
-								<span class="tsd-signature-symbol"> | </span>
-								<span class="tsd-signature-type">number</span>
-							</h4>
-						</li>
-					</ul>
-				</section>
 				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module tsd-is-external">
 					<a name="casttopercentornull" class="tsd-anchor"></a>
 					<h3>cast<wbr>ToPercent<wbr>OrNull</h3>
@@ -370,30 +417,6 @@
 								<span class="tsd-signature-symbol"> | </span>
 								<span class="tsd-signature-type">RegExp</span>
 							</h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module tsd-is-external">
-					<a name="casttostring" class="tsd-anchor"></a>
-					<h3>cast<wbr>ToString</h3>
-					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">cast<wbr>ToString<span class="tsd-signature-symbol">(</span>value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in cast/to/string.ts:5</li>
-								</ul>
-							</aside>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>value: <span class="tsd-signature-type">any</span></h5>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
-							<p>string</p>
 						</li>
 					</ul>
 				</section>
