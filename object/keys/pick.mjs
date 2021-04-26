@@ -1,10 +1,13 @@
 /**
+ * @category Object Keys
  * @name objectKeysPick
- * @param {Object} instance
- * @param {Array.<string>} keys
- * @returns {Object}
+ * @description Pick keys from object and return new plain object.
+ * @summary ```import { objectKeysSort } from "@corefunc/corefunc/object/keys/pick";```
+ * @param {Object} instance Object to be picked from.
+ * @param {Array.<String>} [keys] Array of keys to pick.
+ * @returns {Object} New plain object.
  */
-export default function objectKeysPick(instance, keys) {
+export function objectKeysPick(instance, keys) {
   if (!keys.length || !Object.keys(instance).length) {
     return {};
   }

@@ -1,11 +1,14 @@
 /**
+ * @category Object Keys
  * @name objectKeysOrder
- * @param {Object} instance
- * @param {Array.<string>} keys
- * @param {boolean=} alphabetize
- * @returns {Object}
+ * @description Order keys if can and return new object instance.
+ * @summary ```import { objectKeysOrder } from "@corefunc/corefunc/object/keys/order";```
+ * @param {Object} instance Object to be ordered.
+ * @param {Array.<String>=} [keys=[]] Array of keys to order.
+ * @param {Boolean=} [alphabetize=false] Alphabetize rest of keys.
+ * @returns {Object} New object with ordered keys.
  */
-export default function objectKeysOrder(instance, keys = [], alphabetize = false) {
+export function objectKeysOrder(instance, keys = [], alphabetize = false) {
   if (!Array.isArray(keys) || keys.length === 0) {
     return instance;
   }

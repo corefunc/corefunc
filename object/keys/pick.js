@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.objectKeysPick = void 0;
 /**
  * @category Object Keys
  * @name objectKeysPick
@@ -10,12 +11,12 @@ Object.defineProperty(exports, "__esModule", { value: true });
  * @returns {Object} New plain object.
  */
 function objectKeysPick(instance, keys) {
-  if (!keys.length || !Object.keys(instance).length) {
-    return {};
-  }
-  return keys.reduce((accumulator, key) => {
-    accumulator[key] = instance[key];
-    return accumulator;
-  }, {});
+    if (!keys.length || !Object.keys(instance).length) {
+        return {};
+    }
+    return keys.reduce((accumulator, key) => {
+        accumulator[key] = instance[key];
+        return accumulator;
+    }, {});
 }
-exports.default = objectKeysPick;
+exports.objectKeysPick = objectKeysPick;

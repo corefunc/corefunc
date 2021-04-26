@@ -1,10 +1,14 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.objectKeysSort = void 0;
 /**
+ * @category Object Keys
  * @name objectKeysSort
- * @param {Object} instance
- * @param {boolean=true} isDeep
- * @returns {*}
+ * @description Sort keys if can and return new object instance.
+ * @summary ```import { objectKeysSort } from "@corefunc/corefunc/object/keys/sort";```
+ * @param {Object} instance Object to be sorted.
+ * @param {Boolean=} [isDeep=true] Deep sort.
+ * @returns {Object} New object with sorted keys.
  */
 function objectKeysSort(instance, isDeep = true) {
     if (!instance || typeof instance !== "object" || Array.isArray(instance)) {
@@ -24,4 +28,4 @@ function objectKeysSort(instance, isDeep = true) {
         return sorted;
     }, Object.create(Object.getPrototypeOf(instance)));
 }
-exports.default = objectKeysSort;
+exports.objectKeysSort = objectKeysSort;

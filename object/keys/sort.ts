@@ -1,13 +1,13 @@
 /**
+ * @category Object Keys
  * @name objectKeysSort
- * @param {Object} instance
- * @param {boolean=true} isDeep
- * @returns {*}
+ * @description Sort keys if can and return new object instance.
+ * @summary ```import { objectKeysSort } from "@corefunc/corefunc/object/keys/sort";```
+ * @param {Object} instance Object to be sorted.
+ * @param {Boolean=} [isDeep=true] Deep sort.
+ * @returns {Object} New object with sorted keys.
  */
-export default function objectKeysSort<ObjectType extends object>(
-  instance: ObjectType,
-  isDeep: boolean = true,
-): ObjectType {
+export function objectKeysSort<ObjectType extends object>(instance: ObjectType, isDeep: boolean = true): ObjectType {
   if (!instance || typeof instance !== "object" || Array.isArray(instance)) {
     return instance;
   }
