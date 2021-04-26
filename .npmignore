@@ -1,7 +1,11 @@
+/.babelrc
+/.codeclimate.yml
 /.editorconfig
 /.eslintignore
+/.eslintrc.full.json
 /.eslintrc.json
 /.gitattributes
+/.github
 /.gitignore
 /.idea
 /.ignore
@@ -15,11 +19,13 @@
 /CHANGELOG.md
 /LICENSE
 /README.md
-/_config.yml
-/alterme.js
+/badges.md
 /docs/
+/package-lock.json
+/renovate.json
 /temp
 /test
 /tests/
 /tsconfig.json
+/typedoc.json
 /yarn.lock
