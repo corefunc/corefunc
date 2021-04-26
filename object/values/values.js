@@ -10,9 +10,9 @@ exports.objectValues = void 0;
  * @returns {Array} Array with values.
  */
 function objectValues(object) {
-  if (!object) {
-    return [];
-  }
-  return Object.values(object);
+    if (!object) {
+        return [];
+    }
+    return Object.values(object);
 }
 exports.objectValues = objectValues;

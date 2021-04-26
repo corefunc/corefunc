@@ -13,7 +13,7 @@
  * objectIsEmpty(object, true) ➜ false
  * @since 0.1.45
  */
-export function objectIsEmpty(object: Record<string, unknown>, withNotEnumerable = false): boolean {
+export function objectIsEmpty(object: Record<string, any>, withNotEnumerable = false): boolean {
   if (!object || object.constructor !== Object) {
     return true;
   }

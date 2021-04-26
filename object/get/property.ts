@@ -2,17 +2,18 @@
  * @category Object Get
  * @name objectGetProperty
  * @description Gets the value at path of object.
+ * @summary ```import { objectGetProperty } from '@corefunc/corefunc/object/get/property';```
  * @param {Object} object Object to search in
  * @param {String|Array.<String>} keyOrPath String key or array of string to form path
- * @param {*=} [defaultValue] Default value if path is not exists. Does not replace undefined values
+ * @param {*=} [defaultValue=undefined] Default value if path is not exists. Does not replace undefined values
  * @returns {*} Value in path or default value
  * @since 0.0.47
  */
-export function objectGetProperty<D>(
-  object: Record<string, unknown>,
+export function objectGetProperty<ObjectType extends Record<string, any>, DefaultType extends any>(
+  object: ObjectType,
   keyOrPath: string | string[],
-  defaultValue?: D,
-): unknown {
+  defaultValue?: DefaultType,
+): any {
   if (!object || typeof object !== "object") {
     return defaultValue;
   }

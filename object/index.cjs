@@ -15,3 +15,4 @@ __exportStar(require("./get"), exports);
 __exportStar(require("./is"), exports);
 __exportStar(require("./keys"), exports);
 __exportStar(require("./set"), exports);
+__exportStar(require("./values"), exports);

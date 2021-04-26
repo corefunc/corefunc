@@ -8,7 +8,7 @@ import { convertErrorToObject } from "./object";
  * @since 0.1.40
  */
 export function convertErrorToJson(
-  error: Error | EvalError | RangeError | ReferenceError | SyntaxError | TypeError | URIError | Record<string, unknown>,
+  error: Error | EvalError | RangeError | ReferenceError | SyntaxError | TypeError | URIError | Record<string, any>,
 ): Record<string, string> {
   const plainObject = convertErrorToObject(error);
   Object.keys(plainObject)
