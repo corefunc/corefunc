@@ -3,6 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.objectSetDefaults = void 0;
 const isObjectLike_1 = require("../../check/isObjectLike");
 /**
+ * @category Object Set
  * @name objectSetDefaults
  * @param {Object} destination
  * @param {Object} source

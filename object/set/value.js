@@ -1,11 +1,22 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.objectSetValue = void 0;
-const isObjectLike_1 = require("../check/isObjectLike");
-const map_1 = require("../is/map");
-const set_1 = require("../is/set");
-const weakMap_1 = require("../is/weakMap");
-const weakSet_1 = require("../is/weakSet");
+const isObjectLike_1 = require("../../check/isObjectLike");
+const map_1 = require("../../is/map");
+const set_1 = require("../../is/set");
+const weakMap_1 = require("../../is/weakMap");
+const weakSet_1 = require("../../is/weakSet");
+/**
+ * @category Object Set
+ * @name objectSetValue
+ * @description Sets the value at key of object.
+ * @summary ```import { objectSetValue } from '@corefunc/corefunc/object/set/value';```
+ * @param {Object|Map|Set|WeakSet|WeakMap} object Object to set in.
+ * @param {String} [key] Key name.
+ * @param {*} [value] Value to set.
+ * @returns {Object|Map|Set|WeakSet|WeakMap} Object that was modified.
+ * @since 0.1.55
+ */
 function objectSetValue(object, key, value) {
     if (isObjectLike_1.checkIsObjectLike(object) === false) {
         return object;

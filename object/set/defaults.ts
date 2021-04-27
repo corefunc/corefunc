@@ -1,6 +1,7 @@
 import { checkIsObjectLike } from "../../check/isObjectLike";
 
 /**
+ * @category Object Set
  * @name objectSetDefaults
  * @param {Object} destination
  * @param {Object} source

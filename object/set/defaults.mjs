@@ -1,6 +1,7 @@
 import { checkIsObjectLike } from "../../check/isObjectLike.mjs";
 
 /**
+ * @category Object Set
  * @name objectSetDefaults
  * @param {Object} destination
  * @param {Object} source

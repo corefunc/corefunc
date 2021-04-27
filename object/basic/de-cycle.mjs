@@ -1,5 +1,18 @@
-// eslint-disable-next-line no-unused-vars
-export default function objectDeCycle(object: object, _path: string): object {
+/**
+ * @category Object Basic
+ * @name objectBasicDeCycle
+ * @description De-cycle object.
+ * @summary ```import { objectBasicDeCycle } from '@corefunc/corefunc/object/basic/de-cycle';```
+ * @param {Object} object Object to de-cycle.
+ * @param {String=} _path Path ot property to de-cycle.
+ * @returns {Object} De-cycled object.
+ * @since 0.1.55
+ */
+export function objectBasicDeCycle(
+  object,
+  // eslint-disable-next-line no-unused-vars
+  _path,
+) {
   const objects = [];
   const paths = [];
   return (function deReCycle(value, path) {
@@ -24,14 +37,14 @@ export default function objectDeCycle(object: object, _path: string): object {
       paths.push(path);
       if (Object.prototype.toString.call(value) === "[object Array]") {
         newIterable = [];
-        for (index = 0; index < (value as any[]).length; index++) {
-          newIterable[index] = objectDeCycle(value[index], `${path}[" + index + "]`);
+        for (index = 0; index < (value).length; index++) {
+          newIterable[index] = objectBasicDeCycle(value[index], `${path}[" + index + "]`);
         }
       } else {
         newIterable = Object.create(object);
         for (name in value) {
           if (Object.prototype.hasOwnProperty.call(value, name)) {
-            newIterable[name] = objectDeCycle(value[name], `${path}[${JSON.stringify(name)}]`);
+            newIterable[name] = objectBasicDeCycle(value[name], `${path}[${JSON.stringify(name)}]`);
           }
         }
       }

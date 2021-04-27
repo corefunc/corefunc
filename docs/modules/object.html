@@ -81,12 +81,23 @@
 				<section class="tsd-panel tsd-index-panel">
 					<div class="tsd-index-content">
 						<section class="tsd-index-section tsd-is-external">
+							<h3>Object Basic Functions</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter tsd-is-external"><a href="object.html#objectbasicdecycle" class="tsd-kind-icon">object<wbr>Basic<wbr>DeCycle</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter tsd-is-external"><a href="object.html#objectbasiclock" class="tsd-kind-icon">object<wbr>Basic<wbr>Lock</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter tsd-is-external"><a href="object.html#objectbasicsize" class="tsd-kind-icon">object<wbr>Basic<wbr>Size</a></li>
+							</ul>
+							<h3>Object From Functions</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-function tsd-parent-kind-module tsd-is-external"><a href="object.html#objectfromkeysvalues" class="tsd-kind-icon">object<wbr>From<wbr>Keys<wbr>Values</a></li>
+							</ul>
 							<h3>Object Get Functions</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-function tsd-parent-kind-module tsd-is-external"><a href="object.html#objectgetclass" class="tsd-kind-icon">object<wbr>Get<wbr>Class</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-module tsd-is-external"><a href="object.html#objectgetkeys" class="tsd-kind-icon">object<wbr>Get<wbr>Keys</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter tsd-is-external"><a href="object.html#objectgetproperty" class="tsd-kind-icon">object<wbr>Get<wbr>Property</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-module tsd-is-external"><a href="object.html#objectgettype" class="tsd-kind-icon">object<wbr>Get<wbr>Type</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter tsd-is-external"><a href="object.html#objectisownproperty" class="tsd-kind-icon">object<wbr>IsOwn<wbr>Property</a></li>
 							</ul>
 							<h3>Object Is Functions</h3>
 							<ul class="tsd-index-list">
@@ -98,17 +109,194 @@
 								<li class="tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter tsd-is-external"><a href="object.html#objectkeyspick" class="tsd-kind-icon">object<wbr>Keys<wbr>Pick</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter tsd-is-external"><a href="object.html#objectkeyssort" class="tsd-kind-icon">object<wbr>Keys<wbr>Sort</a></li>
 							</ul>
+							<h3>Object Set Functions</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter tsd-is-external"><a href="object.html#objectsetdefaults" class="tsd-kind-icon">object<wbr>Set<wbr>Defaults</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter tsd-is-external"><a href="object.html#objectsetvalue" class="tsd-kind-icon">object<wbr>Set<wbr>Value</a></li>
+							</ul>
 							<h3>Object Values Functions</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter tsd-is-external"><a href="object.html#objectvalues" class="tsd-kind-icon">object<wbr>Values</a></li>
 							</ul>
-							<h3>Other Functions</h3>
-							<ul class="tsd-index-list">
-								<li class="tsd-kind-function tsd-parent-kind-module tsd-is-external"><a href="object.html#objectfromkeysvalues" class="tsd-kind-icon">object<wbr>From<wbr>Keys<wbr>Values</a></li>
-								<li class="tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter tsd-is-external"><a href="object.html#objectsetdefaults" class="tsd-kind-icon">object<wbr>Set<wbr>Defaults</a></li>
-							</ul>
 						</section>
 					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Object Basic Functions</h2>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter tsd-is-external">
+					<a name="objectbasicdecycle" class="tsd-anchor"></a>
+					<h3>object<wbr>Basic<wbr>DeCycle</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter tsd-is-external">
+						<li class="tsd-signature tsd-kind-icon">object<wbr>Basic<wbr>DeCycle&lt;ObjectType&gt;<span class="tsd-signature-symbol">(</span>object<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ObjectType</span>, _path<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ObjectType</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in object/basic/de-cycle.ts:11</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography tsd-comment-tags">
+								<dl class="tsd-comment-tags"><dt>name</dt>
+									<dd><p>objectBasicDeCycle</p>
+									</dd><dt>description</dt>
+									<dd><p>De-cycle object.</p>
+									</dd><dt>summary</dt>
+									<dd><p><code>import { objectBasicDeCycle } from &#39;@corefunc/corefunc/object/basic/de-cycle&#39;;</code></p>
+									</dd><dt>since</dt>
+									<dd><p>0.1.55</p>
+								</dd></dl>
+							</div>
+							<h4 class="tsd-type-parameters-title">Type parameters</h4>
+							<ul class="tsd-type-parameters">
+								<li>
+									<h4>ObjectType<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Record</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></h4>
+								</li>
+							</ul>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>object: <span class="tsd-signature-type">ObjectType</span></h5>
+									<div class="tsd-comment tsd-typography tsd-comment-text">
+										<p>Object to de-cycle.</p>
+									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> _path: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography tsd-comment-text">
+										<p>Path ot property to de-cycle.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">ObjectType</span></h4>
+							<p>De-cycled object.</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter tsd-is-external">
+					<a name="objectbasiclock" class="tsd-anchor"></a>
+					<h3>object<wbr>Basic<wbr>Lock</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter tsd-is-external">
+						<li class="tsd-signature tsd-kind-icon">object<wbr>Basic<wbr>Lock&lt;ObjectType&gt;<span class="tsd-signature-symbol">(</span>object<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ObjectType</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ObjectType</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in object/basic/lock.ts:10</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography tsd-comment-tags">
+								<dl class="tsd-comment-tags"><dt>name</dt>
+									<dd><p>objectBasicLock</p>
+									</dd><dt>description</dt>
+									<dd><p>Lock, freeze and seal object.</p>
+									</dd><dt>summary</dt>
+									<dd><p><code>import { objectBasicLock } from &#39;@corefunc/corefunc/object/basic/lock&#39;;</code></p>
+									</dd><dt>since</dt>
+									<dd><p>0.1.55</p>
+								</dd></dl>
+							</div>
+							<h4 class="tsd-type-parameters-title">Type parameters</h4>
+							<ul class="tsd-type-parameters">
+								<li>
+									<h4>ObjectType<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Record</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></h4>
+								</li>
+							</ul>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>object: <span class="tsd-signature-type">ObjectType</span></h5>
+									<div class="tsd-comment tsd-typography tsd-comment-text">
+										<p>Object to lock.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">ObjectType</span></h4>
+							<p>Locked object.</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter tsd-is-external">
+					<a name="objectbasicsize" class="tsd-anchor"></a>
+					<h3>object<wbr>Basic<wbr>Size</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter tsd-is-external">
+						<li class="tsd-signature tsd-kind-icon">object<wbr>Basic<wbr>Size&lt;ObjectType&gt;<span class="tsd-signature-symbol">(</span>object<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ObjectType</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in object/basic/size.ts:10</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography tsd-comment-tags">
+								<dl class="tsd-comment-tags"><dt>name</dt>
+									<dd><p>objectBasicSize</p>
+									</dd><dt>description</dt>
+									<dd><p>Get count of properties in object.</p>
+									</dd><dt>summary</dt>
+									<dd><p><code>import { objectBasicSize } from &#39;@corefunc/corefunc/object/basic/size&#39;;</code></p>
+									</dd><dt>since</dt>
+									<dd><p>0.1.55</p>
+								</dd></dl>
+							</div>
+							<h4 class="tsd-type-parameters-title">Type parameters</h4>
+							<ul class="tsd-type-parameters">
+								<li>
+									<h4>ObjectType<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Record</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></h4>
+								</li>
+							</ul>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>object: <span class="tsd-signature-type">ObjectType</span></h5>
+									<div class="tsd-comment tsd-typography tsd-comment-text">
+										<p>Object to search in.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+							<p>Count of properties.</p>
+						</li>
+					</ul>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Object From Functions</h2>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module tsd-is-external">
+					<a name="objectfromkeysvalues" class="tsd-anchor"></a>
+					<h3>object<wbr>From<wbr>Keys<wbr>Values</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module tsd-is-external">
+						<li class="tsd-signature tsd-kind-icon">object<wbr>From<wbr>Keys<wbr>Values<span class="tsd-signature-symbol">(</span>keys<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span>, values<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">unknown</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Record</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">unknown</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in object/from/keys-values.ts:9</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography tsd-comment-tags">
+								<dl class="tsd-comment-tags"><dt>name</dt>
+									<dd><p>objectFromKeysValues</p>
+									</dd><dt>description</dt>
+									<dd><p>Create object form array of keys and array of values</p>
+								</dd></dl>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>keys: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></h5>
+								</li>
+								<li>
+									<h5>values: <span class="tsd-signature-type">unknown</span><span class="tsd-signature-symbol">[]</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Record</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">unknown</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
@@ -259,6 +447,53 @@
 						</li>
 					</ul>
 				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter tsd-is-external">
+					<a name="objectisownproperty" class="tsd-anchor"></a>
+					<h3>object<wbr>IsOwn<wbr>Property</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter tsd-is-external">
+						<li class="tsd-signature tsd-kind-icon">object<wbr>IsOwn<wbr>Property&lt;ObjectType&gt;<span class="tsd-signature-symbol">(</span>object<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ObjectType</span>, key<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in object/is/own-property.ts:13</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography tsd-comment-tags">
+								<dl class="tsd-comment-tags"><dt>name</dt>
+									<dd><p>objectGetProperty</p>
+									</dd><dt>description</dt>
+									<dd><p>Whether the object has the specified own property.</p>
+									</dd><dt>summary</dt>
+									<dd><p><code>import { objectIsOwnProperty } from &#39;@corefunc/corefunc/object/is/own-property&#39;;</code></p>
+									</dd><dt>since</dt>
+									<dd><p>0.1.55</p>
+								</dd></dl>
+							</div>
+							<h4 class="tsd-type-parameters-title">Type parameters</h4>
+							<ul class="tsd-type-parameters">
+								<li>
+									<h4>ObjectType<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Record</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></h4>
+								</li>
+							</ul>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>object: <span class="tsd-signature-type">ObjectType</span></h5>
+									<div class="tsd-comment tsd-typography tsd-comment-text">
+										<p>Object to search in</p>
+									</div>
+								</li>
+								<li>
+									<h5>key: <span class="tsd-signature-type">string</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+							<p>Is own property.</p>
+						</li>
+					</ul>
+				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Object Is Functions</h2>
@@ -406,7 +641,7 @@
 					<a name="objectkeyssort" class="tsd-anchor"></a>
 					<h3>object<wbr>Keys<wbr>Sort</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">object<wbr>Keys<wbr>Sort&lt;ObjectType&gt;<span class="tsd-signature-symbol">(</span>instance<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ObjectType</span>, isDeep<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ObjectType</span></li>
+						<li class="tsd-signature tsd-kind-icon">object<wbr>Keys<wbr>Sort&lt;ObjectType&gt;<span class="tsd-signature-symbol">(</span>objectLike<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ObjectType</span>, isDeep<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ObjectType</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
@@ -427,13 +662,13 @@
 							<h4 class="tsd-type-parameters-title">Type parameters</h4>
 							<ul class="tsd-type-parameters">
 								<li>
-									<h4>ObjectType<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">object</span></h4>
+									<h4>ObjectType<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Record</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></h4>
 								</li>
 							</ul>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>instance: <span class="tsd-signature-type">ObjectType</span></h5>
+									<h5>objectLike: <span class="tsd-signature-type">ObjectType</span></h5>
 									<div class="tsd-comment tsd-typography tsd-comment-text">
 										<p>Object to be sorted.</p>
 									</div>
@@ -444,6 +679,110 @@
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">ObjectType</span></h4>
 							<p>New object with sorted keys.</p>
+						</li>
+					</ul>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Object Set Functions</h2>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter tsd-is-external">
+					<a name="objectsetdefaults" class="tsd-anchor"></a>
+					<h3>object<wbr>Set<wbr>Defaults</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter tsd-is-external">
+						<li class="tsd-signature tsd-kind-icon">object<wbr>Set<wbr>Defaults&lt;Dest, Src&gt;<span class="tsd-signature-symbol">(</span>destination<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Dest</span>, source<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Src</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Dest</span><span class="tsd-signature-symbol"> &amp; </span><span class="tsd-signature-type">Src</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in object/set/defaults.ts:14</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography tsd-comment-tags">
+								<dl class="tsd-comment-tags"><dt>name</dt>
+									<dd><p>objectSetDefaults</p>
+									</dd><dt>example</dt>
+									<dd><p>objectSetDefaults({}, { val: true }) // { val: true }</p>
+									</dd><dt>example</dt>
+									<dd><p>objectSetDefaults({ val: undefined }, { val: true }) // { val: true }</p>
+									</dd><dt>example</dt>
+									<dd><p>objectSetDefaults({ val: null }, { val: true }) // { val: null }</p>
+									</dd><dt>example</dt>
+									<dd><p>objectSetDefaults({ val: &quot;text&quot; }, { val: true }) // { val: &quot;text&quot; }</p>
+								</dd></dl>
+							</div>
+							<h4 class="tsd-type-parameters-title">Type parameters</h4>
+							<ul class="tsd-type-parameters">
+								<li>
+									<h4>Dest<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">object</span></h4>
+								</li>
+								<li>
+									<h4>Src<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">object</span></h4>
+								</li>
+							</ul>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>destination: <span class="tsd-signature-type">Dest</span></h5>
+								</li>
+								<li>
+									<h5>source: <span class="tsd-signature-type">Src</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Dest</span>
+								<span class="tsd-signature-symbol"> &amp; </span>
+								<span class="tsd-signature-type">Src</span>
+							</h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter tsd-is-external">
+					<a name="objectsetvalue" class="tsd-anchor"></a>
+					<h3>object<wbr>Set<wbr>Value</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter tsd-is-external">
+						<li class="tsd-signature tsd-kind-icon">object<wbr>Set<wbr>Value&lt;ObjectType&gt;<span class="tsd-signature-symbol">(</span>object<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ObjectType</span>, key<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ObjectType</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in object/set/value.ts:19</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography tsd-comment-tags">
+								<dl class="tsd-comment-tags"><dt>name</dt>
+									<dd><p>objectSetValue</p>
+									</dd><dt>description</dt>
+									<dd><p>Sets the value at key of object.</p>
+									</dd><dt>summary</dt>
+									<dd><p><code>import { objectSetValue } from &#39;@corefunc/corefunc/object/set/value&#39;;</code></p>
+									</dd><dt>since</dt>
+									<dd><p>0.1.55</p>
+								</dd></dl>
+							</div>
+							<h4 class="tsd-type-parameters-title">Type parameters</h4>
+							<ul class="tsd-type-parameters">
+								<li>
+									<h4>ObjectType<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Set</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Map</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Record</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">WeakSet</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">WeakMap</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></h4>
+								</li>
+							</ul>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>object: <span class="tsd-signature-type">ObjectType</span></h5>
+									<div class="tsd-comment tsd-typography tsd-comment-text">
+										<p>Object to set in.</p>
+									</div>
+								</li>
+								<li>
+									<h5>key: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5>value: <span class="tsd-signature-type">any</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">ObjectType</span></h4>
+							<p>Object that was modified.</p>
 						</li>
 					</ul>
 				</section>
@@ -493,98 +832,20 @@
 					</ul>
 				</section>
 			</section>
-			<section class="tsd-panel-group tsd-member-group ">
-				<h2>Other Functions</h2>
-				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module tsd-is-external">
-					<a name="objectfromkeysvalues" class="tsd-anchor"></a>
-					<h3>object<wbr>From<wbr>Keys<wbr>Values</h3>
-					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">object<wbr>From<wbr>Keys<wbr>Values<span class="tsd-signature-symbol">(</span>keys<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span>, values<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">unknown</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Record</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">unknown</span><span class="tsd-signature-symbol">&gt;</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in object/from/keys-values.ts:8</li>
-								</ul>
-							</aside>
-							<div class="tsd-comment tsd-typography tsd-comment-tags">
-								<dl class="tsd-comment-tags"><dt>name</dt>
-									<dd><p>objectFromKeysValues</p>
-									</dd><dt>description</dt>
-									<dd><p>Create object form array of keys and array of values</p>
-								</dd></dl>
-							</div>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>keys: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></h5>
-								</li>
-								<li>
-									<h5>values: <span class="tsd-signature-type">unknown</span><span class="tsd-signature-symbol">[]</span></h5>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Record</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">unknown</span><span class="tsd-signature-symbol">&gt;</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter tsd-is-external">
-					<a name="objectsetdefaults" class="tsd-anchor"></a>
-					<h3>object<wbr>Set<wbr>Defaults</h3>
-					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">object<wbr>Set<wbr>Defaults&lt;Dest, Src&gt;<span class="tsd-signature-symbol">(</span>destination<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Dest</span>, source<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Src</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Dest</span><span class="tsd-signature-symbol"> &amp; </span><span class="tsd-signature-type">Src</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in object/set/defaults.ts:13</li>
-								</ul>
-							</aside>
-							<div class="tsd-comment tsd-typography tsd-comment-tags">
-								<dl class="tsd-comment-tags"><dt>name</dt>
-									<dd><p>objectSetDefaults</p>
-									</dd><dt>example</dt>
-									<dd><p>objectSetDefaults({}, { val: true }) // { val: true }</p>
-									</dd><dt>example</dt>
-									<dd><p>objectSetDefaults({ val: undefined }, { val: true }) // { val: true }</p>
-									</dd><dt>example</dt>
-									<dd><p>objectSetDefaults({ val: null }, { val: true }) // { val: null }</p>
-									</dd><dt>example</dt>
-									<dd><p>objectSetDefaults({ val: &quot;text&quot; }, { val: true }) // { val: &quot;text&quot; }</p>
-								</dd></dl>
-							</div>
-							<h4 class="tsd-type-parameters-title">Type parameters</h4>
-							<ul class="tsd-type-parameters">
-								<li>
-									<h4>Dest<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">object</span></h4>
-								</li>
-								<li>
-									<h4>Src<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">object</span></h4>
-								</li>
-							</ul>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>destination: <span class="tsd-signature-type">Dest</span></h5>
-								</li>
-								<li>
-									<h5>source: <span class="tsd-signature-type">Src</span></h5>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Dest</span>
-								<span class="tsd-signature-symbol"> &amp; </span>
-								<span class="tsd-signature-type">Src</span>
-							</h4>
-						</li>
-					</ul>
-				</section>
-			</section>
 			<!--{&quot;options&quot;:&quot;typedoc.json&quot;,&quot;tsconfig&quot;:&quot;D:\\git\\corefunc\\corefunc&quot;,&quot;entryPoints&quot;:[&quot;./array/index.ts&quot;,&quot;./cast/index.ts&quot;,&quot;./check/index.ts&quot;,&quot;./cli/index.ts&quot;,&quot;./collection/index.ts&quot;,&quot;./convert/index.ts&quot;,&quot;./crypt/index.ts&quot;,&quot;./date/index.ts&quot;,&quot;./fp/index.ts&quot;,&quot;./func/index.ts&quot;,&quot;./generate/index.ts&quot;,&quot;./hash/index.ts&quot;,&quot;./high-order/index.ts&quot;,&quot;./is/index.ts&quot;,&quot;./json/index.ts&quot;,&quot;./lang/index.ts&quot;,&quot;./number/index.ts&quot;,&quot;./object/index.ts&quot;,&quot;./promise/index.ts&quot;,&quot;./prototype/index.ts&quot;,&quot;./regex/index.ts&quot;,&quot;./string/index.ts&quot;,&quot;./text/index.ts&quot;,&quot;./v8/index.ts&quot;,&quot;./valid/index.ts&quot;,&quot;./var/index.ts&quot;],&quot;exclude&quot;:[&quot;**/*+(index|.spec|.e2e).ts&quot;],&quot;externalPattern&quot;:[&quot;./**/*.ts&quot;],&quot;excludeExternals&quot;:false,&quot;excludeNotDocumented&quot;:false,&quot;excludeInternal&quot;:false,&quot;excludePrivate&quot;:false,&quot;excludeProtected&quot;:false,&quot;disableSources&quot;:false,&quot;includes&quot;:&quot;&quot;,&quot;media&quot;:&quot;&quot;,&quot;watch&quot;:false,&quot;preserveWatchOutput&quot;:false,&quot;emit&quot;:false,&quot;out&quot;:&quot;docs&quot;,&quot;json&quot;:&quot;&quot;,&quot;pretty&quot;:true,&quot;theme&quot;:&quot;./node_modules/typedoc-neo-theme/bin/default&quot;,&quot;highlightTheme&quot;:&quot;light-plus&quot;,&quot;name&quot;:&quot;&quot;,&quot;includeVersion&quot;:false,&quot;excludeTags&quot;:[],&quot;readme&quot;:&quot;&quot;,&quot;defaultCategory&quot;:&quot;Other&quot;,&quot;categoryOrder&quot;:[],&quot;categorizeByGroup&quot;:true,&quot;gitRevision&quot;:&quot;&quot;,&quot;gitRemote&quot;:&quot;origin&quot;,&quot;gaID&quot;:&quot;&quot;,&quot;gaSite&quot;:&quot;auto&quot;,&quot;hideGenerator&quot;:false,&quot;toc&quot;:[],&quot;disableOutputCheck&quot;:false,&quot;help&quot;:false,&quot;version&quot;:false,&quot;showConfig&quot;:false,&quot;plugin&quot;:[],&quot;logger&quot;:&quot;console&quot;,&quot;logLevel&quot;:1,&quot;listInvalidSymbolLinks&quot;:false}-->
 		</div>
 		<div class="col-2 col-menu secondary-menu">
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
+					<li class=" tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter tsd-is-external root">
+						<a href="object.html#objectbasicdecycle" class="tsd-kind-icon">object<wbr>Basic<wbr>DeCycle</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter tsd-is-external root">
+						<a href="object.html#objectbasiclock" class="tsd-kind-icon">object<wbr>Basic<wbr>Lock</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter tsd-is-external root">
+						<a href="object.html#objectbasicsize" class="tsd-kind-icon">object<wbr>Basic<wbr>Size</a>
+					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-module tsd-is-external root">
 						<a href="object.html#objectfromkeysvalues" class="tsd-kind-icon">object<wbr>From<wbr>Keys<wbr>Values</a>
 					</li>
@@ -604,6 +865,9 @@
 						<a href="object.html#objectisempty" class="tsd-kind-icon">object<wbr>IsEmpty</a>
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter tsd-is-external root">
+						<a href="object.html#objectisownproperty" class="tsd-kind-icon">object<wbr>IsOwn<wbr>Property</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter tsd-is-external root">
 						<a href="object.html#objectkeysorder" class="tsd-kind-icon">object<wbr>Keys<wbr>Order</a>
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter tsd-is-external root">
@@ -614,6 +878,9 @@
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter tsd-is-external root">
 						<a href="object.html#objectsetdefaults" class="tsd-kind-icon">object<wbr>Set<wbr>Defaults</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter tsd-is-external root">
+						<a href="object.html#objectsetvalue" class="tsd-kind-icon">object<wbr>Set<wbr>Value</a>
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter tsd-is-external root">
 						<a href="object.html#objectvalues" class="tsd-kind-icon">object<wbr>Values</a>

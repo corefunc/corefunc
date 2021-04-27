@@ -6,26 +6,26 @@ exports.objectKeysSort = void 0;
  * @name objectKeysSort
  * @description Sort keys if can and return new object instance.
  * @summary ```import { objectKeysSort } from "@corefunc/corefunc/object/keys/sort";```
- * @param {Object} instance Object to be sorted.
+ * @param {Object} objectLike Object to be sorted.
  * @param {Boolean=} [isDeep=true] Deep sort.
  * @returns {Object} New object with sorted keys.
  */
-function objectKeysSort(instance, isDeep = true) {
-  if (!instance || typeof instance !== "object" || Array.isArray(instance)) {
-    return instance;
+function objectKeysSort(objectLike, isDeep = true) {
+  if (!objectLike || typeof objectLike !== "object" || Array.isArray(objectLike)) {
+    return objectLike;
   }
-  const keys = Object.keys(instance).sort((alpha, beta) => alpha.localeCompare(beta));
+  const keys = Object.keys(objectLike).sort((alpha, beta) => alpha.localeCompare(beta));
   if (!keys.length) {
-    return instance;
+    return objectLike;
   }
   return keys.reduce((sorted, key) => {
-    if (isDeep && instance[key] && typeof instance[key] === "object" && !Array.isArray(instance[key])) {
-      sorted[key] = objectKeysSort(instance[key], isDeep);
+    if (isDeep && objectLike[key] && typeof objectLike[key] === "object" && !Array.isArray(objectLike[key])) {
+      sorted[key] = objectKeysSort(objectLike[key], isDeep);
     }
     else {
-      sorted[key] = instance[key];
+      sorted[key] = objectLike[key];
     }
     return sorted;
-  }, Object.create(Object.getPrototypeOf(instance)));
+  }, Object.create(Object.getPrototypeOf(objectLike)));
 }
 exports.objectKeysSort = objectKeysSort;
