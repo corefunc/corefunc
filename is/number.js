@@ -5,7 +5,8 @@ exports.isNumber = void 0;
  * @category Is
  * @name isNumber
  * @description Checks if a given value is number. Returns false on NaN or Infinity.
- * @param {*} value
+ * @summary ```import { isNumber } from "@corefunc/corefunc/is/number";```
+ * @param {*} [value]
  * @returns {Boolean}
  */
 function isNumber(value) {

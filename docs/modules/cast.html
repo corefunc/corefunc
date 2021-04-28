@@ -83,7 +83,10 @@
 						<section class="tsd-index-section tsd-is-external">
 							<h3>Cast To Functions</h3>
 							<ul class="tsd-index-list">
+								<li class="tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter tsd-is-external"><a href="cast.html#casttofloat" class="tsd-kind-icon">cast<wbr>ToFloat</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module tsd-is-external"><a href="cast.html#casttofloatornull" class="tsd-kind-icon">cast<wbr>ToFloat<wbr>OrNull</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter tsd-is-external"><a href="cast.html#casttoint" class="tsd-kind-icon">cast<wbr>ToInt</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module tsd-is-external"><a href="cast.html#casttopercentornull" class="tsd-kind-icon">cast<wbr>ToPercent<wbr>OrNull</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-module tsd-is-external"><a href="cast.html#casttostring" class="tsd-kind-icon">cast<wbr>ToString</a></li>
 							</ul>
 							<h3>Other Functions</h3>
@@ -91,9 +94,6 @@
 								<li class="tsd-kind-function tsd-parent-kind-module tsd-is-external"><a href="cast.html#castmaptoarray" class="tsd-kind-icon">cast<wbr>Map<wbr>ToArray</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-module tsd-is-external"><a href="cast.html#castsettoarray" class="tsd-kind-icon">cast<wbr>Set<wbr>ToArray</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-module tsd-is-external"><a href="cast.html#casttoarray" class="tsd-kind-icon">cast<wbr>ToArray</a></li>
-								<li class="tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter tsd-is-external"><a href="cast.html#casttofloat" class="tsd-kind-icon">cast<wbr>ToFloat</a></li>
-								<li class="tsd-kind-function tsd-parent-kind-module tsd-is-external"><a href="cast.html#casttofloatornull" class="tsd-kind-icon">cast<wbr>ToFloat<wbr>OrNull</a></li>
-								<li class="tsd-kind-function tsd-parent-kind-module tsd-is-external"><a href="cast.html#casttopercentornull" class="tsd-kind-icon">cast<wbr>ToPercent<wbr>OrNull</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-module tsd-is-external"><a href="cast.html#casttoregexp" class="tsd-kind-icon">cast<wbr>ToReg<wbr>Exp</a></li>
 							</ul>
 						</section>
@@ -102,6 +102,95 @@
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Cast To Functions</h2>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter tsd-is-external">
+					<a name="casttofloat" class="tsd-anchor"></a>
+					<h3>cast<wbr>ToFloat</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter tsd-is-external">
+						<li class="tsd-signature tsd-kind-icon">cast<wbr>ToFloat&lt;OnFailType&gt;<span class="tsd-signature-symbol">(</span>value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, onFail<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">OnFailType</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span>, toFixed<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">OnFailType</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in cast/to/float.ts:12</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography tsd-comment-tags">
+								<dl class="tsd-comment-tags"><dt>name</dt>
+									<dd><p>castToFloat</p>
+									</dd><dt>description</dt>
+									<dd><p>Typecast variable to float</p>
+									</dd><dt>summary</dt>
+									<dd><p><code>import { castToFloat } from &quot;@corefunc/corefunc/cast/to/float&quot;;</code></p>
+									</dd><dt>example</dt>
+									<dd><p>castToFloat(&quot;16.5&quot;); // =&gt; 16.5</p>
+								</dd></dl>
+							</div>
+							<h4 class="tsd-type-parameters-title">Type parameters</h4>
+							<ul class="tsd-type-parameters">
+								<li>
+									<h4>OnFailType</h4>
+								</li>
+							</ul>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>value: <span class="tsd-signature-type">any</span></h5>
+								</li>
+								<li>
+									<h5>onFail: <span class="tsd-signature-type">OnFailType</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = 0</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> toFixed: <span class="tsd-signature-type">number</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">OnFailType</span>
+								<span class="tsd-signature-symbol"> | </span>
+								<span class="tsd-signature-type">number</span>
+							</h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module tsd-is-external">
+					<a name="casttofloatornull" class="tsd-anchor"></a>
+					<h3>cast<wbr>ToFloat<wbr>OrNull</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module tsd-is-external">
+						<li class="tsd-signature tsd-kind-icon">cast<wbr>ToFloat<wbr>OrNull<span class="tsd-signature-symbol">(</span>variable<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, toFixed<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">null</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in cast/to/float-or-null.ts:13</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography tsd-comment-tags">
+								<dl class="tsd-comment-tags"><dt>name</dt>
+									<dd><p>castToFloatOrNull</p>
+									</dd><dt>description</dt>
+									<dd><p>Typecast variable to float or null if failed</p>
+									</dd><dt>summary</dt>
+									<dd><p><code>import { castToFloatOrNull } from &quot;@corefunc/corefunc/cast/to/float-or-null&quot;;</code></p>
+									</dd><dt>example</dt>
+									<dd><p>castToFloatOrNull(&quot;16.5&quot;); // =&gt; 16.5</p>
+								</dd></dl>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>variable: <span class="tsd-signature-type">any</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> toFixed: <span class="tsd-signature-type">number</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">null</span>
+								<span class="tsd-signature-symbol"> | </span>
+								<span class="tsd-signature-type">number</span>
+							</h4>
+						</li>
+					</ul>
+				</section>
 				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter tsd-is-external">
 					<a name="casttoint" class="tsd-anchor"></a>
 					<h3>cast<wbr>ToInt</h3>
@@ -148,6 +237,43 @@
 								<span class="tsd-signature-type">number</span>
 							</h4>
 							<p>Any number excluding NaN and Infinity</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module tsd-is-external">
+					<a name="casttopercentornull" class="tsd-anchor"></a>
+					<h3>cast<wbr>ToPercent<wbr>OrNull</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module tsd-is-external">
+						<li class="tsd-signature tsd-kind-icon">cast<wbr>ToPercent<wbr>OrNull<span class="tsd-signature-symbol">(</span>value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">null</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in cast/to/percent-or-null.ts:12</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography tsd-comment-tags">
+								<dl class="tsd-comment-tags"><dt>name</dt>
+									<dd><p>castToPercentOrNull</p>
+									</dd><dt>description</dt>
+									<dd><p>Typecast variable to float or null if failed</p>
+									</dd><dt>summary</dt>
+									<dd><p><code>import { castToPercentOrNull } from &quot;@corefunc/corefunc/cast/to/percent-or-null&quot;;</code></p>
+									</dd><dt>example</dt>
+									<dd><p>castToPercentOrNull(&quot;16.501&quot;); // =&gt; 16.50</p>
+								</dd></dl>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>value: <span class="tsd-signature-type">any</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">null</span>
+								<span class="tsd-signature-symbol"> | </span>
+								<span class="tsd-signature-type">number</span>
+							</h4>
 						</li>
 					</ul>
 				</section>
@@ -265,132 +391,6 @@
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter tsd-is-external">
-					<a name="casttofloat" class="tsd-anchor"></a>
-					<h3>cast<wbr>ToFloat</h3>
-					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">cast<wbr>ToFloat&lt;D&gt;<span class="tsd-signature-symbol">(</span>variable<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">unknown</span>, onFail<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">D</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span>, toFixed<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">D</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in cast/to/float.ts:10</li>
-								</ul>
-							</aside>
-							<div class="tsd-comment tsd-typography tsd-comment-shorttext">
-								<div class="lead">
-									<p>Typecast variable to float</p>
-								</div>
-								</div><div class="tsd-comment tsd-typography tsd-comment-tags">
-								<dl class="tsd-comment-tags"><dt>name</dt>
-									<dd><p>castToFloat</p>
-									</dd><dt>example</dt>
-									<dd><p>castToFloat(&quot;16.5&quot;); // =&gt; 16.5</p>
-								</dd></dl>
-							</div>
-							<h4 class="tsd-type-parameters-title">Type parameters</h4>
-							<ul class="tsd-type-parameters">
-								<li>
-									<h4>D</h4>
-								</li>
-							</ul>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>variable: <span class="tsd-signature-type">unknown</span></h5>
-								</li>
-								<li>
-									<h5>onFail: <span class="tsd-signature-type">D</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = 0</span></h5>
-								</li>
-								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> toFixed: <span class="tsd-signature-type">number</span></h5>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">D</span>
-								<span class="tsd-signature-symbol"> | </span>
-								<span class="tsd-signature-type">number</span>
-							</h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module tsd-is-external">
-					<a name="casttofloatornull" class="tsd-anchor"></a>
-					<h3>cast<wbr>ToFloat<wbr>OrNull</h3>
-					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">cast<wbr>ToFloat<wbr>OrNull<span class="tsd-signature-symbol">(</span>variable<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">unknown</span>, toFixed<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">null</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in cast/to/floatOrNull.ts:11</li>
-								</ul>
-							</aside>
-							<div class="tsd-comment tsd-typography tsd-comment-shorttext">
-								<div class="lead">
-									<p>Typecast variable to float or null if failed</p>
-								</div>
-								</div><div class="tsd-comment tsd-typography tsd-comment-tags">
-								<dl class="tsd-comment-tags"><dt>name</dt>
-									<dd><p>castToFloatOrNull</p>
-									</dd><dt>example</dt>
-									<dd><p>castToFloatOrNull(&quot;16.5&quot;); // =&gt; 16.5</p>
-								</dd></dl>
-							</div>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>variable: <span class="tsd-signature-type">unknown</span></h5>
-								</li>
-								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> toFixed: <span class="tsd-signature-type">number</span></h5>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">null</span>
-								<span class="tsd-signature-symbol"> | </span>
-								<span class="tsd-signature-type">number</span>
-							</h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module tsd-is-external">
-					<a name="casttopercentornull" class="tsd-anchor"></a>
-					<h3>cast<wbr>ToPercent<wbr>OrNull</h3>
-					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">cast<wbr>ToPercent<wbr>OrNull<span class="tsd-signature-symbol">(</span>variable<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">unknown</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">null</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in cast/to/percentOrNull.ts:10</li>
-								</ul>
-							</aside>
-							<div class="tsd-comment tsd-typography tsd-comment-shorttext">
-								<div class="lead">
-									<p>Typecast variable to float or null if failed</p>
-								</div>
-								</div><div class="tsd-comment tsd-typography tsd-comment-tags">
-								<dl class="tsd-comment-tags"><dt>name</dt>
-									<dd><p>castToPercentOrNull</p>
-									</dd><dt>example</dt>
-									<dd><p>castToPercentOrNull(&quot;16.501&quot;); // =&gt; 16.50</p>
-								</dd></dl>
-							</div>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>variable: <span class="tsd-signature-type">unknown</span></h5>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">null</span>
-								<span class="tsd-signature-symbol"> | </span>
-								<span class="tsd-signature-type">number</span>
-							</h4>
 						</li>
 					</ul>
 				</section>

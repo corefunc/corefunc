@@ -12,8 +12,8 @@ var __exportStar = (this && this.__exportStar) || function(m, exports) {
 Object.defineProperty(exports, "__esModule", { value: true });
 __exportStar(require("./array"), exports);
 __exportStar(require("./float"), exports);
-__exportStar(require("./floatOrNull"), exports);
+__exportStar(require("./float-or-null"), exports);
 __exportStar(require("./int"), exports);
-__exportStar(require("./percentOrNull"), exports);
+__exportStar(require("./percent-or-null"), exports);
 __exportStar(require("./regexp"), exports);
 __exportStar(require("./string"), exports);

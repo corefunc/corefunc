@@ -1,10 +1,12 @@
 import { castToFloat } from "./float.mjs";
 
 /**
- * Typecast variable to float or null if failed
+ * @category Cast To
  * @name castToFloatOrNull
- * @param {*} variable
- * @param {number} [toFixed=]
+ * @description Typecast variable to float or null if failed
+ * @summary ```import { castToFloatOrNull } from "@corefunc/corefunc/cast/to/float-or-null";```
+ * @param {*} [variable]
+ * @param {Number} [toFixed=]
  * @returns {Null|Number}
  * @example castToFloatOrNull("16.5"); // => 16.5
  */

@@ -1,19 +1,25 @@
 /**
- * Typecast variable to float
+ * @category Cast To
  * @name castToFloat
- * @param {*} variable
+ * @description Typecast variable to float
+ * @summary ```import { castToFloat } from "@corefunc/corefunc/cast/to/float";```
+ * @param {*} [value]
  * @param {*} [onFail=0] The return value in case of failure
- * @param {number} [toFixed=]
+ * @param {Number=} [toFixed]
  * @returns {Number}
  * @example castToFloat("16.5"); // => 16.5
  */
-export function castToFloat<D>(variable: unknown, onFail: D | number = 0, toFixed?: number): D | number {
-  const type = typeof variable;
+export function castToFloat<OnFailType>(
+  value: any,
+  onFail: OnFailType | number = 0,
+  toFixed?: number,
+): OnFailType | number {
+  const type = typeof value;
   if (type === "boolean") {
-    return Number(variable);
+    return Number(value);
   }
   if (type === "string") {
-    const temporary = Number.parseFloat(variable as string);
+    const temporary = Number.parseFloat(value as string);
     if (Number.isNaN(temporary) || !Number.isFinite(temporary)) {
       return onFail;
     }
@@ -22,11 +28,11 @@ export function castToFloat<D>(variable: unknown, onFail: D | number = 0, toFixe
     }
     return temporary;
   }
-  if (type === "number" && Number.isFinite(variable as number)) {
+  if (type === "number" && Number.isFinite(value as number)) {
     if (typeof toFixed === "number") {
-      return Number.parseFloat(Number.parseFloat(variable as string).toFixed(toFixed));
+      return Number.parseFloat(Number.parseFloat(value as string).toFixed(toFixed));
     }
-    return Number.parseFloat(variable as string);
+    return Number.parseFloat(value as string);
   }
   return onFail;
 }
