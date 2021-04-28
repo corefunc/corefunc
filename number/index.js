@@ -10,7 +10,7 @@ var __exportStar = (this && this.__exportStar) || function(m, exports) {
     for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports, p)) __createBinding(exports, m, p);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-__exportStar(require("./decimalPortion"), exports);
+__exportStar(require("./decimal-portion"), exports);
 __exportStar(require("./ranged"), exports);
 __exportStar(require("./round"), exports);
-__exportStar(require("./zeroPad"), exports);
+__exportStar(require("./zero-pad"), exports);

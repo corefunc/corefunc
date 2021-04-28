@@ -9,6 +9,7 @@ import * as v8 from "v8";
  * @returns {Object}
  * @throws {Error}
  * @since 0.1.47
+ * @deprecated Use `@corefunc/v8/clone` instead
  */
 export function v8Clone(objectToClone, returnOriginalOnError = true) {
   if (returnOriginalOnError) {

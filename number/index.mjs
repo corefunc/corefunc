@@ -1,4 +1,4 @@
-export * from "./decimalPortion.mjs";
+export * from "./decimal-portion.mjs";
 export * from "./ranged.mjs";
 export * from "./round.mjs";
-export * from "./zeroPad.mjs";
+export * from "./zero-pad.mjs";

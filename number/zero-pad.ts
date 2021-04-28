@@ -2,6 +2,7 @@
  * @category Number
  * @name numberZeroPad
  * @description Pad a number with leading zeros and zeroes after the decimal point.
+ * @summary ```import { numberZeroPad } from "@corefunc/corefunc/number/zero-pad";```
  * @throws {RangeError|TypeError}
  * @param {Number|String} numberToPad
  * @param {Number} [leadingLength=0]

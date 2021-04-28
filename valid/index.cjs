@@ -10,6 +10,6 @@ var __exportStar = (this && this.__exportStar) || function(m, exports) {
     for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports, p)) __createBinding(exports, m, p);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-__exportStar(require("./isEmpty.cjs"), exports);
-__exportStar(require("./isObjectId.cjs"), exports);
-__exportStar(require("./isUUID.cjs"), exports);
+__exportStar(require("./is-empty.cjs"), exports);
+__exportStar(require("./is-object-id.cjs"), exports);
+__exportStar(require("./is-uuid.cjs"), exports);

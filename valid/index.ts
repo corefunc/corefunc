@@ -1,3 +1,3 @@
-export * from "./isEmpty";
-export * from "./isObjectId";
-export * from "./isUUID";
+export * from "./is-empty";
+export * from "./is-object-id";
+export * from "./is-uuid";

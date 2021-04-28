@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.castToPercentOrNull = void 0;
-const float_1 = require("./float.cjs");
+const float_1 = require("./float");
 /**
  * @category Cast To
  * @name castToPercentOrNull

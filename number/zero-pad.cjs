@@ -1,7 +1,11 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.numberZeroPad = void 0;
 /**
  * @category Number
  * @name numberZeroPad
  * @description Pad a number with leading zeros and zeroes after the decimal point.
+ * @summary ```import { numberZeroPad } from "@corefunc/corefunc/number/zero-pad";```
  * @throws {RangeError|TypeError}
  * @param {Number|String} numberToPad
  * @param {Number} [leadingLength=0]
@@ -25,7 +29,7 @@
  * numberZeroPad(1234567.89, 4, 3); // ➜ '1234567.890'
  * ```
  */
-export function numberZeroPad(numberToPad, leadingLength = 0, decimalLength) {
+function numberZeroPad(numberToPad, leadingLength = 0, decimalLength) {
   if (!Number.isInteger(leadingLength)) {
     throw new TypeError(`The leading length should be an integer. [${leadingLength}] given.`);
   }
@@ -54,13 +58,15 @@ export function numberZeroPad(numberToPad, leadingLength = 0, decimalLength) {
   let decimalPortion = String(Number.parseFloat(asString));
   if (decimalPortion.includes(".")) {
     decimalPortion = decimalPortion.split(".").pop() || "";
-  } else {
+  }
+  else {
     decimalPortion = "";
   }
   if (decimalLength !== undefined && decimalPortion.length !== decimalLength) {
     if (decimalPortion.length > decimalLength) {
       decimalPortion = decimalPortion.substring(0, decimalLength);
-    } else {
+    }
+    else {
       decimalPortion = decimalPortion.padEnd(decimalLength, "0");
     }
   }
@@ -70,3 +76,4 @@ export function numberZeroPad(numberToPad, leadingLength = 0, decimalLength) {
   }
   return padded;
 }
+exports.numberZeroPad = numberZeroPad;

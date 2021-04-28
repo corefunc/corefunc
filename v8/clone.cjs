@@ -11,6 +11,7 @@ const v8 = require("v8");
  * @returns {Object}
  * @throws {Error}
  * @since 0.1.47
+ * @deprecated Use `@corefunc/v8/clone` instead
  */
 function v8Clone(objectToClone, returnOriginalOnError = true) {
   if (returnOriginalOnError) {

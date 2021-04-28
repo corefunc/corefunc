@@ -10,6 +10,6 @@ exports.isObjectId = void 0;
  * @since 0.0.94
  */
 function isObjectId(value) {
-    return typeof value === "string" && /^[0-9a-fA-F]{24}$/.test(value);
+  return typeof value === "string" && /^[0-9a-fA-F]{24}$/.test(value);
 }
 exports.isObjectId = isObjectId;

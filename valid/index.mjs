@@ -1,3 +1,3 @@
-export * from "./isEmpty.mjs";
-export * from "./isObjectId.mjs";
-export * from "./isUUID.mjs";
+export * from "./is-empty.mjs";
+export * from "./is-object-id.mjs";
+export * from "./is-uuid.mjs";

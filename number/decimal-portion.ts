@@ -28,9 +28,7 @@ export function numberDecimalPortion(numberGetFrom: number | string, removeTrail
   const asString = String(numberGetFrom);
   const asFloat = Number.parseFloat(asString);
   if (Number.isNaN(asFloat) || !Number.isFinite(asFloat)) {
-    throw new TypeError(
-      `The number to pad should be a valid number. [${asString}] given.`
-    );
+    throw new TypeError(`The number to pad should be a valid number. [${asString}] given.`);
   }
   let decimalPortion = String(removeTrailingZeros ? asFloat : asString);
   if (decimalPortion.includes(".")) {
