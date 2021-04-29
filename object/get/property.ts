@@ -9,31 +9,36 @@
  * @returns {*} Value in path or default value
  * @since 0.0.47
  */
-export function objectGetProperty<ObjectType extends Record<string, any>, DefaultType extends any>(
+export function objectGetProperty<
+  ObjectType extends Record<string, any>,
+  KeyType extends keyof ObjectType,
+  DefaultType extends any
+>(
+  //
   object: ObjectType,
-  keyOrPath: string | string[],
+  keyOrPath: KeyType | string[],
   defaultValue?: DefaultType,
-): any {
+): ObjectType[KeyType] | DefaultType {
   if (!object || typeof object !== "object") {
-    return defaultValue;
+    return defaultValue as DefaultType;
   }
   if (typeof keyOrPath === "string" && keyOrPath in object) {
     return object[keyOrPath];
   }
-  let keySet;
+  let keySet: string[];
   if (typeof keyOrPath === "string") {
     keySet = keyOrPath.split(".");
   } else if (Array.isArray(keyOrPath)) {
-    keySet = keyOrPath;
+    keySet = keyOrPath as string[];
   } else {
-    return defaultValue;
+    return defaultValue as DefaultType;
   }
   const length = keySet.length;
   if (length === 1) {
     if (keySet[0] in object) {
       return object[keySet[0]];
     } else {
-      return defaultValue;
+      return defaultValue as DefaultType;
     }
   }
   let index = 0;
@@ -44,7 +49,7 @@ export function objectGetProperty<ObjectType extends Record<string, any>, Defaul
     try {
       newObject = JSON.parse(JSON.stringify(object));
     } catch {
-      return defaultValue;
+      return defaultValue as DefaultType;
     }
   }
   let isSet = false;
@@ -59,11 +64,11 @@ export function objectGetProperty<ObjectType extends Record<string, any>, Defaul
       if (isSet) {
         return newObject;
       }
-      return defaultValue;
+      return defaultValue as DefaultType;
     } else {
       return newObject;
     }
   } else {
-    return defaultValue;
+    return defaultValue as DefaultType;
   }
 }

@@ -12,9 +12,9 @@ const float_1 = require("./float");
  * @example castToPercentOrNull("16.501"); // => 16.50
  */
 function castToPercentOrNull(value) {
-  if (value === null || value === undefined) {
-    return null;
-  }
-  return float_1.castToFloat(value, null, 2);
+    if (value === null || value === undefined) {
+        return null;
+    }
+    return float_1.castToFloat(value, null, 2);
 }
 exports.castToPercentOrNull = castToPercentOrNull;

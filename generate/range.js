@@ -2,6 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.generateRange = void 0;
 /**
+ * @category Generate
  * @description Number.range & BigInt.range
  * @param {number | bigint} from - Number to generate from
  * @param {number | bigint =} to - Number to generate until
@@ -67,6 +68,7 @@ function* CreateRangeIterator(from, to, step, type) {
 // export function generateRange(from: number, to?: number, step?: number, type?: "number"): number[];
 // export function generateRange(from: BigInt, to?: BigInt, step?: BigInt, type?: "bigint"): BigInt[];
 /**
+ * @category Generate
  * @name generateRange
  * @description Number.range & BigInt.range
  * @param {number|bigint|=0} from - Number from

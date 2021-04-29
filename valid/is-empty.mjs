@@ -1,10 +1,12 @@
 import { checkIsPrimitive } from "../check/isPrimitive.mjs";
+import { isString } from "../is/string.mjs";
 
 /**
  * @category Is Valid
  * @name isEmpty
  * @description Checks wherever object is empty
- * @param {*} value
+ * @summary ```import { isEmpty } from "@corefunc/corefunc/valid/is-empty";```
+ * @param {*} [value] Any value.
  * @returns {Boolean}
  */
 export function isEmpty(value) {
@@ -12,8 +14,8 @@ export function isEmpty(value) {
     return true;
   }
   if (checkIsPrimitive(value)) {
-    if (typeof value === "string") {
-      return !value.length;
+    if (isString(value)) {
+      return Boolean(value.length);
     }
     return Boolean(value);
   }

@@ -81,9 +81,10 @@
 				<section class="tsd-panel tsd-index-panel">
 					<div class="tsd-index-content">
 						<section class="tsd-index-section tsd-is-external">
-							<h3>Functions</h3>
+							<h3>Generate Functions</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-function tsd-parent-kind-module tsd-is-external"><a href="generate.html#generateboolean" class="tsd-kind-icon">generate<wbr>Boolean</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter tsd-is-external"><a href="generate.html#generatefromarray" class="tsd-kind-icon">generate<wbr>From<wbr>Array</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-module tsd-is-external"><a href="generate.html#generaterange" class="tsd-kind-icon">generate<wbr>Range</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-module tsd-is-external"><a href="generate.html#generatestring" class="tsd-kind-icon">generate<wbr>String</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-module tsd-is-external"><a href="generate.html#generatetoken" class="tsd-kind-icon">generate<wbr>Token</a></li>
@@ -94,8 +95,8 @@
 					</div>
 				</section>
 			</section>
-			<section class="tsd-panel-group tsd-member-group tsd-is-external">
-				<h2>Functions</h2>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Generate Functions</h2>
 				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module tsd-is-external">
 					<a name="generateboolean" class="tsd-anchor"></a>
 					<h3>generate<wbr>Boolean</h3>
@@ -106,7 +107,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in generate/boolean.ts:7</li>
+									<li>Defined in generate/boolean.ts:8</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography tsd-comment-tags">
@@ -123,6 +124,47 @@
 						</li>
 					</ul>
 				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter tsd-is-external">
+					<a name="generatefromarray" class="tsd-anchor"></a>
+					<h3>generate<wbr>From<wbr>Array</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter tsd-is-external">
+						<li class="tsd-signature tsd-kind-icon">generate<wbr>From<wbr>Array&lt;Type&gt;<span class="tsd-signature-symbol">(</span>arrayFrom<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Type</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Type</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in generate/from-array.ts:10</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography tsd-comment-tags">
+								<dl class="tsd-comment-tags"><dt>name</dt>
+									<dd><p>generateFromArray</p>
+									</dd><dt>description</dt>
+									<dd><p>Gets the random value from array.</p>
+									</dd><dt>summary</dt>
+									<dd><p><code>import { generateFromArray } from &quot;@corefunc/corefunc/generate/from-array&quot;;</code></p>
+									</dd><dt>since</dt>
+									<dd><p>0.1.58</p>
+								</dd></dl>
+							</div>
+							<h4 class="tsd-type-parameters-title">Type parameters</h4>
+							<ul class="tsd-type-parameters">
+								<li>
+									<h4>Type</h4>
+								</li>
+							</ul>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>arrayFrom: <span class="tsd-signature-type">Type</span><span class="tsd-signature-symbol">[]</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Type</span></h4>
+							<p>Value from array.</p>
+						</li>
+					</ul>
+				</section>
 				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module tsd-is-external">
 					<a name="generaterange" class="tsd-anchor"></a>
 					<h3>generate<wbr>Range</h3>
@@ -133,7 +175,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in generate/range.ts:73</li>
+									<li>Defined in generate/range.ts:75</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography tsd-comment-tags">
@@ -184,13 +226,13 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in generate/string.ts:7</li>
+									<li>Defined in generate/string.ts:8</li>
 								</ul>
 							</aside>
-							<div class="tsd-comment tsd-typography tsd-comment-shorttext">
-								<div class="lead">
-									<p>Generate random string from latin characters and numbers</p>
-								</div>
+							<div class="tsd-comment tsd-typography tsd-comment-tags">
+								<dl class="tsd-comment-tags"><dt>description</dt>
+									<dd><p>Generate random string from latin characters and numbers</p>
+								</dd></dl>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
@@ -215,9 +257,16 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in generate/token.ts:1</li>
+									<li>Defined in generate/token.ts:8</li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography tsd-comment-tags">
+								<dl class="tsd-comment-tags"><dt>name</dt>
+									<dd><p>generateToken</p>
+									</dd><dt>description</dt>
+									<dd><p>Generate random string from latin characters and numbers.</p>
+								</dd></dl>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
@@ -238,9 +287,14 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in generate/uuid.ts:7</li>
+									<li>Defined in generate/uuid.ts:11</li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography tsd-comment-tags">
+								<dl class="tsd-comment-tags"><dt>name</dt>
+									<dd><p>generateUuid</p>
+								</dd></dl>
+							</div>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
 						</li>
 					</ul>
@@ -255,7 +309,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in generate/uuid4.ts:6</li>
+									<li>Defined in generate/uuid4.ts:7</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography tsd-comment-tags">
@@ -277,6 +331,9 @@
 				<ul class="before-current">
 					<li class=" tsd-kind-function tsd-parent-kind-module tsd-is-external root">
 						<a href="generate.html#generateboolean" class="tsd-kind-icon">generate<wbr>Boolean</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter tsd-is-external root">
+						<a href="generate.html#generatefromarray" class="tsd-kind-icon">generate<wbr>From<wbr>Array</a>
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-module tsd-is-external root">
 						<a href="generate.html#generaterange" class="tsd-kind-icon">generate<wbr>Range</a>

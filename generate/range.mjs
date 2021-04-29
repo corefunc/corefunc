@@ -1,4 +1,5 @@
 /**
+ * @category Generate
  * @description Number.range & BigInt.range
  * @param {number | bigint} from - Number to generate from
  * @param {number | bigint =} to - Number to generate until
@@ -60,6 +61,7 @@ function* CreateRangeIterator(from, to, step, type) {
 }
 
 /**
+ * @category Generate
  * @name generateRange
  * @description Number.range & BigInt.range
  * @param {number|bigint|=0} from - Number from

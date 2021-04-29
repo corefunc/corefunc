@@ -2,6 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.generateBoolean = void 0;
 /**
+ * @category Generate
  * @name generateBoolean
  * @description Generate random boolean value
  * @returns {Boolean} True or false

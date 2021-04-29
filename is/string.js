@@ -4,14 +4,12 @@ exports.isString = void 0;
 /**
  * @category Is
  * @name isString
- * @description Checks if a given value is string.
- * @param {*} value
+ * @description Checks if a given value is a real string.
+ * @summary ```import { isString } from "@corefunc/corefunc/is/string";```
+ * @param {*} [value] Any value.
  * @returns {Boolean}
  */
 function isString(value) {
-    if (typeof value === "string") {
-        return true;
-    }
-    return Object.prototype.toString.call(value) === "[object String]";
+    return typeof value === "string" || value instanceof String;
 }
 exports.isString = isString;

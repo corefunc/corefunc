@@ -1,4 +1,5 @@
 /**
+ * @category Generate
  * @name generateBoolean
  * @description Generate random boolean value
  * @returns {Boolean} True or false

@@ -12,7 +12,12 @@ exports.objectGetProperty = void 0;
  * @returns {*} Value in path or default value
  * @since 0.0.47
  */
-function objectGetProperty(object, keyOrPath, defaultValue) {
+function objectGetProperty(
+  //
+  object,
+  keyOrPath,
+  defaultValue,
+) {
   if (!object || typeof object !== "object") {
     return defaultValue;
   }
@@ -22,19 +27,16 @@ function objectGetProperty(object, keyOrPath, defaultValue) {
   let keySet;
   if (typeof keyOrPath === "string") {
     keySet = keyOrPath.split(".");
-  }
-  else if (Array.isArray(keyOrPath)) {
+  } else if (Array.isArray(keyOrPath)) {
     keySet = keyOrPath;
-  }
-  else {
+  } else {
     return defaultValue;
   }
   const length = keySet.length;
   if (length === 1) {
     if (keySet[0] in object) {
       return object[keySet[0]];
-    }
-    else {
+    } else {
       return defaultValue;
     }
   }
@@ -42,12 +44,10 @@ function objectGetProperty(object, keyOrPath, defaultValue) {
   let newObject;
   try {
     newObject = Object.assign({}, object);
-  }
-  catch (_a) {
+  } catch (_a) {
     try {
       newObject = JSON.parse(JSON.stringify(object));
-    }
-    catch (_b) {
+    } catch (_b) {
       return defaultValue;
     }
   }
@@ -64,12 +64,10 @@ function objectGetProperty(object, keyOrPath, defaultValue) {
         return newObject;
       }
       return defaultValue;
-    }
-    else {
+    } else {
       return newObject;
     }
-  }
-  else {
+  } else {
     return defaultValue;
   }
 }
