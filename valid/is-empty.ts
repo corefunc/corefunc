@@ -15,18 +15,18 @@ export function isEmpty(value: any): boolean {
   }
   if (checkIsPrimitive(value)) {
     if (isString(value)) {
-      return Boolean(value.length);
+      return value.length === 0;
     }
-    return Boolean(value);
+    return !value;
   }
   if (Array.isArray(value)) {
-    return Boolean(value.length);
+    return value.length === 0;
   }
   if (value instanceof Set) {
-    return Boolean(value.size);
+    return value.size === 0;
   }
   if (value instanceof Map) {
-    return Boolean(value.size);
+    return value.size === 0;
   }
-  return Boolean(Object.keys(value).length);
+  return Object.keys(value).length === 0;
 }
