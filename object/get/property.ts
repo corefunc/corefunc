@@ -16,7 +16,7 @@ export function objectGetProperty<
 >(
   //
   object: ObjectType,
-  keyOrPath: KeyType | string[],
+  keyOrPath: KeyType | string | string[],
   defaultValue?: DefaultType,
 ): ObjectType[KeyType] | DefaultType {
   if (!object || typeof object !== "object") {
