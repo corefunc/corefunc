@@ -11,7 +11,7 @@
  * castToInt("F", 0, 16); // => 15
  * ```
  */
-export function castToInt<D>(value, onFail: D | number = 0, radix: number = 10): D | number {
+export function castToInt<D>(value: any, onFail: D | number = 0, radix: number = 10): D | number {
   const type = typeof value;
   if (type === "boolean") {
     return Number(value);
