@@ -62,10 +62,11 @@
     "lint:dir": "eslint ./**/*.{cj,mj,t}s",
     "lint:md": "remark .",
     "package:upgrade": "npx npm-check --update",
+    "package:check": "npx depcheck",
     "test": "jest --passWithNoTests",
     "test:cjs": "node ./tests/index.cjs",
     "test:coverage": "jest --collect-coverage",
     "test:mjs": "node --experimental-modules ./tests/index.mjs"
   },
-  "version": "0.1.58"
+  "version": "0.1.59"
 }

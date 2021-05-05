@@ -30,5 +30,5 @@ export function castToInt(value, onFail = 0, radix = 10) {
   if (Object.prototype.toString.call(value) === "[object Number]" && Number.isFinite(casted)) {
     return casted | 0;
   }
-  return onFail;
+  return castToInt(String(value), onFail, radix);
 }

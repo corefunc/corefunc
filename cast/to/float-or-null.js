@@ -13,9 +13,9 @@ const float_1 = require("./float");
  * @example castToFloatOrNull("16.5"); // => 16.5
  */
 function castToFloatOrNull(variable, toFixed) {
-    if (variable === null || variable === undefined) {
-        return null;
-    }
-    return float_1.castToFloat(variable, null, toFixed);
+  if (variable === null || variable === undefined) {
+    return null;
+  }
+  return float_1.castToFloat(variable, null, toFixed);
 }
 exports.castToFloatOrNull = castToFloatOrNull;

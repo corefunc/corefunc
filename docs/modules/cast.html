@@ -86,6 +86,7 @@
 								<li class="tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter tsd-is-external"><a href="cast.html#casttofloat" class="tsd-kind-icon">cast<wbr>ToFloat</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-module tsd-is-external"><a href="cast.html#casttofloatornull" class="tsd-kind-icon">cast<wbr>ToFloat<wbr>OrNull</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter tsd-is-external"><a href="cast.html#casttoint" class="tsd-kind-icon">cast<wbr>ToInt</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module tsd-is-external"><a href="cast.html#casttointornull" class="tsd-kind-icon">cast<wbr>ToInt<wbr>OrNull</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-module tsd-is-external"><a href="cast.html#casttopercentornull" class="tsd-kind-icon">cast<wbr>ToPercent<wbr>OrNull</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-module tsd-is-external"><a href="cast.html#casttostring" class="tsd-kind-icon">cast<wbr>ToString</a></li>
 							</ul>
@@ -237,6 +238,43 @@
 								<span class="tsd-signature-type">number</span>
 							</h4>
 							<p>Any number excluding NaN and Infinity</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module tsd-is-external">
+					<a name="casttointornull" class="tsd-anchor"></a>
+					<h3>cast<wbr>ToInt<wbr>OrNull</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module tsd-is-external">
+						<li class="tsd-signature tsd-kind-icon">cast<wbr>ToInt<wbr>OrNull<span class="tsd-signature-symbol">(</span>value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">null</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in cast/to/int-or-null.ts:12</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography tsd-comment-tags">
+								<dl class="tsd-comment-tags"><dt>name</dt>
+									<dd><p>castToIntOrNull</p>
+									</dd><dt>description</dt>
+									<dd><p>Typecast variable to integer or null if failed.</p>
+									</dd><dt>summary</dt>
+									<dd><p><code>import { castToIntOrNull } from &quot;@corefunc/corefunc/cast/to/int-or-null&quot;;</code></p>
+									</dd><dt>example</dt>
+									<dd><p>castToIntOrNull(&quot;16.5&quot;); // =&gt; 16</p>
+								</dd></dl>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>value: <span class="tsd-signature-type">any</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">null</span>
+								<span class="tsd-signature-symbol"> | </span>
+								<span class="tsd-signature-type">number</span>
+							</h4>
 						</li>
 					</ul>
 				</section>
@@ -443,6 +481,9 @@
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter tsd-is-external root">
 						<a href="cast.html#casttoint" class="tsd-kind-icon">cast<wbr>ToInt</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module tsd-is-external root">
+						<a href="cast.html#casttointornull" class="tsd-kind-icon">cast<wbr>ToInt<wbr>OrNull</a>
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-module tsd-is-external root">
 						<a href="cast.html#casttopercentornull" class="tsd-kind-icon">cast<wbr>ToPercent<wbr>OrNull</a>

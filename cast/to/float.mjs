@@ -30,5 +30,5 @@ export function castToFloat(value, onFail = 0, toFixed) {
     }
     return Number.parseFloat(value);
   }
-  return onFail;
+  return castToFloat(String(value), onFail, toFixed);
 }
