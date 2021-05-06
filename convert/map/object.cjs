@@ -1,6 +1,10 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.convertMapToObject = void 0;
+/**
+ * @deprecated
+ * @param map
+ */
 function convertMapToObject(map) {
   const object = {};
   map.forEach((value, key) => {
