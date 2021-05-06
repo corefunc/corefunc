@@ -2,6 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.jsonStringifySafe = void 0;
 const json_1 = require("../../convert/error/json");
+// eslint-disable-next-line no-unused-vars
 function serializer(replacer, cycleReplacerArg = null) {
     const keys = [];
     const stack = [];
@@ -18,6 +19,13 @@ function serializer(replacer, cycleReplacerArg = null) {
         let result = value;
         if (result instanceof Error) {
             result = json_1.convertErrorToJson(result);
+            delete result.stack;
+        }
+        else if (result instanceof Set) {
+            result = Array.from(result);
+        }
+        else if (result instanceof Map) {
+            result = Object.fromEntries(result);
         }
         if (stack.length > 0) {
             // @ts-ignore
@@ -41,13 +49,17 @@ function serializer(replacer, cycleReplacerArg = null) {
     };
 }
 /**
- * @param {*} object
+ * @param {*} value
  * @param {Function=} replacer
- * @param {String=} spaces
+ * @param {Number|String=} spaces
  * @param {Function=} cycleReplacer
  * @return {String}
  */
-function jsonStringifySafe(object, replacer, spaces, cycleReplacer) {
-    return JSON.stringify(object, serializer(replacer, cycleReplacer), spaces);
+function jsonStringifySafe(value, 
+// eslint-disable-next-line no-unused-vars
+replacer, spaces, 
+// eslint-disable-next-line no-unused-vars
+cycleReplacer) {
+    return JSON.stringify(value, serializer(replacer, cycleReplacer), spaces);
 }
 exports.jsonStringifySafe = jsonStringifySafe;

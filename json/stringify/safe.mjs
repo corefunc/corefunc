@@ -16,6 +16,11 @@ function serializer(replacer, cycleReplacerArg = null) {
     let result = value;
     if (result instanceof Error) {
       result = convertErrorToJson(result);
+      delete result.stack;
+    } else if (result instanceof Set) {
+      result = Array.from(result);
+    } else if (result instanceof Map) {
+      result = Object.fromEntries(result);
     }
     if (stack.length > 0) {
       const thisPos = stack.indexOf(this);
@@ -35,12 +40,12 @@ function serializer(replacer, cycleReplacerArg = null) {
 }
 
 /**
- * @param {*} object
+ * @param {*} value
  * @param {Function=} replacer
- * @param {String=} spaces
+ * @param {Number|String=} spaces
  * @param {Function=} cycleReplacer
  * @return {String}
  */
-export function jsonStringifySafe(object, replacer, spaces, cycleReplacer) {
-  return JSON.stringify(object, serializer(replacer, cycleReplacer), spaces);
+export function jsonStringifySafe(value, replacer, spaces, cycleReplacer) {
+  return JSON.stringify(value, serializer(replacer, cycleReplacer), spaces);
 }

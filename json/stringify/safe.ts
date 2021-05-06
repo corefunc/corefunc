@@ -1,5 +1,6 @@
 import { convertErrorToJson } from "../../convert/error/json";
 
+// eslint-disable-next-line no-unused-vars
 function serializer(replacer?: (this: any, key: string, value: any) => any, cycleReplacerArg: null | Function = null) {
   const keys: string[] = [];
   const stack: any[] = [];
@@ -16,6 +17,11 @@ function serializer(replacer?: (this: any, key: string, value: any) => any, cycl
     let result = value;
     if (result instanceof Error) {
       result = convertErrorToJson(result);
+      delete result.stack;
+    } else if (result instanceof Set) {
+      result = Array.from(result);
+    } else if (result instanceof Map) {
+      result = Object.fromEntries(result);
     }
     if (stack.length > 0) {
       // @ts-ignore
@@ -39,17 +45,19 @@ function serializer(replacer?: (this: any, key: string, value: any) => any, cycl
 }
 
 /**
- * @param {*} object
+ * @param {*} value
  * @param {Function=} replacer
- * @param {String=} spaces
+ * @param {Number|String=} spaces
  * @param {Function=} cycleReplacer
  * @return {String}
  */
 export function jsonStringifySafe(
-  object: any,
+  value: any,
+  // eslint-disable-next-line no-unused-vars
   replacer?: (this: any, key: string, value: any) => any,
   spaces?: string | number,
+  // eslint-disable-next-line no-unused-vars
   cycleReplacer?: (key: string, value: any) => any,
 ): string {
-  return JSON.stringify(object, serializer(replacer, cycleReplacer), spaces);
+  return JSON.stringify(value, serializer(replacer, cycleReplacer), spaces);
 }
