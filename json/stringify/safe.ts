@@ -1,3 +1,4 @@
+import { convertBigIntToJson } from "../../convert/bigint/json";
 import { convertErrorToJson } from "../../convert/error/json";
 
 // eslint-disable-next-line no-unused-vars
@@ -23,7 +24,7 @@ function serializer(replacer?: (this: any, key: string, value: any) => any, cycl
     } else if (result instanceof Map) {
       result = Object.fromEntries(result);
     } else if (typeof result === "bigint") {
-      result = String(result);
+      result = convertBigIntToJson(result);
     } else if (typeof result === "symbol") {
       result = result.description;
     } else if (result instanceof RegExp) {

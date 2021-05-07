@@ -1,7 +1,8 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.jsonStringifySafe = void 0;
-const json_1 = require("../../convert/error/json.cjs");
+const json_1 = require("../../convert/bigint/json.cjs");
+const json_2 = require("../../convert/error/json.cjs");
 // eslint-disable-next-line no-unused-vars
 function serializer(replacer, cycleReplacerArg = null) {
   const keys = [];
@@ -18,7 +19,7 @@ function serializer(replacer, cycleReplacerArg = null) {
   return function (key, value) {
     let result = value;
     if (result instanceof Error) {
-      result = json_1.convertErrorToJson(result);
+      result = json_2.convertErrorToJson(result);
       delete result.stack;
     }
     else if (result instanceof Set) {
@@ -28,7 +29,7 @@ function serializer(replacer, cycleReplacerArg = null) {
       result = Object.fromEntries(result);
     }
     else if (typeof result === "bigint") {
-      result = String(result);
+      result = json_1.convertBigIntToJson(result);
     }
     else if (typeof result === "symbol") {
       result = result.description;

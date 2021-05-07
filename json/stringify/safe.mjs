@@ -1,3 +1,4 @@
+import { convertBigIntToJson } from "../../convert/bigint/json.mjs";
 import { convertErrorToJson } from "../../convert/error/json.mjs";
 
 function serializer(replacer, cycleReplacerArg = null) {
@@ -22,7 +23,7 @@ function serializer(replacer, cycleReplacerArg = null) {
     } else if (result instanceof Map) {
       result = Object.fromEntries(result);
     } else if (typeof result === "bigint") {
-      result = String(result);
+      result = convertBigIntToJson(result);
     } else if (typeof result === "symbol") {
       result = result.description;
     } else if (result instanceof RegExp) {
