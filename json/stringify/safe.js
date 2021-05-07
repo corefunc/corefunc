@@ -27,6 +27,24 @@ function serializer(replacer, cycleReplacerArg = null) {
         else if (result instanceof Map) {
             result = Object.fromEntries(result);
         }
+        else if (typeof result === "bigint") {
+            result = String(result);
+        }
+        else if (typeof result === "symbol") {
+            result = result.description;
+        }
+        else if (result instanceof RegExp) {
+            result = String(result);
+        }
+        else {
+            const proto = Object.prototype.toString.call(result);
+            if (proto !== "[object Array]" && proto.startsWith("[object ") && proto.endsWith("Array]")) {
+                result = Array.from(result);
+            }
+            else if (proto === "[object Arguments]") {
+                result = Array.from(result);
+            }
+        }
         if (stack.length > 0) {
             // @ts-ignore
             const thisPos = stack.indexOf(this);
