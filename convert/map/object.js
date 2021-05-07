@@ -2,34 +2,17 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.convertMapToObject = void 0;
 /**
- * @deprecated
- * @param map
+ * @category Convert Map
+ * @name convertMapToObject
+ * @description Convert Map to plain object.
+ * @summary ```import { convertMapToObject } from '@corefunc/corefunc/convert/map/object';```
+ * @param {Map} [map] Map to convert.
+ * @returns {Object} Plain object.
  */
 function convertMapToObject(map) {
-    const object = {};
-    map.forEach((value, key) => {
-        switch (typeof value) {
-            case "string":
-                object[key] = value;
-                break;
-            case "number":
-                {
-                    const numericKey = value.toString();
-                    if (!map.has(numericKey)) {
-                        object[numericKey] = value;
-                    }
-                }
-                break;
-            case "boolean":
-                {
-                    const booleanKey = value.toString();
-                    if (!map.has(booleanKey)) {
-                        object[booleanKey] = value;
-                    }
-                }
-                break;
-        }
-    });
-    return object;
+    if (!map || !(map instanceof Map)) {
+        return {};
+    }
+    return Object.fromEntries(map);
 }
 exports.convertMapToObject = convertMapToObject;
