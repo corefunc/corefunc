@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.jsonStringifySafe = void 0;
+const is_typed_array_1 = require("../../check/is-typed-array.cjs");
 const json_1 = require("../../convert/bigint/json.cjs");
 const json_2 = require("../../convert/error/json.cjs");
 // eslint-disable-next-line no-unused-vars
@@ -39,7 +40,7 @@ function serializer(replacer, cycleReplacerArg = null) {
     }
     else {
       const proto = Object.prototype.toString.call(result);
-      if (proto !== "[object Array]" && proto.startsWith("[object ") && proto.endsWith("Array]")) {
+      if (is_typed_array_1.checkIsTypedArray(result)) {
         result = Array.from(result);
       }
       else if (proto === "[object Arguments]") {

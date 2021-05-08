@@ -81,7 +81,11 @@
 				<section class="tsd-panel tsd-index-panel">
 					<div class="tsd-index-content">
 						<section class="tsd-index-section tsd-is-external">
-							<h3>Functions</h3>
+							<h3>Check Functions</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-function tsd-parent-kind-module tsd-is-external"><a href="check.html#checkistypedarray" class="tsd-kind-icon">check<wbr>IsTyped<wbr>Array</a></li>
+							</ul>
+							<h3>Other Functions</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-function tsd-parent-kind-module tsd-is-external"><a href="check.html#checkiscallable" class="tsd-kind-icon">check<wbr>IsCallable</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-module tsd-is-external"><a href="check.html#checkisfalsy" class="tsd-kind-icon">check<wbr>IsFalsy</a></li>
@@ -102,8 +106,54 @@
 					</div>
 				</section>
 			</section>
-			<section class="tsd-panel-group tsd-member-group tsd-is-external">
-				<h2>Functions</h2>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Check Functions</h2>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module tsd-is-external">
+					<a name="checkistypedarray" class="tsd-anchor"></a>
+					<h3>check<wbr>IsTyped<wbr>Array</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module tsd-is-external">
+						<li class="tsd-signature tsd-kind-icon">check<wbr>IsTyped<wbr>Array<span class="tsd-signature-symbol">(</span>value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in check/is-typed-array.ts:14</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography tsd-comment-tags">
+								<dl class="tsd-comment-tags"><dt>name</dt>
+									<dd><p>checkIsTypedArray</p>
+									</dd><dt>description</dt>
+									<dd><p>Checks if an array is typed.</p>
+									</dd><dt>summary</dt>
+									<dd><p><code>import { checkIsTypedArray } from &#39;@corefunc/corefunc/check/is-typed-array&#39;;</code></p>
+									</dd><dt>example</dt>
+									<dd><p><code>checkIsTypedArray([]) ➜ false</code></p>
+									</dd><dt>example</dt>
+									<dd><p><code>checkIsTypedArray(new Int16Array(1)) ➜ true</code></p>
+									</dd><dt>example</dt>
+									<dd><p><code>checkIsTypedArray(new Float64Array(1)) ➜ true</code></p>
+									</dd><dt>example</dt>
+									<dd><p><code>checkIsTypedArray(new Uint32Array(1)) ➜ true</code></p>
+									</dd><dt>since</dt>
+									<dd><p>0.1.68</p>
+								</dd></dl>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>value: <span class="tsd-signature-type">any</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+							<p>Is typed array.</p>
+						</li>
+					</ul>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Other Functions</h2>
 				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module tsd-is-external">
 					<a name="checkiscallable" class="tsd-anchor"></a>
 					<h3>check<wbr>IsCallable</h3>
@@ -523,7 +573,7 @@
 					</ul>
 				</section>
 			</section>
-			<!--{&quot;options&quot;:&quot;typedoc.json&quot;,&quot;tsconfig&quot;:&quot;/Users/anon/project/corefunc&quot;,&quot;entryPoints&quot;:[&quot;./array/index.ts&quot;,&quot;./cast/index.ts&quot;,&quot;./check/index.ts&quot;,&quot;./cli/index.ts&quot;,&quot;./collection/index.ts&quot;,&quot;./convert/index.ts&quot;,&quot;./crypt/index.ts&quot;,&quot;./date/index.ts&quot;,&quot;./fp/index.ts&quot;,&quot;./func/index.ts&quot;,&quot;./generate/index.ts&quot;,&quot;./hash/index.ts&quot;,&quot;./high-order/index.ts&quot;,&quot;./is/index.ts&quot;,&quot;./json/index.ts&quot;,&quot;./lang/index.ts&quot;,&quot;./number/index.ts&quot;,&quot;./object/index.ts&quot;,&quot;./promise/index.ts&quot;,&quot;./prototype/index.ts&quot;,&quot;./regex/index.ts&quot;,&quot;./string/index.ts&quot;,&quot;./text/index.ts&quot;,&quot;./v8/index.ts&quot;,&quot;./valid/index.ts&quot;,&quot;./var/index.ts&quot;],&quot;exclude&quot;:[&quot;**/*+(index|.spec|.e2e).ts&quot;],&quot;externalPattern&quot;:[&quot;./**/*.ts&quot;],&quot;excludeExternals&quot;:false,&quot;excludeNotDocumented&quot;:false,&quot;excludeInternal&quot;:false,&quot;excludePrivate&quot;:false,&quot;excludeProtected&quot;:false,&quot;disableSources&quot;:false,&quot;includes&quot;:&quot;&quot;,&quot;media&quot;:&quot;&quot;,&quot;watch&quot;:false,&quot;preserveWatchOutput&quot;:false,&quot;emit&quot;:false,&quot;out&quot;:&quot;docs&quot;,&quot;json&quot;:&quot;&quot;,&quot;pretty&quot;:true,&quot;theme&quot;:&quot;./node_modules/typedoc-neo-theme/bin/default&quot;,&quot;highlightTheme&quot;:&quot;light-plus&quot;,&quot;name&quot;:&quot;&quot;,&quot;includeVersion&quot;:false,&quot;excludeTags&quot;:[],&quot;readme&quot;:&quot;&quot;,&quot;defaultCategory&quot;:&quot;Other&quot;,&quot;categoryOrder&quot;:[],&quot;categorizeByGroup&quot;:true,&quot;gitRevision&quot;:&quot;&quot;,&quot;gitRemote&quot;:&quot;origin&quot;,&quot;gaID&quot;:&quot;&quot;,&quot;gaSite&quot;:&quot;auto&quot;,&quot;hideGenerator&quot;:false,&quot;toc&quot;:[],&quot;disableOutputCheck&quot;:false,&quot;help&quot;:false,&quot;version&quot;:false,&quot;showConfig&quot;:false,&quot;plugin&quot;:[],&quot;logger&quot;:&quot;console&quot;,&quot;logLevel&quot;:1,&quot;listInvalidSymbolLinks&quot;:false}-->
+			<!--{&quot;options&quot;:&quot;typedoc.json&quot;,&quot;tsconfig&quot;:&quot;D:\\git\\corefunc\\corefunc&quot;,&quot;entryPoints&quot;:[&quot;./array/index.ts&quot;,&quot;./cast/index.ts&quot;,&quot;./check/index.ts&quot;,&quot;./cli/index.ts&quot;,&quot;./collection/index.ts&quot;,&quot;./convert/index.ts&quot;,&quot;./crypt/index.ts&quot;,&quot;./date/index.ts&quot;,&quot;./fp/index.ts&quot;,&quot;./func/index.ts&quot;,&quot;./generate/index.ts&quot;,&quot;./hash/index.ts&quot;,&quot;./high-order/index.ts&quot;,&quot;./is/index.ts&quot;,&quot;./json/index.ts&quot;,&quot;./lang/index.ts&quot;,&quot;./number/index.ts&quot;,&quot;./object/index.ts&quot;,&quot;./promise/index.ts&quot;,&quot;./prototype/index.ts&quot;,&quot;./regex/index.ts&quot;,&quot;./string/index.ts&quot;,&quot;./text/index.ts&quot;,&quot;./v8/index.ts&quot;,&quot;./valid/index.ts&quot;,&quot;./var/index.ts&quot;],&quot;exclude&quot;:[&quot;**/*+(index|.spec|.e2e).ts&quot;],&quot;externalPattern&quot;:[&quot;./**/*.ts&quot;],&quot;excludeExternals&quot;:false,&quot;excludeNotDocumented&quot;:false,&quot;excludeInternal&quot;:false,&quot;excludePrivate&quot;:false,&quot;excludeProtected&quot;:false,&quot;disableSources&quot;:false,&quot;includes&quot;:&quot;&quot;,&quot;media&quot;:&quot;&quot;,&quot;watch&quot;:false,&quot;preserveWatchOutput&quot;:false,&quot;emit&quot;:false,&quot;out&quot;:&quot;docs&quot;,&quot;json&quot;:&quot;&quot;,&quot;pretty&quot;:true,&quot;theme&quot;:&quot;./node_modules/typedoc-neo-theme/bin/default&quot;,&quot;highlightTheme&quot;:&quot;light-plus&quot;,&quot;name&quot;:&quot;&quot;,&quot;includeVersion&quot;:false,&quot;excludeTags&quot;:[],&quot;readme&quot;:&quot;&quot;,&quot;defaultCategory&quot;:&quot;Other&quot;,&quot;categoryOrder&quot;:[],&quot;categorizeByGroup&quot;:true,&quot;gitRevision&quot;:&quot;&quot;,&quot;gitRemote&quot;:&quot;origin&quot;,&quot;gaID&quot;:&quot;&quot;,&quot;gaSite&quot;:&quot;auto&quot;,&quot;hideGenerator&quot;:false,&quot;toc&quot;:[],&quot;disableOutputCheck&quot;:false,&quot;help&quot;:false,&quot;version&quot;:false,&quot;showConfig&quot;:false,&quot;plugin&quot;:[],&quot;logger&quot;:&quot;console&quot;,&quot;logLevel&quot;:1,&quot;listInvalidSymbolLinks&quot;:false}-->
 		</div>
 		<div class="col-2 col-menu secondary-menu">
 			<nav class="tsd-navigation secondary menu-sticky">
@@ -563,6 +613,9 @@
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-module tsd-is-external root">
 						<a href="check.html#checkistrueish" class="tsd-kind-icon">check<wbr>IsTrueish</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module tsd-is-external root">
+						<a href="check.html#checkistypedarray" class="tsd-kind-icon">check<wbr>IsTyped<wbr>Array</a>
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter tsd-is-external root">
 						<a href="check.html#isarrayknown" class="tsd-kind-icon">is<wbr>Array<wbr>Known</a>

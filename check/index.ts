@@ -1,3 +1,4 @@
+export * from "./is-typed-array";
 export * from "./isArrayKnown";
 export * from "./isArrayLike";
 export * from "./isCallable";

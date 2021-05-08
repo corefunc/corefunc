@@ -1,3 +1,4 @@
+import { checkIsTypedArray } from "../../check/is-typed-array.mjs";
 import { convertBigIntToJson } from "../../convert/bigint/json.mjs";
 import { convertErrorToJson } from "../../convert/error/json.mjs";
 
@@ -30,7 +31,7 @@ function serializer(replacer, cycleReplacerArg = null) {
       result = String(result);
     } else {
       const proto = Object.prototype.toString.call(result);
-      if (proto !== "[object Array]" && proto.startsWith("[object ") && proto.endsWith("Array]")) {
+      if (checkIsTypedArray(result)) {
         result = Array.from(result);
       } else if (proto === "[object Arguments]") {
         result = Array.from(result);

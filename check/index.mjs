@@ -1,3 +1,4 @@
+export * from "./is-typed-array.mjs";
 export * from "./isArrayKnown.mjs";
 export * from "./isArrayLike.mjs";
 export * from "./isCallable.mjs";
