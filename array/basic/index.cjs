@@ -13,7 +13,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 __exportStar(require("./assign.cjs"), exports);
 __exportStar(require("./extend.cjs"), exports);
 __exportStar(require("./has.cjs"), exports);
-__exportStar(require("./hasSame.cjs"), exports);
+__exportStar(require("./has-same.cjs"), exports);
 __exportStar(require("./insert.cjs"), exports);
 __exportStar(require("./intersect.cjs"), exports);
 __exportStar(require("./keep.cjs"), exports);

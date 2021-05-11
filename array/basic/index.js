@@ -13,7 +13,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 __exportStar(require("./assign"), exports);
 __exportStar(require("./extend"), exports);
 __exportStar(require("./has"), exports);
-__exportStar(require("./hasSame"), exports);
+__exportStar(require("./has-same"), exports);
 __exportStar(require("./insert"), exports);
 __exportStar(require("./intersect"), exports);
 __exportStar(require("./keep"), exports);

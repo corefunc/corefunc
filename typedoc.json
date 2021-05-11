@@ -24,7 +24,6 @@
     "./regex/index.ts",
     "./string/index.ts",
     "./text/index.ts",
-    "./v8/index.ts",
     "./valid/index.ts",
     "./var/index.ts"
   ],

@@ -18,7 +18,7 @@ __exportStar(require("./generatorObject.cjs"), exports);
 __exportStar(require("./global.cjs"), exports);
 __exportStar(require("./map.cjs"), exports);
 __exportStar(require("./nil.cjs"), exports);
-__exportStar(require("./notNil.cjs"), exports);
+__exportStar(require("./not-nil.cjs"), exports);
 __exportStar(require("./number.cjs"), exports);
 __exportStar(require("./promise.cjs"), exports);
 __exportStar(require("./regexp.cjs"), exports);

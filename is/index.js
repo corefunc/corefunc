@@ -18,7 +18,7 @@ __exportStar(require("./generatorObject"), exports);
 __exportStar(require("./global"), exports);
 __exportStar(require("./map"), exports);
 __exportStar(require("./nil"), exports);
-__exportStar(require("./notNil"), exports);
+__exportStar(require("./not-nil"), exports);
 __exportStar(require("./number"), exports);
 __exportStar(require("./promise"), exports);
 __exportStar(require("./regexp"), exports);

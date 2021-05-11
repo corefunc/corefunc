@@ -6,7 +6,7 @@ export * from "./generatorObject.mjs";
 export * from "./global.mjs";
 export * from "./map.mjs";
 export * from "./nil.mjs";
-export * from "./notNil.mjs";
+export * from "./not-nil.mjs";
 export * from "./number.mjs";
 export * from "./promise.mjs";
 export * from "./regexp.mjs";

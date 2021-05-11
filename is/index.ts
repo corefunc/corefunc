@@ -6,7 +6,7 @@ export * from "./generatorObject";
 export * from "./global";
 export * from "./map";
 export * from "./nil";
-export * from "./notNil";
+export * from "./not-nil";
 export * from "./number";
 export * from "./promise";
 export * from "./regexp";

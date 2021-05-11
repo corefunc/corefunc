@@ -2,7 +2,7 @@
  * @category Convert Number
  * @name convertNumberToJson
  * @description Convert BigInt, number or string to JSON acceptable value.
- * @summary ```import { convertBigIntToJson } from '@corefunc/corefunc/convert/number/json';```
+ * @summary ```import { convertNumberToJson } from '@corefunc/corefunc/convert/number/json';```
  * @param {BigInt|number|string} [value] BigInt, number or string to convert.
  * @param {number|string} [onFailure=0] Value on failure.
  * @returns {number|string} Number or string.
