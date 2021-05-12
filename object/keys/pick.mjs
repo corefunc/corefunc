@@ -2,8 +2,8 @@
  * @category Object Keys
  * @name objectKeysPick
  * @description Pick keys from object and return new plain object.
- * @summary ```import { objectKeysSort } from "@corefunc/corefunc/object/keys/pick";```
- * @param {Object} instance Object to be picked from.
+ * @summary ```import { objectKeysPick } from '@corefunc/corefunc/object/keys/pick';```
+ * @param {Object} [instance] Object to be picked from.
  * @param {Array.<String>} [keys] Array of keys to pick.
  * @returns {Object} New plain object.
  */

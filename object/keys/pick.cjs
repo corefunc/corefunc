@@ -1,11 +1,12 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.objectKeysPick = void 0;
 /**
  * @category Object Keys
  * @name objectKeysPick
  * @description Pick keys from object and return new plain object.
- * @summary ```import { objectKeysSort } from "@corefunc/corefunc/object/keys/pick";```
- * @param {Object} instance Object to be picked from.
+ * @summary ```import { objectKeysPick } from '@corefunc/corefunc/object/keys/pick';```
+ * @param {Object} [instance] Object to be picked from.
  * @param {Array.<String>} [keys] Array of keys to pick.
  * @returns {Object} New plain object.
  */
@@ -18,4 +19,4 @@ function objectKeysPick(instance, keys) {
     return accumulator;
   }, {});
 }
-exports.default = objectKeysPick;
+exports.objectKeysPick = objectKeysPick;
