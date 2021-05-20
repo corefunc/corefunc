@@ -2,6 +2,8 @@ import { jsonCleanup } from "../basic/cleanup";
 import { jsonParseUnsafe } from "./unsafe";
 
 /**
+ * @category JSON Parse
+ * @name jsonParseSafe
  * @param {String} text
  * @param {*=} defaultResult
  * @param {Boolean=} unsafe

@@ -4,6 +4,8 @@ exports.jsonParseSafe = void 0;
 const cleanup_1 = require("../basic/cleanup.cjs");
 const unsafe_1 = require("./unsafe.cjs");
 /**
+ * @category JSON Parse
+ * @name jsonParseSafe
  * @param {String} text
  * @param {*=} defaultResult
  * @param {Boolean=} unsafe
