@@ -85,7 +85,9 @@
 							<h3>Is Valid Functions</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-function tsd-parent-kind-module tsd-is-external"><a href="valid.html#isempty" class="tsd-kind-icon">is<wbr>Empty</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module tsd-is-external"><a href="valid.html#isfalsy" class="tsd-kind-icon">is<wbr>Falsy</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-module tsd-is-external"><a href="valid.html#isobjectid" class="tsd-kind-icon">is<wbr>Object<wbr>Id</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module tsd-is-external"><a href="valid.html#istruthy" class="tsd-kind-icon">is<wbr>Truthy</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-module tsd-is-external"><a href="valid.html#isuuid" class="tsd-kind-icon">is<wbr>Uuid</a></li>
 							</ul>
 						</section>
@@ -127,6 +129,41 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module tsd-is-external">
+					<a name="isfalsy" class="tsd-anchor"></a>
+					<h3>is<wbr>Falsy</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module tsd-is-external">
+						<li class="tsd-signature tsd-kind-icon">is<wbr>Falsy<span class="tsd-signature-symbol">(</span>value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in valid/is-falsy.ts:11</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography tsd-comment-tags">
+								<dl class="tsd-comment-tags"><dt>name</dt>
+									<dd><p>isFalsy</p>
+									</dd><dt>description</dt>
+									<dd><p>In JavaScript, there are six falsy values:
+										<code>false</code>, <code>0</code>, <code>&#39;&#39;</code>, <code>null</code>, <code>undefined</code>, and <code>NaN</code>. Everything else is truthy.</p>
+									</dd><dt>summary</dt>
+									<dd><p><code>import { isFalsy } from &#39;@corefunc/corefunc/valid/is-falsy&#39;;</code></p>
+									</dd><dt>since</dt>
+									<dd><p>0.2.3</p>
+								</dd></dl>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>value: <span class="tsd-signature-type">any</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module tsd-is-external">
 					<a name="isobjectid" class="tsd-anchor"></a>
 					<h3>is<wbr>Object<wbr>Id</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module tsd-is-external">
@@ -146,6 +183,41 @@
 									<dd><p>Check is value ObjectId</p>
 									</dd><dt>since</dt>
 									<dd><p>0.0.94</p>
+								</dd></dl>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>value: <span class="tsd-signature-type">any</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module tsd-is-external">
+					<a name="istruthy" class="tsd-anchor"></a>
+					<h3>is<wbr>Truthy</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module tsd-is-external">
+						<li class="tsd-signature tsd-kind-icon">is<wbr>Truthy<span class="tsd-signature-symbol">(</span>value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in valid/is-truthy.ts:13</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography tsd-comment-tags">
+								<dl class="tsd-comment-tags"><dt>name</dt>
+									<dd><p>isTruthy</p>
+									</dd><dt>description</dt>
+									<dd><p>In JavaScript, there are six falsy values:
+										<code>false</code>, <code>0</code>, <code>&#39;&#39;</code>, <code>null</code>, <code>undefined</code>, and <code>NaN</code>. Everything else is truthy.</p>
+									</dd><dt>summary</dt>
+									<dd><p><code>import { isTruthy } from &#39;@corefunc/corefunc/valid/is-truthy&#39;;</code></p>
+									</dd><dt>since</dt>
+									<dd><p>0.2.3</p>
 								</dd></dl>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -202,7 +274,13 @@
 						<a href="valid.html#isempty" class="tsd-kind-icon">is<wbr>Empty</a>
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-module tsd-is-external root">
+						<a href="valid.html#isfalsy" class="tsd-kind-icon">is<wbr>Falsy</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module tsd-is-external root">
 						<a href="valid.html#isobjectid" class="tsd-kind-icon">is<wbr>Object<wbr>Id</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module tsd-is-external root">
+						<a href="valid.html#istruthy" class="tsd-kind-icon">is<wbr>Truthy</a>
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-module tsd-is-external root">
 						<a href="valid.html#isuuid" class="tsd-kind-icon">is<wbr>Uuid</a>

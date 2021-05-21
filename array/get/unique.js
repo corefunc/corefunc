@@ -11,7 +11,7 @@ exports.arrayGetUnique = void 0;
  */
 function arrayGetUnique(array, sort = true) {
     if (array.length < 2) {
-        return array;
+        return [...array];
     }
     let unique = [...new Set(array)];
     if (unique.includes(0)) {

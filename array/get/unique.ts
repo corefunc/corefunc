@@ -8,7 +8,7 @@
  */
 export function arrayGetUnique(array: any[], sort = true): any[] {
   if (array.length < 2) {
-    return array;
+    return [...array];
   }
   let unique = [...new Set(array)];
   if (unique.includes(0)) {
