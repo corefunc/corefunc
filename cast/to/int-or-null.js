@@ -12,9 +12,9 @@ const int_1 = require("./int");
  * @example castToIntOrNull("16.5"); // => 16
  */
 function castToIntOrNull(value) {
-  if (value === null || value === undefined) {
-    return null;
-  }
-  return int_1.castToInt(value, null);
+    if (value === null || value === undefined) {
+        return null;
+    }
+    return int_1.castToInt(value, null);
 }
 exports.castToIntOrNull = castToIntOrNull;

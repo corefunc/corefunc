@@ -16,6 +16,8 @@ export function arrayFlatUnique(arrayMergeInto: any, ...arraysToBeAdded: any[]):
     arrayInto = arrayGetUnique(arrayMergeInto, false);
   } else if (arrayMergeInto !== undefined) {
     arrayInto = [arrayMergeInto];
+  } else {
+    arrayInto = [];
   }
   if (arraysToBeAdded.length === 0) {
     return arrayGetUnique(arrayInto.flat(), true);

@@ -17,6 +17,6 @@ function jsonParseDeep(text, defaultResult, reviver) {
             parsed[key] = jsonParseDeep(value, value);
         });
     }
-    return Object.assign({}, parsed);
+    return { ...parsed };
 }
 exports.jsonParseDeep = jsonParseDeep;

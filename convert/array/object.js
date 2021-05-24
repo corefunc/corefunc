@@ -7,6 +7,9 @@ exports.convertArrayToObject = void 0;
  * @returns {Object}
  */
 function convertArrayToObject(array) {
-    return array.reduce((accumulator, currentValue, currentIndex) => (Object.assign(Object.assign({}, accumulator), { [currentIndex]: currentValue })));
+    return array.reduce((accumulator, currentValue, currentIndex) => ({
+        ...accumulator,
+        ...{ [currentIndex]: currentValue },
+    }));
 }
 exports.convertArrayToObject = convertArrayToObject;

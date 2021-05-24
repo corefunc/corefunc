@@ -43,13 +43,13 @@ object, keyOrPath, defaultValue) {
     let index = 0;
     let newObject;
     try {
-        newObject = Object.assign({}, object);
+        newObject = { ...object };
     }
-    catch (_a) {
+    catch {
         try {
             newObject = JSON.parse(JSON.stringify(object));
         }
-        catch (_b) {
+        catch {
             return defaultValue;
         }
     }

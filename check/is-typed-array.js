@@ -15,10 +15,10 @@ exports.checkIsTypedArray = void 0;
  * @since 0.1.68
  */
 function checkIsTypedArray(value) {
-  if (!value || Array.isArray(value)) {
-    return false;
-  }
-  const proto = Object.prototype.toString.call(value).toLowerCase();
-  return proto.length > 14 && proto.startsWith("[object ") && proto.endsWith("array]");
+    if (!value || Array.isArray(value)) {
+        return false;
+    }
+    const proto = Object.prototype.toString.call(value).toLowerCase();
+    return proto.length > 14 && proto.startsWith("[object ") && proto.endsWith("array]");
 }
 exports.checkIsTypedArray = checkIsTypedArray;
