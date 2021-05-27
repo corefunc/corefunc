@@ -7,51 +7,52 @@
 
 ---
 
-CoreFunc - is a collection of core functions for various tasks. It consists of useful one-liner helpers and more complicated functions.
+**CoreFunc** - is a collection of core functions for various tasks. It consists of useful one-liner helpers and more complicated functions.
+
+## Introduction
+
+[**CoreFunc.GitHub.io** ➜ 📚 Documentation](https://corefunc.github.io/corefunc/)
 
 Why.
 
-- All functions are written to work with CommonJS and ECMAScript modules.
+-  All functions are written to work with CommonJS and ECMAScript modules.
 
-- .JS, .CJS, .MJS, .TS files are in package. Wherever you prefer.
+-  `.JS`, `.CJS`, `.MJS`, `.TS` files are in package. Wherever you prefer.
 
-- Don't extend any built-in objects. No prototype pollution at all.
+-  Don't extend any built-in objects. No prototype pollution at all.
 
-- You can steal the code if you don't want to use the whole package.
-  Most functions are not bound to other functions in the library.
+-  You can steal the code if you don't want to use the whole package. Most functions are not bound to other functions in the library.
 
-- It's super easy for Tree Shaking, no need for Dead Code Hunting.
+-  It's super easy for `Tree Shaking`, no need for Dead Code Hunting.
 
 What is the purpose?
 
-- Iterate, check, sort, find on primitives, arrays, objects.
+-  Iterate, check, sort, find on primitives, arrays, objects.
 
-- Manipulate, convert, generate values.
-
-[📚 Documentation ➜ **corefunc.github.io**](https://corefunc.github.io/corefunc/)
+-  Manipulate, convert, generate values.
 
 ---
 
-**Recommended usage for Tree Shaking:**
+### Recommended usage for Tree Shaking
 
-**CommonJS import**
+#### CommonJS import
 
 ```javascript
-const bubbleSort = require("@corefunc/corefunc/array/sort/bubble.cjs");
+const { bubbleSort } = require("@corefunc/corefunc/array/sort/bubble.cjs");
 bubbleSort([3, 1, 2]);
 ```
 
-**ECMAScript Module**
+#### ECMAScript Module
 
 ```javascript
-import bubbleSort from "@corefunc/corefunc/array/sort/bubble.mjs";
+import { bubbleSort } from "@corefunc/corefunc/array/sort/bubble.mjs";
 bubbleSort([3, 1, 2]);
 ```
 
-**TypeScript**
+#### TypeScript
 
 ```javascript
-import bubbleSort from "@corefunc/corefunc/array/sort/bubble";
+import { bubbleSort } from "@corefunc/corefunc/array/sort/bubble";
 bubbleSort([3, 1, 2]);
 ```
 
@@ -67,27 +68,27 @@ bubbleSort([3, 1, 2]);
 
 Also there is more useful links:
 
--   [You-Dont-Need-Lodash-Underscore](https://github.com/you-dont-need/You-Dont-Need-Lodash-Underscore)
+-  [You-Dont-Need-Lodash-Underscore](https://github.com/you-dont-need/You-Dont-Need-Lodash-Underscore)
 
--   [lodash](https://github.com/lodash/lodash)
+-  [lodash](https://github.com/lodash/lodash)
 
--   [30secondsofcode](https://www.30secondsofcode.org/js/p/1)
+-  [30secondsofcode](https://www.30secondsofcode.org/js/p/1)
 
--   [licia](https://github.com/liriliri/licia)
+-  [licia](https://github.com/liriliri/licia)
 
--   [voca](https://github.com/panzerdp/voca)
+-  [voca](https://github.com/panzerdp/voca)
 
--   [mout](https://github.com/mout/mout)
+-  [mout](https://github.com/mout/mout)
 
--   [underwater](https://github.com/fabioars/underwater)
+-  [underwater](https://github.com/fabioars/underwater)
 
--   [collect.js](https://www.npmjs.com/package/collect.js)
+-  [collect.js](https://www.npmjs.com/package/collect.js)
 
--   [match-sorter](https://github.com/kentcdodds/match-sorter)
+-  [match-sorter](https://github.com/kentcdodds/match-sorter)
 
--   [1loc.dev](https://1loc.dev/)
+-  [1loc.dev](https://1loc.dev/)
 
--   [how-to-list-object-methods-javascript](https://flaviocopes.com/how-to-list-object-methods-javascript/)
+-  [how-to-list-object-methods-javascript](https://flaviocopes.com/how-to-list-object-methods-javascript/)
 
 ---
 
