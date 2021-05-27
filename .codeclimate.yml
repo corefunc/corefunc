@@ -5,5 +5,9 @@ plugins:
       config: .eslintrc.json
       extensions:
         - .mjs
+        - .ts
       ignore_warnings: true
     enabled: true
+exclude_patterns:
+  - "**/*.cjs"
+  - "**/*.js"
