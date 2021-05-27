@@ -1,4 +1,4 @@
-import { isArrayLike } from "../../check/isArrayLike";
+import { isArrayLike } from "../../check/is-array-like";
 
 /**
  * @name arrayGetAt

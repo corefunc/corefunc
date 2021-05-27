@@ -1,4 +1,4 @@
-import { checkIsPrimitive } from "../check/isPrimitive.mjs";
+import { checkIsPrimitive } from "../check/is-primitive.mjs";
 import { isString } from "../is/string.mjs";
 
 /**

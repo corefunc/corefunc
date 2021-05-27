@@ -1,6 +1,6 @@
 import { arrayGetHead } from "../../array/get/head.mjs";
 import { castToString } from "../../cast/to/string.mjs";
-import { checkIsTraversable } from "../../check/isTraversable.mjs";
+import { checkIsTraversable } from "../../check/is-traversable.mjs";
 import { collectionValues } from "../../collection/values.mjs";
 import { isString } from "../../is/string.mjs";
 

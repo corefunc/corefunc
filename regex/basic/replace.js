@@ -3,7 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.regexReplace = void 0;
 const head_1 = require("../../array/get/head");
 const string_1 = require("../../cast/to/string");
-const isTraversable_1 = require("../../check/isTraversable");
+const is_traversable_1 = require("../../check/is-traversable");
 const values_1 = require("../../collection/values");
 const string_2 = require("../../is/string");
 /**
@@ -23,7 +23,7 @@ function regexReplace(haystack, needle, replaceWith) {
     if (string_2.isString(needle)) {
         sSearch = needle;
     }
-    else if (isTraversable_1.checkIsTraversable(needle)) {
+    else if (is_traversable_1.checkIsTraversable(needle)) {
         sSearch = values_1.collectionValues(needle);
     }
     else {
@@ -32,7 +32,7 @@ function regexReplace(haystack, needle, replaceWith) {
     if (string_2.isString(replaceWith)) {
         sReplace = replaceWith;
     }
-    else if (isTraversable_1.checkIsTraversable(replaceWith)) {
+    else if (is_traversable_1.checkIsTraversable(replaceWith)) {
         sReplace = values_1.collectionValues(replaceWith);
     }
     else {

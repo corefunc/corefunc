@@ -6,6 +6,6 @@
  * @param {*=} defaultValue
  * @since 0.0.86
  */
-export function varGetOneOfOrElse<T, D>(list: T[], value: T, defaultValue: D = undefined): T | D {
+export function varGetOneOfOrElse(list, value, defaultValue) {
   return new Set(list).has(value) ? value : defaultValue;
 }

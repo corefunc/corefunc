@@ -1,5 +1,5 @@
-import { checkIsIterable } from "./isIterable";
-import { checkIsObjectLike } from "./isObjectLike";
+import { checkIsIterable } from "./is-iterable";
+import { checkIsObjectLike } from "./is-object-like";
 
 /**
  * @name checkIsTraversable

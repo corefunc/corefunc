@@ -1,5 +1,5 @@
-import { checkIsTraversable } from "../../check/isTraversable";
-import { collectionForEach } from "../../collection/forEach";
+import { checkIsTraversable } from "../../check/is-traversable";
+import { collectionForEach } from "../../collection/for-each";
 import { jsonParseSafe } from "./safe";
 
 /**

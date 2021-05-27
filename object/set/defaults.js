@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.objectSetDefaults = void 0;
-const isObjectLike_1 = require("../../check/isObjectLike");
+const is_object_like_1 = require("../../check/is-object-like");
 /**
  * @category Object Set
  * @name objectSetDefaults
@@ -14,10 +14,10 @@ const isObjectLike_1 = require("../../check/isObjectLike");
  * @example objectSetDefaults({ val: "text" }, { val: true }) // { val: "text" }
  */
 function objectSetDefaults(destination, source) {
-    if (!isObjectLike_1.checkIsObjectLike(destination)) {
+    if (!is_object_like_1.checkIsObjectLike(destination)) {
         return objectSetDefaults({}, source);
     }
-    if (!isObjectLike_1.checkIsObjectLike(source)) {
+    if (!is_object_like_1.checkIsObjectLike(source)) {
         return objectSetDefaults(destination, {});
     }
     const obj = Object.assign(Object.create(Object.getPrototypeOf(destination)), source);
@@ -29,7 +29,7 @@ function objectSetDefaults(destination, source) {
         if (val === undefined) {
             return;
         }
-        if (isObjectLike_1.checkIsObjectLike(val) && isObjectLike_1.checkIsObjectLike(obj[key])) {
+        if (is_object_like_1.checkIsObjectLike(val) && is_object_like_1.checkIsObjectLike(obj[key])) {
             obj[key] = objectSetDefaults(val, obj[key]);
         }
         else {

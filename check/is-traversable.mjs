@@ -1,5 +1,5 @@
-import { checkIsIterable } from "./isIterable.mjs";
-import { checkIsObjectLike } from "./isObjectLike.mjs";
+import { checkIsIterable } from "./is-iterable.mjs";
+import { checkIsObjectLike } from "./is-object-like.mjs";
 
 /**
  * @name checkIsTraversable

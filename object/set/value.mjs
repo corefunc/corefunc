@@ -1,9 +1,9 @@
-import { checkIsObjectLike } from "../../check/isObjectLike.mjs";
+import { checkIsObjectLike } from "../../check/is-object-like.mjs";
 
 import { isMap } from "../../is/map.mjs";
 import { isSet } from "../../is/set.mjs";
-import { isWeakMap } from "../../is/weakMap.mjs";
-import { isWeakSet } from "../../is/weakSet.mjs";
+import { isWeakMap } from "../../is/weak-map.mjs";
+import { isWeakSet } from "../../is/weak-set.mjs";
 
 /**
  * @category Object Set

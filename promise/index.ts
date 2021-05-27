@@ -1,1 +1,1 @@
-export * from "./waitForever";
+export * from "./wait-forever";

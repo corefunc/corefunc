@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.collectionAtAny = void 0;
-const isObjectLike_1 = require("../check/isObjectLike.cjs");
+const isObjectLike_1 = require("../check/is-object-like.cjs");
 /**
  * @name collectionAtAny
  * @description Pick object property from list of names

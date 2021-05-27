@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.isEmpty = void 0;
-const isPrimitive_1 = require("../check/isPrimitive.cjs");
+const isPrimitive_1 = require("../check/is-primitive.cjs");
 const string_1 = require("../is/string.cjs");
 /**
  * @category Is Valid

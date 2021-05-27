@@ -1,4 +1,4 @@
-import { checkIsObjectLike } from "../../check/isObjectLike.mjs";
+import { checkIsObjectLike } from "../../check/is-object-like.mjs";
 
 /**
  * @category Object Get

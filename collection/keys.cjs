@@ -1,8 +1,8 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.collectionKeys = void 0;
-const isKeyed_1 = require("../check/isKeyed");
-const isObjectLike_1 = require("../check/isObjectLike");
+const isKeyed_1 = require("../check/is-keyed.cjs");
+const isObjectLike_1 = require("../check/is-object-like.cjs");
 /**
  * Pick object property from list of names
  * @param {*} iterable

@@ -1,4 +1,4 @@
-import { checkIsObjectLike } from "../../check/isObjectLike";
+import { checkIsObjectLike } from "../../check/is-object-like";
 
 /**
  * @category Object Get

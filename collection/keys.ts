@@ -1,5 +1,5 @@
-import { checkIsKeyed } from "../check/isKeyed";
-import { checkIsObjectLike } from "../check/isObjectLike";
+import { checkIsKeyed } from "../check/is-keyed";
+import { checkIsObjectLike } from "../check/is-object-like";
 
 /**
  * Pick object property from list of names

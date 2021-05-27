@@ -1,2 +1,2 @@
-export * from "./searchBinary";
-export * from "./searchLinear";
+export * from "./search-binary";
+export * from "./search-linear";

@@ -1,4 +1,4 @@
 export * from "./attempt";
 export * from "./cached";
-export * from "./callVoid";
+export * from "./call-void";
 export * from "./name";

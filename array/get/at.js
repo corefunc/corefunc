@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.arrayGetAt = void 0;
-const isArrayLike_1 = require("../../check/isArrayLike");
+const is_array_like_1 = require("../../check/is-array-like");
 /**
  * @name arrayGetAt
  * @description Get the value at the index of an array. Supports negative index.
@@ -13,7 +13,7 @@ const isArrayLike_1 = require("../../check/isArrayLike");
  * @since 0.0.96
  */
 function arrayGetAt(array, index, onFail) {
-    if (!isArrayLike_1.isArrayLike(array) || !Number.isInteger(index)) {
+    if (!is_array_like_1.isArrayLike(array) || !Number.isInteger(index)) {
         return onFail;
     }
     const relativeIndex = index >= 0 ? index : array.length + index;

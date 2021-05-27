@@ -1,1 +1,1 @@
-export * from "./isLeapYear.mjs";
+export * from "./is-leap-year.mjs";

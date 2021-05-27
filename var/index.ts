@@ -22,7 +22,9 @@ var argsTag = '[object Arguments]',
   symbolTag = '[object Symbol]',
   undefinedTag = '[object Undefined]',
   weakMapTag = '[object WeakMap]',
-  weakSetTag = '[object WeakSet]';
+  weakSetTag = '[object WeakSet]',
+  global = '[object global],
+  window = '[object Window]',
 
 var arrayBufferTag = '[object ArrayBuffer]',
   dataViewTag = '[object DataView]',

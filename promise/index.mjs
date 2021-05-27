@@ -1,1 +1,1 @@
-export * from "./waitForever.mjs";
+export * from "./wait-forever.mjs";

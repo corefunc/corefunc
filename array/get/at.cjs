@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.arrayGetAt = void 0;
-const isArrayLike = require("../../check/isArrayLike.cjs");
+const isArrayLike = require("../../check/is-array-like.cjs");
 /**
  * @name arrayGetAt
  * @description Get the value at the index of an array. Supports negative index.

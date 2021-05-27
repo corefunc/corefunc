@@ -1,4 +1,4 @@
-import { isArrayLike } from "../../check/isArrayLike.mjs";
+import { isArrayLike } from "../../check/is-array-like.mjs";
 
 /**
  * @name arrayGetAt

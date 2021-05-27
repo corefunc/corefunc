@@ -1,5 +1,7 @@
-import { checkIsObjectLike } from "../check/isObjectLike";
-
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.collectionAtAny = void 0;
+const is_object_like_1 = require("../check/is-object-like");
 /**
  * @name collectionAtAny
  * @description Pick object property from list of names
@@ -8,22 +10,22 @@ import { checkIsObjectLike } from "../check/isObjectLike";
  * @param {*=} onFail
  * @returns {*}
  */
-export function collectionAtAny(object, propertyNames, onFail) {
-  if (checkIsObjectLike(object) === false) {
-    return onFail;
-  }
-  if (Array.isArray(propertyNames) === false) {
-    return onFail;
-  }
-  for (let name of propertyNames) {
-    name = name.toLowerCase();
-    if (name in object) {
-      return object[name];
+function collectionAtAny(object, propertyNames, onFail) {
+    if (is_object_like_1.checkIsObjectLike(object) === false) {
+        return onFail;
     }
-  }
-  return onFail;
+    if (Array.isArray(propertyNames) === false) {
+        return onFail;
+    }
+    for (let name of propertyNames) {
+        name = name.toLowerCase();
+        if (name in object) {
+            return object[name];
+        }
+    }
+    return onFail;
 }
-
+exports.collectionAtAny = collectionAtAny;
 // import fnIsObjectLike from 'lodash/isObjectLike';
 // // import fnEntries from 'lodash/entries';
 //

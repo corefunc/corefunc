@@ -1,4 +1,4 @@
-import { checkIsPrimitive } from "../check/isPrimitive";
+import { checkIsPrimitive } from "../check/is-primitive";
 import { isString } from "../is/string";
 
 /**

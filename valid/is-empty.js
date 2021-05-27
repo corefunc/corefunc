@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.isEmpty = void 0;
-const isPrimitive_1 = require("../check/isPrimitive");
+const is_primitive_1 = require("../check/is-primitive");
 const string_1 = require("../is/string");
 /**
  * @category Is Valid
@@ -15,7 +15,7 @@ function isEmpty(value) {
     if (value === null || value === undefined) {
         return true;
     }
-    if (isPrimitive_1.checkIsPrimitive(value)) {
+    if (is_primitive_1.checkIsPrimitive(value)) {
         if (string_1.isString(value)) {
             return value.length === 0;
         }

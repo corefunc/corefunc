@@ -1,9 +1,9 @@
-import { checkIsObjectLike } from "../../check/isObjectLike";
+import { checkIsObjectLike } from "../../check/is-object-like";
 
 import { isMap } from "../../is/map";
 import { isSet } from "../../is/set";
-import { isWeakMap } from "../../is/weakMap";
-import { isWeakSet } from "../../is/weakSet";
+import { isWeakMap } from "../../is/weak-map";
+import { isWeakSet } from "../../is/weak-set";
 
 /**
  * @category Object Set

@@ -12,5 +12,5 @@ var __exportStar = (this && this.__exportStar) || function(m, exports) {
 Object.defineProperty(exports, "__esModule", { value: true });
 __exportStar(require("./attempt"), exports);
 __exportStar(require("./cached"), exports);
-__exportStar(require("./callVoid"), exports);
+__exportStar(require("./call-void"), exports);
 __exportStar(require("./name"), exports);

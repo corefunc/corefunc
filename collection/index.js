@@ -10,7 +10,7 @@ var __exportStar = (this && this.__exportStar) || function(m, exports) {
     for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports, p)) __createBinding(exports, m, p);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-__exportStar(require("./atAny"), exports);
-__exportStar(require("./forEach"), exports);
+__exportStar(require("./at-any"), exports);
+__exportStar(require("./for-each"), exports);
 __exportStar(require("./keys"), exports);
 __exportStar(require("./values"), exports);

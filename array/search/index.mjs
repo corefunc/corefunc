@@ -1,2 +1,2 @@
-export * from "./searchBinary.mjs";
-export * from "./searchLinear.mjs";
+export * from "./search-binary.mjs";
+export * from "./search-linear.mjs";

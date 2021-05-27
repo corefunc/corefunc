@@ -3,7 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.regexReplace = void 0;
 const head_1 = require("../../array/get/head.cjs");
 const string_1 = require("../../cast/to/string.cjs");
-const isTraversable_1 = require("../../check/isTraversable.cjs");
+const isTraversable_1 = require("../../check/is-traversable.cjs");
 const values_1 = require("../../collection/values.cjs");
 const string_2 = require("../../is/string.cjs");
 /**
