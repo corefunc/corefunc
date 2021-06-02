@@ -5,11 +5,11 @@ exports.objectGetType = void 0;
  * @category Object Get
  * @name objectGetType
  * @description Get type of object
- * @param {*=} value
- * @returns {String}
+ * @param {*=} [objectLike]
+ * @returns {string}
  */
-function objectGetType(value) {
-    const type = Object.prototype.toString.call(value).toLowerCase().split("[object ").pop().split("]").shift();
+function objectGetType(objectLike) {
+    const type = String((Object.prototype.toString.call(objectLike).toLowerCase().split("[object ").pop() || "").split("]").shift());
     if (["global", "window"].includes(type)) {
         return "object";
     }

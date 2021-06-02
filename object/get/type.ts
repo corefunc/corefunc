@@ -2,11 +2,13 @@
  * @category Object Get
  * @name objectGetType
  * @description Get type of object
- * @param {*=} value
- * @returns {String}
+ * @param {*=} [objectLike]
+ * @returns {string}
  */
-export function objectGetType(value: Record<string, unknown>): string {
-  const type = Object.prototype.toString.call(value).toLowerCase().split("[object ").pop().split("]").shift();
+export function objectGetType(objectLike: Record<string, unknown>): string {
+  const type = String(
+    (Object.prototype.toString.call(objectLike).toLowerCase().split("[object ").pop() || "").split("]").shift(),
+  );
   if (["global", "window"].includes(type)) {
     return "object";
   }
