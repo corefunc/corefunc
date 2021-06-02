@@ -1,3 +1,5 @@
+import { objectGetType } from "./type";
+
 /**
  * @category Object Get
  * @name objectGetProperty
@@ -6,23 +8,50 @@
  * @param {Object} object Object to search in
  * @param {String|Array.<String>} keyOrPath String key or array of string to form path
  * @param {*=} [defaultValue=undefined] Default value if path is not exists. Does not replace undefined values
+ * @param {string=} [valueType]
  * @returns {*} Value in path or default value
  * @since 0.0.47
  */
 export function objectGetProperty<
   ObjectType extends Record<string, any>,
   KeyType extends keyof ObjectType,
-  DefaultType extends any
+  DefaultType extends any,
 >(
-  //
   object: ObjectType,
   keyOrPath: KeyType | string | string[],
   defaultValue?: DefaultType,
+  valueType?:
+    | "asyncfunction"
+    | "array"
+    | "boolean"
+    | "date"
+    | "error"
+    | "function"
+    | "generatorfunction"
+    | "map"
+    | "null"
+    | "number"
+    | "object"
+    | "promise"
+    | "proxy"
+    | "regexp"
+    | "set"
+    | "string"
+    | "symbol"
+    | "undefined"
+    | "weakmap"
+    | "weakset",
 ): ObjectType[KeyType] | DefaultType {
   if (!object || typeof object !== "object") {
     return defaultValue as DefaultType;
   }
   if (typeof keyOrPath === "string" && keyOrPath in object) {
+    if (object[keyOrPath] === undefined) {
+      return defaultValue as DefaultType;
+    }
+    if (valueType && objectGetType(object[keyOrPath]) !== valueType) {
+      return defaultValue as DefaultType;
+    }
     return object[keyOrPath];
   }
   let keySet: string[];
@@ -36,6 +65,12 @@ export function objectGetProperty<
   const length = keySet.length;
   if (length === 1) {
     if (keySet[0] in object) {
+      if (object[keySet[0]] === undefined) {
+        return defaultValue as DefaultType;
+      }
+      if (valueType && objectGetType(object[keySet[0]]) !== valueType) {
+        return defaultValue as DefaultType;
+      }
       return object[keySet[0]];
     } else {
       return defaultValue as DefaultType;
@@ -62,10 +97,16 @@ export function objectGetProperty<
   if (index && index === length) {
     if (newObject === undefined) {
       if (isSet) {
+        if (valueType && objectGetType(newObject) !== valueType) {
+          return defaultValue as DefaultType;
+        }
         return newObject;
       }
       return defaultValue as DefaultType;
     } else {
+      if (valueType && objectGetType(newObject) !== valueType) {
+        return defaultValue as DefaultType;
+      }
       return newObject;
     }
   } else {

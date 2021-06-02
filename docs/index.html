@@ -158,41 +158,51 @@
 				<p><a href="https://npmjs.com/package/@corefunc/corefunc"><img src="https://badgen.net/npm/v/@corefunc/corefunc?&icon=npm&label=npm&color=DD3636" alt="NPM Version"></a>
 				<a href="https://npmjs.com/package/@corefunc/corefunc"><img src="https://badgen.net/npm/dt/@corefunc/corefunc?&icon=terminal&label=downloads&color=009688" alt="NPM Downloads"></a></p>
 				<hr>
-				<p>CoreFunc - is a collection of core functions for various tasks. It consists of useful one-liner helpers and more complicated functions.</p>
+				<p><strong>CoreFunc</strong> - is a collection of core functions for various tasks. It consists of useful one-liner helpers and more complicated functions.</p>
+				<a href="#introduction" id="introduction" style="color: inherit; text-decoration: none;">
+					<h2>Introduction</h2>
+				</a>
+				<p><a href="https://corefunc.github.io/corefunc/"><strong>CoreFunc.GitHub.io</strong> ➜ 📚 Documentation</a></p>
 				<p>Why.</p>
 				<ul>
-					<li><p>All functions are written to work with CommonJS and ECMAScript modules.</p>
+					<li><p> All functions are written to work with CommonJS and ECMAScript modules.</p>
 					</li>
-					<li><p>.JS, .CJS, .MJS, .TS files are in package. Wherever you prefer.</p>
+					<li><p> <code>.JS</code>, <code>.CJS</code>, <code>.MJS</code>, <code>.TS</code> files are in package. Wherever you prefer.</p>
 					</li>
-					<li><p>Don&#39;t extend any built-in objects. No prototype pollution at all.</p>
+					<li><p> Don&#39;t extend any built-in objects. No prototype pollution at all.</p>
 					</li>
-					<li><p>You can steal the code if you don&#39;t want to use the whole package.
-						Most functions are not bound to other functions in the library.</p>
+					<li><p> You can steal the code if you don&#39;t want to use the whole package. Most functions are not bound to other functions in the library.</p>
 					</li>
-					<li><p>It&#39;s super easy for Tree Shaking, no need for Dead Code Hunting.</p>
+					<li><p> It&#39;s super easy for <code>Tree Shaking</code>, no need for Dead Code Hunting.</p>
 					</li>
 				</ul>
 				<p>What is the purpose?</p>
 				<ul>
-					<li><p>Iterate, check, sort, find on primitives, arrays, objects.</p>
+					<li><p> Iterate, check, sort, find on primitives, arrays, objects.</p>
 					</li>
-					<li><p>Manipulate, convert, generate values.</p>
+					<li><p> Manipulate, convert, generate values.</p>
 					</li>
 				</ul>
-				<p><a href="https://corefunc.github.io/corefunc/">📚 Documentation ➜ <strong>corefunc.github.io</strong></a></p>
 				<hr>
-				<p><strong>Recommended usage for Tree Shaking:</strong></p>
-				<p><strong>CommonJS import</strong></p>
-				<pre><code class="language-javascript"><span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">bubbleSort</span><span style="color: #000000"> = </span><span style="color: #795E26">require</span><span style="color: #000000">(</span><span style="color: #A31515">&quot;@corefunc/corefunc/array/sort/bubble.cjs&quot;</span><span style="color: #000000">);</span>
+				<a href="#recommended-usage-for-tree-shaking" id="recommended-usage-for-tree-shaking" style="color: inherit; text-decoration: none;">
+					<h3>Recommended usage for Tree Shaking</h3>
+				</a>
+				<a href="#commonjs-import" id="commonjs-import" style="color: inherit; text-decoration: none;">
+					<h4>CommonJS import</h4>
+				</a>
+				<pre><code class="language-javascript"><span style="color: #0000FF">const</span><span style="color: #000000"> { </span><span style="color: #0070C1">bubbleSort</span><span style="color: #000000"> } = </span><span style="color: #795E26">require</span><span style="color: #000000">(</span><span style="color: #A31515">&quot;@corefunc/corefunc/array/sort/bubble.cjs&quot;</span><span style="color: #000000">);</span>
 <span style="color: #795E26">bubbleSort</span><span style="color: #000000">([</span><span style="color: #098658">3</span><span style="color: #000000">, </span><span style="color: #098658">1</span><span style="color: #000000">, </span><span style="color: #098658">2</span><span style="color: #000000">]);</span>
 </code></pre>
-				<p><strong>ECMAScript Module</strong></p>
-				<pre><code class="language-javascript"><span style="color: #AF00DB">import</span><span style="color: #000000"> </span><span style="color: #001080">bubbleSort</span><span style="color: #000000"> </span><span style="color: #AF00DB">from</span><span style="color: #000000"> </span><span style="color: #A31515">&quot;@corefunc/corefunc/array/sort/bubble.mjs&quot;</span><span style="color: #000000">;</span>
+				<a href="#ecmascript-module" id="ecmascript-module" style="color: inherit; text-decoration: none;">
+					<h4>ECMAScript Module</h4>
+				</a>
+				<pre><code class="language-javascript"><span style="color: #AF00DB">import</span><span style="color: #000000"> { </span><span style="color: #001080">bubbleSort</span><span style="color: #000000"> } </span><span style="color: #AF00DB">from</span><span style="color: #000000"> </span><span style="color: #A31515">&quot;@corefunc/corefunc/array/sort/bubble.mjs&quot;</span><span style="color: #000000">;</span>
 <span style="color: #795E26">bubbleSort</span><span style="color: #000000">([</span><span style="color: #098658">3</span><span style="color: #000000">, </span><span style="color: #098658">1</span><span style="color: #000000">, </span><span style="color: #098658">2</span><span style="color: #000000">]);</span>
 </code></pre>
-				<p><strong>TypeScript</strong></p>
-				<pre><code class="language-javascript"><span style="color: #AF00DB">import</span><span style="color: #000000"> </span><span style="color: #001080">bubbleSort</span><span style="color: #000000"> </span><span style="color: #AF00DB">from</span><span style="color: #000000"> </span><span style="color: #A31515">&quot;@corefunc/corefunc/array/sort/bubble&quot;</span><span style="color: #000000">;</span>
+				<a href="#typescript" id="typescript" style="color: inherit; text-decoration: none;">
+					<h4>TypeScript</h4>
+				</a>
+				<pre><code class="language-javascript"><span style="color: #AF00DB">import</span><span style="color: #000000"> { </span><span style="color: #001080">bubbleSort</span><span style="color: #000000"> } </span><span style="color: #AF00DB">from</span><span style="color: #000000"> </span><span style="color: #A31515">&quot;@corefunc/corefunc/array/sort/bubble&quot;</span><span style="color: #000000">;</span>
 <span style="color: #795E26">bubbleSort</span><span style="color: #000000">([</span><span style="color: #098658">3</span><span style="color: #000000">, </span><span style="color: #098658">1</span><span style="color: #000000">, </span><span style="color: #098658">2</span><span style="color: #000000">]);</span>
 </code></pre>
 				<hr>
@@ -204,27 +214,27 @@
 				<hr>
 				<p>Also there is more useful links:</p>
 				<ul>
-					<li><p>  <a href="https://github.com/you-dont-need/You-Dont-Need-Lodash-Underscore">You-Dont-Need-Lodash-Underscore</a></p>
+					<li><p> <a href="https://github.com/you-dont-need/You-Dont-Need-Lodash-Underscore">You-Dont-Need-Lodash-Underscore</a></p>
 					</li>
-					<li><p>  <a href="https://github.com/lodash/lodash">lodash</a></p>
+					<li><p> <a href="https://github.com/lodash/lodash">lodash</a></p>
 					</li>
-					<li><p>  <a href="https://www.30secondsofcode.org/js/p/1">30secondsofcode</a></p>
+					<li><p> <a href="https://www.30secondsofcode.org/js/p/1">30secondsofcode</a></p>
 					</li>
-					<li><p>  <a href="https://github.com/liriliri/licia">licia</a></p>
+					<li><p> <a href="https://github.com/liriliri/licia">licia</a></p>
 					</li>
-					<li><p>  <a href="https://github.com/panzerdp/voca">voca</a></p>
+					<li><p> <a href="https://github.com/panzerdp/voca">voca</a></p>
 					</li>
-					<li><p>  <a href="https://github.com/mout/mout">mout</a></p>
+					<li><p> <a href="https://github.com/mout/mout">mout</a></p>
 					</li>
-					<li><p>  <a href="https://github.com/fabioars/underwater">underwater</a></p>
+					<li><p> <a href="https://github.com/fabioars/underwater">underwater</a></p>
 					</li>
-					<li><p>  <a href="https://www.npmjs.com/package/collect.js">collect.js</a></p>
+					<li><p> <a href="https://www.npmjs.com/package/collect.js">collect.js</a></p>
 					</li>
-					<li><p>  <a href="https://github.com/kentcdodds/match-sorter">match-sorter</a></p>
+					<li><p> <a href="https://github.com/kentcdodds/match-sorter">match-sorter</a></p>
 					</li>
-					<li><p>  <a href="https://1loc.dev/">1loc.dev</a></p>
+					<li><p> <a href="https://1loc.dev/">1loc.dev</a></p>
 					</li>
-					<li><p>  <a href="https://flaviocopes.com/how-to-list-object-methods-javascript/">how-to-list-object-methods-javascript</a></p>
+					<li><p> <a href="https://flaviocopes.com/how-to-list-object-methods-javascript/">how-to-list-object-methods-javascript</a></p>
 					</li>
 				</ul>
 				<hr>
