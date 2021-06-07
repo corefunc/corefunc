@@ -11,5 +11,6 @@ var __exportStar = (this && this.__exportStar) || function(m, exports) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 __exportStar(require("./iterator-symbol"), exports);
+__exportStar(require("./match"), exports);
 __exportStar(require("./sleep"), exports);
 __exportStar(require("./spaceship"), exports);
