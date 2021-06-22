@@ -1,6 +1,7 @@
 import { convertErrorToObject } from "./object.mjs";
 
 /**
+ * @category Convert Error
  * @name convertErrorToJson
  * @description Converts Error type to plain JSON object.
  * @param {Error | EvalError | RangeError | ReferenceError | SyntaxError | TypeError | URIError|Object} error

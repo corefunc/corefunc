@@ -1,4 +1,5 @@
 /**
+ * @category Convert Error
  * @name convertErrorToObject
  * @description Converts Error type to plain object.
  * @param {Error | EvalError | RangeError | ReferenceError | SyntaxError | TypeError | URIError|Object} error

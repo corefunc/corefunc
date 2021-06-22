@@ -3,6 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.convertErrorToJson = void 0;
 const object_1 = require("./object");
 /**
+ * @category Convert Error
  * @name convertErrorToJson
  * @description Converts Error type to plain JSON object.
  * @param {Error | EvalError | RangeError | ReferenceError | SyntaxError | TypeError | URIError|Object} error

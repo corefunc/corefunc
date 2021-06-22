@@ -2,6 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.convertErrorToObject = void 0;
 /**
+ * @category Convert Error
  * @name convertErrorToObject
  * @description Converts Error type to plain object.
  * @param {Error | EvalError | RangeError | ReferenceError | SyntaxError | TypeError | URIError|Object} error
