@@ -29,7 +29,7 @@
     "eslint-plugin-promise": "5.1.0",
     "eslint-plugin-standard": "5.0.0",
     "jest": "27.0.4",
-    "prettier": "2.3.1",
+    "prettier": "2.3.2",
     "tslint-config-standard": "9.0.0",
     "typedoc": "0.21.0",
     "typedoc-neo-theme": "1.1.1",
