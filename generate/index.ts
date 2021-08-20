@@ -1,6 +1,7 @@
 export * from "./boolean";
 export * from "./from-array";
 export * from "./range";
+export * from "./pin-code";
 export * from "./string";
 export * from "./token";
 export * from "./uuid";

@@ -13,6 +13,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 __exportStar(require("./boolean"), exports);
 __exportStar(require("./from-array"), exports);
 __exportStar(require("./range"), exports);
+__exportStar(require("./pin-code"), exports);
 __exportStar(require("./string"), exports);
 __exportStar(require("./token"), exports);
 __exportStar(require("./uuid"), exports);
