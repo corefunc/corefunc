@@ -2,13 +2,29 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.generatePinCode = void 0;
 const string_1 = require("./string");
+const NUMBERS = "0123456789";
 /**
  * @category Generate
  * @description Generate random PIN code string
  * @param {number} [size]
+ * @param {Array.<string>=} [blockList]
  * @returns {string}
  */
-function generatePinCode(size = 4) {
-    return string_1.generateString(size, "0123456789");
+function generatePinCode(size = 4, blockList) {
+    const theSize = Math.abs(~~size) || 4;
+    if (!blockList || !Array.isArray(blockList) || !blockList.length) {
+        return string_1.generateString(theSize, NUMBERS);
+    }
+    const theBlockList = Array.from(new Set(blockList))
+        .filter((block) => typeof block === "string")
+        .filter((block) => block.length !== theSize);
+    if (!theBlockList.length) {
+        return string_1.generateString(theSize, NUMBERS);
+    }
+    let pin;
+    do {
+        pin = string_1.generateString(theSize, NUMBERS);
+    } while (theBlockList.includes(pin));
+    return pin;
 }
 exports.generatePinCode = generatePinCode;
