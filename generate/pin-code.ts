@@ -4,10 +4,10 @@ const NUMBERS = "0123456789" as const;
 
 /**
  * @category Generate
- * @description Generate random PIN code string
- * @param {number} [size]
- * @param {Array.<string>=} [blockList]
- * @returns {string}
+ * @description Generate random PIN code string.
+ * @param {number} [size=4] PIN code length.
+ * @param {Array.<string>=} [blockList] Array of strings to exclude.
+ * @returns {string} Random PIN code string.
  */
 export function generatePinCode(size: number = 4, blockList?: string[]): string {
   const theSize = Math.abs(~~size) || 4;

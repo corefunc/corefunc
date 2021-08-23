@@ -4,20 +4,24 @@ import { arrayGetUnique } from "../get/unique";
  * @category Array Basic
  * @name arrayBasicExtend
  * @description Extend one array with another.
- * @param {Array=} alpha
- * @param {Array=} beta
- * @param {Boolean=} [shouldBeUnique=false]
- * @returns {Array}
+ * @param {Array=} [alpha] First array.
+ * @param {Array=} [beta] Second array.
+ * @param {Boolean=} [shouldBeUnique=false] Is resulting array should have unique values.
+ * @returns {Array} Resulting array.
  */
-export function arrayBasicExtend<A extends unknown, B extends unknown, C extends A | B>(
-  alpha: A[] = [],
-  beta: B[] = [],
+export function arrayBasicExtend<
+  AlphaTypes extends unknown,
+  BetaTypes extends unknown,
+  ResultingTypes extends AlphaTypes | BetaTypes,
+>(
+  alpha: AlphaTypes[] | ReadonlyArray<AlphaTypes> = [],
+  beta: BetaTypes[] | ReadonlyArray<BetaTypes> = [],
   shouldBeUnique: boolean = false,
-): C[] {
+): ResultingTypes[] {
   const extendedArray: unknown[] = alpha.slice(0);
   extendedArray.push(...beta.slice(0));
   if (shouldBeUnique) {
     return arrayGetUnique(extendedArray);
   }
-  return extendedArray as C[];
+  return extendedArray as ResultingTypes[];
 }

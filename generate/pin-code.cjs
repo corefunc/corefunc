@@ -5,10 +5,10 @@ const string_1 = require("./string.cjs");
 const NUMBERS = "0123456789";
 /**
  * @category Generate
- * @description Generate random PIN code string
- * @param {number} [size]
- * @param {Array.<string>=} [blockList]
- * @returns {string}
+ * @description Generate random PIN code string.
+ * @param {number} [size=4] PIN code length.
+ * @param {Array.<string>=} [blockList] Array of strings to exclude.
+ * @returns {string} Random PIN code string.
  */
 function generatePinCode(size = 4, blockList) {
   const theSize = Math.abs(~~size) || 4;

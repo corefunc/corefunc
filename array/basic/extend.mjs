@@ -4,10 +4,10 @@ import { arrayGetUnique } from "../get/unique.mjs";
  * @category Array Basic
  * @name arrayBasicExtend
  * @description Extend one array with another.
- * @param {Array=} alpha
- * @param {Array=} beta
- * @param {Boolean=} [shouldBeUnique=false]
- * @returns {Array}
+ * @param {Array=} [alpha] First array.
+ * @param {Array=} [beta] Second array.
+ * @param {Boolean=} [shouldBeUnique=false] Is resulting array should have unique values.
+ * @returns {Array} Resulting array.
  */
 export function arrayBasicExtend(
   alpha = [],
