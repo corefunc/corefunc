@@ -7,27 +7,34 @@ const float_1 = require("../cast/to/float");
  * @category Number
  * @name numberRanged
  * @description Typecast variable to number wih minimum and maximum value
- * @param {*} variable
- * @param {Number} [onFail=0] The return value in case of failure
- * @param {Number} numMin [Number.MIN_VALUE]
- * @param {Number} numMax [Number.MAX_VALUE]
- * @param {Boolean=false} isInteger
+ * @summary ```import { numberRanged } from "@corefunc/corefunc/number/ranged";```
+ * @param {*} numberLike
+ * @param {Number=} [defaultNumber=0] The return value in case of failure
+ * @param {Number=} [minimalNumber=Number.MIN_VALUE]
+ * @param {Number=} [maximumNumber=Number.MAX_VALUE]
+ * @param {Boolean=} [shouldBeInteger=false]
  * @returns {Number}
  * @example numberRanged("99.5", 0, 1, 100); // => 99.5
  */
-function numberRanged(variable, onFail, numMin = Number.MIN_VALUE, numMax = Number.MAX_VALUE, isInteger = false) {
+function numberRanged(numberLike, defaultNumber = 0, minimalNumber = Number.MIN_VALUE, maximumNumber = Number.MAX_VALUE, shouldBeInteger = false) {
     let range;
-    if (isInteger) {
-        range = int_1.castToInt(variable, onFail);
+    if (shouldBeInteger) {
+        range = int_1.castToInt(numberLike, defaultNumber);
     }
     else {
-        range = float_1.castToFloat(variable, onFail);
+        range = float_1.castToFloat(numberLike, defaultNumber);
     }
-    if (range < numMin) {
-        return numMin;
+    if (minimalNumber < Number.MIN_VALUE) {
+        minimalNumber = Number.MIN_VALUE;
     }
-    if (range > numMax) {
-        return numMax;
+    if (range < minimalNumber) {
+        return minimalNumber;
+    }
+    if (maximumNumber < Number.MAX_VALUE) {
+        maximumNumber = Number.MAX_VALUE;
+    }
+    if (range > maximumNumber) {
+        return maximumNumber;
     }
     return range;
 }

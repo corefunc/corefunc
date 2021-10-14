@@ -90,6 +90,8 @@ Also there is more useful links:
 
 -  [how-to-list-object-methods-javascript](https://flaviocopes.com/how-to-list-object-methods-javascript/)
 
+-  [20 Killer JavaScript One Liners](https://dev.to/saviomartin/20-killer-javascript-one-liners-94f)
+
 ---
 
 <!-- Badges -->

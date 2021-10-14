@@ -5,32 +5,39 @@ import { castToFloat } from "../cast/to/float.mjs";
  * @category Number
  * @name numberRanged
  * @description Typecast variable to number wih minimum and maximum value
- * @param {*} variable
- * @param {Number} [onFail=0] The return value in case of failure
- * @param {Number} numMin [Number.MIN_VALUE]
- * @param {Number} numMax [Number.MAX_VALUE]
- * @param {Boolean=false} isInteger
+ * @summary ```import { numberRanged } from "@corefunc/corefunc/number/ranged";```
+ * @param {*} numberLike
+ * @param {Number=} [defaultNumber=0] The return value in case of failure
+ * @param {Number=} [minimalNumber=Number.MIN_VALUE]
+ * @param {Number=} [maximumNumber=Number.MAX_VALUE]
+ * @param {Boolean=} [shouldBeInteger=false]
  * @returns {Number}
  * @example numberRanged("99.5", 0, 1, 100); // => 99.5
  */
 export function numberRanged(
-  variable,
-  onFail = 0,
-  numMin = Number.MIN_VALUE,
-  numMax = Number.MAX_VALUE,
-  isInteger = false,
+  numberLike,
+  defaultNumber = 0,
+  minimalNumber = Number.MIN_VALUE,
+  maximumNumber = Number.MAX_VALUE,
+  shouldBeInteger = false,
 ) {
   let range;
-  if (isInteger) {
-    range = castToInt(variable, onFail);
+  if (shouldBeInteger) {
+    range = castToInt(numberLike, defaultNumber);
   } else {
-    range = castToFloat(variable, onFail);
+    range = castToFloat(numberLike, defaultNumber);
   }
-  if (range < numMin) {
-    return numMin;
+  if (minimalNumber < Number.MIN_VALUE) {
+    minimalNumber = Number.MIN_VALUE;
   }
-  if (range > numMax) {
-    return numMax;
+  if (range < minimalNumber) {
+    return minimalNumber;
+  }
+  if (maximumNumber < Number.MAX_VALUE) {
+    maximumNumber = Number.MAX_VALUE;
+  }
+  if (range > maximumNumber) {
+    return maximumNumber;
   }
   return range;
 }
