@@ -100,6 +100,10 @@
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-function tsd-parent-kind-module tsd-is-external"><a href="convert.html#convertNumberToJson" class="tsd-kind-icon">convert<wbr>Number<wbr>ToJson</a></li>
 							</ul>
+							<h3>Convert To Functions</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-function tsd-parent-kind-module tsd-is-external"><a href="convert.html#convertToSingleLine" class="tsd-kind-icon">convert<wbr>ToSingle<wbr>Line</a></li>
+							</ul>
 							<h3>Other Functions</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-function tsd-parent-kind-module tsd-is-external"><a href="convert.html#convertArrayBufferToString" class="tsd-kind-icon">convert<wbr>Array<wbr>Buffer<wbr>ToString</a></li>
@@ -339,6 +343,47 @@
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Convert To Functions</h2>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module tsd-is-external">
+					<a name="convertToSingleLine" class="tsd-anchor"></a>
+					<h3>convert<wbr>ToSingle<wbr>Line</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module tsd-is-external">
+						<li class="tsd-signature tsd-kind-icon">convert<wbr>ToSingle<wbr>Line<span class="tsd-signature-symbol">(</span>record<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in convert/to/single-line.ts:73</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography tsd-comment-tags">
+								<dl class="tsd-comment-tags"><dt>name</dt>
+									<dd><p>convertToSingleLine</p>
+									</dd><dt>description</dt>
+									<dd><p>Convert any value to single line string.</p>
+									</dd><dt>summary</dt>
+									<dd><p><code>import { convertErrorToString } from &quot;@corefunc/corefunc/convert/to/single-line&quot;;</code></p>
+									</dd><dt>since</dt>
+									<dd><p>0.3.10</p>
+								</dd></dl>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>record: <span class="tsd-signature-type">any</span></h5>
+									<div class="tsd-comment tsd-typography tsd-comment-text">
+										<p>Any plain value</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
+							<p>Single line string</p>
+						</li>
+					</ul>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Other Functions</h2>
 				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module tsd-is-external">
 					<a name="convertArrayBufferToString" class="tsd-anchor"></a>
@@ -573,7 +618,7 @@
 					</ul>
 				</section>
 			</section>
-			<!--{&quot;options&quot;:&quot;D:\\git\\corefunc\\corefunc\\typedoc.json&quot;,&quot;tsconfig&quot;:&quot;D:\\git\\corefunc\\corefunc&quot;,&quot;packages&quot;:[],&quot;entryPoints&quot;:[&quot;D:\\git\\corefunc\\corefunc\\array\\index.ts&quot;,&quot;D:\\git\\corefunc\\corefunc\\cast\\index.ts&quot;,&quot;D:\\git\\corefunc\\corefunc\\check\\index.ts&quot;,&quot;D:\\git\\corefunc\\corefunc\\cli\\index.ts&quot;,&quot;D:\\git\\corefunc\\corefunc\\collection\\index.ts&quot;,&quot;D:\\git\\corefunc\\corefunc\\convert\\index.ts&quot;,&quot;D:\\git\\corefunc\\corefunc\\crypt\\index.ts&quot;,&quot;D:\\git\\corefunc\\corefunc\\date\\index.ts&quot;,&quot;D:\\git\\corefunc\\corefunc\\fp\\index.ts&quot;,&quot;D:\\git\\corefunc\\corefunc\\func\\index.ts&quot;,&quot;D:\\git\\corefunc\\corefunc\\generate\\index.ts&quot;,&quot;D:\\git\\corefunc\\corefunc\\hash\\index.ts&quot;,&quot;D:\\git\\corefunc\\corefunc\\high-order\\index.ts&quot;,&quot;D:\\git\\corefunc\\corefunc\\is\\index.ts&quot;,&quot;D:\\git\\corefunc\\corefunc\\json\\index.ts&quot;,&quot;D:\\git\\corefunc\\corefunc\\lang\\index.ts&quot;,&quot;D:\\git\\corefunc\\corefunc\\number\\index.ts&quot;,&quot;D:\\git\\corefunc\\corefunc\\object\\index.ts&quot;,&quot;D:\\git\\corefunc\\corefunc\\promise\\index.ts&quot;,&quot;D:\\git\\corefunc\\corefunc\\prototype\\index.ts&quot;,&quot;D:\\git\\corefunc\\corefunc\\regex\\index.ts&quot;,&quot;D:\\git\\corefunc\\corefunc\\string\\index.ts&quot;,&quot;D:\\git\\corefunc\\corefunc\\text\\index.ts&quot;,&quot;D:\\git\\corefunc\\corefunc\\valid\\index.ts&quot;,&quot;D:\\git\\corefunc\\corefunc\\var\\index.ts&quot;],&quot;exclude&quot;:[&quot;**/*+(index|.spec|.e2e).ts&quot;],&quot;externalPattern&quot;:[&quot;D:\\git\\corefunc\\corefunc\\**\\*.ts&quot;],&quot;excludeExternals&quot;:false,&quot;excludeNotDocumented&quot;:false,&quot;excludeInternal&quot;:false,&quot;excludePrivate&quot;:false,&quot;excludeProtected&quot;:false,&quot;disableSources&quot;:false,&quot;includes&quot;:&quot;&quot;,&quot;media&quot;:&quot;&quot;,&quot;watch&quot;:false,&quot;preserveWatchOutput&quot;:false,&quot;emit&quot;:false,&quot;out&quot;:&quot;D:\\git\\corefunc\\corefunc\\docs&quot;,&quot;json&quot;:&quot;&quot;,&quot;pretty&quot;:true,&quot;theme&quot;:&quot;./node_modules/typedoc-neo-theme/bin/default&quot;,&quot;highlightTheme&quot;:&quot;light-plus&quot;,&quot;name&quot;:&quot;&quot;,&quot;includeVersion&quot;:false,&quot;excludeTags&quot;:[],&quot;readme&quot;:&quot;&quot;,&quot;defaultCategory&quot;:&quot;Other&quot;,&quot;categoryOrder&quot;:[],&quot;categorizeByGroup&quot;:true,&quot;sort&quot;:[&quot;kind&quot;,&quot;instance-first&quot;,&quot;alphabetical&quot;],&quot;gitRevision&quot;:&quot;&quot;,&quot;gitRemote&quot;:&quot;origin&quot;,&quot;gaID&quot;:&quot;&quot;,&quot;gaSite&quot;:&quot;auto&quot;,&quot;hideGenerator&quot;:false,&quot;toc&quot;:[],&quot;disableOutputCheck&quot;:false,&quot;help&quot;:false,&quot;version&quot;:false,&quot;showConfig&quot;:false,&quot;plugin&quot;:[],&quot;logger&quot;:&quot;console&quot;,&quot;logLevel&quot;:1,&quot;treatWarningsAsErrors&quot;:false,&quot;listInvalidSymbolLinks&quot;:false}-->
+			<!--{&quot;options&quot;:&quot;D:\\r37r0m0d3l\\corefunc\\corefunc\\typedoc.json&quot;,&quot;tsconfig&quot;:&quot;D:\\r37r0m0d3l\\corefunc\\corefunc&quot;,&quot;packages&quot;:[],&quot;entryPoints&quot;:[&quot;D:\\r37r0m0d3l\\corefunc\\corefunc\\array\\index.ts&quot;,&quot;D:\\r37r0m0d3l\\corefunc\\corefunc\\cast\\index.ts&quot;,&quot;D:\\r37r0m0d3l\\corefunc\\corefunc\\check\\index.ts&quot;,&quot;D:\\r37r0m0d3l\\corefunc\\corefunc\\cli\\index.ts&quot;,&quot;D:\\r37r0m0d3l\\corefunc\\corefunc\\collection\\index.ts&quot;,&quot;D:\\r37r0m0d3l\\corefunc\\corefunc\\convert\\index.ts&quot;,&quot;D:\\r37r0m0d3l\\corefunc\\corefunc\\crypt\\index.ts&quot;,&quot;D:\\r37r0m0d3l\\corefunc\\corefunc\\date\\index.ts&quot;,&quot;D:\\r37r0m0d3l\\corefunc\\corefunc\\fp\\index.ts&quot;,&quot;D:\\r37r0m0d3l\\corefunc\\corefunc\\func\\index.ts&quot;,&quot;D:\\r37r0m0d3l\\corefunc\\corefunc\\generate\\index.ts&quot;,&quot;D:\\r37r0m0d3l\\corefunc\\corefunc\\hash\\index.ts&quot;,&quot;D:\\r37r0m0d3l\\corefunc\\corefunc\\high-order\\index.ts&quot;,&quot;D:\\r37r0m0d3l\\corefunc\\corefunc\\is\\index.ts&quot;,&quot;D:\\r37r0m0d3l\\corefunc\\corefunc\\json\\index.ts&quot;,&quot;D:\\r37r0m0d3l\\corefunc\\corefunc\\lang\\index.ts&quot;,&quot;D:\\r37r0m0d3l\\corefunc\\corefunc\\number\\index.ts&quot;,&quot;D:\\r37r0m0d3l\\corefunc\\corefunc\\object\\index.ts&quot;,&quot;D:\\r37r0m0d3l\\corefunc\\corefunc\\promise\\index.ts&quot;,&quot;D:\\r37r0m0d3l\\corefunc\\corefunc\\prototype\\index.ts&quot;,&quot;D:\\r37r0m0d3l\\corefunc\\corefunc\\regex\\index.ts&quot;,&quot;D:\\r37r0m0d3l\\corefunc\\corefunc\\string\\index.ts&quot;,&quot;D:\\r37r0m0d3l\\corefunc\\corefunc\\text\\index.ts&quot;,&quot;D:\\r37r0m0d3l\\corefunc\\corefunc\\valid\\index.ts&quot;,&quot;D:\\r37r0m0d3l\\corefunc\\corefunc\\var\\index.ts&quot;],&quot;exclude&quot;:[&quot;**/*+(index|.spec|.e2e).ts&quot;],&quot;externalPattern&quot;:[&quot;D:\\r37r0m0d3l\\corefunc\\corefunc\\**\\*.ts&quot;],&quot;excludeExternals&quot;:false,&quot;excludeNotDocumented&quot;:false,&quot;excludeInternal&quot;:false,&quot;excludePrivate&quot;:false,&quot;excludeProtected&quot;:false,&quot;disableSources&quot;:false,&quot;includes&quot;:&quot;&quot;,&quot;media&quot;:&quot;&quot;,&quot;watch&quot;:false,&quot;preserveWatchOutput&quot;:false,&quot;emit&quot;:false,&quot;out&quot;:&quot;D:\\r37r0m0d3l\\corefunc\\corefunc\\docs&quot;,&quot;json&quot;:&quot;&quot;,&quot;pretty&quot;:true,&quot;theme&quot;:&quot;./node_modules/typedoc-neo-theme/bin/default&quot;,&quot;highlightTheme&quot;:&quot;light-plus&quot;,&quot;name&quot;:&quot;&quot;,&quot;includeVersion&quot;:false,&quot;excludeTags&quot;:[],&quot;readme&quot;:&quot;&quot;,&quot;defaultCategory&quot;:&quot;Other&quot;,&quot;categoryOrder&quot;:[],&quot;categorizeByGroup&quot;:true,&quot;sort&quot;:[&quot;kind&quot;,&quot;instance-first&quot;,&quot;alphabetical&quot;],&quot;gitRevision&quot;:&quot;&quot;,&quot;gitRemote&quot;:&quot;origin&quot;,&quot;gaID&quot;:&quot;&quot;,&quot;gaSite&quot;:&quot;auto&quot;,&quot;hideGenerator&quot;:false,&quot;toc&quot;:[],&quot;disableOutputCheck&quot;:false,&quot;help&quot;:false,&quot;version&quot;:false,&quot;showConfig&quot;:false,&quot;plugin&quot;:[],&quot;logger&quot;:&quot;console&quot;,&quot;logLevel&quot;:1,&quot;treatWarningsAsErrors&quot;:false,&quot;listInvalidSymbolLinks&quot;:false}-->
 		</div>
 		<div class="col-2 col-menu secondary-menu">
 			<nav class="tsd-navigation secondary menu-sticky">
@@ -616,6 +661,9 @@
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-module tsd-is-external root">
 						<a href="convert.html#convertToPlainObject" class="tsd-kind-icon">convert<wbr>ToPlain<wbr>Object</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module tsd-is-external root">
+						<a href="convert.html#convertToSingleLine" class="tsd-kind-icon">convert<wbr>ToSingle<wbr>Line</a>
 					</li>
 				</ul>
 			</nav>

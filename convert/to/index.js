@@ -14,3 +14,4 @@ __exportStar(require("./flag"), exports);
 __exportStar(require("./hash"), exports);
 __exportStar(require("./json-data"), exports);
 __exportStar(require("./plain-object"), exports);
+__exportStar(require("./single-line"), exports);
