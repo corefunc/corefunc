@@ -65,7 +65,7 @@ function convertAnyToSingleLine(record) {
  * @name convertToSingleLine
  * @category Convert To
  * @description Convert any value to single line string.
- * @summary ```import { convertErrorToString } from "@corefunc/corefunc/convert/to/single-line";```
+ * @summary ```import { convertToSingleLine } from "@corefunc/corefunc/convert/to/single-line";```
  * @param {*} record Any plain value
  * @returns {string} Single line string
  * @since 0.3.10

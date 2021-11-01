@@ -38,7 +38,8 @@ What is the purpose?
 #### CommonJS import
 
 ```javascript
-const { bubbleSort } = require("@corefunc/corefunc/array/sort/bubble.cjs");
+const { bubbleSort } =
+  require("@corefunc/corefunc/array/sort/bubble.cjs");
 bubbleSort([3, 1, 2]);
 ```
 
