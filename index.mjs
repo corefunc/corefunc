@@ -21,5 +21,6 @@ export * from "./prototype/index.mjs";
 export * from "./regex/index.mjs";
 export * from "./string/index.mjs";
 export * from "./text/index.mjs";
+export * from "./time/index.mjs";
 export * from "./valid/index.mjs";
 export * from "./var/index.mjs";

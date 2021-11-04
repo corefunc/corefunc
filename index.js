@@ -33,5 +33,6 @@ __exportStar(require("./prototype"), exports);
 __exportStar(require("./regex"), exports);
 __exportStar(require("./string"), exports);
 __exportStar(require("./text"), exports);
+__exportStar(require("./time"), exports);
 __exportStar(require("./valid"), exports);
 __exportStar(require("./var"), exports);

@@ -24,6 +24,7 @@
     "./regex/index.ts",
     "./string/index.ts",
     "./text/index.ts",
+    "./time/index.ts",
     "./valid/index.ts",
     "./var/index.ts"
   ],

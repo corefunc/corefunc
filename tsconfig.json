@@ -59,6 +59,7 @@
     "regex",
     "string",
     "text",
+    "time",
     "v8",
     "valid",
     "var"

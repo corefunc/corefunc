@@ -33,5 +33,6 @@ __exportStar(require("./prototype.cjs"), exports);
 __exportStar(require("./regex.cjs"), exports);
 __exportStar(require("./string.cjs"), exports);
 __exportStar(require("./text.cjs"), exports);
+__exportStar(require("./time.cjs"), exports);
 __exportStar(require("./valid.cjs"), exports);
 __exportStar(require("./var.cjs"), exports);

@@ -21,5 +21,6 @@ export * from "./prototype";
 export * from "./regex";
 export * from "./string";
 export * from "./text";
+export * from "./time";
 export * from "./valid";
 export * from "./var";
