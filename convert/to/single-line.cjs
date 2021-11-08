@@ -7,6 +7,7 @@ const is_primitive_1 = require("../../check/is-primitive.cjs");
 const string_2 = require("../error/string.cjs");
 const string_3 = require("../../is/string.cjs");
 const multiline_1 = require("../../regex/is/multiline.cjs");
+const camel_1 = require("../../text/case/camel.cjs");
 function stringToSingleLine(record) {
   if (multiline_1.regexIsMultiline(record)) {
     record = record.replace(/\r?\n/g, " ");
@@ -32,13 +33,16 @@ function primitiveToSingleLine(record) {
 function arrayToSingleLine(record) {
   return record.map((value) => convertAnyToSingleLine(value)).join(" ");
 }
-function objectToSingleLine(record) {
+function objectToSingleLine(record, camelCaseKey = false) {
   if (record instanceof Error) {
     return string_2.convertErrorToString(record);
   }
   const keys = Object.keys(record);
   let output = "";
   keys.forEach((key) => {
+    if (camelCaseKey) {
+      key = camel_1.textCaseCamel(key, true);
+    }
     output = `${output}${key}: ${convertAnyToSingleLine(record[key])}`;
     if (!output.endsWith(" ")) {
       output = `${output} `;
@@ -46,7 +50,7 @@ function objectToSingleLine(record) {
   });
   return output;
 }
-function convertAnyToSingleLine(record) {
+function convertAnyToSingleLine(record, prettify = false) {
   if (is_primitive_1.checkIsPrimitive(record)) {
     return primitiveToSingleLine(record);
   }
@@ -54,7 +58,7 @@ function convertAnyToSingleLine(record) {
     return arrayToSingleLine(record);
   }
   if (is_object_like_1.checkIsObjectLike(record)) {
-    return objectToSingleLine(record);
+    return objectToSingleLine(record, prettify);
   }
   return stringToSingleLine(String(record));
 }
@@ -64,10 +68,11 @@ function convertAnyToSingleLine(record) {
  * @description Convert any value to single line string.
  * @summary ```import { convertToSingleLine } from "@corefunc/corefunc/convert/to/single-line";```
  * @param {*} record Any plain value
+ * @param {boolean=} [prettify=false]
  * @returns {string} Single line string
  * @since 0.3.10
  */
-function convertToSingleLine(record) {
-  return convertAnyToSingleLine(record);
+function convertToSingleLine(record, prettify = false) {
+  return convertAnyToSingleLine(record, prettify);
 }
 exports.convertToSingleLine = convertToSingleLine;

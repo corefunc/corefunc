@@ -4,6 +4,7 @@ import { checkIsPrimitive } from "../../check/is-primitive.mjs";
 import { convertErrorToString } from "../error/string.mjs";
 import { isString } from "../../is/string.mjs";
 import { regexIsMultiline } from "../../regex/is/multiline.mjs";
+import { textCaseCamel } from "../../text/case/camel.mjs";
 
 function stringToSingleLine(record) {
   if (regexIsMultiline(record)) {
@@ -33,13 +34,16 @@ function arrayToSingleLine(record) {
   return record.map((value) => convertAnyToSingleLine(value)).join(" ");
 }
 
-function objectToSingleLine(record) {
+function objectToSingleLine(record, camelCaseKey = false) {
   if (record instanceof Error) {
     return convertErrorToString(record);
   }
   const keys = Object.keys(record);
   let output = "";
   keys.forEach((key) => {
+    if (camelCaseKey) {
+      key = textCaseCamel(key, true);
+    }
     output = `${output}${key}: ${convertAnyToSingleLine(record[key])}`;
     if (!output.endsWith(" ")) {
       output = `${output} `;
@@ -48,7 +52,7 @@ function objectToSingleLine(record) {
   return output;
 }
 
-function convertAnyToSingleLine(record) {
+function convertAnyToSingleLine(record, prettify = false) {
   if (checkIsPrimitive(record)) {
     return primitiveToSingleLine(record);
   }
@@ -56,7 +60,7 @@ function convertAnyToSingleLine(record) {
     return arrayToSingleLine(record);
   }
   if (checkIsObjectLike(record)) {
-    return objectToSingleLine(record);
+    return objectToSingleLine(record, prettify);
   }
   return stringToSingleLine(String(record));
 }
@@ -67,9 +71,10 @@ function convertAnyToSingleLine(record) {
  * @description Convert any value to single line string.
  * @summary ```import { convertToSingleLine } from "@corefunc/corefunc/convert/to/single-line";```
  * @param {*} record Any plain value
+ * @param {boolean=} [prettify=false]
  * @returns {string} Single line string
  * @since 0.3.10
  */
-export function convertToSingleLine(record) {
-  return convertAnyToSingleLine(record);
+export function convertToSingleLine(record, prettify = false) {
+  return convertAnyToSingleLine(record, prettify);
 }
