@@ -5,6 +5,7 @@ import { convertErrorToString } from "../error/string.mjs";
 import { isString } from "../../is/string.mjs";
 import { regexIsMultiline } from "../../regex/is/multiline.mjs";
 import { textCaseCamel } from "../../text/case/camel.mjs";
+import { textCaseCapitalize } from "../../text/case/capitalize.mjs";
 
 function stringToSingleLine(record) {
   if (regexIsMultiline(record)) {
@@ -34,15 +35,15 @@ function arrayToSingleLine(record) {
   return record.map((value) => convertAnyToSingleLine(value)).join(" ");
 }
 
-function objectToSingleLine(record, camelCaseKey = false) {
+function objectToSingleLine(record, prettify = false) {
   if (record instanceof Error) {
     return convertErrorToString(record);
   }
   const keys = Object.keys(record);
   let output = "";
   keys.forEach((key) => {
-    if (camelCaseKey) {
-      key = textCaseCamel(key, true);
+    if (prettify) {
+      key = textCaseCapitalize(textCaseCamel(key, true));
     }
     output = `${output}${key}: ${convertAnyToSingleLine(record[key])}`;
     if (!output.endsWith(" ")) {

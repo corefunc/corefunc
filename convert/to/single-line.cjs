@@ -8,6 +8,7 @@ const string_2 = require("../error/string.cjs");
 const string_3 = require("../../is/string.cjs");
 const multiline_1 = require("../../regex/is/multiline.cjs");
 const camel_1 = require("../../text/case/camel.cjs");
+const capitalize_1 = require("../../text/case/capitalize.cjs");
 function stringToSingleLine(record) {
   if (multiline_1.regexIsMultiline(record)) {
     record = record.replace(/\r?\n/g, " ");
@@ -33,15 +34,15 @@ function primitiveToSingleLine(record) {
 function arrayToSingleLine(record) {
   return record.map((value) => convertAnyToSingleLine(value)).join(" ");
 }
-function objectToSingleLine(record, camelCaseKey = false) {
+function objectToSingleLine(record, prettify = false) {
   if (record instanceof Error) {
     return string_2.convertErrorToString(record);
   }
   const keys = Object.keys(record);
   let output = "";
   keys.forEach((key) => {
-    if (camelCaseKey) {
-      key = camel_1.textCaseCamel(key, true);
+    if (prettify) {
+      key = capitalize_1.textCaseCapitalize(camel_1.textCaseCamel(key, true));
     }
     output = `${output}${key}: ${convertAnyToSingleLine(record[key])}`;
     if (!output.endsWith(" ")) {
