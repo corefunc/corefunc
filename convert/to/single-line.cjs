@@ -41,10 +41,11 @@ function objectToSingleLine(record, prettify = false) {
   const keys = Object.keys(record);
   let output = "";
   keys.forEach((key) => {
+    let prettyKey = key;
     if (prettify) {
-      key = capitalize_1.textCaseCapitalize(camel_1.textCaseCamel(key, true));
+      prettyKey = capitalize_1.textCaseCapitalize(camel_1.textCaseCamel(prettyKey, true));
     }
-    output = `${output}${key}: ${convertAnyToSingleLine(record[key])}`;
+    output = `${output}${prettyKey}: ${convertAnyToSingleLine(record[key])}`;
     if (!output.endsWith(" ")) {
       output = `${output} `;
     }
