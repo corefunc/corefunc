@@ -43,9 +43,9 @@ function objectToSingleLine(record, prettify = false) {
   keys.forEach((key) => {
     let prettyKey = key;
     if (prettify) {
-      prettyKey = capitalize_1.textCaseCapitalize(camel_1.textCaseCamel(prettyKey, true));
+      prettyKey = capitalize_1.textCaseCapitalize(camel_1.textCaseCamel(prettyKey, true)).replace(/([a-z])([A-Z])/g, "$1 $2");
     }
-    output = `${output}${prettyKey}: ${convertAnyToSingleLine(record[key])}`;
+    output = `${output}${prettyKey}: ${convertAnyToSingleLine(record[key], prettify)}`;
     if (!output.endsWith(" ")) {
       output = `${output} `;
     }
@@ -75,6 +75,9 @@ function convertAnyToSingleLine(record, prettify = false) {
  * @since 0.3.10
  */
 function convertToSingleLine(record, prettify = false) {
-  return convertAnyToSingleLine(record, prettify);
+  if (prettify) {
+    return convertAnyToSingleLine(record, true).trim();
+  }
+  return convertAnyToSingleLine(record, false);
 }
 exports.convertToSingleLine = convertToSingleLine;
