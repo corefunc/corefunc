@@ -92,6 +92,7 @@
 							</ul>
 							<h3>Array Is Functions</h3>
 							<ul class="tsd-index-list">
+								<li class="tsd-kind-function tsd-parent-kind-module tsd-is-external"><a href="array.html#arrayIsList" class="tsd-kind-icon">array<wbr>IsList</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-module tsd-is-external"><a href="array.html#arrayIsSparse" class="tsd-kind-icon">array<wbr>IsSparse</a></li>
 							</ul>
 							<h3>Other Functions</h3>
@@ -226,6 +227,68 @@
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Array Is Functions</h2>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module tsd-is-external">
+					<a name="arrayIsList" class="tsd-anchor"></a>
+					<h3>array<wbr>IsList</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module tsd-is-external">
+						<li class="tsd-signature tsd-kind-icon">array<wbr>IsList<span class="tsd-signature-symbol">(</span>arraySupposedToBeList<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">unknown</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in array/is/list.ts:40</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography tsd-comment-tags">
+								<dl class="tsd-comment-tags"><dt>name</dt>
+									<dd><p>arrayIsList</p>
+									</dd><dt>description</dt>
+									<dd><pre><code class="language-markdown"><span style="color: #000000">Checks whether a given array is a list.</span>
+<span style="color: #000000">An array is considered a list if its keys consist of consecutive numbers from </span><span style="color: #800000">`0`</span><span style="color: #000000"> to </span><span style="color: #800000">`array.length-1`</span><span style="color: #000000">.</span>
+<span style="color: #000000">This function works only on non-typed arrays.</span>
+<span style="color: #000000">This function returns </span><span style="color: #800000">`true`</span><span style="color: #000000"> on empty arrays.</span>
+</code></pre>
+									</dd><dt>summary</dt>
+									<dd><pre><code class="language-javascript"><span style="color: #AF00DB">import</span><span style="color: #000000"> { </span><span style="color: #001080">arrayIsList</span><span style="color: #000000"> } </span><span style="color: #AF00DB">from</span><span style="color: #000000"> </span><span style="color: #A31515">&quot;@corefunc/corefunc/array/is/list&quot;</span><span style="color: #000000">;</span>
+</code></pre>
+									</dd><dt>since</dt>
+									<dd><p>0.3.17</p>
+									</dd><dt>example</dt>
+									<dd><pre><code class="language-javascript"><span style="color: #001080">console</span><span style="color: #000000">.</span><span style="color: #795E26">log</span><span style="color: #000000">(</span><span style="color: #795E26">arrayIsList</span><span style="color: #000000">([])); </span><span style="color: #008000">// ➜ true</span>
+</code></pre>
+									</dd><dt>example</dt>
+									<dd><pre><code class="language-javascript"><span style="color: #001080">console</span><span style="color: #000000">.</span><span style="color: #795E26">log</span><span style="color: #000000">(</span><span style="color: #795E26">arrayIsList</span><span style="color: #000000">([</span><span style="color: #A31515">&quot;🍌&quot;</span><span style="color: #000000">, </span><span style="color: #A31515">&quot;🍏&quot;</span><span style="color: #000000">, </span><span style="color: #A31515">&quot;🍇&quot;</span><span style="color: #000000">, </span><span style="color: #A31515">&quot;🍊&quot;</span><span style="color: #000000">])); </span><span style="color: #008000">// ➜ true</span>
+</code></pre>
+									</dd><dt>example</dt>
+									<dd><pre><code class="language-javascript"><span style="color: #001080">console</span><span style="color: #000000">.</span><span style="color: #795E26">log</span><span style="color: #000000">(</span><span style="color: #795E26">arrayIsList</span><span style="color: #000000">(</span><span style="color: #0000FF">new</span><span style="color: #000000"> </span><span style="color: #267F99">Int16Array</span><span style="color: #000000">())); </span><span style="color: #008000">// ➜ false</span>
+</code></pre>
+									</dd><dt>example</dt>
+									<dd><pre><code class="language-javascript"><span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">list</span><span style="color: #000000"> = [</span><span style="color: #A31515">&quot;🍌&quot;</span><span style="color: #000000">, </span><span style="color: #A31515">&quot;🍏&quot;</span><span style="color: #000000">, </span><span style="color: #A31515">&quot;🍇&quot;</span><span style="color: #000000">, </span><span style="color: #A31515">&quot;🍊&quot;</span><span style="color: #000000">];</span>
+<span style="color: #001080">list</span><span style="color: #000000">[-</span><span style="color: #098658">1</span><span style="color: #000000">] = </span><span style="color: #A31515">&quot;🍓&quot;</span><span style="color: #000000">;</span>
+<span style="color: #001080">console</span><span style="color: #000000">.</span><span style="color: #795E26">log</span><span style="color: #000000">(</span><span style="color: #001080">list</span><span style="color: #000000">); </span><span style="color: #008000">// [ &#039;🍌&#039;, &#039;🍏&#039;, &#039;🍇&#039;, &#039;🍊&#039;, &#039;-1&#039;: &#039;🍓&#039; ]</span>
+<span style="color: #001080">console</span><span style="color: #000000">.</span><span style="color: #795E26">log</span><span style="color: #000000">(</span><span style="color: #001080">list</span><span style="color: #000000">.</span><span style="color: #001080">length</span><span style="color: #000000">); </span><span style="color: #008000">// 4</span>
+<span style="color: #001080">console</span><span style="color: #000000">.</span><span style="color: #795E26">log</span><span style="color: #000000">(</span><span style="color: #267F99">Object</span><span style="color: #000000">.</span><span style="color: #795E26">keys</span><span style="color: #000000">(</span><span style="color: #001080">list</span><span style="color: #000000">)); </span><span style="color: #008000">// [ &#039;0&#039;, &#039;1&#039;, &#039;2&#039;, &#039;3&#039;, &#039;-1&#039; ]</span>
+<span style="color: #001080">console</span><span style="color: #000000">.</span><span style="color: #795E26">log</span><span style="color: #000000">(</span><span style="color: #795E26">arrayIsList</span><span style="color: #000000">(</span><span style="color: #001080">list</span><span style="color: #000000">)); </span><span style="color: #008000">// false</span>
+</code></pre>
+								</dd></dl>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>arraySupposedToBeList: <span class="tsd-signature-type">unknown</span><span class="tsd-signature-symbol">[]</span></h5>
+									<div class="tsd-comment tsd-typography tsd-comment-text">
+										<p>The array being evaluated.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+							<ul>
+								<li>Returns <code>true</code> if array is a list, <code>false</code> otherwise.</li>
+							</ul>
+						</li>
+					</ul>
+				</section>
 				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module tsd-is-external">
 					<a name="arrayIsSparse" class="tsd-anchor"></a>
 					<h3>array<wbr>IsSparse</h3>
@@ -1339,6 +1402,9 @@
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-module tsd-is-external root">
 						<a href="array.html#arrayIsEmpty" class="tsd-kind-icon">array<wbr>IsEmpty</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module tsd-is-external root">
+						<a href="array.html#arrayIsList" class="tsd-kind-icon">array<wbr>IsList</a>
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-module tsd-is-external root">
 						<a href="array.html#arrayIsSparse" class="tsd-kind-icon">array<wbr>IsSparse</a>
