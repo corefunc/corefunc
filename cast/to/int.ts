@@ -1,34 +1,59 @@
 /**
  * @category Cast To
  * @name castToInt
- * @description Typecast variable to integer
+ * @description Typecast variable to integer.
  * @param {*} value
- * @param {*} [onFail=0] The return value in case of failure
- * @param {Number} [radix=10] An integer that represents the radix of the above mentioned string
- * @returns {Number} Any number excluding NaN and Infinity
- * @example
- * ```javascript
- * castToInt("F", 0, 16); // => 15
- * ```
+ * @param {number} [returnOnFail=0] The return value in case of failure.
+ * @param {boolean=} [isNanFail=true] Consider NaN as failed to parse value.
+ * @param {boolean=} [shouldBeSafe=true] Fits integer between MIN_SAFE_INTEGER and MAX_SAFE_INTEGER.
+ * @returns {number} Any number.
  */
-export function castToInt<D>(value: any, onFail: D | number = 0, radix: number = 10): D | number {
+export function castToInt(
+  value: unknown,
+  returnOnFail: number = 0,
+  isNanFail: boolean = true,
+  shouldBeSafe: boolean = true,
+): number {
   const type = typeof value;
+  if (type === "number") {
+    if (Number.isFinite(value)) {
+      if (!shouldBeSafe) {
+        return Number.parseInt(value as string);
+      }
+      const int = Number.parseInt(value as string);
+      if (int > Number.MAX_SAFE_INTEGER) {
+        return Number.MAX_SAFE_INTEGER;
+      } else if (int < Number.MIN_SAFE_INTEGER) {
+        return Number.MIN_SAFE_INTEGER;
+      } else {
+        return int;
+      }
+    }
+    if (Number.isNaN(value)) {
+      if (isNanFail) {
+        return returnOnFail;
+      } else {
+        return NaN;
+      }
+    }
+    if (shouldBeSafe) {
+      if (value === Number.POSITIVE_INFINITY) {
+        return Number.MAX_SAFE_INTEGER;
+      } else {
+        return Number.MIN_SAFE_INTEGER;
+      }
+    }
+    return value as number;
+  }
+  if (type === "string") {
+    return castToInt(Number.parseInt(value as string), returnOnFail, isNanFail, shouldBeSafe);
+  }
   if (type === "boolean") {
     return Number(value);
   }
-  if (type === "string") {
-    const temporary = Number.parseInt(value, radix);
-    if (Number.isNaN(temporary) || !Number.isFinite(temporary)) {
-      return onFail;
-    }
-    return temporary;
-  }
-  if (type === "number" && Number.isFinite(value)) {
-    return value | 0;
-  }
   const casted = Number(value);
-  if (Object.prototype.toString.call(value) === "[object Number]" && Number.isFinite(casted)) {
-    return casted | 0;
+  if (Object.prototype.toString.call(value) === "[object Number]") {
+    return castToInt(Number.parseInt(casted as unknown as string), returnOnFail, isNanFail, shouldBeSafe);
   }
-  return castToInt(String(value), onFail, radix);
+  return castToInt(String(value), returnOnFail, isNanFail, shouldBeSafe);
 }

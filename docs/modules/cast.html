@@ -86,7 +86,7 @@
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter tsd-is-external"><a href="cast.html#castToFloat" class="tsd-kind-icon">cast<wbr>ToFloat</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-module tsd-is-external"><a href="cast.html#castToFloatOrNull" class="tsd-kind-icon">cast<wbr>ToFloat<wbr>OrNull</a></li>
-								<li class="tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter tsd-is-external"><a href="cast.html#castToInt" class="tsd-kind-icon">cast<wbr>ToInt</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module tsd-is-external"><a href="cast.html#castToInt" class="tsd-kind-icon">cast<wbr>ToInt</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-module tsd-is-external"><a href="cast.html#castToIntOrNull" class="tsd-kind-icon">cast<wbr>ToInt<wbr>OrNull</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-module tsd-is-external"><a href="cast.html#castToPercentOrNull" class="tsd-kind-icon">cast<wbr>ToPercent<wbr>OrNull</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-module tsd-is-external"><a href="cast.html#castToString" class="tsd-kind-icon">cast<wbr>ToString</a></li>
@@ -193,52 +193,43 @@
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter tsd-is-external">
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module tsd-is-external">
 					<a name="castToInt" class="tsd-anchor"></a>
 					<h3>cast<wbr>ToInt</h3>
-					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">cast<wbr>ToInt&lt;D&gt;<span class="tsd-signature-symbol">(</span>value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, onFail<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">D</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span>, radix<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">D</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></li>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module tsd-is-external">
+						<li class="tsd-signature tsd-kind-icon">cast<wbr>ToInt<span class="tsd-signature-symbol">(</span>value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">unknown</span>, returnOnFail<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span>, isNanFail<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span>, shouldBeSafe<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in cast/to/int.ts:14</li>
+									<li>Defined in cast/to/int.ts:11</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography tsd-comment-tags">
 								<dl class="tsd-comment-tags"><dt>name</dt>
 									<dd><p>castToInt</p>
 									</dd><dt>description</dt>
-									<dd><p>Typecast variable to integer</p>
-									</dd><dt>example</dt>
-									<dd><pre><code class="language-javascript"><span style="color: #795E26">castToInt</span><span style="color: #000000">(</span><span style="color: #A31515">&quot;F&quot;</span><span style="color: #000000">, </span><span style="color: #098658">0</span><span style="color: #000000">, </span><span style="color: #098658">16</span><span style="color: #000000">); </span><span style="color: #008000">// =&gt; 15</span>
-</code></pre>
+									<dd><p>Typecast variable to integer.</p>
 								</dd></dl>
 							</div>
-							<h4 class="tsd-type-parameters-title">Type parameters</h4>
-							<ul class="tsd-type-parameters">
-								<li>
-									<h4>D</h4>
-								</li>
-							</ul>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>value: <span class="tsd-signature-type">any</span></h5>
+									<h5>value: <span class="tsd-signature-type">unknown</span></h5>
 								</li>
 								<li>
-									<h5>onFail: <span class="tsd-signature-type">D</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = 0</span></h5>
+									<h5>returnOnFail: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = 0</span></h5>
 								</li>
 								<li>
-									<h5>radix: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = 10</span></h5>
+									<h5>isNanFail: <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> = true</span></h5>
+								</li>
+								<li>
+									<h5>shouldBeSafe: <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> = true</span></h5>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">D</span>
-								<span class="tsd-signature-symbol"> | </span>
-								<span class="tsd-signature-type">number</span>
-							</h4>
-							<p>Any number excluding NaN and Infinity</p>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+							<p>Any number.</p>
 						</li>
 					</ul>
 				</section>
@@ -480,7 +471,7 @@
 					<li class=" tsd-kind-function tsd-parent-kind-module tsd-is-external root">
 						<a href="cast.html#castToFloatOrNull" class="tsd-kind-icon">cast<wbr>ToFloat<wbr>OrNull</a>
 					</li>
-					<li class=" tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter tsd-is-external root">
+					<li class=" tsd-kind-function tsd-parent-kind-module tsd-is-external root">
 						<a href="cast.html#castToInt" class="tsd-kind-icon">cast<wbr>ToInt</a>
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-module tsd-is-external root">
