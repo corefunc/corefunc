@@ -1,4 +1,5 @@
 /**
+ * @category Date
  * @name dateIsLeapYear
  * @description Find whether a year is a leap year
  * @param {Number=} year Year to check

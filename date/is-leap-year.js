@@ -2,6 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.dateIsLeapYear = void 0;
 /**
+ * @category Date
  * @name dateIsLeapYear
  * @description Find whether a year is a leap year
  * @param {Number=} year Year to check
