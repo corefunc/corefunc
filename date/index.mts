@@ -1,2 +1,2 @@
-export * from "./in-milliseconds";
-export * from "./is-leap-year";
+export * from "./in-milliseconds.mts";
+export * from "./is-leap-year.mts";

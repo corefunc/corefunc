@@ -84,6 +84,7 @@
 						<section class="tsd-index-section tsd-is-external">
 							<h3>Check Functions</h3>
 							<ul class="tsd-index-list">
+								<li class="tsd-kind-function tsd-parent-kind-module tsd-is-external"><a href="check.html#checkIsPrimitive" class="tsd-kind-icon">check<wbr>IsPrimitive</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-module tsd-is-external"><a href="check.html#checkIsTypedArray" class="tsd-kind-icon">check<wbr>IsTyped<wbr>Array</a></li>
 							</ul>
 							<h3>Other Functions</h3>
@@ -95,7 +96,6 @@
 								<li class="tsd-kind-function tsd-parent-kind-module tsd-is-external"><a href="check.html#checkIsKeyed" class="tsd-kind-icon">check<wbr>IsKeyed</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-module tsd-is-external"><a href="check.html#checkIsObjectLike" class="tsd-kind-icon">check<wbr>IsObject<wbr>Like</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-module tsd-is-external"><a href="check.html#checkIsObjectPlain" class="tsd-kind-icon">check<wbr>IsObject<wbr>Plain</a></li>
-								<li class="tsd-kind-function tsd-parent-kind-module tsd-is-external"><a href="check.html#checkIsPrimitive" class="tsd-kind-icon">check<wbr>IsPrimitive</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-module tsd-is-external"><a href="check.html#checkIsSame" class="tsd-kind-icon">check<wbr>IsSame</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-module tsd-is-external"><a href="check.html#checkIsTimeStamp" class="tsd-kind-icon">check<wbr>IsTime<wbr>Stamp</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-module tsd-is-external"><a href="check.html#checkIsTraversable" class="tsd-kind-icon">check<wbr>IsTraversable</a></li>
@@ -109,6 +109,39 @@
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Check Functions</h2>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module tsd-is-external">
+					<a name="checkIsPrimitive" class="tsd-anchor"></a>
+					<h3>check<wbr>IsPrimitive</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module tsd-is-external">
+						<li class="tsd-signature tsd-kind-icon">check<wbr>IsPrimitive<span class="tsd-signature-symbol">(</span>value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">unknown</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in check/is-primitive.ts:9</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography tsd-comment-tags">
+								<dl class="tsd-comment-tags"><dt>name</dt>
+									<dd><p>checkIsPrimitive</p>
+									</dd><dt>description</dt>
+									<dd><p>Return true on boolean, string, number, BigInt, null, Symbol and undefined</p>
+									</dd><dt>summary</dt>
+									<dd><p><code>import { checkIsPrimitive } from &quot;@corefunc/corefunc/check/is-primitive&quot;;</code></p>
+								</dd></dl>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>value: <span class="tsd-signature-type">unknown</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+							<p>Returns <code>true</code> if the given <code>value</code> is a primitive type. Otherwise, returns <code>false</code>.</p>
+						</li>
+					</ul>
+				</section>
 				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module tsd-is-external">
 					<a name="checkIsTypedArray" class="tsd-anchor"></a>
 					<h3>check<wbr>IsTyped<wbr>Array</h3>
@@ -338,36 +371,6 @@
 								<div class="lead">
 									<p>Checks if the value is created by the <code>Object</code> constructor.</p>
 								</div>
-							</div>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>value: <span class="tsd-signature-type">any</span></h5>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module tsd-is-external">
-					<a name="checkIsPrimitive" class="tsd-anchor"></a>
-					<h3>check<wbr>IsPrimitive</h3>
-					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">check<wbr>IsPrimitive<span class="tsd-signature-symbol">(</span>value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in check/is-primitive.ts:7</li>
-								</ul>
-							</aside>
-							<div class="tsd-comment tsd-typography tsd-comment-tags">
-								<dl class="tsd-comment-tags"><dt>name</dt>
-									<dd><p>checkIsPrimitive</p>
-									</dd><dt>description</dt>
-									<dd><p>Return true on boolean, string, number, BigInt, null, Symbol and undefined</p>
-								</dd></dl>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">

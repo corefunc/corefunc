@@ -82,8 +82,15 @@
 				<section class="tsd-panel tsd-index-panel">
 					<div class="tsd-index-content">
 						<section class="tsd-index-section tsd-is-external">
+							<h3>Type aliases</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-type-alias tsd-parent-kind-module tsd-is-external"><a href="object.html#TransferableObjectType" class="tsd-kind-icon">Transferable<wbr>Object<wbr>Type</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section tsd-is-external">
 							<h3>Object Basic Functions</h3>
 							<ul class="tsd-index-list">
+								<li class="tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter tsd-is-external"><a href="object.html#objectBasicClone" class="tsd-kind-icon">object<wbr>Basic<wbr>Clone</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter tsd-is-external"><a href="object.html#objectBasicDeCycle" class="tsd-kind-icon">object<wbr>Basic<wbr>DeCycle</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter tsd-is-external"><a href="object.html#objectBasicLock" class="tsd-kind-icon">object<wbr>Basic<wbr>Lock</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter tsd-is-external"><a href="object.html#objectBasicSize" class="tsd-kind-icon">object<wbr>Basic<wbr>Size</a></li>
@@ -123,8 +130,76 @@
 					</div>
 				</section>
 			</section>
+			<section class="tsd-panel-group tsd-member-group tsd-is-external">
+				<h2>Type aliases</h2>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-module tsd-is-external">
+					<a name="TransferableObjectType" class="tsd-anchor"></a>
+					<h3>Transferable<wbr>Object<wbr>Type</h3>
+					<div class="tsd-signature tsd-kind-icon">Transferable<wbr>Object<wbr>Type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">ArrayBuffer</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">ImageBitmap</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">MessagePort</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">OffscreenCanvas</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">ReadableStream</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">WritableStream</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in object/basic/clone.ts:3</li>
+						</ul>
+					</aside>
+				</section>
+			</section>
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Object Basic Functions</h2>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter tsd-is-external">
+					<a name="objectBasicClone" class="tsd-anchor"></a>
+					<h3>object<wbr>Basic<wbr>Clone</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter tsd-is-external">
+						<li class="tsd-signature tsd-kind-icon">object<wbr>Basic<wbr>Clone&lt;ValueType&gt;<span class="tsd-signature-symbol">(</span>value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ValueType</span>, transfer<span class="tsd-signature-symbol">?: </span><a href="object.html#TransferableObjectType" class="tsd-signature-type">TransferableObjectType</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ValueType</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in object/basic/clone.ts:26</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography tsd-comment-tags">
+								<dl class="tsd-comment-tags"><dt>name</dt>
+									<dd><p>objectBasicClone</p>
+									</dd><dt>description</dt>
+									<dd><p>Creates a deep clone of a given value using the structured clone algorithm.
+											Do not throw errors if structured cloning is not possible.
+											In case of failure returns the same variable.
+											You can check it with <code>Object.is(originalVariable, clonedVariable)</code>.
+										Requires: NodeJS v17.0.0, Firefox v94.</p>
+									</dd><dt>summary</dt>
+									<dd><p><code>import { objectBasicClone } from &quot;@corefunc/corefunc/object/basic/clone&quot;;</code></p>
+									</dd><dt>template</dt>
+									<dd></dd><dt>since</dt>
+									<dd><p>0.3.20</p>
+								</dd></dl>
+							</div>
+							<h4 class="tsd-type-parameters-title">Type parameters</h4>
+							<ul class="tsd-type-parameters">
+								<li>
+									<h4>ValueType</h4>
+								</li>
+							</ul>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>value: <span class="tsd-signature-type">ValueType</span></h5>
+									<div class="tsd-comment tsd-typography tsd-comment-text">
+										<p>The object to be cloned. This can be any structured-clonable type.</p>
+									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> transfer: <a href="object.html#TransferableObjectType" class="tsd-signature-type">TransferableObjectType</a><span class="tsd-signature-symbol">[]</span></h5>
+									<div class="tsd-comment tsd-typography tsd-comment-text">
+										<p>An array of transferable objects in value that will be moved rather than cloned to the returned object.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">ValueType</span></h4>
+							<p>The returned value is a deep copy of the original value.</p>
+						</li>
+					</ul>
+				</section>
 				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter tsd-is-external">
 					<a name="objectBasicDeCycle" class="tsd-anchor"></a>
 					<h3>object<wbr>Basic<wbr>DeCycle</h3>
@@ -841,6 +916,12 @@
 		<div class="col-2 col-menu secondary-menu">
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
+					<li class=" tsd-kind-type-alias tsd-parent-kind-module tsd-is-external root">
+						<a href="object.html#TransferableObjectType" class="tsd-kind-icon">Transferable<wbr>Object<wbr>Type</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter tsd-is-external root">
+						<a href="object.html#objectBasicClone" class="tsd-kind-icon">object<wbr>Basic<wbr>Clone</a>
+					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter tsd-is-external root">
 						<a href="object.html#objectBasicDeCycle" class="tsd-kind-icon">object<wbr>Basic<wbr>DeCycle</a>
 					</li>
