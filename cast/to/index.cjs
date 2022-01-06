@@ -26,6 +26,7 @@ __exportStar(require("./array.cjs"), exports);
 __exportStar(require("./float.cjs"), exports);
 __exportStar(require("./float-or-null.cjs"), exports);
 __exportStar(require("./int.cjs"), exports);
+__exportStar(require("./int-or-nan.cjs"), exports);
 __exportStar(require("./int-or-null.cjs"), exports);
 __exportStar(require("./percent-or-null.cjs"), exports);
 __exportStar(require("./regexp.cjs"), exports);

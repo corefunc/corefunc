@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.castToIntOrNull = void 0;
-const int_1 = require("./int.cjs");
+const int_1 = require("./int");
 /**
  * @category Cast To
  * @name castToIntOrNull
@@ -15,6 +15,10 @@ function castToIntOrNull(value) {
   if (value === null || value === undefined) {
     return null;
   }
-  return int_1.castToInt(value, null);
+  const integer = int_1.castToInt(value, Number.NaN);
+  if (Number.isNaN(integer)) {
+    return null;
+  }
+  return integer;
 }
 exports.castToIntOrNull = castToIntOrNull;

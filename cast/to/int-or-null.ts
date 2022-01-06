@@ -13,5 +13,9 @@ export function castToIntOrNull(value: any): null | number {
   if (value === null || value === undefined) {
     return null;
   }
-  return castToInt(value, null);
+  const integer = castToInt(value, Number.NaN);
+  if (Number.isNaN(integer)) {
+    return null;
+  }
+  return integer;
 }

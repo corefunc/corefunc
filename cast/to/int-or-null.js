@@ -15,6 +15,10 @@ function castToIntOrNull(value) {
     if (value === null || value === undefined) {
         return null;
     }
-    return int_1.castToInt(value, null);
+    const integer = int_1.castToInt(value, Number.NaN);
+    if (Number.isNaN(integer)) {
+        return null;
+    }
+    return integer;
 }
 exports.castToIntOrNull = castToIntOrNull;

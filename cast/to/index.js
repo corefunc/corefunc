@@ -14,6 +14,7 @@ __exportStar(require("./array"), exports);
 __exportStar(require("./float"), exports);
 __exportStar(require("./float-or-null"), exports);
 __exportStar(require("./int"), exports);
+__exportStar(require("./int-or-nan"), exports);
 __exportStar(require("./int-or-null"), exports);
 __exportStar(require("./percent-or-null"), exports);
 __exportStar(require("./regexp"), exports);

@@ -1,4 +1,4 @@
-function merge(array1, array2) {
+function merge(array1: number[], array2: number[]): number[] {
   const sorted = [];
   while (array1.length && array2.length) {
     if (array1[0] < array2[0]) {
