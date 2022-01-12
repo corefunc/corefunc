@@ -3,7 +3,9 @@ import { castToRegExp } from "../../cast/to/regexp";
 import { castToString } from "../../cast/to/string";
 
 /**
- * Executes a search for a match between a regular expression and a specified string.
+ * @category RegEx Match
+ * @name regexMatch
+ * @description Executes a search for a match between a regular expression and a specified string.
  * @param {String} string
  * @param {Array|RegExp|String} pattern
  * @param {*=false} onFail

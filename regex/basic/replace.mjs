@@ -5,7 +5,9 @@ import { collectionValues } from "../../collection/values.mjs";
 import { isString } from "../../is/string.mjs";
 
 /**
- * Replace all occurrences of the search string with the replacement string
+ * @category RegEx Basic
+ * @name regexReplace
+ * @description Replace all occurrences of the search string with the replacement string
  * @param {String} haystack
  * @param {Array|String} needle
  * @param {Array|String} replaceWith

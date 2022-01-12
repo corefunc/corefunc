@@ -1,4 +1,5 @@
 /**
+ * @category RegEx From
  * @name regexFromVerbose
  * @param {TemplateStringsArray} input
  * @returns {RegExp}

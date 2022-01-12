@@ -5,7 +5,9 @@ const string_1 = require("../../is/string");
 const regexp_1 = require("../../cast/to/regexp");
 const string_2 = require("../../cast/to/string");
 /**
- * Executes a search for a match between a regular expression and a specified string.
+ * @category RegEx Match
+ * @name regexMatch
+ * @description Executes a search for a match between a regular expression and a specified string.
  * @param {String} string
  * @param {Array|RegExp|String} pattern
  * @param {*=false} onFail

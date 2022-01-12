@@ -2,6 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.regexFromVerbose = void 0;
 /**
+ * @category RegEx From
  * @name regexFromVerbose
  * @param {TemplateStringsArray} input
  * @returns {RegExp}

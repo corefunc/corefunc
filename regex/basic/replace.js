@@ -7,7 +7,9 @@ const is_traversable_1 = require("../../check/is-traversable");
 const values_1 = require("../../collection/values");
 const string_2 = require("../../is/string");
 /**
- * Replace all occurrences of the search string with the replacement string
+ * @category RegEx Basic
+ * @name regexReplace
+ * @description Replace all occurrences of the search string with the replacement string
  * @param {String} haystack
  * @param {Array|String} needle
  * @param {Array|String} replaceWith

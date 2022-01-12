@@ -8,7 +8,7 @@
  */
 export function arrayBasicKeep<T extends any>(
   array: T[],
-  iteratee: (value: T, index: number, array: T[]) => boolean,
+  iteratee: (_value: T, _index: number, _array: T[]) => boolean,
 ): T[] {
   return array.filter(iteratee);
 }

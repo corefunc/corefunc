@@ -1,4 +1,5 @@
 /**
+ * @category RegEx Is
  * @name regexIsMultiline
  * @description Checks if a line has line breaks
  * @param {String} text Text to check for line breaks

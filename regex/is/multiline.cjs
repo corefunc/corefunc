@@ -2,6 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.regexIsMultiline = void 0;
 /**
+ * @category RegEx Is
  * @name regexIsMultiline
  * @description Checks if a line has line breaks
  * @param {String} text Text to check for line breaks

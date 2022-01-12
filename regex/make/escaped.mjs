@@ -2,6 +2,7 @@ const charsToEscape = /[\\^$.*+?()[\]{}|]/g;
 const hasCharsToEscape = RegExp(charsToEscape.source);
 
 /**
+ * @category RegEx Make
  * @name regexMakeEscaped
  * @description Escapes `RegExp` special characters
  * @param {string} [text=''] Text to escape
