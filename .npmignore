@@ -15,6 +15,7 @@
 /.nvmrc
 /.prettierignore
 /.prettierrc
+/.sonarcloud.properties
 /.travis.yml
 /CHANGELOG.md
 /LICENSE
