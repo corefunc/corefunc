@@ -38,7 +38,7 @@ function objectToSingleLine(record, prettify = false) {
     if (record instanceof Error) {
         return string_2.convertErrorToString(record);
     }
-    const keys = Object.keys(record);
+    const keys = Object.keys(record).sort((alpha, beta) => alpha.localeCompare(beta));
     let output = "";
     keys.forEach((key) => {
         let prettyKey = key;
@@ -78,6 +78,6 @@ function convertToSingleLine(record, prettify = false) {
     if (prettify) {
         return convertAnyToSingleLine(record, true).trim();
     }
-    return convertAnyToSingleLine(record, false);
+    return convertAnyToSingleLine(record, false).trim();
 }
 exports.convertToSingleLine = convertToSingleLine;
