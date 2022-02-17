@@ -6,14 +6,14 @@ exports.dateFormat = void 0;
  * @name dateFormat
  * @description Format date with simple template string.
  * @summary ```import { dateFormat } from "@corefunc/corefunc/date/format";```
- * @param {Date=} [date=new Date()] Date to format.
  * @param {string=} [format="{YYYY}-{MM}-{DD}T{HH}:{mm}:{ss}"] Template string.
+ * @param {Date=} [date=new Date()] Date to format.
  * @param {boolean=} [useLocalTime=true] Use timezone offset or UTC time.
  * @returns {string} Formatted date.
  * @since 0.3.23
- * @example ```dateFormat(new Date(), "{YYYY}-{MM}-{DD}T{HH}:{mm}:{ss}", true) ➜ "2020-06-15T12:30:30"```
+ * @example ```dateFormat("{YYYY}-{MM}-{DD}T{HH}:{mm}:{ss}", new Date(), true) ➜ "2020-06-15T12:30:30"```
  */
-function dateFormat(date = new Date(), format = "{YYYY}-{MM}-{DD}T{HH}:{mm}:{ss}", useLocalTime = true) {
+function dateFormat(format = "{YYYY}-{MM}-{DD}T{HH}:{mm}:{ss}", date = new Date(), useLocalTime = true) {
     let iso;
     if (useLocalTime) {
         iso = new Date(date.valueOf() - date.getTimezoneOffset() * 60000).toISOString();
