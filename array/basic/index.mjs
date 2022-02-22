@@ -8,4 +8,5 @@ export * from "./keep.mjs";
 export * from "./map.mjs";
 export * from "./merge.mjs";
 export * from "./pull.mjs";
+export * from "./shuffle.mjs";
 export * from "./size.mjs";

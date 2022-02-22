@@ -1,4 +1,5 @@
 export * from "./boolean";
+export * from "./color";
 export * from "./from-array";
 export * from "./range";
 export * from "./pin-code";

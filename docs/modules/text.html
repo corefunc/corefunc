@@ -82,6 +82,10 @@
 				<section class="tsd-panel tsd-index-panel">
 					<div class="tsd-index-content">
 						<section class="tsd-index-section tsd-is-external">
+							<h3>Text Basic Functions</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-function tsd-parent-kind-module tsd-is-external"><a href="text.html#textBasicSlugify" class="tsd-kind-icon">text<wbr>Basic<wbr>Slugify</a></li>
+							</ul>
 							<h3>Text Case Functions</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-function tsd-parent-kind-module tsd-is-external"><a href="text.html#textCaseAbbreviate" class="tsd-kind-icon">text<wbr>Case<wbr>Abbreviate</a></li>
@@ -95,12 +99,56 @@
 								<li class="tsd-kind-function tsd-parent-kind-module tsd-is-external"><a href="text.html#textCaseTrain" class="tsd-kind-icon">text<wbr>Case<wbr>Train</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-module tsd-is-external"><a href="text.html#textCaseUpper" class="tsd-kind-icon">text<wbr>Case<wbr>Upper</a></li>
 							</ul>
+							<h3>Text Emoji Functions</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-function tsd-parent-kind-module tsd-is-external"><a href="text.html#textEmojiJoin" class="tsd-kind-icon">text<wbr>Emoji<wbr>Join</a></li>
+							</ul>
 							<h3>Text Fit Functions</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-function tsd-parent-kind-module tsd-is-external"><a href="text.html#textFitLength" class="tsd-kind-icon">text<wbr>Fit<wbr>Length</a></li>
 							</ul>
 						</section>
 					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Text Basic Functions</h2>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module tsd-is-external">
+					<a name="textBasicSlugify" class="tsd-anchor"></a>
+					<h3>text<wbr>Basic<wbr>Slugify</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module tsd-is-external">
+						<li class="tsd-signature tsd-kind-icon">text<wbr>Basic<wbr>Slugify<span class="tsd-signature-symbol">(</span>text<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in text/basic/slugify.ts:10</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography tsd-comment-tags">
+								<dl class="tsd-comment-tags"><dt>name</dt>
+									<dd><p>textBasicSlugify</p>
+									</dd><dt>description</dt>
+									<dd><p>Minimalistic text slugify.</p>
+									</dd><dt>summary</dt>
+									<dd><p><code>import { textBasicSlugify } from &quot;@corefunc/corefunc/text/basic/slugify&quot;;</code></p>
+									</dd><dt>since</dt>
+									<dd><p>0.3.27</p>
+									</dd><dt>example</dt>
+									<dd><p><code>textBasicSlugify(&quot;This is blog post link!&quot;); ➜  &quot;this-is-blog-post-link&quot;</code></p>
+								</dd></dl>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>text: <span class="tsd-signature-type">string</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
+							<p>Slug text.</p>
+						</li>
+					</ul>
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
@@ -449,6 +497,57 @@
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Text Emoji Functions</h2>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module tsd-is-external">
+					<a name="textEmojiJoin" class="tsd-anchor"></a>
+					<h3>text<wbr>Emoji<wbr>Join</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module tsd-is-external">
+						<li class="tsd-signature tsd-kind-icon">text<wbr>Emoji<wbr>Join<span class="tsd-signature-symbol">(</span>emoji<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, <span class="tsd-signature-symbol">...</span>emojis<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in text/emoji/join.ts:13</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography tsd-comment-tags">
+								<dl class="tsd-comment-tags"><dt>name</dt>
+									<dd><p>textEmojiJoin</p>
+									</dd><dt>description</dt>
+									<dd><p>Join emoji.</p>
+									</dd><dt>summary</dt>
+									<dd><p><code>import { textEmojiJoin } from &quot;@corefunc/corefunc/text/emoji/join&quot;;</code></p>
+									</dd><dt>since</dt>
+									<dd><p>0.3.27</p>
+									</dd><dt>example</dt>
+									<dd><p><code>&quot;👨&quot; + &quot;💻&quot; ➜  &quot;👨💻&quot;</code></p>
+									</dd><dt>example</dt>
+									<dd><p><code>textEmojiJoin(&quot;👨&quot;, &quot;💻&quot;) ➜  &quot;👨‍💻&quot;</code></p>
+								</dd></dl>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>emoji: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography tsd-comment-text">
+										<p>Emoji.</p>
+									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagRest">Rest</span> <span class="tsd-signature-symbol">...</span>emojis: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></h5>
+									<div class="tsd-comment tsd-typography tsd-comment-text">
+										<p>Emojis to join.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
+							<p>Joined emoji.</p>
+						</li>
+					</ul>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Text Fit Functions</h2>
 				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module tsd-is-external">
 					<a name="textFitLength" class="tsd-anchor"></a>
@@ -500,6 +599,9 @@
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
 					<li class=" tsd-kind-function tsd-parent-kind-module tsd-is-external root">
+						<a href="text.html#textBasicSlugify" class="tsd-kind-icon">text<wbr>Basic<wbr>Slugify</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module tsd-is-external root">
 						<a href="text.html#textCaseAbbreviate" class="tsd-kind-icon">text<wbr>Case<wbr>Abbreviate</a>
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-module tsd-is-external root">
@@ -528,6 +630,9 @@
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-module tsd-is-external root">
 						<a href="text.html#textCaseUpper" class="tsd-kind-icon">text<wbr>Case<wbr>Upper</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module tsd-is-external root">
+						<a href="text.html#textEmojiJoin" class="tsd-kind-icon">text<wbr>Emoji<wbr>Join</a>
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-module tsd-is-external root">
 						<a href="text.html#textFitLength" class="tsd-kind-icon">text<wbr>Fit<wbr>Length</a>

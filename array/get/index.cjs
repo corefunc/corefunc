@@ -14,5 +14,6 @@ __exportStar(require("./at.cjs"), exports);
 __exportStar(require("./average.cjs"), exports);
 __exportStar(require("./difference.cjs"), exports);
 __exportStar(require("./head.cjs"), exports);
+__exportStar(require("./random.cjs"), exports);
 __exportStar(require("./symmetric-difference.cjs"), exports);
 __exportStar(require("./unique.cjs"), exports);

@@ -14,5 +14,6 @@ __exportStar(require("./at"), exports);
 __exportStar(require("./average"), exports);
 __exportStar(require("./difference"), exports);
 __exportStar(require("./head"), exports);
+__exportStar(require("./random"), exports);
 __exportStar(require("./symmetric-difference"), exports);
 __exportStar(require("./unique"), exports);

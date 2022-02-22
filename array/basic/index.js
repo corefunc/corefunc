@@ -20,4 +20,5 @@ __exportStar(require("./keep"), exports);
 __exportStar(require("./map"), exports);
 __exportStar(require("./merge"), exports);
 __exportStar(require("./pull"), exports);
+__exportStar(require("./shuffle"), exports);
 __exportStar(require("./size"), exports);

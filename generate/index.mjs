@@ -1,4 +1,5 @@
 export * from "./boolean.mjs";
+export * from "./color.mjs";
 export * from "./from-array.mjs";
 export * from "./range.mjs";
 export * from "./pin-code.mjs";

@@ -11,6 +11,7 @@ var __exportStar = (this && this.__exportStar) || function(m, exports) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 __exportStar(require("./boolean.cjs"), exports);
+__exportStar(require("./color.cjs"), exports);
 __exportStar(require("./from-array"), exports);
 __exportStar(require("./range.cjs"), exports);
 __exportStar(require("./pin-code.cjs"), exports);

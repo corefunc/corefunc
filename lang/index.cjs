@@ -22,7 +22,7 @@ var __exportStar =
       if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports, p)) __createBinding(exports, m, p);
   };
 Object.defineProperty(exports, "__esModule", { value: true });
-__exportStar(require("./iterator-symbol"), exports);
-__exportStar(require("./match"), exports);
-__exportStar(require("./sleep"), exports);
-__exportStar(require("./spaceship"), exports);
+__exportStar(require("./iterator-symbol.cjs"), exports);
+__exportStar(require("./match.cjs"), exports);
+__exportStar(require("./sleep.cjs"), exports);
+__exportStar(require("./spaceship.cjs"), exports);

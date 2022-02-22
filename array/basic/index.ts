@@ -8,4 +8,5 @@ export * from "./keep";
 export * from "./map";
 export * from "./merge";
 export * from "./pull";
+export * from "./shuffle";
 export * from "./size";
