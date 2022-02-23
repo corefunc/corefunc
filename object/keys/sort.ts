@@ -7,7 +7,7 @@
  * @param {Boolean=} [isDeep=true] Deep sort.
  * @returns {Object} New object with sorted keys.
  */
-export function objectKeysSort<ObjectType extends Record<string, any>>(
+export function objectKeysSort<ObjectType extends Record<number | string | symbol, unknown>>(
   objectLike: ObjectType,
   isDeep: boolean = true,
 ): ObjectType {
@@ -20,7 +20,7 @@ export function objectKeysSort<ObjectType extends Record<string, any>>(
   }
   return keys.reduce((sorted, key) => {
     if (isDeep && objectLike[key] && typeof objectLike[key] === "object" && !Array.isArray(objectLike[key])) {
-      sorted[key] = objectKeysSort(objectLike[key], isDeep);
+      sorted[key] = objectKeysSort(objectLike[key] as Record<number | string | symbol, unknown>, isDeep);
     } else {
       sorted[key] = objectLike[key];
     }

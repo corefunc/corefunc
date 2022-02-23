@@ -4,14 +4,16 @@
 
 [![NPM Version][npm-version-img]][npm-version-url]
 [![NPM Downloads][npm-downloads-img]][npm-downloads-url]
+[![Maintainability Rating][sonarcloud-img]][sonarcloud-url]
+[![CodeFactor][codefactor-img]][codefactor-url]
 
 ---
 
 **CoreFunc** - is a collection of core functions for various tasks. It consists of useful one-liner helpers and more complicated functions.
 
-## Introduction
+[➡️ **C o r e F u n c . G i t H u b . i o** ⬅️](https://corefunc.github.io/corefunc/)
 
-[**CoreFunc.GitHub.io** ➜ 📚 Documentation](https://corefunc.github.io/corefunc/)
+## Introduction
 
 Why.
 
@@ -38,22 +40,27 @@ What is the purpose?
 #### CommonJS import
 
 ```javascript
-const { bubbleSort } =
-  require("@corefunc/corefunc/array/sort/bubble.cjs");
+const {
+  bubbleSort
+} = require("@corefunc/corefunc/array/sort/bubble.cjs");
 bubbleSort([3, 1, 2]);
 ```
 
 #### ECMAScript Module
 
 ```javascript
-import { bubbleSort } from "@corefunc/corefunc/array/sort/bubble.mjs";
+import {
+  bubbleSort
+} from "@corefunc/corefunc/array/sort/bubble.mjs";
 bubbleSort([3, 1, 2]);
 ```
 
 #### TypeScript
 
 ```javascript
-import { bubbleSort } from "@corefunc/corefunc/array/sort/bubble";
+import {
+  bubbleSort
+} from "@corefunc/corefunc/array/sort/bubble";
 bubbleSort([3, 1, 2]);
 ```
 
@@ -114,3 +121,12 @@ Also there is more useful links:
 [ts-url]: https://github.com/corefunc/corefunc/blob/master/dist/index.d.ts
 [ts-img]: https://badgen.net/npm/types/@corefunc/corefunc?&icon=typescript&label=types&color=1E90FF
 
+
+[ts-img]: https://badgen.net/npm/types/@corefunc/corefunc?&icon=typescript&label=types&color=1E90FF&v=0.3.28
+[ts-url]: https://github.com/corefunc/corefunc/blob/master/index.ts
+
+[sonarcloud-img]: https://sonarcloud.io/api/project_badges/measure?project=r37r0m0d3l_header-range-parser&metric=sqale_rating&v=0.3.28
+[sonarcloud-url]: https://sonarcloud.io/dashboard?id=r37r0m0d3l_header-range-parser
+
+[codefactor-img]: https://www.codefactor.io/repository/github/corefunc/corefunc/badge?&style=flat-square&v=0.3.28
+[codefactor-url]: https://www.codefactor.io/repository/github/corefunc/corefunc

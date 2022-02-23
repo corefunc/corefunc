@@ -159,13 +159,15 @@
 					<h1>CoreFunc</h1>
 				</a>
 				<p><a href="https://npmjs.com/package/@corefunc/corefunc"><img src="https://badgen.net/npm/v/@corefunc/corefunc?&icon=npm&label=npm&color=DD3636" alt="NPM Version"></a>
-				<a href="https://npmjs.com/package/@corefunc/corefunc"><img src="https://badgen.net/npm/dt/@corefunc/corefunc?&icon=terminal&label=downloads&color=009688" alt="NPM Downloads"></a></p>
+					<a href="https://npmjs.com/package/@corefunc/corefunc"><img src="https://badgen.net/npm/dt/@corefunc/corefunc?&icon=terminal&label=downloads&color=009688" alt="NPM Downloads"></a>
+					<a href="https://sonarcloud.io/dashboard?id=r37r0m0d3l_header-range-parser"><img src="https://sonarcloud.io/api/project_badges/measure?project=r37r0m0d3l_header-range-parser&metric=sqale_rating&v=0.3.27" alt="Maintainability Rating"></a>
+				<a href="https://www.codefactor.io/repository/github/corefunc/corefunc"><img src="https://www.codefactor.io/repository/github/corefunc/corefunc/badge?&style=flat-square&v=0.3.27" alt="CodeFactor"></a></p>
 				<hr>
 				<p><strong>CoreFunc</strong> - is a collection of core functions for various tasks. It consists of useful one-liner helpers and more complicated functions.</p>
+				<p><a href="https://corefunc.github.io/corefunc/">➡️ <strong>C o r e F u n c . G i t H u b . i o</strong> ⬅️</a></p>
 				<a href="#introduction" id="introduction" style="color: inherit; text-decoration: none;">
 					<h2>Introduction</h2>
 				</a>
-				<p><a href="https://corefunc.github.io/corefunc/"><strong>CoreFunc.GitHub.io</strong> ➜ 📚 Documentation</a></p>
 				<p>Why.</p>
 				<ul>
 					<li><p> All functions are written to work with CommonJS and ECMAScript modules.</p>
@@ -193,20 +195,25 @@
 				<a href="#commonjs-import" id="commonjs-import" style="color: inherit; text-decoration: none;">
 					<h4>CommonJS import</h4>
 				</a>
-				<pre><code class="language-javascript"><span style="color: #0000FF">const</span><span style="color: #000000"> { </span><span style="color: #0070C1">bubbleSort</span><span style="color: #000000"> } =</span>
-<span style="color: #000000">  </span><span style="color: #795E26">require</span><span style="color: #000000">(</span><span style="color: #A31515">&quot;@corefunc/corefunc/array/sort/bubble.cjs&quot;</span><span style="color: #000000">);</span>
+				<pre><code class="language-javascript"><span style="color: #0000FF">const</span><span style="color: #000000"> {</span>
+<span style="color: #000000">  </span><span style="color: #0070C1">bubbleSort</span>
+<span style="color: #000000">} = </span><span style="color: #795E26">require</span><span style="color: #000000">(</span><span style="color: #A31515">&quot;@corefunc/corefunc/array/sort/bubble.cjs&quot;</span><span style="color: #000000">);</span>
 <span style="color: #795E26">bubbleSort</span><span style="color: #000000">([</span><span style="color: #098658">3</span><span style="color: #000000">, </span><span style="color: #098658">1</span><span style="color: #000000">, </span><span style="color: #098658">2</span><span style="color: #000000">]);</span>
 </code></pre>
 				<a href="#ecmascript-module" id="ecmascript-module" style="color: inherit; text-decoration: none;">
 					<h4>ECMAScript Module</h4>
 				</a>
-				<pre><code class="language-javascript"><span style="color: #AF00DB">import</span><span style="color: #000000"> { </span><span style="color: #001080">bubbleSort</span><span style="color: #000000"> } </span><span style="color: #AF00DB">from</span><span style="color: #000000"> </span><span style="color: #A31515">&quot;@corefunc/corefunc/array/sort/bubble.mjs&quot;</span><span style="color: #000000">;</span>
+				<pre><code class="language-javascript"><span style="color: #AF00DB">import</span><span style="color: #000000"> {</span>
+<span style="color: #000000">  </span><span style="color: #001080">bubbleSort</span>
+<span style="color: #000000">} </span><span style="color: #AF00DB">from</span><span style="color: #000000"> </span><span style="color: #A31515">&quot;@corefunc/corefunc/array/sort/bubble.mjs&quot;</span><span style="color: #000000">;</span>
 <span style="color: #795E26">bubbleSort</span><span style="color: #000000">([</span><span style="color: #098658">3</span><span style="color: #000000">, </span><span style="color: #098658">1</span><span style="color: #000000">, </span><span style="color: #098658">2</span><span style="color: #000000">]);</span>
 </code></pre>
 				<a href="#typescript" id="typescript" style="color: inherit; text-decoration: none;">
 					<h4>TypeScript</h4>
 				</a>
-				<pre><code class="language-javascript"><span style="color: #AF00DB">import</span><span style="color: #000000"> { </span><span style="color: #001080">bubbleSort</span><span style="color: #000000"> } </span><span style="color: #AF00DB">from</span><span style="color: #000000"> </span><span style="color: #A31515">&quot;@corefunc/corefunc/array/sort/bubble&quot;</span><span style="color: #000000">;</span>
+				<pre><code class="language-javascript"><span style="color: #AF00DB">import</span><span style="color: #000000"> {</span>
+<span style="color: #000000">  </span><span style="color: #001080">bubbleSort</span>
+<span style="color: #000000">} </span><span style="color: #AF00DB">from</span><span style="color: #000000"> </span><span style="color: #A31515">&quot;@corefunc/corefunc/array/sort/bubble&quot;</span><span style="color: #000000">;</span>
 <span style="color: #795E26">bubbleSort</span><span style="color: #000000">([</span><span style="color: #098658">3</span><span style="color: #000000">, </span><span style="color: #098658">1</span><span style="color: #000000">, </span><span style="color: #098658">2</span><span style="color: #000000">]);</span>
 </code></pre>
 				<hr>
