@@ -1,4 +1,4 @@
-import { isArrayLike } from "../../check/is-array-like";
+import { checkIsArrayLike } from "../../check/is-array-like";
 
 /**
  * @name arrayGetAt
@@ -11,7 +11,7 @@ import { isArrayLike } from "../../check/is-array-like";
  * @since 0.0.96
  */
 export function arrayGetAt<T, E>(array: T[], index: number, onFail?: E): T | E {
-  if (!isArrayLike(array) || !Number.isInteger(index)) {
+  if (!checkIsArrayLike(array) || !Number.isInteger(index)) {
     return onFail;
   }
   const relativeIndex = index >= 0 ? index : array.length + index;

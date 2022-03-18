@@ -2,6 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.checkIsObjectLike = void 0;
 /**
+ * @category Check Like
  * @name checkIsObjectLike
  * @description Checks if `value` is object-like. A value is object-like if it's not `null`
  * and has a `typeof` result of "object".

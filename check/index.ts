@@ -1,6 +1,7 @@
 export * from "./is-array-known";
 export * from "./is-array-like";
 export * from "./is-callable";
+export * from "./is-error-like";
 export * from "./is-falsy";
 export * from "./is-function-arrow";
 export * from "./is-iterable";

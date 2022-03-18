@@ -1,5 +1,5 @@
 /**
- * @name isArrayKnown
+ * @name checkIsArrayKnown
  * @param {Array} array
  * @returns {boolean}
  * @example
@@ -16,6 +16,6 @@
  * // TS2345: Argument of type 'number[]' is not assignable to parameter of type 'string[]'.
  * // Type 'number' is not assignable to type 'string'.
  */
-export function isArrayKnown(array) {
+export function checkIsArrayKnown(array) {
   return Array.isArray(array);
 }

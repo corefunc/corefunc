@@ -1,10 +1,11 @@
 /**
- * @name isArrayLike
+ * @category Check Like
+ * @name checkIsArrayLike
  * @param {*} arrayLike
  * @returns {boolean}
  * @since 0.0.96
  */
-export function isArrayLike(arrayLike) {
+export function checkIsArrayLike(arrayLike) {
   if (!arrayLike) {
     return false;
   }

@@ -1,8 +1,8 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.isArrayKnown = void 0;
+exports.checkIsArrayKnown = void 0;
 /**
- * @name isArrayKnown
+ * @name checkIsArrayKnown
  * @param {Array} array
  * @returns {boolean}
  * @example
@@ -19,7 +19,7 @@ exports.isArrayKnown = void 0;
  * // TS2345: Argument of type 'number[]' is not assignable to parameter of type 'string[]'.
  * // Type 'number' is not assignable to type 'string'.
  */
-function isArrayKnown(array) {
+function checkIsArrayKnown(array) {
     return Array.isArray(array);
 }
-exports.isArrayKnown = isArrayKnown;
+exports.checkIsArrayKnown = checkIsArrayKnown;

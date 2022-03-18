@@ -2,7 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.checkIsPrimitive = void 0;
 /**
- * @category Check
+ * @category Check Type
  * @name checkIsPrimitive
  * @description Return true on boolean, string, number, BigInt, null, Symbol and undefined
  * @summary ```import { checkIsPrimitive } from "@corefunc/corefunc/check/is-primitive";```

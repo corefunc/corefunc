@@ -2,7 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.checkIsTypedArray = void 0;
 /**
- * @category Check
+ * @category Check Type
  * @name checkIsTypedArray
  * @description Checks if an array is typed.
  * @summary ```import { checkIsTypedArray } from '@corefunc/corefunc/check/is-typed-array';```

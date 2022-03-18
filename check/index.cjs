@@ -13,6 +13,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 __exportStar(require("./is-array-known.cjs"), exports);
 __exportStar(require("./is-array-like.cjs"), exports);
 __exportStar(require("./is-callable.cjs"), exports);
+__exportStar(require("./is-error-like.cjs"), exports);
 __exportStar(require("./is-falsy.cjs"), exports);
 __exportStar(require("./is-function-arrow.cjs"), exports);
 __exportStar(require("./is-iterable.cjs"), exports);

@@ -1,13 +1,14 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.isArrayLike = void 0;
+exports.checkIsArrayLike = void 0;
 /**
- * @name isArrayLike
+ * @category Check Like
+ * @name checkIsArrayLike
  * @param {*} arrayLike
  * @returns {boolean}
  * @since 0.0.96
  */
-function isArrayLike(arrayLike) {
+function checkIsArrayLike(arrayLike) {
   if (!arrayLike) {
     return false;
   }
@@ -17,10 +18,8 @@ function isArrayLike(arrayLike) {
   if (typeof arrayLike !== "object") {
     return false;
   }
-  return (
-    Object.hasOwnProperty.call(arrayLike, "length") &&
+  return (Object.hasOwnProperty.call(arrayLike, "length") &&
     typeof arrayLike.length === "number" &&
-    typeof arrayLike[Symbol.iterator] === "function"
-  );
+    typeof arrayLike[Symbol.iterator] === "function");
 }
-exports.isArrayLike = isArrayLike;
+exports.checkIsArrayLike = checkIsArrayLike;

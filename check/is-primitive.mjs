@@ -1,5 +1,5 @@
 /**
- * @category Check
+ * @category Check Type
  * @name checkIsPrimitive
  * @description Return true on boolean, string, number, BigInt, null, Symbol and undefined
  * @summary ```import { checkIsPrimitive } from "@corefunc/corefunc/check/is-primitive";```

@@ -13,7 +13,7 @@ const is_array_like_1 = require("../../check/is-array-like");
  * @since 0.0.96
  */
 function arrayGetAt(array, index, onFail) {
-    if (!is_array_like_1.isArrayLike(array) || !Number.isInteger(index)) {
+    if (!is_array_like_1.checkIsArrayLike(array) || !Number.isInteger(index)) {
         return onFail;
     }
     const relativeIndex = index >= 0 ? index : array.length + index;

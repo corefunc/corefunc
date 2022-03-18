@@ -1,6 +1,7 @@
 export * from "./is-array-known.mjs";
 export * from "./is-array-like.mjs";
 export * from "./is-callable.mjs";
+export * from "./is-error-like.mjs";
 export * from "./is-falsy.mjs";
 export * from "./is-function-arrow.mjs";
 export * from "./is-iterable.mjs";
