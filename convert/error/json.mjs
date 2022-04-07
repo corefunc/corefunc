@@ -1,5 +1,5 @@
-import { convertErrorToObject } from "./object.mjs";
-import { checkIsObjectLike } from "../../check/is-object-like.mjs";
+import { convertErrorToObject } from "./object";
+import { checkIsObjectLike } from "../../check/is-object-like";
 
 /**
  * @category Convert Error
@@ -13,10 +13,11 @@ import { checkIsObjectLike } from "../../check/is-object-like.mjs";
 export function convertErrorToJson(error, shouldRemoveStackTrace = false) {
   if (!checkIsObjectLike(error)) {
     const asString = String(error);
-    return {
-      message: String(error),
-      toString: () => asString,
-    };
+    const asJson = { message: asString };
+    Object.defineProperty(asJson, "toString", {
+      value: () => asString,
+    });
+    return asJson;
   }
   const plainObject = convertErrorToObject(error);
   Object.keys(plainObject)
@@ -33,7 +34,7 @@ export function convertErrorToJson(error, shouldRemoveStackTrace = false) {
     typeof plainObject.message === "string" &&
     plainObject.message.length > 0
   ) {
-    Object.defineProperty(this, "toString", {
+    Object.defineProperty(plainObject, "toString", {
       value: () => plainObject.message,
     });
   }

@@ -16,11 +16,11 @@ export function convertErrorToJson(
 ): Record<string, string> {
   if (!checkIsObjectLike(error)) {
     const asString = String(error);
-    return {
-      message: String(error),
-      // @ts-ignore
-      toString: (): string => asString,
-    };
+    const asJson = { message: asString };
+    Object.defineProperty(asJson, "toString", {
+      value: () => asString,
+    });
+    return asJson;
   }
   const plainObject = convertErrorToObject(error);
   Object.keys(plainObject)
@@ -37,7 +37,7 @@ export function convertErrorToJson(
     typeof plainObject.message === "string" &&
     plainObject.message.length > 0
   ) {
-    Object.defineProperty(this, "toString", {
+    Object.defineProperty(plainObject, "toString", {
       value: () => plainObject.message,
     });
   }

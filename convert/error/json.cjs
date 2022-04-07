@@ -15,11 +15,11 @@ const is_object_like_1 = require("../../check/is-object-like.cjs");
 function convertErrorToJson(error, shouldRemoveStackTrace = false) {
   if (!is_object_like_1.checkIsObjectLike(error)) {
     const asString = String(error);
-    return {
-      message: String(error),
-      // @ts-ignore
-      toString: () => asString,
-    };
+    const asJson = { message: asString };
+    Object.defineProperty(asJson, "toString", {
+      value: () => asString,
+    });
+    return asJson;
   }
   const plainObject = object_1.convertErrorToObject(error);
   Object.keys(plainObject)
@@ -34,7 +34,7 @@ function convertErrorToJson(error, shouldRemoveStackTrace = false) {
     plainObject.message &&
     typeof plainObject.message === "string" &&
     plainObject.message.length > 0) {
-    Object.defineProperty(this, "toString", {
+    Object.defineProperty(plainObject, "toString", {
       value: () => plainObject.message,
     });
   }
