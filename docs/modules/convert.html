@@ -200,13 +200,13 @@
 					<a name="convertErrorToObject" class="tsd-anchor"></a>
 					<h3>convert<wbr>Error<wbr>ToObject</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">convert<wbr>Error<wbr>ToObject<span class="tsd-signature-symbol">(</span>error<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Error</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">EvalError</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">RangeError</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">ReferenceError</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">SyntaxError</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">TypeError</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">URIError</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Record</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Record</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">unknown</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">convert<wbr>Error<wbr>ToObject<span class="tsd-signature-symbol">(</span>error<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Error</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">EvalError</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">RangeError</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">ReferenceError</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">SyntaxError</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">TypeError</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">URIError</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Record</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span>, shouldRemoveStackTrace<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span>, shouldBeJson<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Record</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in convert/error/object.ts:9</li>
+									<li>Defined in convert/error/object.ts:11</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography tsd-comment-tags">
@@ -223,8 +223,14 @@
 								<li>
 									<h5>error: <span class="tsd-signature-type">Error</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">EvalError</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">RangeError</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">ReferenceError</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">SyntaxError</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">TypeError</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">URIError</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Record</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></h5>
 								</li>
+								<li>
+									<h5>shouldRemoveStackTrace: <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> = true</span></h5>
+								</li>
+								<li>
+									<h5>shouldBeJson: <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> = false</span></h5>
+								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Record</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">unknown</span><span class="tsd-signature-symbol">&gt;</span></h4>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Record</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></h4>
 						</li>
 					</ul>
 				</section>
