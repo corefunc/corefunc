@@ -6,7 +6,7 @@ import { textCaseSnake } from "./snake.mjs";
  * @description Converts string into screaming snake-case.
  * @param {String} text Text to transform
  * @returns {String}
- * @since 0.1.31
+ * @since 0.3.33
  */
 export function textCaseScreamingSnake(text) {
   return textCaseSnake(text).toUpperCase();
