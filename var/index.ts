@@ -1,4 +1,5 @@
 export * from "./get";
+export * from "./new";
 
 /*
 var argsTag = '[object Arguments]',

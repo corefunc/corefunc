@@ -82,18 +82,22 @@
 				<section class="tsd-panel tsd-index-panel">
 					<div class="tsd-index-content">
 						<section class="tsd-index-section tsd-is-external">
-							<h3>Functions</h3>
+							<h3>Other Functions</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter tsd-is-external"><a href="var.html#varGetOneOfOrElse" class="tsd-kind-icon">var<wbr>Get<wbr>One<wbr>OfOr<wbr>Else</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-module tsd-is-external"><a href="var.html#varGetRawType" class="tsd-kind-icon">var<wbr>Get<wbr>Raw<wbr>Type</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-module tsd-is-external"><a href="var.html#varGetType" class="tsd-kind-icon">var<wbr>Get<wbr>Type</a></li>
 							</ul>
+							<h3>Variable New Functions</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-function tsd-parent-kind-module tsd-is-external"><a href="var.html#newError" class="tsd-kind-icon">new<wbr>Error</a></li>
+							</ul>
 						</section>
 					</div>
 				</section>
 			</section>
-			<section class="tsd-panel-group tsd-member-group tsd-is-external">
-				<h2>Functions</h2>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Other Functions</h2>
 				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter tsd-is-external">
 					<a name="varGetOneOfOrElse" class="tsd-anchor"></a>
 					<h3>var<wbr>Get<wbr>One<wbr>OfOr<wbr>Else</h3>
@@ -198,11 +202,67 @@
 					</ul>
 				</section>
 			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Variable New Functions</h2>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module tsd-is-external">
+					<a name="newError" class="tsd-anchor"></a>
+					<h3>new<wbr>Error</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module tsd-is-external">
+						<li class="tsd-signature tsd-kind-icon">new<wbr>Error<span class="tsd-signature-symbol">(</span>message<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, cause<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span>, name<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Error</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in var/new/error.ts:14</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography tsd-comment-tags">
+								<dl class="tsd-comment-tags"><dt>description</dt>
+									<dd><p>Instantiates new plain <code>Error</code>.</p>
+									</dd><dt>summary</dt>
+									<dd><p><code>import { newError } from &quot;@corefunc/corefunc/var/new/error&quot;;</code></p>
+									</dd><dt>since</dt>
+									<dd><p>0.3.34</p>
+								</dd></dl>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>message: <span class="tsd-signature-type">any</span></h5>
+									<div class="tsd-comment tsd-typography tsd-comment-text">
+										<p>Message property. Or error itself.</p>
+									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> cause: <span class="tsd-signature-type">any</span></h5>
+									<div class="tsd-comment tsd-typography tsd-comment-text">
+										<p>Cause of error.</p>
+									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> name: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography tsd-comment-text">
+										<p>Overrides name. Default is &#39;Error&#39;.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Error</span></h4>
+							<ul>
+								<li>Plain <code>Error</code> instance.</li>
+							</ul>
+						</li>
+					</ul>
+				</section>
+			</section>
 			<!--{&quot;options&quot;:&quot;/Users/anon/dev/corefunc/typedoc.json&quot;,&quot;tsconfig&quot;:&quot;/Users/anon/dev/corefunc&quot;,&quot;packages&quot;:[],&quot;entryPoints&quot;:[&quot;/Users/anon/dev/corefunc/array/index.ts&quot;,&quot;/Users/anon/dev/corefunc/cast/index.ts&quot;,&quot;/Users/anon/dev/corefunc/check/index.ts&quot;,&quot;/Users/anon/dev/corefunc/cli/index.ts&quot;,&quot;/Users/anon/dev/corefunc/collection/index.ts&quot;,&quot;/Users/anon/dev/corefunc/convert/index.ts&quot;,&quot;/Users/anon/dev/corefunc/crypt/index.ts&quot;,&quot;/Users/anon/dev/corefunc/date/index.ts&quot;,&quot;/Users/anon/dev/corefunc/fp/index.ts&quot;,&quot;/Users/anon/dev/corefunc/func/index.ts&quot;,&quot;/Users/anon/dev/corefunc/generate/index.ts&quot;,&quot;/Users/anon/dev/corefunc/hash/index.ts&quot;,&quot;/Users/anon/dev/corefunc/high-order/index.ts&quot;,&quot;/Users/anon/dev/corefunc/is/index.ts&quot;,&quot;/Users/anon/dev/corefunc/json/index.ts&quot;,&quot;/Users/anon/dev/corefunc/lang/index.ts&quot;,&quot;/Users/anon/dev/corefunc/number/index.ts&quot;,&quot;/Users/anon/dev/corefunc/object/index.ts&quot;,&quot;/Users/anon/dev/corefunc/promise/index.ts&quot;,&quot;/Users/anon/dev/corefunc/prototype/index.ts&quot;,&quot;/Users/anon/dev/corefunc/regex/index.ts&quot;,&quot;/Users/anon/dev/corefunc/string/index.ts&quot;,&quot;/Users/anon/dev/corefunc/text/index.ts&quot;,&quot;/Users/anon/dev/corefunc/time/index.ts&quot;,&quot;/Users/anon/dev/corefunc/valid/index.ts&quot;,&quot;/Users/anon/dev/corefunc/var/index.ts&quot;],&quot;exclude&quot;:[&quot;**/*+(index|.spec|.e2e).ts&quot;],&quot;externalPattern&quot;:[&quot;/Users/anon/dev/corefunc/**/*.ts&quot;],&quot;excludeExternals&quot;:false,&quot;excludeNotDocumented&quot;:false,&quot;excludeInternal&quot;:false,&quot;excludePrivate&quot;:false,&quot;excludeProtected&quot;:false,&quot;disableSources&quot;:false,&quot;includes&quot;:&quot;&quot;,&quot;media&quot;:&quot;&quot;,&quot;watch&quot;:false,&quot;preserveWatchOutput&quot;:false,&quot;emit&quot;:false,&quot;out&quot;:&quot;/Users/anon/dev/corefunc/docs&quot;,&quot;json&quot;:&quot;&quot;,&quot;pretty&quot;:true,&quot;theme&quot;:&quot;./node_modules/typedoc-neo-theme/bin/default&quot;,&quot;highlightTheme&quot;:&quot;light-plus&quot;,&quot;name&quot;:&quot;&quot;,&quot;includeVersion&quot;:false,&quot;excludeTags&quot;:[],&quot;readme&quot;:&quot;&quot;,&quot;defaultCategory&quot;:&quot;Other&quot;,&quot;categoryOrder&quot;:[],&quot;categorizeByGroup&quot;:true,&quot;sort&quot;:[&quot;kind&quot;,&quot;instance-first&quot;,&quot;alphabetical&quot;],&quot;gitRevision&quot;:&quot;&quot;,&quot;gitRemote&quot;:&quot;origin&quot;,&quot;gaID&quot;:&quot;&quot;,&quot;gaSite&quot;:&quot;auto&quot;,&quot;hideGenerator&quot;:false,&quot;toc&quot;:[],&quot;disableOutputCheck&quot;:false,&quot;help&quot;:false,&quot;version&quot;:false,&quot;showConfig&quot;:false,&quot;plugin&quot;:[],&quot;logger&quot;:&quot;console&quot;,&quot;logLevel&quot;:1,&quot;treatWarningsAsErrors&quot;:false,&quot;listInvalidSymbolLinks&quot;:false}-->
 		</div>
 		<div class="col-2 col-menu secondary-menu">
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
+					<li class=" tsd-kind-function tsd-parent-kind-module tsd-is-external root">
+						<a href="var.html#newError" class="tsd-kind-icon">new<wbr>Error</a>
+					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter tsd-is-external root">
 						<a href="var.html#varGetOneOfOrElse" class="tsd-kind-icon">var<wbr>Get<wbr>One<wbr>OfOr<wbr>Else</a>
 					</li>
