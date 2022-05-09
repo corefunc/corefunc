@@ -23,7 +23,7 @@
     "eslint-plugin-prettier": "4.0.0",
     "eslint-plugin-promise": "5.2.0",
     "eslint-plugin-standard": "5.0.0",
-    "jest": "27.4.3",
+    "jest": "28.1.0",
     "prettier": "2.5.0",
     "tslint-config-standard": "9.0.0",
     "typedoc": "0.21.4",
