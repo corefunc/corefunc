@@ -5,10 +5,10 @@
  * and has a `typeof` result of "object".
  * @param {*} value The value to check
  * @returns {boolean} Returns `true` if `value` is object-like, else `false`
- * @example isObjectLike({}); ➜ true
- * @example isObjectLike([1, 2, 3]); ➜ true
- * @example isObjectLike(() => {}); ➜ false
- * @example isObjectLike(null); ➜ false
+ * @example checkIsObjectLike({}); ➜ true
+ * @example checkIsObjectLike([1, 2, 3]); ➜ true
+ * @example checkIsObjectLike(() => {}); ➜ false
+ * @example checkIsObjectLike(null); ➜ false
  * @since 0.0.1
  */
 export function checkIsObjectLike(value: any): boolean {

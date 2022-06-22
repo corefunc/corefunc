@@ -24,7 +24,7 @@ export function arrayGetUnique(array: any[], sort = true): any[] {
       normalized.forEach((value) => {
         delete unique[unique.indexOf(value)];
       });
-      const compacted = [];
+      const compacted: any[] = [];
       for (let index = 0; index < unique.length; index++) {
         if (index in unique) {
           compacted.push(unique[index]);

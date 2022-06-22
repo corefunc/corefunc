@@ -11,6 +11,4 @@
  * @example checkIsObjectLike(null); ➜ false
  * @since 0.0.1
  */
-export function checkIsObjectLike(value) {
-  return value && typeof value === "object" && !Array.isArray(value);
-}
+export declare function checkIsObjectLike(value: any): boolean;

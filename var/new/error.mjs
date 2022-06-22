@@ -12,7 +12,7 @@ import { isString } from "../../is/string.mjs";
  * @since 0.3.34
  */
 export function newError(message, cause, name) {
-  let causeUse;
+  let causeUse = undefined;
   if (cause !== undefined) {
     if (checkIsErrorLike(cause)) {
       causeUse = cause;
@@ -43,7 +43,7 @@ export function newError(message, cause, name) {
     }
     Object.assign(error, message);
   } else {
-    let messageUse: string;
+    let messageUse;
     try {
       messageUse = JSON.stringify(message);
     } catch {
@@ -56,7 +56,7 @@ export function newError(message, cause, name) {
       error = new Error(messageUse);
     }
   }
-  if (isString(name) && name.length > 0) {
+  if (isString(name) && name && (name ?? "").length > 0) {
     error.name = name;
   }
   return error;

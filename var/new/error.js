@@ -14,7 +14,7 @@ const string_1 = require("../../is/string");
  * @since 0.3.34
  */
 function newError(message, cause, name) {
-    let causeUse;
+    let causeUse = undefined;
     if (cause !== undefined) {
         if (is_error_like_1.checkIsErrorLike(cause)) {
             causeUse = cause;
@@ -31,7 +31,7 @@ function newError(message, cause, name) {
             }
         }
     }
-    let error;
+    let error = undefined;
     if (string_1.isString(message)) {
         if (causeUse) {
             // @ts-ignore
@@ -67,7 +67,7 @@ function newError(message, cause, name) {
             error = new Error(messageUse);
         }
     }
-    if (string_1.isString(name) && name.length > 0) {
+    if (string_1.isString(name) && name && (name ?? "").length > 0) {
         error.name = name;
     }
     return error;

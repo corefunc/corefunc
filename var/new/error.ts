@@ -12,7 +12,7 @@ import { isString } from "../../is/string";
  * @since 0.3.34
  */
 export function newError(message: any, cause?: any, name?: string): Error {
-  let causeUse: Error;
+  let causeUse: Error | undefined = undefined;
   if (cause !== undefined) {
     if (checkIsErrorLike(cause)) {
       causeUse = cause;
@@ -26,7 +26,7 @@ export function newError(message: any, cause?: any, name?: string): Error {
       }
     }
   }
-  let error: Error;
+  let error: Error | undefined = undefined;
   if (isString(message)) {
     if (causeUse) {
       // @ts-ignore
@@ -56,7 +56,7 @@ export function newError(message: any, cause?: any, name?: string): Error {
       error = new Error(messageUse);
     }
   }
-  if (isString(name) && name.length > 0) {
+  if (isString(name) && name && (name ?? "").length > 0) {
     error.name = name;
   }
   return error;

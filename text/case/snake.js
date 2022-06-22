@@ -12,8 +12,7 @@ exports.textCaseSnake = void 0;
  * @since 0.3.33
  */
 function textCaseSnake(text) {
-    return text
-        .match(/[A-Z]{2,}(?=[A-Z][a-z]+[0-9]*|\b)|[A-Z]?[a-z]+[0-9]*|[A-Z]|[0-9]+/g)
+    return (text.match(/[A-Z]{2,}(?=[A-Z][a-z]+[0-9]*|\b)|[A-Z]?[a-z]+[0-9]*|[A-Z]|[0-9]+/g) ?? [])
         .map((txt) => txt.toLowerCase())
         .join("_");
 }

@@ -28,6 +28,7 @@
     "module": "CommonJS",
     "moduleResolution": "Node",
     "newLine": "lf",
+    "strictNullChecks": false,
     "sourceMap": false,
     "target": "ES2020",
     "typeRoots": ["node_modules/@types"],

@@ -1,8 +1,8 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.newError = void 0;
-const is_error_like_1 = require("../../check/is-error-like.cjs");
-const string_1 = require("../../is/string.cjs");
+const is_error_like_1 = require("../../check/is-error-like");
+const string_1 = require("../../is/string");
 /**
  * @category Variable New
  * @description Instantiates new plain `Error`.
@@ -14,62 +14,62 @@ const string_1 = require("../../is/string.cjs");
  * @since 0.3.34
  */
 function newError(message, cause, name) {
-    let causeUse;
-    if (cause !== undefined) {
-        if (is_error_like_1.checkIsErrorLike(cause)) {
-            causeUse = cause;
-        }
-        else if (string_1.isString(cause)) {
-            causeUse = new Error(cause);
-        }
-        else {
-            try {
-                causeUse = new Error(JSON.stringify(cause));
-            }
-            catch {
-                causeUse = new Error(String(cause));
-            }
-        }
+  let causeUse = undefined;
+  if (cause !== undefined) {
+    if (is_error_like_1.checkIsErrorLike(cause)) {
+      causeUse = cause;
     }
-    let error;
-    if (string_1.isString(message)) {
-        if (causeUse) {
-            // @ts-ignore
-            error = new Error(message, { cause: causeUse });
-        }
-        else {
-            error = new Error(message);
-        }
-    }
-    else if (is_error_like_1.checkIsErrorLike(message)) {
-        if (causeUse) {
-            // @ts-ignore
-            error = new Error(message.message, { cause: causeUse });
-        }
-        else {
-            error = new Error(message.message);
-        }
-        Object.assign(error, message);
+    else if (string_1.isString(cause)) {
+      causeUse = new Error(cause);
     }
     else {
-        let messageUse;
-        try {
-            messageUse = JSON.stringify(message);
-        }
-        catch {
-            messageUse = String(message);
-        }
-        if (causeUse) {
-            // @ts-ignore
-            error = new Error(messageUse, { cause: causeUse });
-        }
-        else {
-            error = new Error(messageUse);
-        }
+      try {
+        causeUse = new Error(JSON.stringify(cause));
+      }
+      catch {
+        causeUse = new Error(String(cause));
+      }
     }
-    if (string_1.isString(name) && name.length > 0) {
-        error.name = name;
+  }
+  let error = undefined;
+  if (string_1.isString(message)) {
+    if (causeUse) {
+      // @ts-ignore
+      error = new Error(message, { cause: causeUse });
     }
-    return error;
+    else {
+      error = new Error(message);
+    }
+  }
+  else if (is_error_like_1.checkIsErrorLike(message)) {
+    if (causeUse) {
+      // @ts-ignore
+      error = new Error(message.message, { cause: causeUse });
+    }
+    else {
+      error = new Error(message.message);
+    }
+    Object.assign(error, message);
+  }
+  else {
+    let messageUse;
+    try {
+      messageUse = JSON.stringify(message);
+    }
+    catch {
+      messageUse = String(message);
+    }
+    if (causeUse) {
+      // @ts-ignore
+      error = new Error(messageUse, { cause: causeUse });
+    }
+    else {
+      error = new Error(messageUse);
+    }
+  }
+  if (string_1.isString(name) && name && (name ?? "").length > 0) {
+    error.name = name;
+  }
+  return error;
 }
 exports.newError = newError;

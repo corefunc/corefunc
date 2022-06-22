@@ -21,9 +21,13 @@ export function dateFormat(
   } else {
     iso = date.toISOString();
   }
-  const { D, DD, H, HH, M, MM, YY, YYYY, m, mm, s, ss, sss, timezone } = iso.match(
-    /^(?<YYYY>\d\d(?<YY>\d\d))-(?<MM>0?(?<M>\d+))-(?<DD>0?(?<D>\d+))T(?<HH>0?(?<H>\d+)):(?<mm>0?(?<m>\d+)):(?<sss>(?<ss>0?(?<s>\d+))\.\d+)(?<timezone>[A-Z][\dA-Z.-:]*)$/,
-  ).groups;
+  const { D, DD, H, HH, M, MM, YY, YYYY, m, mm, s, ss, sss, timezone } = (
+    iso.match(
+      /^(?<YYYY>\d\d(?<YY>\d\d))-(?<MM>0?(?<M>\d+))-(?<DD>0?(?<D>\d+))T(?<HH>0?(?<H>\d+)):(?<mm>0?(?<m>\d+)):(?<sss>(?<ss>0?(?<s>\d+))\.\d+)(?<timezone>[A-Z][\dA-Z.-:]*)$/,
+    ) as RegExpMatchArray
+  ).groups as {
+    [key: string]: string;
+  };
   const record = { D, DD, H, HH, M, MM, YY, YYYY, m, mm, s, ss, sss, timezone };
   const result = format.replace(/{([^{]+)}/g, (_ignore: any, key: string) => ((key = record[key]) === null ? "" : key));
   return result === "undefined" ? "" : result;

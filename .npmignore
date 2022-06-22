@@ -30,3 +30,9 @@
 /tsconfig.json
 /typedoc.json
 /yarn.lock
+
+# ignore the .ts files
+# *.ts
+
+# include the .d.ts files
+# !*.d.ts
