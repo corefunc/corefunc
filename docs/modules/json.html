@@ -82,6 +82,20 @@
 				<section class="tsd-panel tsd-index-panel">
 					<div class="tsd-index-content">
 						<section class="tsd-index-section tsd-is-external">
+							<h3>Interfaces</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-interface tsd-parent-kind-module tsd-is-external"><a href="../interfaces/json.JsonArrayType.html" class="tsd-kind-icon">Json<wbr>Array<wbr>Type</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-module tsd-is-external"><a href="../interfaces/json.JsonObjectType.html" class="tsd-kind-icon">Json<wbr>Object<wbr>Type</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section tsd-is-external">
+							<h3>Type aliases</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-type-alias tsd-parent-kind-module tsd-is-external"><a href="json.html#JsonPrimitiveType" class="tsd-kind-icon">Json<wbr>Primitive<wbr>Type</a></li>
+								<li class="tsd-kind-type-alias tsd-parent-kind-module tsd-is-external"><a href="json.html#JsonType" class="tsd-kind-icon">Json<wbr>Type</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section tsd-is-external">
 							<h3>JSON Basic Functions</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-function tsd-parent-kind-module tsd-is-external"><a href="json.html#jsonJsonify" class="tsd-kind-icon">json<wbr>Jsonify</a></li>
@@ -103,19 +117,42 @@
 					</div>
 				</section>
 			</section>
+			<section class="tsd-panel-group tsd-member-group tsd-is-external">
+				<h2>Type aliases</h2>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-module tsd-is-external">
+					<a name="JsonPrimitiveType" class="tsd-anchor"></a>
+					<h3>Json<wbr>Primitive<wbr>Type</h3>
+					<div class="tsd-signature tsd-kind-icon">Json<wbr>Primitive<wbr>Type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in json/basic/jsonify.ts:4</li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-module tsd-is-external">
+					<a name="JsonType" class="tsd-anchor"></a>
+					<h3>Json<wbr>Type</h3>
+					<div class="tsd-signature tsd-kind-icon">Json<wbr>Type<span class="tsd-signature-symbol">:</span> <a href="json.html#JsonPrimitiveType" class="tsd-signature-type">JsonPrimitiveType</a><span class="tsd-signature-symbol"> | </span><a href="../interfaces/json.JsonArrayType.html" class="tsd-signature-type">JsonArrayType</a><span class="tsd-signature-symbol"> | </span><a href="../interfaces/json.JsonObjectType.html" class="tsd-signature-type">JsonObjectType</a></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in json/basic/jsonify.ts:14</li>
+						</ul>
+					</aside>
+				</section>
+			</section>
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>JSON Basic Functions</h2>
 				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module tsd-is-external">
 					<a name="jsonJsonify" class="tsd-anchor"></a>
 					<h3>json<wbr>Jsonify</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">json<wbr>Jsonify<span class="tsd-signature-symbol">(</span>value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, defaultResult<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span>, unsafe<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span>, fix<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+						<li class="tsd-signature tsd-kind-icon">json<wbr>Jsonify<span class="tsd-signature-symbol">(</span>value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, defaultResult<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span>, unsafe<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span>, fix<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="json.html#JsonType" class="tsd-signature-type">JsonType</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in json/basic/jsonify.ts:17</li>
+									<li>Defined in json/basic/jsonify.ts:29</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography tsd-comment-tags">
@@ -146,7 +183,7 @@
 									<h5>fix: <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> = true</span></h5>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
+							<h4 class="tsd-returns-title">Returns <a href="json.html#JsonType" class="tsd-signature-type">JsonType</a></h4>
 							<p>Plain value or plain object.</p>
 						</li>
 					</ul>
@@ -449,6 +486,18 @@
 		<div class="col-2 col-menu secondary-menu">
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
+					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-is-external root">
+						<a href="../interfaces/json.JsonArrayType.html" class="tsd-kind-icon">Json<wbr>Array<wbr>Type</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-is-external root">
+						<a href="../interfaces/json.JsonObjectType.html" class="tsd-kind-icon">Json<wbr>Object<wbr>Type</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-module tsd-is-external root">
+						<a href="json.html#JsonPrimitiveType" class="tsd-kind-icon">Json<wbr>Primitive<wbr>Type</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-module tsd-is-external root">
+						<a href="json.html#JsonType" class="tsd-kind-icon">Json<wbr>Type</a>
+					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-module tsd-is-external root">
 						<a href="json.html#jsonCleanup" class="tsd-kind-icon">json<wbr>Cleanup</a>
 					</li>

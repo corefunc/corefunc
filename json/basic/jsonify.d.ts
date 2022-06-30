@@ -1,8 +1,11 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.jsonJsonify = void 0;
-const safe_1 = require("../parse/safe");
-const safe_2 = require("../stringify/safe");
+export declare type JsonPrimitiveType = boolean | null | number | string;
+export interface JsonArrayType extends Array<JsonType> {
+    [key: number]: JsonType;
+}
+export interface JsonObjectType extends Record<string, JsonType> {
+    [key: string]: JsonType;
+}
+export declare type JsonType = JsonPrimitiveType | JsonArrayType | JsonObjectType;
 /**
  * @category JSON Basic
  * @name jsonJsonify
@@ -16,7 +19,4 @@ const safe_2 = require("../stringify/safe");
  * @since 0.0.87
  * @example ```jsonJsonify({ 1: "one" }) ➜ {"1":"one"}```
  */
-function jsonJsonify(value, defaultResult, unsafe = true, fix = true) {
-  return safe_1.jsonParseSafe(safe_2.jsonStringifySafe(value), defaultResult, unsafe, fix);
-}
-exports.jsonJsonify = jsonJsonify;
+export declare function jsonJsonify(value: any, defaultResult?: any, unsafe?: boolean, fix?: boolean): JsonType;
