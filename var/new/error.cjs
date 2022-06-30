@@ -1,8 +1,8 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.newError = void 0;
-const is_error_like_1 = require("../../check/is-error-like");
-const string_1 = require("../../is/string");
+const is_error_like_1 = require("../../check/is-error-like.cjs");
+const string_1 = require("../../is/string.cjs");
 /**
  * @category Variable New
  * @description Instantiates new plain `Error`.
