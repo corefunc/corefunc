@@ -16,6 +16,7 @@ __exportStar(require("./is-callable.cjs"), exports);
 __exportStar(require("./is-error-like.cjs"), exports);
 __exportStar(require("./is-falsy.cjs"), exports);
 __exportStar(require("./is-function-arrow.cjs"), exports);
+__exportStar(require("./is-int-positive.cjs"), exports);
 __exportStar(require("./is-iterable.cjs"), exports);
 __exportStar(require("./is-keyed.cjs"), exports);
 __exportStar(require("./is-object-like.cjs"), exports);

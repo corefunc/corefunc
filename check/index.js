@@ -16,6 +16,7 @@ __exportStar(require("./is-callable"), exports);
 __exportStar(require("./is-error-like"), exports);
 __exportStar(require("./is-falsy"), exports);
 __exportStar(require("./is-function-arrow"), exports);
+__exportStar(require("./is-int-positive"), exports);
 __exportStar(require("./is-iterable"), exports);
 __exportStar(require("./is-keyed"), exports);
 __exportStar(require("./is-object-like"), exports);
