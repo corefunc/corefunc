@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.textBasicFromNumber = void 0;
+exports.textFromNumber = void 0;
 const a = [
     "",
     "one ",
@@ -28,14 +28,15 @@ const getLT20 = (n) => a[Number(n)];
 const getGT20 = (n) => b[n[0]] + " " + a[n[1]];
 /**
  * @category Text Basic
+ * @name textFromNumber
  * @description Transform numbers to words in lakh / crore system.
- * @summary ```import { textBasicFromNumber } from "@corefunc/corefunc/text/basic/from-number";```
+ * @summary ```import { textFromNumber } from "@corefunc/corefunc/text/basic/from-number";```
  * @param {number} numberToWords - Number to be represented as words.
  * @returns {string} - Number in words.
  * @since 0.3.38
  * @see https://stackoverflow.com/questions/14766951/transform-numbers-to-words-in-lakh-crore-system
  */
-function textBasicFromNumber(numberToWords) {
+function textFromNumber(numberToWords) {
     const num = Number(numberToWords);
     if (Number.isNaN(num)) {
         return String(numberToWords);
@@ -62,4 +63,4 @@ function textBasicFromNumber(numberToWords) {
     str += n5 != 0 ? getLT20(n5) || getGT20(n5) : "";
     return str.trim();
 }
-exports.textBasicFromNumber = textBasicFromNumber;
+exports.textFromNumber = textFromNumber;
