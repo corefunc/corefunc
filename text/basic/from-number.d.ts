@@ -1,6 +1,6 @@
 /**
  * @category Text Basic
- * @description Instantiates new plain `Error`.
+ * @description Transform numbers to words in lakh / crore system.
  * @summary ```import { textBasicFromNumber } from "@corefunc/corefunc/text/basic/from-number";```
  * @param {number} numberToWords - Number to be represented as words.
  * @returns {string} - Number in words.
