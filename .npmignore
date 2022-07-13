@@ -37,10 +37,11 @@
 # include the .d.ts files
 # !*.d.ts
 
-/check/is-object-like.ts
 /array/get/unique.ts
+/check/is-object-like.ts
 /date/format.ts
 /json/basic/jsonify.ts
 /object/basic/de-cycle.ts
+/text/basic/from-number.ts
 /text/case/snake.ts
 /var/new/error.ts
