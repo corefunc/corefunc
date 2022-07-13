@@ -11,5 +11,6 @@ var __exportStar = (this && this.__exportStar) || function(m, exports) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 __exportStar(require("./json.cjs"), exports);
+__exportStar(require("./message.cjs"), exports);
 __exportStar(require("./object.cjs"), exports);
 __exportStar(require("./string.cjs"), exports);

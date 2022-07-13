@@ -91,6 +91,7 @@
 								<li class="tsd-kind-function tsd-parent-kind-module tsd-is-external"><a href="convert.html#convertErrorToJson" class="tsd-kind-icon">convert<wbr>Error<wbr>ToJson</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-module tsd-is-external"><a href="convert.html#convertErrorToObject" class="tsd-kind-icon">convert<wbr>Error<wbr>ToObject</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-module tsd-is-external"><a href="convert.html#convertErrorToString" class="tsd-kind-icon">convert<wbr>Error<wbr>ToString</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module tsd-is-external"><a href="convert.html#errorToMessage" class="tsd-kind-icon">error<wbr>ToMessage</a></li>
 							</ul>
 							<h3>Convert Map Functions</h3>
 							<ul class="tsd-index-list">
@@ -267,6 +268,52 @@
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module tsd-is-external">
+					<a name="errorToMessage" class="tsd-anchor"></a>
+					<h3>error<wbr>ToMessage</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module tsd-is-external">
+						<li class="tsd-signature tsd-kind-icon">error<wbr>ToMessage<span class="tsd-signature-symbol">(</span>error<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, defaultMessage<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in convert/error/message.ts:13</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography tsd-comment-tags">
+								<dl class="tsd-comment-tags"><dt>name</dt>
+									<dd><p>errorToMessage</p>
+									</dd><dt>description</dt>
+									<dd><p>Transform value to string, extracts message from error, forces error message to be string.</p>
+									</dd><dt>summary</dt>
+									<dd><p><code>import { errorToMessage } from &quot;@corefunc/corefunc/convert/error/message&quot;;</code></p>
+									</dd><dt>since</dt>
+									<dd><p>0.3.43</p>
+								</dd></dl>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>error: <span class="tsd-signature-type">any</span></h5>
+									<div class="tsd-comment tsd-typography tsd-comment-text">
+										<p>Any value, but intended to be error.</p>
+									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> defaultMessage: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography tsd-comment-text">
+										<p>Default message.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
+							<ul>
+								<li>Error message as string.</li>
+							</ul>
 						</li>
 					</ul>
 				</section>
@@ -676,6 +723,9 @@
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-module tsd-is-external root">
 						<a href="convert.html#convertToSingleLine" class="tsd-kind-icon">convert<wbr>ToSingle<wbr>Line</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module tsd-is-external root">
+						<a href="convert.html#errorToMessage" class="tsd-kind-icon">error<wbr>ToMessage</a>
 					</li>
 				</ul>
 			</nav>
