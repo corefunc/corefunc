@@ -11,6 +11,7 @@ var __exportStar = (this && this.__exportStar) || function(m, exports) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 __exportStar(require("./arguments"), exports);
+__exportStar(require("./error"), exports);
 __exportStar(require("./function"), exports);
 __exportStar(require("./function-async"), exports);
 __exportStar(require("./generator-funcion"), exports);

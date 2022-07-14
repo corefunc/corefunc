@@ -1,4 +1,5 @@
 export * from "./arguments.mjs";
+export * from "./error.mjs";
 export * from "./function.mjs";
 export * from "./function-async.mjs";
 export * from "./generator-funcion.mjs";
