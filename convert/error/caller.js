@@ -11,13 +11,6 @@ exports.errorToCaller = void 0;
  * @since 0.3.44
  */
 function errorToCaller(error) {
-    let [lead, tail] = error.stack.split("\n");
-    tail = tail.trim();
-    if (tail.startsWith('at Object.<anonymous>')) {
-        return lead.trim().split(' ')[1];
-    }
-    else {
-        return tail.split(' ')[1];
-    }
+    return error.stack.split('\n')[2].trim().split(' ')[1];
 }
 exports.errorToCaller = errorToCaller;
