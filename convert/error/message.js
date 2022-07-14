@@ -19,11 +19,11 @@ function errorToMessage(error, defaultMessage) {
         case "[object String]":
             return String(error);
         case "[object Object]":
-            if ((0, string_1.isString)(error?.message)) {
+            if (string_1.isString(error?.message)) {
                 return String(error.message);
             }
     }
-    if ((0, string_1.isString)(defaultMessage)) {
+    if (string_1.isString(defaultMessage)) {
         return String(defaultMessage);
     }
     return String(error);
