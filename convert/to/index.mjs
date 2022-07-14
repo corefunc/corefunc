@@ -1,3 +1,4 @@
+export * from "./error.mjs";
 export * from "./flag.mjs";
 export * from "./hash.mjs";
 export * from "./json-data.mjs";

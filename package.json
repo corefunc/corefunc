@@ -69,5 +69,5 @@
     "test:coverage": "jest --collect-coverage",
     "test:mjs": "node --experimental-modules ./tests/index.mjs"
   },
-  "version": "0.3.46"
+  "version": "0.3.47"
 }

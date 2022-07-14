@@ -7,9 +7,7 @@
  * @returns {boolean}
  * @since 0.3.46
  */
-export function isError(
-  error: any,
-): error is Error | EvalError | RangeError | ReferenceError | SyntaxError | TypeError | URIError {
+export function isError(error) {
   if (error instanceof Error) {
     return true;
   }
