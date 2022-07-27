@@ -8,9 +8,10 @@ exports.objectKeysSort = void 0;
  * @summary ```import { objectKeysSort } from "@corefunc/corefunc/object/keys/sort";```
  * @param {Object} objectLike Object to be sorted.
  * @param {Boolean=} [isDeep=true] Deep sort.
+ * @param {Number=} [depth=8] Depth.
  * @returns {Object} New object with sorted keys.
  */
-function objectKeysSort(objectLike, isDeep = true) {
+function objectKeysSort(objectLike, isDeep = true, depth = 8) {
     if (!objectLike || typeof objectLike !== "object" || Array.isArray(objectLike)) {
         return objectLike;
     }
@@ -18,14 +19,26 @@ function objectKeysSort(objectLike, isDeep = true) {
     if (!keys.length) {
         return objectLike;
     }
-    return keys.reduce((sorted, key) => {
-        if (isDeep && objectLike[key] && typeof objectLike[key] === "object" && !Array.isArray(objectLike[key])) {
-            sorted[key] = objectKeysSort(objectLike[key], isDeep);
-        }
-        else {
+    if (isDeep) {
+        return keys.reduce((sorted, key) => {
+            if (objectLike[key] && typeof objectLike[key] === "object" && !Array.isArray(objectLike[key])) {
+                if (depth > 0) {
+                    sorted[key] = objectKeysSort(objectLike[key], true, depth - 1);
+                }
+                else {
+                    sorted[key] = objectLike[key];
+                }
+            }
+            else {
+                sorted[key] = objectLike[key];
+            }
+            return sorted;
+        }, Object.create(Object.getPrototypeOf(objectLike)));
+    }
+    else {
+        return keys.reduce((sorted, key) => {
             sorted[key] = objectLike[key];
-        }
-        return sorted;
-    }, Object.create(Object.getPrototypeOf(objectLike)));
+        }, Object.create(Object.getPrototypeOf(objectLike)));
+    }
 }
 exports.objectKeysSort = objectKeysSort;
