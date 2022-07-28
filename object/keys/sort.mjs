@@ -16,22 +16,26 @@ export function objectKeysSort(objectLike, isDeep = true, depth = 8) {
   if (!keys.length) {
     return objectLike;
   }
-  if (isDeep) {
-    return keys.reduce((sorted, key) => {
-      if (objectLike[key] && typeof objectLike[key] === "object" && !Array.isArray(objectLike[key])) {
-        if (depth > 0) {
-          sorted[key] = objectKeysSort(objectLike[key], true, depth - 1);
+  try {
+    if (isDeep) {
+      return keys.reduce((sorted, key) => {
+        if (objectLike[key] && typeof objectLike[key] === "object" && !Array.isArray(objectLike[key])) {
+          if (depth > 0) {
+            sorted[key] = objectKeysSort(objectLike[key], true, depth - 1);
+          } else {
+            sorted[key] = objectLike[key];
+          }
         } else {
           sorted[key] = objectLike[key];
         }
-      } else {
+        return sorted;
+      }, Object.create(Object.getPrototypeOf(objectLike)));
+    } else {
+      return keys.reduce((sorted, key) => {
         sorted[key] = objectLike[key];
-      }
-      return sorted;
-    }, Object.create(Object.getPrototypeOf(objectLike)));
-  } else {
-    return keys.reduce((sorted, key) => {
-      sorted[key] = objectLike[key];
-    }, Object.create(Object.getPrototypeOf(objectLike)));
+      }, Object.create(Object.getPrototypeOf(objectLike)));
+    }
+  } catch {
+    return objectLike;
   }
 }

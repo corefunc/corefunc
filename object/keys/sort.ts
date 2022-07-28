@@ -20,22 +20,26 @@ export function objectKeysSort<ObjectType extends Record<number | string | symbo
   if (!keys.length) {
     return objectLike;
   }
-  if (isDeep) {
-    return keys.reduce((sorted, key) => {
-      if (objectLike[key] && typeof objectLike[key] === "object" && !Array.isArray(objectLike[key])) {
-        if (depth > 0) {
-          sorted[key] = objectKeysSort(objectLike[key] as ObjectType, true, depth - 1);
+  try {
+    if (isDeep) {
+      return keys.reduce((sorted, key) => {
+        if (objectLike[key] && typeof objectLike[key] === "object" && !Array.isArray(objectLike[key])) {
+          if (depth > 0) {
+            sorted[key] = objectKeysSort(objectLike[key] as ObjectType, true, depth - 1);
+          } else {
+            sorted[key] = objectLike[key];
+          }
         } else {
           sorted[key] = objectLike[key];
         }
-      } else {
+        return sorted;
+      }, Object.create(Object.getPrototypeOf(objectLike))) as ObjectType;
+    } else {
+      return keys.reduce((sorted, key) => {
         sorted[key] = objectLike[key];
-      }
-      return sorted;
-    }, Object.create(Object.getPrototypeOf(objectLike))) as ObjectType;
-  } else {
-    return keys.reduce((sorted, key) => {
-      sorted[key] = objectLike[key];
-    }, Object.create(Object.getPrototypeOf(objectLike))) as ObjectType;
+      }, Object.create(Object.getPrototypeOf(objectLike))) as ObjectType;
+    }
+  } catch {
+    return objectLike;
   }
 }
