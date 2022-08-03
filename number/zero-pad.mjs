@@ -4,8 +4,8 @@
  * @description Pad a number with leading zeros and zeroes after the decimal point.
  * @summary ```import { numberZeroPad } from "@corefunc/corefunc/number/zero-pad";```
  * @throws {RangeError|TypeError}
- * @param {Number|String} numberToPad
- * @param {Number} [leadingLength=0]
+ * @param {Number|String=} [numberToPad=0]
+ * @param {Number=} [leadingLength=0]
  * @param {Number=} decimalLength
  * @returns {String}
  * @since 0.1.39
@@ -26,7 +26,7 @@
  * numberZeroPad(1234567.89, 4, 3); // ➜ '1234567.890'
  * ```
  */
-export function numberZeroPad(numberToPad, leadingLength = 0, decimalLength) {
+export function numberZeroPad(numberToPad = 0, leadingLength = 0, decimalLength) {
   if (!Number.isInteger(leadingLength)) {
     throw new TypeError(`The leading length should be an integer. [${leadingLength}] given.`);
   }
