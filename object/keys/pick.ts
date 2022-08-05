@@ -7,15 +7,20 @@
  * @param {Array.<String>} [keys] Array of keys to pick.
  * @returns {Object} New plain object.
  */
-export function objectKeysPick<TypeOfObject extends Record<string, any>>(
-  instance: TypeOfObject,
-  keys: string[],
-): Partial<TypeOfObject> {
-  if (!keys.length || !Object.keys(instance).length) {
-    return {};
+export function objectKeysPick<
+  GenericObject extends Record<number | string | symbol, Value>,
+  Keys extends string[] | ReadonlyArray<string>,
+  PartialObject extends Record<keyof Keys, Value | undefined>,
+  Value,
+>(instance: GenericObject, keys: Keys): PartialObject {
+  if (!keys.length || !Object.keys(instance ?? {}).length) {
+    return Array.from(keys).reduce((accumulator: PartialObject, key: string) => {
+      accumulator[key] = undefined;
+      return accumulator;
+    }, {} as PartialObject);
   }
-  return keys.reduce((accumulator: Record<string, any>, key: string) => {
+  return Array.from(keys).reduce((accumulator: PartialObject, key: string) => {
     accumulator[key] = instance[key];
     return accumulator;
-  }, {}) as Partial<TypeOfObject>;
+  }, {} as PartialObject);
 }
