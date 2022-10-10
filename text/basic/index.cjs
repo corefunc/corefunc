@@ -11,4 +11,5 @@ var __exportStar = (this && this.__exportStar) || function(m, exports) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 __exportStar(require("./from-number.cjs"), exports);
+__exportStar(require("./mask.cjs"), exports);
 __exportStar(require("./slugify.cjs"), exports);
