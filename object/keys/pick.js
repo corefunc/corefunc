@@ -12,19 +12,20 @@ exports.objectKeysPick = void 0;
  * @returns {Object} New plain object.
  */
 function objectKeysPick(instance, keys, defineMissing) {
-  if (!keys.length || !Object.keys(instance ?? {}).length) {
-    if (defineMissing) {
-      return Array.from(keys).reduce((accumulator, key) => {
-        accumulator[key] = undefined;
-        return accumulator;
-      }, {});
-    } else {
-      return {};
+    if (!keys.length || !Object.keys(instance ?? {}).length) {
+        if (defineMissing) {
+            return Array.from(keys).reduce((accumulator, key) => {
+                accumulator[key] = undefined;
+                return accumulator;
+            }, {});
+        }
+        else {
+            return {};
+        }
     }
-  }
-  return Array.from(keys).reduce((accumulator, key) => {
-    accumulator[key] = instance[key];
-    return accumulator;
-  }, {});
+    return Array.from(keys).reduce((accumulator, key) => {
+        accumulator[key] = instance[key];
+        return accumulator;
+    }, {});
 }
 exports.objectKeysPick = objectKeysPick;
