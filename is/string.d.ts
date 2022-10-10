@@ -6,6 +6,4 @@
  * @param {*} [value] Any value.
  * @returns {Boolean}
  */
-export function isString(value: any): value is string {
-  return typeof value === "string" || value instanceof String;
-}
+export declare function isString(value: any): value is string;

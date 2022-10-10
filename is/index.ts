@@ -13,5 +13,6 @@ export * from "./promise";
 export * from "./regexp";
 export * from "./set";
 export * from "./string";
+export * from "./stringable";
 export * from "./weak-map";
 export * from "./weak-set";

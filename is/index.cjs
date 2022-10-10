@@ -25,5 +25,6 @@ __exportStar(require("./promise.cjs"), exports);
 __exportStar(require("./regexp.cjs"), exports);
 __exportStar(require("./set.cjs"), exports);
 __exportStar(require("./string.cjs"), exports);
+__exportStar(require("./stringable.cjs"), exports);
 __exportStar(require("./weak-map.cjs"), exports);
 __exportStar(require("./weak-set.cjs"), exports);

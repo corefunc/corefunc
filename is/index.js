@@ -25,5 +25,6 @@ __exportStar(require("./promise"), exports);
 __exportStar(require("./regexp"), exports);
 __exportStar(require("./set"), exports);
 __exportStar(require("./string"), exports);
+__exportStar(require("./stringable"), exports);
 __exportStar(require("./weak-map"), exports);
 __exportStar(require("./weak-set"), exports);

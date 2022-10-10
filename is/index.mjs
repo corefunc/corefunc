@@ -13,5 +13,6 @@ export * from "./promise.mjs";
 export * from "./regexp.mjs";
 export * from "./set.mjs";
 export * from "./string.mjs";
+export * from "./stringable.mjs";
 export * from "./weak-map.mjs";
 export * from "./weak-set.mjs";
