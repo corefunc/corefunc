@@ -6,12 +6,13 @@ exports.convertToFlag = void 0;
  * @description
  * Turns: undefined, null, 0, "0", "", "false", "FALSE", "n", "no", "of" to boolean false.
  * Turns: 1, 1n, "1", "true", "TRUE", "on", "y", "yes" to boolean true.
+ * @summary ```import { convertToFlag } from "@corefunc/corefunc/convert/to/flag";```
  * @param {*} value
  * @param {*=false} onEmpty
- * @param {*=false} onUnParsable
+ * @param {*=onEmpty} onUnParsable
  * @returns {boolean}
  */
-function convertToFlag(value, onEmpty = false, onUnParsable = false) {
+function convertToFlag(value, onEmpty = false, onUnParsable = onEmpty) {
   if (value === undefined || value === null) {
     return onEmpty;
   }
@@ -22,6 +23,7 @@ function convertToFlag(value, onEmpty = false, onUnParsable = false) {
   if (affirmative.length === 0) {
     return onEmpty;
   }
+  console.dir(affirmative);
   switch (affirmative) {
     case "1":
     case "on":
