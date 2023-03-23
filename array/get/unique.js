@@ -13,7 +13,18 @@ function arrayGetUnique(array, sort = true) {
     if (array.length < 2) {
         return [...array];
     }
-    let unique = [...new Set(array)];
+    let unique = [];
+    {
+        const set = new Set();
+        for (const item of array) {
+            if (set.has(item)) {
+                continue;
+            }
+            set.add(item);
+            unique.push(item);
+        }
+        set.clear();
+    }
     if (unique.includes(0)) {
         const zeroes = array.filter((value) => value === 0);
         if (zeroes.length > 1 && zeroes.some((value) => 1 / value === Number.NEGATIVE_INFINITY)) {
@@ -37,8 +48,29 @@ function arrayGetUnique(array, sort = true) {
         }
     }
     if (sort) {
-        return unique.sort();
+        return unique.sort((alpha, beta) => String(alpha).localeCompare(String(beta)));
     }
     return unique;
 }
 exports.arrayGetUnique = arrayGetUnique;
+const removeDuplicateStrings = (array) => {
+    const uniqueValues = [];
+    const seenMap = {};
+    for (const item of array) {
+        if (seenMap[item])
+            continue;
+        seenMap[item] = true;
+        uniqueValues.push(item);
+    }
+    return uniqueValues;
+};
+class Litera {
+}
+class Alpha extends Litera {
+}
+class Beta extends Litera {
+}
+const a = new Alpha();
+const b = new Beta();
+console.dir(arrayGetUnique([0, -0, a, b], true));
+console.dir(removeDuplicateStrings([0, -0, a, b]));

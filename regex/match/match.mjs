@@ -7,7 +7,7 @@ import { castToString } from "../../cast/to/string.mjs";
  * @name regexMatch
  * @description Executes a search for a match between a regular expression and a specified string.
  * @param {String} string
- * @param {Array|RegExp|String} pattern
+ * @param {RegExp | [string, string] | string} pattern
  * @param {*=false} onFail
  * @return {Boolean}
  */
@@ -16,7 +16,7 @@ export function regexMatch(string, pattern, onFail) {
     return onFail;
   }
   const regexp = castToRegExp(pattern);
-  if (regexp === false) {
+  if (!regexp) {
     return onFail;
   }
   return regexp.test(castToString(string));
