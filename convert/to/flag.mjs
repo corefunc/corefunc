@@ -20,9 +20,6 @@ export function convertToFlag(value, onEmpty = false, onUnParsable = onEmpty) {
   if (affirmative.length === 0) {
     return onEmpty;
   }
-
-  console.dir(affirmative);
-
   switch (affirmative) {
     case "1":
     case "on":
