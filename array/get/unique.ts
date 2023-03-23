@@ -49,26 +49,3 @@ export function arrayGetUnique(array: any[], sort = true): any[] {
   }
   return unique;
 }
-
-const removeDuplicateStrings = (array) => {
-  const uniqueValues = [];
-  const seenMap = {};
-
-  for (const item of array) {
-    if (seenMap[item]) continue;
-    seenMap[item] = true;
-    uniqueValues.push(item);
-  }
-
-  return uniqueValues;
-};
-
-class Litera {}
-class Alpha extends Litera {}
-class Beta extends Litera {}
-
-const a = new Alpha();
-const b = new Beta();
-
-console.dir(arrayGetUnique([0, -0, a, b], true));
-console.dir(removeDuplicateStrings([0, -0, a, b]));

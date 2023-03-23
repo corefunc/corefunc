@@ -10,7 +10,18 @@ export function arrayGetUnique(array, sort = true) {
   if (array.length < 2) {
     return [...array];
   }
-  let unique = [...new Set(array)];
+  let unique = [];
+  {
+    const set = new Set();
+    for (const item of array) {
+      if (set.has(item)) {
+        continue;
+      }
+      set.add(item);
+      unique.push(item);
+    }
+    set.clear();
+  }
   if (unique.includes(0)) {
     const zeroes = array.filter((value) => value === 0);
     if (zeroes.length > 1 && zeroes.some((value) => 1 / value === Number.NEGATIVE_INFINITY)) {
@@ -34,7 +45,7 @@ export function arrayGetUnique(array, sort = true) {
     }
   }
   if (sort) {
-    return unique.sort();
+    return unique.sort((alpha, beta) => String(alpha).localeCompare(String(beta)));
   }
   return unique;
 }
