@@ -67,7 +67,7 @@ function newError(message, cause, name) {
       error = new Error(messageUse);
     }
   }
-  if (string_1.isString(name) && name && (name ?? "").length > 0) {
+  if (string_1.isString(name) && name.length > 0) {
     error.name = name;
   }
   return error;

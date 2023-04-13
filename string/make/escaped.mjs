@@ -1,4 +1,4 @@
-import { castToString } from "../cast/to/string.mjs";
+import { castToString } from "../../cast/to/string.mjs";
 
 export function stringMakeEscaped(text) {
   return castToString(text)
@@ -9,12 +9,12 @@ export function stringMakeEscaped(text) {
     .replace(/n\s/g, "")
     .replace(/\n/g, "")
     .replace(/n}/g, "}")
-    .replace(/\\n/g, "\\n")
-    .replace(/\\'/g, "\\'")
-    .replace(/\\"/g, '\\"')
-    .replace(/\\&/g, "\\&")
-    .replace(/\\r/g, "\\r")
-    .replace(/\\t/g, "\\t")
-    .replace(/\\b/g, "\\b")
-    .replace(/\\f/g, "\\f");
+    .replace(/\\"/g, '\\"');
+  // .replace(/\\n/g, "\\n")
+  // .replace(/\\'/g, "\\'")
+  // .replace(/\\&/g, "\\&")
+  // .replace(/\\r/g, "\\r")
+  // .replace(/\\t/g, "\\t")
+  // .replace(/\\b/g, "\\b")
+  // .replace(/\\f/g, "\\f")
 }

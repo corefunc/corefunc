@@ -56,7 +56,7 @@ export function newError(message: any, cause?: any, name?: string): Error {
       error = new Error(messageUse);
     }
   }
-  if (isString(name) && name && (name ?? "").length > 0) {
+  if (isString(name) && name.length > 0) {
     error.name = name;
   }
   return error;

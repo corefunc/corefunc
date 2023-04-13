@@ -33,6 +33,7 @@ export function objectKeysSort(objectLike, isDeep = true, depth = 8) {
     } else {
       return keys.reduce((sorted, key) => {
         sorted[key] = objectLike[key];
+        return sorted;
       }, Object.create(Object.getPrototypeOf(objectLike)));
     }
   } catch {

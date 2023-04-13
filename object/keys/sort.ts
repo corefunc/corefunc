@@ -37,6 +37,7 @@ export function objectKeysSort<ObjectType extends Record<number | string | symbo
     } else {
       return keys.reduce((sorted, key) => {
         sorted[key] = objectLike[key];
+        return sorted;
       }, Object.create(Object.getPrototypeOf(objectLike))) as ObjectType;
     }
   } catch {

@@ -66,6 +66,7 @@ function* CreateRangeIterator(from, to, step, type) {
  * @category Generate
  * @name generateRange
  * @description Number.range & BigInt.range
+ * @summary ```import { generateRange } from "@corefunc/corefunc/generate/range";```
  * @param {number|bigint|=0} from - Number from
  * @param {number|bigint|=undefined} to - Number to
  * @param {number|bigint|undefined|=1} step - Number step

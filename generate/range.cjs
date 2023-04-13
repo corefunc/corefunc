@@ -42,7 +42,9 @@ function* CreateRangeIterator(from, to, step, type) {
   const abs = (x) => (x >= (typeof x === "bigint" ? BigInt(0) : 0) ? x : -x);
   if (ifIncrease) {
     step = abs(step);
-  } else step = -abs(step);
+  }
+  else
+    step = -abs(step);
   let currentCount = one;
   let lastValue = from;
   if (ifIncrease) {
@@ -52,7 +54,8 @@ function* CreateRangeIterator(from, to, step, type) {
       currentCount++;
       yield yielding;
     }
-  } else {
+  }
+  else {
     while (!(to >= lastValue)) {
       let yielding = lastValue;
       lastValue = from + step * currentCount;
@@ -68,6 +71,7 @@ function* CreateRangeIterator(from, to, step, type) {
  * @category Generate
  * @name generateRange
  * @description Number.range & BigInt.range
+ * @summary ```import { generateRange } from "@corefunc/corefunc/generate/range";```
  * @param {number|bigint|=0} from - Number from
  * @param {number|bigint|=undefined} to - Number to
  * @param {number|bigint|undefined|=1} step - Number step
