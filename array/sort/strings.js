@@ -1,7 +1,15 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.arraySortStrings = void 0;
+/**
+ * @name arraySortStrings
+ * @category Array
+ * @description Sort an array of strings. Creates a new array.
+ * @summary ```import { arraySortStrings } from '@corefunc/corefunc/array/sort/strings';```
+ * @param {string[]} array Array of strings.
+ * @returns {string[]} Sorted array of strings.
+ */
 function arraySortStrings(array) {
-    return array.sort((alpha, beta) => alpha.localeCompare(beta));
+    return Array.from(array).sort((alpha, beta) => alpha.localeCompare(beta));
 }
 exports.arraySortStrings = arraySortStrings;

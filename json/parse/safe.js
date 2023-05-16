@@ -12,6 +12,7 @@ const unsafe_1 = require("./unsafe");
  * @param {Boolean=} fix
  * @param {Function=} reviver
  * @return {*}
+ * @url {https://www.youtube.com/watch?v=TTjYjSEGHek}
  */
 function jsonParseSafe(text, defaultResult, unsafe = true, fix = true, reviver) {
     if (!text) {

@@ -22,3 +22,4 @@ __exportStar(require("./merge.cjs"), exports);
 __exportStar(require("./pull.cjs"), exports);
 __exportStar(require("./shuffle.cjs"), exports);
 __exportStar(require("./size.cjs"), exports);
+__exportStar(require("./with.cjs"), exports);

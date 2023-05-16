@@ -11,6 +11,10 @@ import { objectGetType } from "./type";
  * @param {string=} [valueType]
  * @returns {*} Value in path or default value
  * @since 0.0.47
+ * @deprecated Use optional chaining instead
+ * ```javascript
+ * const value = object?.property?.subProperty ?? "N/A";
+ * ```
  */
 export function objectGetProperty<
   ObjectType extends Record<string, any>,

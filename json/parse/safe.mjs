@@ -10,6 +10,7 @@ import { jsonParseUnsafe } from "./unsafe.mjs";
  * @param {Boolean=} fix
  * @param {Function=} reviver
  * @return {*}
+ * @url {https://www.youtube.com/watch?v=TTjYjSEGHek}
  */
 export function jsonParseSafe(text, defaultResult = undefined, unsafe = true, fix = true, reviver = null) {
   if (!text) {

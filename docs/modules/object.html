@@ -448,7 +448,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in object/get/property.ts:15</li>
+									<li>Defined in object/get/property.ts:19</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography tsd-comment-tags">
@@ -460,6 +460,10 @@
 									<dd><p><code>import { objectGetProperty } from &#39;@corefunc/corefunc/object/get/property&#39;;</code></p>
 									</dd><dt>since</dt>
 									<dd><p>0.0.47</p>
+									</dd><dt>deprecated</dt>
+									<dd><p>Use optional chaining instead</p>
+										<pre><code class="language-javascript"><span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">value</span><span style="color: #000000"> = </span><span style="color: #001080">object</span><span style="color: #000000">?.</span><span style="color: #001080">property</span><span style="color: #000000">?.</span><span style="color: #001080">subProperty</span><span style="color: #000000"> ?? </span><span style="color: #A31515">&quot;N/A&quot;</span><span style="color: #000000">;</span>
+</code></pre>
 								</dd></dl>
 							</div>
 							<h4 class="tsd-type-parameters-title">Type parameters</h4>
@@ -836,13 +840,13 @@
 					<a name="objectSetDefaults" class="tsd-anchor"></a>
 					<h3>object<wbr>Set<wbr>Defaults</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">object<wbr>Set<wbr>Defaults&lt;Dest, Src&gt;<span class="tsd-signature-symbol">(</span>destination<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Dest</span>, source<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Src</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Dest</span><span class="tsd-signature-symbol"> &amp; </span><span class="tsd-signature-type">Src</span></li>
+						<li class="tsd-signature tsd-kind-icon">object<wbr>Set<wbr>Defaults&lt;Dest, Src&gt;<span class="tsd-signature-symbol">(</span>destination<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Dest</span>, source<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Src</span>, nullIsUndefined<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Dest</span><span class="tsd-signature-symbol"> &amp; </span><span class="tsd-signature-type">Src</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in object/set/defaults.ts:14</li>
+									<li>Defined in object/set/defaults.ts:15</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography tsd-comment-tags">
@@ -874,6 +878,9 @@
 								</li>
 								<li>
 									<h5>source: <span class="tsd-signature-type">Src</span></h5>
+								</li>
+								<li>
+									<h5>nullIsUndefined: <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> = false</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Dest</span>

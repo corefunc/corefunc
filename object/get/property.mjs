@@ -1,4 +1,4 @@
-import { objectGetType } from "./type.mjs";
+import { objectGetType } from "./type";
 
 /**
  * @category Object Get
@@ -11,22 +11,21 @@ import { objectGetType } from "./type.mjs";
  * @param {string=} [valueType]
  * @returns {*} Value in path or default value
  * @since 0.0.47
+ * @deprecated Use optional chaining instead
+ * ```javascript
+ * const value = object?.property?.subProperty ?? "N/A";
+ * ```
  */
-export function objectGetProperty(
-  object,
-  keyOrPath,
-  defaultValue,
-  valueType
-) {
+export function objectGetProperty(object, keyOrPath, defaultValue, valueType) {
   if (!object || typeof object !== "object") {
-    return defaultValue
+    return defaultValue;
   }
   if (typeof keyOrPath === "string" && keyOrPath in object) {
     if (object[keyOrPath] === undefined) {
-      return defaultValue
+      return defaultValue;
     }
     if (valueType && objectGetType(object[keyOrPath]) !== valueType) {
-      return defaultValue
+      return defaultValue;
     }
     return object[keyOrPath];
   }

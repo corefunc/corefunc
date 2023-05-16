@@ -7,13 +7,14 @@ const is_object_like_1 = require("../../check/is-object-like");
  * @name objectSetDefaults
  * @param {Object} destination
  * @param {Object} source
+ * @param {boolean=} [nullIsUndefined=false]
  * @returns {Object}
  * @example objectSetDefaults({}, { val: true }) // { val: true }
  * @example objectSetDefaults({ val: undefined }, { val: true }) // { val: true }
  * @example objectSetDefaults({ val: null }, { val: true }) // { val: null }
  * @example objectSetDefaults({ val: "text" }, { val: true }) // { val: "text" }
  */
-function objectSetDefaults(destination, source) {
+function objectSetDefaults(destination, source, nullIsUndefined = false) {
     if (!is_object_like_1.checkIsObjectLike(destination)) {
         return objectSetDefaults({}, source);
     }
@@ -27,6 +28,9 @@ function objectSetDefaults(destination, source) {
         }
         const val = destination[key];
         if (val === undefined) {
+            return;
+        }
+        if (nullIsUndefined && val === null) {
             return;
         }
         if (is_object_like_1.checkIsObjectLike(val) && is_object_like_1.checkIsObjectLike(obj[key])) {

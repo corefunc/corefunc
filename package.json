@@ -5,8 +5,7 @@
   },
   "contributors": [
     {
-      "email": "r37r0m0d3l@protonmail.com",
-      "name": "Anton Trofimenko"
+      "name": "Anton Trofymenko"
     }
   ],
   "description": "Collection of utilities",
@@ -69,5 +68,5 @@
     "test:coverage": "jest --collect-coverage",
     "test:mjs": "node --experimental-modules ./tests/index.mjs"
   },
-  "version": "0.3.61"
+  "version": "0.3.62"
 }

@@ -22,3 +22,4 @@ __exportStar(require("./merge"), exports);
 __exportStar(require("./pull"), exports);
 __exportStar(require("./shuffle"), exports);
 __exportStar(require("./size"), exports);
+__exportStar(require("./with"), exports);

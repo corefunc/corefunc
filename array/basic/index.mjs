@@ -10,3 +10,4 @@ export * from "./merge.mjs";
 export * from "./pull.mjs";
 export * from "./shuffle.mjs";
 export * from "./size.mjs";
+export * from "./with.mjs";

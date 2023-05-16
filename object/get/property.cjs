@@ -13,6 +13,10 @@ const type_1 = require("./type.cjs");
  * @param {string=} [valueType]
  * @returns {*} Value in path or default value
  * @since 0.0.47
+ * @deprecated Use optional chaining instead
+ * ```javascript
+ * const value = object?.property?.subProperty ?? "N/A";
+ * ```
  */
 function objectGetProperty(object, keyOrPath, defaultValue, valueType) {
   if (!object || typeof object !== "object") {

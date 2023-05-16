@@ -1,23 +1,24 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.objectSetDefaults = void 0;
-const isObjectLike_1 = require("../../check/is-object-like.cjs");
+const is_object_like_1 = require("../../check/is-object-like.cjs");
 /**
  * @category Object Set
  * @name objectSetDefaults
  * @param {Object} destination
  * @param {Object} source
+ * @param {boolean=} [nullIsUndefined=false]
  * @returns {Object}
  * @example objectSetDefaults({}, { val: true }) // { val: true }
  * @example objectSetDefaults({ val: undefined }, { val: true }) // { val: true }
  * @example objectSetDefaults({ val: null }, { val: true }) // { val: null }
  * @example objectSetDefaults({ val: "text" }, { val: true }) // { val: "text" }
  */
-function objectSetDefaults(destination, source) {
-  if (!isObjectLike_1.checkIsObjectLike(destination)) {
+function objectSetDefaults(destination, source, nullIsUndefined = false) {
+  if (!is_object_like_1.checkIsObjectLike(destination)) {
     return objectSetDefaults({}, source);
   }
-  if (!isObjectLike_1.checkIsObjectLike(source)) {
+  if (!is_object_like_1.checkIsObjectLike(source)) {
     return objectSetDefaults(destination, {});
   }
   const obj = Object.assign(Object.create(Object.getPrototypeOf(destination)), source);
@@ -29,9 +30,13 @@ function objectSetDefaults(destination, source) {
     if (val === undefined) {
       return;
     }
-    if (isObjectLike_1.checkIsObjectLike(val) && isObjectLike_1.checkIsObjectLike(obj[key])) {
+    if (nullIsUndefined && val === null) {
+      return;
+    }
+    if (is_object_like_1.checkIsObjectLike(val) && is_object_like_1.checkIsObjectLike(obj[key])) {
       obj[key] = objectSetDefaults(val, obj[key]);
-    } else {
+    }
+    else {
       obj[key] = val;
     }
   });

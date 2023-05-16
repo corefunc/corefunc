@@ -5,13 +5,18 @@ import { checkIsObjectLike } from "../../check/is-object-like";
  * @name objectSetDefaults
  * @param {Object} destination
  * @param {Object} source
+ * @param {boolean=} [nullIsUndefined=false]
  * @returns {Object}
  * @example objectSetDefaults({}, { val: true }) // { val: true }
  * @example objectSetDefaults({ val: undefined }, { val: true }) // { val: true }
  * @example objectSetDefaults({ val: null }, { val: true }) // { val: null }
  * @example objectSetDefaults({ val: "text" }, { val: true }) // { val: "text" }
  */
-export function objectSetDefaults<Dest extends object, Src extends object>(destination: Dest, source: Src): Dest & Src {
+export function objectSetDefaults<Dest extends object, Src extends object>(
+  destination: Dest,
+  source: Src,
+  nullIsUndefined = false,
+): Dest & Src {
   if (!checkIsObjectLike(destination)) {
     return objectSetDefaults({} as Dest, source);
   }
@@ -25,6 +30,9 @@ export function objectSetDefaults<Dest extends object, Src extends object>(desti
     }
     const val = destination[key];
     if (val === undefined) {
+      return;
+    }
+    if (nullIsUndefined && val === null) {
       return;
     }
     if (checkIsObjectLike(val) && checkIsObjectLike(obj[key])) {

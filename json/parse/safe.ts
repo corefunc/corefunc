@@ -10,6 +10,7 @@ import { jsonParseUnsafe } from "./unsafe";
  * @param {Boolean=} fix
  * @param {Function=} reviver
  * @return {*}
+ * @url {https://www.youtube.com/watch?v=TTjYjSEGHek}
  */
 export function jsonParseSafe(
   text: string,
