@@ -2,6 +2,14 @@
 
 ---
 
+## [0.3.63] - 2023-05-17
+
+### Added
+
+- `objectSetTarget` -  Set source object to target object. Override properties in target object. Do not create new object.
+
+---
+
 ## [0.3.62] - 2023-05-16
 
 ### Added
