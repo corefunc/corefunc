@@ -7,7 +7,7 @@ const is_object_like_1 = require("../../check/is-object-like");
  * @name objectSetDefaults
  * @param {Object} destination
  * @param {Object} source
- * @param {{ arrayMergeToUnique?: boolean; nullAsUndefined?: boolean; objectDeepMerge?: boolean }} [options]
+ * @param {{ arrayMergeToUnique?: boolean; nullAsUndefined?: boolean; objectDeepMerge?: boolean, undefinedPreservation?: boolean }} [options]
  * @returns {Object}
  * @example objectSetDefaults({}, { val: true }) // { val: true }
  * @example objectSetDefaults({ val: undefined }, { val: true }) // { val: true }
@@ -18,6 +18,7 @@ function objectSetDefaults(destination, source, options = {
     arrayMergeToUnique: false,
     nullAsUndefined: false,
     objectDeepMerge: false,
+    undefinedPreservation: false,
 }) {
     if (!is_object_like_1.checkIsObjectLike(destination)) {
         return objectSetDefaults({}, source);
@@ -30,13 +31,22 @@ function objectSetDefaults(destination, source, options = {
         .filter((key) => !["__proto__", "constructor"].includes(key))
         .sort((alpha, beta) => alpha.localeCompare(beta))
         .forEach(function (key) {
+        if (!(key in source)) {
+            obj[key] = destination[key];
+            return;
+        }
         const valDest = destination[key];
         const valSrc = source[key];
-        obj[key] = undefined;
         if (valDest === undefined && valSrc === undefined) {
+            if (options.undefinedPreservation) {
+                obj[key] = undefined;
+            }
             return;
         }
         if (options.nullAsUndefined && valDest === null && valSrc === null) {
+            if (options.undefinedPreservation) {
+                obj[key] = null;
+            }
             return;
         }
         if (is_object_like_1.checkIsObjectLike(valSrc) && is_object_like_1.checkIsObjectLike(valDest)) {

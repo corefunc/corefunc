@@ -9,7 +9,7 @@ const defaults_1 = require("./defaults");
  * @summary ```import { objectSetTarget } from "@corefunc/corefunc/object/set/target";```
  * @param {Object} destination
  * @param {Object} source
- * @param {{ arrayMergeToUnique?: boolean; nullAsUndefined?: boolean; objectDeepMerge?: boolean; }=} [options]
+ * @param {{ arrayMergeToUnique?: boolean; nullAsUndefined?: boolean; objectDeepMerge?: boolean; undefinedPreservation?: boolean }} [options]
  * @returns {Object}
  * @since 0.3.63
  */
@@ -17,6 +17,7 @@ function objectSetTarget(destination, source, options = {
     arrayMergeToUnique: false,
     nullAsUndefined: true,
     objectDeepMerge: false,
+    undefinedPreservation: false,
 }) {
     Object.assign(destination, defaults_1.objectSetDefaults(destination, source, options));
     return destination;

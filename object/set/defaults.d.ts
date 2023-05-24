@@ -3,7 +3,7 @@
  * @name objectSetDefaults
  * @param {Object} destination
  * @param {Object} source
- * @param {{ arrayMergeToUnique?: boolean; nullAsUndefined?: boolean; objectDeepMerge?: boolean }} [options]
+ * @param {{ arrayMergeToUnique?: boolean; nullAsUndefined?: boolean; objectDeepMerge?: boolean, undefinedPreservation?: boolean }} [options]
  * @returns {Object}
  * @example objectSetDefaults({}, { val: true }) // { val: true }
  * @example objectSetDefaults({ val: undefined }, { val: true }) // { val: true }
@@ -14,4 +14,5 @@ export declare function objectSetDefaults<Dest extends object, Src extends objec
     arrayMergeToUnique?: boolean;
     nullAsUndefined?: boolean;
     objectDeepMerge?: boolean;
+    undefinedPreservation?: boolean;
 }): Dest & Src;

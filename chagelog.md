@@ -2,11 +2,19 @@
 
 ---
 
+## [0.3.65] - 2023-05-24
+
+### Changed
+
+- `objectSetDefaults` - Add option `undefinedPreservation` to preserve keys with `undefined` values.
+
+---
+
 ## [0.3.64] - 2023-05-24
 
 ### Changed
 
-- `objectBasicClone` -  Update `transfer` value to match typings of NodeJS ver. 17 and above.
+- `objectBasicClone` - Update `transfer` value to match typings of NodeJS ver. 17 and above.
 
 ### Fixed
 

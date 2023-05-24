@@ -7,7 +7,7 @@ import { objectSetDefaults } from "./defaults";
  * @summary ```import { objectSetTarget } from "@corefunc/corefunc/object/set/target";```
  * @param {Object} destination
  * @param {Object} source
- * @param {{ arrayMergeToUnique?: boolean; nullAsUndefined?: boolean; objectDeepMerge?: boolean; }=} [options]
+ * @param {{ arrayMergeToUnique?: boolean; nullAsUndefined?: boolean; objectDeepMerge?: boolean; undefinedPreservation?: boolean }} [options]
  * @returns {Object}
  * @since 0.3.63
  */
@@ -18,10 +18,12 @@ export function objectSetTarget<Target extends object, Source extends object>(
     arrayMergeToUnique?: boolean;
     nullAsUndefined?: boolean;
     objectDeepMerge?: boolean;
+    undefinedPreservation?: boolean;
   } = {
     arrayMergeToUnique: false,
     nullAsUndefined: true,
     objectDeepMerge: false,
+    undefinedPreservation: false,
   },
 ): Target & Source {
   Object.assign(destination, objectSetDefaults(destination, source, options));
