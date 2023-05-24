@@ -9,12 +9,16 @@ const defaults_1 = require("./defaults.cjs");
  * @summary ```import { objectSetTarget } from "@corefunc/corefunc/object/set/target";```
  * @param {Object} destination
  * @param {Object} source
- * @param {boolean=} [nullIsUndefined=true] Null is considered as undefined.
+ * @param {{ arrayMergeToUnique?: boolean; nullAsUndefined?: boolean; objectDeepMerge?: boolean; }=} [options]
  * @returns {Object}
  * @since 0.3.63
  */
-function objectSetTarget(destination, source, nullIsUndefined = true) {
-    Object.assign(destination, defaults_1.objectSetDefaults(destination, source, nullIsUndefined));
-    return destination;
+function objectSetTarget(destination, source, options = {
+  arrayMergeToUnique: false,
+  nullAsUndefined: true,
+  objectDeepMerge: false,
+}) {
+  Object.assign(destination, defaults_1.objectSetDefaults(destination, source, options));
+  return destination;
 }
 exports.objectSetTarget = objectSetTarget;

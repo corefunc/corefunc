@@ -5,8 +5,12 @@
  * @summary ```import { objectSetTarget } from "@corefunc/corefunc/object/set/target";```
  * @param {Object} destination
  * @param {Object} source
- * @param {boolean=} [nullIsUndefined=true] Null is considered as undefined.
+ * @param {{ arrayMergeToUnique?: boolean; nullAsUndefined?: boolean; objectDeepMerge?: boolean; }=} [options]
  * @returns {Object}
  * @since 0.3.63
  */
-export declare function objectSetTarget<Target extends object, Source extends object>(destination: Target, source: Source, nullIsUndefined?: boolean): Target & Source;
+export declare function objectSetTarget<Target extends object, Source extends object>(destination: Target, source: Source, options?: {
+    arrayMergeToUnique?: boolean;
+    nullAsUndefined?: boolean;
+    objectDeepMerge?: boolean;
+}): Target & Source;

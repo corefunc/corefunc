@@ -2,6 +2,18 @@
 
 ---
 
+## [0.3.64] - 2023-05-24
+
+### Changed
+
+- `objectBasicClone` -  Update `transfer` value to match typings of NodeJS ver. 17 and above.
+
+### Fixed
+
+- `objectSetDefaults` - Target object always have all properties from source object regardless of `null` or `undefined` values.
+
+---
+
 ## [0.3.63] - 2023-05-17
 
 ### Added

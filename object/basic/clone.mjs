@@ -11,7 +11,7 @@ import { checkIsPrimitive } from "../../check/is-primitive.mjs";
  * @summary ```import { objectBasicClone } from "@corefunc/corefunc/object/basic/clone";```
  * @template {ValueType}
  * @param {unknown} value The object to be cloned. This can be any structured-clonable type.
- * @param {TransferableObjectType[]=} transfer An array of transferable objects in value that will be moved rather than cloned to the returned object.
+ * @param {ReadonlyArray<TransferableObjectType>=} [transfer] An list of transferable objects in value that will be moved rather than cloned to the returned object.
  * @returns {ValueType} The returned value is a deep copy of the original value.
  * @since 0.3.20
  */

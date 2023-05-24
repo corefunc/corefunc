@@ -1,13 +1,4 @@
-import { checkIsPrimitive } from "../../check/is-primitive";
-
-export type TransferableObjectType =
-  | ArrayBuffer
-  | ImageBitmap
-  | MessagePort
-  | OffscreenCanvas
-  | ReadableStream
-  | WritableStream;
-
+export declare type TransferableObjectType = ArrayBuffer | ImageBitmap | MessagePort | OffscreenCanvas | ReadableStream | WritableStream;
 /**
  * @category Object Basic
  * @name objectBasicClone
@@ -23,25 +14,4 @@ export type TransferableObjectType =
  * @returns {ValueType} The returned value is a deep copy of the original value.
  * @since 0.3.20
  */
-export function objectBasicClone<ValueType>(
-  value: ValueType,
-  transfer?: ReadonlyArray<import("worker_threads").TransferListItem>,
-): ValueType {
-  if (checkIsPrimitive(value)) {
-    return value;
-  }
-  if ("structuredClone" in globalThis) {
-    try {
-      let cloned;
-      if (transfer) {
-        cloned = globalThis.structuredClone(value, { transfer });
-      } else {
-        cloned = globalThis.structuredClone(value);
-      }
-      return cloned;
-    } catch (_dataCloneError: any) {
-      //
-    }
-  }
-  return value;
-}
+export declare function objectBasicClone<ValueType>(value: ValueType, transfer?: ReadonlyArray<import("worker_threads").TransferListItem>): ValueType;
