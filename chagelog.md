@@ -2,6 +2,14 @@
 
 ---
 
+## [0.3.66] - 2023-06-06
+
+### Fixed
+
+- `objectSetDefaults` - Fix deep merge on native objects: Date, Error, Map, RegExp, Set, WeakMap, WeakSet.
+
+---
+
 ## [0.3.65] - 2023-05-24
 
 ### Changed

@@ -57,10 +57,22 @@ export function objectSetDefaults<Dest extends object, Src extends object>(
         return;
       }
       if (checkIsObjectLike(valSrc) && checkIsObjectLike(valDest)) {
-        if (options.objectDeepMerge) {
-          obj[key] = objectSetDefaults(valDest, valSrc, options);
-        } else {
+        if (
+          valSrc instanceof Date ||
+          valSrc instanceof Error ||
+          valSrc instanceof Map ||
+          valSrc instanceof RegExp ||
+          valSrc instanceof Set ||
+          valSrc instanceof WeakMap ||
+          valSrc instanceof WeakSet
+        ) {
           obj[key] = valSrc;
+        } else {
+          if (options.objectDeepMerge) {
+            obj[key] = objectSetDefaults(valDest, valSrc, options);
+          } else {
+            obj[key] = valSrc;
+          }
         }
       } else if (Array.isArray(valDest) && Array.isArray(valSrc)) {
         if (options.arrayMergeToUnique) {

@@ -50,11 +50,22 @@ function objectSetDefaults(destination, source, options = {
             return;
         }
         if (is_object_like_1.checkIsObjectLike(valSrc) && is_object_like_1.checkIsObjectLike(valDest)) {
-            if (options.objectDeepMerge) {
-                obj[key] = objectSetDefaults(valDest, valSrc, options);
+            if (valSrc instanceof Date ||
+                valSrc instanceof Error ||
+                valSrc instanceof Map ||
+                valSrc instanceof RegExp ||
+                valSrc instanceof Set ||
+                valSrc instanceof WeakMap ||
+                valSrc instanceof WeakSet) {
+                obj[key] = valSrc;
             }
             else {
-                obj[key] = valSrc;
+                if (options.objectDeepMerge) {
+                    obj[key] = objectSetDefaults(valDest, valSrc, options);
+                }
+                else {
+                    obj[key] = valSrc;
+                }
             }
         }
         else if (Array.isArray(valDest) && Array.isArray(valSrc)) {
