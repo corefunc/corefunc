@@ -61,5 +61,5 @@
     "package:upgrade": "npx npm-check --update",
     "test": "node ./tests/index.test.mjs && node ./tests/index.test.cjs"
   },
-  "version": "0.3.66"
+  "version": "0.3.67"
 }

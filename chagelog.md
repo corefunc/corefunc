@@ -2,6 +2,14 @@
 
 ---
 
+## [0.3.67] - 2023-07-18
+
+### Added
+
+- `generateInteger` - Generate random integer.
+
+---
+
 ## [0.3.66] - 2023-06-06
 
 ### Fixed
