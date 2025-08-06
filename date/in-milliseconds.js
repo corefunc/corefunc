@@ -1,6 +1,3 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.dateInMilliseconds = void 0;
 /**
  * @category Date
  * @name dateInMilliseconds
@@ -9,22 +6,21 @@ exports.dateInMilliseconds = void 0;
  * @returns {number|NaN} Number of milliseconds since the Unix Epoch or NaN if fails.
  * @since 0.3.19
  */
-function dateInMilliseconds(date) {
-    if (date instanceof Date) {
-        return date.getTime();
+export function dateInMilliseconds(date) {
+  if (date instanceof Date) {
+    return date.getTime();
+  }
+  if (typeof date === "string") {
+    if (date.length === 0) {
+      return NaN;
     }
-    if (typeof date === "string") {
-        if (date.length === 0) {
-            return NaN;
-        }
-        return new Date(date).getTime() || new Date(Number.parseInt(date)).getTime();
-    }
-    if (typeof date === "number") {
-        if (Number.isFinite(date) && Number.isInteger(date) && date > -1) {
-            return date;
-        }
-        return NaN;
+    return new Date(date).getTime() || new Date(Number.parseInt(date)).getTime();
+  }
+  if (typeof date === "number") {
+    if (Number.isFinite(date) && Number.isInteger(date) && date > -1) {
+      return date;
     }
     return NaN;
+  }
+  return NaN;
 }
-exports.dateInMilliseconds = dateInMilliseconds;

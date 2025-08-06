@@ -1,6 +1,3 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.textEmojiJoin = void 0;
 /**
  * @category Text Emoji
  * @name textEmojiJoin
@@ -13,7 +10,6 @@ exports.textEmojiJoin = void 0;
  * @example ```"👨" + "💻" ➜  "👨💻"```
  * @example ```textEmojiJoin("👨", "💻") ➜  "👨‍💻"```
  */
-function textEmojiJoin(emoji, ...emojis) {
-    return [emoji, ...emojis].join("\u200D");
+export function textEmojiJoin(emoji, ...emojis) {
+  return [emoji, ...emojis].join("\u200D");
 }
-exports.textEmojiJoin = textEmojiJoin;

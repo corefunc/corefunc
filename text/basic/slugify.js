@@ -1,6 +1,3 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.textBasicSlugify = void 0;
 /**
  * @category Text Basic
  * @name textBasicSlugify
@@ -10,10 +7,9 @@ exports.textBasicSlugify = void 0;
  * @since 0.3.27
  * @example ```textBasicSlugify("This is blog post link!"); ➜  "this-is-blog-post-link"```
  */
-function textBasicSlugify(text) {
-    return text
-        .toLowerCase()
-        .replace(/\s+/g, "-")
-        .replace(/[^\w-]+/g, "");
+export function textBasicSlugify(text: string): string {
+  return text
+    .toLowerCase()
+    .replace(/\s+/g, "-")
+    .replace(/[^\w-]+/g, "");
 }
-exports.textBasicSlugify = textBasicSlugify;

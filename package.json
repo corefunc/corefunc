@@ -53,13 +53,13 @@
   },
   "scripts": {
     "doc": "typedoc --options typedoc.json",
-    "lint": "eslint ./**/*.{mj,t}s",
-    "lint:dir": "eslint ./**/*.{cj,mj,t}s",
+    "lint": "eslint ./**/*.{j,t}s",
+    "lint:dir": "eslint ./**/*.{j,t}s",
     "lint:md": "remark .",
     "package:audit": "npm audit --json | npx npm-audit-html",
     "package:check": "npx depcheck",
-    "package:upgrade": "npx npm-check --update",
-    "test": "node ./tests/index.test.mjs && node ./tests/index.test.cjs"
+    "package:upgrade": "npx npm-check --update"
   },
-  "version": "0.3.67"
+  "type": "module",
+  "version": "1.0.0-rc.0"
 }

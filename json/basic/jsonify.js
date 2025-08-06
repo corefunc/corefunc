@@ -1,8 +1,6 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.jsonJsonify = void 0;
-const safe_1 = require("../parse/safe");
-const safe_2 = require("../stringify/safe");
+import { jsonParseSafe } from "../parse/safe.js";
+import { jsonStringifySafe } from "../stringify/safe.js";
+
 /**
  * @category JSON Basic
  * @name jsonJsonify
@@ -16,7 +14,6 @@ const safe_2 = require("../stringify/safe");
  * @since 0.0.87
  * @example ```jsonJsonify({ 1: "one" }) ➜ {"1":"one"}```
  */
-function jsonJsonify(value, defaultResult, unsafe = true, fix = true) {
-    return safe_1.jsonParseSafe(safe_2.jsonStringifySafe(value), defaultResult, unsafe, fix);
+export function jsonJsonify(value, defaultResult, unsafe = true, fix = true) {
+  return jsonParseSafe(jsonStringifySafe(value), defaultResult, unsafe, fix);
 }
-exports.jsonJsonify = jsonJsonify;

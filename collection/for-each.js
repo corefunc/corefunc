@@ -1,6 +1,3 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.collectionForEach = void 0;
 /**
  * @param {Arguments|Array|Map|Object|Set} iterable
  * @param {Function} iteratee
@@ -22,25 +19,20 @@ exports.collectionForEach = void 0;
  *   console.groupEnd();
  * });
  */
-function collectionForEach(iterable, iteratee) {
-    if (!iterable) {
-        return iterable;
-    }
-    if (Array.isArray(iterable)) {
-        iterable.forEach(iteratee);
-    }
-    else if (iterable instanceof Set) {
-        iterable.forEach((value) => iteratee(value, undefined, iterable));
-    }
-    else if (iterable instanceof Map) {
-        iterable.forEach(iteratee);
-    }
-    else if (typeof iterable === "object") {
-        Object.keys(iterable).forEach((key) => iteratee(iterable[key], key, iterable));
-    }
-    else {
-        Array.from(iterable).forEach(iteratee);
-    }
+export function collectionForEach(iterable, iteratee) {
+  if (!iterable) {
     return iterable;
+  }
+  if (Array.isArray(iterable)) {
+    iterable.forEach(iteratee);
+  } else if (iterable instanceof Set) {
+    iterable.forEach((value) => iteratee(value, undefined, iterable));
+  } else if (iterable instanceof Map) {
+    iterable.forEach(iteratee);
+  } else if (typeof iterable === "object") {
+    Object.keys(iterable).forEach((key) => iteratee(iterable[key], key, iterable));
+  } else {
+    Array.from(iterable).forEach(iteratee);
+  }
+  return iterable;
 }
-exports.collectionForEach = collectionForEach;

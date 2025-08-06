@@ -1,7 +1,5 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.castToIntOrNan = void 0;
-const int_1 = require("./int");
+import { castToInt } from "./int";
+
 /**
  * @category Cast To
  * @name castToIntOrNan
@@ -12,14 +10,13 @@ const int_1 = require("./int");
  * @example castToIntOrNan("16.5"); // => 16
  * @since 0.3.21
  */
-function castToIntOrNan(value) {
-    if (value === null || value === undefined) {
-        return Number.NaN;
-    }
-    const integer = int_1.castToInt(value, Number.NaN, false);
-    if (Number.isNaN(integer)) {
-        return Number.NaN;
-    }
-    return integer;
+export function castToIntOrNan(value) {
+  if (value === null || value === undefined) {
+    return Number.NaN;
+  }
+  const integer = castToInt(value, Number.NaN, false);
+  if (Number.isNaN(integer)) {
+    return Number.NaN;
+  }
+  return integer;
 }
-exports.castToIntOrNan = castToIntOrNan;

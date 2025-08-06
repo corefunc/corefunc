@@ -1,7 +1,5 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.castToFloatOrNull = void 0;
-const float_1 = require("./float");
+import { castToFloat } from "./float.js";
+
 /**
  * @category Cast To
  * @name castToFloatOrNull
@@ -12,10 +10,9 @@ const float_1 = require("./float");
  * @returns {Null|Number}
  * @example castToFloatOrNull("16.5"); // => 16.5
  */
-function castToFloatOrNull(variable, toFixed) {
-    if (variable === null || variable === undefined) {
-        return null;
-    }
-    return float_1.castToFloat(variable, null, toFixed);
+export function castToFloatOrNull(variable, toFixed) {
+  if (variable === null || variable === undefined) {
+    return null;
+  }
+  return castToFloat(variable, null, toFixed);
 }
-exports.castToFloatOrNull = castToFloatOrNull;

@@ -1,6 +1,3 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.generateFromArray = void 0;
 /**
  * @category Generate
  * @name generateFromArray
@@ -10,13 +7,12 @@ exports.generateFromArray = void 0;
  * @returns {*} Value from array.
  * @since 0.1.58
  */
-function generateFromArray(arrayFrom) {
-    if (!arrayFrom.length) {
-        return undefined;
-    }
-    if (arrayFrom.length === 1) {
-        return arrayFrom[0];
-    }
-    return arrayFrom[Math.floor(Math.random() * arrayFrom.length)];
+export function generateFromArray(arrayFrom) {
+  if (!arrayFrom.length) {
+    return undefined;
+  }
+  if (arrayFrom.length === 1) {
+    return arrayFrom[0];
+  }
+  return arrayFrom[Math.floor(Math.random() * arrayFrom.length)];
 }
-exports.generateFromArray = generateFromArray;

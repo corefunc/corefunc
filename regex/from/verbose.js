@@ -1,6 +1,3 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.regexFromVerbose = void 0;
 /**
  * @category RegEx From
  * @name regexFromVerbose
@@ -25,10 +22,9 @@ exports.regexFromVerbose = void 0;
  *   ([eE] [+-]? [0-9]+)? // Exponent part (optional)
  * `;
  */
-function regexFromVerbose(input) {
-    if (input.raw.length !== 1) {
-        throw Error("regexFromVerbose: interpolation is not supported");
-    }
-    return new RegExp(input.raw[0].replace(/(?<!\\)\s|[/][/].*|[/][*][\s\S]*[*][/]/g, ""));
+export function regexFromVerbose(input) {
+  if (input.raw.length !== 1) {
+    throw Error("regexFromVerbose: interpolation is not supported");
+  }
+  return new RegExp(input.raw[0].replace(/(?<!\\)\s|[/][/].*|[/][*][\s\S]*[*][/]/g, ""));
 }
-exports.regexFromVerbose = regexFromVerbose;

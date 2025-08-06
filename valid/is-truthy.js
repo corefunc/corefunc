@@ -1,7 +1,5 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.isTruthy = void 0;
-const is_falsy_1 = require("./is-falsy");
+import { isFalsy } from "./is-falsy.js";
+
 /**
  * @category Is Valid
  * @name isTruthy
@@ -12,7 +10,6 @@ const is_falsy_1 = require("./is-falsy");
  * @returns {boolean}
  * @since 0.2.3
  */
-function isTruthy(value) {
-    return !is_falsy_1.isFalsy(value);
+export function isTruthy(value) {
+  return !isFalsy(value);
 }
-exports.isTruthy = isTruthy;

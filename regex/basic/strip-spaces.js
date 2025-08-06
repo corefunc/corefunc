@@ -1,6 +1,3 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.regexBasicStripSpaces = void 0;
 /**
  * @category RegEx Basic
  * @name regexBasicStripSpaces
@@ -11,7 +8,6 @@ exports.regexBasicStripSpaces = void 0;
  * @since 0.3.27
  * @example ```regexBasicStripSpaces(" too\n   many     \tspaces "); ➜ "too many spaces"```
  */
-function regexBasicStripSpaces(text) {
-    return text.replace(/\s\s+/g, " ").trim();
+export function regexBasicStripSpaces(text) {
+  return text.replace(/\s\s+/g, " ").trim();
 }
-exports.regexBasicStripSpaces = regexBasicStripSpaces;

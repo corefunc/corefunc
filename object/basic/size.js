@@ -1,6 +1,3 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.objectBasicSize = void 0;
 /**
  * @category Object Basic
  * @name objectBasicSize
@@ -10,7 +7,6 @@ exports.objectBasicSize = void 0;
  * @returns {Number} Count of properties.
  * @since 0.1.55
  */
-function objectBasicSize(object) {
-    return Object.keys(object).length;
+export function objectBasicSize(object) {
+  return Object.keys(object).length;
 }
-exports.objectBasicSize = objectBasicSize;

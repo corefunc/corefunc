@@ -1,6 +1,3 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.dateIsLeapYear = void 0;
 /**
  * @category Date
  * @name dateIsLeapYear
@@ -17,7 +14,6 @@ exports.dateIsLeapYear = void 0;
  * dateIsLeapYear(2001); // ➜ false
  * ```
  */
-function dateIsLeapYear(year = new Date().getFullYear()) {
-    return new Date(year, 1, 29).getDate() === 29;
+export function dateIsLeapYear(year = new Date().getFullYear()) {
+  return new Date(year, 1, 29).getDate() === 29;
 }
-exports.dateIsLeapYear = dateIsLeapYear;

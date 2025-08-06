@@ -1,6 +1,3 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.objectIsEmpty = void 0;
 /**
  * @category Object Is
  * @name objectIsEmpty
@@ -16,10 +13,9 @@ exports.objectIsEmpty = void 0;
  * objectIsEmpty(object, true) ➜ false
  * @since 0.1.45
  */
-function objectIsEmpty(object, withNotEnumerable = false) {
-    if (!object || object.constructor !== Object) {
-        return true;
-    }
-    return !(withNotEnumerable ? Object.getOwnPropertyNames(object) : Object.keys(object)).length;
+export function objectIsEmpty(object, withNotEnumerable = false) {
+  if (!object || object.constructor !== Object) {
+    return true;
+  }
+  return !(withNotEnumerable ? Object.getOwnPropertyNames(object) : Object.keys(object)).length;
 }
-exports.objectIsEmpty = objectIsEmpty;

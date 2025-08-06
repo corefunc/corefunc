@@ -1,7 +1,5 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.match = void 0;
-const string_1 = require("../is/string");
+import { isString } from "../is/string.js";
+
 /**
  * @category Language
  * @name match
@@ -17,23 +15,22 @@ const string_1 = require("../is/string");
  * @example ```match(5, new Map([ ["5", "Oh no!"], [5, "OK"], ])); ➜ "OK"```
  * @example ```match(5, { 5: "Five" }, undefined, true); ➜ "Five"```
  */
-function match(value, subjectExpression, defaultValue = undefined, convertToString = false) {
-    if (!subjectExpression || typeof subjectExpression !== "object" || Array.isArray(subjectExpression)) {
-        return defaultValue;
-    }
-    if (subjectExpression instanceof Map || subjectExpression instanceof WeakMap) {
-        if (subjectExpression.has(value)) {
-            return subjectExpression.get(value);
-        }
-        return defaultValue;
-    }
-    if (!convertToString && !string_1.isString(value)) {
-        return defaultValue;
-    }
-    const key = String(value);
-    if (key in subjectExpression) {
-        return subjectExpression[key];
+export function match(value, subjectExpression, defaultValue, convertToString = false) {
+  if (!subjectExpression || typeof subjectExpression !== "object" || Array.isArray(subjectExpression)) {
+    return defaultValue;
+  }
+  if (subjectExpression instanceof Map || subjectExpression instanceof WeakMap) {
+    if (subjectExpression.has(value)) {
+      return subjectExpression.get(value);
     }
     return defaultValue;
+  }
+  if (!convertToString && !isString(value)) {
+    return defaultValue;
+  }
+  const key = String(value);
+  if (key in subjectExpression) {
+    return subjectExpression[key];
+  }
+  return defaultValue;
 }
-exports.match = match;

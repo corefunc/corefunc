@@ -1,6 +1,3 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.checkIsTypedArray = void 0;
 /**
  * @category Check Type
  * @name checkIsTypedArray
@@ -14,11 +11,10 @@ exports.checkIsTypedArray = void 0;
  * @example ```checkIsTypedArray(new Uint32Array(1)) ➜ true```
  * @since 0.1.68
  */
-function checkIsTypedArray(value) {
-    if (!value || Array.isArray(value)) {
-        return false;
-    }
-    const proto = Object.prototype.toString.call(value).toLowerCase();
-    return proto.length > 14 && proto.startsWith("[object ") && proto.endsWith("array]");
+export function checkIsTypedArray(value) {
+  if (!value || Array.isArray(value)) {
+    return false;
+  }
+  const proto = Object.prototype.toString.call(value).toLowerCase();
+  return proto.length > 14 && proto.startsWith("[object ") && proto.endsWith("array]");
 }
-exports.checkIsTypedArray = checkIsTypedArray;

@@ -1,6 +1,3 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.errorToCaller = void 0;
 /**
  * @category Convert Error
  * @name errorToCaller
@@ -10,7 +7,6 @@ exports.errorToCaller = void 0;
  * @returns {string} - Function, class and method name. Or 'Module._compile' and 'ModuleJob.run' if root.
  * @since 0.3.44
  */
-function errorToCaller(error) {
-    return error.stack.split('\n')[2].trim().split(' ')[1];
+export function errorToCaller(error) {
+  return error.stack.split('\n')[2].trim().split(' ')[1];
 }
-exports.errorToCaller = errorToCaller;

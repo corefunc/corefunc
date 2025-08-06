@@ -1,6 +1,3 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.arrayIsList = void 0;
 /**
  * @category Array Is
  * @name arrayIsList
@@ -40,24 +37,23 @@ exports.arrayIsList = void 0;
  * console.log(arrayIsList(list)); // false
  * ```
  */
-function arrayIsList(arraySupposedToBeList) {
-    if (!Array.isArray(arraySupposedToBeList)) {
-        return false;
-    }
-    if (arraySupposedToBeList.length === 0) {
-        return true;
-    }
-    const sparseKeys = Object.keys(arraySupposedToBeList);
-    if (arraySupposedToBeList.length !== sparseKeys.length) {
-        return false;
-    }
-    for (let index = 0; index <= arraySupposedToBeList.length; index++) {
-        if (Number.parseInt(sparseKeys[index]) !== index) {
-            sparseKeys.length = 0;
-            return false;
-        }
-        delete sparseKeys[index];
-    }
+export function arrayIsList(array) {
+  if (!Array.isArray(array)) {
+    return false;
+  }
+  if (array.length === 0) {
     return true;
+  }
+  const sparseKeys = Object.keys(array);
+  if (array.length !== sparseKeys.length) {
+    return false;
+  }
+  for (let index = 0; index <= array.length; index++) {
+    if (Number.parseInt(sparseKeys[index]) !== index) {
+      sparseKeys.length = 0;
+      return false;
+    }
+    delete sparseKeys[index];
+  }
+  return true;
 }
-exports.arrayIsList = arrayIsList;

@@ -1,7 +1,5 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.objectGetProperty = void 0;
-const type_1 = require("./type");
+import { objectGetType } from "./type";
+
 /**
  * @category Object Get
  * @name objectGetProperty
@@ -18,83 +16,75 @@ const type_1 = require("./type");
  * const value = object?.property?.subProperty ?? "N/A";
  * ```
  */
-function objectGetProperty(object, keyOrPath, defaultValue, valueType) {
-    if (!object || typeof object !== "object") {
+export function objectGetProperty(object, keyOrPath, defaultValue, valueType) {
+  if (!object || typeof object !== "object") {
+    return defaultValue;
+  }
+  if (typeof keyOrPath === "string" && keyOrPath in object) {
+    if (object[keyOrPath] === undefined) {
+      return defaultValue;
+    }
+    if (valueType && objectGetType(object[keyOrPath]) !== valueType) {
+      return defaultValue;
+    }
+    return object[keyOrPath];
+  }
+  let keySet;
+  if (typeof keyOrPath === "string") {
+    keySet = keyOrPath.split(".");
+  } else if (Array.isArray(keyOrPath)) {
+    keySet = keyOrPath;
+  } else {
+    return defaultValue;
+  }
+  const length = keySet.length;
+  if (length === 1) {
+    if (keySet[0] in object) {
+      if (object[keySet[0]] === undefined) {
         return defaultValue;
-    }
-    if (typeof keyOrPath === "string" && keyOrPath in object) {
-        if (object[keyOrPath] === undefined) {
-            return defaultValue;
-        }
-        if (valueType && type_1.objectGetType(object[keyOrPath]) !== valueType) {
-            return defaultValue;
-        }
-        return object[keyOrPath];
-    }
-    let keySet;
-    if (typeof keyOrPath === "string") {
-        keySet = keyOrPath.split(".");
-    }
-    else if (Array.isArray(keyOrPath)) {
-        keySet = keyOrPath;
-    }
-    else {
+      }
+      if (valueType && objectGetType(object[keySet[0]]) !== valueType) {
         return defaultValue;
+      }
+      return object[keySet[0]];
+    } else {
+      return defaultValue;
     }
-    const length = keySet.length;
-    if (length === 1) {
-        if (keySet[0] in object) {
-            if (object[keySet[0]] === undefined) {
-                return defaultValue;
-            }
-            if (valueType && type_1.objectGetType(object[keySet[0]]) !== valueType) {
-                return defaultValue;
-            }
-            return object[keySet[0]];
-        }
-        else {
-            return defaultValue;
-        }
-    }
-    let index = 0;
-    let newObject;
+  }
+  let index = 0;
+  let newObject;
+  try {
+    newObject = { ...object };
+  } catch {
     try {
-        newObject = { ...object };
+      newObject = JSON.parse(JSON.stringify(object));
+    } catch {
+      return defaultValue;
     }
-    catch {
-        try {
-            newObject = JSON.parse(JSON.stringify(object));
+  }
+  let isSet = false;
+  while (newObject !== null && index < length) {
+    // @ts-ignore
+    isSet = keySet[index] in newObject;
+    newObject = newObject[keySet[index]];
+    index += 1;
+  }
+  if (index && index === length) {
+    if (newObject === undefined) {
+      if (isSet) {
+        if (valueType && objectGetType(newObject) !== valueType) {
+          return defaultValue;
         }
-        catch {
-            return defaultValue;
-        }
-    }
-    let isSet = false;
-    while (newObject !== null && index < length) {
-        // @ts-ignore
-        isSet = keySet[index] in newObject;
-        newObject = newObject[keySet[index]];
-        index += 1;
-    }
-    if (index && index === length) {
-        if (newObject === undefined) {
-            if (isSet) {
-                if (valueType && type_1.objectGetType(newObject) !== valueType) {
-                    return defaultValue;
-                }
-                return newObject;
-            }
-            return defaultValue;
-        }
-        else {
-            if (valueType && type_1.objectGetType(newObject) !== valueType) {
-                return defaultValue;
-            }
-            return newObject;
-        }
-    }
-    else {
+        return newObject;
+      }
+      return defaultValue;
+    } else {
+      if (valueType && objectGetType(newObject) !== valueType) {
         return defaultValue;
+      }
+      return newObject;
     }
+  } else {
+    return defaultValue;
+  }
 }
-exports.objectGetProperty = objectGetProperty;

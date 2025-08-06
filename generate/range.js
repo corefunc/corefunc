@@ -1,6 +1,3 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.generateRange = void 0;
 /**
  * @category Generate
  * @description Number.range & BigInt.range
@@ -11,62 +8,58 @@ exports.generateRange = void 0;
  * @returns {bigint|number|undefined}
  */
 function* CreateRangeIterator(from, to, step, type) {
-    if (typeof from !== type) {
-        throw new TypeError();
-    }
-    if (type !== "number" && type !== "bigint") {
-        throw new TypeError();
-    }
-    const zero = type === "number" ? 0 : BigInt(0);
-    const one = type === "number" ? 1 : BigInt(1);
-    if (typeof to === "undefined") {
-        to = from;
-        from = zero;
-    }
-    if (typeof step === "undefined") {
-        step = one;
-    }
-    if (typeof from !== type || typeof to !== type || typeof step !== type) {
-        throw new TypeError();
-    }
-    if ((typeof from === "number" && !Number.isFinite(from)) || (typeof step === "number" && !Number.isFinite(step))) {
-        throw new RangeError();
-    }
-    if (step === zero) {
-        throw new RangeError();
-    }
-    if (Number.isNaN(from) || Number.isNaN(to) || Number.isNaN(step)) {
-        return undefined;
-    }
-    const ifIncrease = to > from;
-    const abs = (x) => (x >= (typeof x === "bigint" ? BigInt(0) : 0) ? x : -x);
-    if (ifIncrease) {
-        step = abs(step);
-    }
-    else
-        step = -abs(step);
-    let currentCount = one;
-    let lastValue = from;
-    if (ifIncrease) {
-        while (!(lastValue >= to)) {
-            let yielding = lastValue;
-            lastValue = from + step * currentCount;
-            currentCount++;
-            yield yielding;
-        }
-    }
-    else {
-        while (!(to >= lastValue)) {
-            let yielding = lastValue;
-            lastValue = from + step * currentCount;
-            currentCount++;
-            yield yielding;
-        }
-    }
+  if (typeof from !== type) {
+    throw new TypeError();
+  }
+  if (type !== "number" && type !== "bigint") {
+    throw new TypeError();
+  }
+  const zero = type === "number" ? 0 : BigInt(0);
+  const one = type === "number" ? 1 : BigInt(1);
+  if (typeof to === "undefined") {
+    to = from;
+    from = zero;
+  }
+  if (typeof step === "undefined") {
+    step = one;
+  }
+  if (typeof from !== type || typeof to !== type || typeof step !== type) {
+    throw new TypeError();
+  }
+  if ((typeof from === "number" && !Number.isFinite(from)) || (typeof step === "number" && !Number.isFinite(step))) {
+    throw new RangeError();
+  }
+  if (step === zero) {
+    throw new RangeError();
+  }
+  if (Number.isNaN(from) || Number.isNaN(to) || Number.isNaN(step)) {
     return undefined;
+  }
+  const ifIncrease = to > from;
+  const abs = (x) => (x >= (typeof x === "bigint" ? BigInt(0) : 0) ? x : -x);
+  if (ifIncrease) {
+    step = abs(step);
+  } else step = -abs(step);
+  let currentCount = one;
+  let lastValue = from;
+  if (ifIncrease) {
+    while (!(lastValue >= to)) {
+      let yielding = lastValue;
+      lastValue = from + step * currentCount;
+      currentCount++;
+      yield yielding;
+    }
+  } else {
+    while (!(to >= lastValue)) {
+      let yielding = lastValue;
+      lastValue = from + step * currentCount;
+      currentCount++;
+      yield yielding;
+    }
+  }
+  return undefined;
 }
-// export function generateRange(from: number, to?: number, step?: number, type?: "number"): number[];
-// export function generateRange(from: BigInt, to?: BigInt, step?: BigInt, type?: "bigint"): BigInt[];
+
 /**
  * @category Generate
  * @name generateRange
@@ -78,11 +71,10 @@ function* CreateRangeIterator(from, to, step, type) {
  * @param {"number"|"bigint"|="number"} type - Number type
  * @returns {Array.<bigint|number>}
  */
-function generateRange(from = 0, to = undefined, step = 1, type = "number") {
-    const array = [];
-    for (const num of CreateRangeIterator(from, to, step, type)) {
-        array.push(num);
-    }
-    return array;
+export function generateRange(from = 0, to = undefined, step = 1, type = "number") {
+  const array = [];
+  for (const num of CreateRangeIterator(from, to, step, type)) {
+    array.push(num);
+  }
+  return array;
 }
-exports.generateRange = generateRange;

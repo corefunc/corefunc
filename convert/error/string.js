@@ -1,7 +1,5 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.convertErrorToString = void 0;
-const json_1 = require("./json");
+import { convertErrorToJson } from "./json.js";
+
 /**
  * @category Convert Error
  * @name convertErrorToString
@@ -12,8 +10,7 @@ const json_1 = require("./json");
  * @since 0.3.4
  * @example ```convertErrorToString({ "message": "Undefined Error" }); ➜ "Undefined Error"```
  */
-function convertErrorToString(error) {
-    const plain = json_1.convertErrorToJson(error);
-    return plain.message || String(plain);
+export function convertErrorToString(error) {
+  const plain = convertErrorToJson(error);
+  return plain.message || String(plain);
 }
-exports.convertErrorToString = convertErrorToString;

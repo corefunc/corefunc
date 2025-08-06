@@ -1,7 +1,5 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.arrayGetHead = void 0;
-const first_1 = require("../key/first");
+import { arrayKeyFirst } from "../key/first.js";
+
 /**
  * @name arrayGetHead
  * @param {Array} array
@@ -11,14 +9,13 @@ const first_1 = require("../key/first");
  * @template T Type of array
  * @template E Type of default value
  */
-function arrayGetHead(array, onFail) {
-    if (!Array.isArray(array)) {
-        return onFail;
-    }
-    const first = first_1.arrayKeyFirst(array);
-    if (first === null) {
-        return onFail;
-    }
-    return array[first];
+export function arrayGetHead(array, onFail) {
+  if (!Array.isArray(array)) {
+    return onFail;
+  }
+  const first = arrayKeyFirst(array);
+  if (first === null) {
+    return onFail;
+  }
+  return array[first];
 }
-exports.arrayGetHead = arrayGetHead;

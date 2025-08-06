@@ -1,6 +1,3 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.arrayBasicKeep = void 0;
 /**
  * @name arrayBasicKeep
  * @description Returns the elements of an array that meet the condition specified in a callback function.
@@ -9,7 +6,6 @@ exports.arrayBasicKeep = void 0;
  * @returns {Array} Returns the new filtered array.
  * @see https://twitter.com/rauschma/status/1253457185092308993
  */
-function arrayBasicKeep(array, iteratee) {
-    return array.filter(iteratee);
+export function arrayBasicKeep(array, iteratee) {
+  return array.filter(iteratee);
 }
-exports.arrayBasicKeep = arrayBasicKeep;

@@ -1,8 +1,6 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.checkIsTraversable = void 0;
-const is_iterable_1 = require("./is-iterable");
-const is_object_like_1 = require("./is-object-like");
+import { checkIsIterable } from "./is-iterable.js";
+import { checkIsObjectLike } from "./is-object-like.js";
+
 /**
  * @name checkIsTraversable
  * @description  Checks if `value` is traversable
@@ -10,7 +8,6 @@ const is_object_like_1 = require("./is-object-like");
  * @returns {boolean}
  * @since 0.0.1
  */
-function checkIsTraversable(value) {
-    return Boolean(Array.isArray(value) || is_object_like_1.checkIsObjectLike(value) || is_iterable_1.checkIsIterable(value));
+export function checkIsTraversable(value) {
+  return Boolean(Array.isArray(value) || checkIsObjectLike(value) || checkIsIterable(value));
 }
-exports.checkIsTraversable = checkIsTraversable;

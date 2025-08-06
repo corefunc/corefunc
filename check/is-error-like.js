@@ -1,6 +1,3 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.checkIsErrorLike = void 0;
 /**
  * @category Check Like
  * @name checkIsErrorLike
@@ -12,19 +9,20 @@ exports.checkIsErrorLike = void 0;
  * @example ```checkIsErrorLike(new Error("Smth is wrong"))  ➜ true```
  * @example ```checkIsErrorLike({ message: "Smth is wrong", name: "Error" })  ➜ true```
  */
-function checkIsErrorLike(errorLike) {
-    if (errorLike instanceof Error) {
-        return true;
-    }
-    if (!errorLike || typeof errorLike !== "object" || Array.isArray(errorLike)) {
-        return false;
-    }
-    if ("message" in errorLike &&
-        typeof errorLike.message === "string" &&
-        "name" in errorLike &&
-        typeof errorLike.name === "string") {
-        return true;
-    }
+export function checkIsErrorLike(errorLike) {
+  if (errorLike instanceof Error) {
+    return true;
+  }
+  if (!errorLike || typeof errorLike !== "object" || Array.isArray(errorLike)) {
     return false;
+  }
+  if (
+    "message" in errorLike &&
+    typeof (errorLike).message === "string" &&
+    "name" in errorLike &&
+    typeof (errorLike).name === "string"
+  ) {
+    return true;
+  }
+  return false;
 }
-exports.checkIsErrorLike = checkIsErrorLike;

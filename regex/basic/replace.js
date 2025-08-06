@@ -1,11 +1,9 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.regexReplace = void 0;
-const head_1 = require("../../array/get/head");
-const string_1 = require("../../cast/to/string");
-const is_traversable_1 = require("../../check/is-traversable");
-const values_1 = require("../../collection/values");
-const string_2 = require("../../is/string");
+import { arrayGetHead } from "../../array/get/head.js";
+import { castToString } from "../../cast/to/string.js";
+import { checkIsTraversable } from "../../check/is-traversable.js";
+import { collectionValues } from "../../collection/values.js";
+import { isString } from "../../is/string.js";
+
 /**
  * @category RegEx Basic
  * @name regexReplace
@@ -18,42 +16,37 @@ const string_2 = require("../../is/string");
  * @example regexReplace('target', ['search 1', 'search 2'], 'replace');
  * @example regexReplace('target', ['search 1', 'search 2'], ['replace 1', 'replace 2']);
  */
-function regexReplace(haystack, needle, replaceWith) {
-    let sTarget = string_1.castToString(haystack);
-    let sSearch;
-    let sReplace;
-    if (string_2.isString(needle)) {
-        sSearch = needle;
-    }
-    else if (is_traversable_1.checkIsTraversable(needle)) {
-        sSearch = values_1.collectionValues(needle);
-    }
-    else {
-        sSearch = string_1.castToString(needle);
-    }
-    if (string_2.isString(replaceWith)) {
-        sReplace = replaceWith;
-    }
-    else if (is_traversable_1.checkIsTraversable(replaceWith)) {
-        sReplace = values_1.collectionValues(replaceWith);
-    }
-    else {
-        sReplace = string_1.castToString(replaceWith);
-    }
-    if (string_2.isString(sSearch) && string_2.isString(sReplace)) {
-        return sTarget.split(sSearch).join(sReplace);
-    }
-    if (string_2.isString(sSearch)) {
-        return sTarget.split(sSearch).join(string_1.castToString(head_1.arrayGetHead(sReplace)));
-    }
-    if (string_2.isString(sReplace)) {
-        sSearch.forEach((srch) => {
-            sTarget = sTarget.split(string_1.castToString(srch)).join(sReplace);
-        });
-    }
-    sSearch.forEach((srch, index) => {
-        sTarget = sTarget.split(string_1.castToString(srch)).join(string_1.castToString(sReplace[index]));
+export function regexReplace(haystack, needle, replaceWith) {
+  let sTarget = castToString(haystack);
+  let sSearch;
+  let sReplace;
+  if (isString(needle)) {
+    sSearch = needle;
+  } else if (checkIsTraversable(needle)) {
+    sSearch = collectionValues(needle);
+  } else {
+    sSearch = castToString(needle);
+  }
+  if (isString(replaceWith)) {
+    sReplace = replaceWith;
+  } else if (checkIsTraversable(replaceWith)) {
+    sReplace = collectionValues(replaceWith);
+  } else {
+    sReplace = castToString(replaceWith);
+  }
+  if (isString(sSearch) && isString(sReplace)) {
+    return sTarget.split(sSearch).join(sReplace);
+  }
+  if (isString(sSearch)) {
+    return sTarget.split(sSearch).join(castToString(arrayGetHead(sReplace)));
+  }
+  if (isString(sReplace)) {
+    sSearch.forEach((srch) => {
+      sTarget = sTarget.split(castToString(srch)).join(sReplace);
     });
-    return sTarget;
+  }
+  sSearch.forEach((srch, index) => {
+    sTarget = sTarget.split(castToString(srch)).join(castToString(sReplace[index]));
+  });
+  return sTarget;
 }
-exports.regexReplace = regexReplace;

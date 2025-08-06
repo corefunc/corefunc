@@ -1,20 +1,16 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.jsonParseUnsafe = void 0;
-const string_1 = require("../../cast/to/string");
+import { castToString } from "../../cast/to/string.js";
+
 /**
  * @param {String} text
  * @param {*=} defaultResult
  * @return {*}
  */
-function jsonParseUnsafe(text, defaultResult) {
-    let result = defaultResult;
-    try {
-        result = eval(`(${string_1.castToString(text)}`);
-    }
-    catch (exceptionOnEval) {
-        //
-    }
-    return result;
+export function jsonParseUnsafe(text, defaultResult = undefined) {
+  let result = defaultResult;
+  try {
+    result = eval(`(${castToString(text)}`);
+  } catch (exceptionOnEval) {
+    //
+  }
+  return result;
 }
-exports.jsonParseUnsafe = jsonParseUnsafe;

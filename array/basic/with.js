@@ -1,6 +1,3 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.arrayBasicWith = void 0;
 /**
  * @name arrayBasicWith
  * @category Array Basic
@@ -24,23 +21,21 @@ exports.arrayBasicWith = void 0;
  * }
  * ```
  */
-function arrayBasicWith(array, index, value, suppressErrors = true) {
-    let length = array.length;
-    let relativeIndex = Number.isInteger(index) ? index : Number.parseInt(String(index), 10);
-    let actualIndex = relativeIndex < 0 ? length + relativeIndex : relativeIndex;
-    if (actualIndex >= length || actualIndex < 0) {
-        if (suppressErrors) {
-            return Array.from(array);
-        }
-        else {
-            throw RangeError(`Incorrect index: [${index}].`);
-        }
+export function arrayBasicWith(array, index, value, suppressErrors = true) {
+  let length = array.length;
+  let relativeIndex = Number.isInteger(index) ? index : Number.parseInt(String(index), 10);
+  let actualIndex = relativeIndex < 0 ? length + relativeIndex : relativeIndex;
+  if (actualIndex >= length || actualIndex < 0) {
+    if (suppressErrors) {
+      return Array.from(array);
+    } else {
+      throw RangeError(`Incorrect index: [${index}].`);
     }
-    let copy = new Array(length);
-    let key = 0;
-    for (; key < length; key++) {
-        copy[key] = key === actualIndex ? value : array[key];
-    }
-    return copy;
+  }
+  let copy = new Array(length);
+  let key = 0;
+  for (; key < length; key++) {
+    copy[key] = key === actualIndex ? value : array[key];
+  }
+  return copy;
 }
-exports.arrayBasicWith = arrayBasicWith;

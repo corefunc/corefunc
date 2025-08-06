@@ -1,6 +1,3 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.numberDecimalPortion = void 0;
 /**
  * @category Number
  * @name numberDecimalPortion
@@ -27,19 +24,19 @@ exports.numberDecimalPortion = void 0;
  * numberDecimalPortion(12345678.99); // ➜ '99'
  * ```
  */
-function numberDecimalPortion(numberGetFrom, removeTrailingZeros = true) {
-    const asString = String(numberGetFrom);
-    const asFloat = Number.parseFloat(asString);
-    if (Number.isNaN(asFloat) || !Number.isFinite(asFloat)) {
-        throw new TypeError(`The number to pad should be a valid number. [${asString}] given.`);
-    }
-    let decimalPortion = String(removeTrailingZeros ? asFloat : asString);
-    if (decimalPortion.includes(".")) {
-        decimalPortion = decimalPortion.split(".").pop();
-    }
-    else {
-        decimalPortion = "";
-    }
-    return decimalPortion;
+export function numberDecimalPortion(numberGetFrom, removeTrailingZeros = true) {
+  const asString = String(numberGetFrom);
+  const asFloat = Number.parseFloat(asString);
+  if (Number.isNaN(asFloat) || !Number.isFinite(asFloat)) {
+    throw new TypeError(
+      `The number to pad should be a valid number. [${asString}] given.`
+    );
+  }
+  let decimalPortion = String(removeTrailingZeros ? asFloat : asString);
+  if (decimalPortion.includes(".")) {
+    decimalPortion = decimalPortion.split(".").pop();
+  } else {
+    decimalPortion = "";
+  }
+  return decimalPortion;
 }
-exports.numberDecimalPortion = numberDecimalPortion;

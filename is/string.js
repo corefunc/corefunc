@@ -1,6 +1,3 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.isString = void 0;
 /**
  * @category Is
  * @name isString
@@ -9,7 +6,6 @@ exports.isString = void 0;
  * @param {*} [value] Any value.
  * @returns {Boolean}
  */
-function isString(value) {
-    return typeof value === "string" || value instanceof String;
+export function isString(value) {
+  return typeof value === "string" || value instanceof String;
 }
-exports.isString = isString;

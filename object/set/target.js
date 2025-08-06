@@ -1,7 +1,5 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.objectSetTarget = void 0;
-const defaults_1 = require("./defaults");
+import { objectSetDefaults } from "./defaults.js";
+
 /**
  * @category Object Set
  * @name objectSetTarget
@@ -13,13 +11,16 @@ const defaults_1 = require("./defaults");
  * @returns {Object}
  * @since 0.3.63
  */
-function objectSetTarget(destination, source, options = {
+export function objectSetTarget(
+  destination,
+  source,
+  options = {
     arrayMergeToUnique: false,
     nullAsUndefined: true,
     objectDeepMerge: false,
     undefinedPreservation: false,
-}) {
-    Object.assign(destination, defaults_1.objectSetDefaults(destination, source, options));
-    return destination;
+  },
+) {
+  Object.assign(destination, objectSetDefaults(destination, source, options));
+  return destination;
 }
-exports.objectSetTarget = objectSetTarget;

@@ -1,6 +1,3 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.dateDaysInMonth = void 0;
 /**
  * @category Date
  * @name dateDaysInMonth
@@ -12,7 +9,6 @@ exports.dateDaysInMonth = void 0;
  * @since 0.3.27
  * @example ```dateDaysInMonth(2, 1996); ➜  29```
  */
-function dateDaysInMonth(month, year) {
-    return new Date(year, month, 0).getDate();
+export function dateDaysInMonth(month, year) {
+  return new Date(year, month, 0).getDate();
 }
-exports.dateDaysInMonth = dateDaysInMonth;

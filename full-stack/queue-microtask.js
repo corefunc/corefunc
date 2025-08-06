@@ -1,6 +1,3 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.fullStackQueueMicrotask = void 0;
 /**
  * @name queueMicrotask
  * @description Queues a microtask to be executed at a safe time prior to control returning to the event
@@ -16,19 +13,21 @@ exports.fullStackQueueMicrotask = void 0;
  * })();
  */
 let queueMicrotask;
+
 if (typeof globalThis["queueMicrotask"] === "function") {
-    queueMicrotask = globalThis["queueMicrotask"];
+  queueMicrotask = globalThis["queueMicrotask"];
+} else if ("process" in globalThis && globalThis["process"]["versions"] && globalThis["process"]["versions"]["node"]) {
+  queueMicrotask = globalThis["process"]["nextTick"];
+} else {
+  queueMicrotask = function (callback) {
+    Promise.resolve()
+      .then(callback)
+      .catch((error) =>
+        setTimeout(() => {
+          throw error;
+        }, 1),
+      );
+  };
 }
-else if ("process" in globalThis && globalThis["process"]["versions"] && globalThis["process"]["versions"]["node"]) {
-    queueMicrotask = globalThis["process"]["nextTick"];
-}
-else {
-    queueMicrotask = function (callback) {
-        Promise.resolve()
-            .then(callback)
-            .catch((error) => setTimeout(() => {
-            throw error;
-        }, 1));
-    };
-}
-exports.fullStackQueueMicrotask = queueMicrotask;
+
+export const fullStackQueueMicrotask = queueMicrotask;

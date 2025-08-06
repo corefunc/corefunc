@@ -1,6 +1,3 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.arraySortStrings = void 0;
 /**
  * @name arraySortStrings
  * @category Array
@@ -9,7 +6,6 @@ exports.arraySortStrings = void 0;
  * @param {string[]} array Array of strings.
  * @returns {string[]} Sorted array of strings.
  */
-function arraySortStrings(array) {
-    return Array.from(array).sort((alpha, beta) => alpha.localeCompare(beta));
+export function arraySortStrings(array) {
+  return Array.from(array).sort((alpha, beta) => alpha.localeCompare(beta));
 }
-exports.arraySortStrings = arraySortStrings;

@@ -1,6 +1,3 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.checkIsPrimitive = void 0;
 /**
  * @category Check Type
  * @name checkIsPrimitive
@@ -9,7 +6,6 @@ exports.checkIsPrimitive = void 0;
  * @param {*} value
  * @returns {boolean} Returns `true` if the given `value` is a primitive type. Otherwise, returns `false`.
  */
-function checkIsPrimitive(value) {
-    return (typeof value !== "object" && typeof value !== "function") || value === null;
+export function checkIsPrimitive(value) {
+  return (typeof value !== "object" && typeof value !== "function") || value === null;
 }
-exports.checkIsPrimitive = checkIsPrimitive;

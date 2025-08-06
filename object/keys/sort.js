@@ -1,6 +1,3 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.objectKeysSort = void 0;
 /**
  * @category Object Keys
  * @name objectKeysSort
@@ -11,40 +8,35 @@ exports.objectKeysSort = void 0;
  * @param {Number=} [depth=8] Depth.
  * @returns {Object} New object with sorted keys.
  */
-function objectKeysSort(objectLike, isDeep = true, depth = 8) {
-    if (!objectLike || typeof objectLike !== "object" || Array.isArray(objectLike)) {
-        return objectLike;
-    }
-    const keys = Object.keys(objectLike).sort((alpha, beta) => alpha.localeCompare(beta));
-    if (!keys.length) {
-        return objectLike;
-    }
-    try {
-        if (isDeep) {
-            return keys.reduce((sorted, key) => {
-                if (objectLike[key] && typeof objectLike[key] === "object" && !Array.isArray(objectLike[key])) {
-                    if (depth > 0) {
-                        sorted[key] = objectKeysSort(objectLike[key], true, depth - 1);
-                    }
-                    else {
-                        sorted[key] = objectLike[key];
-                    }
-                }
-                else {
-                    sorted[key] = objectLike[key];
-                }
-                return sorted;
-            }, Object.create(Object.getPrototypeOf(objectLike)));
+export function objectKeysSort(objectLike, isDeep = true, depth = 8) {
+  if (!objectLike || typeof objectLike !== "object" || Array.isArray(objectLike)) {
+    return objectLike;
+  }
+  const keys = Object.keys(objectLike).sort((alpha, beta) => alpha.localeCompare(beta));
+  if (!keys.length) {
+    return objectLike;
+  }
+  try {
+    if (isDeep) {
+      return keys.reduce((sorted, key) => {
+        if (objectLike[key] && typeof objectLike[key] === "object" && !Array.isArray(objectLike[key])) {
+          if (depth > 0) {
+            sorted[key] = objectKeysSort(objectLike[key], true, depth - 1);
+          } else {
+            sorted[key] = objectLike[key];
+          }
+        } else {
+          sorted[key] = objectLike[key];
         }
-        else {
-            return keys.reduce((sorted, key) => {
-                sorted[key] = objectLike[key];
-                return sorted;
-            }, Object.create(Object.getPrototypeOf(objectLike)));
-        }
+        return sorted;
+      }, Object.create(Object.getPrototypeOf(objectLike)));
+    } else {
+      return keys.reduce((sorted, key) => {
+        sorted[key] = objectLike[key];
+        return sorted;
+      }, Object.create(Object.getPrototypeOf(objectLike)));
     }
-    catch {
-        return objectLike;
-    }
+  } catch {
+    return objectLike;
+  }
 }
-exports.objectKeysSort = objectKeysSort;

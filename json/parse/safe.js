@@ -1,8 +1,6 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.jsonParseSafe = void 0;
-const cleanup_1 = require("../basic/cleanup");
-const unsafe_1 = require("./unsafe");
+import { jsonCleanup } from "../basic/cleanup.js";
+import { jsonParseUnsafe } from "./unsafe.js";
+
 /**
  * @category JSON Parse
  * @name jsonParseSafe
@@ -14,29 +12,26 @@ const unsafe_1 = require("./unsafe");
  * @return {*}
  * @url {https://www.youtube.com/watch?v=TTjYjSEGHek}
  */
-function jsonParseSafe(text, defaultResult, unsafe = true, fix = true, reviver) {
-    if (!text) {
-        return defaultResult;
-    }
-    if (typeof text === "object") {
-        return text;
-    }
-    let result = defaultResult;
-    try {
-        result = JSON.parse(text, reviver);
-    }
-    catch (exceptionOnParse) {
-        if (unsafe) {
-            try {
-                result = unsafe_1.jsonParseUnsafe(text, new Error("JSON unsafe parse failed"));
-            }
-            catch (exceptionOnEval) {
-                if (fix) {
-                    result = jsonParseSafe(cleanup_1.jsonCleanup(text), defaultResult, true, false, reviver);
-                }
-            }
+export function jsonParseSafe(text, defaultResult = undefined, unsafe = true, fix = true, reviver = null) {
+  if (!text) {
+    return defaultResult;
+  }
+  if (typeof text === "object") {
+    return text;
+  }
+  let result = defaultResult;
+  try {
+    result = JSON.parse(text, reviver);
+  } catch (exceptionOnParse) {
+    if (unsafe) {
+      try {
+        result = jsonParseUnsafe(text, new Error("JSON unsafe parse failed"));
+      } catch (exceptionOnEval) {
+        if (fix) {
+          result = jsonParseSafe(jsonCleanup(text), defaultResult, true, false, reviver);
         }
+      }
     }
-    return result;
+  }
+  return result;
 }
-exports.jsonParseSafe = jsonParseSafe;

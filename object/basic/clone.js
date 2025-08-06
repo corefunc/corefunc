@@ -1,7 +1,5 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.objectBasicClone = void 0;
-const is_primitive_1 = require("../../check/is-primitive");
+import { checkIsPrimitive } from "../../check/is-primitive.js";
+
 /**
  * @category Object Basic
  * @name objectBasicClone
@@ -17,25 +15,22 @@ const is_primitive_1 = require("../../check/is-primitive");
  * @returns {ValueType} The returned value is a deep copy of the original value.
  * @since 0.3.20
  */
-function objectBasicClone(value, transfer) {
-    if (is_primitive_1.checkIsPrimitive(value)) {
-        return value;
-    }
-    if ("structuredClone" in globalThis) {
-        try {
-            let cloned;
-            if (transfer) {
-                cloned = globalThis.structuredClone(value, { transfer });
-            }
-            else {
-                cloned = globalThis.structuredClone(value);
-            }
-            return cloned;
-        }
-        catch (_dataCloneError) {
-            //
-        }
-    }
+export function objectBasicClone(value, transfer) {
+  if (checkIsPrimitive(value)) {
     return value;
+  }
+  if ("structuredClone" in globalThis) {
+    try {
+      let cloned;
+      if (transfer) {
+        cloned = globalThis.structuredClone(value, { transfer });
+      } else {
+        cloned = globalThis.structuredClone(value);
+      }
+      return cloned;
+    } catch (_dataCloneError: any) {
+      //
+    }
+  }
+  return value;
 }
-exports.objectBasicClone = objectBasicClone;
