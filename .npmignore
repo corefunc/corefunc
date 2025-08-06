@@ -37,11 +37,9 @@
 # include the .d.ts files
 # !*.d.ts
 
-*.spec.cjs
 *.spec.js
 *.spec.mjs
 *.spec.ts
-*.test.cjs
 *.test.js
 *.test.mjs
 *.test.ts

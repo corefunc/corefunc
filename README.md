@@ -19,7 +19,7 @@ Why.
 
 -  All functions are written to work with CommonJS and ECMAScript modules.
 
--  `.JS`, `.CJS`, `.MJS`, `.TS` files are in package. Wherever you prefer.
+-  `.JS`, `.MJS`, `.TS` files are in package. Wherever you prefer.
 
 -  Don't extend any built-in objects. No prototype pollution at all.
 
@@ -36,15 +36,6 @@ What is the purpose?
 ---
 
 ### Recommended usage for Tree Shaking
-
-#### CommonJS import
-
-```javascript
-const {
-  bubbleSort
-} = require("@corefunc/corefunc/array/sort/bubble.cjs");
-bubbleSort([3, 1, 2]);
-```
 
 #### ECMAScript Module
 

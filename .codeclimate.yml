@@ -9,5 +9,4 @@ plugins:
       ignore_warnings: true
     enabled: true
 exclude_patterns:
-  - "**/*.cjs"
   - "**/*.js"
