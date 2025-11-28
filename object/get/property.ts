@@ -1,4 +1,4 @@
-import { objectGetType } from "./type";
+import { objectGetType } from "./type.js";
 
 /**
  * @category Object Get
@@ -19,7 +19,7 @@ import { objectGetType } from "./type";
 export function objectGetProperty<
   ObjectType extends Record<string, any>,
   KeyType extends keyof ObjectType,
-  DefaultType extends any,
+  DefaultType,
 >(
   object: ObjectType,
   keyOrPath: KeyType | string | string[],
@@ -93,7 +93,6 @@ export function objectGetProperty<
   }
   let isSet = false;
   while (newObject !== null && index < length) {
-    // @ts-ignore
     isSet = keySet[index] in newObject;
     newObject = newObject[keySet[index]];
     index += 1;

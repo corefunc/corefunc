@@ -1,4 +1,4 @@
-"use strict";
+export {};
 // export default function convertBase64ToString(b64Encoded: string): string {
 //   // @ts-ignore
 //   if (typeof process !== "undefined" && process.release.name === "node") {
@@ -9,3 +9,4 @@
 //     return globalThis.atob(b64Encoded);
 //   }
 // }
+//# sourceMappingURL=string.js.map

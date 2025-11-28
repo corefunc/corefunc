@@ -1,6 +1,3 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.stringFindSub = void 0;
 /**
  * Returns a section of a string.
  * @param {string=""} text
@@ -8,7 +5,7 @@ exports.stringFindSub = void 0;
  * @param {number=} end
  * @returns {string}
  */
-function stringFindSub(text = "", begin = 0, end) {
+export function stringFindSub(text = "", begin = 0, end) {
     if (!text ||
         typeof text !== "string" ||
         text.length === 0 ||
@@ -23,10 +20,10 @@ function stringFindSub(text = "", begin = 0, end) {
     if (start === 0 && end === undefined) {
         return text;
     }
-    let chars = [...text];
+    const chars = [...text];
     if (start === chars.length) {
         return "";
     }
     return chars.slice(start, end).join("");
 }
-exports.stringFindSub = stringFindSub;
+//# sourceMappingURL=sub.js.map

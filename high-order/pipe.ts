@@ -5,9 +5,12 @@
  * @returns {(function(...[*]): *)|*}
  * @example a
  */
-export function highOrderPipe(fn: Function, ...restFns: Function[]): any {
+export function highOrderPipe<A extends unknown[], R>(
+  fn: (...args: A) => R,
+  ...restFns: Array<(arg: unknown) => unknown>
+): (...args: A) => unknown {
   if (restFns.length === 0) {
     return fn;
   }
-  return (...args) => restFns.reduce((result, nextFn) => nextFn(result), fn(...args));
+  return (...args: A) => restFns.reduce((result, nextFn) => nextFn(result), fn(...args) as unknown);
 }

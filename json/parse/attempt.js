@@ -1,7 +1,4 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.jsonParseAttempt = void 0;
-const safe_1 = require("./safe");
+import { jsonParseSafe } from "./safe.js";
 /**
  * @category JSON Parse
  * @name jsonParseAttempt
@@ -11,7 +8,7 @@ const safe_1 = require("./safe");
  * @returns {*} Parsed value or original value.
  * @since 0.2.2
  */
-function jsonParseAttempt(value) {
-    return safe_1.jsonParseSafe(value, value, false, false);
+export function jsonParseAttempt(value) {
+    return jsonParseSafe(value, value, false, false);
 }
-exports.jsonParseAttempt = jsonParseAttempt;
+//# sourceMappingURL=attempt.js.map

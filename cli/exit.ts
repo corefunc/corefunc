@@ -16,9 +16,8 @@ export function cliExit(code: boolean | number = 0): void {
     return;
   }
   try {
-    // @ts-ignore
     process.exit(exitCode);
-  } catch (error) {
-    //
+  } catch {
+    // intentionally ignore exceptions
   }
 }

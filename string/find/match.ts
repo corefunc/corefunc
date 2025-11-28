@@ -1,4 +1,4 @@
-import { stringFindSimilarity } from "./similarity";
+import { stringFindSimilarity } from "./similarity.js";
 
 export function stringFindMatch(
   needle: string,
@@ -15,5 +15,5 @@ export function stringFindMatch(
     }
   }
   const bestMatch = ratings[bestMatchIndex];
-  return { ratings, bestMatch, bestMatchIndex };
+  return { ratings, bestMatch: bestMatch.target, bestMatchIndex };
 }

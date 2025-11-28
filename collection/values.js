@@ -1,11 +1,8 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.collectionValues = void 0;
 /**
  * @param {Array|Map|object|Set|WeakMap|WeakSet} iterable
  * @returns {Array}
  */
-function collectionValues(iterable) {
+export function collectionValues(iterable) {
     if (!iterable || Object(iterable) !== iterable) {
         return [];
     }
@@ -20,4 +17,4 @@ function collectionValues(iterable) {
     }
     return Object.values(iterable);
 }
-exports.collectionValues = collectionValues;
+//# sourceMappingURL=values.js.map

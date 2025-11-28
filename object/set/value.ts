@@ -1,9 +1,9 @@
-import { checkIsObjectLike } from "../../check/is-object-like";
+import { checkIsObjectLike } from "../../check/is-object-like.js";
 
-import { isMap } from "../../is/map";
-import { isSet } from "../../is/set";
-import { isWeakMap } from "../../is/weak-map";
-import { isWeakSet } from "../../is/weak-set";
+import { isMap } from "../../is/map.js";
+import { isSet } from "../../is/set.js";
+import { isWeakMap } from "../../is/weak-map.js";
+import { isWeakSet } from "../../is/weak-set.js";
 
 /**
  * @category Object Set
@@ -17,9 +17,9 @@ import { isWeakSet } from "../../is/weak-set";
  * @since 0.1.55
  */
 export function objectSetValue<
-  ObjectType extends Record<string, any> | Map<any, any> | Set<any> | WeakSet<any> | WeakMap<any, any>
+  ObjectType extends Record<string, any> | Map<any, any> | Set<any> | WeakSet<any> | WeakMap<any, any>,
 >(object: ObjectType, key: string, value: any): ObjectType {
-  if (checkIsObjectLike(object) === false) {
+  if (!checkIsObjectLike(object)) {
     return object;
   }
   if (isMap(object) || isWeakMap(object)) {
@@ -32,7 +32,7 @@ export function objectSetValue<
       (object as Set<any>).add(key);
     }
   } else {
-    object[key] = value;
+    (object as Record<string, any>)[key] = value;
   }
   return object;
 }

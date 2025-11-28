@@ -1,15 +1,12 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.jsonStringifyWith = void 0;
-const safe_1 = require("./safe");
+import { jsonStringifySafe } from "./safe.js";
 /**
  * @param {*} object
  * @param {Function=} replacer
  * @param {String=} spaces
  * @param {Function=} cycleReplacer
- * @return {String}
+ * @returns {String}
  */
-function jsonStringifyWith(object, replacer, spaces, cycleReplacer) {
-    return safe_1.jsonStringifySafe(object, replacer, spaces, cycleReplacer);
+export function jsonStringifyWith(object, replacer, spaces, cycleReplacer) {
+    return jsonStringifySafe(object, replacer, spaces, cycleReplacer);
 }
-exports.jsonStringifyWith = jsonStringifyWith;
+//# sourceMappingURL=with.js.map

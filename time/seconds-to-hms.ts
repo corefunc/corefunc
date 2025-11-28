@@ -6,8 +6,11 @@
  * @param {number} [secondsToHms]
  * @returns {string}
  * @since 0.3.12
- * @example ```timeSecondsToHms(1_800) ➜ "30 minutes"```
- * @example ```timeSecondsToHms(3_725) ➜ "1 hour, 2 minutes, 3 seconds"```
+ * @example Usage:
+ * ```ts
+ * timeSecondsToHms(1_800) // ➜ "30 minutes"
+ * timeSecondsToHms(3_725) // ➜ "1 hour, 2 minutes, 3 seconds"
+ * ```
  */
 export function timeSecondsToHms(secondsToHms: number): string {
   secondsToHms = Number(secondsToHms);

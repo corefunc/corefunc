@@ -1,22 +1,19 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.jsonParseDeep = void 0;
-const is_traversable_1 = require("../../check/is-traversable");
-const for_each_1 = require("../../collection/for-each");
-const safe_1 = require("./safe");
+import { checkIsTraversable } from "../../check/is-traversable.js";
+import { collectionForEach } from "../../collection/for-each.js";
+import { jsonParseSafe } from "./safe.js";
 /**
  * @param {String} text
  * @param {*=} defaultResult
  * @param {Function=} reviver
- * @return {*}
+ * @returns {*}
  */
-function jsonParseDeep(text, defaultResult, reviver) {
-    const parsed = safe_1.jsonParseSafe(text, defaultResult, true, true, reviver);
-    if (is_traversable_1.checkIsTraversable(parsed)) {
-        for_each_1.collectionForEach(parsed, (value, key) => {
+export function jsonParseDeep(text, defaultResult, reviver) {
+    const parsed = jsonParseSafe(text, defaultResult, true, true, reviver);
+    if (checkIsTraversable(parsed)) {
+        collectionForEach(parsed, (value, key) => {
             parsed[key] = jsonParseDeep(value, value);
         });
     }
     return { ...parsed };
 }
-exports.jsonParseDeep = jsonParseDeep;
+//# sourceMappingURL=deep.js.map

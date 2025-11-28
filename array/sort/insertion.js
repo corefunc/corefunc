@@ -1,8 +1,11 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.arraySortInsertion = void 0;
-function arraySortInsertion(array) {
-    array.forEach((item, index) => {
+/**
+ * @name arraySortInsertion
+ * @description Sort an array of numbers using the insertion sort algorithm (in place).
+ * @param {Array.<number>} array Array of numbers to sort.
+ * @returns {Array.<number>} The sorted array.
+ */
+export function arraySortInsertion(array) {
+    array.forEach((_item, index) => {
         const num = array[index];
         let subIndex;
         for (subIndex = index - 1; subIndex >= 0 && array[subIndex] > num; subIndex -= 1) {
@@ -12,4 +15,4 @@ function arraySortInsertion(array) {
     });
     return array;
 }
-exports.arraySortInsertion = arraySortInsertion;
+//# sourceMappingURL=insertion.js.map

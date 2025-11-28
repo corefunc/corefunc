@@ -1,8 +1,12 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.arrayGetDifference = void 0;
-function arrayGetDifference(alpha, beta) {
+/**
+ * @name arrayGetDifference
+ * @description Create an array of values from the first array not present in the second array.
+ * @param {Array} alpha The array to inspect.
+ * @param {Array} beta The values to exclude.
+ * @returns {Array} The new array of filtered values.
+ */
+export function arrayGetDifference(alpha, beta) {
     const set = new Set(beta);
     return alpha.filter((value) => !set.has(value));
 }
-exports.arrayGetDifference = arrayGetDifference;
+//# sourceMappingURL=difference.js.map

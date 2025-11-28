@@ -5,10 +5,13 @@
  * @summary ```import { checkIsTypedArray } from '@corefunc/corefunc/check/is-typed-array';```
  * @param {*} [value] Value to check.
  * @returns {boolean} Is typed array.
- * @example ```checkIsTypedArray([]) ➜ false```
- * @example ```checkIsTypedArray(new Int16Array(1)) ➜ true```
- * @example ```checkIsTypedArray(new Float64Array(1)) ➜ true```
- * @example ```checkIsTypedArray(new Uint32Array(1)) ➜ true```
+ * @example Usage:
+ * ```ts
+ * checkIsTypedArray([]) // ➜ false
+ * checkIsTypedArray(new Int16Array(1)) // ➜ true
+ * checkIsTypedArray(new Float64Array(1)) // ➜ true
+ * checkIsTypedArray(new Uint32Array(1)) // ➜ true
+ * ```
  * @since 0.1.68
  */
 export function checkIsTypedArray(value: any): boolean {

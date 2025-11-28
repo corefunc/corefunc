@@ -1,15 +1,15 @@
-import { castToString } from "../../cast/to/string";
+import { castToString } from "../../cast/to/string.js";
 
 /**
  * @param {String} text
  * @param {*=} defaultResult
- * @return {*}
+ * @returns {*}
  */
 export function jsonParseUnsafe(text: string, defaultResult?: any): any {
   let result = defaultResult;
   try {
     result = eval(`(${castToString(text)}`);
-  } catch (exceptionOnEval) {
+  } catch {
     //
   }
   return result;

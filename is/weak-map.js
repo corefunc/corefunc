@@ -1,11 +1,8 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.isWeakMap = void 0;
 /**
  * @param {*} value
- * @return {boolean}
+ * @returns {boolean}
  */
-function isWeakMap(value) {
+export function isWeakMap(value) {
     return value instanceof WeakMap;
 }
-exports.isWeakMap = isWeakMap;
+//# sourceMappingURL=weak-map.js.map

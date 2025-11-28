@@ -1,16 +1,11 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.arrayIsList = void 0;
 /**
  * @category Array Is
  * @name arrayIsList
  * @description
- * ```markdown
  * Checks whether a given array is a list.
  * An array is considered a list if its keys consist of consecutive numbers from `0` to `array.length-1`.
  * This function works only on non-typed arrays.
  * This function returns `true` on empty arrays.
- * ```
  * @summary
  * ```javascript
  * import { arrayIsList } from "@corefunc/corefunc/array/is/list";
@@ -40,7 +35,7 @@ exports.arrayIsList = void 0;
  * console.log(arrayIsList(list)); // false
  * ```
  */
-function arrayIsList(arraySupposedToBeList) {
+export function arrayIsList(arraySupposedToBeList) {
     if (!Array.isArray(arraySupposedToBeList)) {
         return false;
     }
@@ -60,4 +55,4 @@ function arrayIsList(arraySupposedToBeList) {
     }
     return true;
 }
-exports.arrayIsList = arrayIsList;
+//# sourceMappingURL=list.js.map

@@ -1,4 +1,4 @@
-import { checkIsArrayLike } from "../../check/is-array-like";
+import { checkIsArrayLike } from "../../check/is-array-like.js";
 
 /**
  * @name arrayGetAt
@@ -10,13 +10,13 @@ import { checkIsArrayLike } from "../../check/is-array-like";
  * @example arrayGetAt(["🍌", "🍏", "🍇", "🍊"], -2) ➜ "🍇"
  * @since 0.0.96
  */
-export function arrayGetAt<T, E>(array: T[], index: number, onFail?: E): T | E {
+export function arrayGetAt<T, E>(array: Array<T>, index: number, onFail?: E): T | E {
   if (!checkIsArrayLike(array) || !Number.isInteger(index)) {
-    return onFail;
+    return onFail as E;
   }
   const relativeIndex = index >= 0 ? index : array.length + index;
   if (relativeIndex < 0 || relativeIndex >= array.length) {
-    return onFail;
+    return onFail as E;
   }
   return array[relativeIndex];
 }

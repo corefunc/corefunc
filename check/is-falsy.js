@@ -1,10 +1,13 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.checkIsFalsy = void 0;
-function checkIsFalsy(value) {
+/**
+ * @name checkIsFalsy
+ * @description Determine whether a value represents a falsy semantic value (false, 0, or common string equivalents).
+ * @param {*} value The value to evaluate.
+ * @returns {boolean} True if the value is considered falsy; otherwise, false.
+ */
+export function checkIsFalsy(value) {
     if (value === false || value === 0) {
         return true;
     }
     return typeof value === "string" && value.search(/^(?:no|n|false|f|off|0)$/i) !== -1;
 }
-exports.checkIsFalsy = checkIsFalsy;
+//# sourceMappingURL=is-falsy.js.map

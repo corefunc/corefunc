@@ -1,5 +1,5 @@
-import { textCaseCapitalize } from "./capitalize";
-import { textCaseKebab } from "./kebab";
+import { textCaseCapitalize } from "./capitalize.js";
+import { textCaseKebab } from "./kebab.js";
 
 /**
  * @category Text Case

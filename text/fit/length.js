@@ -1,6 +1,3 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.textFitLength = void 0;
 /**
  * @category Text Fit
  * @name textFitLength
@@ -10,10 +7,13 @@ exports.textFitLength = void 0;
  * @param {number} [length=99] Length in character count, not string length.
  * @param {boolean} [addEllipsis=true] Add ellipsis if text was cut.
  * @returns {string} New text.
- * @example ```textFitLength("Hello, world!", 6) ➜ "Hello…"```
+ * @example Usage:
+ * ```ts
+ * textFitLength("Hello, world!", 6) // ➜ "Hello…"
+ * ```
  * @since 0.1.69
  */
-function textFitLength(text, length = 99, addEllipsis = true) {
+export function textFitLength(text, length = 99, addEllipsis = true) {
     if (length < 1) {
         return "";
     }
@@ -33,4 +33,4 @@ function textFitLength(text, length = 99, addEllipsis = true) {
     }
     return chars.join("");
 }
-exports.textFitLength = textFitLength;
+//# sourceMappingURL=length.js.map

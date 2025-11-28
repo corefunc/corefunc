@@ -1,6 +1,3 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.castToString = void 0;
 /**
  * @category Cast To
  * @name castToString
@@ -15,7 +12,7 @@ exports.castToString = void 0;
  * castToString(-0) ➜ "-0"
  * ```
  */
-function castToString(value) {
+export function castToString(value) {
     if (value === null || value === undefined) {
         return "";
     }
@@ -28,4 +25,4 @@ function castToString(value) {
     }
     return casted;
 }
-exports.castToString = castToString;
+//# sourceMappingURL=string.js.map

@@ -1,7 +1,4 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.objectGetProperty = void 0;
-const type_1 = require("./type");
+import { objectGetType } from "./type.js";
 /**
  * @category Object Get
  * @name objectGetProperty
@@ -18,7 +15,7 @@ const type_1 = require("./type");
  * const value = object?.property?.subProperty ?? "N/A";
  * ```
  */
-function objectGetProperty(object, keyOrPath, defaultValue, valueType) {
+export function objectGetProperty(object, keyOrPath, defaultValue, valueType) {
     if (!object || typeof object !== "object") {
         return defaultValue;
     }
@@ -26,7 +23,7 @@ function objectGetProperty(object, keyOrPath, defaultValue, valueType) {
         if (object[keyOrPath] === undefined) {
             return defaultValue;
         }
-        if (valueType && type_1.objectGetType(object[keyOrPath]) !== valueType) {
+        if (valueType && objectGetType(object[keyOrPath]) !== valueType) {
             return defaultValue;
         }
         return object[keyOrPath];
@@ -47,7 +44,7 @@ function objectGetProperty(object, keyOrPath, defaultValue, valueType) {
             if (object[keySet[0]] === undefined) {
                 return defaultValue;
             }
-            if (valueType && type_1.objectGetType(object[keySet[0]]) !== valueType) {
+            if (valueType && objectGetType(object[keySet[0]]) !== valueType) {
                 return defaultValue;
             }
             return object[keySet[0]];
@@ -71,7 +68,6 @@ function objectGetProperty(object, keyOrPath, defaultValue, valueType) {
     }
     let isSet = false;
     while (newObject !== null && index < length) {
-        // @ts-ignore
         isSet = keySet[index] in newObject;
         newObject = newObject[keySet[index]];
         index += 1;
@@ -79,7 +75,7 @@ function objectGetProperty(object, keyOrPath, defaultValue, valueType) {
     if (index && index === length) {
         if (newObject === undefined) {
             if (isSet) {
-                if (valueType && type_1.objectGetType(newObject) !== valueType) {
+                if (valueType && objectGetType(newObject) !== valueType) {
                     return defaultValue;
                 }
                 return newObject;
@@ -87,7 +83,7 @@ function objectGetProperty(object, keyOrPath, defaultValue, valueType) {
             return defaultValue;
         }
         else {
-            if (valueType && type_1.objectGetType(newObject) !== valueType) {
+            if (valueType && objectGetType(newObject) !== valueType) {
                 return defaultValue;
             }
             return newObject;
@@ -97,4 +93,4 @@ function objectGetProperty(object, keyOrPath, defaultValue, valueType) {
         return defaultValue;
     }
 }
-exports.objectGetProperty = objectGetProperty;
+//# sourceMappingURL=property.js.map

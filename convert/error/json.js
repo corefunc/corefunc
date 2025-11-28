@@ -1,8 +1,5 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.convertErrorToJson = void 0;
-const object_1 = require("./object");
-const is_object_like_1 = require("../../check/is-object-like");
+import { convertErrorToObject } from "./object.js";
+import { checkIsObjectLike } from "../../check/is-object-like.js";
 /**
  * @category Convert Error
  * @name convertErrorToJson
@@ -12,8 +9,8 @@ const is_object_like_1 = require("../../check/is-object-like");
  * @returns {Object}
  * @since 0.1.40
  */
-function convertErrorToJson(error, shouldRemoveStackTrace = false) {
-    if (!is_object_like_1.checkIsObjectLike(error)) {
+export function convertErrorToJson(error, shouldRemoveStackTrace = false) {
+    if (!checkIsObjectLike(error)) {
         const asString = String(error);
         const asJson = { message: asString };
         Object.defineProperty(asJson, "toString", {
@@ -21,7 +18,7 @@ function convertErrorToJson(error, shouldRemoveStackTrace = false) {
         });
         return asJson;
     }
-    const plainObject = object_1.convertErrorToObject(error);
+    const plainObject = convertErrorToObject(error);
     Object.keys(plainObject)
         .sort((alpha, beta) => alpha.localeCompare(beta))
         .forEach((key) => {
@@ -44,4 +41,4 @@ function convertErrorToJson(error, shouldRemoveStackTrace = false) {
     }
     return plainObject;
 }
-exports.convertErrorToJson = convertErrorToJson;
+//# sourceMappingURL=json.js.map

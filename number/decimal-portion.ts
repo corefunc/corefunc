@@ -32,7 +32,7 @@ export function numberDecimalPortion(numberGetFrom: number | string, removeTrail
   }
   let decimalPortion = String(removeTrailingZeros ? asFloat : asString);
   if (decimalPortion.includes(".")) {
-    decimalPortion = decimalPortion.split(".").pop();
+    decimalPortion = decimalPortion.split(".").pop() ?? "";
   } else {
     decimalPortion = "";
   }

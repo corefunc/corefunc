@@ -1,6 +1,3 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.collectionForEach = void 0;
 /**
  * @param {Arguments|Array|Map|Object|Set} iterable
  * @param {Function} iteratee
@@ -22,7 +19,7 @@ exports.collectionForEach = void 0;
  *   console.groupEnd();
  * });
  */
-function collectionForEach(iterable, iteratee) {
+export function collectionForEach(iterable, iteratee) {
     if (!iterable) {
         return iterable;
     }
@@ -43,4 +40,4 @@ function collectionForEach(iterable, iteratee) {
     }
     return iterable;
 }
-exports.collectionForEach = collectionForEach;
+//# sourceMappingURL=for-each.js.map

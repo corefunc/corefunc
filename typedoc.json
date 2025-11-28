@@ -1,4 +1,5 @@
 {
+  "blockTags": ["@category", "@deprecated", "@description", "@example", "@name", "@param", "@returns", "@see", "@since", "@summary", "@template", "@throws", "@url"],
   "categorizeByGroup": true,
   "entryPoints": [
     "./array/index.ts",
@@ -29,7 +30,10 @@
     "./var/index.ts"
   ],
   "exclude": ["**/*+(index|.spec|.e2e).ts"],
-  "externalPattern": ["./**/*.ts"],
+  "excludeExternals": true,
+  "externalPattern": ["**/node_modules/**"],
   "out": "docs",
-  "theme": "./node_modules/typedoc-neo-theme/bin/default"
+  "plugin": ["typedoc-material-theme"],
+  "themeColor": "#cb9820",
+  "theme": "default"
 }

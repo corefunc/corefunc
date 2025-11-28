@@ -18,17 +18,21 @@ export function objectKeysOrder<ObjectType extends object>(
   }
   const orderKeys = keys.filter((key) => typeof key === "string");
   let objectKeys: string[] | Set<string> = new Set(Object.keys(instance));
-  const newObject = {};
+  const newObject: Partial<ObjectType> = {};
   orderKeys.forEach((key) => {
     (objectKeys as Set<string>).delete(key);
     if (key in instance) {
-      newObject[key] = instance[key];
+      const objKey = key as keyof ObjectType;
+      newObject[objKey] = instance[objKey];
     }
   });
   objectKeys = [...objectKeys];
   if (alphabetize) {
     objectKeys = objectKeys.sort((alpha, beta) => alpha.localeCompare(beta));
   }
-  objectKeys.forEach((key) => (newObject[key] = instance[key]));
+  objectKeys.forEach((key) => {
+    const theKey = key as keyof ObjectType;
+    newObject[theKey] = instance[theKey];
+  });
   return newObject as ObjectType;
 }

@@ -1,6 +1,3 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.varGetRawType = void 0;
 const _toString = Object.prototype.toString;
 /**
  * @name varGetRawType
@@ -8,7 +5,7 @@ const _toString = Object.prototype.toString;
  * @param {*} value
  * @returns {string}
  */
-function varGetRawType(value) {
+export function varGetRawType(value) {
     return _toString.call(value).slice(8, -1);
 }
-exports.varGetRawType = varGetRawType;
+//# sourceMappingURL=raw-type.js.map

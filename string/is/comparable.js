@@ -1,8 +1,5 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.stringIsComparable = void 0;
-const string_1 = require("../../cast/to/string");
-const references_1 = require("../clear/references");
+import { castToString } from "../../cast/to/string.js";
+import { stringClearReferences } from "../clear/references.js";
 /**
  * Compare two strings
  * @param {string} first
@@ -10,23 +7,23 @@ const references_1 = require("../clear/references");
  * @param {boolean} isStrict
  * @returns {boolean}
  */
-function stringIsComparable(first, second, isStrict = false) {
-    let stringOne = string_1.castToString(first).normalize();
-    let stringTwo = string_1.castToString(second).normalize();
+export function stringIsComparable(first, second, isStrict = false) {
+    const stringOne = castToString(first).normalize();
+    const stringTwo = castToString(second).normalize();
     if (stringOne.length !== stringTwo.length) {
-        references_1.stringClearReferences(stringOne);
-        references_1.stringClearReferences(stringTwo);
+        stringClearReferences(stringOne);
+        stringClearReferences(stringTwo);
         return false;
     }
     if (isStrict) {
         const isSame = stringOne.localeCompare(stringTwo) === 0;
-        references_1.stringClearReferences(stringOne);
-        references_1.stringClearReferences(stringTwo);
+        stringClearReferences(stringOne);
+        stringClearReferences(stringTwo);
         return isSame;
     }
     const isSame = stringOne.toLowerCase().localeCompare(stringTwo.toLowerCase()) === 0;
-    references_1.stringClearReferences(stringOne);
-    references_1.stringClearReferences(stringTwo);
+    stringClearReferences(stringOne);
+    stringClearReferences(stringTwo);
     return isSame;
 }
-exports.stringIsComparable = stringIsComparable;
+//# sourceMappingURL=comparable.js.map

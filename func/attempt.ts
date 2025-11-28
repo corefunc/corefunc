@@ -1,25 +1,31 @@
-import { collectionValues } from "../collection/values";
-import { isFunction } from "../is/function";
+import { collectionValues } from "../collection/values.js";
+import { isFunction } from "../is/function.js";
 
 /**
  * @param {Function} callable
  * @param {Array} args
  * @param {Object=} context
  * @param {Boolean=false} catchExceptions
- * @return {*}
+ * @returns {*}
  */
-export function funcAttempt(callable, args = [], context = null, catchExceptions = false) {
-  if (isFunction(callable) === false) {
+export function funcAttempt(
+  callable: unknown,
+  args: unknown[] = [],
+  context: unknown = null,
+  catchExceptions = false,
+): unknown {
+  if (!isFunction(callable)) {
     return undefined;
   }
+  const fn = callable as (..._fnArgs: unknown[]) => unknown;
   if (catchExceptions) {
-    let returnValue;
+    let returnValue: unknown;
     try {
-      returnValue = callable.apply(context, collectionValues(args));
-    } catch (error) {
-      //
+      returnValue = fn.apply(context, collectionValues(args));
+    } catch {
+      // intentionally ignore exceptions
     }
     return returnValue;
   }
-  return callable.apply(context, collectionValues(args));
+  return fn.apply(context, collectionValues(args));
 }

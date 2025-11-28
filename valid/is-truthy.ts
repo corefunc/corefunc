@@ -1,4 +1,4 @@
-import { isFalsy } from "./is-falsy";
+import { isFalsy } from "./is-falsy.js";
 
 /**
  * @category Is Valid

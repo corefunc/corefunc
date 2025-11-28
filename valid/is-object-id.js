@@ -1,6 +1,3 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.isObjectId = void 0;
 /**
  * @category Is Valid
  * @name isObjectId
@@ -9,7 +6,7 @@ exports.isObjectId = void 0;
  * @returns {Boolean}
  * @since 0.0.94
  */
-function isObjectId(value) {
+export function isObjectId(value) {
     return typeof value === "string" && /^[0-9a-fA-F]{24}$/.test(value);
 }
-exports.isObjectId = isObjectId;
+//# sourceMappingURL=is-object-id.js.map

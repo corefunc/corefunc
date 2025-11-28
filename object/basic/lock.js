@@ -1,6 +1,3 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.objectBasicLock = void 0;
 /**
  * @category Object Basic
  * @name objectBasicLock
@@ -10,10 +7,10 @@ exports.objectBasicLock = void 0;
  * @returns {Object} Locked object.
  * @since 0.1.55
  */
-function objectBasicLock(object) {
+export function objectBasicLock(object) {
     Object.freeze(object);
     Object.seal(object);
     Object.preventExtensions(object);
     return object;
 }
-exports.objectBasicLock = objectBasicLock;
+//# sourceMappingURL=lock.js.map

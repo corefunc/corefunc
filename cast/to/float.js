@@ -1,6 +1,3 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.castToFloat = void 0;
 /**
  * @category Cast To
  * @name castToFloat
@@ -12,7 +9,7 @@ exports.castToFloat = void 0;
  * @returns {Number}
  * @example castToFloat("16.5"); // => 16.5
  */
-function castToFloat(value, onFail = 0, toFixed) {
+export function castToFloat(value, onFail = 0, toFixed) {
     const type = typeof value;
     if (type === "boolean") {
         return Number(value);
@@ -35,4 +32,4 @@ function castToFloat(value, onFail = 0, toFixed) {
     }
     return castToFloat(String(value), onFail, toFixed);
 }
-exports.castToFloat = castToFloat;
+//# sourceMappingURL=float.js.map

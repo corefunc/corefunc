@@ -1,11 +1,11 @@
-import { jsonParseSafe } from "./safe";
+import { jsonParseSafe } from "./safe.js";
 
 /**
  * @param {String} text
  * @param {*=} defaultResult
  * @param {Boolean=} unsafe
  * @param {Function=} reviver
- * @return {*}
+ * @returns {*}
  */
 export function jsonParseWith(
   text: string,

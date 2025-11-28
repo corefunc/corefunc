@@ -8,6 +8,9 @@
  * @param {boolean=} [useLocalTime=true] Use timezone offset or UTC time.
  * @returns {string} Formatted date.
  * @since 0.3.23
- * @example ```dateFormat("{YYYY}-{MM}-{DD}T{HH}:{mm}:{ss}", new Date(), true) ➜ "2020-06-15T12:30:30"```
+ * @example Usage:
+ * ```ts
+ * dateFormat("{YYYY}-{MM}-{DD}T{HH}:{mm}:{ss}", new Date(), true) // ➜ "2020-06-15T12:30:30"
+ * ```
  */
 export declare function dateFormat(format?: string, date?: Date, useLocalTime?: boolean): string;

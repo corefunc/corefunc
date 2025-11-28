@@ -1,8 +1,5 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.textCaseTrain = void 0;
-const capitalize_1 = require("./capitalize");
-const kebab_1 = require("./kebab");
+import { textCaseCapitalize } from "./capitalize.js";
+import { textCaseKebab } from "./kebab.js";
 /**
  * @category Text Case
  * @name textCaseTrain
@@ -11,7 +8,7 @@ const kebab_1 = require("./kebab");
  * @returns {String} Train-case text
  * @since 0.1.31
  */
-function textCaseTrain(text) {
-    return kebab_1.textCaseKebab(text).split("-").map(capitalize_1.textCaseCapitalize).join("-");
+export function textCaseTrain(text) {
+    return textCaseKebab(text).split("-").map(textCaseCapitalize).join("-");
 }
-exports.textCaseTrain = textCaseTrain;
+//# sourceMappingURL=train.js.map

@@ -1,6 +1,3 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.arrayBasicWith = void 0;
 /**
  * @name arrayBasicWith
  * @category Array Basic
@@ -24,10 +21,10 @@ exports.arrayBasicWith = void 0;
  * }
  * ```
  */
-function arrayBasicWith(array, index, value, suppressErrors = true) {
-    let length = array.length;
-    let relativeIndex = Number.isInteger(index) ? index : Number.parseInt(String(index), 10);
-    let actualIndex = relativeIndex < 0 ? length + relativeIndex : relativeIndex;
+export function arrayBasicWith(array, index, value, suppressErrors = true) {
+    const length = array.length;
+    const relativeIndex = Number.isInteger(index) ? index : Number.parseInt(String(index), 10);
+    const actualIndex = relativeIndex < 0 ? length + relativeIndex : relativeIndex;
     if (actualIndex >= length || actualIndex < 0) {
         if (suppressErrors) {
             return Array.from(array);
@@ -36,11 +33,11 @@ function arrayBasicWith(array, index, value, suppressErrors = true) {
             throw RangeError(`Incorrect index: [${index}].`);
         }
     }
-    let copy = new Array(length);
+    const copy = new Array(length);
     let key = 0;
     for (; key < length; key++) {
         copy[key] = key === actualIndex ? value : array[key];
     }
     return copy;
 }
-exports.arrayBasicWith = arrayBasicWith;
+//# sourceMappingURL=with.js.map

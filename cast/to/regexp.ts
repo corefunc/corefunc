@@ -1,5 +1,5 @@
-import { isRegExp } from "../../is/regexp";
-import { isString } from "../../is/string";
+import { isRegExp } from "../../is/regexp.js";
+import { isString } from "../../is/string.js";
 
 /**
  * @param {RegExp|[string,string]|string} pattern

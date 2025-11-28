@@ -22,23 +22,29 @@ export function objectKeysSort<ObjectType extends Record<number | string | symbo
   }
   try {
     if (isDeep) {
-      return keys.reduce((sorted, key) => {
-        if (objectLike[key] && typeof objectLike[key] === "object" && !Array.isArray(objectLike[key])) {
-          if (depth > 0) {
-            sorted[key] = objectKeysSort(objectLike[key] as ObjectType, true, depth - 1);
+      return keys.reduce(
+        (sorted, key) => {
+          if (objectLike[key] && typeof objectLike[key] === "object" && !Array.isArray(objectLike[key])) {
+            if (depth > 0) {
+              sorted[key] = objectKeysSort(objectLike[key] as ObjectType, true, depth - 1);
+            } else {
+              sorted[key] = objectLike[key];
+            }
           } else {
             sorted[key] = objectLike[key];
           }
-        } else {
-          sorted[key] = objectLike[key];
-        }
-        return sorted;
-      }, Object.create(Object.getPrototypeOf(objectLike))) as ObjectType;
+          return sorted;
+        },
+        Object.create(Object.getPrototypeOf(objectLike)),
+      ) as ObjectType;
     } else {
-      return keys.reduce((sorted, key) => {
-        sorted[key] = objectLike[key];
-        return sorted;
-      }, Object.create(Object.getPrototypeOf(objectLike))) as ObjectType;
+      return keys.reduce(
+        (sorted, key) => {
+          sorted[key] = objectLike[key];
+          return sorted;
+        },
+        Object.create(Object.getPrototypeOf(objectLike)),
+      ) as ObjectType;
     }
   } catch {
     return objectLike;

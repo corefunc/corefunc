@@ -1,5 +1,5 @@
-export function functionCall<ArgumentsType extends any[], ReturnType>(
-  functionToCall: (...args: ArgumentsType) => ReturnType,
+export function functionCall<ArgumentsType extends unknown[], ReturnType>(
+  functionToCall: (..._args: ArgumentsType) => ReturnType,
   ...args: ArgumentsType
 ): ReturnType {
   return functionToCall(...args);

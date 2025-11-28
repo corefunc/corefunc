@@ -1,14 +1,17 @@
-export function checkIsFunctionArrow<F extends Function>(callable: F): boolean {
+export function checkIsFunctionArrow(callable: unknown): boolean {
   if (!callable || typeof callable !== "function") {
     return false;
   }
-  const source: string[] = [...callable.toString()];
-  let index: number = 0;
-  let countParen: number = 0;
-  let countBracket: number = 0;
+  // After the typeof check above, `callable` is a function at runtime.
+  // Cast to a safe function type to avoid the `Function` type usage.
+  const fn = callable as (...args: unknown[]) => unknown;
+  const source: string[] = [...fn.toString()];
+  let index = 0;
+  let countParen = 0;
+  let countBracket = 0;
   let char: string;
-  let charLast: string;
-  let charFirst: string;
+  let charLast: string | undefined;
+  let charFirst: string | undefined;
   while (index < source.length) {
     char = source[index];
     if (

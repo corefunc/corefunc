@@ -1,9 +1,6 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.isStringable = void 0;
-const is_primitive_1 = require("../check/is-primitive");
-const function_1 = require("./function");
-const string_1 = require("./string");
+import { checkIsPrimitive } from "../check/is-primitive.js";
+import { isFunction } from "./function.js";
+import { isString } from "./string.js";
 /**
  * @category Is
  * @name isStringable
@@ -14,16 +11,16 @@ const string_1 = require("./string");
  * @returns {Boolean}
  * @since 0.3.54
  */
-function isStringable(value, isStrictCheck = false) {
+export function isStringable(value, isStrictCheck = false) {
     if (typeof value === "string" || value instanceof String) {
         return true;
     }
-    if (is_primitive_1.checkIsPrimitive(value)) {
+    if (checkIsPrimitive(value)) {
         return false;
     }
-    if ("toString" in value && function_1.isFunction(value.toString) && string_1.isString(value.toString())) {
+    if ("toString" in value && isFunction(value.toString) && isString(value.toString())) {
         return true;
     }
     return !isStrictCheck;
 }
-exports.isStringable = isStringable;
+//# sourceMappingURL=stringable.js.map

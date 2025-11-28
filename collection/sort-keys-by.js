@@ -1,4 +1,4 @@
-"use strict";
+export {};
 // import fnIsObject from "lodash-es/isObject";
 // import isKeys from "lodash-es/keys";
 // import fnMap from "lodash-es/map";
@@ -20,3 +20,4 @@
 //     fnMap(objectKeys, (key) => iterable[key]),
 //   );
 // }
+//# sourceMappingURL=sort-keys-by.js.map

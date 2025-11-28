@@ -1,20 +1,17 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.functionName = void 0;
 /**
  * @name functionName
  * @description Extract function name
- * @param {Function} func
- * @return {string}
+ * @param {(...args: unknown[]) => unknown} func
+ * @returns {string}
  */
-function functionName(func) {
+export function functionName(func) {
     if (func.name) {
         return func.name;
     }
-    const result = /^function\s+([\w]+)\s*\(/.exec(func.toString());
-    if (result) {
-        return result.shift();
+    const match = /^function\s+([\w]+)\s*\(/.exec(func.toString());
+    if (match) {
+        return match[1];
     }
     return "";
 }
-exports.functionName = functionName;
+//# sourceMappingURL=name.js.map

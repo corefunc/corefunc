@@ -1,6 +1,6 @@
 /**
  * @param {*} value
- * @return {boolean}
+ * @returns {boolean}
  */
 export function checkIsKeyed(value: any): boolean {
   return value instanceof Set || value instanceof Map;

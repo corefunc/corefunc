@@ -1,5 +1,5 @@
-import { jsonParseSafe } from "../parse/safe";
-import { jsonStringifySafe } from "../stringify/safe";
+import { jsonParseSafe } from "../parse/safe.js";
+import { jsonStringifySafe } from "../stringify/safe.js";
 
 export type JsonPrimitiveType = boolean | null | number | string;
 
@@ -24,7 +24,10 @@ export type JsonType = JsonPrimitiveType | JsonArrayType | JsonObjectType;
  * @param {Boolean=} [fix=true] Fix incorrect JSON string.
  * @returns {JsonType} Plain value or plain object.
  * @since 0.0.87
- * @example ```jsonJsonify({ 1: "one" }) ➜ {"1":"one"}```
+ * @example Usage:
+ * ```ts
+ * jsonJsonify({ 1: "one" }) // ➜ {"1":"one"}
+ * ```
  */
 export function jsonJsonify(value: any, defaultResult?: any, unsafe: boolean = true, fix: boolean = true): JsonType {
   return jsonParseSafe(jsonStringifySafe(value), defaultResult, unsafe, fix);

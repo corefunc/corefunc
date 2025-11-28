@@ -1,13 +1,10 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.functionCached = void 0;
 /**
  * @name functionCached
  * @description Create a cached version of a pure function. Function arguments must be primitives.
  * @param {Function} func
  * @returns {Function}
  */
-function functionCached(func) {
+export function functionCached(func) {
     const cache = Object.create(null);
     return function cachedFunction(...keys) {
         const key = JSON.stringify(keys);
@@ -18,4 +15,4 @@ function functionCached(func) {
         return cache[key];
     };
 }
-exports.functionCached = functionCached;
+//# sourceMappingURL=cached.js.map

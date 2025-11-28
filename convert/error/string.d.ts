@@ -1,0 +1,14 @@
+/**
+ * @category Convert Error
+ * @name convertErrorToString
+ * @description Converts error like object to string
+ * @summary ```import { convertErrorToString } from "@corefunc/corefunc/convert/error/string";```
+ * @param {Error} [error]
+ * @returns {string}
+ * @since 0.3.4
+ * @example Usage:
+ * ```ts
+ * convertErrorToString({ "message": "Undefined Error" }) // ➜ "Undefined Error"
+ * ```
+ */
+export declare function convertErrorToString(error: Error | EvalError | RangeError | ReferenceError | SyntaxError | TypeError | URIError | Record<string, any>): string;

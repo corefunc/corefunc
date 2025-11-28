@@ -6,7 +6,8 @@
  * @returns {Array}
  * @since 0.1.13
  */
-export function arrayBasicMerge<T1, T2>(arrayMergeInto: T1[], arrayToBeAdded: T2[]): Array<T1 | T2> {
+export function arrayBasicMerge<T>(arrayMergeInto: Array<T>, arrayToBeAdded: Array<T>): Array<T> {
+  // eslint-disable-next-line prefer-spread
   arrayMergeInto.push.apply(arrayMergeInto, arrayToBeAdded);
   return arrayMergeInto;
 }

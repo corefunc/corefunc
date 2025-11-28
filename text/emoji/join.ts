@@ -7,8 +7,11 @@
  * @param {...string} emojis Emojis to join.
  * @returns {string} Joined emoji.
  * @since 0.3.27
- * @example ```"👨" + "💻" ➜  "👨💻"```
- * @example ```textEmojiJoin("👨", "💻") ➜  "👨‍💻"```
+ * @example Usage:
+ * ```ts
+ * "👨" + "💻" // ➜  "👨💻"
+ * textEmojiJoin("👨", "💻") // ➜  "👨‍💻"
+ * ```
  */
 export function textEmojiJoin(emoji: string, ...emojis: string[]): string {
   return [emoji, ...emojis].join("\u200D");

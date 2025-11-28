@@ -1,5 +1,3 @@
-
-
 /**
  * @name generateInteger
  * @category Generate
@@ -13,19 +11,19 @@
  */
 export function generateInteger(min: number = 0, max: number = Number.MAX_SAFE_INTEGER): number {
   if (!Number.isInteger(min)) {
-    throw new RangeError('Min value is not an integer.');
+    throw new RangeError("Min value is not an integer.");
   }
   if (!Number.isInteger(max)) {
-    throw new RangeError('Max value is not an integer.');
+    throw new RangeError("Max value is not an integer.");
   }
   if (min < Number.MIN_SAFE_INTEGER) {
-    throw new RangeError('Min value is less than Number.MIN_SAFE_INTEGER.');
+    throw new RangeError("Min value is less than Number.MIN_SAFE_INTEGER.");
   }
-  if(max > Number.MAX_SAFE_INTEGER) {
-    throw new RangeError('Max value is greater than Number.MAX_SAFE_INTEGER.');
+  if (max > Number.MAX_SAFE_INTEGER) {
+    throw new RangeError("Max value is greater than Number.MAX_SAFE_INTEGER.");
   }
   if (min > max) {
-    throw new RangeError('Min value is greater than max value.');
+    throw new RangeError("Min value is greater than max value.");
   }
   if (min === max) {
     return min;

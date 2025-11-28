@@ -1,4 +1,4 @@
-import { castToInt } from "./int";
+import { castToInt } from "./int.js";
 
 /**
  * @category Cast To

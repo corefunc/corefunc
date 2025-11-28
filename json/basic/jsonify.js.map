@@ -1,0 +1,1 @@
+{"version":3,"file":"jsonify.js","sourceRoot":"","sources":["jsonify.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,aAAa,EAAE,MAAM,kBAAkB,CAAC;AACjD,OAAO,EAAE,iBAAiB,EAAE,MAAM,sBAAsB,CAAC;AAczD;;;;;;;;;;;;;;;GAeG;AACH,MAAM,UAAU,WAAW,CAAC,KAAU,EAAE,aAAmB,EAAE,SAAkB,IAAI,EAAE,MAAe,IAAI;IACtG,OAAO,aAAa,CAAC,iBAAiB,CAAC,KAAK,CAAC,EAAE,aAAa,EAAE,MAAM,EAAE,GAAG,CAAC,CAAC;AAC7E,CAAC"}

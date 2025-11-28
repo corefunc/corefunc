@@ -1,7 +1,4 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.textCaseCapitalize = void 0;
-const string_1 = require("../../cast/to/string");
+import { castToString } from "../../cast/to/string.js";
 /**
  * @category Text Case
  * @name textCaseCapitalize
@@ -11,8 +8,8 @@ const string_1 = require("../../cast/to/string");
  * @returns {String} Capitalized first letter
  * @since 0.1.31
  */
-function textCaseCapitalize(text) {
-    const string = string_1.castToString(text).normalize();
+export function textCaseCapitalize(text) {
+    const string = castToString(text).normalize();
     return string.charAt(0).toUpperCase() + string.slice(1);
 }
-exports.textCaseCapitalize = textCaseCapitalize;
+//# sourceMappingURL=capitalize.js.map

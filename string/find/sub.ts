@@ -22,7 +22,7 @@ export function stringFindSub(text: string = "", begin: number = 0, end?: number
   if (start === 0 && end === undefined) {
     return text;
   }
-  let chars = [...text];
+  const chars = [...text];
   if (start === chars.length) {
     return "";
   }

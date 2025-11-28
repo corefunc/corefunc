@@ -1,6 +1,3 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.dateInMilliseconds = void 0;
 /**
  * @category Date
  * @name dateInMilliseconds
@@ -9,7 +6,7 @@ exports.dateInMilliseconds = void 0;
  * @returns {number|NaN} Number of milliseconds since the Unix Epoch or NaN if fails.
  * @since 0.3.19
  */
-function dateInMilliseconds(date) {
+export function dateInMilliseconds(date) {
     if (date instanceof Date) {
         return date.getTime();
     }
@@ -27,4 +24,4 @@ function dateInMilliseconds(date) {
     }
     return NaN;
 }
-exports.dateInMilliseconds = dateInMilliseconds;
+//# sourceMappingURL=in-milliseconds.js.map

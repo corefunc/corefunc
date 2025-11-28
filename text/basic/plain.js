@@ -1,6 +1,3 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.textBasicPlain = void 0;
 /**
  * @category Text Basic
  * @name textBasicPlain
@@ -9,7 +6,8 @@ exports.textBasicPlain = void 0;
  * @returns {text} Text.
  * @since 0.3.58
  */
-function textBasicPlain(text) {
+export function textBasicPlain(text) {
+    // eslint-disable-next-line no-control-regex
     return text.replace(/[\u001b\u009b][[()#;?]*(?:[0-9]{1,4}(?:;[0-9]{0,4})*)?[0-9A-ORZcf-nqry=><]/g, "");
 }
-exports.textBasicPlain = textBasicPlain;
+//# sourceMappingURL=plain.js.map

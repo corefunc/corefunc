@@ -14,4 +14,4 @@
  * const value = object?.property?.subProperty ?? "N/A";
  * ```
  */
-export declare function objectGetProperty<ObjectType extends Record<string, any>, KeyType extends keyof ObjectType, DefaultType extends any>(object: ObjectType, keyOrPath: KeyType | string | string[], defaultValue?: DefaultType, valueType?: "asyncfunction" | "array" | "boolean" | "date" | "error" | "function" | "generatorfunction" | "map" | "null" | "number" | "object" | "promise" | "proxy" | "regexp" | "set" | "string" | "symbol" | "undefined" | "weakmap" | "weakset"): ObjectType[KeyType] | DefaultType;
+export declare function objectGetProperty<ObjectType extends Record<string, any>, KeyType extends keyof ObjectType, DefaultType>(object: ObjectType, keyOrPath: KeyType | string | string[], defaultValue?: DefaultType, valueType?: "asyncfunction" | "array" | "boolean" | "date" | "error" | "function" | "generatorfunction" | "map" | "null" | "number" | "object" | "promise" | "proxy" | "regexp" | "set" | "string" | "symbol" | "undefined" | "weakmap" | "weakset"): ObjectType[KeyType] | DefaultType;

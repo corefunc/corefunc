@@ -1,25 +1,19 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.objectBasicDeCycle = void 0;
 /**
  * @category Object Basic
  * @name objectBasicDeCycle
  * @description De-cycle object.
- * @summary ```import { objectBasicDeCycle } from '@corefunc/corefunc/object/basic/de-cycle';```
+ * @summary ``````
  * @param {Object} object Object to de-cycle.
  * @param {String=} _path Path ot property to de-cycle.
  * @returns {Object} De-cycled object.
  * @since 0.1.55
  */
-function objectBasicDeCycle(object, 
-// eslint-disable-next-line no-unused-vars
-_path) {
+export function objectBasicDeCycle(object, _path) {
     const objects = [];
     const paths = [];
     return (function deReCycle(value, path) {
         let index;
         let name;
-        let newIterable;
         if (typeof value === "object" &&
             value !== null &&
             !(value instanceof Boolean) &&
@@ -34,23 +28,25 @@ _path) {
             }
             objects.push(value);
             paths.push(path);
-            if (Object.prototype.toString.call(value) === "[object Array]") {
-                newIterable = [];
+            if (Array.isArray(value)) {
+                const newIterable = [];
                 for (index = 0; index < value.length; index++) {
-                    newIterable[index] = objectBasicDeCycle(value[index], `${path}[" + index + "]`);
+                    newIterable[index] = deReCycle(value[index], `${path}[${index}]`);
                 }
+                return newIterable;
             }
             else {
-                newIterable = Object.create(object);
-                for (name in value) {
-                    if (Object.prototype.hasOwnProperty.call(value, name)) {
-                        newIterable[name] = objectBasicDeCycle(value[name], `${path}[${JSON.stringify(name)}]`);
+                const newIterable = Object.create(Object.getPrototypeOf(value));
+                const objValue = value;
+                for (name in objValue) {
+                    if (Object.prototype.hasOwnProperty.call(objValue, name)) {
+                        newIterable[name] = deReCycle(objValue[name], `${path}[${JSON.stringify(name)}]`);
                     }
                 }
+                return newIterable;
             }
-            return newIterable;
         }
         return value;
     })(object, "&");
 }
-exports.objectBasicDeCycle = objectBasicDeCycle;
+//# sourceMappingURL=de-cycle.js.map

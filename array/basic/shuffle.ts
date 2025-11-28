@@ -6,7 +6,10 @@
  * @param {Array} array Array to be shuffled.
  * @returns {Array} Modified array.
  * @since 0.3.27
- * @example ```arrayBasicShuffle([2, 11, 37, 42])```
+ * @example Usage:
+ * ```ts
+ * arrayBasicShuffle([2, 11, 37, 42])
+ * ```
  */
 export function arrayBasicShuffle<T>(array: T[]): T[] {
   let currentIndex = array.length;

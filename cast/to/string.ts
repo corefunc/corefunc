@@ -12,7 +12,7 @@
  * castToString(-0) ➜ "-0"
  * ```
  */
-export function castToString(value: any): string {
+export function castToString(value: unknown): string {
   if (value === null || value === undefined) {
     return "";
   }

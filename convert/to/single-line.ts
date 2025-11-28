@@ -1,11 +1,11 @@
-import { castToString } from "../../cast/to/string";
-import { checkIsObjectLike } from "../../check/is-object-like";
-import { checkIsPrimitive } from "../../check/is-primitive";
-import { convertErrorToString } from "../error/string";
-import { isString } from "../../is/string";
-import { regexIsMultiline } from "../../regex/is/multiline";
-import { textCaseCamel } from "../../text/case/camel";
-import { textCaseCapitalize } from "../../text/case/capitalize";
+import { castToString } from "../../cast/to/string.js";
+import { checkIsObjectLike } from "../../check/is-object-like.js";
+import { checkIsPrimitive } from "../../check/is-primitive.js";
+import { convertErrorToString } from "../error/string.js";
+import { isString } from "../../is/string.js";
+import { regexIsMultiline } from "../../regex/is/multiline.js";
+import { textCaseCamel } from "../../text/case/camel.js";
+import { textCaseCapitalize } from "../../text/case/capitalize.js";
 
 function stringToSingleLine(record: string): string {
   if (regexIsMultiline(record)) {
@@ -18,7 +18,7 @@ function stringToSingleLine(record: string): string {
   return record;
 }
 
-function primitiveToSingleLine(record: any): string {
+function primitiveToSingleLine(record: unknown): string {
   if (isString(record)) {
     return stringToSingleLine(record);
   }
@@ -31,11 +31,11 @@ function primitiveToSingleLine(record: any): string {
   return stringToSingleLine(castToString(record));
 }
 
-function arrayToSingleLine(record: any[]): string {
+function arrayToSingleLine(record: unknown[]): string {
   return record.map((value) => convertAnyToSingleLine(value)).join(" ");
 }
 
-function objectToSingleLine(record: Record<string, any>, prettify = false): string {
+function objectToSingleLine(record: Record<string, unknown>, prettify = false): string {
   if (record instanceof Error) {
     return convertErrorToString(record);
   }
@@ -54,7 +54,7 @@ function objectToSingleLine(record: Record<string, any>, prettify = false): stri
   return output;
 }
 
-function convertAnyToSingleLine(record: any, prettify = false): string {
+function convertAnyToSingleLine(record: unknown, prettify = false): string {
   if (checkIsPrimitive(record)) {
     return primitiveToSingleLine(record);
   }
@@ -62,7 +62,7 @@ function convertAnyToSingleLine(record: any, prettify = false): string {
     return arrayToSingleLine(record);
   }
   if (checkIsObjectLike(record)) {
-    return objectToSingleLine(record, prettify);
+    return objectToSingleLine(record as Record<string, unknown>, prettify);
   }
   return stringToSingleLine(String(record));
 }
@@ -77,7 +77,7 @@ function convertAnyToSingleLine(record: any, prettify = false): string {
  * @returns {string} Single line string
  * @since 0.3.10
  */
-export function convertToSingleLine(record: any, prettify = false): string {
+export function convertToSingleLine(record: unknown, prettify = false): string {
   if (prettify) {
     return convertAnyToSingleLine(record, true).trim();
   }

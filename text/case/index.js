@@ -1,23 +1,12 @@
-"use strict";
-var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
-}) : (function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    o[k2] = m[k];
-}));
-var __exportStar = (this && this.__exportStar) || function(m, exports) {
-    for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports, p)) __createBinding(exports, m, p);
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-__exportStar(require("./abbreviate"), exports);
-__exportStar(require("./camel"), exports);
-__exportStar(require("./capitalize"), exports);
-__exportStar(require("./kebab"), exports);
-__exportStar(require("./kebab"), exports);
-__exportStar(require("./lower"), exports);
-__exportStar(require("./screaming-snake"), exports);
-__exportStar(require("./snake"), exports);
-__exportStar(require("./title"), exports);
-__exportStar(require("./train"), exports);
-__exportStar(require("./upper"), exports);
+export * from "./abbreviate.js";
+export * from "./camel.js";
+export * from "./capitalize.js";
+export * from "./kebab.js";
+export * from "./kebab.js";
+export * from "./lower.js";
+export * from "./screaming-snake.js";
+export * from "./snake.js";
+export * from "./title.js";
+export * from "./train.js";
+export * from "./upper.js";
+//# sourceMappingURL=index.js.map

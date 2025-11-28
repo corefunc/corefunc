@@ -1,6 +1,6 @@
-import { isString } from "../../is/string";
-import { castToRegExp } from "../../cast/to/regexp";
-import { castToString } from "../../cast/to/string";
+import { isString } from "../../is/string.js";
+import { castToRegExp } from "../../cast/to/regexp.js";
+import { castToString } from "../../cast/to/string.js";
 
 /**
  * @category RegEx Match
@@ -9,7 +9,7 @@ import { castToString } from "../../cast/to/string";
  * @param {String} string
  * @param {RegExp | [string, string] | string} pattern
  * @param {*=false} onFail
- * @return {Boolean}
+ * @returns {Boolean}
  */
 export function regexMatch(
   string: string,

@@ -4,7 +4,6 @@
 
 [![NPM Version][npm-version-img]][npm-version-url]
 [![NPM Downloads][npm-downloads-img]][npm-downloads-url]
-[![Maintainability Rating][sonarcloud-img]][sonarcloud-url]
 [![CodeFactor][codefactor-img]][codefactor-url]
 
 ---
@@ -17,9 +16,9 @@
 
 Why.
 
--  All functions are written to work with CommonJS and ECMAScript modules.
+-  All functions are written to work with ECMAScript modules and TypeScript.
 
--  `.JS`, `.CJS`, `.MJS`, `.TS` files are in package. Wherever you prefer.
+-  `.JS`, `.TS` files are in package. Wherever you prefer.
 
 -  Don't extend any built-in objects. No prototype pollution at all.
 
@@ -37,31 +36,22 @@ What is the purpose?
 
 ### Recommended usage for Tree Shaking
 
-#### CommonJS import
-
-```javascript
-const {
-  bubbleSort
-} = require("@corefunc/corefunc/array/sort/bubble.cjs");
-bubbleSort([3, 1, 2]);
-```
-
 #### ECMAScript Module
 
 ```javascript
 import {
-  bubbleSort
-} from "@corefunc/corefunc/array/sort/bubble.mjs";
-bubbleSort([3, 1, 2]);
+    arraySortBubble,
+} from "@corefunc/corefunc/array/sort/bubble.js";
+arraySortBubble([3, 1, 2]);
 ```
 
 #### TypeScript
 
-```javascript
+```typescript
 import {
-  bubbleSort
+    arraySortBubble,
 } from "@corefunc/corefunc/array/sort/bubble";
-bubbleSort([3, 1, 2]);
+arraySortBubble([3, 1, 2]);
 ```
 
 ---
@@ -124,9 +114,6 @@ Also there is more useful links:
 
 [ts-img]: https://badgen.net/npm/types/@corefunc/corefunc?&icon=typescript&label=types&color=1E90FF&v=0.3.28
 [ts-url]: https://github.com/corefunc/corefunc/blob/master/index.ts
-
-[sonarcloud-img]: https://sonarcloud.io/api/project_badges/measure?project=r37r0m0d3l_header-range-parser&metric=sqale_rating&v=0.3.28
-[sonarcloud-url]: https://sonarcloud.io/dashboard?id=r37r0m0d3l_header-range-parser
 
 [codefactor-img]: https://www.codefactor.io/repository/github/corefunc/corefunc/badge?&style=flat-square&v=0.3.28
 [codefactor-url]: https://www.codefactor.io/repository/github/corefunc/corefunc

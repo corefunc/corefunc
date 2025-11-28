@@ -1,5 +1,5 @@
-import { checkIsKeyed } from "../check/is-keyed";
-import { checkIsObjectLike } from "../check/is-object-like";
+import { checkIsKeyed } from "../check/is-keyed.js";
+import { checkIsObjectLike } from "../check/is-object-like.js";
 
 /**
  * Pick object property from list of names

@@ -1,7 +1,4 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.objectIsOwnProperty = void 0;
-const is_object_like_1 = require("../../check/is-object-like");
+import { checkIsObjectLike } from "../../check/is-object-like.js";
 /**
  * @category Object Get
  * @name objectGetProperty
@@ -12,13 +9,13 @@ const is_object_like_1 = require("../../check/is-object-like");
  * @returns {Boolean} Is own property.
  * @since 0.1.55
  */
-function objectIsOwnProperty(object, key) {
+export function objectIsOwnProperty(object, key) {
     if (!object) {
         return false;
     }
-    if (is_object_like_1.checkIsObjectLike(object) === false) {
+    if (checkIsObjectLike(object) === false) {
         return false;
     }
     return Object.prototype.hasOwnProperty.call(object, key);
 }
-exports.objectIsOwnProperty = objectIsOwnProperty;
+//# sourceMappingURL=own-property.js.map

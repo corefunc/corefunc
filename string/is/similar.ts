@@ -1,8 +1,8 @@
-import { castToString } from "../../cast/to/string";
-import { numberRanged } from "../../number/ranged";
-import { stringClearReferences } from "../clear/references";
-import { stringIsComparable } from "./comparable";
-import { stringFindSimilarity } from "../find/similarity";
+import { castToString } from "../../cast/to/string.js";
+import { numberRanged } from "../../number/ranged.js";
+import { stringClearReferences } from "../clear/references.js";
+import { stringIsComparable } from "./comparable.js";
+import { stringFindSimilarity } from "../find/similarity.js";
 
 /**
  * Finds degree of similarity between two strings using Sørensen–Dice coefficient

@@ -1,4 +1,4 @@
-import { jsonParseSafe } from "./safe";
+import { jsonParseSafe } from "./safe.js";
 
 /**
  * @category JSON Parse

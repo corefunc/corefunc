@@ -1,7 +1,4 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.objectSetDefaults = void 0;
-const is_object_like_1 = require("../../check/is-object-like");
+import { checkIsObjectLike } from "../../check/is-object-like.js";
 /**
  * @category Object Set
  * @name objectSetDefaults
@@ -14,16 +11,16 @@ const is_object_like_1 = require("../../check/is-object-like");
  * @example objectSetDefaults({ val: null }, { val: true }) // { val: null }
  * @example objectSetDefaults({ val: "text" }, { val: true }) // { val: "text" }
  */
-function objectSetDefaults(destination, source, options = {
+export function objectSetDefaults(destination, source, options = {
     arrayMergeToUnique: false,
     nullAsUndefined: false,
     objectDeepMerge: false,
     undefinedPreservation: false,
 }) {
-    if (!is_object_like_1.checkIsObjectLike(destination)) {
+    if (!checkIsObjectLike(destination)) {
         return objectSetDefaults({}, source);
     }
-    if (!is_object_like_1.checkIsObjectLike(source)) {
+    if (!checkIsObjectLike(source)) {
         return objectSetDefaults(destination, {});
     }
     const obj = Object.assign(Object.create(Object.getPrototypeOf(destination)));
@@ -49,7 +46,7 @@ function objectSetDefaults(destination, source, options = {
             }
             return;
         }
-        if (is_object_like_1.checkIsObjectLike(valSrc) && is_object_like_1.checkIsObjectLike(valDest)) {
+        if (checkIsObjectLike(valSrc) && checkIsObjectLike(valDest)) {
             if (valSrc instanceof Date ||
                 valSrc instanceof Error ||
                 valSrc instanceof Map ||
@@ -97,4 +94,4 @@ function objectSetDefaults(destination, source, options = {
     });
     return obj;
 }
-exports.objectSetDefaults = objectSetDefaults;
+//# sourceMappingURL=defaults.js.map

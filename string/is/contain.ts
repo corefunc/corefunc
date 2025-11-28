@@ -1,5 +1,5 @@
-import { castToString } from "../../cast/to/string";
-import { stringClearReferences } from "../clear/references";
+import { castToString } from "../../cast/to/string.js";
+import { stringClearReferences } from "../clear/references.js";
 
 /**
  * Perform search in string

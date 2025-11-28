@@ -1,6 +1,3 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.checkIsObjectLike = void 0;
 /**
  * @category Check Like
  * @name checkIsObjectLike
@@ -14,7 +11,7 @@ exports.checkIsObjectLike = void 0;
  * @example checkIsObjectLike(null); ➜ false
  * @since 0.0.1
  */
-function checkIsObjectLike(value) {
+export function checkIsObjectLike(value) {
     return value && typeof value === "object" && !Array.isArray(value);
 }
-exports.checkIsObjectLike = checkIsObjectLike;
+//# sourceMappingURL=is-object-like.js.map

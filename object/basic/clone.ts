@@ -1,4 +1,4 @@
-import { checkIsPrimitive } from "../../check/is-primitive";
+import { checkIsPrimitive } from "../../check/is-primitive.js";
 
 export type TransferableObjectType =
   | ArrayBuffer
@@ -19,28 +19,28 @@ export type TransferableObjectType =
  * @summary ```import { objectBasicClone } from "@corefunc/corefunc/object/basic/clone";```
  * @template {ValueType}
  * @param {unknown} value The object to be cloned. This can be any structured-clonable type.
- * @param {ReadonlyArray<TransferableObjectType>=} [transfer] An list of transferable objects in value that will be moved rather than cloned to the returned object.
+ * @param {StructuredSerializeOptions['transfer']=} [transfer] An list of transferable objects in value that will be moved rather than cloned to the returned object.
  * @returns {ValueType} The returned value is a deep copy of the original value.
  * @since 0.3.20
  */
 export function objectBasicClone<ValueType>(
   value: ValueType,
-  transfer?: ReadonlyArray<import("worker_threads").TransferListItem>,
+  transfer?: StructuredSerializeOptions["transfer"],
 ): ValueType {
   if (checkIsPrimitive(value)) {
     return value;
   }
   if ("structuredClone" in globalThis) {
     try {
-      let cloned;
+      let cloned: ValueType;
       if (transfer) {
         cloned = globalThis.structuredClone(value, { transfer });
       } else {
         cloned = globalThis.structuredClone(value);
       }
       return cloned;
-    } catch (_dataCloneError: any) {
-      //
+    } catch {
+      // intentionally ignore errors
     }
   }
   return value;

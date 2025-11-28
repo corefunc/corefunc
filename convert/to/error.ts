@@ -1,5 +1,5 @@
-import { castToString } from "../../cast/to/string";
-import { isError } from "../../is/error";
+import { castToString } from "../../cast/to/string.js";
+import { isError } from "../../is/error.js";
 
 /**
  * @category Convert

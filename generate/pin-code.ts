@@ -1,4 +1,4 @@
-import { generateString } from "./string";
+import { generateString } from "./string.js";
 
 const NUMBERS = "0123456789" as const;
 

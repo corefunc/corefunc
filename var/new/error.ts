@@ -1,5 +1,5 @@
-import { checkIsErrorLike } from "../../check/is-error-like";
-import { isString } from "../../is/string";
+import { checkIsErrorLike } from "../../check/is-error-like.js";
+import { isString } from "../../is/string.js";
 
 /**
  * @category Variable New
@@ -29,14 +29,12 @@ export function newError(message: any, cause?: any, name?: string): Error {
   let error: Error | undefined = undefined;
   if (isString(message)) {
     if (causeUse) {
-      // @ts-ignore
       error = new Error(message, { cause: causeUse });
     } else {
       error = new Error(message);
     }
   } else if (checkIsErrorLike(message)) {
     if (causeUse) {
-      // @ts-ignore
       error = new Error(message.message, { cause: causeUse });
     } else {
       error = new Error(message.message);
@@ -50,7 +48,6 @@ export function newError(message: any, cause?: any, name?: string): Error {
       messageUse = String(message);
     }
     if (causeUse) {
-      // @ts-ignore
       error = new Error(messageUse, { cause: causeUse });
     } else {
       error = new Error(messageUse);

@@ -1,6 +1,3 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.arrayToSorted = void 0;
 /**
  * @name arrayToSorted
  * @category Array To
@@ -11,7 +8,7 @@ exports.arrayToSorted = void 0;
  * @returns {Array} Sorted array.
  * @since 0.3.62
  */
-function arrayToSorted(array, compareFn) {
+export function arrayToSorted(array, compareFn) {
     return Array.from(array).sort(compareFn);
 }
-exports.arrayToSorted = arrayToSorted;
+//# sourceMappingURL=sorted.js.map

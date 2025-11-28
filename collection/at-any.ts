@@ -1,4 +1,4 @@
-import { checkIsObjectLike } from "../check/is-object-like";
+import { checkIsObjectLike } from "../check/is-object-like.js";
 
 /**
  * @name collectionAtAny
@@ -8,8 +8,8 @@ import { checkIsObjectLike } from "../check/is-object-like";
  * @param {*=} onFail
  * @returns {*}
  */
-export function collectionAtAny(object, propertyNames, onFail) {
-  if (checkIsObjectLike(object) === false) {
+export function collectionAtAny<T>(object: Record<string, T>, propertyNames: Array<string>, onFail: T): T {
+  if (!checkIsObjectLike(object)) {
     return onFail;
   }
   if (Array.isArray(propertyNames) === false) {
@@ -28,8 +28,8 @@ export function collectionAtAny(object, propertyNames, onFail) {
 // // import fnEntries from 'lodash/entries';
 //
 // // import fnForEach from '../collection/forEach';
-// import fnKeys from '../collection/keys';
-// import fnValues from '../collection/values';
+// import fnKeys from '../collection/keys.js';
+// import fnValues from '../collection/values.js';
 //
 // /**
 //  * Pick object property from list of names
@@ -37,7 +37,7 @@ export function collectionAtAny(object, propertyNames, onFail) {
 //  * @param {Array} propertyNames
 //  * @param {*=} defaultValue
 //  * @param {Boolean=false} strictNames
-//  * @return {*}
+//  * @returns {*}
 //  */
 // function atAny(iterable, propertyNames, defaultValue = undefined, strictNames = false) {
 //   if (!iterable || !propertyNames) {

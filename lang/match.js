@@ -1,7 +1,4 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.match = void 0;
-const string_1 = require("../is/string");
+import { isString } from "../is/string.js";
 /**
  * @category Language
  * @name match
@@ -13,11 +10,14 @@ const string_1 = require("../is/string");
  * @param {boolean} [convertToString=false]
  * @returns {*}
  * @since 0.3.3
- * @example ```match(String(5), { "1": "One", "3": "Three", "5": "Five" }); ➜ "Five"```
- * @example ```match(5, new Map([ ["5", "Oh no!"], [5, "OK"], ])); ➜ "OK"```
- * @example ```match(5, { 5: "Five" }, undefined, true); ➜ "Five"```
+ * @example Usage:
+ * ```ts
+ * match(String(5), { "1": "One", "3": "Three", "5": "Five" }); // ➜ "Five"
+ * match(5, new Map([ ["5", "Oh no!"], [5, "OK"], ])); // ➜ "OK"
+ * match(5, { 5: "Five" }, undefined, true); // ➜ "Five"
+ * ```
  */
-function match(value, subjectExpression, defaultValue = undefined, convertToString = false) {
+export function match(value, subjectExpression, defaultValue = undefined, convertToString = false) {
     if (!subjectExpression || typeof subjectExpression !== "object" || Array.isArray(subjectExpression)) {
         return defaultValue;
     }
@@ -27,7 +27,7 @@ function match(value, subjectExpression, defaultValue = undefined, convertToStri
         }
         return defaultValue;
     }
-    if (!convertToString && !string_1.isString(value)) {
+    if (!convertToString && !isString(value)) {
         return defaultValue;
     }
     const key = String(value);
@@ -36,4 +36,4 @@ function match(value, subjectExpression, defaultValue = undefined, convertToStri
     }
     return defaultValue;
 }
-exports.match = match;
+//# sourceMappingURL=match.js.map

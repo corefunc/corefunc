@@ -3,7 +3,7 @@
  * @description Generate random string from latin characters and numbers
  * @param {Number} size
  * @param {String} possible
- * @return {String}
+ * @returns {String}
  */
 export function generateString(
   size: number,

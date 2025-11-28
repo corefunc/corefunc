@@ -5,6 +5,6 @@
  * @param {String} string
  * @param {RegExp | [string, string] | string} pattern
  * @param {*=false} onFail
- * @return {Boolean}
+ * @returns {Boolean}
  */
 export declare function regexMatch(string: string, pattern: RegExp | [string, string] | string, onFail?: boolean): boolean;

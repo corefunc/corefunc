@@ -1,24 +1,24 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.funcCallVoid = void 0;
-function funcCallVoid(callback, args) {
-    if (!callback) {
+// TypeScript
+export function funcCallVoid(callback, args) {
+    if (typeof callback !== "function") {
         return;
     }
-    switch (Object.prototype.toString.call(callback)) {
+    const callArgs = args ?? [];
+    const tag = Object.prototype.toString.call(callback);
+    switch (tag) {
         case "[object AsyncFunction]":
-            callback(...args)
+            callback(...callArgs)
                 .then(() => { })
                 .catch(() => { });
             break;
         case "[object Function]":
             try {
-                callback(...args);
+                callback(...callArgs);
             }
-            catch (_error) {
-                //
+            catch {
+                // intentionally ignore exceptions
             }
             break;
     }
 }
-exports.funcCallVoid = funcCallVoid;
+//# sourceMappingURL=call-void.js.map

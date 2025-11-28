@@ -1,5 +1,5 @@
-import { checkIsPrimitive } from "../check/is-primitive";
-import { isString } from "../is/string";
+import { checkIsPrimitive } from "../check/is-primitive.js";
+import { isString } from "../is/string.js";
 
 /**
  * @category Is Valid

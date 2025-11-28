@@ -3,7 +3,7 @@
  * @name generateToken
  * @description Generate random string from latin characters and numbers.
  * @param {Number} [size=16]
- * @return {String}
+ * @returns {String}
  */
 export function generateToken(size: number = 16): string {
   const random = new Array(size);

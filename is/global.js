@@ -1,7 +1,10 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.isGlobal = void 0;
-function isGlobal(value) {
+/**
+ * @name isGlobal
+ * @description Determine whether a value is the global object (globalThis/Window) in the current environment.
+ * @param {*} value The value to check.
+ * @returns {boolean} True if the value is the global object, otherwise false.
+ */
+export function isGlobal(value) {
     return ["[object global]", "[object Window]"].includes(Object.prototype.toString.call(value));
 }
-exports.isGlobal = isGlobal;
+//# sourceMappingURL=global.js.map

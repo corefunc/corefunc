@@ -1,7 +1,4 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.collectionAtAny = void 0;
-const is_object_like_1 = require("../check/is-object-like");
+import { checkIsObjectLike } from "../check/is-object-like.js";
 /**
  * @name collectionAtAny
  * @description Pick object property from list of names
@@ -10,8 +7,8 @@ const is_object_like_1 = require("../check/is-object-like");
  * @param {*=} onFail
  * @returns {*}
  */
-function collectionAtAny(object, propertyNames, onFail) {
-    if (is_object_like_1.checkIsObjectLike(object) === false) {
+export function collectionAtAny(object, propertyNames, onFail) {
+    if (!checkIsObjectLike(object)) {
         return onFail;
     }
     if (Array.isArray(propertyNames) === false) {
@@ -25,13 +22,12 @@ function collectionAtAny(object, propertyNames, onFail) {
     }
     return onFail;
 }
-exports.collectionAtAny = collectionAtAny;
 // import fnIsObjectLike from 'lodash/isObjectLike';
 // // import fnEntries from 'lodash/entries';
 //
 // // import fnForEach from '../collection/forEach';
-// import fnKeys from '../collection/keys';
-// import fnValues from '../collection/values';
+// import fnKeys from '../collection/keys.js';
+// import fnValues from '../collection/values.js';
 //
 // /**
 //  * Pick object property from list of names
@@ -39,7 +35,7 @@ exports.collectionAtAny = collectionAtAny;
 //  * @param {Array} propertyNames
 //  * @param {*=} defaultValue
 //  * @param {Boolean=false} strictNames
-//  * @return {*}
+//  * @returns {*}
 //  */
 // function atAny(iterable, propertyNames, defaultValue = undefined, strictNames = false) {
 //   if (!iterable || !propertyNames) {
@@ -75,3 +71,4 @@ exports.collectionAtAny = collectionAtAny;
 // }
 //
 // export default atAny;
+//# sourceMappingURL=at-any.js.map

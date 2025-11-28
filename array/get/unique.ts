@@ -10,7 +10,7 @@ export function arrayGetUnique(array: any[], sort = true): any[] {
   if (array.length < 2) {
     return [...array];
   }
-  let unique = [];
+  let unique: Array<unknown> = [];
   {
     const set = new Set();
     for (const item of array) {

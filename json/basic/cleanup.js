@@ -1,9 +1,6 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.jsonCleanup = void 0;
-const string_1 = require("../../cast/to/string");
-const escaped_1 = require("../../string/make/escaped");
-function jsonCleanup(text) {
-    return escaped_1.stringMakeEscaped(string_1.castToString(text));
+import { castToString } from "../../cast/to/string.js";
+import { stringMakeEscaped } from "../../string/make/escaped.js";
+export function jsonCleanup(text) {
+    return stringMakeEscaped(castToString(text));
 }
-exports.jsonCleanup = jsonCleanup;
+//# sourceMappingURL=cleanup.js.map

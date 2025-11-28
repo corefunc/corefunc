@@ -1,4 +1,4 @@
-import { textCaseSnake } from "./snake";
+import { textCaseSnake } from "./snake.js";
 
 /**
  * @category Text Case

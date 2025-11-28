@@ -1,6 +1,3 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.checkIsArrayKnown = void 0;
 /**
  * @name checkIsArrayKnown
  * @param {Array} array
@@ -19,7 +16,7 @@ exports.checkIsArrayKnown = void 0;
  * // TS2345: Argument of type 'number[]' is not assignable to parameter of type 'string[]'.
  * // Type 'number' is not assignable to type 'string'.
  */
-function checkIsArrayKnown(array) {
+export function checkIsArrayKnown(array) {
     return Array.isArray(array);
 }
-exports.checkIsArrayKnown = checkIsArrayKnown;
+//# sourceMappingURL=is-array-known.js.map

@@ -1,3 +1,4 @@
+// typescript
 /**
  * @category Object Keys
  * @name objectKeysPick
@@ -9,28 +10,32 @@
  * @returns {Object} New plain object.
  */
 export function objectKeysPick<
-  GenericObject extends Record<number | string | symbol, Value>,
-  Keys extends string[] | ReadonlyArray<string>,
-  PartialObject extends Record<keyof Keys, Value | undefined>,
-  Value,
-  DefineMissing extends boolean = false,
+  T extends Record<PropertyKey, V>,
+  K extends ReadonlyArray<string>,
+  V = T[keyof T],
+  D extends boolean = false,
 >(
-  instance: GenericObject,
-  keys: Keys,
-  defineMissing: DefineMissing,
-): DefineMissing extends true ? Partial<PartialObject> : PartialObject {
+  instance: T,
+  keys: K,
+  defineMissing?: D,
+): D extends true ? Partial<Record<K[number], V | undefined>> : Partial<Record<K[number], V>> {
+  const result = {} as Partial<Record<K[number], V | undefined>>;
+
   if (!keys.length || !Object.keys(instance ?? {}).length) {
     if (defineMissing) {
-      return Array.from(keys).reduce((accumulator: PartialObject, key: string) => {
-        accumulator[key] = undefined;
-        return accumulator;
-      }, {} as PartialObject);
+      for (const key of keys) {
+        result[key as K[number]] = undefined;
+      }
+      return result as any;
     } else {
-      return {} as PartialObject;
+      return {} as any;
     }
   }
-  return Array.from(keys).reduce((accumulator: PartialObject, key: string) => {
-    accumulator[key] = instance[key];
-    return accumulator;
-  }, {} as PartialObject);
+
+  for (const key of keys) {
+    // cast to satisfy the index type checks
+    result[key as K[number]] = (instance as Record<string, V>)[key];
+  }
+
+  return result as any;
 }

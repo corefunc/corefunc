@@ -1,9 +1,6 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.regexMatch = void 0;
-const string_1 = require("../../is/string");
-const regexp_1 = require("../../cast/to/regexp");
-const string_2 = require("../../cast/to/string");
+import { isString } from "../../is/string.js";
+import { castToRegExp } from "../../cast/to/regexp.js";
+import { castToString } from "../../cast/to/string.js";
 /**
  * @category RegEx Match
  * @name regexMatch
@@ -11,16 +8,16 @@ const string_2 = require("../../cast/to/string");
  * @param {String} string
  * @param {RegExp | [string, string] | string} pattern
  * @param {*=false} onFail
- * @return {Boolean}
+ * @returns {Boolean}
  */
-function regexMatch(string, pattern, onFail = false) {
-    if (string_1.isString(string) === false) {
+export function regexMatch(string, pattern, onFail = false) {
+    if (isString(string) === false) {
         return onFail;
     }
-    const regexp = regexp_1.castToRegExp(pattern);
+    const regexp = castToRegExp(pattern);
     if (!regexp) {
         return onFail;
     }
-    return regexp.test(string_2.castToString(string));
+    return regexp.test(castToString(string));
 }
-exports.regexMatch = regexMatch;
+//# sourceMappingURL=match.js.map

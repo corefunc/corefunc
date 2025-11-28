@@ -1,4 +1,4 @@
-import { castToFloat } from "./float";
+import { castToFloat } from "./float.js";
 
 /**
  * @category Cast To

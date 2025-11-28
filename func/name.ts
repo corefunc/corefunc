@@ -1,16 +1,16 @@
 /**
  * @name functionName
  * @description Extract function name
- * @param {Function} func
- * @return {string}
+ * @param {(...args: unknown[]) => unknown} func
+ * @returns {string}
  */
-export function functionName(func: Function): string {
+export function functionName(func: (...args: unknown[]) => unknown): string {
   if (func.name) {
     return func.name;
   }
-  const result = /^function\s+([\w]+)\s*\(/.exec(func.toString());
-  if (result) {
-    return result.shift();
+  const match = /^function\s+([\w]+)\s*\(/.exec(func.toString());
+  if (match) {
+    return match[1];
   }
   return "";
 }

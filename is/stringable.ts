@@ -1,6 +1,6 @@
-import { checkIsPrimitive } from "../check/is-primitive";
-import { isFunction } from "./function";
-import { isString } from "./string";
+import { checkIsPrimitive } from "../check/is-primitive.js";
+import { isFunction } from "./function.js";
+import { isString } from "./string.js";
 
 /**
  * @category Is

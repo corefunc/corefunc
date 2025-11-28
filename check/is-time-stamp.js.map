@@ -1,0 +1,1 @@
+{"version":3,"file":"is-time-stamp.js","sourceRoot":"","sources":["is-time-stamp.ts"],"names":[],"mappings":"AAAA;;;;GAIG;AACH,MAAM,UAAU,gBAAgB,CAAC,OAAwB;IACvD,MAAM,IAAI,GAAG,IAAI,IAAI,CAAC,GAAG,OAAO,EAAE,CAAC,CAAC;IACpC,OAAO,IAAI,GAAG,IAAI,IAAI,CAAC,qBAAqB,CAAC,IAAI,IAAI,GAAG,IAAI,IAAI,CAAC,qBAAqB,CAAC,CAAC;AAC1F,CAAC"}

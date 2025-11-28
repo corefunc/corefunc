@@ -1,29 +1,27 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.funcAttempt = void 0;
-const values_1 = require("../collection/values");
-const function_1 = require("../is/function");
+import { collectionValues } from "../collection/values.js";
+import { isFunction } from "../is/function.js";
 /**
  * @param {Function} callable
  * @param {Array} args
  * @param {Object=} context
  * @param {Boolean=false} catchExceptions
- * @return {*}
+ * @returns {*}
  */
-function funcAttempt(callable, args = [], context = null, catchExceptions = false) {
-    if (function_1.isFunction(callable) === false) {
+export function funcAttempt(callable, args = [], context = null, catchExceptions = false) {
+    if (!isFunction(callable)) {
         return undefined;
     }
+    const fn = callable;
     if (catchExceptions) {
         let returnValue;
         try {
-            returnValue = callable.apply(context, values_1.collectionValues(args));
+            returnValue = fn.apply(context, collectionValues(args));
         }
-        catch (error) {
-            //
+        catch {
+            // intentionally ignore exceptions
         }
         return returnValue;
     }
-    return callable.apply(context, values_1.collectionValues(args));
+    return fn.apply(context, collectionValues(args));
 }
-exports.funcAttempt = funcAttempt;
+//# sourceMappingURL=attempt.js.map

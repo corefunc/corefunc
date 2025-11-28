@@ -1,5 +1,5 @@
-import { jsonCleanup } from "../basic/cleanup";
-import { jsonParseUnsafe } from "./unsafe";
+import { jsonCleanup } from "../basic/cleanup.js";
+import { jsonParseUnsafe } from "./unsafe.js";
 
 /**
  * @category JSON Parse
@@ -9,7 +9,7 @@ import { jsonParseUnsafe } from "./unsafe";
  * @param {Boolean=} unsafe
  * @param {Boolean=} fix
  * @param {Function=} reviver
- * @return {*}
+ * @returns {*}
  * @url {https://www.youtube.com/watch?v=TTjYjSEGHek}
  */
 export function jsonParseSafe(
@@ -31,8 +31,8 @@ export function jsonParseSafe(
   } catch (exceptionOnParse) {
     if (unsafe) {
       try {
-        result = jsonParseUnsafe(text, new Error("JSON unsafe parse failed"));
-      } catch (exceptionOnEval) {
+        result = jsonParseUnsafe(text, new Error("JSON unsafe parse failed", { cause: exceptionOnParse }));
+      } catch {
         if (fix) {
           result = jsonParseSafe(jsonCleanup(text), defaultResult, true, false, reviver);
         }

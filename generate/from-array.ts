@@ -7,7 +7,7 @@
  * @returns {*} Value from array.
  * @since 0.1.58
  */
-export function generateFromArray<Type>(arrayFrom: Type[]): Type {
+export function generateFromArray<Type>(arrayFrom: Array<Type>): Type | undefined {
   if (!arrayFrom.length) {
     return undefined;
   }

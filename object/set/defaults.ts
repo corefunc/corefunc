@@ -1,4 +1,4 @@
-import { checkIsObjectLike } from "../../check/is-object-like";
+import { checkIsObjectLike } from "../../check/is-object-like.js";
 
 /**
  * @category Object Set
@@ -39,11 +39,11 @@ export function objectSetDefaults<Dest extends object, Src extends object>(
     .sort((alpha, beta) => alpha.localeCompare(beta))
     .forEach(function (key) {
       if (!(key in source)) {
-        obj[key] = destination[key];
+        obj[key] = (destination as Record<string, any>)[key];
         return;
       }
-      const valDest = destination[key];
-      const valSrc = source[key];
+      const valDest = (destination as Record<string, any>)[key];
+      const valSrc = (source as Record<string, any>)[key];
       if (valDest === undefined && valSrc === undefined) {
         if (options.undefinedPreservation) {
           obj[key] = undefined;

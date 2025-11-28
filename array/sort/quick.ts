@@ -1,10 +1,10 @@
-function swap(items, firstIndex, secondIndex) {
+function swap(items: Array<number>, firstIndex: number, secondIndex: number) {
   const temp = items[firstIndex];
   items[firstIndex] = items[secondIndex];
   items[secondIndex] = temp;
 }
 
-function partition(items, left, right) {
+function partition(items: Array<number>, left: number, right: number): number {
   const pivot = items[Math.floor((right + left) / 2)];
   let indexLeft = left;
   let indexRight = right;
@@ -24,12 +24,18 @@ function partition(items, left, right) {
   return indexLeft;
 }
 
+/**
+ * @name arraySortQuick
+ * @description Sort an array of numbers using the quick sort algorithm (in place).
+ * @param {Array.<number>} items Array of numbers to sort.
+ * @param {number} left Left index boundary.
+ * @param {number} right Right index boundary.
+ * @returns {Array.<number>} The sorted array.
+ */
 export function arraySortQuick(items: number[], left: number, right: number): number[] {
   let index;
   if (items.length > 1) {
-    // eslint-disable-next-line no-ternary
     const lefty = typeof left !== "number" ? 0 : left;
-    // eslint-disable-next-line no-ternary
     const rightly = typeof right !== "number" ? items.length - 1 : right;
     index = partition(items, lefty, rightly);
     if (lefty < index - 1) {

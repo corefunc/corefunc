@@ -1,7 +1,4 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.arraySearchBinary = void 0;
-function arraySearchBinary(array, target) {
+export function arraySearchBinary(array, target) {
     let start = 0;
     let end = array.length;
     let pivot = Math.floor((start + end) / 2);
@@ -21,4 +18,4 @@ function arraySearchBinary(array, target) {
     }
     return -1;
 }
-exports.arraySearchBinary = arraySearchBinary;
+//# sourceMappingURL=search-binary.js.map

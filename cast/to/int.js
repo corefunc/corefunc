@@ -1,6 +1,3 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.castToInt = void 0;
 /**
  * @category Cast To
  * @name castToInt
@@ -11,7 +8,7 @@ exports.castToInt = void 0;
  * @param {boolean=} [shouldBeSafe=true] Fits integer between MIN_SAFE_INTEGER and MAX_SAFE_INTEGER.
  * @returns {number} Any number.
  */
-function castToInt(value, returnOnFail = 0, isNanFail = true, shouldBeSafe = true) {
+export function castToInt(value, returnOnFail = 0, isNanFail = true, shouldBeSafe = true) {
     const type = typeof value;
     if (type === "number") {
         if (Number.isFinite(value)) {
@@ -59,4 +56,4 @@ function castToInt(value, returnOnFail = 0, isNanFail = true, shouldBeSafe = tru
     }
     return castToInt(String(value), returnOnFail, isNanFail, shouldBeSafe);
 }
-exports.castToInt = castToInt;
+//# sourceMappingURL=int.js.map

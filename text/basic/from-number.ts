@@ -1,4 +1,4 @@
-const a = [
+const ALPHA = [
   "",
   "one ",
   "two ",
@@ -20,10 +20,10 @@ const a = [
   "eighteen ",
   "nineteen ",
 ];
-const b = ["", "", "twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty", "ninety"];
+const BETA = ["", "", "twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty", "ninety"];
 
-const getLT20 = (n): string => a[Number(n)];
-const getGT20 = (n): string => b[n[0]] + " " + a[n[1]];
+const getLT20 = (num: any): string => ALPHA[Number(num)];
+const getGT20 = (num: any): string => BETA[num[0]] + " " + ALPHA[num[1]];
 
 /**
  * @category Text Basic
@@ -54,11 +54,11 @@ export function textFromNumber(numberToWords: number): string {
     .substr(-9)
     .match(/^(\d{2})(\d{2})(\d{2})(\d{1})(\d{2})$/) as unknown as number[];
   let str = "";
-  str += n1 != 0 ? (getLT20(n1) || getGT20(n1)) + "crore " : "";
-  str += n2 != 0 ? (getLT20(n2) || getGT20(n2)) + "lakh " : "";
-  str += n3 != 0 ? (getLT20(n3) || getGT20(n3)) + "thousand " : "";
-  str += n4 != 0 ? getLT20(n4) + "hundred " : "";
-  str += n5 != 0 && str != "" ? "and " : "";
-  str += n5 != 0 ? getLT20(n5) || getGT20(n5) : "";
+  str += n1 !== 0 ? (getLT20(n1) || getGT20(n1)) + "crore " : "";
+  str += n2 !== 0 ? (getLT20(n2) || getGT20(n2)) + "lakh " : "";
+  str += n3 !== 0 ? (getLT20(n3) || getGT20(n3)) + "thousand " : "";
+  str += n4 !== 0 ? getLT20(n4) + "hundred " : "";
+  str += n5 !== 0 && str !== "" ? "and " : "";
+  str += n5 !== 0 ? getLT20(n5) || getGT20(n5) : "";
   return str.trim();
 }

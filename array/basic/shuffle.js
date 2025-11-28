@@ -1,6 +1,3 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.arrayBasicShuffle = void 0;
 /**
  * @category Array Basic
  * @name arrayBasicShuffle
@@ -9,9 +6,12 @@ exports.arrayBasicShuffle = void 0;
  * @param {Array} array Array to be shuffled.
  * @returns {Array} Modified array.
  * @since 0.3.27
- * @example ```arrayBasicShuffle([2, 11, 37, 42])```
+ * @example Usage:
+ * ```ts
+ * arrayBasicShuffle([2, 11, 37, 42])
+ * ```
  */
-function arrayBasicShuffle(array) {
+export function arrayBasicShuffle(array) {
     let currentIndex = array.length;
     let randomIndex;
     while (currentIndex !== 0) {
@@ -21,4 +21,4 @@ function arrayBasicShuffle(array) {
     }
     return array;
 }
-exports.arrayBasicShuffle = arrayBasicShuffle;
+//# sourceMappingURL=shuffle.js.map

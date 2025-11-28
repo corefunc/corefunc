@@ -1,4 +1,4 @@
-import { castToString } from "../../cast/to/string";
+import { castToString } from "../../cast/to/string.js";
 
 export function stringMakeEscaped(text: string): string {
   return castToString(text)

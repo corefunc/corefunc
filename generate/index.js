@@ -1,22 +1,11 @@
-"use strict";
-var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
-}) : (function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    o[k2] = m[k];
-}));
-var __exportStar = (this && this.__exportStar) || function(m, exports) {
-    for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports, p)) __createBinding(exports, m, p);
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-__exportStar(require("./boolean"), exports);
-__exportStar(require("./color"), exports);
-__exportStar(require("./from-array"), exports);
-__exportStar(require("./integer"), exports);
-__exportStar(require("./pin-code"), exports);
-__exportStar(require("./range"), exports);
-__exportStar(require("./string"), exports);
-__exportStar(require("./token"), exports);
-__exportStar(require("./uuid"), exports);
-__exportStar(require("./uuid4"), exports);
+export * from "./boolean.js";
+export * from "./color.js";
+export * from "./from-array.js";
+export * from "./integer.js";
+export * from "./pin-code.js";
+export * from "./range.js";
+export * from "./string.js";
+export * from "./token.js";
+export * from "./uuid.js";
+export * from "./uuid4.js";
+//# sourceMappingURL=index.js.map

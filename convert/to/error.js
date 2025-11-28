@@ -1,8 +1,5 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.convertToError = void 0;
-const string_1 = require("../../cast/to/string");
-const error_1 = require("../../is/error");
+import { castToString } from "../../cast/to/string.js";
+import { isError } from "../../is/error.js";
 /**
  * @category Convert
  * @name convertToError
@@ -12,10 +9,10 @@ const error_1 = require("../../is/error");
  * @returns {Error|EvalError|RangeError|ReferenceError|SyntaxError|TypeError|URIError}
  * @since 0.3.47
  */
-function convertToError(error) {
-    if (error_1.isError(error)) {
+export function convertToError(error) {
+    if (isError(error)) {
         return error;
     }
-    return new Error(string_1.castToString(error));
+    return new Error(castToString(error));
 }
-exports.convertToError = convertToError;
+//# sourceMappingURL=error.js.map

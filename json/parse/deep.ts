@@ -1,18 +1,18 @@
-import { checkIsTraversable } from "../../check/is-traversable";
-import { collectionForEach } from "../../collection/for-each";
-import { jsonParseSafe } from "./safe";
+import { checkIsTraversable } from "../../check/is-traversable.js";
+import { collectionForEach } from "../../collection/for-each.js";
+import { jsonParseSafe } from "./safe.js";
 
 /**
  * @param {String} text
  * @param {*=} defaultResult
  * @param {Function=} reviver
- * @return {*}
+ * @returns {*}
  */
 export function jsonParseDeep(
   text: string,
-  defaultResult?: any,
+  defaultResult?: unknown,
   reviver?: (this: any, key: string, value: any) => any,
-): any {
+): unknown {
   const parsed = jsonParseSafe(text, defaultResult, true, true, reviver);
   if (checkIsTraversable(parsed)) {
     collectionForEach(parsed, (value, key) => {

@@ -1,3 +1,3 @@
-export function castSetToArray(set: Set<any>): any[] {
+export function castSetToArray<V>(set: Set<V>): Array<V> {
   return Array.from(set);
 }

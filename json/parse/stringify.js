@@ -1,11 +1,8 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.jsonParseStringify = void 0;
 /**
  * @param {String} text
- * @return {String}
+ * @returns {String}
  */
-function jsonParseStringify(text) {
+export function jsonParseStringify(text) {
     return JSON.stringify(JSON.parse(text));
 }
-exports.jsonParseStringify = jsonParseStringify;
+//# sourceMappingURL=stringify.js.map

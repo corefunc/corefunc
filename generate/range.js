@@ -1,11 +1,8 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.generateRange = void 0;
 /**
  * @category Generate
  * @description Number.range & BigInt.range
  * @param {number | bigint} from - Number to generate from
- * @param {number | bigint =} to - Number to generate until
+ * @param {number | bigint | undefined =} to - Number to generate until
  * @param {number | bigint | undefined = } step - Generation step
  * @param {"number" | "bigint" = } type - Number type
  * @returns {bigint|number|undefined}
@@ -49,7 +46,7 @@ function* CreateRangeIterator(from, to, step, type) {
     let lastValue = from;
     if (ifIncrease) {
         while (!(lastValue >= to)) {
-            let yielding = lastValue;
+            const yielding = lastValue;
             lastValue = from + step * currentCount;
             currentCount++;
             yield yielding;
@@ -57,7 +54,7 @@ function* CreateRangeIterator(from, to, step, type) {
     }
     else {
         while (!(to >= lastValue)) {
-            let yielding = lastValue;
+            const yielding = lastValue;
             lastValue = from + step * currentCount;
             currentCount++;
             yield yielding;
@@ -78,11 +75,11 @@ function* CreateRangeIterator(from, to, step, type) {
  * @param {"number"|"bigint"|="number"} type - Number type
  * @returns {Array.<bigint|number>}
  */
-function generateRange(from = 0, to = undefined, step = 1, type = "number") {
+export function generateRange(from = 0, to = undefined, step = 1, type = "number") {
     const array = [];
     for (const num of CreateRangeIterator(from, to, step, type)) {
         array.push(num);
     }
     return array;
 }
-exports.generateRange = generateRange;
+//# sourceMappingURL=range.js.map

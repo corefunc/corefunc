@@ -1,7 +1,4 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.errorToMessage = void 0;
-const string_1 = require("../../is/string");
+import { isString } from "../../is/string.js";
 /**
  * @category Convert Error
  * @name errorToMessage
@@ -12,20 +9,20 @@ const string_1 = require("../../is/string");
  * @returns {string} - Error message as string.
  * @since 0.3.43
  */
-function errorToMessage(error, defaultMessage) {
+export function errorToMessage(error, defaultMessage) {
     switch (Object.prototype.toString.call(error)) {
         case "[object Error]":
             return String(error?.message);
         case "[object String]":
             return String(error);
         case "[object Object]":
-            if (string_1.isString(error?.message)) {
+            if (isString(error?.message)) {
                 return String(error.message);
             }
     }
-    if (string_1.isString(defaultMessage)) {
+    if (isString(defaultMessage)) {
         return String(defaultMessage);
     }
     return String(error);
 }
-exports.errorToMessage = errorToMessage;
+//# sourceMappingURL=message.js.map

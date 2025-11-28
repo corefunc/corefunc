@@ -13,8 +13,5 @@ export function isError(
   if (error instanceof Error) {
     return true;
   }
-  if (Object.prototype.toString.call(error) === "[object Error]") {
-    return true;
-  }
-  return false;
+  return Object.prototype.toString.call(error) === "[object Error]";
 }

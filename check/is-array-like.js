@@ -1,6 +1,3 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.checkIsArrayLike = void 0;
 /**
  * @category Check Like
  * @name checkIsArrayLike
@@ -8,7 +5,7 @@ exports.checkIsArrayLike = void 0;
  * @returns {boolean}
  * @since 0.0.96
  */
-function checkIsArrayLike(arrayLike) {
+export function checkIsArrayLike(arrayLike) {
     if (!arrayLike) {
         return false;
     }
@@ -20,6 +17,7 @@ function checkIsArrayLike(arrayLike) {
     }
     return (Object.hasOwnProperty.call(arrayLike, "length") &&
         typeof arrayLike.length === "number" &&
+        // @ts-expect-error Property may not be defined on any type
         typeof arrayLike[Symbol.iterator] === "function");
 }
-exports.checkIsArrayLike = checkIsArrayLike;
+//# sourceMappingURL=is-array-like.js.map

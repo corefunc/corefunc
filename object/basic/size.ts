@@ -7,6 +7,6 @@
  * @returns {Number} Count of properties.
  * @since 0.1.55
  */
-export function objectBasicSize<ObjectType extends Record<string, any>>(object: ObjectType): number {
+export function objectBasicSize<ObjectType extends Record<string, unknown>>(object: ObjectType): number {
   return Object.keys(object).length;
 }

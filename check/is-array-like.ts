@@ -18,6 +18,7 @@ export function checkIsArrayLike(arrayLike: unknown): boolean {
   return (
     Object.hasOwnProperty.call(arrayLike, "length") &&
     typeof (arrayLike as unknown[]).length === "number" &&
+    // @ts-expect-error Property may not be defined on any type
     typeof arrayLike[Symbol.iterator] === "function"
   );
 }

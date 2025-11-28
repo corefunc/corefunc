@@ -8,8 +8,8 @@
  * @see http://stackoverflow.com/questions/2970525/converting-any-string-into-camel-case
  */
 export function textCaseCamel(text: string, firstCapital: boolean = false): string {
-  return text.replace(/^([A-Z])|[\s-_](\w)/g, function (match, p1, p2, offset) {
-    if (firstCapital === true && offset === 0) {
+  return text.replace(/^([A-Z])|[\s-_](\w)/g, function (_match: string, p1, p2, offset) {
+    if (firstCapital && offset === 0) {
       return p1;
     }
     if (p2) {

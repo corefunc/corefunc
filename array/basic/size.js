@@ -1,7 +1,10 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.arrayBasicSize = void 0;
-function arrayBasicSize(array) {
+/**
+ * @name arrayBasicSize
+ * @description Compute the number of elements in an array-like structure.
+ * @param {Array} array The array to measure.
+ * @returns {Number} The count of elements.
+ */
+export function arrayBasicSize(array) {
     return array.reduce((size) => size + 1, 0);
 }
-exports.arrayBasicSize = arrayBasicSize;
+//# sourceMappingURL=size.js.map

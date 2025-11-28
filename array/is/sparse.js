@@ -1,6 +1,3 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.arrayIsSparse = void 0;
 /**
  * @category Array Is
  * @name arrayIsSparse
@@ -9,7 +6,7 @@ exports.arrayIsSparse = void 0;
  * @returns {boolean}
  * @since 0.3.5
  */
-function arrayIsSparse(array) {
+export function arrayIsSparse(array) {
     return array.length > Object.keys(array).length;
 }
-exports.arrayIsSparse = arrayIsSparse;
+//# sourceMappingURL=sparse.js.map

@@ -1,11 +1,8 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.isMap = void 0;
 /**
  * @param {*} value
- * @return {boolean}
+ * @returns {boolean}
  */
-function isMap(value) {
+export function isMap(value) {
     return value instanceof Map;
 }
-exports.isMap = isMap;
+//# sourceMappingURL=map.js.map

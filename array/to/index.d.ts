@@ -1,3 +1,3 @@
-export * from "./reversed";
-export * from "./sorted";
-export * from "./spliced";
+export * from "./reversed.js";
+export * from "./sorted.js";
+export * from "./spliced.js";

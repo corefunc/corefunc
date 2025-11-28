@@ -1,8 +1,5 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.isEmpty = void 0;
-const is_primitive_1 = require("../check/is-primitive");
-const string_1 = require("../is/string");
+import { checkIsPrimitive } from "../check/is-primitive.js";
+import { isString } from "../is/string.js";
 /**
  * @category Is Valid
  * @name isEmpty
@@ -11,12 +8,12 @@ const string_1 = require("../is/string");
  * @param {*} [value] Any value.
  * @returns {Boolean}
  */
-function isEmpty(value) {
+export function isEmpty(value) {
     if (value === null || value === undefined) {
         return true;
     }
-    if (is_primitive_1.checkIsPrimitive(value)) {
-        if (string_1.isString(value)) {
+    if (checkIsPrimitive(value)) {
+        if (isString(value)) {
             return value.length === 0;
         }
         return !value;
@@ -32,4 +29,4 @@ function isEmpty(value) {
     }
     return Object.keys(value).length === 0;
 }
-exports.isEmpty = isEmpty;
+//# sourceMappingURL=is-empty.js.map

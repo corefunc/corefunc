@@ -1,11 +1,11 @@
-export declare type JsonPrimitiveType = boolean | null | number | string;
+export type JsonPrimitiveType = boolean | null | number | string;
 export interface JsonArrayType extends Array<JsonType> {
     [key: number]: JsonType;
 }
 export interface JsonObjectType extends Record<string, JsonType> {
     [key: string]: JsonType;
 }
-export declare type JsonType = JsonPrimitiveType | JsonArrayType | JsonObjectType;
+export type JsonType = JsonPrimitiveType | JsonArrayType | JsonObjectType;
 /**
  * @category JSON Basic
  * @name jsonJsonify
@@ -17,6 +17,9 @@ export declare type JsonType = JsonPrimitiveType | JsonArrayType | JsonObjectTyp
  * @param {Boolean=} [fix=true] Fix incorrect JSON string.
  * @returns {JsonType} Plain value or plain object.
  * @since 0.0.87
- * @example ```jsonJsonify({ 1: "one" }) ➜ {"1":"one"}```
+ * @example Usage:
+ * ```ts
+ * jsonJsonify({ 1: "one" }) // ➜ {"1":"one"}
+ * ```
  */
 export declare function jsonJsonify(value: any, defaultResult?: any, unsafe?: boolean, fix?: boolean): JsonType;

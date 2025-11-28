@@ -1,4 +1,4 @@
-import { isFunction } from "../is/function";
+import { isFunction } from "../is/function.js";
 
 export function checkIsCallable(value: any): boolean {
   if (!value) {

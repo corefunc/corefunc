@@ -1,6 +1,3 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.arraySortQuick = void 0;
 function swap(items, firstIndex, secondIndex) {
     const temp = items[firstIndex];
     items[firstIndex] = items[secondIndex];
@@ -25,12 +22,18 @@ function partition(items, left, right) {
     }
     return indexLeft;
 }
-function arraySortQuick(items, left, right) {
+/**
+ * @name arraySortQuick
+ * @description Sort an array of numbers using the quick sort algorithm (in place).
+ * @param {Array.<number>} items Array of numbers to sort.
+ * @param {number} left Left index boundary.
+ * @param {number} right Right index boundary.
+ * @returns {Array.<number>} The sorted array.
+ */
+export function arraySortQuick(items, left, right) {
     let index;
     if (items.length > 1) {
-        // eslint-disable-next-line no-ternary
         const lefty = typeof left !== "number" ? 0 : left;
-        // eslint-disable-next-line no-ternary
         const rightly = typeof right !== "number" ? items.length - 1 : right;
         index = partition(items, lefty, rightly);
         if (lefty < index - 1) {
@@ -42,4 +45,4 @@ function arraySortQuick(items, left, right) {
     }
     return items;
 }
-exports.arraySortQuick = arraySortQuick;
+//# sourceMappingURL=quick.js.map

@@ -1,9 +1,6 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.stringMakeEscaped = void 0;
-const string_1 = require("../../cast/to/string");
-function stringMakeEscaped(text) {
-    return string_1.castToString(text)
+import { castToString } from "../../cast/to/string.js";
+export function stringMakeEscaped(text) {
+    return castToString(text)
         .replace(/\\{3}/g, "")
         .replace(/\\{2}r/g, "")
         .replace(/\\{2}n/g, "")
@@ -20,4 +17,4 @@ function stringMakeEscaped(text) {
     // .replace(/\\b/g, "\\b")
     // .replace(/\\f/g, "\\f")
 }
-exports.stringMakeEscaped = stringMakeEscaped;
+//# sourceMappingURL=escaped.js.map

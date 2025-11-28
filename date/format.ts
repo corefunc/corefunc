@@ -8,7 +8,10 @@
  * @param {boolean=} [useLocalTime=true] Use timezone offset or UTC time.
  * @returns {string} Formatted date.
  * @since 0.3.23
- * @example ```dateFormat("{YYYY}-{MM}-{DD}T{HH}:{mm}:{ss}", new Date(), true) ➜ "2020-06-15T12:30:30"```
+ * @example Usage:
+ * ```ts
+ * dateFormat("{YYYY}-{MM}-{DD}T{HH}:{mm}:{ss}", new Date(), true) // ➜ "2020-06-15T12:30:30"
+ * ```
  */
 export function dateFormat(
   format: string = "{YYYY}-{MM}-{DD}T{HH}:{mm}:{ss}",
@@ -29,6 +32,9 @@ export function dateFormat(
     [key: string]: string;
   };
   const record = { D, DD, H, HH, M, MM, YY, YYYY, m, mm, s, ss, sss, timezone };
-  const result = format.replace(/{([^{]+)}/g, (_ignore: any, key: string) => ((key = record[key]) === null ? "" : key));
+  const result = format.replace(/{([^{]+)}/g, (_ignore: any, key: string) => {
+    key = record[key as keyof typeof record];
+    return key === null ? "" : key;
+  });
   return result === "undefined" ? "" : result;
 }

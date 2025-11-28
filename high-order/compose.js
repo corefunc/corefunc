@@ -1,13 +1,13 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.highOrderCompose = void 0;
 /**
  * @description f . g = f(g(x))
  * @param {...function} functions
- * @returns {*|(function(...[*]): *)}
+ * @returns {(...args: unknown[]) => unknown}
  * @example compose((y) => y + 5, (x) => x * 2) // 2 * 2 + 5 => 9
  */
-function highOrderCompose(...functions) {
+export function highOrderCompose(...functions) {
+    if (functions.length === 0) {
+        return (...args) => args[0];
+    }
     return functions.reduce((func, apply) => (...args) => func(apply(...args)));
 }
-exports.highOrderCompose = highOrderCompose;
+//# sourceMappingURL=compose.js.map

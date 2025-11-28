@@ -1,6 +1,3 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.numberZeroPad = void 0;
 /**
  * @category Number
  * @name numberZeroPad
@@ -29,7 +26,7 @@ exports.numberZeroPad = void 0;
  * numberZeroPad(1234567.89, 4, 3); // ➜ '1234567.890'
  * ```
  */
-function numberZeroPad(numberToPad = 0, leadingLength = 0, decimalLength) {
+export function numberZeroPad(numberToPad = 0, leadingLength = 0, decimalLength) {
     if (!Number.isInteger(leadingLength)) {
         throw new TypeError(`The leading length should be an integer. [${leadingLength}] given.`);
     }
@@ -76,4 +73,4 @@ function numberZeroPad(numberToPad = 0, leadingLength = 0, decimalLength) {
     }
     return padded;
 }
-exports.numberZeroPad = numberZeroPad;
+//# sourceMappingURL=zero-pad.js.map

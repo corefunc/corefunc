@@ -1,9 +1,10 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.checkIsIterable = void 0;
-const function_1 = require("../is/function");
-const iterator_symbol_1 = require("../lang/iterator-symbol");
-function checkIsIterable(object) {
-    return Boolean(object) && function_1.isFunction(object[iterator_symbol_1.langIteratorSymbol]);
+import { isFunction } from "../is/function.js";
+import { langIteratorSymbol } from "../lang/iterator-symbol.js";
+export function checkIsIterable(object) {
+    if (object === null) {
+        return false;
+    }
+    const maybe = object;
+    return isFunction(maybe[langIteratorSymbol]);
 }
-exports.checkIsIterable = checkIsIterable;
+//# sourceMappingURL=is-iterable.js.map

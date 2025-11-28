@@ -1,11 +1,11 @@
-"use strict";
+export {};
 // import * as fnCloneDeep from "lodash-es/cloneDeep";
 // import * as fnHead from "lodash-es/head";
 // import * as fnKeys from "lodash-es/keys";
 // import * as fnSortBy from "lodash-es/sortBy";
 //
-// import { isMap } from "../is/map";
-// import { isSet } from "../is/set";
+// import { isMap } from "../is/map.js";
+// import { isSet } from "../is/set.js";
 // import { checkIsTraversable } from "../check/isTraversable";
 //
 // /**
@@ -13,7 +13,7 @@
 //  * @param {Arguments|Array|Map|Object|Set|WeakMap|WeakSet} iterable
 //  * @param {Boolean=true} clone
 //  * @param {*=} defaultValue
-//  * @return {*}
+//  * @returns {*}
 //  * @example head(null) ➜ undefined
 //  * @example head(null, 0) ➜ 0
 //  * @example head([], 0) ➜ 0
@@ -72,3 +72,4 @@
 //     return iterable[keys[0]];
 //   }
 // }
+//# sourceMappingURL=head.js.map

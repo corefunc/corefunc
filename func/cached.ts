@@ -4,9 +4,7 @@
  * @param {Function} func
  * @returns {Function}
  */
-export function functionCached<F extends (...args: Array<boolean | null | number | string>) => unknown>(
-  func: F,
-): F {
+export function functionCached<F extends (..._args: Array<boolean | null | number | string>) => unknown>(func: F): F {
   const cache = Object.create(null);
   return function cachedFunction(...keys) {
     const key = JSON.stringify(keys);

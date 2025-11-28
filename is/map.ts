@@ -1,6 +1,6 @@
 /**
  * @param {*} value
- * @return {boolean}
+ * @returns {boolean}
  */
 export function isMap(value: any): boolean {
   return value instanceof Map;

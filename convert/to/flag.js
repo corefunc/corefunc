@@ -1,6 +1,3 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.convertToFlag = void 0;
 /**
  * @name convertToFlag
  * @description
@@ -12,7 +9,7 @@ exports.convertToFlag = void 0;
  * @param {*=onEmpty} onUnParsable
  * @returns {boolean}
  */
-function convertToFlag(value, onEmpty = false, onUnParsable = onEmpty) {
+export function convertToFlag(value, onEmpty = false, onUnParsable = onEmpty) {
     if (value === undefined || value === null) {
         return onEmpty;
     }
@@ -40,4 +37,4 @@ function convertToFlag(value, onEmpty = false, onUnParsable = onEmpty) {
             return onUnParsable;
     }
 }
-exports.convertToFlag = convertToFlag;
+//# sourceMappingURL=flag.js.map

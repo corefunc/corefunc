@@ -1,7 +1,4 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.textCaseKebab = void 0;
-const string_1 = require("../../cast/to/string");
+import { castToString } from "../../cast/to/string.js";
 /**
  * @category Text Case
  * @name textCaseKebab
@@ -10,8 +7,8 @@ const string_1 = require("../../cast/to/string");
  * @returns {String}
  * @see https://stackoverflow.com/questions/196972/convert-string-to-title-case-with-javascript
  */
-function textCaseKebab(text) {
-    return string_1.castToString(text)
+export function textCaseKebab(text) {
+    return castToString(text)
         .split("")
         .map((letter, index) => {
         if (letter.toUpperCase() === letter) {
@@ -23,4 +20,4 @@ function textCaseKebab(text) {
     })
         .join("");
 }
-exports.textCaseKebab = textCaseKebab;
+//# sourceMappingURL=kebab.js.map

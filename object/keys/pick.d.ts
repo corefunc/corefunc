@@ -8,4 +8,4 @@
  * @param {boolean=} [defineMissing=false] Fill missing values with `undefined`.
  * @returns {Object} New plain object.
  */
-export declare function objectKeysPick<GenericObject extends Record<number | string | symbol, Value>, Keys extends string[] | ReadonlyArray<string>, PartialObject extends Record<keyof Keys, Value | undefined>, Value, DefineMissing extends boolean = false>(instance: GenericObject, keys: Keys, defineMissing: DefineMissing): DefineMissing extends true ? Partial<PartialObject> : PartialObject;
+export declare function objectKeysPick<T extends Record<PropertyKey, V>, K extends ReadonlyArray<string>, V = T[keyof T], D extends boolean = false>(instance: T, keys: K, defineMissing?: D): D extends true ? Partial<Record<K[number], V | undefined>> : Partial<Record<K[number], V>>;

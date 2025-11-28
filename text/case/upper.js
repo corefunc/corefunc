@@ -1,7 +1,4 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.textCaseUpper = void 0;
-const string_1 = require("../../cast/to/string");
+import { castToString } from "../../cast/to/string.js";
 /**
  * @category Text Case
  * @name textCaseUpper
@@ -10,7 +7,7 @@ const string_1 = require("../../cast/to/string");
  * @returns {String} Uppercase text
  * @since 0.1.31
  */
-function textCaseUpper(text) {
-    return string_1.castToString(text).normalize().toUpperCase();
+export function textCaseUpper(text) {
+    return castToString(text).normalize().toUpperCase();
 }
-exports.textCaseUpper = textCaseUpper;
+//# sourceMappingURL=upper.js.map

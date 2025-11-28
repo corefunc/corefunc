@@ -1,4 +1,4 @@
-import { objectSetDefaults } from "./defaults";
+import { objectSetDefaults } from "./defaults.js";
 
 /**
  * @category Object Set

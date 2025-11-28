@@ -1,11 +1,8 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.checkIsKeyed = void 0;
 /**
  * @param {*} value
- * @return {boolean}
+ * @returns {boolean}
  */
-function checkIsKeyed(value) {
+export function checkIsKeyed(value) {
     return value instanceof Set || value instanceof Map;
 }
-exports.checkIsKeyed = checkIsKeyed;
+//# sourceMappingURL=is-keyed.js.map

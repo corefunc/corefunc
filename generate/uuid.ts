@@ -1,6 +1,5 @@
-const lut = [];
+const lut: Array<string> = [];
 for (let index = 0; index < 256; index++) {
-  // eslint-disable-next-line no-ternary
   lut[index] = (index < 16 ? "0" : "") + index.toString(16);
 }
 

@@ -1,6 +1,3 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.objectKeysSort = void 0;
 /**
  * @category Object Keys
  * @name objectKeysSort
@@ -11,7 +8,7 @@ exports.objectKeysSort = void 0;
  * @param {Number=} [depth=8] Depth.
  * @returns {Object} New object with sorted keys.
  */
-function objectKeysSort(objectLike, isDeep = true, depth = 8) {
+export function objectKeysSort(objectLike, isDeep = true, depth = 8) {
     if (!objectLike || typeof objectLike !== "object" || Array.isArray(objectLike)) {
         return objectLike;
     }
@@ -47,4 +44,4 @@ function objectKeysSort(objectLike, isDeep = true, depth = 8) {
         return objectLike;
     }
 }
-exports.objectKeysSort = objectKeysSort;
+//# sourceMappingURL=sort.js.map

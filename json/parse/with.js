@@ -1,15 +1,12 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.jsonParseWith = void 0;
-const safe_1 = require("./safe");
+import { jsonParseSafe } from "./safe.js";
 /**
  * @param {String} text
  * @param {*=} defaultResult
  * @param {Boolean=} unsafe
  * @param {Function=} reviver
- * @return {*}
+ * @returns {*}
  */
-function jsonParseWith(text, defaultResult, unsafe = true, reviver) {
-    return safe_1.jsonParseSafe(text, defaultResult, unsafe, false, reviver);
+export function jsonParseWith(text, defaultResult, unsafe = true, reviver) {
+    return jsonParseSafe(text, defaultResult, unsafe, false, reviver);
 }
-exports.jsonParseWith = jsonParseWith;
+//# sourceMappingURL=with.js.map

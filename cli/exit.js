@@ -1,10 +1,7 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.cliExit = void 0;
 /**
  * @param {boolean|number} code
  */
-function cliExit(code = 0) {
+export function cliExit(code = 0) {
     if (code === false) {
         return;
     }
@@ -19,11 +16,10 @@ function cliExit(code = 0) {
         return;
     }
     try {
-        // @ts-ignore
         process.exit(exitCode);
     }
-    catch (error) {
-        //
+    catch {
+        // intentionally ignore exceptions
     }
 }
-exports.cliExit = cliExit;
+//# sourceMappingURL=exit.js.map

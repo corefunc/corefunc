@@ -1,5 +1,5 @@
-function rawStringToBigEndian(text) {
-  let output = Array(text.length >> 2);
+function rawStringToBigEndian(text: string) {
+  const output = Array(text.length >> 2);
   for (let index = 0; index < output.length; index += 1) {
     output[index] = 0;
   }
@@ -9,7 +9,7 @@ function rawStringToBigEndian(text) {
   return output;
 }
 
-function bigEndianToString(text) {
+function bigEndianToString(text: string | any[]) {
   let output = "";
   for (let index = 0; index < text.length * 32; index += 8) {
     output += String.fromCharCode((text[index >> 5] >>> (24 - (index % 32))) & 0xff);
@@ -17,7 +17,7 @@ function bigEndianToString(text) {
   return output;
 }
 
-function bigEndianToSha1(bigEndianArray, textLength) {
+function bigEndianToSha1(bigEndianArray: any[], textLength: number) {
   bigEndianArray[textLength >> 5] |= 0x80 << (24 - (textLength % 32));
   bigEndianArray[(((textLength + 64) >> 9) << 4) + 15] = textLength;
   const word = Array(80);
@@ -57,10 +57,10 @@ function bigEndianToSha1(bigEndianArray, textLength) {
     delta = addSafe(delta, originalDelta);
     epsilon = addSafe(epsilon, originalEpsilon);
   }
-  return Array(alpha, beta, gamma, delta, epsilon);
+  return [alpha, beta, gamma, delta, epsilon];
 }
 
-function sha1Triplet(triplet, alpha, beta, gamma) {
+function sha1Triplet(triplet: number, alpha: number, beta: number, gamma: number) {
   if (triplet < 20) {
     return (alpha & beta) | (~alpha & gamma);
   }
@@ -73,21 +73,21 @@ function sha1Triplet(triplet, alpha, beta, gamma) {
   return alpha ^ beta ^ gamma;
 }
 
-function sha1AdditiveConstantForCurrentIteration(aConstant) {
+function sha1AdditiveConstantForCurrentIteration(aConstant: number): number {
   return aConstant < 20 ? 1518500249 : aConstant < 40 ? 1859775393 : aConstant < 60 ? -1894007588 : -899497514;
 }
 
-function addSafe(alpha, beta) {
+function addSafe(alpha: number, beta: number) {
   const lsw = (alpha & 0xffff) + (beta & 0xffff);
   const msw = (alpha >> 16) + (beta >> 16) + (lsw >> 16);
   return (msw << 16) | (lsw & 0xffff);
 }
 
-function bitwiseRotateToLeft(aNumber, count) {
+function bitwiseRotateToLeft(aNumber: number, count: number) {
   return (aNumber << count) | (aNumber >>> (32 - count));
 }
 
-function stringToRawUtf8String(text) {
+function stringToRawUtf8String(text: string) {
   let output = "";
   let index = -1;
   let x;
@@ -95,6 +95,7 @@ function stringToRawUtf8String(text) {
   while (++index < text.length) {
     x = text.charCodeAt(index);
     y = index + 1 < text.length ? text.charCodeAt(index + 1) : 0;
+    // eslint-disable-next-line yoda
     if (0xd800 <= x && x <= 0xdbff && 0xdc00 <= y && y <= 0xdfff) {
       x = 0x10000 + ((x & 0x03ff) << 10) + (y & 0x03ff);
       index += 1;
@@ -117,11 +118,11 @@ function stringToRawUtf8String(text) {
   return output;
 }
 
-function sha1OfRawString(text) {
+function sha1OfRawString(text: string) {
   return bigEndianToString(bigEndianToSha1(rawStringToBigEndian(text), text.length * 8));
 }
 
-function rawStringToHexString(text) {
+function rawStringToHexString(text: string): string {
   let output = "";
   let hex;
   for (let index = 0; index < text.length; index += 1) {

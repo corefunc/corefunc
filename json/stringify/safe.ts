@@ -1,21 +1,26 @@
-import { checkIsTypedArray } from "../../check/is-typed-array";
-import { convertBigIntToJson } from "../../convert/bigint/json";
-import { convertErrorToJson } from "../../convert/error/json";
+import { checkIsTypedArray } from "../../check/is-typed-array.js";
+import { convertBigIntToJson } from "../../convert/bigint/json.js";
+import { convertErrorToJson } from "../../convert/error/json.js";
 
-// eslint-disable-next-line no-unused-vars
-function serializer(replacer?: (this: any, key: string, value: any) => any, cycleReplacerArg: null | Function = null) {
+type ReplacerType = (this: any, key: string, value: any) => any | null | undefined;
+type CycleReplacerType = (key: string, value: any) => any | null | undefined;
+
+function serializer(
+  replacer?: (this: any, key: string, value: any) => any,
+  cycleReplacerArg: null | CycleReplacerType = null,
+): ReplacerType {
   const keys: string[] = [];
   const stack: any[] = [];
   let cycleReplacer = cycleReplacerArg;
   if (cycleReplacer === null) {
-    cycleReplacer = function cr(key: string, value: any) {
+    cycleReplacer = function cr(this: any, _key: string, value: any): string {
       if (stack[0] === value) {
         return "[Circular ~]";
       }
       return `[Circular ~.${keys.slice(0, stack.indexOf(value)).join(".")}]`;
     };
   }
-  return function (key: string, value: any) {
+  return function (this: any, key: string, value: any) {
     let result = value;
     if (result instanceof Error) {
       result = convertErrorToJson(result);
@@ -39,20 +44,18 @@ function serializer(replacer?: (this: any, key: string, value: any) => any, cycl
       }
     }
     if (stack.length > 0) {
-      // @ts-ignore
       const thisPos = stack.indexOf(this);
-      // @ts-ignore
+      // eslint-disable-next-line @typescript-eslint/no-unused-expressions
       ~thisPos ? stack.splice(thisPos + 1) : stack.push(this);
+      // eslint-disable-next-line @typescript-eslint/no-unused-expressions
       ~thisPos ? keys.splice(thisPos, Infinity, key) : keys.push(key);
       if (stack.indexOf(result) !== -1) {
-        // @ts-ignore
-        result = (cycleReplacer as Function).call(this, key, result);
+        result = cycleReplacer!(key, result);
       }
     } else {
-      stack.push(result);
+      stack.push(this);
     }
     if (replacer && Object.prototype.toString.call(replacer) === "[object Function]") {
-      // @ts-ignore
       return replacer.call(this, key, result);
     }
     return result;
@@ -64,15 +67,13 @@ function serializer(replacer?: (this: any, key: string, value: any) => any, cycl
  * @param {Function=} replacer
  * @param {Number|String=} spaces
  * @param {Function=} cycleReplacer
- * @return {String}
+ * @returns {String}
  */
 export function jsonStringifySafe(
   value: any,
-  // eslint-disable-next-line no-unused-vars
-  replacer?: (this: any, key: string, value: any) => any,
+  replacer?: ReplacerType,
   spaces?: string | number,
-  // eslint-disable-next-line no-unused-vars
-  cycleReplacer?: (key: string, value: any) => any,
+  cycleReplacer?: CycleReplacerType,
 ): string {
   return JSON.stringify(value, serializer(replacer, cycleReplacer), spaces);
 }

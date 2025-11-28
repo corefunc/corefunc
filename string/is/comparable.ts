@@ -1,5 +1,5 @@
-import { castToString } from "../../cast/to/string";
-import { stringClearReferences } from "../clear/references";
+import { castToString } from "../../cast/to/string.js";
+import { stringClearReferences } from "../clear/references.js";
 
 /**
  * Compare two strings
@@ -9,8 +9,8 @@ import { stringClearReferences } from "../clear/references";
  * @returns {boolean}
  */
 export function stringIsComparable(first: string, second: string, isStrict: boolean = false): boolean {
-  let stringOne = castToString(first).normalize();
-  let stringTwo = castToString(second).normalize();
+  const stringOne = castToString(first).normalize();
+  const stringTwo = castToString(second).normalize();
   if (stringOne.length !== stringTwo.length) {
     stringClearReferences(stringOne);
     stringClearReferences(stringTwo);

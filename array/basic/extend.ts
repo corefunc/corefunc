@@ -1,4 +1,4 @@
-import { arrayGetUnique } from "../get/unique";
+import { arrayGetUnique } from "../get/unique.js";
 
 /**
  * @category Array Basic
@@ -9,11 +9,7 @@ import { arrayGetUnique } from "../get/unique";
  * @param {Boolean=} [shouldBeUnique=false] Is resulting array should have unique values.
  * @returns {Array} Resulting array.
  */
-export function arrayBasicExtend<
-  AlphaTypes extends unknown,
-  BetaTypes extends unknown,
-  ResultingTypes extends AlphaTypes | BetaTypes,
->(
+export function arrayBasicExtend<AlphaTypes, BetaTypes, ResultingTypes extends AlphaTypes | BetaTypes>(
   alpha: AlphaTypes[] | ReadonlyArray<AlphaTypes> = [],
   beta: BetaTypes[] | ReadonlyArray<BetaTypes> = [],
   shouldBeUnique: boolean = false,

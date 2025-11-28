@@ -1,7 +1,4 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.convertToHash = void 0;
-function convertToHash(value, asString, seed = 0x811c9dc5) {
+export function convertToHash(value, asString, seed = 0x811c9dc5) {
     const text = typeof value === "string" ? value : JSON.stringify(value);
     const length = text.length;
     let index = 0;
@@ -15,4 +12,4 @@ function convertToHash(value, asString, seed = 0x811c9dc5) {
     }
     return hashVal >>> 0;
 }
-exports.convertToHash = convertToHash;
+//# sourceMappingURL=hash.js.map

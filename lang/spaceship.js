@@ -1,6 +1,3 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.langSpaceship = void 0;
 /**
  * @name langSpaceship
  * @description Combined comparison for JavaScript <=>
@@ -12,7 +9,7 @@ exports.langSpaceship = void 0;
  * @param {*} valueTwo
  * @returns {Number}
  */
-function langSpaceship(valueOne, valueTwo) {
+export function langSpaceship(valueOne, valueTwo) {
     if (Number.isNaN(valueOne) && Number.isNaN(valueTwo)) {
         return 0;
     }
@@ -36,4 +33,4 @@ function langSpaceship(valueOne, valueTwo) {
     }
     return 0;
 }
-exports.langSpaceship = langSpaceship;
+//# sourceMappingURL=spaceship.js.map

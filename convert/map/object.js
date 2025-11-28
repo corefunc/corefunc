@@ -1,6 +1,3 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.convertMapToObject = void 0;
 /**
  * @category Convert Map
  * @name convertMapToObject
@@ -9,10 +6,10 @@ exports.convertMapToObject = void 0;
  * @param {Map} [map] Map to convert.
  * @returns {Object} Plain object.
  */
-function convertMapToObject(map) {
+export function convertMapToObject(map) {
     if (!map || !(map instanceof Map)) {
         return {};
     }
     return Object.fromEntries(map);
 }
-exports.convertMapToObject = convertMapToObject;
+//# sourceMappingURL=object.js.map

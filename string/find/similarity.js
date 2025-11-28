@@ -1,7 +1,4 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.stringFindSimilarity = void 0;
-function stringFindSimilarity(alpha, beta) {
+export function stringFindSimilarity(alpha, beta) {
     const strFirst = alpha.replace(/\s+/g, "");
     const strSecond = beta.replace(/\s+/g, "");
     if (!strFirst.length && !strSecond.length) {
@@ -36,4 +33,4 @@ function stringFindSimilarity(alpha, beta) {
     }
     return (2.0 * intersectionSize) / (strFirst.length + strSecond.length - 2);
 }
-exports.stringFindSimilarity = stringFindSimilarity;
+//# sourceMappingURL=similarity.js.map

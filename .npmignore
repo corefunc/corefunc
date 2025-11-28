@@ -10,18 +10,22 @@
 /.idea
 /.ignore
 /.mailmap
+/.node-version
 /.npmignore
 /.npmrc
 /.nvmrc
 /.prettierignore
 /.prettierrc
 /.sonarcloud.properties
+/.tool-versions
 /.travis.yml
 /CHANGELOG.md
 /LICENSE
 /README.md
 /badges.md
+/chagelog.md
 /docs/
+/eslint.config.js
 /package-lock.json
 /renovate.json
 /temp
@@ -31,17 +35,18 @@
 /typedoc.json
 /yarn.lock
 
-# ignore the .ts files
+# ignore files
 # *.ts
 
-# include the .d.ts files
+# include files
 # !*.d.ts
+# !*.js
+# !*.js.map
 
-*.spec.cjs
 *.spec.js
-*.spec.mjs
 *.spec.ts
-*.test.cjs
 *.test.js
-*.test.mjs
 *.test.ts
+
+eslint.config.mjs
+cleanup.mjs

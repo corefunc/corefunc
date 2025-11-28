@@ -1,6 +1,3 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.textEmojiJoin = void 0;
 /**
  * @category Text Emoji
  * @name textEmojiJoin
@@ -10,10 +7,13 @@ exports.textEmojiJoin = void 0;
  * @param {...string} emojis Emojis to join.
  * @returns {string} Joined emoji.
  * @since 0.3.27
- * @example ```"👨" + "💻" ➜  "👨💻"```
- * @example ```textEmojiJoin("👨", "💻") ➜  "👨‍💻"```
+ * @example Usage:
+ * ```ts
+ * "👨" + "💻" // ➜  "👨💻"
+ * textEmojiJoin("👨", "💻") // ➜  "👨‍💻"
+ * ```
  */
-function textEmojiJoin(emoji, ...emojis) {
+export function textEmojiJoin(emoji, ...emojis) {
     return [emoji, ...emojis].join("\u200D");
 }
-exports.textEmojiJoin = textEmojiJoin;
+//# sourceMappingURL=join.js.map

@@ -1,7 +1,4 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.objectBasicClone = void 0;
-const is_primitive_1 = require("../../check/is-primitive");
+import { checkIsPrimitive } from "../../check/is-primitive.js";
 /**
  * @category Object Basic
  * @name objectBasicClone
@@ -13,12 +10,12 @@ const is_primitive_1 = require("../../check/is-primitive");
  * @summary ```import { objectBasicClone } from "@corefunc/corefunc/object/basic/clone";```
  * @template {ValueType}
  * @param {unknown} value The object to be cloned. This can be any structured-clonable type.
- * @param {ReadonlyArray<TransferableObjectType>=} [transfer] An list of transferable objects in value that will be moved rather than cloned to the returned object.
+ * @param {StructuredSerializeOptions['transfer']=} [transfer] An list of transferable objects in value that will be moved rather than cloned to the returned object.
  * @returns {ValueType} The returned value is a deep copy of the original value.
  * @since 0.3.20
  */
-function objectBasicClone(value, transfer) {
-    if (is_primitive_1.checkIsPrimitive(value)) {
+export function objectBasicClone(value, transfer) {
+    if (checkIsPrimitive(value)) {
         return value;
     }
     if ("structuredClone" in globalThis) {
@@ -32,10 +29,10 @@ function objectBasicClone(value, transfer) {
             }
             return cloned;
         }
-        catch (_dataCloneError) {
-            //
+        catch {
+            // intentionally ignore errors
         }
     }
     return value;
 }
-exports.objectBasicClone = objectBasicClone;
+//# sourceMappingURL=clone.js.map

@@ -1,25 +1,14 @@
-"use strict";
-var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
-}) : (function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    o[k2] = m[k];
-}));
-var __exportStar = (this && this.__exportStar) || function(m, exports) {
-    for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports, p)) __createBinding(exports, m, p);
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-__exportStar(require("./assign"), exports);
-__exportStar(require("./extend"), exports);
-__exportStar(require("./has"), exports);
-__exportStar(require("./has-same"), exports);
-__exportStar(require("./insert"), exports);
-__exportStar(require("./intersect"), exports);
-__exportStar(require("./keep"), exports);
-__exportStar(require("./map"), exports);
-__exportStar(require("./merge"), exports);
-__exportStar(require("./pull"), exports);
-__exportStar(require("./shuffle"), exports);
-__exportStar(require("./size"), exports);
-__exportStar(require("./with"), exports);
+export * from "./assign.js";
+export * from "./extend.js";
+export * from "./has.js";
+export * from "./has-same.js";
+export * from "./insert.js";
+export * from "./intersect.js";
+export * from "./keep.js";
+export * from "./map.js";
+export * from "./merge.js";
+export * from "./pull.js";
+export * from "./shuffle.js";
+export * from "./size.js";
+export * from "./with.js";
+//# sourceMappingURL=index.js.map

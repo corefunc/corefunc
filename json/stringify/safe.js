@@ -1,16 +1,12 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.jsonStringifySafe = void 0;
-const is_typed_array_1 = require("../../check/is-typed-array");
-const json_1 = require("../../convert/bigint/json");
-const json_2 = require("../../convert/error/json");
-// eslint-disable-next-line no-unused-vars
+import { checkIsTypedArray } from "../../check/is-typed-array.js";
+import { convertBigIntToJson } from "../../convert/bigint/json.js";
+import { convertErrorToJson } from "../../convert/error/json.js";
 function serializer(replacer, cycleReplacerArg = null) {
     const keys = [];
     const stack = [];
     let cycleReplacer = cycleReplacerArg;
     if (cycleReplacer === null) {
-        cycleReplacer = function cr(key, value) {
+        cycleReplacer = function cr(_key, value) {
             if (stack[0] === value) {
                 return "[Circular ~]";
             }
@@ -20,7 +16,7 @@ function serializer(replacer, cycleReplacerArg = null) {
     return function (key, value) {
         let result = value;
         if (result instanceof Error) {
-            result = json_2.convertErrorToJson(result);
+            result = convertErrorToJson(result);
             delete result.stack;
         }
         else if (result instanceof Set) {
@@ -30,7 +26,7 @@ function serializer(replacer, cycleReplacerArg = null) {
             result = Object.fromEntries(result);
         }
         else if (typeof result === "bigint") {
-            result = json_1.convertBigIntToJson(result);
+            result = convertBigIntToJson(result);
         }
         else if (typeof result === "symbol") {
             result = result.description;
@@ -40,7 +36,7 @@ function serializer(replacer, cycleReplacerArg = null) {
         }
         else {
             const proto = Object.prototype.toString.call(result);
-            if (is_typed_array_1.checkIsTypedArray(result)) {
+            if (checkIsTypedArray(result)) {
                 result = Array.from(result);
             }
             else if (proto === "[object Arguments]") {
@@ -48,21 +44,19 @@ function serializer(replacer, cycleReplacerArg = null) {
             }
         }
         if (stack.length > 0) {
-            // @ts-ignore
             const thisPos = stack.indexOf(this);
-            // @ts-ignore
+            // eslint-disable-next-line @typescript-eslint/no-unused-expressions
             ~thisPos ? stack.splice(thisPos + 1) : stack.push(this);
+            // eslint-disable-next-line @typescript-eslint/no-unused-expressions
             ~thisPos ? keys.splice(thisPos, Infinity, key) : keys.push(key);
             if (stack.indexOf(result) !== -1) {
-                // @ts-ignore
-                result = cycleReplacer.call(this, key, result);
+                result = cycleReplacer(key, result);
             }
         }
         else {
-            stack.push(result);
+            stack.push(this);
         }
         if (replacer && Object.prototype.toString.call(replacer) === "[object Function]") {
-            // @ts-ignore
             return replacer.call(this, key, result);
         }
         return result;
@@ -73,13 +67,9 @@ function serializer(replacer, cycleReplacerArg = null) {
  * @param {Function=} replacer
  * @param {Number|String=} spaces
  * @param {Function=} cycleReplacer
- * @return {String}
+ * @returns {String}
  */
-function jsonStringifySafe(value, 
-// eslint-disable-next-line no-unused-vars
-replacer, spaces, 
-// eslint-disable-next-line no-unused-vars
-cycleReplacer) {
+export function jsonStringifySafe(value, replacer, spaces, cycleReplacer) {
     return JSON.stringify(value, serializer(replacer, cycleReplacer), spaces);
 }
-exports.jsonStringifySafe = jsonStringifySafe;
+//# sourceMappingURL=safe.js.map

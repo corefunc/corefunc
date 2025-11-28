@@ -1,8 +1,5 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.numberRanged = void 0;
-const int_1 = require("../cast/to/int");
-const float_1 = require("../cast/to/float");
+import { castToInt } from "../cast/to/int.js";
+import { castToFloat } from "../cast/to/float.js";
 /**
  * @category Number
  * @name numberRanged
@@ -16,13 +13,13 @@ const float_1 = require("../cast/to/float");
  * @returns {Number}
  * @example numberRanged("99.5", 0, 1, 100); // => 99.5
  */
-function numberRanged(numberLike, defaultNumber = 0, minimalNumber = Number.MIN_VALUE, maximumNumber = Number.MAX_VALUE, shouldBeInteger = false) {
+export function numberRanged(numberLike, defaultNumber = 0, minimalNumber = Number.MIN_VALUE, maximumNumber = Number.MAX_VALUE, shouldBeInteger = false) {
     let range;
     if (shouldBeInteger) {
-        range = int_1.castToInt(numberLike, defaultNumber);
+        range = castToInt(numberLike, defaultNumber);
     }
     else {
-        range = float_1.castToFloat(numberLike, defaultNumber);
+        range = castToFloat(numberLike, defaultNumber);
     }
     if (minimalNumber < Number.MIN_VALUE) {
         minimalNumber = Number.MIN_VALUE;
@@ -38,4 +35,4 @@ function numberRanged(numberLike, defaultNumber = 0, minimalNumber = Number.MIN_
     }
     return range;
 }
-exports.numberRanged = numberRanged;
+//# sourceMappingURL=ranged.js.map

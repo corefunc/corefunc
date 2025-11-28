@@ -1,8 +1,8 @@
-import { arrayGetHead } from "../../array/get/head";
-import { castToString } from "../../cast/to/string";
-import { checkIsTraversable } from "../../check/is-traversable";
-import { collectionValues } from "../../collection/values";
-import { isString } from "../../is/string";
+import { arrayGetHead } from "../../array/get/head.js";
+import { castToString } from "../../cast/to/string.js";
+import { checkIsTraversable } from "../../check/is-traversable.js";
+import { collectionValues } from "../../collection/values.js";
+import { isString } from "../../is/string.js";
 
 /**
  * @category RegEx Basic
@@ -11,7 +11,7 @@ import { isString } from "../../is/string";
  * @param {String} haystack
  * @param {Array|String} needle
  * @param {Array|String} replaceWith
- * @return {String}
+ * @returns {String}
  * @example regexReplace('target', 'search', 'replace');
  * @example regexReplace('target', ['search 1', 'search 2'], 'replace');
  * @example regexReplace('target', ['search 1', 'search 2'], ['replace 1', 'replace 2']);
@@ -42,7 +42,10 @@ export function regexReplace(
     return sTarget.split(sSearch).join(sReplace);
   }
   if (isString(sSearch)) {
-    return sTarget.split(sSearch).join(castToString(arrayGetHead(sReplace)));
+    if (Array.isArray(sReplace)) {
+      return sTarget.split(sSearch).join(castToString(arrayGetHead(sReplace)));
+    }
+    return sTarget.split(sSearch).join(castToString(sReplace));
   }
   if (isString(sReplace)) {
     sSearch.forEach((srch) => {

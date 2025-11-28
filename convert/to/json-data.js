@@ -1,6 +1,3 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.convertToJsonData = void 0;
 /**
  * @name convertToJsonData
  * @description Convert to JSON-only valid data type: boolean, null, number, string, array, plain object
@@ -8,7 +5,7 @@ exports.convertToJsonData = void 0;
  * @param {Boolean=} returnsUndefined
  * @since 0.0.88
  */
-function convertToJsonData(value, returnsUndefined = true) {
+export function convertToJsonData(value, returnsUndefined = true) {
     if (value === null) {
         return null;
     }
@@ -51,8 +48,8 @@ function convertToJsonData(value, returnsUndefined = true) {
                 asJSON = JSON.parse(value);
                 isValidJSON = true;
             }
-            catch (_error) {
-                //
+            catch {
+                // intentionally ignore errors
             }
             if (isValidJSON) {
                 return asJSON;
@@ -72,10 +69,10 @@ function convertToJsonData(value, returnsUndefined = true) {
             });
             return onObject;
         }
-        catch (_error) {
-            //
+        catch {
+            // intentionally ignore errors
         }
     }
     return onFailure;
 }
-exports.convertToJsonData = convertToJsonData;
+//# sourceMappingURL=json-data.js.map

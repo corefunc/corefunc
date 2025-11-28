@@ -1,4 +1,4 @@
-import { arrayGetUnique } from "../get/unique";
+import { arrayGetUnique } from "../get/unique.js";
 
 /**
  * @category Array Flat

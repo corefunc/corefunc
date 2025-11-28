@@ -1,11 +1,11 @@
-import { jsonStringifySafe } from "./safe";
+import { jsonStringifySafe } from "./safe.js";
 
 /**
  * @param {*} object
  * @param {Function=} replacer
  * @param {String=} spaces
  * @param {Function=} cycleReplacer
- * @return {String}
+ * @returns {String}
  */
 export function jsonStringifyWith(
   object: any,

@@ -1,6 +1,3 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.arrayBasicMerge = void 0;
 /**
  * @name arrayBasicMerge
  * @description Merge one array into another. Modifies the first array, but less memory consuming.
@@ -9,8 +6,9 @@ exports.arrayBasicMerge = void 0;
  * @returns {Array}
  * @since 0.1.13
  */
-function arrayBasicMerge(arrayMergeInto, arrayToBeAdded) {
+export function arrayBasicMerge(arrayMergeInto, arrayToBeAdded) {
+    // eslint-disable-next-line prefer-spread
     arrayMergeInto.push.apply(arrayMergeInto, arrayToBeAdded);
     return arrayMergeInto;
 }
-exports.arrayBasicMerge = arrayBasicMerge;
+//# sourceMappingURL=merge.js.map

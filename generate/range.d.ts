@@ -9,4 +9,4 @@
  * @param {"number"|"bigint"|="number"} type - Number type
  * @returns {Array.<bigint|number>}
  */
-export declare function generateRange(from?: number | BigInt, to?: number | BigInt, step?: number | BigInt, type?: "number" | "bigint"): any[];
+export declare function generateRange(from?: number | bigint, to?: number | bigint | undefined, step?: number | bigint, type?: "number" | "bigint"): (number | bigint)[];

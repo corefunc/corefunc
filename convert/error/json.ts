@@ -1,5 +1,5 @@
-import { convertErrorToObject } from "./object";
-import { checkIsObjectLike } from "../../check/is-object-like";
+import { convertErrorToObject } from "./object.js";
+import { checkIsObjectLike } from "../../check/is-object-like.js";
 
 /**
  * @category Convert Error

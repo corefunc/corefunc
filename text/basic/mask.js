@@ -1,6 +1,3 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.textBasicMask = void 0;
 /**
  * @category Text Basic
  * @name textBasicMask
@@ -13,7 +10,7 @@ exports.textBasicMask = void 0;
  * @returns {string}
  * @since 0.3.55
  */
-function textBasicMask(text, mask = "*", showFirst = 1, showLast) {
+export function textBasicMask(text, mask = "*", showFirst = 1, showLast) {
     const chars = Array.from(String(text));
     const maskChar = String(mask)[0] ?? "*";
     const start = showFirst - 1;
@@ -25,4 +22,4 @@ function textBasicMask(text, mask = "*", showFirst = 1, showLast) {
         .map((char, index) => (index <= start || index >= end ? char : maskChar))
         .join("");
 }
-exports.textBasicMask = textBasicMask;
+//# sourceMappingURL=mask.js.map

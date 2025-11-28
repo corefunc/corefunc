@@ -1,6 +1,3 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.objectKeysOrder = void 0;
 /**
  * @category Object Keys
  * @name objectKeysOrder
@@ -11,7 +8,7 @@ exports.objectKeysOrder = void 0;
  * @param {Boolean=} [alphabetize=false] Alphabetize rest of keys.
  * @returns {Object} New object with ordered keys.
  */
-function objectKeysOrder(instance, keys = [], alphabetize = false) {
+export function objectKeysOrder(instance, keys = [], alphabetize = false) {
     if (!Array.isArray(keys) || keys.length === 0) {
         return instance;
     }
@@ -21,14 +18,18 @@ function objectKeysOrder(instance, keys = [], alphabetize = false) {
     orderKeys.forEach((key) => {
         objectKeys.delete(key);
         if (key in instance) {
-            newObject[key] = instance[key];
+            const objKey = key;
+            newObject[objKey] = instance[objKey];
         }
     });
     objectKeys = [...objectKeys];
     if (alphabetize) {
         objectKeys = objectKeys.sort((alpha, beta) => alpha.localeCompare(beta));
     }
-    objectKeys.forEach((key) => (newObject[key] = instance[key]));
+    objectKeys.forEach((key) => {
+        const theKey = key;
+        newObject[theKey] = instance[theKey];
+    });
     return newObject;
 }
-exports.objectKeysOrder = objectKeysOrder;
+//# sourceMappingURL=order.js.map

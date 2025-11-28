@@ -6,8 +6,11 @@
  * @param {*} errorLike Object to be checked.
  * @returns {boolean}
  * @since 0.3.29
- * @example ```checkIsErrorLike(new Error("Smth is wrong"))  ➜ true```
- * @example ```checkIsErrorLike({ message: "Smth is wrong", name: "Error" })  ➜ true```
+ * @example Usage:
+ * ```ts
+ * checkIsErrorLike(new Error("Smth is wrong")) // ➜ true
+ * checkIsErrorLike({ message: "Smth is wrong", name: "Error" }) // ➜ true
+ * ```
  */
 export function checkIsErrorLike(errorLike: unknown): boolean {
   if (errorLike instanceof Error) {
@@ -16,13 +19,10 @@ export function checkIsErrorLike(errorLike: unknown): boolean {
   if (!errorLike || typeof errorLike !== "object" || Array.isArray(errorLike)) {
     return false;
   }
-  if (
+  return (
     "message" in errorLike &&
     typeof (errorLike as Error).message === "string" &&
     "name" in errorLike &&
     typeof (errorLike as Error).name === "string"
-  ) {
-    return true;
-  }
-  return false;
+  );
 }

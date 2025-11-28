@@ -1,6 +1,3 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.isFalsy = void 0;
 /**
  * @category Is Valid
  * @name isFalsy
@@ -11,7 +8,7 @@ exports.isFalsy = void 0;
  * @returns {boolean}
  * @since 0.2.3
  */
-function isFalsy(value) {
+export function isFalsy(value) {
     return value === false || value === 0 || value === "" || value === null || value === undefined || Number.isNaN(value);
 }
-exports.isFalsy = isFalsy;
+//# sourceMappingURL=is-falsy.js.map

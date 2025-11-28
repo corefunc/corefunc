@@ -4,7 +4,7 @@
  * @param {Function} iteratee The function invoked per iteration.
  * @returns {Array} Returns the new mapped array.
  */
-export function arrayBasicMap(array: any[], iteratee: (value?: any, index?: number, original?: any[]) => {}): any[] {
+export function arrayBasicMap(array: any[], iteratee: (value?: any, index?: number, original?: any[]) => any): any[] {
   let { length } = array;
   length = length || 0;
   let index = -1;

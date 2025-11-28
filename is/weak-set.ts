@@ -1,6 +1,6 @@
 /**
  * @param {*} value
- * @return {boolean}
+ * @returns {boolean}
  */
 export function isWeakSet(value: any): boolean {
   return value instanceof WeakSet;

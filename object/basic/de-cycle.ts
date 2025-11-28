@@ -2,23 +2,21 @@
  * @category Object Basic
  * @name objectBasicDeCycle
  * @description De-cycle object.
- * @summary ```import { objectBasicDeCycle } from '@corefunc/corefunc/object/basic/de-cycle';```
+ * @summary ``````
  * @param {Object} object Object to de-cycle.
  * @param {String=} _path Path ot property to de-cycle.
  * @returns {Object} De-cycled object.
  * @since 0.1.55
  */
-export function objectBasicDeCycle<ObjectType extends Record<string, any> | any[]>(
+export function objectBasicDeCycle<ObjectType extends Record<string, unknown> | unknown[]>(
   object: ObjectType,
-  // eslint-disable-next-line no-unused-vars
   _path?: string,
 ): ObjectType {
-  const objects = [];
-  const paths = [];
-  return (function deReCycle(value, path) {
-    let index;
-    let name;
-    let newIterable;
+  const objects: Array<ObjectType> = [];
+  const paths: Array<string> = [];
+  return (function deReCycle(value: unknown, path: string): unknown {
+    let index: number;
+    let name: string;
     if (
       typeof value === "object" &&
       value !== null &&
@@ -33,23 +31,29 @@ export function objectBasicDeCycle<ObjectType extends Record<string, any> | any[
           return { "&circularReference": paths[index] };
         }
       }
-      objects.push(value);
+      objects.push(value as ObjectType);
       paths.push(path);
-      if (Object.prototype.toString.call(value) === "[object Array]") {
-        newIterable = [];
-        for (index = 0; index < (value as any[]).length; index++) {
-          newIterable[index] = objectBasicDeCycle(value[index], `${path}[" + index + "]`);
+
+      if (Array.isArray(value)) {
+        const newIterable: unknown[] = [];
+        for (index = 0; index < (value as unknown[]).length; index++) {
+          newIterable[index] = deReCycle(value[index], `${path}[${index}]`);
         }
+        return newIterable;
       } else {
-        newIterable = Object.create(object);
-        for (name in value) {
-          if (Object.prototype.hasOwnProperty.call(value, name)) {
-            newIterable[name] = objectBasicDeCycle(value[name], `${path}[${JSON.stringify(name)}]`);
+        const newIterable = Object.create(Object.getPrototypeOf(value));
+        const objValue = value as Record<string, unknown>;
+        for (name in objValue) {
+          if (Object.prototype.hasOwnProperty.call(objValue, name)) {
+            (newIterable as Record<string, unknown>)[name] = deReCycle(
+              objValue[name],
+              `${path}[${JSON.stringify(name)}]`,
+            );
           }
         }
+        return newIterable;
       }
-      return newIterable;
     }
     return value;
-  })(object, "&");
+  })(object, "&") as ObjectType;
 }

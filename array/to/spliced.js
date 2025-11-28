@@ -1,6 +1,3 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.arrayToSpliced = void 0;
 /**
  * @name arrayToSpliced
  * @category Array To
@@ -13,9 +10,9 @@ exports.arrayToSpliced = void 0;
  * @returns {Array} Returns a new array with the element at the specified index replaced by the given value.
  * @since 0.3.62
  */
-function arrayToSpliced(array, start, deleteCount, ...items) {
+export function arrayToSpliced(array, start, deleteCount, ...items) {
     const result = Array.from(array);
     result.splice(start, deleteCount, ...items);
     return result;
 }
-exports.arrayToSpliced = arrayToSpliced;
+//# sourceMappingURL=spliced.js.map

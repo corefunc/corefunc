@@ -1,7 +1,4 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.textCaseLower = void 0;
-const string_1 = require("../../cast/to/string");
+import { castToString } from "../../cast/to/string.js";
 /**
  * @category Text Case
  * @name textCaseLower
@@ -10,7 +7,7 @@ const string_1 = require("../../cast/to/string");
  * @returns {String} Lower-case text
  * @since 0.1.31
  */
-function textCaseLower(text) {
-    return string_1.castToString(text).normalize().toLowerCase();
+export function textCaseLower(text) {
+    return castToString(text).normalize().toLowerCase();
 }
-exports.textCaseLower = textCaseLower;
+//# sourceMappingURL=lower.js.map

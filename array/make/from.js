@@ -1,12 +1,9 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.arrayMakeFrom = void 0;
 /**
  * @description Typecast variable to array
  * @param {*} iterable
  * @returns {Array}
  */
-function arrayMakeFrom(iterable) {
+export function arrayMakeFrom(iterable) {
     if (!iterable) {
         return [];
     }
@@ -27,4 +24,4 @@ function arrayMakeFrom(iterable) {
     }
     return Object.values(iterable);
 }
-exports.arrayMakeFrom = arrayMakeFrom;
+//# sourceMappingURL=from.js.map

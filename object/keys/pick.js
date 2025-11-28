@@ -1,6 +1,4 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.objectKeysPick = void 0;
+// typescript
 /**
  * @category Object Keys
  * @name objectKeysPick
@@ -11,21 +9,23 @@ exports.objectKeysPick = void 0;
  * @param {boolean=} [defineMissing=false] Fill missing values with `undefined`.
  * @returns {Object} New plain object.
  */
-function objectKeysPick(instance, keys, defineMissing) {
+export function objectKeysPick(instance, keys, defineMissing) {
+    const result = {};
     if (!keys.length || !Object.keys(instance ?? {}).length) {
         if (defineMissing) {
-            return Array.from(keys).reduce((accumulator, key) => {
-                accumulator[key] = undefined;
-                return accumulator;
-            }, {});
+            for (const key of keys) {
+                result[key] = undefined;
+            }
+            return result;
         }
         else {
             return {};
         }
     }
-    return Array.from(keys).reduce((accumulator, key) => {
-        accumulator[key] = instance[key];
-        return accumulator;
-    }, {});
+    for (const key of keys) {
+        // cast to satisfy the index type checks
+        result[key] = instance[key];
+    }
+    return result;
 }
-exports.objectKeysPick = objectKeysPick;
+//# sourceMappingURL=pick.js.map

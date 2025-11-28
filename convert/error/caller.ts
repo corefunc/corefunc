@@ -10,5 +10,5 @@
 export function errorToCaller(
   error: Error | EvalError | RangeError | ReferenceError | SyntaxError | TypeError | URIError,
 ): string {
-  return error.stack.split('\n')[2].trim().split(' ')[1];
+  return (error?.stack || "").split("\n")[2].trim().split(" ")[1];
 }

@@ -1,11 +1,8 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.isWeakSet = void 0;
 /**
  * @param {*} value
- * @return {boolean}
+ * @returns {boolean}
  */
-function isWeakSet(value) {
+export function isWeakSet(value) {
     return value instanceof WeakSet;
 }
-exports.isWeakSet = isWeakSet;
+//# sourceMappingURL=weak-set.js.map

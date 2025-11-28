@@ -1,9 +1,12 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.arraySortSelection = void 0;
-function arraySortSelection(array) {
+/**
+ * @name arraySortSelection
+ * @description Sort an array of numbers using the selection sort algorithm (in place).
+ * @param {Array.<number>} array Array of numbers to sort.
+ * @returns {Array.<number>} The sorted array.
+ */
+export function arraySortSelection(array) {
     const swap = (list, alpha, beta) => ([list[alpha], list[beta]] = [list[beta], list[alpha]]);
-    array.forEach((item, index) => {
+    array.forEach((_item, index) => {
         let min = index;
         for (let subIndex = index + 1; subIndex < array.length; subIndex++) {
             if (array[subIndex] < array[min]) {
@@ -14,4 +17,4 @@ function arraySortSelection(array) {
     });
     return array;
 }
-exports.arraySortSelection = arraySortSelection;
+//# sourceMappingURL=selection.js.map

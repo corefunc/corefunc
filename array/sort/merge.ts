@@ -1,4 +1,4 @@
-function merge(array1: number[], array2: number[]): number[] {
+function merge(array1: number[], array2: number[]): Array<number> {
   const sorted = [];
   while (array1.length && array2.length) {
     if (array1[0] < array2[0]) {
@@ -7,9 +7,15 @@ function merge(array1: number[], array2: number[]): number[] {
       sorted.push(array2.shift());
     }
   }
-  return sorted.concat(array1.slice().concat(array2.slice()));
+  return sorted.concat(array1.slice().concat(array2.slice())) as Array<number>;
 }
 
+/**
+ * @name arraySortMerge
+ * @description Sort an array of numbers using the merge sort algorithm. Returns a new array.
+ * @param {Array.<number>} array Array of numbers to sort.
+ * @returns {Array.<number>} New sorted array.
+ */
 export function arraySortMerge(array: number[]): number[] {
   if (array.length <= 1) {
     return array;

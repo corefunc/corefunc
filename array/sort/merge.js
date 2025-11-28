@@ -1,6 +1,3 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.arraySortMerge = void 0;
 function merge(array1, array2) {
     const sorted = [];
     while (array1.length && array2.length) {
@@ -13,7 +10,13 @@ function merge(array1, array2) {
     }
     return sorted.concat(array1.slice().concat(array2.slice()));
 }
-function arraySortMerge(array) {
+/**
+ * @name arraySortMerge
+ * @description Sort an array of numbers using the merge sort algorithm. Returns a new array.
+ * @param {Array.<number>} array Array of numbers to sort.
+ * @returns {Array.<number>} New sorted array.
+ */
+export function arraySortMerge(array) {
     if (array.length <= 1) {
         return array;
     }
@@ -22,4 +25,4 @@ function arraySortMerge(array) {
     const right = arraySortMerge(array.slice(mid));
     return merge(left, right);
 }
-exports.arraySortMerge = arraySortMerge;
+//# sourceMappingURL=merge.js.map

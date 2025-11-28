@@ -1,6 +1,3 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.isNumber = void 0;
 /**
  * @category Is
  * @name isNumber
@@ -9,7 +6,7 @@ exports.isNumber = void 0;
  * @param {*} [value]
  * @returns {Boolean}
  */
-function isNumber(value) {
+export function isNumber(value) {
     if (typeof value === "number") {
         return Number.isFinite(value);
     }
@@ -18,4 +15,4 @@ function isNumber(value) {
     }
     return false;
 }
-exports.isNumber = isNumber;
+//# sourceMappingURL=number.js.map

@@ -1,4 +1,4 @@
-import { convertErrorToJson } from "./json";
+import { convertErrorToJson } from "./json.js";
 
 /**
  * @category Convert Error
@@ -8,7 +8,10 @@ import { convertErrorToJson } from "./json";
  * @param {Error} [error]
  * @returns {string}
  * @since 0.3.4
- * @example ```convertErrorToString({ "message": "Undefined Error" }); ➜ "Undefined Error"```
+ * @example Usage:
+ * ```ts
+ * convertErrorToString({ "message": "Undefined Error" }) // ➜ "Undefined Error"
+ * ```
  */
 export function convertErrorToString(
   error: Error | EvalError | RangeError | ReferenceError | SyntaxError | TypeError | URIError | Record<string, any>,

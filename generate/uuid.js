@@ -1,16 +1,12 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.generateUuid = void 0;
 const lut = [];
 for (let index = 0; index < 256; index++) {
-    // eslint-disable-next-line no-ternary
     lut[index] = (index < 16 ? "0" : "") + index.toString(16);
 }
 /**
  * @category Generate
  * @name generateUuid
  */
-function generateUuid() {
+export function generateUuid() {
     const d0 = (Math.random() * 0xffffffff) | 0;
     const d1 = (Math.random() * 0xffffffff) | 0;
     const d2 = (Math.random() * 0xffffffff) | 0;
@@ -36,4 +32,4 @@ function generateUuid() {
         lut[(d3 >> 16) & 0xff] +
         lut[(d3 >> 24) & 0xff]);
 }
-exports.generateUuid = generateUuid;
+//# sourceMappingURL=uuid.js.map

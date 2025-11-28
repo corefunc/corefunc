@@ -1,8 +1,5 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.cryptSha1 = void 0;
 function rawStringToBigEndian(text) {
-    let output = Array(text.length >> 2);
+    const output = Array(text.length >> 2);
     for (let index = 0; index < output.length; index += 1) {
         output[index] = 0;
     }
@@ -53,7 +50,7 @@ function bigEndianToSha1(bigEndianArray, textLength) {
         delta = addSafe(delta, originalDelta);
         epsilon = addSafe(epsilon, originalEpsilon);
     }
-    return Array(alpha, beta, gamma, delta, epsilon);
+    return [alpha, beta, gamma, delta, epsilon];
 }
 function sha1Triplet(triplet, alpha, beta, gamma) {
     if (triplet < 20) {
@@ -86,6 +83,7 @@ function stringToRawUtf8String(text) {
     while (++index < text.length) {
         x = text.charCodeAt(index);
         y = index + 1 < text.length ? text.charCodeAt(index + 1) : 0;
+        // eslint-disable-next-line yoda
         if (0xd800 <= x && x <= 0xdbff && 0xdc00 <= y && y <= 0xdfff) {
             x = 0x10000 + ((x & 0x03ff) << 10) + (y & 0x03ff);
             index += 1;
@@ -117,7 +115,7 @@ function rawStringToHexString(text) {
     }
     return output;
 }
-function cryptSha1(text) {
+export function cryptSha1(text) {
     return rawStringToHexString(sha1OfRawString(stringToRawUtf8String(text)));
 }
-exports.cryptSha1 = cryptSha1;
+//# sourceMappingURL=sha1.js.map

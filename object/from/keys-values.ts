@@ -7,7 +7,7 @@
  * @returns {Object}
  */
 export function objectFromKeysValues(keys: string[], values: unknown[]): Record<string, unknown> {
-  const obj = {};
+  const obj: Record<string, unknown> = {};
   keys.forEach((key, index) => {
     obj[key] = values[index];
   });

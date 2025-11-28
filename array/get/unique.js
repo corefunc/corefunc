@@ -1,6 +1,3 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.arrayGetUnique = void 0;
 /**
  * @name arrayGetUnique
  * @param {Array} array
@@ -9,7 +6,7 @@ exports.arrayGetUnique = void 0;
  * @example
  * arrayGetUnique([NaN, NaN, 0, -0, +0, "\u0065\u0301", "\u00e9"]) -> [ NaN, 0, 'é', -0 ]
  */
-function arrayGetUnique(array, sort = true) {
+export function arrayGetUnique(array, sort = true) {
     if (array.length < 2) {
         return [...array];
     }
@@ -52,4 +49,4 @@ function arrayGetUnique(array, sort = true) {
     }
     return unique;
 }
-exports.arrayGetUnique = arrayGetUnique;
+//# sourceMappingURL=unique.js.map

@@ -14,10 +14,14 @@ export function convertErrorToObject(
   shouldBeJson: boolean = false,
 ): Record<string, any> {
   const keys = new Set([...Object.getOwnPropertyNames(error), ...Object.keys(error)]);
-  const record: Record<string, unknown> = Array.from(keys).reduce((errorAsObj, key) => {
-    errorAsObj[key] = error[key];
-    return errorAsObj;
-  }, {});
+  const src = error as Record<string, any>;
+  const record: Record<string, any> = Array.from(keys).reduce<Record<string, any>>(
+    (errorAsObj, key) => {
+      errorAsObj[key] = src[key];
+      return errorAsObj;
+    },
+    {} as Record<string, any>,
+  );
   if (shouldRemoveStackTrace) {
     delete record.stack;
     delete record.stackTrace;

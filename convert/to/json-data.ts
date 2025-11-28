@@ -48,8 +48,8 @@ export function convertToJsonData(
       try {
         asJSON = JSON.parse(value);
         isValidJSON = true;
-      } catch (_error) {
-        //
+      } catch {
+        // intentionally ignore errors
       }
       if (isValidJSON) {
         return asJSON;
@@ -62,14 +62,14 @@ export function convertToJsonData(
   }
   if (type === "object") {
     try {
-      const asJSON = JSON.parse(JSON.stringify(value));
-      const onObject = {};
+      const asJSON: Record<string, unknown> = JSON.parse(JSON.stringify(value));
+      const onObject: Record<string, unknown> = {};
       Object.keys(asJSON).forEach((key) => {
         onObject[key] = convertToJsonData(asJSON[key], returnsUndefined);
       });
       return onObject;
-    } catch (_error) {
-      //
+    } catch {
+      // intentionally ignore errors
     }
   }
   return onFailure;

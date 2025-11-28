@@ -1,6 +1,3 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.objectGetType = void 0;
 /**
  * @category Object Get
  * @name objectGetType
@@ -8,7 +5,7 @@ exports.objectGetType = void 0;
  * @param {*=} [objectLike]
  * @returns {string}
  */
-function objectGetType(objectLike) {
+export function objectGetType(objectLike) {
     const type = String((Object.prototype.toString.call(objectLike).toLowerCase().split("[object ").pop() || "").split("]").shift());
     if (["global", "window"].includes(type)) {
         return "object";
@@ -18,4 +15,4 @@ function objectGetType(objectLike) {
     }
     return type;
 }
-exports.objectGetType = objectGetType;
+//# sourceMappingURL=type.js.map

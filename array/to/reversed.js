@@ -1,6 +1,3 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.arrayToReversed = void 0;
 /**
  * @name arrayToReversed
  * @category Array To
@@ -10,7 +7,7 @@ exports.arrayToReversed = void 0;
  * @returns {Array} Reversed array.
  * @since 0.3.62
  */
-function arrayToReversed(array) {
+export function arrayToReversed(array) {
     return Array.from(array).reverse();
 }
-exports.arrayToReversed = arrayToReversed;
+//# sourceMappingURL=reversed.js.map

@@ -1,7 +1,4 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.textCaseScreamingSnake = void 0;
-const snake_1 = require("./snake");
+import { textCaseSnake } from "./snake.js";
 /**
  * @category Text Case
  * @name textCaseScreamingSnake
@@ -10,7 +7,7 @@ const snake_1 = require("./snake");
  * @returns {String}
  * @since 0.3.33
  */
-function textCaseScreamingSnake(text) {
-    return snake_1.textCaseSnake(text).toUpperCase();
+export function textCaseScreamingSnake(text) {
+    return textCaseSnake(text).toUpperCase();
 }
-exports.textCaseScreamingSnake = textCaseScreamingSnake;
+//# sourceMappingURL=screaming-snake.js.map

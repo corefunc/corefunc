@@ -1,7 +1,4 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.textFromNumber = void 0;
-const a = [
+const ALPHA = [
     "",
     "one ",
     "two ",
@@ -23,9 +20,9 @@ const a = [
     "eighteen ",
     "nineteen ",
 ];
-const b = ["", "", "twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty", "ninety"];
-const getLT20 = (n) => a[Number(n)];
-const getGT20 = (n) => b[n[0]] + " " + a[n[1]];
+const BETA = ["", "", "twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty", "ninety"];
+const getLT20 = (num) => ALPHA[Number(num)];
+const getGT20 = (num) => BETA[num[0]] + " " + ALPHA[num[1]];
 /**
  * @category Text Basic
  * @name textFromNumber
@@ -36,7 +33,7 @@ const getGT20 = (n) => b[n[0]] + " " + a[n[1]];
  * @since 0.3.38
  * @see https://stackoverflow.com/questions/14766951/transform-numbers-to-words-in-lakh-crore-system
  */
-function textFromNumber(numberToWords) {
+export function textFromNumber(numberToWords) {
     const num = Number(numberToWords);
     if (Number.isNaN(num)) {
         return String(numberToWords);
@@ -55,12 +52,12 @@ function textFromNumber(numberToWords) {
         .substr(-9)
         .match(/^(\d{2})(\d{2})(\d{2})(\d{1})(\d{2})$/);
     let str = "";
-    str += n1 != 0 ? (getLT20(n1) || getGT20(n1)) + "crore " : "";
-    str += n2 != 0 ? (getLT20(n2) || getGT20(n2)) + "lakh " : "";
-    str += n3 != 0 ? (getLT20(n3) || getGT20(n3)) + "thousand " : "";
-    str += n4 != 0 ? getLT20(n4) + "hundred " : "";
-    str += n5 != 0 && str != "" ? "and " : "";
-    str += n5 != 0 ? getLT20(n5) || getGT20(n5) : "";
+    str += n1 !== 0 ? (getLT20(n1) || getGT20(n1)) + "crore " : "";
+    str += n2 !== 0 ? (getLT20(n2) || getGT20(n2)) + "lakh " : "";
+    str += n3 !== 0 ? (getLT20(n3) || getGT20(n3)) + "thousand " : "";
+    str += n4 !== 0 ? getLT20(n4) + "hundred " : "";
+    str += n5 !== 0 && str !== "" ? "and " : "";
+    str += n5 !== 0 ? getLT20(n5) || getGT20(n5) : "";
     return str.trim();
 }
-exports.textFromNumber = textFromNumber;
+//# sourceMappingURL=from-number.js.map

@@ -2,12 +2,17 @@
  * @category Generate
  * @description Number.range & BigInt.range
  * @param {number | bigint} from - Number to generate from
- * @param {number | bigint =} to - Number to generate until
+ * @param {number | bigint | undefined =} to - Number to generate until
  * @param {number | bigint | undefined = } step - Generation step
  * @param {"number" | "bigint" = } type - Number type
  * @returns {bigint|number|undefined}
  */
-function* CreateRangeIterator(from, to, step, type) {
+function* CreateRangeIterator(
+  from: number | bigint,
+  to: number | bigint | undefined,
+  step: number | bigint | undefined,
+  type: "number" | "bigint",
+) {
   if (typeof from !== type) {
     throw new TypeError();
   }
@@ -36,7 +41,7 @@ function* CreateRangeIterator(from, to, step, type) {
     return undefined;
   }
   const ifIncrease = to > from;
-  const abs = (x) => (x >= (typeof x === "bigint" ? BigInt(0) : 0) ? x : -x);
+  const abs = (x: number | bigint) => (x >= (typeof x === "bigint" ? BigInt(0) : 0) ? x : -x);
   if (ifIncrease) {
     step = abs(step);
   } else step = -abs(step);
@@ -44,15 +49,15 @@ function* CreateRangeIterator(from, to, step, type) {
   let lastValue = from;
   if (ifIncrease) {
     while (!(lastValue >= to)) {
-      let yielding = lastValue;
-      lastValue = from + step * (currentCount as number);
+      const yielding = lastValue;
+      lastValue = (from as number) + (step as number) * (currentCount as number);
       currentCount++;
       yield yielding;
     }
   } else {
     while (!(to >= lastValue)) {
-      let yielding = lastValue;
-      lastValue = from + step * (currentCount as number);
+      const yielding = lastValue;
+      lastValue = (from as number) + (step as number) * (currentCount as number);
       currentCount++;
       yield yielding;
     }
@@ -74,9 +79,9 @@ function* CreateRangeIterator(from, to, step, type) {
  * @returns {Array.<bigint|number>}
  */
 export function generateRange(
-  from: number | BigInt = 0,
-  to: number | BigInt = undefined,
-  step: number | BigInt = 1,
+  from: number | bigint = 0,
+  to: number | bigint | undefined = undefined,
+  step: number | bigint = 1,
   type: "number" | "bigint" = "number",
 ) {
   const array = [];

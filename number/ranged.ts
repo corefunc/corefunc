@@ -1,5 +1,5 @@
-import { castToInt } from "../cast/to/int";
-import { castToFloat } from "../cast/to/float";
+import { castToInt } from "../cast/to/int.js";
+import { castToFloat } from "../cast/to/float.js";
 
 /**
  * @category Number

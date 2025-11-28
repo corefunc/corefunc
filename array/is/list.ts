@@ -2,12 +2,10 @@
  * @category Array Is
  * @name arrayIsList
  * @description
- * ```markdown
  * Checks whether a given array is a list.
  * An array is considered a list if its keys consist of consecutive numbers from `0` to `array.length-1`.
  * This function works only on non-typed arrays.
  * This function returns `true` on empty arrays.
- * ```
  * @summary
  * ```javascript
  * import { arrayIsList } from "@corefunc/corefunc/array/is/list";
@@ -37,7 +35,7 @@
  * console.log(arrayIsList(list)); // false
  * ```
  */
-export function arrayIsList(arraySupposedToBeList: unknown[]): boolean {
+export function arrayIsList<T>(arraySupposedToBeList: Array<T>): boolean {
   if (!Array.isArray(arraySupposedToBeList)) {
     return false;
   }
