@@ -36,17 +36,14 @@
 /yarn.lock
 
 # ignore files
-# *.ts
+*.ts
+*.spec.js
+*.test.js
 
 # include files
-# !*.d.ts
-# !*.js
-# !*.js.map
-
-*.spec.js
-*.spec.ts
-*.test.js
-*.test.ts
+!*.d.ts
+!*.js
+!*.js.map
 
 eslint.config.mjs
 cleanup.mjs
