@@ -2,6 +2,18 @@
 
 ---
 
+## [1.0.0]
+
+### Changed
+
+- Minimum Node.js version is now 22.18.0.
+- Everything is now ESM. Files built without minification and committed to repo for copy/paste usage.
+- No CommonJS files for distribution anymore.
+- TypeScript files are now excluded from the package (but can be found in the repository for example and reference).
+- Typings are now included in the package.
+
+---
+
 ## [0.3.67] - 2023-07-18
 
 ### Added

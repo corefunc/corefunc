@@ -1,1 +1,0 @@
-{"version":3,"file":"is-object-plain.js","sourceRoot":"","sources":["is-object-plain.ts"],"names":[],"mappings":"AAAA;;GAEG;AACH,MAAM,UAAU,kBAAkB,CAAC,KAAU;IAC3C,OAAO,OAAO,CAAC,KAAK,CAAC,IAAI,OAAO,KAAK,KAAK,QAAQ,IAAI,KAAK,CAAC,WAAW,KAAK,MAAM,IAAI,CAAC,KAAK,CAAC,OAAO,CAAC,KAAK,CAAC,CAAC;AAC9G,CAAC"}
