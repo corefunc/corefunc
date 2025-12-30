@@ -12,5 +12,5 @@
  * @since 0.0.1
  */
 export function checkIsObjectLike(value: any): boolean {
-  return value && typeof value === "object" && !Array.isArray(value);
+  return value !== null && typeof value === "object" && !Array.isArray(value);
 }

@@ -17,10 +17,20 @@ export function timeSecondsToHms(secondsToHms: number): string {
   const hours = Math.floor(secondsToHms / 3600);
   const minutes = Math.floor((secondsToHms % 3600) / 60);
   const seconds = Math.floor((secondsToHms % 3600) % 60);
-  const hoursToDisplay =
-    hours > 0 ? hours + (hours === 1 ? " hour" : " hours") + (minutes > 0 || seconds > 0 ? ", " : "") : "";
-  const minutesToDisplay =
-    minutes > 0 ? minutes + (minutes === 1 ? " minute" : " minutes") + (seconds > 0 ? ", " : "") : "";
-  const secondsToDisplay = seconds > 0 ? seconds + (seconds === 1 ? " second" : " seconds") : "";
-  return hoursToDisplay + minutesToDisplay + secondsToDisplay;
+
+  const parts: string[] = [];
+
+  if (hours > 0) {
+    parts.push(`${hours} ${hours === 1 ? "hour" : "hours"}`);
+  }
+
+  if (minutes > 0) {
+    parts.push(`${minutes} ${minutes === 1 ? "minute" : "minutes"}`);
+  }
+
+  if (seconds > 0) {
+    parts.push(`${seconds} ${seconds === 1 ? "second" : "seconds"}`);
+  }
+
+  return parts.join(", ");
 }

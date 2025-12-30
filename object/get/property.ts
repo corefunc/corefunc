@@ -12,7 +12,7 @@ import { objectGetType } from "./type.js";
  * @returns {*} Value in path or default value
  * @since 0.0.47
  * @deprecated Use optional chaining instead
- * ```javascript
+ * ```js
  * const value = object?.property?.subProperty ?? "N/A";
  * ```
  */

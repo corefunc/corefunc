@@ -5,13 +5,10 @@
 /.eslintrc.full.json
 /.eslintrc.json
 /.gitattributes
-/.github
 /.gitignore
-/.idea
 /.ignore
 /.mailmap
 /.node-version
-/.npmignore
 /.npmrc
 /.nvmrc
 /.prettierignore
@@ -28,6 +25,7 @@
 /eslint.config.js
 /package-lock.json
 /renovate.json
+/roadmap.md
 /temp
 /test
 /tests/
@@ -37,13 +35,16 @@
 
 # ignore files
 *.ts
-*.spec.js
-*.test.js
-
 # include files
 !*.d.ts
 !*.js
 !*.js.map
+!**/
+*.test.js
+*.spec.js
+.github/
+.idea/
+.npmignore
 
 eslint.config.mjs
 cleanup.mjs

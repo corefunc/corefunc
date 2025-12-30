@@ -45,10 +45,16 @@ function serializer(
     }
     if (stack.length > 0) {
       const thisPos = stack.indexOf(this);
-      // eslint-disable-next-line @typescript-eslint/no-unused-expressions
-      ~thisPos ? stack.splice(thisPos + 1) : stack.push(this);
-      // eslint-disable-next-line @typescript-eslint/no-unused-expressions
-      ~thisPos ? keys.splice(thisPos, Infinity, key) : keys.push(key);
+      if (thisPos !== -1) {
+        stack.splice(thisPos + 1);
+      } else {
+        stack.push(this);
+      }
+      if (thisPos !== -1) {
+        keys.splice(thisPos, Infinity, key);
+      } else {
+        keys.push(key);
+      }
       if (stack.indexOf(result) !== -1) {
         result = cycleReplacer!(key, result);
       }
@@ -63,6 +69,7 @@ function serializer(
 }
 
 /**
+ * @name jsonStringifySafe
  * @param {*} value
  * @param {Function=} replacer
  * @param {Number|String=} spaces

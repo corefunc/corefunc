@@ -7,26 +7,26 @@
  * This function works only on non-typed arrays.
  * This function returns `true` on empty arrays.
  * @summary
- * ```javascript
+ * ```js
  * import { arrayIsList } from "@corefunc/corefunc/array/is/list";
  * ```
  * @param {Array} arraySupposedToBeList - The array being evaluated.
  * @returns {boolean} - Returns `true` if array is a list, `false` otherwise.
  * @since 0.3.17
  * @example
- * ```javascript
+ * ```js
  * console.log(arrayIsList([])); // ➜ true
  * ```
  * @example
- * ```javascript
+ * ```js
  * console.log(arrayIsList(["🍌", "🍏", "🍇", "🍊"])); // ➜ true
  * ```
  * @example
- * ```javascript
+ * ```js
  * console.log(arrayIsList(new Int16Array())); // ➜ false
  * ```
  * @example
- * ```javascript
+ * ```js
  * const list = ["🍌", "🍏", "🍇", "🍊"];
  * list[-1] = "🍓";
  * console.log(list); // [ '🍌', '🍏', '🍇', '🍊', '-1': '🍓' ]
@@ -39,19 +39,18 @@ export function arrayIsList<T>(arraySupposedToBeList: Array<T>): boolean {
   if (!Array.isArray(arraySupposedToBeList)) {
     return false;
   }
-  if (arraySupposedToBeList.length === 0) {
+  const length = arraySupposedToBeList.length;
+  if (length === 0) {
     return true;
   }
   const sparseKeys = Object.keys(arraySupposedToBeList);
-  if (arraySupposedToBeList.length !== sparseKeys.length) {
+  if (length !== sparseKeys.length) {
     return false;
   }
-  for (let index = 0; index <= arraySupposedToBeList.length; index++) {
-    if (Number.parseInt(sparseKeys[index]) !== index) {
-      sparseKeys.length = 0;
+  for (let index = 0; index < length; index++) {
+    if (sparseKeys[index] !== String(index)) {
       return false;
     }
-    delete sparseKeys[index];
   }
   return true;
 }

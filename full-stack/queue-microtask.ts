@@ -30,4 +30,4 @@ if (typeof globalThis["queueMicrotask"] === "function") {
   };
 }
 
-export const fullStackQueueMicrotask = queueMicrotask;
+export { queueMicrotask };

@@ -1,18 +1,18 @@
-function swap(items: Array<number>, firstIndex: number, secondIndex: number) {
+function swap<T>(items: Array<T>, firstIndex: number, secondIndex: number) {
   const temp = items[firstIndex];
   items[firstIndex] = items[secondIndex];
   items[secondIndex] = temp;
 }
 
-function partition(items: Array<number>, left: number, right: number): number {
+function partition<T>(items: Array<T>, left: number, right: number, compare: (a: T, b: T) => number): number {
   const pivot = items[Math.floor((right + left) / 2)];
   let indexLeft = left;
   let indexRight = right;
   while (indexLeft <= indexRight) {
-    while (items[indexLeft] < pivot) {
+    while (compare(items[indexLeft], pivot) < 0) {
       indexLeft++;
     }
-    while (items[indexRight] > pivot) {
+    while (compare(items[indexRight], pivot) > 0) {
       indexRight--;
     }
     if (indexLeft <= indexRight) {
@@ -26,23 +26,27 @@ function partition(items: Array<number>, left: number, right: number): number {
 
 /**
  * @name arraySortQuick
- * @description Sort an array of numbers using the quick sort algorithm (in place).
- * @param {Array.<number>} items Array of numbers to sort.
- * @param {number} left Left index boundary.
- * @param {number} right Right index boundary.
- * @returns {Array.<number>} The sorted array.
+ * @description Sort an array using the quick sort algorithm (in place).
+ * @param {Array.<T>} items Array of items to sort.
+ * @param {number} [left=0] Left index boundary.
+ * @param {number} [right=items.length - 1] Right index boundary.
+ * @param {function(T, T):number} [compare]
+ * @returns {Array.<T>} The sorted array.
  */
-export function arraySortQuick(items: number[], left: number, right: number): number[] {
+export function arraySortQuick<T>(
+  items: T[],
+  left: number = 0,
+  right: number = items.length - 1,
+  compare: (alpha: T, beta: T) => number = (alpha: any, beta: any) => (alpha > beta ? 1 : alpha < beta ? -1 : 0),
+): T[] {
   let index;
   if (items.length > 1) {
-    const lefty = typeof left !== "number" ? 0 : left;
-    const rightly = typeof right !== "number" ? items.length - 1 : right;
-    index = partition(items, lefty, rightly);
-    if (lefty < index - 1) {
-      arraySortQuick(items, lefty, index - 1);
+    index = partition(items, left, right, compare);
+    if (left < index - 1) {
+      arraySortQuick(items, left, index - 1, compare);
     }
-    if (index < rightly) {
-      arraySortQuick(items, index, rightly);
+    if (index < right) {
+      arraySortQuick(items, index, right, compare);
     }
   }
   return items;

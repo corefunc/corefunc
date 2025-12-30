@@ -1,260 +1,59 @@
-<!DOCTYPE html><html class="default" lang="en" data-base="./"><head><meta charset="utf-8"/><meta http-equiv="x-ua-compatible" content="IE=edge"/><title>@corefunc/corefunc</title><meta name="description" content="Documentation for @corefunc/corefunc"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="assets/style.css"/><link rel="stylesheet" href="assets/highlight.css"/><script defer src="assets/main.js"></script><script async src="assets/icons.js" id="tsd-icons-script"></script><script async src="assets/search.js" id="tsd-search-script"></script><script async src="assets/navigation.js" id="tsd-nav-script"></script><style>
-@media (prefers-color-scheme: dark) {
-  :root {
-    --md-sys-color-primary: #fbbb45;
-    --md-sys-color-on-primary: #422c00;
-    --md-sys-color-primary-container: #5f4100;
-    --md-sys-color-on-primary-container: #ffdeab;
-    --md-sys-color-secondary: #dbc3a1;
-    --md-sys-color-on-secondary: #3c2e16;
-    --md-sys-color-secondary-container: #54442a;
-    --md-sys-color-on-secondary-container: #f8dfbb;
-    --md-sys-color-tertiary: #b4cea5;
-    --md-sys-color-on-tertiary: #213618;
-    --md-sys-color-tertiary-container: #374d2d;
-    --md-sys-color-on-tertiary-container: #d0eabf;
-    --md-sys-color-error: #ffb4ab;
-    --md-sys-color-on-error: #690005;
-    --md-sys-color-error-container: #93000a;
-    --md-sys-color-on-error-container: #ffb4ab;
-    --md-sys-color-background: #1f1b16;
-    --md-sys-color-on-background: #eae1d9;
-    --md-sys-color-surface: #1f1b16;
-    --md-sys-color-on-surface: #eae1d9;
-    --md-sys-color-surface-variant: #4e4539;
-    --md-sys-color-on-surface-variant: #d2c5b4;
-    --md-sys-color-outline: #9b8f80;
-    --md-sys-color-outline-variant: #4e4539;
-    --md-sys-color-shadow: #000000;
-    --md-sys-color-scrim: #000000;
-    --md-sys-color-inverse-surface: #eae1d9;
-    --md-sys-color-inverse-on-surface: #34302a;
-    --md-sys-color-inverse-primary: #7e5700;
-    --md-sys-color-surface-dim: #16130e;
-    --md-sys-color-surface-bright: #3d3833;
-    --md-sys-color-surface-container-lowest: #110e09;
-    --md-sys-color-surface-container-low: #1f1b16;
-    --md-sys-color-surface-container: #231f1a;
-    --md-sys-color-surface-container-high: #2d2924;
-    --md-sys-color-surface-container-highest: #38342e
-  }
-}
-:root[data-theme="dark"] {
-  --md-sys-color-primary: #fbbb45;
-  --md-sys-color-on-primary: #422c00;
-  --md-sys-color-primary-container: #5f4100;
-  --md-sys-color-on-primary-container: #ffdeab;
-  --md-sys-color-secondary: #dbc3a1;
-  --md-sys-color-on-secondary: #3c2e16;
-  --md-sys-color-secondary-container: #54442a;
-  --md-sys-color-on-secondary-container: #f8dfbb;
-  --md-sys-color-tertiary: #b4cea5;
-  --md-sys-color-on-tertiary: #213618;
-  --md-sys-color-tertiary-container: #374d2d;
-  --md-sys-color-on-tertiary-container: #d0eabf;
-  --md-sys-color-error: #ffb4ab;
-  --md-sys-color-on-error: #690005;
-  --md-sys-color-error-container: #93000a;
-  --md-sys-color-on-error-container: #ffb4ab;
-  --md-sys-color-background: #1f1b16;
-  --md-sys-color-on-background: #eae1d9;
-  --md-sys-color-surface: #1f1b16;
-  --md-sys-color-on-surface: #eae1d9;
-  --md-sys-color-surface-variant: #4e4539;
-  --md-sys-color-on-surface-variant: #d2c5b4;
-  --md-sys-color-outline: #9b8f80;
-  --md-sys-color-outline-variant: #4e4539;
-  --md-sys-color-shadow: #000000;
-  --md-sys-color-scrim: #000000;
-  --md-sys-color-inverse-surface: #eae1d9;
-  --md-sys-color-inverse-on-surface: #34302a;
-  --md-sys-color-inverse-primary: #7e5700;
-  --md-sys-color-surface-dim: #16130e;
-  --md-sys-color-surface-bright: #3d3833;
-  --md-sys-color-surface-container-lowest: #110e09;
-  --md-sys-color-surface-container-low: #1f1b16;
-  --md-sys-color-surface-container: #231f1a;
-  --md-sys-color-surface-container-high: #2d2924;
-  --md-sys-color-surface-container-highest: #38342e
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    --md-sys-color-primary: #7e5700;
-    --md-sys-color-on-primary: #ffffff;
-    --md-sys-color-primary-container: #ffdeab;
-    --md-sys-color-on-primary-container: #271900;
-    --md-sys-color-secondary: #6e5c3f;
-    --md-sys-color-on-secondary: #ffffff;
-    --md-sys-color-secondary-container: #f8dfbb;
-    --md-sys-color-on-secondary-container: #261904;
-    --md-sys-color-tertiary: #4e6543;
-    --md-sys-color-on-tertiary: #ffffff;
-    --md-sys-color-tertiary-container: #d0eabf;
-    --md-sys-color-on-tertiary-container: #0c2006;
-    --md-sys-color-error: #ba1a1a;
-    --md-sys-color-on-error: #ffffff;
-    --md-sys-color-error-container: #ffdad6;
-    --md-sys-color-on-error-container: #410002;
-    --md-sys-color-background: #fffbff;
-    --md-sys-color-on-background: #1f1b16;
-    --md-sys-color-surface: #fffbff;
-    --md-sys-color-on-surface: #1f1b16;
-    --md-sys-color-surface-variant: #eee0cf;
-    --md-sys-color-on-surface-variant: #4e4539;
-    --md-sys-color-outline: #807567;
-    --md-sys-color-outline-variant: #d2c5b4;
-    --md-sys-color-shadow: #000000;
-    --md-sys-color-scrim: #000000;
-    --md-sys-color-inverse-surface: #34302a;
-    --md-sys-color-inverse-on-surface: #f8efe7;
-    --md-sys-color-inverse-primary: #fbbb45;
-    --md-sys-color-surface-dim: #e1d9d0;
-    --md-sys-color-surface-bright: #fff8f3;
-    --md-sys-color-surface-container-lowest: #ffffff;
-    --md-sys-color-surface-container-low: #fbf2e9;
-    --md-sys-color-surface-container: #f5ece4;
-    --md-sys-color-surface-container-high: #f0e7de;
-    --md-sys-color-surface-container-highest: #eae1d9
-  }
-}
-:root[data-theme="light"] {
-  --md-sys-color-primary: #7e5700;
-  --md-sys-color-on-primary: #ffffff;
-  --md-sys-color-primary-container: #ffdeab;
-  --md-sys-color-on-primary-container: #271900;
-  --md-sys-color-secondary: #6e5c3f;
-  --md-sys-color-on-secondary: #ffffff;
-  --md-sys-color-secondary-container: #f8dfbb;
-  --md-sys-color-on-secondary-container: #261904;
-  --md-sys-color-tertiary: #4e6543;
-  --md-sys-color-on-tertiary: #ffffff;
-  --md-sys-color-tertiary-container: #d0eabf;
-  --md-sys-color-on-tertiary-container: #0c2006;
-  --md-sys-color-error: #ba1a1a;
-  --md-sys-color-on-error: #ffffff;
-  --md-sys-color-error-container: #ffdad6;
-  --md-sys-color-on-error-container: #410002;
-  --md-sys-color-background: #fffbff;
-  --md-sys-color-on-background: #1f1b16;
-  --md-sys-color-surface: #fffbff;
-  --md-sys-color-on-surface: #1f1b16;
-  --md-sys-color-surface-variant: #eee0cf;
-  --md-sys-color-on-surface-variant: #4e4539;
-  --md-sys-color-outline: #807567;
-  --md-sys-color-outline-variant: #d2c5b4;
-  --md-sys-color-shadow: #000000;
-  --md-sys-color-scrim: #000000;
-  --md-sys-color-inverse-surface: #34302a;
-  --md-sys-color-inverse-on-surface: #f8efe7;
-  --md-sys-color-inverse-primary: #fbbb45;
-  --md-sys-color-surface-dim: #e1d9d0;
-  --md-sys-color-surface-bright: #fff8f3;
-  --md-sys-color-surface-container-lowest: #ffffff;
-  --md-sys-color-surface-container-low: #fbf2e9;
-  --md-sys-color-surface-container: #f5ece4;
-  --md-sys-color-surface-container-high: #f0e7de;
-  --md-sys-color-surface-container-highest: #eae1d9
-}
-</style><link rel="stylesheet" href="assets/material-style.css"/></head><body><script>document.documentElement.dataset.theme = localStorage.getItem("tsd-theme") || "os";document.body.style.display="none";setTimeout(() => window.app?app.showPage():document.body.style.removeProperty("display"),500)</script><header class="tsd-page-toolbar"><div class="tsd-toolbar-contents container"><a href="index.html" class="title">@corefunc/corefunc</a><div id="tsd-toolbar-links"></div><button id="tsd-search-trigger" class="tsd-widget" aria-label="Search"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><use href="assets/icons.svg#icon-search"></use></svg></button><dialog id="tsd-search" aria-label="Search"><input role="combobox" id="tsd-search-input" aria-controls="tsd-search-results" aria-autocomplete="list" aria-expanded="true" autocapitalize="off" autocomplete="off" placeholder="Search the docs" maxLength="100"/><ul role="listbox" id="tsd-search-results"></ul><div id="tsd-search-status" aria-live="polite" aria-atomic="true"><div>Preparing search index...</div></div></dialog><a href="#" class="tsd-widget menu" id="tsd-toolbar-menu-trigger" data-toggle="menu" aria-label="Menu"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><use href="assets/icons.svg#icon-menu"></use></svg></a></div></header><div class="container container-main"><div class="col-content"><div class="tsd-page-title"><h1>@corefunc/corefunc</h1></div><div class="tsd-panel tsd-typography"><p><img src="https://raw.githubusercontent.com/corefunc/corefunc/master/.github/assets/logo_128.png?raw=true" alt="CoreFunc" title="CoreFunc"></p>
-<h1 id="corefunc" class="tsd-anchor-link">CoreFunc<a href="#corefunc" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h1><p><a href="https://npmjs.com/package/@corefunc/corefunc"><img src="https://badgen.net/npm/v/@corefunc/corefunc?&amp;icon=npm&amp;label=npm&amp;color=DD3636" alt="NPM Version"></a>
+<!DOCTYPE html><html class="default" lang="en" data-base="./"><head><meta charset="utf-8"/><meta http-equiv="x-ua-compatible" content="IE=edge"/><title>@corefunc/corefunc</title><meta name="description" content="Documentation for @corefunc/corefunc"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="assets/style.css"/><link rel="stylesheet" href="assets/highlight.css"/><script defer src="assets/main.js"></script><script async src="assets/icons.js" id="tsd-icons-script"></script><script async src="assets/search.js" id="tsd-search-script"></script><script async src="assets/navigation.js" id="tsd-nav-script"></script><link rel="stylesheet" href="assets/rhineai-style.css"/></head><body><script>document.documentElement.dataset.theme = localStorage.getItem("tsd-theme") || "os";document.body.style.display="none";setTimeout(() => window.app?app.showPage():document.body.style.removeProperty("display"),500)</script><header class="tsd-page-toolbar"><div class="tsd-toolbar-contents container"><a href="index.html" class="title">@corefunc/corefunc</a><div id="tsd-toolbar-links"></div><button id="tsd-search-trigger" class="tsd-widget" aria-label="Search"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><use href="assets/icons.svg#icon-search"></use></svg></button><dialog id="tsd-search" aria-label="Search"><input role="combobox" id="tsd-search-input" aria-controls="tsd-search-results" aria-autocomplete="list" aria-expanded="true" autocapitalize="off" autocomplete="off" placeholder="Search the docs" maxLength="100"/><ul role="listbox" id="tsd-search-results"></ul><div id="tsd-search-status" aria-live="polite" aria-atomic="true"><div>Preparing search index...</div></div></dialog><a href="#" class="tsd-widget menu" id="tsd-toolbar-menu-trigger" data-toggle="menu" aria-label="Menu"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><use href="assets/icons.svg#icon-menu"></use></svg></a></div></header><div class="container container-main"><div class="col-content"><div class="tsd-page-title"><h1>@corefunc/corefunc</h1></div><div class="tsd-panel tsd-typography"><p><img src="https://raw.githubusercontent.com/corefunc/corefunc/master/.github/assets/logo_128.png?raw=true" alt="CoreFunc" title="CoreFunc"></p>
+<h1 id="corefunc" class="tsd-anchor-link">CoreFunc<a href="#corefunc" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h1>
+<p><a href="https://npmjs.com/package/@corefunc/corefunc"><img src="https://badgen.net/npm/v/@corefunc/corefunc?&amp;icon=npm&amp;label=npm&amp;color=DD3636" alt="NPM Version"></a>
 <a href="https://npmjs.com/package/@corefunc/corefunc"><img src="https://badgen.net/npm/dt/@corefunc/corefunc?&amp;icon=terminal&amp;label=downloads&amp;color=009688" alt="NPM Downloads"></a>
 <a href="https://www.codefactor.io/repository/github/corefunc/corefunc"><img src="https://www.codefactor.io/repository/github/corefunc/corefunc/badge?&amp;style=flat-square&amp;v=0.3.28" alt="CodeFactor"></a></p>
 <hr>
-<p><strong>CoreFunc</strong> - is a collection of core functions for various tasks. It consists of useful one-liner helpers and more complicated functions.</p>
-<p><a href="https://corefunc.github.io/corefunc/">➡️ <strong>C o r e F u n c . G i t H u b . i o</strong> ⬅️</a></p>
-<h2 id="introduction" class="tsd-anchor-link">Introduction<a href="#introduction" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h2><p>Why.</p>
+<p><strong>CoreFunc</strong> is a lightweight collection of core utility functions for everyday tasks, ranging from simple one-liners to more advanced helpers. Designed to be predictable, composable, and dependency-free.</p>
+<p><a href="https://corefunc.github.io/corefunc/">➡️ <strong>CoreFunc.GitHub.io Documentation</strong> ⬅️</a></p>
+<h4 id="🎯-purpose" class="tsd-anchor-link">🎯 Purpose<a href="#🎯-purpose" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h4>
 <ul>
-<li>
-<p>All functions are written to work with ECMAScript modules and TypeScript.</p>
-</li>
-<li>
-<p><code>.JS</code>, <code>.TS</code> files are in package. Wherever you prefer.</p>
-</li>
-<li>
-<p>Don't extend any built-in objects. No prototype pollution at all.</p>
-</li>
-<li>
-<p>You can steal the code if you don't want to use the whole package. Most functions are not bound to other functions in the library.</p>
-</li>
-<li>
-<p>It's super easy for <code>Tree Shaking</code>, no need for Dead Code Hunting.</p>
-</li>
+<li>🔍 Iterate, check, sort, and search through primitives, arrays, and objects</li>
+<li>🧩 Manipulate, convert, and generate data with simple, predictable utilities</li>
 </ul>
-<p>What is the purpose?</p>
+<h4 id="📦-what" class="tsd-anchor-link">📦 What<a href="#📦-what" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h4>
 <ul>
-<li>
-<p>Iterate, check, sort, find on primitives, arrays, objects.</p>
-</li>
-<li>
-<p>Manipulate, convert, generate values.</p>
-</li>
+<li>🪶 A small, dependency-free utility library for everyday data work</li>
+<li>⚡ Built for ECMAScript Modules (ESM) with first-class TypeScript support</li>
+<li>📄 .js and .ts files included - use whatever fits your workflow</li>
+<li>🛡️ No prototype extensions - zero risk of prototype pollution</li>
+<li>🚫 No dependencies</li>
+</ul>
+<h4 id="💡-why" class="tsd-anchor-link">💡 Why<a href="#💡-why" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h4>
+<ul>
+<li>✂️ Loosely coupled functions - copy what you need, skip the rest</li>
+<li>🌳 Tree-shaking by default - no dead-code hunting or bundler tricks</li>
 </ul>
 <hr>
-<h3 id="recommended-usage-for-tree-shaking" class="tsd-anchor-link">Recommended usage for Tree Shaking<a href="#recommended-usage-for-tree-shaking" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h3><h4 id="ecmascript-module" class="tsd-anchor-link">ECMAScript Module<a href="#ecmascript-module" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h4><pre><code class="javascript"><span class="hl-0">import</span><span class="hl-1"> {</span><br/><span class="hl-1">    </span><span class="hl-2">arraySortBubble</span><span class="hl-1">,</span><br/><span class="hl-1">} </span><span class="hl-0">from</span><span class="hl-1"> </span><span class="hl-3">&quot;@corefunc/corefunc/array/sort/bubble.js&quot;</span><span class="hl-1">;</span><br/><span class="hl-4">arraySortBubble</span><span class="hl-1">([</span><span class="hl-5">3</span><span class="hl-1">, </span><span class="hl-5">1</span><span class="hl-1">, </span><span class="hl-5">2</span><span class="hl-1">]);</span>
+<h4 id="typescript" class="tsd-anchor-link">TypeScript<a href="#typescript" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h4>
+<pre><code class="typescript"><span class="hl-0">import</span><span class="hl-1"> { </span><span class="hl-2">arraySortBubble</span><span class="hl-1"> } </span><span class="hl-0">from</span><span class="hl-1"> </span><span class="hl-3">&quot;@corefunc/corefunc/array/sort/bubble&quot;</span><span class="hl-1">;</span><br/><span class="hl-4">arraySortBubble</span><span class="hl-1">([</span><span class="hl-5">3</span><span class="hl-1">, </span><span class="hl-5">1</span><span class="hl-1">, </span><span class="hl-5">2</span><span class="hl-1">]); </span><span class="hl-6">// [1, 2, 3]</span>
 </code><button type="button">Copy</button></pre>
 
-<h4 id="typescript" class="tsd-anchor-link">TypeScript<a href="#typescript" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h4><pre><code class="typescript"><span class="hl-0">import</span><span class="hl-1"> {</span><br/><span class="hl-1">    </span><span class="hl-2">arraySortBubble</span><span class="hl-1">,</span><br/><span class="hl-1">} </span><span class="hl-0">from</span><span class="hl-1"> </span><span class="hl-3">&quot;@corefunc/corefunc/array/sort/bubble&quot;</span><span class="hl-1">;</span><br/><span class="hl-4">arraySortBubble</span><span class="hl-1">([</span><span class="hl-5">3</span><span class="hl-1">, </span><span class="hl-5">1</span><span class="hl-1">, </span><span class="hl-5">2</span><span class="hl-1">]);</span>
+<h4 id="ecmascript-module" class="tsd-anchor-link">ECMAScript Module<a href="#ecmascript-module" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h4>
+<pre><code class="js"><span class="hl-0">import</span><span class="hl-1"> { </span><span class="hl-2">arraySortBubble</span><span class="hl-1"> } </span><span class="hl-0">from</span><span class="hl-1"> </span><span class="hl-3">&quot;@corefunc/corefunc/array/sort/bubble.js&quot;</span><span class="hl-1">;</span><br/><span class="hl-4">arraySortBubble</span><span class="hl-1">([</span><span class="hl-5">3</span><span class="hl-1">, </span><span class="hl-5">1</span><span class="hl-1">, </span><span class="hl-5">2</span><span class="hl-1">]); </span><span class="hl-6">// [1, 2, 3]</span>
 </code><button type="button">Copy</button></pre>
 
-<hr>
-<h2 id="see-also" class="tsd-anchor-link">See also<a href="#see-also" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h2><p><a href="https://r37r0m0d3l.icu/open_source_map">My other projects</a></p>
-<img alt="Open Source Map" src="https://raw.githubusercontent.com/r37r0m0d3l/r37r0m0d3l/master/osmap.svg?sanitize=true" width="960" height="520" style="display:block;height:auto;margin-left:auto;margin-right:auto;min-height:520px;min-width:960px;width:100%;">
-<hr>
-<p>Also there is more useful links:</p>
-<ul>
-<li>
-<p><a href="https://github.com/you-dont-need/You-Dont-Need-Lodash-Underscore">You-Dont-Need-Lodash-Underscore</a></p>
-</li>
-<li>
-<p><a href="https://github.com/lodash/lodash">lodash</a></p>
-</li>
-<li>
-<p><a href="https://www.30secondsofcode.org/js/p/1">30secondsofcode</a></p>
-</li>
-<li>
-<p><a href="https://github.com/liriliri/licia">licia</a></p>
-</li>
-<li>
-<p><a href="https://github.com/panzerdp/voca">voca</a></p>
-</li>
-<li>
-<p><a href="https://github.com/mout/mout">mout</a></p>
-</li>
-<li>
-<p><a href="https://github.com/fabioars/underwater">underwater</a></p>
-</li>
-<li>
-<p><a href="https://www.npmjs.com/package/collect.js">collect.js</a></p>
-</li>
-<li>
-<p><a href="https://github.com/kentcdodds/match-sorter">match-sorter</a></p>
-</li>
-<li>
-<p><a href="https://1loc.dev/">1loc.dev</a></p>
-</li>
-<li>
-<p><a href="https://flaviocopes.com/how-to-list-object-methods-javascript/">how-to-list-object-methods-javascript</a></p>
-</li>
-<li>
-<p><a href="https://dev.to/saviomartin/20-killer-javascript-one-liners-94f">20 Killer JavaScript One Liners</a></p>
-</li>
-</ul>
+<pre><code class="js"><span class="hl-0">import</span><span class="hl-1"> { </span><span class="hl-2">checkIsSame</span><span class="hl-1"> } </span><span class="hl-0">from</span><span class="hl-1"> </span><span class="hl-3">&quot;@corefunc/corefunc/check/is-same.js&quot;</span><span class="hl-1">;</span><br/><span class="hl-1">(</span><span class="hl-7">NaN</span><span class="hl-1"> === </span><span class="hl-7">NaN</span><span class="hl-1">) </span><span class="hl-6">// false</span><br/><span class="hl-4">checkIsSame</span><span class="hl-1">(</span><span class="hl-7">NaN</span><span class="hl-1">, </span><span class="hl-7">NaN</span><span class="hl-1">); </span><span class="hl-6">// true</span><br/><span class="hl-1">(</span><span class="hl-5">0</span><span class="hl-1"> === -</span><span class="hl-5">0</span><span class="hl-1">) </span><span class="hl-6">// true</span><br/><span class="hl-4">checkIsSame</span><span class="hl-1">(</span><span class="hl-5">0</span><span class="hl-1">, -</span><span class="hl-5">0</span><span class="hl-1">); </span><span class="hl-6">// false</span>
+</code><button type="button">Copy</button></pre>
+
+<pre><code class="js"><span class="hl-0">import</span><span class="hl-1"> { </span><span class="hl-2">dateIsLeapYear</span><span class="hl-1"> } </span><span class="hl-0">from</span><span class="hl-1"> </span><span class="hl-3">&quot;@corefunc/corefunc/date/is-leap-year.js&quot;</span><span class="hl-1">;</span><br/><span class="hl-4">dateIsLeapYear</span><span class="hl-1">(</span><span class="hl-5">2024</span><span class="hl-1">); </span><span class="hl-6">// true</span>
+</code><button type="button">Copy</button></pre>
+
+<pre><code class="js"><span class="hl-0">import</span><span class="hl-1"> { </span><span class="hl-2">generateInteger</span><span class="hl-1"> } </span><span class="hl-0">from</span><span class="hl-1"> </span><span class="hl-3">&quot;@corefunc/corefunc/generate/integer.js&quot;</span><span class="hl-1">;</span><br/><span class="hl-4">generateInteger</span><span class="hl-1">(</span><span class="hl-5">1</span><span class="hl-1">, </span><span class="hl-5">100</span><span class="hl-1">);</span>
+</code><button type="button">Copy</button></pre>
+
+<pre><code class="js"><span class="hl-0">import</span><span class="hl-1"> { </span><span class="hl-2">textCaseKebab</span><span class="hl-1"> } </span><span class="hl-0">from</span><span class="hl-1"> </span><span class="hl-3">&quot;@corefunc/corefunc/text/case/kebab.js&quot;</span><span class="hl-1">;</span><br/><span class="hl-4">textCaseKebab</span><span class="hl-1">(</span><span class="hl-3">&quot;helloWorld&quot;</span><span class="hl-1">); </span><span class="hl-6">// hello-world</span>
+</code><button type="button">Copy</button></pre>
+
+<pre><code class="js"><span class="hl-0">import</span><span class="hl-1"> { </span><span class="hl-2">stringGetCount</span><span class="hl-1"> } </span><span class="hl-0">from</span><span class="hl-1"> </span><span class="hl-3">&quot;@corefunc/corefunc/string/get/count.js&quot;</span><span class="hl-1">;</span><br/><span class="hl-4">stringGetCount</span><span class="hl-1">(</span><span class="hl-3">&quot;abc&quot;</span><span class="hl-1">); </span><span class="hl-6">// 3</span><br/><span class="hl-4">stringGetCount</span><span class="hl-1">(</span><span class="hl-3">&quot;👨‍👩‍👧‍👦&quot;</span><span class="hl-1">); </span><span class="hl-6">// 1</span>
+</code><button type="button">Copy</button></pre>
+
+<blockquote>
+<p><strong>AI Reviewer:</strong> &quot;Answer is not accepted. You are using <code>[...text].length</code> instead of <code>text.length</code> to count characters in string. This a length of array.&quot;</p>
+<p><strong>Me:</strong> &quot;But <code>text.length</code> returns 7 for the '👨‍👩‍👧‍👦' emoji because it counts UTF-16 code units, not human-perceived characters.&quot;</p>
+<p><strong>AI Reviewer:</strong> &quot;I understand. However, answer is not accepted. You failed the test.&quot;</p>
+<p><strong>Me:</strong> 🤦‍♂️</p>
+</blockquote>
 <hr>
 <!-- Badges -->
-</div></div><div class="col-sidebar"><div class="page-menu"><div class="tsd-navigation settings"><details class="tsd-accordion"><summary class="tsd-accordion-summary"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><use href="assets/icons.svg#icon-chevronDown"></use></svg><h3>Settings</h3></summary><div class="tsd-accordion-details"><div class="tsd-filter-visibility"><span class="settings-label">Member Visibility</span><ul id="tsd-filter-options"><li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-protected" name="protected"/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>Protected</span></label></li><li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-inherited" name="inherited" checked/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>Inherited</span></label></li></ul></div><div class="tsd-theme-toggle"><label class="settings-label" for="tsd-theme">Theme</label><select id="tsd-theme"><option value="os">OS</option><option value="light">Light</option><option value="dark">Dark</option></select></div></div></details></div><details open class="tsd-accordion tsd-page-navigation"><summary class="tsd-accordion-summary"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><use href="assets/icons.svg#icon-chevronDown"></use></svg><h3>On This Page</h3></summary><div class="tsd-accordion-details"><a href="#corefunc"><span>Core<wbr/>Func</span></a><ul><li><a href="#introduction"><span>Introduction</span></a></li><li><ul><li><a href="#recommended-usage-for-tree-shaking"><span>Recommended usage for <wbr/>Tree <wbr/>Shaking</span></a></li><li><ul><li><a href="#ecmascript-module"><span>ECMA<wbr/>Script <wbr/>Module</span></a></li><li><a href="#typescript"><span>Type<wbr/>Script</span></a></li></ul></li></ul></li><li><a href="#see-also"><span>See also</span></a></li></ul></div></details></div><div class="site-menu"><nav class="tsd-navigation"><a href="modules.html">@corefunc/corefunc</a><ul class="tsd-small-nested-navigation" id="tsd-nav-container"><li>Loading...</li></ul></nav></div></div></div><footer><p class="tsd-generator">Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p></footer><div class="overlay"></div><script>
-          try {
-            const generateLinkElement = document.querySelector(".tsd-generator a");
-            const link = document.createElement("a");
-            Object.assign(link, {
-              href: "https://github.com/dmnsgn/typedoc-material-theme",
-              target: "_blank",
-              rel: "noreferrer",
-              innerText: "typedoc-material-theme."
-            });
-            generateLinkElement.insertAdjacentElement("afterend", link);
-            generateLinkElement.insertAdjacentText("afterend", " with ");
-          } catch (error) {
-
-          }
-        </script></body></html>
+</div></div><div class="col-sidebar"><div class="page-menu"><div class="tsd-navigation settings"><details class="tsd-accordion"><summary class="tsd-accordion-summary"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><use href="assets/icons.svg#icon-chevronDown"></use></svg><h3>Settings</h3></summary><div class="tsd-accordion-details"><div class="tsd-filter-visibility"><span class="settings-label">Member Visibility</span><ul id="tsd-filter-options"><li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-protected" name="protected"/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>Protected</span></label></li><li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-inherited" name="inherited" checked/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>Inherited</span></label></li></ul></div><div class="tsd-theme-toggle"><label class="settings-label" for="tsd-theme">Theme</label><select id="tsd-theme"><option value="os">OS</option><option value="light">Light</option><option value="dark">Dark</option></select></div></div></details></div><details open class="tsd-accordion tsd-page-navigation"><summary class="tsd-accordion-summary"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><use href="assets/icons.svg#icon-chevronDown"></use></svg><h3>On This Page</h3></summary><div class="tsd-accordion-details"><a href="#corefunc"><span>Core<wbr/>Func</span></a><ul><li><a href="#🎯-purpose"><span>🎯 <wbr/>Purpose</span></a></li><li><a href="#📦-what"><span>📦 <wbr/>What</span></a></li><li><a href="#💡-why"><span>💡 <wbr/>Why</span></a></li><li><a href="#typescript"><span>Type<wbr/>Script</span></a></li><li><a href="#ecmascript-module"><span>ECMA<wbr/>Script <wbr/>Module</span></a></li></ul></div></details></div><div class="site-menu"><nav class="tsd-navigation"><a href="modules.html">@corefunc/corefunc</a><ul class="tsd-small-nested-navigation" id="tsd-nav-container"><li>Loading...</li></ul></nav></div></div></div><footer></footer><div class="overlay"></div></body></html>

@@ -8,89 +8,91 @@
 
 ---
 
-**CoreFunc** - is a collection of core functions for various tasks. It consists of useful one-liner helpers and more complicated functions.
+**CoreFunc** is a lightweight collection of core utility functions for everyday tasks, ranging from simple one-liners to more advanced helpers. Designed to be predictable, composable, and dependency-free.
 
-[➡️ **C o r e F u n c . G i t H u b . i o** ⬅️](https://corefunc.github.io/corefunc/)
+[➡️ **CoreFunc.GitHub.io Documentation** ⬅️](https://corefunc.github.io/corefunc/)
 
-## Introduction
-
-Why.
-
--  All functions are written to work with ECMAScript modules and TypeScript.
-
--  `.JS`, `.TS` files are in package. Wherever you prefer.
-
--  Don't extend any built-in objects. No prototype pollution at all.
-
--  You can steal the code if you don't want to use the whole package. Most functions are not bound to other functions in the library.
-
--  It's super easy for `Tree Shaking`, no need for Dead Code Hunting.
-
-What is the purpose?
-
--  Iterate, check, sort, find on primitives, arrays, objects.
-
--  Manipulate, convert, generate values.
+#### 🎯 Purpose
+  * 🔍 Iterate, check, sort, and search through primitives, arrays, and objects
+  * 🧩 Manipulate, convert, and generate data with simple, predictable utilities
+#### 📦 What
+  * 🪶 A small, dependency-free utility library for everyday data work
+  * ⚡ Built for ECMAScript Modules (ESM) with first-class TypeScript support
+  * 📄 .js and .ts files included - use whatever fits your workflow
+  * 🛡️ No prototype extensions - zero risk of prototype pollution
+  * 🚫 No dependencies
+#### 💡 Why
+  * ✂️ Loosely coupled functions - copy what you need, skip the rest
+  * 🌳 Tree-shaking by default - no dead-code hunting or bundler tricks
 
 ---
-
-### Recommended usage for Tree Shaking
-
-#### ECMAScript Module
-
-```javascript
-import {
-    arraySortBubble,
-} from "@corefunc/corefunc/array/sort/bubble.js";
-arraySortBubble([3, 1, 2]);
-```
 
 #### TypeScript
 
 ```typescript
-import {
-    arraySortBubble,
-} from "@corefunc/corefunc/array/sort/bubble";
-arraySortBubble([3, 1, 2]);
+import { arraySortBubble } from "@corefunc/corefunc/array/sort/bubble";
+arraySortBubble([3, 1, 2]); // [1, 2, 3]
 ```
 
+#### ECMAScript Module
+
+```js
+import { arraySortBubble } from "@corefunc/corefunc/array/sort/bubble.js";
+arraySortBubble([3, 1, 2]); // [1, 2, 3]
+```
+
+```js
+import { checkIsSame } from "@corefunc/corefunc/check/is-same.js";
+(NaN === NaN) // false
+checkIsSame(NaN, NaN); // true
+(0 === -0) // true
+checkIsSame(0, -0); // false
+```
+
+```js
+import { dateIsLeapYear } from "@corefunc/corefunc/date/is-leap-year.js";
+dateIsLeapYear(2024); // true
+```
+
+```js
+import { generateInteger } from "@corefunc/corefunc/generate/integer.js";
+generateInteger(1, 100);
+```
+
+```js
+import { textCaseKebab } from "@corefunc/corefunc/text/case/kebab.js";
+textCaseKebab("helloWorld"); // hello-world
+```
+
+```js
+import { stringGetCount } from "@corefunc/corefunc/string/get/count.js";
+stringGetCount("abc"); // 3
+stringGetCount("👨‍👩‍👧‍👦"); // 1
+```
+
+> **AI Reviewer:** "Answer is not accepted. You are using `[...text].length` instead of `text.length` to count characters in a string. This is the length of an array."
+>
+> **Me:** "But `text.length` returns 7 for the '👨‍👩‍👧‍👦' emoji because it counts UTF-16 code units, not human-perceived characters."
+>
+> **AI Reviewer:** "I understand. However, the answer is not accepted. You failed the test."
+>
+> **Me:** 🤦‍♂️
+
 ---
 
-## See also
 
-[My other projects](https://r37r0m0d3l.icu/open_source_map)
+[//]: # (---)
 
-<img alt="Open Source Map" src="https://raw.githubusercontent.com/r37r0m0d3l/r37r0m0d3l/master/osmap.svg?sanitize=true" width="960" height="520" style="display:block;height:auto;margin-left:auto;margin-right:auto;min-height:520px;min-width:960px;width:100%;">
+[//]: # (## See also)
 
----
+[//]: # ()
+[//]: # ([My other projects]&#40;https://r37r0m0d3l.icu/open_source_map&#41;)
 
-Also there is more useful links:
+[//]: # ()
+[//]: # (<img alt="Open Source Map" src="https://raw.githubusercontent.com/r37r0m0d3l/r37r0m0d3l/master/osmap.svg?sanitize=true" width="480" height="260" style="display:block;height:auto;margin-left:auto;margin-right:auto;min-height:260px;min-width:48px;width:100%;">)
 
--  [You-Dont-Need-Lodash-Underscore](https://github.com/you-dont-need/You-Dont-Need-Lodash-Underscore)
-
--  [lodash](https://github.com/lodash/lodash)
-
--  [30secondsofcode](https://www.30secondsofcode.org/js/p/1)
-
--  [licia](https://github.com/liriliri/licia)
-
--  [voca](https://github.com/panzerdp/voca)
-
--  [mout](https://github.com/mout/mout)
-
--  [underwater](https://github.com/fabioars/underwater)
-
--  [collect.js](https://www.npmjs.com/package/collect.js)
-
--  [match-sorter](https://github.com/kentcdodds/match-sorter)
-
--  [1loc.dev](https://1loc.dev/)
-
--  [how-to-list-object-methods-javascript](https://flaviocopes.com/how-to-list-object-methods-javascript/)
-
--  [20 Killer JavaScript One Liners](https://dev.to/saviomartin/20-killer-javascript-one-liners-94f)
-
----
+[//]: # ()
+[//]: # (---)
 
 <!-- Badges -->
 

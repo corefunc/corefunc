@@ -5,10 +5,10 @@
  * @param {*} value Value to transform
  * @returns {String} Value transformed into string
  * @example
- * ```javascript
+ * ```js
  * castToString(undefined) ➜ ""
  * ```
- * ```javascript
+ * ```js
  * castToString(-0) ➜ "-0"
  * ```
  */

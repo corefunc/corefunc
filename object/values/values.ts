@@ -6,9 +6,11 @@
  * @param {Object} object Object to search in
  * @returns {Array} Array with values.
  */
-export function objectValues<ObjectType extends Record<string, any>>(object: ObjectType): any[] {
+export function objectValues<ObjectType extends Record<string, any>>(
+  object: ObjectType,
+): ObjectType[keyof ObjectType][] {
   if (!object) {
-    return [];
+    return [] as ObjectType[keyof ObjectType][];
   }
-  return Object.values(object);
+  return Object.values(object) as ObjectType[keyof ObjectType][];
 }

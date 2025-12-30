@@ -6,11 +6,11 @@
  * @returns {Boolean} Is leap year
  * @since 0.1.37
  * @example
- * ```javascript
+ * ```js
  * dateIsLeapYear(2000); // ➜ true
  * ```
  * @example
- * ```javascript
+ * ```js
  * dateIsLeapYear(2001); // ➜ false
  * ```
  */

@@ -83,6 +83,7 @@ export default defineConfig([
         },
       ],
 
+      "prefer-spread": "off",
       "prettier/prettier": "off",
 
       "quotes": [

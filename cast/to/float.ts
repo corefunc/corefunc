@@ -15,6 +15,11 @@ export function castToFloat<OnFailType>(
   toFixed?: number,
 ): OnFailType | number {
   const type = typeof value;
+  const roundTo = (num: number, decimals: number): number => {
+    const factor = Math.pow(10, decimals);
+    const rounded = Math.round((num + Number.EPSILON) * factor) / factor;
+    return Number(rounded.toFixed(decimals));
+  };
   if (type === "boolean") {
     return Number(value);
   }
@@ -24,15 +29,16 @@ export function castToFloat<OnFailType>(
       return onFail;
     }
     if (typeof toFixed === "number") {
-      return Number.parseFloat(temporary.toFixed(toFixed));
+      return roundTo(temporary, toFixed);
     }
     return temporary;
   }
   if (type === "number" && Number.isFinite(value as number)) {
+    const numValue = value as number;
     if (typeof toFixed === "number") {
-      return Number.parseFloat(Number.parseFloat(value as string).toFixed(toFixed));
+      return roundTo(numValue, toFixed);
     }
-    return Number.parseFloat(value as string);
+    return numValue;
   }
   return castToFloat(String(value), onFail, toFixed);
 }

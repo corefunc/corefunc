@@ -5,5 +5,15 @@
  * @returns {Number} The count of elements.
  */
 export function arrayBasicSize(array: ReadonlyArray<unknown>): number {
-  return array.reduce((size: number) => size + 1, 0);
+  if (array === null || array === undefined) {
+    return 0;
+  }
+  if (typeof array.length === "number") {
+    // Ensure a non-negative integer (>>> 0 casts to uint32)
+    return array.length >>> 0;
+  }
+  return Object.keys(array).filter((key) => {
+    const num = Number(key);
+    return String(num) === key && num >= 0 && Number.isFinite(num);
+  }).length;
 }

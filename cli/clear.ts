@@ -1,3 +1,11 @@
+/**
+ * Clear the terminal screen.
+ * @returns {void}
+ * @example
+ * ```typescript
+ * cliClear();
+ * ```
+ */
 export function cliClear(): void {
   if ("clear" in console) {
     try {

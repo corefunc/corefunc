@@ -1,5 +1,19 @@
 {
-  "blockTags": ["@category", "@deprecated", "@description", "@example", "@name", "@param", "@returns", "@see", "@since", "@summary", "@template", "@throws", "@url"],
+  "blockTags": [
+    "@category",
+    "@deprecated",
+    "@description",
+    "@example",
+    "@name",
+    "@param",
+    "@returns",
+    "@see",
+    "@since",
+    "@summary",
+    "@template",
+    "@throws",
+    "@url"
+  ],
   "categorizeByGroup": true,
   "entryPoints": [
     "./array/index.ts",
@@ -33,7 +47,6 @@
   "excludeExternals": true,
   "externalPattern": ["**/node_modules/**"],
   "out": "docs",
-  "plugin": ["typedoc-material-theme"],
-  "themeColor": "#cb9820",
-  "theme": "default"
+  "plugin": ["typedoc-rhineai-theme"],
+  "theme": "typedoc-rhineai-theme"
 }

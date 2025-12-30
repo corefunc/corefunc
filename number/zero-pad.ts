@@ -10,19 +10,19 @@
  * @returns {String}
  * @since 0.1.39
  * @example
- * ```javascript
+ * ```js
  * numberZeroPad("0.0001", 3); // ➜ '000.0001'
  * ```
  * @example
- * ```javascript
+ * ```js
  * numberZeroPad("1", 3, 2); // ➜ '001.00'
  * ```
  * @example
- * ```javascript
+ * ```js
  * numberZeroPad(5.123, 4); // ➜ '0005.123'
  * ```
  * @example
- * ```javascript
+ * ```js
  * numberZeroPad(1234567.89, 4, 3); // ➜ '1234567.890'
  * ```
  */

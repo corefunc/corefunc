@@ -10,32 +10,38 @@
  * @returns {Object} New plain object.
  */
 export function objectKeysPick<
-  T extends Record<PropertyKey, V>,
+  T extends Record<PropertyKey, any>,
   K extends ReadonlyArray<string>,
   V = T[keyof T],
-  D extends boolean = false,
+>(instance: T, keys: K, defineMissing: true): Partial<Record<K[number], V | undefined>>;
+export function objectKeysPick<
+  T extends Record<PropertyKey, any>,
+  K extends ReadonlyArray<string>,
+  V = T[keyof T],
+>(instance: T, keys: K, defineMissing?: false): Partial<Record<K[number], V>>;
+export function objectKeysPick<
+  T extends Record<PropertyKey, any>,
+  K extends ReadonlyArray<string>,
+  V = T[keyof T],
 >(
   instance: T,
   keys: K,
-  defineMissing?: D,
-): D extends true ? Partial<Record<K[number], V | undefined>> : Partial<Record<K[number], V>> {
-  const result = {} as Partial<Record<K[number], V | undefined>>;
+  defineMissing?: boolean,
+): Partial<Record<K[number], V | undefined>> {
+  const result = {} as Record<string, V | undefined>;
 
   if (!keys.length || !Object.keys(instance ?? {}).length) {
     if (defineMissing) {
       for (const key of keys) {
-        result[key as K[number]] = undefined;
+        result[key] = undefined;
       }
-      return result as any;
-    } else {
-      return {} as any;
     }
+    return result as Partial<Record<K[number], V | undefined>>;
   }
 
   for (const key of keys) {
-    // cast to satisfy the index type checks
-    result[key as K[number]] = (instance as Record<string, V>)[key];
+    result[key] = (instance as Record<string, V>)[key];
   }
 
-  return result as any;
+  return result as Partial<Record<K[number], V | undefined>>;
 }

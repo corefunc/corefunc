@@ -11,7 +11,7 @@
  * @throws {RangeError} Incorrect index.
  * @since 0.3.62
  * @example
- * ```javascript
+ * ```js
  * const array = [1, 2, 3];
  * const index = 2;
  * if (index in array) {

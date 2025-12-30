@@ -10,17 +10,21 @@
   ],
   "description": "Collection of utilities",
   "devDependencies": {
-    "@types/node": "24.10.1",
-    "@typescript-eslint/eslint-plugin": "8.48.1",
-    "@typescript-eslint/parser": "8.48.1",
-    "eslint": "9.39.1",
+    "@eslint/eslintrc": "3.3.3",
+    "@eslint/js": "9.39.2",
+    "@types/node": "25.0.10",
+    "@typescript-eslint/eslint-plugin": "8.53.1",
+    "@typescript-eslint/parser": "8.53.1",
+    "eslint": "9.39.2",
     "eslint-config-prettier": "10.1.8",
     "eslint-plugin-import": "2.32.0",
-    "eslint-plugin-jsdoc": "61.5.0",
-    "eslint-plugin-prettier": "5.5.4",
-    "prettier": "3.7.4",
-    "typedoc": "0.28.15",
+    "eslint-plugin-jsdoc": "62.4.0",
+    "eslint-plugin-prettier": "5.5.5",
+    "globals": "17.1.0",
+    "prettier": "3.8.1",
+    "typedoc": "0.28.16",
     "typedoc-material-theme": "1.4.1",
+    "typedoc-rhineai-theme": "1.2.0",
     "typescript": "5.9.3"
   },
   "directories": {
@@ -48,15 +52,18 @@
   },
   "scripts": {
     "build": "tsc -p tsconfig.json",
-    "doc": "typedoc --options typedoc.json --plugin typedoc-material-theme --themeColor '#cb9820'",
+    "cleanup": "node ./cleanup.mjs",
+    "doc": "typedoc --options typedoc.json --plugin typedoc-rhineai-theme",
     "lint": "eslint . --ext .ts",
     "package:audit": "npm audit --json | npx npm-audit-html",
     "package:check": "npx depcheck",
     "package:upgrade": "npx npm-check --update",
+    "prepublishOnly": "npm run build && npm test",
     "test": "node ./test/index.test.js",
-    "cleanup": "node ./cleanup.mjs"
+    "test:node": "node --test",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
   },
   "types": "./index.d.ts",
   "type": "module",
-  "version": "1.0.0-rc.1"
+  "version": "1.0.0-rc.2"
 }

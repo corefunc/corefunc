@@ -8,19 +8,19 @@
  * @returns {String}
  * @since 0.1.39
  * @example
- * ```javascript
+ * ```js
  * numberDecimalPortion("0.000100", false); // ➜ '000100'
  * ```
  * @example
- * ```javascript
+ * ```js
  * numberDecimalPortion("1"); // ➜ ''
  * ```
  * @example
- * ```javascript
+ * ```js
  * numberDecimalPortion(5.123); // ➜ '123'
  * ```
  * @example
- * ```javascript
+ * ```js
  * numberDecimalPortion(12345678.99); // ➜ '99'
  * ```
  */

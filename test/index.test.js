@@ -1,1 +1,3 @@
-process.exit(0);
+if (typeof process !== "undefined" && typeof process.exit === "function") {
+  process.exit(0);
+}
