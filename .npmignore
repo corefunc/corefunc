@@ -21,30 +21,33 @@
 /README.md
 /badges.md
 /chagelog.md
-/docs/
-/eslint.config.js
-/package-lock.json
-/renovate.json
 /roadmap.md
-/temp
-/test
-/tests/
+docs
+test
+tests
+temp
 /tsconfig.json
 /typedoc.json
 /yarn.lock
 
-# ignore files
-*.ts
 # include files
+!*.ts
 !*.d.ts
 !*.js
 !*.js.map
+!*.test.js
 !**/
-*.test.js
-*.spec.js
+
+# ignore files
+docs/
+test/
+tests/
+temp/
+roadmap.md
 .github/
 .idea/
 .npmignore
+.output.txt
 
 eslint.config.mjs
 cleanup.mjs
