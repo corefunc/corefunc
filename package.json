@@ -22,7 +22,7 @@
     "eslint-plugin-prettier": "5.5.5",
     "globals": "17.3.0",
     "prettier": "3.8.1",
-    "typedoc": "0.28.16",
+    "typedoc": "0.28.18",
     "typedoc-material-theme": "1.4.1",
     "typedoc-rhineai-theme": "1.2.0",
     "typescript": "5.9.3"
