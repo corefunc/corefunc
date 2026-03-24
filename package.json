@@ -25,7 +25,7 @@
     "typedoc": "0.28.16",
     "typedoc-material-theme": "1.4.1",
     "typedoc-rhineai-theme": "1.2.0",
-    "typescript": "5.9.3"
+    "typescript": "6.0.2"
   },
   "directories": {
     "test": "test"
